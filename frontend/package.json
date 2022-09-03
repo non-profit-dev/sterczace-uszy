@@ -1,7 +1,8 @@
 {
-  "name": "my-next-blog",
+  "name": "frontend",
   "version": "1.0.2",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "develop": "next dev",
     "dev": "next dev",
@@ -20,7 +21,6 @@
     "react-markdown": "^4.2.2",
     "react-moment": "^0.9.6"
   },
-  "license": "MIT",
   "devDependencies": {
     "eslint": "^7.30.0",
     "eslint-config-next": "^11.0.1",
