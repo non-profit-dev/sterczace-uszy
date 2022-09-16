@@ -59,6 +59,7 @@ $RECYCLE.BIN/
 *.swm
 *.out
 *.pid
+packages/backend/public/uploads/
 
 
 ############################
@@ -118,3 +119,4 @@ build
 ############################
 .next/
 out/
+
