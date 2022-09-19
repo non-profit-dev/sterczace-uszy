@@ -15,7 +15,9 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jest": "^29.0.3"
+  },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
