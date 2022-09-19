@@ -9,7 +9,8 @@
     "storybook": "yarn --cwd packages/design-system storybook"
   },
   "workspaces": [
-    "packages/frontend",
+    "packages/frontend/app",
+    "packages/frontend/e2e",
     "packages/backend",
     "packages/design-system"
   ],
