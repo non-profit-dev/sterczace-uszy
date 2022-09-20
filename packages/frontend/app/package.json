@@ -13,6 +13,7 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
     "@next/env": "^12.3.0",
     "moment": "^2.24.0",
     "next": "^11.0.0",
