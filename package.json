@@ -6,7 +6,8 @@
     "develop:backend": "yarn --cwd packages/backend develop",
     "develop:frontend": "wait-on http://localhost:1337/admin && yarn --cwd packages/frontend/app develop",
     "develop": "cross-env FORCE_COLOR=1 npm-run-all -l -p develop:*",
-    "storybook": "yarn --cwd packages/design-system storybook"
+    "storybook": "yarn --cwd packages/design-system storybook",
+    "cypress": "yarn --cwd packages/frontend/e2e cypress:open"
   },
   "workspaces": [
     "packages/frontend/app",
