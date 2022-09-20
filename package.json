@@ -10,7 +10,8 @@
     "cypress": "yarn --cwd packages/frontend/e2e cypress:open"
   },
   "workspaces": [
-    "packages/frontend",
+    "packages/frontend/app",
+    "packages/frontend/e2e",
     "packages/backend",
     "packages/design-system"
   ],
