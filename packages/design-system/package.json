@@ -26,16 +26,16 @@
     "prettier": "^2.7.1"
   },
   "dependencies": {
-<<<<<<< HEAD
+HEAD
     "jest": "^29.0.3",
     "@testing-library/react": "^13.4.0"
-=======
+
     "@emotion/react": "^11.10.4"
   },
 FSU-15-Jest-config
   "dependencies": {
     "jest": "^29.0.3"
->>>>>>> 9e5c530b53e5042f9ec56b1a9a7ac7d688e37758
+9e5c530b53e5042f9ec56b1a9a7ac7d688e37758
   },
   main
   "scripts": {
