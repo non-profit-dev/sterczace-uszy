@@ -1,4 +1,4 @@
-## Name PR acording scheme: type of changes (feat/fix/refactor etc.) + [FSU-XX] + task name
+## Name PR according scheme: type of changes (feat/fix/refactor etc.) + description
 
 ## Jira issue
 
