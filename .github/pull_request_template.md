@@ -1,4 +1,8 @@
-## Name PR acording scheme: type of changes (feat/fix/refactor/chore) + issue jira ticket number + task name
+## Name PR acording scheme: type of changes (feat/fix/refactor etc.) + [FSU-XX] + task name
+
+## Jira issue
+
+JIRA issue: [FSU-XX](https://klau.atlassian.net/browse/FSU-XX)
 
 ## Describe your changes
 
