@@ -16,7 +16,8 @@
     "babel-loader": "^8.2.5"
   },
   "dependencies": {
-    "jest": "^29.0.3"
+    "jest": "^29.0.3",
+    "@testing-library/react": "^13.4.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
