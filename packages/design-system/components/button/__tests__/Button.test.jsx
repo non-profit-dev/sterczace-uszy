@@ -1,6 +1,8 @@
-/*This is sample test*/
+/* This is sample test */
+import { render } from "@testing-library/react"
 
-test('test', () => {
-  expect(true).toBe(true);
-}
-)
+describe(`test`, () => {
+  it(`renders correctly`, () => {
+    render(<p>test</p>)
+  })
+})
