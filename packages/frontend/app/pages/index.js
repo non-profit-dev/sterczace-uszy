@@ -3,10 +3,12 @@ import Articles from "../components/articles"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
+import { Normalize } from "styled-normalize"
 
 const Home = ({ articles, categories, homepage }) => {
   return (
     <Layout categories={categories}>
+      <Normalize />
       <Seo seo={homepage.attributes.seo} />
       <div className="uk-section">
         <div className="uk-container uk-container-large">
