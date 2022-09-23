@@ -5,6 +5,8 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-interactions": "^6.5.12",
@@ -13,6 +15,7 @@
     "@storybook/manager-webpack5": "^6.5.12",
     "@storybook/react": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
+    "babel-jest": "^29.0.3",
     "babel-loader": "^8.2.5",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -23,24 +26,20 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "jest-environment-jsdom": "^29.0.3",
     "prettier": "^2.7.1"
   },
   "dependencies": {
-HEAD
+    "@emotion/react": "^11.10.4",
+    "@testing-library/react": "^13.4.0",
     "jest": "^29.0.3",
-    "@testing-library/react": "^13.4.0"
-
-    "@emotion/react": "^11.10.4"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-FSU-15-Jest-config
-  "dependencies": {
-    "jest": "^29.0.3"
-9e5c530b53e5042f9ec56b1a9a7ac7d688e37758
-  },
-  main
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint . --ext .js --ext .jsx"
+    "lint": "eslint . --ext .js --ext .jsx",
+    "test": "jest"
   }
 }
