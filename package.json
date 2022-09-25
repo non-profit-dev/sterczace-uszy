@@ -1,25 +1,30 @@
 {
-  "name": "website",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "develop:backend": "yarn --cwd packages/backend develop",
-    "develop:frontend": "wait-on http://localhost:1337/admin && yarn --cwd packages/frontend/app develop",
-    "develop": "cross-env FORCE_COLOR=1 npm-run-all -l -p develop:*",
-    "storybook": "yarn --cwd packages/design-system storybook",
-    "lint": "yarn --cwd packages/design-system lint",
-    "cypress": "yarn --cwd packages/frontend/e2e cypress:open",
-    "test": "yarn --cwd packages/design-system test"
-  },
-  "workspaces": [
-    "packages/frontend/app",
-    "packages/frontend/e2e",
-    "packages/backend",
-    "packages/design-system"
-  ],
-  "devDependencies": {
-    "cross-env": "7.0.3",
-    "npm-run-all": "4.1.5",
-    "wait-on": "5.2.1"
-  }
+	"name": "website",
+	"private": true,
+	"version": "0.0.0",
+	"scripts": {
+		"develop:backend": "yarn --cwd packages/backend develop",
+		"develop:frontend": "wait-on http://localhost:1337/admin && yarn --cwd packages/frontend/app develop",
+		"develop": "cross-env FORCE_COLOR=1 npm-run-all -l -p develop:*",
+		"storybook": "yarn --cwd packages/design-system storybook",
+		"lint": "yarn --cwd packages/design-system lint",
+		"cypress": "yarn --cwd packages/frontend/e2e cypress:open",
+		"test": "yarn --cwd packages/design-system test",
+		"postinstall": "husky install"
+	},
+	"workspaces": [
+		"packages/frontend/app",
+		"packages/frontend/e2e",
+		"packages/backend",
+		"packages/design-system"
+	],
+	"devDependencies": {
+		"cross-env": "7.0.3",
+		"husky": "^8.0.1",
+		"npm-run-all": "4.1.5",
+		"wait-on": "5.2.1"
+	},
+	"dependencies": {
+		"@commitlint/cli": "^17.1.2"
+	}
 }
