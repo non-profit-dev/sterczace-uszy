@@ -1,6 +1,6 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
 
-import { Component } from "../Component"
+import Component from "../Component"
 
 <Meta title="Components/Component" component={Component} />
 
@@ -12,17 +12,19 @@ Component is...just an example component.
   <Story
     name="Overview"
     args={{
-      heading: "Heading",
+      heading: "Fancy heading",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus diam eget massa feugiat interdum.",
       link: {
-        text: "Link text",
+        text: "Read more",
         href: "https://google.com",
+      },
+      button: {
+        icon: HeartIcon,
+        onClick: () => console.log("on favorite"),
       },
       variant: "primary",
       size: "medium",
-      icon: HeartIcon,
-      onClick: () => console.log("on click"),
     }}
   >
     {Template.bind()}
