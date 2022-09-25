@@ -3,21 +3,13 @@ import { string, oneOf, shape, func } from "prop-types"
 
 import * as Styled from "./Component.styled"
 
-export const Component = ({
-  heading,
-  description,
-  link,
-  variant,
-  size,
-  icon: Icon,
-  onClick,
-}) => {
+const Component = ({ heading, description, link, button, variant, size }) => {
   const [favorite, setFavorite] = useState()
 
   const handleClick = () => {
     setFavorite(!favorite)
     // the onClick is an additional callback that's fired outside of this component, it's not required, it depends on the component's functionality
-    onClick()
+    button.onClick()
   }
 
   return (
@@ -29,14 +21,16 @@ export const Component = ({
           {link.text}
         </Styled.Link>
       )}
-      <Styled.Button
-        variant={variant}
-        size={size}
-        favorite={favorite}
-        onClick={handleClick}
-      >
-        <Icon />
-      </Styled.Button>
+      {button && (
+        <Styled.Button
+          variant={variant}
+          size={size}
+          favorite={favorite}
+          onClick={handleClick}
+        >
+          <button.icon />
+        </Styled.Button>
+      )}
     </Styled.Component>
   )
 }
@@ -48,14 +42,19 @@ Component.propTypes = {
     text: string,
     href: string,
   }),
+  button: shape({
+    icon: func,
+    onClick: func,
+  }),
   variant: oneOf(["primary", "secondary"]),
   size: oneOf(["small", "medium", "large"]),
-  icon: func.isRequired,
-  onClick: func.isRequired,
 }
 
 Component.defaultProps = {
   variant: "primary",
   size: "medium",
   link: null,
+  button: null,
 }
+
+export default Component
