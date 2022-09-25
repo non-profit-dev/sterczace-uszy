@@ -1,5 +1,4 @@
 import React from 'react'
-import { Normalize } from 'styled-normalize'
 
 import { Header } from './Header'
 import './page.css'
@@ -9,7 +8,6 @@ export const Page = () => {
 
 	return (
 		<article>
-			<Normalize />
 			<Header
 				user={user}
 				onLogin={() => setUser({ name: 'Jane Doe' })}
