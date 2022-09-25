@@ -2,7 +2,7 @@
 import userEvent from "@testing-library/user-event"
 
 // import react-testing methods (wrapped with custom ThemeProvider added in the test-utils.jsx file)
-import { render, screen } from "../../../test-utils"
+import { render, screen, act } from "../../../test-utils"
 
 import Component from "../Component"
 
@@ -71,7 +71,7 @@ describe(`Component`, () => {
     )
   })
 
-  it(`fires button onClick callback when clicked`, async () => {
+  it(`fires button onClick callback when clicked`, () => {
     const onClickMock = jest.fn()
 
     render(
@@ -84,7 +84,9 @@ describe(`Component`, () => {
 
     const button = screen.getByRole(`button`)
 
-    await userEvent.click(button)
+    act(() => {
+      userEvent.click(button)
+    })
 
     expect(onClickMock).toBeCalledTimes(1)
   })
