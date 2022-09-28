@@ -6,14 +6,18 @@ const theme = {
   },
   colors: {
     primary: {
-      100: "#FFFEFE",
-      200: "#222222",
-      300: "#C1121F",
-      400: "#020202",
+      100: "#FCDDDF",
+      200: "#F9BBBF",
+      300: "#F5989F",
+      400: "#EF5460",
+      500: "#C1121F",
     },
-    secondary: {
-      100: "#FEF8EC",
-      200: "#F4CEC3",
+    neutrals: {
+      100: "#FFFEFE",
+      200: "#FEF9F8",
+      300: "#FBEDE8",
+      400: "#F8DFD8",
+      500: "#F4CEC3",
     },
     grey: {
       100: "#EBEBEB",
@@ -21,17 +25,13 @@ const theme = {
       300: "#C4C4C4",
       400: "#818181",
       500: "#414141",
+      600: "#020202",
     },
-    tint: {
-      100: "#FCDDDF",
-      200: "#F9BBBF",
-      300: "#F5989F",
-      400: "#EF5460",
+    complementary: {
+      100: "#FEF8EC",
     },
-    lightTint: {
-      100: "#FEF9F8",
-      200: "#FBEDE8",
-      300: "#F8DFD8",
+    decorative: {
+      100: "#0D99FF",
     },
   },
   spacings: {
