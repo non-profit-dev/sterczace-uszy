@@ -1,4 +1,6 @@
 import React from "react"
+import { Normalize } from "styled-normalize"
+
 import Articles from "../components/articles"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -17,6 +19,7 @@ const Home = ({ articles, categories, homepage }) => {
         />
       </Head>
       <Layout categories={categories}>
+        <Normalize />
         <Seo seo={homepage.attributes.seo} />
         <div className="uk-section">
           <div className="uk-container uk-container-large">
