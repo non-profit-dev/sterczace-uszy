@@ -3,7 +3,7 @@ import { render } from "@testing-library/react"
 import { ThemeProvider } from "@emotion/react"
 import { node } from "prop-types"
 
-import theme from "./components/theme"
+import theme from "./components/theme/theme"
 
 const Providers = ({ children }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>

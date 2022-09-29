@@ -2,7 +2,7 @@ import React from "react"
 import { ThemeProvider } from "@emotion/react"
 import { Normalize } from "styled-normalize"
 
-import theme from "../components/theme"
+import theme from "../components/theme/theme"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
