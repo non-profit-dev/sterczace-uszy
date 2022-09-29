@@ -5,7 +5,7 @@ import { createContext } from "react"
 import { fetchAPI } from "../lib/api"
 import { getStrapiMedia } from "../lib/media"
 import { ThemeProvider } from "@emotion/react"
-import theme from "../../../design-system/components/theme"
+import theme from "../../../design-system/components/theme/theme"
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})
