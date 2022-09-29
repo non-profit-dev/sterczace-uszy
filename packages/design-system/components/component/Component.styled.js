@@ -25,12 +25,12 @@ const sizes = {
 export const Component = styled.div`
   position: relative;
   padding: ${({ size }) => sizes[size].padding};
-  border: ${({ theme }) => `1px solid ${theme.colors.neutrals[200]}`};
+  border: ${({ theme }) => `1px solid ${theme.colors.grey[200]}`};
   border-radius: 2px;
   font-family: "Helvetica"; // this should be defined outside of the component, it should be a global font family for the whole app, but it's here because we haven't defined it yet
   color: ${({ theme }) =>
     theme.colors
-      .neutrals[300]}; // this is the way we can use some values from our theme
+      .grey[500]}; // this is the way we can use some values from our theme
 `
 
 export const Heading = styled.h2`
@@ -49,18 +49,18 @@ export const Link = styled.a`
   border-radius: 2px;
   background-color: ${({ theme, variant }) =>
     variant === "primary"
-      ? theme.colors.primary[200]
-      : theme.colors.secondary[200]};
-  color: ${({ theme }) => theme.colors.neutrals[100]};
+      ? theme.colors.primary[300]
+      : theme.colors.complementary[100]};
+  color: ${({ theme }) => theme.colors.grey[500]};
   text-decoration: none;
   font-size: ${({ size }) => sizes[size].link};
 
   &:hover {
     background-color: ${({ theme, variant }) =>
       variant === "primary"
-        ? theme.colors.primary[300]
+        ? theme.colors.primary[400]
         : theme.colors
-            .secondary[300]}; // this is the way we can use values from our theme based on another property
+            .neutrals[400]}; // this is the way we can use values from our theme based on another property
   }
 `
 
@@ -73,12 +73,10 @@ export const Button = styled.button`
   border-radius: 2px;
   background-color: ${({ theme, variant }) =>
     variant === "primary"
-      ? theme.colors.primary[100]
-      : theme.colors.secondary[100]};
-  color: ${({ theme, variant }) =>
-    variant === "primary"
       ? theme.colors.primary[200]
-      : theme.colors.secondary[200]};
+      : theme.colors.complementary[100]};
+  color: ${({ theme, variant }) =>
+    variant === "primary" ? theme.colors.primary[500] : theme.colors.grey[400]};
   cursor: pointer;
 
   ${({ favorite, theme, variant }) =>
@@ -86,8 +84,16 @@ export const Button = styled.button`
     css`
       svg {
         fill: ${variant === "primary"
-          ? theme.colors.primary[200]
-          : theme.colors.secondary[200]};
+          ? theme.colors.primary[500]
+          : theme.colors.grey[400]};
       }
     `}
+
+  &:hover {
+    background-color: ${({ theme, variant }) =>
+      variant === "primary"
+        ? theme.colors.primary[300]
+        : theme.colors
+            .neutrals[400]}; // this is the way we can use values from our theme based on another property
+  }
 `
