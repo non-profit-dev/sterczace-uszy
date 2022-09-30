@@ -8,7 +8,47 @@ import Badge from "../Badge.jsx"
 
 <Canvas>
   <Story
-    name="Primary"
+    name="Primary Small"
+    args={{
+      text: "Szczeniak",
+      variant: "primary",
+      size: "small",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Primary Medium"
+    args={{
+      text: "Szczeniak",
+      variant: "primary",
+      size: "medium",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Primary Large"
+    args={{
+      text: "Szczeniak",
+      variant: "primary",
+      size: "large",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Neutral Small"
+    args={{
+      text: "Szczeniak",
+      variant: "neutrals",
+      size: "small",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Neutral Medium"
     args={{
       text: "Szczeniak",
       variant: "neutrals",
@@ -17,8 +57,48 @@ import Badge from "../Badge.jsx"
   >
     {Template.bind()}
   </Story>
+  <Story
+    name="Neutral Large"
+    args={{
+      text: "Szczeniak",
+      variant: "neutrals",
+      size: "large",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Gray Small"
+    args={{
+      text: "Szczeniak",
+      variant: "gray",
+      size: "small",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Gray Medium"
+    args={{
+      text: "Szczeniak ",
+      variant: "gray",
+      size: "medium",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Gray Large"
+    args={{
+      text: "Szczeniak ",
+      variant: "gray",
+      size: "large",
+    }}
+  >
+    {Template.bind()}
+  </Story>
 </Canvas>
 
 <ArgsTable />
 
-export const Template = (args) => <Component {...args} />
+export const Template = (args) => <Badge {...args} />

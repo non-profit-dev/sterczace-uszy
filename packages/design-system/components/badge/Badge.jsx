@@ -5,7 +5,7 @@ import * as Styled from "./Badge.styled"
 
 const Badge = ({ variant, size, text }) => (
   <Styled.Badge variant={variant} size={size}>
-    {text} C
+    {text}
   </Styled.Badge>
 )
 
@@ -16,7 +16,7 @@ Badge.propTypes = {
 }
 
 Badge.defaultProps = {
-  text: "Szczeniak",
+  text: "Lorem ipsum",
   variant: "neutrals",
   size: "medium",
 }
