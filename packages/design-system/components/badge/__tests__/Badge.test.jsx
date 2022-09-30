@@ -3,15 +3,12 @@ import { render, screen, act } from "../../../test-utils"
 
 import Badge from "../Badge"
 
-const exampleText = "Lorem ipsum"
+const text = "Lorem ipsum"
 
-// Group tests
-// describe(`Badge`, () => {
-//   it(`renders with default properties`, () => {
-//     // Render a React element into the DOM
-//     render(<Badge />)
+describe(`Badge`, () => {
+  it(`renders with default properties`, () => {
+    render(<Badge text={text} variant="neutrals" size="small" />)
 
-//     // expect(screen.getByText(heading)).toBeInTheDocument()
-//     // expect(screen.getByText(description)).toBeInTheDocument()
-//   })
-// })
+    expect(screen.getByText(text)).toBeInTheDocument()
+  })
+})
