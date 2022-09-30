@@ -2,6 +2,7 @@ import { useState } from "react"
 import { string, oneOf, shape, func } from "prop-types"
 
 import * as Styled from "./Component.styled"
+import Badge from "../badge/Badge"
 
 const Component = ({ heading, description, link, button, variant, size }) => {
   const [favorite, setFavorite] = useState()
@@ -15,6 +16,7 @@ const Component = ({ heading, description, link, button, variant, size }) => {
   return (
     <Styled.Component size={size}>
       <Styled.Heading size={size}>{heading}</Styled.Heading>
+      <Badge text="tttt" backgroundColor="red" />
       <Styled.Description size={size}> {description}</Styled.Description>
       {link && (
         <Styled.Link variant={variant} size={size} href={link.href}>
