@@ -1,22 +1,30 @@
 import React from "react"
+import { Normalize } from "styled-normalize"
+
 import Articles from "../components/articles"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
-import { Normalize } from "styled-normalize"
+import Head from "next/head"
 
 const Home = ({ articles, categories, homepage }) => {
   return (
-    <Layout categories={categories}>
-      <Normalize />
-      <Seo seo={homepage.attributes.seo} />
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
-          <h1>{homepage.attributes.hero.title}</h1>
-          <Articles articles={articles} />
+    <>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+      </Head>
+      <Layout categories={categories}>
+        <Normalize />
+        <Seo seo={homepage.attributes.seo} />
+        <div className="uk-section">
+          <div className="uk-container uk-container-large">
+            <h1>{homepage.attributes.hero.title}</h1>
+            <Articles articles={articles} />
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   )
 }
 
