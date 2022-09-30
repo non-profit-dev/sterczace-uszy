@@ -16,7 +16,7 @@ const Component = ({ heading, description, link, button, variant, size }) => {
   return (
     <Styled.Component size={size}>
       <Styled.Heading size={size}>{heading}</Styled.Heading>
-      <Badge text="tttt" backgroundColor="red" />
+      <Badge colorHue={400} />
       <Styled.Description size={size}> {description}</Styled.Description>
       {link && (
         <Styled.Link variant={variant} size={size} href={link.href}>

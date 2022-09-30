@@ -1,21 +1,24 @@
-import React, { useState } from "react"
-import { string, oneOf, shape, func } from "prop-types"
+import React from "react"
+import { oneOf, string } from "prop-types"
 
 import * as Styled from "./Badge.styled"
 
-const Badge = ({ backgroundColor, text }) => {
-  const [favorite, setFavorite] = useState("r")
-
-  return <Styled.Badge backgroundColor={backgroundColor}>{text}</Styled.Badge>
-}
+const Badge = ({ variant, size, text }) => (
+  <Styled.Badge variant={variant} size={size}>
+    {text} C
+  </Styled.Badge>
+)
 
 Badge.propTypes = {
-  text: string.isRequired,
-  backgroundColor: string,
+  text: string,
+  variant: oneOf(["primary", "neutrals", "gray"]),
+  size: oneOf(["small", "medium", "large"]),
 }
 
 Badge.defaultProps = {
-  backgroundColor: "red",
+  text: "Szczeniak",
+  variant: "neutrals",
+  size: "medium",
 }
 
 export default Badge
