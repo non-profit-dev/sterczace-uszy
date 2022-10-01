@@ -45,6 +45,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint . --ext .js --ext .jsx",
-    "test": "jest"
+    "test": "jest --verbose"
   }
 }
