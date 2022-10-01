@@ -10,13 +10,12 @@ const Badge = ({ variant, size, text }) => (
 )
 
 Badge.propTypes = {
-  text: string,
+  text: string.isRequired,
   variant: oneOf(["primary", "neutrals", "gray"]),
   size: oneOf(["small", "medium", "large"]),
 }
 
 Badge.defaultProps = {
-  text: "Lorem ipsum",
   variant: "neutrals",
   size: "medium",
 }

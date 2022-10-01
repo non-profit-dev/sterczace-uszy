@@ -1,18 +1,6 @@
 import styled from "@emotion/styled"
 import theme from "../theme/theme"
 
-const sizes = {
-  small: {
-    fontSize: "14px",
-  },
-  medium: {
-    fontSize: "16px",
-  },
-  large: {
-    fontSize: "20px",
-  },
-}
-
 export const Badge = styled.span`
   flex-direction: row;
   justify-content: center;
@@ -35,5 +23,16 @@ export const Badge = styled.span`
     variant === "primary"
       ? theme.colors.neutrals[100]
       : theme.colors.grey[500]};
-  font-size: ${({ size }) => sizes[size].fontSize};
+  font-size: ${({ size }) => {
+    switch (size) {
+      case "small":
+        return "14px"
+      case "medium":
+        return "16px"
+      case "large":
+        return "20px"
+      default:
+        return "14px"
+    }
+  }};
 `
