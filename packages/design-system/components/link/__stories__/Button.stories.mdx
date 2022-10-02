@@ -13,17 +13,9 @@ Button can be a regular button, a link or a navigation link.
     name="Overview"
     args={{
       text: "Przykładowy tekst",
-      link: "https://google.com",
+      href: "https://google.com",
       variant: "fill",
       size: "medium",
-      iconStart: {
-        icon: ArrowDownIcon,
-        onClick: () => console.log("clicled start icon"),
-      },
-      iconEnd: {
-        icon: ArrowDownIcon,
-        onClick: () => console.log("clicked end icon"),
-      },
     }}
   >
     {Template.bind()}
@@ -32,14 +24,7 @@ Button can be a regular button, a link or a navigation link.
     name="Overview with button without link"
     args={{
       text: "Przykładowy tekst",
-      iconStart: {
-        icon: ArrowDownIcon,
-        onClick: null,
-      },
-      iconEnd: {
-        icon: ArrowDownIcon,
-        onClick: null,
-      },
+      iconEnd: { icon: ArrowDownIcon },
       variant: "fill",
       size: "medium",
     }}

@@ -47,11 +47,18 @@ export const Component = styled.div`
     variant === "fill" ? colors[color].mainColor : "transparent"};
   border: ${({ variant, color }) =>
     variant === "border" ? `2px solid ${colors[color].mainColor}` : "none"};
+
   ${({ variant, color }) =>
     variant === "textLine" &&
     css`
       border-radius: 0;
-      border-bottom: 2px solid ${colors[color].mainColor};
+      /* border-bottom: 2px solid ${colors[color].mainColor}; */
+      padding: 2px 0;
+    `}
+
+  ${({ variant }) =>
+    variant === "text" &&
+    css`
       padding: 2px 0;
     `}
 `
@@ -60,40 +67,27 @@ export const Link = styled.a`
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
+  border: none;
+  background: transparent;
   color: ${({ variant, color }) =>
     variant === "fill" ? colors[color].filledText : colors[color].mainColor};
+
   ${({ variant }) =>
     variant === "textLine" &&
     css`
-      /* text-decoration-line: underline; */
+      text-decoration-line: underline;
     `}
 `
 
-export const Button = styled.button`
+export const Icon = styled.span`
   padding: 6px 8px;
   border: none;
   cursor: pointer;
   background-color: transparent;
+  /* position: absolute; */
 
   /* svg {
     fill: ${({ variant, color }) =>
     variant === "fill" ? colors[color].filledText : colors[color].mainColor};
   } */
-
-  ${({ expanded }) =>
-    expanded &&
-    css`
-      svg {
-        transform: rotate(180deg);
-      }
-    `}
-`
-export const Dropdown = styled.ul`
-  color: white;
-  background: grey;
-  padding: 10px;
-  margin: 0;
-  position: absolute;
-  top: 70px;
-  right: 0;
 `

@@ -1,10 +1,9 @@
-import { useState } from "react"
-import { string, oneOf, shape, func, bool } from "prop-types"
+import { string, oneOf, func, bool, shape } from "prop-types"
 
 import * as Styled from "./Button.styled"
 
 const Button = ({
-  link,
+  href,
   text,
   iconStart,
   iconEnd,
@@ -12,119 +11,62 @@ const Button = ({
   color,
   size,
   active,
-}) => {
-  const [expanded, setExpanded] = useState(false)
-
-  const handleStartIconClick = () => {
-    setExpanded(!expanded)
-    iconStart.onClick()
-  }
-
-  const handleEndIconClick = () => {
-    setExpanded(!expanded)
-    iconEnd.onClick()
-  }
-
-  const handleButtonClick = () => {
-    setExpanded(!expanded)
-    // ???.onClick()
-  }
-
-  return link ? (
-    <Styled.Component
+  onClick,
+}) => (
+  <Styled.Component
+    variant={variant}
+    color={color}
+    size={size}
+    active={active}
+    onClick={onClick}
+  >
+    {iconStart && (
+      <Styled.Icon variant={variant} color={color} size={size}>
+        <iconStart.icon />
+      </Styled.Icon>
+    )}
+    <Styled.Link
+      as={href ? `a` : `button`}
       variant={variant}
       color={color}
       size={size}
-      active={active}
+      href={href}
     >
-      {iconStart && (
-        <Styled.Button
-          variant={variant}
-          color={color}
-          size={size}
-          expanded={expanded}
-          onClick={handleStartIconClick}
-        >
-          <iconStart.icon />
-        </Styled.Button>
-      )}
-      <Styled.Link variant={variant} color={color} size={size} href={link}>
-        {text}
-      </Styled.Link>
-      {iconEnd && (
-        <Styled.Button
-          variant={variant}
-          color={color}
-          size={size}
-          expanded={expanded}
-          onClick={handleEndIconClick}
-        >
-          <iconEnd.icon />
-        </Styled.Button>
-      )}
-      {expanded === true && <Styled.Dropdown>Example dropdown</Styled.Dropdown>}
-    </Styled.Component>
-  ) : (
-    <Styled.Component
-      variant={variant}
-      color={color}
-      size={size}
-      active={active}
-      onClick={handleButtonClick}
-    >
-      {iconStart && (
-        <Styled.Button
-          variant={variant}
-          color={color}
-          size={size}
-          expanded={expanded}
-        >
-          <iconStart.icon />
-        </Styled.Button>
-      )}
-      <Styled.Link as="span" variant={variant} color={color} size={size}>
-        {text}
-      </Styled.Link>
-      {iconEnd && (
-        <Styled.Button
-          variant={variant}
-          color={color}
-          size={size}
-          expanded={expanded}
-        >
-          <iconEnd.icon />
-        </Styled.Button>
-      )}
-      {expanded === true && <Styled.Dropdown>Example dropdown</Styled.Dropdown>}
-    </Styled.Component>
-  )
-}
+      {text}
+    </Styled.Link>
+    {iconEnd && (
+      <Styled.Icon variant={variant} color={color} size={size}>
+        <iconEnd.icon />
+      </Styled.Icon>
+    )}
+  </Styled.Component>
+)
 
 Button.propTypes = {
   text: string.isRequired,
-  link: string,
+  href: string,
   iconStart: shape({
     icon: func,
-    onClick: func,
   }),
   iconEnd: shape({
     icon: func,
-    onClick: func,
   }),
   variant: oneOf(["fill", "border", "text", "textLine"]),
   color: oneOf(["primary", "black", "white"]),
   size: oneOf(["small", "medium", "large"]),
   active: bool,
+  onClick: func,
 }
 
 Button.defaultProps = {
-  link: null,
+  href: null,
   iconStart: null,
   iconEnd: null,
   variant: "fill",
   color: "primary",
   size: "medium",
   active: null,
+  onClick: null,
 }
 
 export default Button
