@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { string, oneOf, shape, func } from "prop-types"
 
+import ChevronDown from "../../icons/ChevronDown.svg"
+
 import * as Styled from "./Component.styled"
 
 const Component = ({ heading, description, link, button, variant, size }) => {
@@ -16,6 +18,7 @@ const Component = ({ heading, description, link, button, variant, size }) => {
     <Styled.Component size={size}>
       <Styled.Heading size={size}>{heading}</Styled.Heading>
       <Styled.Description size={size}> {description}</Styled.Description>
+      <ChevronDown />
       {link && (
         <Styled.Link variant={variant} size={size} href={link.href}>
           {link.text}
