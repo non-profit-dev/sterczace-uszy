@@ -15,8 +15,19 @@ const Button = ({
 }) => {
   const [expanded, setExpanded] = useState(false)
 
-  const handleClick = () => {
+  const handleStartIconClick = () => {
     setExpanded(!expanded)
+    iconStart.onClick()
+  }
+
+  const handleEndIconClick = () => {
+    setExpanded(!expanded)
+    iconEnd.onClick()
+  }
+
+  const handleButtonClick = () => {
+    setExpanded(!expanded)
+    // ???.onClick()
   }
 
   return link ? (
@@ -32,7 +43,7 @@ const Button = ({
           color={color}
           size={size}
           expanded={expanded}
-          onClick={handleClick}
+          onClick={handleStartIconClick}
         >
           <iconStart.icon />
         </Styled.Button>
@@ -46,7 +57,7 @@ const Button = ({
           color={color}
           size={size}
           expanded={expanded}
-          onClick={handleClick}
+          onClick={handleEndIconClick}
         >
           <iconEnd.icon />
         </Styled.Button>
@@ -59,7 +70,7 @@ const Button = ({
       color={color}
       size={size}
       active={active}
-      onClick={handleClick}
+      onClick={handleButtonClick}
     >
       {iconStart && (
         <Styled.Button

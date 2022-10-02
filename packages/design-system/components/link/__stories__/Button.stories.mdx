@@ -16,6 +16,14 @@ Button can be a regular button, a link or a navigation link.
       link: "https://google.com",
       variant: "fill",
       size: "medium",
+      iconStart: {
+        icon: ArrowDownIcon,
+        onClick: () => console.log("clicled start icon"),
+      },
+      iconEnd: {
+        icon: ArrowDownIcon,
+        onClick: () => console.log("clicked end icon"),
+      },
     }}
   >
     {Template.bind()}
@@ -26,9 +34,11 @@ Button can be a regular button, a link or a navigation link.
       text: "Przykładowy tekst",
       iconStart: {
         icon: ArrowDownIcon,
+        onClick: null,
       },
       iconEnd: {
         icon: ArrowDownIcon,
+        onClick: null,
       },
       variant: "fill",
       size: "medium",
