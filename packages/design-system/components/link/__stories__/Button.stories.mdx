@@ -1,0 +1,61 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import Button from "../Button"
+
+<Meta title="Components/Button" component={Button} />
+
+# Button
+
+Button can be a regular button, a link or a navigation link.
+
+<Canvas>
+  <Story
+    name="Overview"
+    args={{
+      text: "Przykładowy tekst",
+      link: "https://google.com",
+      variant: "fill",
+      size: "medium",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Overview with button without link"
+    args={{
+      text: "Przykładowy tekst",
+      iconStart: {
+        icon: ArrowDownIcon,
+      },
+      iconEnd: {
+        icon: ArrowDownIcon,
+      },
+      variant: "fill",
+      size: "medium",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => <Button {...args} />
+
+export const ArrowDownIcon = () => (
+  <svg
+    width="14"
+    height="8"
+    viewBox="0 0 14 8"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1 1L7 7L13 1"
+      stroke="#020202"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)
