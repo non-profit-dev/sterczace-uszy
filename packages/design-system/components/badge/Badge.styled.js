@@ -1,10 +1,9 @@
 import styled from "@emotion/styled"
 import theme from "../theme/theme"
 
-export const Badge = styled.span`
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+export const Badge = styled.div`
+  display: inline-block;
+  line-height: 140%;
   padding: 0px 8px;
   border-radius: 4px;
   background-color: ${({ variant }) => {

@@ -1,4 +1,3 @@
-import userEvent from "@testing-library/user-event"
 import { render, screen } from "../../../test-utils"
 
 import Badge from "../Badge"
@@ -12,7 +11,7 @@ describe(`Badge`, () => {
     expect(screen.getByText(text)).toBeInTheDocument()
   })
 
-  it(`renders the budge with text`, () => {
+  it(`renders with custom properties`, () => {
     render(<Badge text={text} variant="neutrals" size="small" />)
   })
 })
