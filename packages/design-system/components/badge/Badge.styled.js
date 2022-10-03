@@ -3,7 +3,6 @@ import theme from "../theme/theme"
 
 export const Badge = styled.div`
   display: inline-block;
-  line-height: 140%;
   padding: 0px 8px;
   border-radius: 4px;
   background-color: ${({ variant }) => {
@@ -22,16 +21,30 @@ export const Badge = styled.div`
     variant === "primary"
       ? theme.colors.neutrals[100]
       : theme.colors.grey[500]};
+
   font-size: ${({ size }) => {
     switch (size) {
       case "small":
-        return "14px"
+        return theme.typography.desktop.bodySmall.size // TODO change after updating the theme file
       case "medium":
-        return "16px"
+        return theme.typography.desktop.bodySmall.size
       case "large":
-        return "20px"
+        return theme.typography.desktop.bodyMedium.size
       default:
-        return "14px"
+        return theme.typography.desktop.bodySmall.size
+    }
+  }};
+  font-weight: "400 px";
+  line-height: ${({ size }) => {
+    switch (size) {
+      case "small":
+        return theme.typography.desktop.bodySmall.lineHeight // TODO change after updating the theme file
+      case "medium":
+        return theme.typography.desktop.bodySmall.lineHeight
+      case "large":
+        return theme.typography.desktop.bodyMedium.lineHeight
+      default:
+        return theme.typography.desktop.bodySmall.lineHeight
     }
   }};
 `
