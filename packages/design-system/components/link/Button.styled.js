@@ -4,15 +4,15 @@ import theme from "../theme/theme"
 
 const sizes = {
   small: {
-    text: "16px",
+    typography: theme.typography.desktop.bodySmall,
     padding: "8px 52px",
   },
   medium: {
-    text: "20px",
+    typography: theme.typography.desktop.h6,
     padding: "10px 68px",
   },
   large: {
-    text: "24px",
+    typography: theme.typography.desktop.h5,
     padding: "12px 82px",
   },
 }
@@ -32,15 +32,12 @@ const colors = {
   },
 }
 export const Component = styled.div`
-  font-family: "Poppins";
-  border-radius: 30px;
-  line-height: 1.2;
-  font-weight: 600;
+  ${({ size }) => sizes[size].typography};
   letter-spacing: -0.02em;
+  border-radius: 30px;
   position: relative;
   display: inline-block;
   padding: ${({ size }) => sizes[size].padding};
-  font-size: ${({ size }) => sizes[size].text};
   color: ${({ variant, color }) =>
     variant === "fill" ? colors[color].filledText : colors[color].mainColor};
   background-color: ${({ variant, color }) =>
