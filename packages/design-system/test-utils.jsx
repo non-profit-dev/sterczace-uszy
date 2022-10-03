@@ -1,4 +1,3 @@
-import React from "react"
 import { render } from "@testing-library/react"
 import { ThemeProvider } from "@emotion/react"
 import { node } from "prop-types"
