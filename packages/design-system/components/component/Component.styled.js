@@ -11,9 +11,6 @@ const sizes = {
   large: {
     padding: "40px",
   },
-  xlarge: {
-    padding: "40px",
-  },
 }
 
 export const Component = styled.div`
