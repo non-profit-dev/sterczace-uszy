@@ -22,29 +22,16 @@ export const Badge = styled.div`
       ? theme.colors.neutrals[100]
       : theme.colors.grey[500]};
 
-  font-size: ${({ size }) => {
+  ${({ size }) => {
     switch (size) {
       case "small":
-        return theme.typography.desktop.bodySmall.size // TODO change after updating the theme file
+        return theme.typography.desktop.bodySmall
       case "medium":
-        return theme.typography.desktop.bodySmall.size
+        return theme.typography.desktop.bodySmall
       case "large":
-        return theme.typography.desktop.bodyMedium.size
+        return theme.typography.desktop.bodyMedium
       default:
-        return theme.typography.desktop.bodySmall.size
-    }
-  }};
-  font-weight: "400 px";
-  line-height: ${({ size }) => {
-    switch (size) {
-      case "small":
-        return theme.typography.desktop.bodySmall.lineHeight // TODO change after updating the theme file
-      case "medium":
-        return theme.typography.desktop.bodySmall.lineHeight
-      case "large":
-        return theme.typography.desktop.bodyMedium.lineHeight
-      default:
-        return theme.typography.desktop.bodySmall.lineHeight
+        return theme.typography.desktop.bodySmall
     }
   }};
 `
