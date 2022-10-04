@@ -25,7 +25,7 @@ export const Badge = styled.div`
   ${({ size }) => {
     switch (size) {
       case "small":
-        return theme.typography.desktop.bodySmall
+        return theme.typography.desktop.bodySubtitle
       case "medium":
         return theme.typography.desktop.bodySmall
       case "large":
@@ -34,4 +34,19 @@ export const Badge = styled.div`
         return theme.typography.desktop.bodySmall
     }
   }};
+
+  line-height: ${({ size }) => {
+    switch (size) {
+      case "small":
+        return "20px"
+      case "medium":
+        return "22px"
+      case "large":
+        return "28px"
+      default:
+        return "22px"
+    }
+  }};
+
+  font-style: normal;
 `
