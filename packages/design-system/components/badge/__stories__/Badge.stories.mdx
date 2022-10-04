@@ -1,0 +1,24 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import Badge from "../Badge.jsx"
+
+<Meta title="Components/Badge" component={Badge} />
+
+# Badge
+
+<Canvas>
+  <Story
+    name="Example"
+    args={{
+      text: "Szczeniak ",
+      variant: "gray",
+      size: "small",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => <Badge {...args} />
