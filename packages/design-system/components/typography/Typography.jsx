@@ -62,6 +62,7 @@ Typography.defaultProps = {
   children: "",
   as: "",
   breakpoints: "",
+  variants: "",
 }
 
 export default Typography
