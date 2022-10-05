@@ -1,0 +1,23 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+import { useTheme } from "@emotion/react"
+
+import Typography from "../Typography"
+
+<Meta title="Components/Typography" component={Typography} />
+
+# Typography
+
+<Canvas>
+  <Story
+    name="Overview"
+    args={{
+      variant: "bodyLarge",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => <Typography {...args}>Heading</Typography>

@@ -1,15 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
-import styled from "styled-components"
-import theme from "../theme"
 import * as Styled from "./Typography.styled"
-
-const Container = styled.div`
-  font-family: ${({ fontFamily }) => fontFamilyStyle(fontFamily)};
-  font-size: ${({ size }) => sizes[size]};
-  line-height: ${({ size }) => lineHeights[size]};
-  color: ${({ textColor }) => colors[textColor] || "unset"};
-`
 
 const variantsMapping = {
   h1: "h1",
@@ -18,17 +9,38 @@ const variantsMapping = {
   h4: "h4",
   h5: "h5",
   h6: "h6",
-  bodyLarge: "h6",
-  bodyMedium: "h6",
+  bodyLarge: "p",
+  bodyMedium: "p",
   bodySmall: "p",
   bodyTitle: "p",
   bodySubtitle: "p",
   bodySmallBold: "p",
 }
-export const Typography = ({ variant, color, children, ...props }) => (
-  <Container textColor={color} size={size}>
+export const breakpoints = {
+  xs: "340px",
+  sm: "600px",
+  md: "900px",
+  lg: "1200px",
+  xl: "1536px",
+}
+
+export const Typography = ({
+  variant,
+  color,
+  breakpoints,
+  children,
+  as,
+  ...props
+}) => (
+  <Styled.Container
+    variant={variant}
+    color={color}
+    breakpoints={breakpoints}
+    as={as || variantsMapping[variant]}
+    {...props}
+  >
     {children}
-  </Container>
+  </Styled.Container>
 )
 
 Typography.propTypes = {
@@ -39,14 +51,18 @@ Typography.propTypes = {
     "complementary",
     "decorative",
   ]),
-  size: PropTypes.oneOf(["normal", "large"]),
-  fontFamily: PropTypes.oneOf(["Poppins", "sans-serif"]),
+  variant: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6", "p"]),
+  as: PropTypes.string,
+  color: PropTypes.string,
+  MediaQueryList: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"]),
   children: PropTypes.node,
 }
 
 Typography.defaultProps = {
   color: "",
-  size: "normal",
-  fontFamily: null,
   children: "",
+  as: "",
+  breakpoints: "",
 }
+
+export default Typography
