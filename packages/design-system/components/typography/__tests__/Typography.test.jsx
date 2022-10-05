@@ -1,4 +1,4 @@
-import { render, screen, find } from "../../../test-utils"
+import { render } from "../../../test-utils"
 import Typography from "../Typography"
 
 const text = "Lorem ipsum"
