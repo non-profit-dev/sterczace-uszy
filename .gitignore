@@ -119,3 +119,8 @@ build
 ############################
 .next/
 out/
+
+############################
+# Next.js
+############################
+packages/design-system/storybook-static
