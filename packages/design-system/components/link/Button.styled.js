@@ -45,11 +45,10 @@ export const Component = styled.div`
   border: ${({ variant, color }) =>
     variant === "border" ? `2px solid ${colors[color].mainColor}` : "none"};
 
-  ${({ variant, color }) =>
+  ${({ variant }) =>
     variant === "textLine" &&
     css`
       border-radius: 0;
-      /* border-bottom: 2px solid ${colors[color].mainColor}; */
       padding: 2px 0;
     `}
 
@@ -61,30 +60,54 @@ export const Component = styled.div`
 `
 
 export const Link = styled.a`
+  ${({ size }) => sizes[size].typography};
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
   border: none;
   background: transparent;
+  padding: 0;
   color: ${({ variant, color }) =>
     variant === "fill" ? colors[color].filledText : colors[color].mainColor};
 
   ${({ variant }) =>
     variant === "textLine" &&
     css`
-      text-decoration-line: underline;
+      text-decoration: underline;
+    `}
+
+  ${({ active, variant, color }) =>
+    active &&
+    variant === "text" &&
+    css`
+      border-bottom: 2px solid ${colors[color].mainColor};
     `}
 `
 
 export const Icon = styled.span`
-  padding: 6px 8px;
-  border: none;
   cursor: pointer;
+  padding: 0px 4px;
+  border: none;
   background-color: transparent;
-  /* position: absolute; */
+  height: ${({ size }) => sizes[size].typography.lineHeight};
+  width: ${({ size }) => sizes[size].typography.lineHeight};
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  /* svg {
-    fill: ${({ variant, color }) =>
-    variant === "fill" ? colors[color].filledText : colors[color].mainColor};
-  } */
+  svg {
+    padding: ${({ size }) => {
+      switch (size) {
+        case "small":
+          return "5px"
+        case "medium":
+          return "6px"
+        case "large":
+          return "7px"
+        default:
+          return "6px"
+      }
+    }};
+  }
 `

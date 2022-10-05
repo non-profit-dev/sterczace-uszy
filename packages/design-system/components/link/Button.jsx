@@ -17,7 +17,6 @@ const Button = ({
     variant={variant}
     color={color}
     size={size}
-    active={active}
     onClick={onClick}
   >
     {iconStart && (
@@ -31,6 +30,7 @@ const Button = ({
       color={color}
       size={size}
       href={href}
+      active={active}
     >
       {text}
     </Styled.Link>
