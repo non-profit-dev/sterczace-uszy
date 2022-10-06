@@ -1,5 +1,8 @@
 module.exports = {
-  stories: ["../components/**/__stories__/*.stories.@(mdx|jsx)"],
+  stories: [
+    "../components/**/__stories__/*.stories.@(mdx|jsx)",
+    "../icons/__stories__/*.stories.@(mdx|jsx)",
+  ],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -9,17 +12,19 @@ module.exports = {
   core: {
     builder: "@storybook/builder-webpack5",
   },
-  webpackFinal: async (config) => {
-    // Remove svg rules from existing webpack rule
-    const assetRule = config.module.rules.find(({ test }) => test.test(".svg"))
+  webpackFinal: (config) => {
+    const fileLoaderRule = config.module.rules.find(
+      (rule) => rule.test && rule.test.test(".svg")
+    )
+    fileLoaderRule.exclude = /\.svg$/
 
-    const assetLoader = {
-      loader: assetRule.loader,
-      options: assetRule.options || assetRule.query,
-    }
-    config.module.rules.unshift({
+    config.module.rules.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack", assetLoader],
+      enforce: "pre",
+      loader: require.resolve("@svgr/webpack", {
+        options: { icon: true },
+        replaceAttrValues: { "#000": "{props.color}" },
+      }),
     })
 
     return config
