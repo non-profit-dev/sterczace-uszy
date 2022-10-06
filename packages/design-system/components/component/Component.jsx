@@ -1,8 +1,6 @@
 import { useState } from "react"
 import { string, oneOf, shape, func } from "prop-types"
 
-import ChevronDown from "../../icons/ChevronDown.svg"
-
 import * as Styled from "./Component.styled"
 
 const typography = {
@@ -31,7 +29,6 @@ const Component = ({ heading, description, link, button, variant, size }) => {
 
   return (
     <Styled.Component size={size}>
-      <ChevronDown />
       <Styled.Heading typographyVariant={typography[size].heading}>
         {heading}
       </Styled.Heading>
@@ -51,7 +48,7 @@ const Component = ({ heading, description, link, button, variant, size }) => {
           favorite={favorite}
           onClick={handleClick}
         >
-          <button.icon />
+          {button.icon}
         </Styled.Button>
       )}
     </Styled.Component>
