@@ -10,7 +10,7 @@ Button can be a regular button, a link or a navigation link.
 
 <Canvas>
   <Story
-    name="Overview"
+    name="Overview - variant link"
     args={{
       text: "Przykładowy tekst",
       href: "https://google.com",
@@ -21,10 +21,10 @@ Button can be a regular button, a link or a navigation link.
     {Template.bind()}
   </Story>
   <Story
-    name="Overview with button without link"
+    name="Overview - variant button"
     args={{
       text: "Przykładowy tekst",
-      iconEnd: { icon: ArrowDownIcon },
+      iconEnd: <ArrowDownIcon />,
       variant: "fill",
       size: "medium",
     }}

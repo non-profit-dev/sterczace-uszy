@@ -61,14 +61,14 @@ export const Component = styled.div`
 
 export const Link = styled.a`
   ${({ size }) => sizes[size].typography};
+  letter-spacing: inherit;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
   border: none;
   background: transparent;
   padding: 0;
-  color: ${({ variant, color }) =>
-    variant === "fill" ? colors[color].filledText : colors[color].mainColor};
+  color: inherit;
 
   ${({ variant }) =>
     variant === "textLine" &&
@@ -85,10 +85,7 @@ export const Link = styled.a`
 `
 
 export const Icon = styled.span`
-  cursor: pointer;
   padding: 0px 4px;
-  border: none;
-  background-color: transparent;
   height: ${({ size }) => sizes[size].typography.lineHeight};
   width: ${({ size }) => sizes[size].typography.lineHeight};
   position: absolute;
