@@ -31,7 +31,7 @@ export const Heading = styled.h2`
   ${({ theme }) => theme.breakpoints.lg} {
     ${({ theme, typographyVariant }) =>
       theme.typography.tablet[typographyVariant]}
-  }}
+  }
 `
 
 export const Description = styled.p`
@@ -41,7 +41,7 @@ export const Description = styled.p`
   ${({ theme }) => theme.breakpoints.lg} {
     ${({ theme, typographyVariant }) =>
       theme.typography.mobile[typographyVariant]}
-  }}
+  }
 `
 
 export const Link = styled.a`
