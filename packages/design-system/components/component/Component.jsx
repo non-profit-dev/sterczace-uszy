@@ -5,6 +5,21 @@ import ChevronDown from "../../icons/ChevronDown.svg"
 
 import * as Styled from "./Component.styled"
 
+const typography = {
+  small: {
+    heading: "h6",
+    description: "bodySmall",
+  },
+  medium: {
+    heading: "h4",
+    description: "bodyMedium",
+  },
+  large: {
+    heading: "h3",
+    description: "bodyLarge",
+  },
+}
+
 const Component = ({ heading, description, link, button, variant, size }) => {
   const [favorite, setFavorite] = useState()
 
@@ -16,11 +31,16 @@ const Component = ({ heading, description, link, button, variant, size }) => {
 
   return (
     <Styled.Component size={size}>
-      <Styled.Heading size={size}>{heading}</Styled.Heading>
-      <Styled.Description size={size}> {description}</Styled.Description>
       <ChevronDown />
+      <Styled.Heading typographyVariant={typography[size].heading}>
+        {heading}
+      </Styled.Heading>
+      <Styled.Description typographyVariant={typography[size].description}>
+        {" "}
+        {description}
+      </Styled.Description>
       {link && (
-        <Styled.Link variant={variant} size={size} href={link.href}>
+        <Styled.Link variant={variant} href={link.href}>
           {link.text}
         </Styled.Link>
       )}

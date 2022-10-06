@@ -3,21 +3,12 @@ import { css } from "@emotion/react"
 
 const sizes = {
   small: {
-    heading: "18px",
-    description: "14px",
-    link: "12px",
     padding: "14px",
   },
   medium: {
-    heading: "24px",
-    description: "16px",
-    link: "14px",
     padding: "30px",
   },
   large: {
-    heading: "30px",
-    description: "20px",
-    link: "16px",
     padding: "40px",
   },
 }
@@ -27,7 +18,6 @@ export const Component = styled.div`
   padding: ${({ size }) => sizes[size].padding};
   border: ${({ theme }) => `1px solid ${theme.colors.grey[200]}`};
   border-radius: 2px;
-  font-family: "Helvetica"; // this should be defined outside of the component, it should be a global font family for the whole app, but it's here because we haven't defined it yet
   color: ${({ theme }) =>
     theme.colors
       .grey[500]}; // this is the way we can use some values from our theme
@@ -35,11 +25,13 @@ export const Component = styled.div`
 
 export const Heading = styled.h2`
   margin: 0;
-  font-size: ${({ size }) => sizes[size].heading};
+  ${({ theme, typographyVariant }) =>
+    theme.typography.desktop[typographyVariant]};
 `
 
 export const Description = styled.p`
-  font-size: ${({ size }) => sizes[size].description};
+  ${({ theme, typographyVariant }) =>
+    theme.typography.desktop[typographyVariant]};
 `
 
 export const Link = styled.a`
@@ -53,7 +45,7 @@ export const Link = styled.a`
       : theme.colors.complementary[100]};
   color: ${({ theme }) => theme.colors.grey[500]};
   text-decoration: none;
-  font-size: ${({ size }) => sizes[size].link};
+  ${({ theme }) => theme.typography.desktop.bodySmall};
 
   &:hover {
     background-color: ${({ theme, variant }) =>
