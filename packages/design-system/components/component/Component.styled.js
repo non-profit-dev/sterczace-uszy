@@ -27,11 +27,21 @@ export const Heading = styled.h2`
   margin: 0;
   ${({ theme, typographyVariant }) =>
     theme.typography.desktop[typographyVariant]};
+
+  ${({ theme }) => theme.breakpoints.lg} {
+    ${({ theme, typographyVariant }) =>
+      theme.typography.tablet[typographyVariant]}
+  }}
 `
 
 export const Description = styled.p`
   ${({ theme, typographyVariant }) =>
     theme.typography.desktop[typographyVariant]};
+
+  ${({ theme }) => theme.breakpoints.lg} {
+    ${({ theme, typographyVariant }) =>
+      theme.typography.mobile[typographyVariant]}
+  }}
 `
 
 export const Link = styled.a`
