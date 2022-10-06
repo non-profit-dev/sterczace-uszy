@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { string, oneOf, shape, func } from "prop-types"
+import { string, oneOf, shape, func, node } from "prop-types"
 
 import * as Styled from "./Component.styled"
 
@@ -63,7 +63,7 @@ Component.propTypes = {
     href: string,
   }),
   button: shape({
-    icon: func,
+    icon: node,
     onClick: func,
   }),
   variant: oneOf(["primary", "secondary"]),
