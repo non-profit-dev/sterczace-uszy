@@ -18,6 +18,7 @@ const Button = ({
     color={color}
     size={size}
     onClick={onClick}
+    data-testid="button"
   >
     {iconStart && (
       <Styled.Icon variant={variant} color={color} size={size}>
