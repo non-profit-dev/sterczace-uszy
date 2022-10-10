@@ -21,7 +21,7 @@ const Icon = ({ name, color, size }) => {
 }
 
 Icon.propTypes = {
-  name: oneOf(["heart"]).isRequired,
+  name: oneOf(Object.keys(icons)).isRequired,
   color: string,
   size: oneOf(["small", "medium", "large"]),
 }
