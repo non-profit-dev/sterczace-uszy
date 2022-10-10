@@ -1,6 +1,7 @@
 import { string, oneOf } from "prop-types"
 
 import Heart from "../../icons/Heart.svg"
+import Marker from "../../icons/Marker.svg"
 
 const sizes = {
   small: 16,
@@ -10,6 +11,7 @@ const sizes = {
 
 const icons = {
   heart: Heart,
+  marker: Marker,
 }
 
 const Icon = ({ name, color, size }) => {

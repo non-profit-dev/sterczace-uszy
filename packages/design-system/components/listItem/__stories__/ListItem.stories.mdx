@@ -1,6 +1,7 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
 
 import ListItem from "../ListItem.jsx"
+import Icon from "../../icon/Icon"
 
 <Meta title="Components/ListItem" component={ListItem} />
 
@@ -8,9 +9,19 @@ import ListItem from "../ListItem.jsx"
 
 <Canvas>
   <Story
-    name="Example"
+    name="With icon"
     args={{
-      children: "Umozliwiamy adopcję za granicę",
+      children: "Umożliwiamy adopcję za granicę",
+      variant: "gray",
+      icon: <Icon name="heart" size="small" />,
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Without icon"
+    args={{
+      children: "Umożliwiamy adopcję za granicę",
       variant: "gray",
     }}
   >
@@ -21,19 +32,3 @@ import ListItem from "../ListItem.jsx"
 <ArgsTable />
 
 export const Template = (args) => <ListItem {...args} />
-
-export const HeartIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-  </svg>
-)

@@ -1,12 +1,9 @@
-// userEvent library simulates user interactions by dispatching the events that would happen if the interaction took place in a browser.
-import userEvent from "@testing-library/user-event"
-
-// import react-testing methods (wrapped with custom ThemeProvider added in the test-utils.jsx file)
-import { render, screen, act } from "../../../test-utils"
+import { render } from "../../../test-utils"
 
 import ListItem from "../ListItem"
 
 const ChildComponent = () => <div>loremIpsum</div>
+const MockIcon = () => <span>icon</span>
 
 // Group tests
 describe(`ListItem`, () => {
@@ -25,7 +22,7 @@ describe(`ListItem`, () => {
     )
   })
 
-  // it(`renders the list item element with icon`, () => {
-  //   render(<ListItem variant="primary" icon={{ MockIcon }} />)
-  // })
+  it(`renders the list item element with icon`, () => {
+    render(<ListItem variant="primary" icon={<MockIcon />} />)
+  })
 })

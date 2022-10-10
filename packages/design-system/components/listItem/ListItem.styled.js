@@ -26,10 +26,8 @@ export const ListItem = styled.div`
   }};
 `
 export const ListItemIcon = styled.span`
-  padding: 2px;
+  padding: 5px;
   height: "22,4px";
-  position: absolute;
-  display: inline;
   align-items: center;
   justify-content: center;
   svg {
