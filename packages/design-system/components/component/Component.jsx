@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { string, oneOf, shape, func } from "prop-types"
+import { string, oneOf, shape, func, node } from "prop-types"
 
 import * as Styled from "./Component.styled"
 
@@ -48,7 +48,7 @@ const Component = ({ heading, description, link, button, variant, size }) => {
           favorite={favorite}
           onClick={handleClick}
         >
-          <button.icon />
+          {button.icon}
         </Styled.Button>
       )}
     </Styled.Component>
@@ -63,7 +63,7 @@ Component.propTypes = {
     href: string,
   }),
   button: shape({
-    icon: func,
+    icon: node,
     onClick: func,
   }),
   variant: oneOf(["primary", "secondary"]),
