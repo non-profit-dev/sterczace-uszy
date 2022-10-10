@@ -32,7 +32,8 @@ This project consists of 3 different packages, with the following structure:
 packages/
 ├── backend
 ├── design-system
-  └── components
+  ├── components
+  └── icons
 └── frontend
   ├── app
   └── e2e
