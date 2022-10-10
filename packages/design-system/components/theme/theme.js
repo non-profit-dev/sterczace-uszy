@@ -1,3 +1,13 @@
+const getBreakpoints = (bp) => {
+  const obj = {}
+
+  Object.keys(bp).forEach((key) => {
+    obj[key] = `@media (max-width: ${bp[key]}px)`
+  })
+
+  return obj
+}
+
 const theme = {
   containerHeight: "100vh",
   defaultPadding: "16px",
@@ -178,6 +188,13 @@ const theme = {
       },
     },
   },
+  breakpoints: getBreakpoints({
+    sm: 576,
+    md: 768,
+    lg: 992,
+    xl: 1200,
+    xxl: 1400,
+  }),
 }
 
 export default theme
