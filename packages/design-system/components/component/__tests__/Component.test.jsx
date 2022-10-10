@@ -52,7 +52,7 @@ describe(`Component`, () => {
       <Component
         heading={heading}
         description={description}
-        button={{ icon: MockIcon, onClick: jest.fn() }}
+        button={{ icon: <MockIcon />, onClick: jest.fn() }}
       />
     )
   })
@@ -64,7 +64,7 @@ describe(`Component`, () => {
       <Component
         heading={heading}
         description={description}
-        button={{ icon: MockIcon, onClick: onClickMock }}
+        button={{ icon: <MockIcon />, onClick: onClickMock }}
       />
     )
 

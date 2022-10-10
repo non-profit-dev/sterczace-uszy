@@ -1,0 +1,26 @@
+/* Custom CSS styles for the icons gallery */
+.docblock-icongallery {
+  margin-top: 20px;
+}
+
+.docblock-icongallery > div {
+  flex: none;
+  min-width: auto;
+  margin: 0;
+  padding: 15px;
+  flex-direction: column;
+}
+
+/* icon tile */
+.docblock-icongallery > div > div:first-of-type {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 8px;
+  box-shadow: none;
+}
+
+/* icon name */
+.docblock-icongallery > div > div:last-of-type {
+  margin: 0;
+  color: #778;
+}
