@@ -31,10 +31,12 @@ const colors = {
     filledText: theme.colors.primary[300],
   },
 }
-export const Component = styled.div`
+export const Component = styled.a`
   ${({ size }) => sizes[size].typography};
   letter-spacing: -0.02em;
   border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
   position: relative;
   display: inline-block;
   padding: ${({ size }) => sizes[size].padding};
@@ -46,30 +48,14 @@ export const Component = styled.div`
     variant === "border" ? `2px solid ${colors[color].mainColor}` : "none"};
 
   ${({ variant }) =>
-    variant === "textLine" &&
+    (variant === "textLine" || variant === "text") &&
     css`
       border-radius: 0;
-      padding: 2px 0;
-    `}
-
-  ${({ variant }) =>
-    variant === "text" &&
-    css`
-      padding: 2px 0;
+      padding: 4px;
     `}
 `
 
-export const Link = styled.a`
-  ${({ size }) => sizes[size].typography};
-  letter-spacing: inherit;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border: none;
-  background: transparent;
-  padding: 0;
-  color: inherit;
-
+export const Text = styled.span`
   ${({ variant }) =>
     variant === "textLine" &&
     css`

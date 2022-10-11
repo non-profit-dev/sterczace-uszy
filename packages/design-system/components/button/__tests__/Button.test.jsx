@@ -36,21 +36,37 @@ describe(`Button`, () => {
 
   it(`renders with the start icon`, () => {
     render(<Button text={text} iconStart={MockIcon} />)
+    expect(screen.getByTestId("icon-start")).toBeInTheDocument()
   })
 
   it(`renders with the end icon`, () => {
     render(<Button text={text} iconEnd={MockIcon} />)
+    expect(screen.getByTestId("icon-end")).toBeInTheDocument()
   })
 
-  it(`fires onClick callback when clicked`, () => {
+  it(`fires onClick callback when button is clicked`, () => {
     const onClickMock = jest.fn()
 
     render(<Button text={text} onClick={onClickMock} />)
 
-    const button = screen.getByTestId("button")
+    const button = screen.getByRole("button")
 
     act(() => {
       userEvent.click(button)
+    })
+
+    expect(onClickMock).toBeCalledTimes(1)
+  })
+
+  it(`fires onClick callback when link is clicked`, () => {
+    const onClickMock = jest.fn()
+
+    render(<Button text={text} href="/" onClick={onClickMock} />)
+
+    const link = screen.getByRole("link")
+
+    act(() => {
+      userEvent.click(link)
     })
 
     expect(onClickMock).toBeCalledTimes(1)

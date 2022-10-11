@@ -14,29 +14,23 @@ const Button = ({
   onClick,
 }) => (
   <Styled.Component
+    as={href ? `a` : `button`}
     variant={variant}
     color={color}
     size={size}
+    href={href}
     onClick={onClick}
-    data-testid="button"
   >
     {iconStart && (
-      <Styled.Icon variant={variant} color={color} size={size}>
+      <Styled.Icon size={size} data-testid="icon-start">
         {iconStart}
       </Styled.Icon>
     )}
-    <Styled.Link
-      as={href ? `a` : `button`}
-      variant={variant}
-      color={color}
-      size={size}
-      href={href}
-      active={active}
-    >
+    <Styled.Text variant={variant} color={color} active={active}>
       {text}
-    </Styled.Link>
+    </Styled.Text>
     {iconEnd && (
-      <Styled.Icon variant={variant} color={color} size={size}>
+      <Styled.Icon size={size} data-testid="icon-end">
         {iconEnd}
       </Styled.Icon>
     )}
