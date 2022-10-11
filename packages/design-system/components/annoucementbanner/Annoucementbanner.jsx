@@ -1,5 +1,4 @@
 import { string, oneOf, func, bool, node } from "prop-types"
-
 import * as Styled from "./Annoucementbanner.styled"
 
 const typography = {

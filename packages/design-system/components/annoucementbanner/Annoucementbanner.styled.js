@@ -17,7 +17,7 @@ const colors = {
     filledText: theme.colors.primary[500],
   },
 }
-export const Component = styled.div`
+export const Annoucementbanner = styled.div`
   ${({ size }) => sizes[size].typography};
   background-color: ${({ theme }) => theme.colors.complementary[100]};
   color: ${({ variant, color }) =>
