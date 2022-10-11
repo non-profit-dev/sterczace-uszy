@@ -1,0 +1,44 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import Button from "../Annoucementbanner"
+
+<Meta title="Components/Annoucementbanner" component={Annoucementbanner} />
+
+# Annoucementbanner
+
+<Canvas>
+  <Story
+    name="Overview - button variant"
+    args={{
+      heading: "Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj",
+      text: "tutaj",
+      iconEnd: <ArrowDownIcon />,
+      variant: "fill",
+      size: "medium",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => <Button {...args} />
+
+export const ArrowDownIcon = () => (
+  <svg
+    width="28"
+    height="16"
+    viewBox="0 0 14 8"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1 1L7 7L13 1"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)
