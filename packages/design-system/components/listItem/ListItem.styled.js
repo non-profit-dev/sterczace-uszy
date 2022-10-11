@@ -2,16 +2,16 @@ import styled from "@emotion/styled"
 import theme from "../theme/theme"
 
 export const ListItem = styled.div`
-  flex: 1;
+  display: flex;
+  flex-grow: 1;
   flex-direction: row;
+  padding: "0px";
+  gap: "4px";
+  align-items: center;
   justify-content: flex-start;
   background-color: "transparent";
-  border-width: ${({ variant }) => (variant === "primary" ? "3px" : "5px")};
-  border-style: "solid";
-  border-color: ${({ variant }) => (variant === "primary" ? "red" : "blue")};
   color: ${({ variant }) =>
     variant === "primary" ? theme.colors.primary[500] : theme.colors.grey[600]};
-  line-height: "22,4px";
   ${({ size }) => {
     switch (size) {
       case "small":
@@ -24,13 +24,26 @@ export const ListItem = styled.div`
         return theme.typography.desktop.bodySmall
     }
   }};
+  line-height: "22,4px";
 `
-export const ListItemIcon = styled.span`
-  padding: 5px;
+export const ChildContainer = styled.div`
+  color: ${({ variant }) =>
+    variant === "primary" ? theme.colors.primary[500] : theme.colors.grey[600]};
+  flex-direction: row;
+  flex-grow: 2;
+  color: inherit;
+`
+export const ListItemIcon = styled.div`
+  padding: 0px 4px;
   height: "22,4px";
+  width: "22,4px";
+  flex-grow: 1;
+  margin-right: "4px";
+  padding: "0px";
   align-items: center;
   justify-content: center;
+  flex-grow: 0;
+  color: inherit;
   svg {
-    padding: "3px";
   }
 `

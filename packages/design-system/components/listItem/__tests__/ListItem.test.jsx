@@ -1,11 +1,11 @@
-import { render } from "../../../test-utils"
+import { render, screen } from "../../../test-utils"
 
 import ListItem from "../ListItem"
 
-const ChildComponent = () => <div>loremIpsum</div>
+const text = "Lorem ipsum"
+const ChildComponent = () => <div>{text}</div>
 const MockIcon = () => <span>icon</span>
 
-// Group tests
 describe(`ListItem`, () => {
   it(`renders with default properties`, () => {
     render(
@@ -13,6 +13,8 @@ describe(`ListItem`, () => {
         <ChildComponent />
       </ListItem>
     )
+
+    expect(screen.getByText(text)).toBeInTheDocument()
   })
   it(`renders with custom properties`, () => {
     render(

@@ -1,12 +1,12 @@
 import React from "react"
-import { string, oneOf, func, oneOfType, node } from "prop-types"
+import { string, oneOf, oneOfType, node } from "prop-types"
 
 import * as Styled from "./ListItem.styled"
 
 const ListItem = ({ children, variant, icon }) => (
   <Styled.ListItem variant={variant}>
     {icon && <Styled.ListItemIcon>{icon}</Styled.ListItemIcon>}
-    {children}
+    <Styled.ChildContainer>{children}</Styled.ChildContainer>
   </Styled.ListItem>
 )
 
@@ -16,7 +16,7 @@ ListItem.propTypes = {
   icon: node,
 }
 ListItem.defaultProps = {
-  children: "lorem ipsum dolor",
+  children: "Lorem ipsum ",
   variant: "primary",
   icon: null,
 }
