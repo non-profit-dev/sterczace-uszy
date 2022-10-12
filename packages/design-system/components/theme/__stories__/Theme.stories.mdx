@@ -1,4 +1,4 @@
-import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs"
+import { Meta, ColorPalette, ColorItem, Typeset } from "@storybook/addon-docs"
 
 import theme from "../theme"
 
@@ -17,6 +17,59 @@ import theme from "../theme"
   {Object.entries(theme.colors).map((palette, i) => (
     <div key={i}>
       <ColorItem key={palette[0]} title={palette[0]} colors={palette[1]} />
+      {console.log(parseInt(theme.typography.desktop.h1.fontSize))}
     </div>
   ))}
 </ColorPalette>
+
+---
+
+# Typography
+
+export const typography = {
+  type: {
+    primary: "Poppins",
+  },
+  weight: {
+    regular: "400",
+    bold: "700",
+    extrabold: "800",
+  },
+  size: {
+    h1: 12,
+    h2: 14,
+    h3: 16,
+    h4: 20,
+    h5: 24,
+    h6: 28,
+    bodyLarge: 32,
+    bodyTitle: 40,
+    bodySmall: 40,
+  },
+}
+
+<Typeset
+  fontSizes={[
+    parseInt(theme.typography.desktop.h1.fontSize),
+    parseInt(theme.typography.desktop.h2.fontSize),
+    parseInt(theme.typography.desktop.h3.fontSize),
+    parseInt(theme.typography.desktop.h4.fontSize),
+    parseInt(theme.typography.desktop.h5.fontSize),
+    parseInt(theme.typography.desktop.h6.fontSize),
+  ]}
+  fontFamily={theme.typography.desktop.h1.fontFamily}
+  fontWeight={theme.typography.desktop.h1.fontWeight}
+  sampleText="Heading text"
+/>
+
+<Typeset
+  fontSizes={[
+    parseInt(theme.typography.desktop.bodyLarge.fontSize),
+    parseInt(theme.typography.desktop.bodyTitle.fontSize),
+    parseInt(theme.typography.desktop.bodySmall.fontSize),
+    parseInt(theme.typography.desktop.bodyTiny.fontSize),
+  ]}
+  fontFamily={theme.typography.desktop.h1.fontFamily}
+  fontWeight={theme.typography.desktop.bodyLarge.fontWeight}
+  sampleText="Body text"
+/>
