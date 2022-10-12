@@ -14,7 +14,7 @@ import Icon from "../../icon/Icon"
       children:
         "Umożliwiamy adopcję za granicę Umożliwiamy adopcję za granicę Umożliwiamy adopcję za granicę",
       variant: "primary",
-      icon: <Icon name="marker" size="medium" />,
+      icon: <Icon name="done" size="medium" />,
     }}
   >
     {Template.bind()}
@@ -24,6 +24,16 @@ import Icon from "../../icon/Icon"
     args={{
       children: "Umożliwiamy adopcję za granicę",
       variant: "gray",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Without icon i"
+    args={{
+      children: "Umożliwiamy adopcję za granicę",
+      variant: "gray",
+      icon: <Icon name="marker" size="medium" />,
     }}
   >
     {Template.bind()}

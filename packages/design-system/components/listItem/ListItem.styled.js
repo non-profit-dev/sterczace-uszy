@@ -1,4 +1,6 @@
 import styled from "@emotion/styled"
+import { css } from "@emotion/react"
+
 import theme from "../theme/theme"
 
 export const ListItem = styled.div`
@@ -39,11 +41,8 @@ export const ListItemIcon = styled.div`
   width: "22,4px";
   flex-grow: 1;
   margin-right: "4px";
-  padding: "0px";
   align-items: center;
   justify-content: center;
   flex-grow: 0;
   color: inherit;
-  svg {
-  }
 `
