@@ -22,9 +22,11 @@ describe(`ListItem`, () => {
         <ChildComponent />
       </ListItem>
     )
+
+    expect(screen.getByText(text)).toBeInTheDocument()
   })
 
-  it(`renders the list item element with icon`, () => {
-    render(<ListItem variant="primary" icon={<MockIcon />} />)
-  })
+  // it(`renders the list item element with icon`, () => {
+  //   render(<ListItem variant="primary" icon={<MockIcon />} />)
+  // })
 })

@@ -5,18 +5,21 @@ import * as Styled from "./ListItem.styled"
 
 const ListItem = ({ children, variant, icon }) => (
   <Styled.ListItem variant={variant}>
-    {icon && <Styled.ListItemIcon>{icon}</Styled.ListItemIcon>}
+    {icon && (
+      <Styled.ListItemIcon data-testid="list-item-icon">
+        {icon}
+      </Styled.ListItemIcon>
+    )}
     <Styled.ChildContainer variant={variant}>{children}</Styled.ChildContainer>
   </Styled.ListItem>
 )
 
 ListItem.propTypes = {
-  children: oneOfType([node, string]),
+  children: oneOfType([node, string]).isRequired,
   variant: oneOf(["primary", "gray"]),
   icon: node,
 }
 ListItem.defaultProps = {
-  children: "Lorem ipsum ",
   variant: "primary",
   icon: null,
 }
