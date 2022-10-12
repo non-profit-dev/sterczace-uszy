@@ -5,15 +5,15 @@ import theme from "../theme/theme"
 const sizes = {
   small: {
     typography: theme.typography.desktop.bodySmall,
-    padding: "8px 52px",
+    padding: "8px 32px",
   },
   medium: {
     typography: theme.typography.desktop.h6,
-    padding: "10px 68px",
+    padding: "10px 40px",
   },
   large: {
     typography: theme.typography.desktop.h5,
-    padding: "12px 82px",
+    padding: "12px 48px",
   },
 }
 
@@ -37,8 +37,7 @@ export const Component = styled.a`
   border-radius: 30px;
   cursor: pointer;
   text-decoration: none;
-  position: relative;
-  display: inline-block;
+  display: inline-flex;
   padding: ${({ size }) => sizes[size].padding};
   color: ${({ variant, color }) =>
     variant === "fill" ? colors[color].filledText : colors[color].mainColor};
@@ -71,13 +70,23 @@ export const Text = styled.span`
 `
 
 export const Icon = styled.span`
-  padding: 0px 4px;
   height: ${({ size }) => sizes[size].typography.lineHeight};
   width: ${({ size }) => sizes[size].typography.lineHeight};
-  position: absolute;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  ${({ iconStart }) =>
+    iconStart &&
+    css`
+      padding-right: 4px;
+    `}
+
+  ${({ iconEnd }) =>
+    iconEnd &&
+    css`
+      padding-left: 4px;
+    `}
 
   svg {
     padding: ${({ size }) => {

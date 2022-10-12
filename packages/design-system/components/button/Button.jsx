@@ -22,7 +22,7 @@ const Button = ({
     onClick={onClick}
   >
     {iconStart && (
-      <Styled.Icon size={size} data-testid="icon-start">
+      <Styled.Icon size={size} iconStart={iconStart} data-testid="icon-start">
         {iconStart}
       </Styled.Icon>
     )}
@@ -30,7 +30,7 @@ const Button = ({
       {text}
     </Styled.Text>
     {iconEnd && (
-      <Styled.Icon size={size} data-testid="icon-end">
+      <Styled.Icon size={size} iconEnd={iconEnd} data-testid="icon-end">
         {iconEnd}
       </Styled.Icon>
     )}
