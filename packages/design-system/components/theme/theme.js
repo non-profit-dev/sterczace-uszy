@@ -144,7 +144,7 @@ const theme = {
       },
       h5: {
         fontWeight: 600,
-        fontSize: "20px",
+        fontSize: "22px",
         lineHeight: "120%",
         fontFamily: "Poppins",
       },
