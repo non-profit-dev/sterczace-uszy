@@ -29,4 +29,5 @@ describe(`ListItem`, () => {
   // it(`renders the list item element with icon`, () => {
   //   render(<ListItem variant="primary" icon={<MockIcon />} />)
   // })
+  // TO DO dodać testy z ikoną która się renderuje i z komponentem który się nie renderuje jesli nie ma ikony
 })
