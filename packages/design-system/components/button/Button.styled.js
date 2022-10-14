@@ -6,14 +6,20 @@ const sizes = {
   small: {
     typography: theme.typography.desktop.bodySmall,
     padding: "8px 32px",
+    iconSize: "12px",
+    gap: "8px",
   },
   medium: {
     typography: theme.typography.desktop.h5,
     padding: "10px 40px",
+    iconSize: "14px",
+    gap: "10px",
   },
   large: {
     typography: theme.typography.desktop.h4,
     padding: "12px 48px",
+    iconSize: "16px",
+    gap: "12px",
   },
 }
 
@@ -38,6 +44,9 @@ export const Component = styled.a`
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: ${({ size }) => sizes[size].gap};
   padding: ${({ size }) => sizes[size].padding};
   color: ${({ variant, color }) =>
     variant === "fill" ? colors[color].filledText : colors[color].mainColor};
@@ -70,36 +79,12 @@ export const Text = styled.span`
 `
 
 export const Icon = styled.span`
-  height: ${({ size }) => sizes[size].typography.lineHeight};
-  width: ${({ size }) => sizes[size].typography.lineHeight};
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  ${({ iconStart }) =>
-    iconStart &&
-    css`
-      padding-right: 4px;
-    `}
-
-  ${({ iconEnd }) =>
-    iconEnd &&
-    css`
-      padding-left: 4px;
-    `}
-
   svg {
-    padding: ${({ size }) => {
-      switch (size) {
-        case "small":
-          return "5px"
-        case "medium":
-          return "6px"
-        case "large":
-          return "7px"
-        default:
-          return "6px"
-      }
-    }};
+    height: ${({ size }) => sizes[size].iconSize};
+    width: ${({ size }) => sizes[size].iconSize};
   }
 `
