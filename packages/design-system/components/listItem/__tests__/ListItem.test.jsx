@@ -4,7 +4,11 @@ import ListItem from "../ListItem"
 
 const text = "Lorem ipsum"
 const ChildComponent = () => <div>{text}</div>
-const MockIcon = <div data-testid="svg-icon">icon</div>
+const MockIcon = (
+  <div data-testid="svg-icon">
+    <svg />
+  </div>
+)
 
 describe(`ListItem`, () => {
   it(`renders with default properties`, () => {
