@@ -5,11 +5,7 @@ import * as Styled from "./ListItem.styled"
 
 const ListItem = ({ children, variant, icon }) => (
   <Styled.ListItem variant={variant}>
-    {icon && (
-      <Styled.ListItemIcon data-testid="list-item-icon">
-        {icon}
-      </Styled.ListItemIcon>
-    )}
+    {icon && <Styled.ListItemIcon>{icon}</Styled.ListItemIcon>}
     <Styled.ChildContainer variant={variant}>{children}</Styled.ChildContainer>
   </Styled.ListItem>
 )

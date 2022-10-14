@@ -4,7 +4,7 @@ import ListItem from "../ListItem"
 
 const text = "Lorem ipsum"
 const ChildComponent = () => <div>{text}</div>
-const MockIcon = () => <span>icon</span>
+const MockIcon = <div data-testid="svg-icon">icon</div>
 
 describe(`ListItem`, () => {
   it(`renders with default properties`, () => {
@@ -26,8 +26,13 @@ describe(`ListItem`, () => {
     expect(screen.getByText(text)).toBeInTheDocument()
   })
 
-  // it(`renders the list item element with icon`, () => {
-  //   render(<ListItem variant="primary" icon={<MockIcon />} />)
-  // })
-  // TO DO dodać testy z ikoną która się renderuje i z komponentem który się nie renderuje jesli nie ma ikony
+  it(`renders the list item element with icon`, () => {
+    render(
+      <ListItem variant="primary" icon={MockIcon}>
+        <ChildComponent />
+      </ListItem>
+    )
+
+    expect(screen.getByTestId("svg-icon")).toBeInTheDocument()
+  })
 })
