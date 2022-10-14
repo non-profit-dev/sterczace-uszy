@@ -8,11 +8,11 @@ const sizes = {
     padding: "8px 32px",
   },
   medium: {
-    typography: theme.typography.desktop.h6,
+    typography: theme.typography.desktop.h5,
     padding: "10px 40px",
   },
   large: {
-    typography: theme.typography.desktop.h5,
+    typography: theme.typography.desktop.h4,
     padding: "12px 48px",
   },
 }
