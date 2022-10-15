@@ -1,0 +1,26 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import Title from "../Title"
+
+<Meta title="Components/Title" component={Title} />
+
+# Title
+
+<Canvas>
+  <Story
+    name="Overview"
+    args={{
+      text: "Porozmawiaj",
+      size: "medium",
+      iconStart: "heart",
+      iconEnd: "heart",
+      badge: "Szczeniak",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => <Title {...args} />
