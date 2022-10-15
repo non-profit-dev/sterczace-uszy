@@ -16,7 +16,13 @@ const Icon = ({ name, color, size }) => {
   const IconComponent = icons[name]
 
   return (
-    <IconComponent color={color} width={sizes[size]} height={sizes[size]} />
+    <IconComponent
+      color={color}
+      width={sizes[size]}
+      height={sizes[size]}
+      title={name}
+      aria-hidden="true"
+    />
   )
 }
 
