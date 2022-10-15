@@ -5,7 +5,7 @@ import { render, screen, act } from "../../../test-utils"
 import Button from "../Button"
 
 const text = "Text"
-const MockIcon = <span data-testid="icon">icon</span>
+const iconName = "download"
 
 describe(`Button`, () => {
   it(`renders with default properties`, () => {
@@ -35,13 +35,13 @@ describe(`Button`, () => {
   })
 
   it(`renders with the start icon`, () => {
-    render(<Button text={text} iconStart={MockIcon} />)
-    expect(screen.getByTestId("icon")).toBeInTheDocument()
+    render(<Button text={text} iconStart={iconName} />)
+    expect(screen.getByTitle(iconName)).toBeInTheDocument()
   })
 
   it(`renders with the end icon`, () => {
-    render(<Button text={text} iconEnd={MockIcon} />)
-    expect(screen.getByTestId("icon")).toBeInTheDocument()
+    render(<Button text={text} iconEnd={iconName} />)
+    expect(screen.getByTitle(iconName)).toBeInTheDocument()
   })
 
   it(`fires onClick callback when button is clicked`, () => {
