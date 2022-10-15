@@ -43,7 +43,7 @@ const Button = ({
 Button.propTypes = {
   text: string.isRequired,
   href: string,
-  iconStart: oneOf(Object.values(icons)),
+  iconStart: oneOf(Object.keys(icons)),
   iconEnd: oneOf(Object.keys(icons)),
   variant: oneOf(["fill", "border", "text", "textLine"]),
   color: oneOf(["primary", "black", "white"]),
