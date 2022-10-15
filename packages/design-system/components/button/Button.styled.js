@@ -6,19 +6,16 @@ const sizes = {
   small: {
     typography: theme.typography.desktop.bodySmall,
     padding: "8px 32px",
-    iconSize: "12px",
     gap: "8px",
   },
   medium: {
     typography: theme.typography.desktop.h5,
     padding: "10px 40px",
-    iconSize: "14px",
     gap: "10px",
   },
   large: {
     typography: theme.typography.desktop.h4,
     padding: "12px 48px",
-    iconSize: "16px",
     gap: "12px",
   },
 }
@@ -82,9 +79,4 @@ export const Icon = styled.span`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  svg {
-    height: ${({ size }) => sizes[size].iconSize};
-    width: ${({ size }) => sizes[size].iconSize};
-  }
 `

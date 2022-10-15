@@ -10,7 +10,7 @@ const sizes = {
   large: 30,
 }
 
-const icons = {
+export const icons = {
   heart: Heart,
   arrowDown: ArrowDown,
   download: Download,

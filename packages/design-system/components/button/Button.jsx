@@ -1,4 +1,6 @@
-import { string, oneOf, func, bool, node } from "prop-types"
+import { string, oneOf, func, bool } from "prop-types"
+
+import Icon, { icons } from "../icon/Icon"
 
 import * as Styled from "./Button.styled"
 
@@ -22,16 +24,17 @@ const Button = ({
     onClick={onClick}
   >
     {iconStart && (
-      <Styled.Icon size={size} iconStart={iconStart}>
-        {iconStart}
+      <Styled.Icon>
+        <Icon name={iconStart} size={size} />
       </Styled.Icon>
     )}
     <Styled.Text variant={variant} color={color} active={active}>
       {text}
     </Styled.Text>
+
     {iconEnd && (
-      <Styled.Icon size={size} iconEnd={iconEnd}>
-        {iconEnd}
+      <Styled.Icon>
+        <Icon name={iconEnd} size={size} />
       </Styled.Icon>
     )}
   </Styled.Component>
@@ -40,8 +43,8 @@ const Button = ({
 Button.propTypes = {
   text: string.isRequired,
   href: string,
-  iconStart: node,
-  iconEnd: node,
+  iconStart: oneOf(Object.values(icons)),
+  iconEnd: oneOf(Object.keys(icons)),
   variant: oneOf(["fill", "border", "text", "textLine"]),
   color: oneOf(["primary", "black", "white"]),
   size: oneOf(["small", "medium", "large"]),
