@@ -3,10 +3,11 @@ import styled from "@emotion/styled"
 export const Container = styled.h1`
   ${({ variant, theme }) => theme.typography.breakpoints[variant]};
   color: ${({ color }) => color};
-  @media (max-width: 1200px) {
+  @media (max-width: 1400px) {
     ${({ variant, theme }) => theme.typography.breakpoints.xxl[variant]};
   }
-  @media  {
+
+  @media (max-width: 1200px) {
     ${({ variant, theme }) => theme.typography.breakpoints.xl[variant]};
   }
 

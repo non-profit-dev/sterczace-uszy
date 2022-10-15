@@ -38,18 +38,7 @@ export const Typography = ({
 
 Typography.propTypes = {
   color: PropTypes.oneOf([PropTypes.string]),
-  variant: PropTypes.oneOf([
-    "h1",
-    "h2",
-    "h3",
-    "h4",
-    "h5",
-    "h6",
-    "bodyLarge",
-    "bodySmall",
-    "bodyTitle",
-    "bodyTiny",
-  ]),
+  variant: PropTypes.oneOf([PropTypes.string]),
   as: PropTypes.string,
   children: PropTypes.node,
 }
@@ -58,7 +47,6 @@ Typography.defaultProps = {
   color: "",
   children: "",
   as: "",
-
   variants: "",
 }
 
