@@ -4,6 +4,8 @@ import { Normalize } from "styled-normalize"
 
 import theme from "../components/theme/theme"
 
+import "./styles.css"
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
