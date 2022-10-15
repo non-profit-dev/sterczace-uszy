@@ -34,12 +34,12 @@ describe(`Button`, () => {
     expect(screen.getByRole(`link`)).toHaveAttribute(`href`, href)
   })
 
-  it(`renders with the start icon`, () => {
+  it(`renders with the start icon when a correct icon name provided`, () => {
     render(<Button text={text} iconStart={iconName} />)
     expect(screen.getByTitle(iconName)).toBeInTheDocument()
   })
 
-  it(`renders with the end icon`, () => {
+  it(`renders with the end icon when a correct icon name provided`, () => {
     render(<Button text={text} iconEnd={iconName} />)
     expect(screen.getByTitle(iconName)).toBeInTheDocument()
   })
