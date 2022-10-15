@@ -1,11 +1,16 @@
 import React from "react"
 import { string, oneOf, oneOfType, node } from "prop-types"
+import Icon from "../icon/Icon"
 
 import * as Styled from "./ListItem.styled"
 
-const ListItem = ({ children, variant, icon }) => (
+const ListItem = ({ children, variant, iconName, iconSize }) => (
   <Styled.ListItem variant={variant}>
-    {icon && <Styled.ListItemIcon>{icon}</Styled.ListItemIcon>}
+    {iconName && (
+      <Styled.ListItemIcon>
+        <Icon name={iconName} size={iconSize} />
+      </Styled.ListItemIcon>
+    )}
     <Styled.ChildContainer variant={variant}>{children}</Styled.ChildContainer>
   </Styled.ListItem>
 )
@@ -13,11 +18,13 @@ const ListItem = ({ children, variant, icon }) => (
 ListItem.propTypes = {
   children: oneOfType([node, string]).isRequired,
   variant: oneOf(["primary", "gray"]),
-  icon: node,
+  iconName: string,
+  iconSize: string,
 }
 ListItem.defaultProps = {
   variant: "primary",
-  icon: null,
+  iconName: null,
+  iconSize: "medium",
 }
 
 export default ListItem

@@ -4,11 +4,7 @@ import ListItem from "../ListItem"
 
 const text = "Lorem ipsum"
 const ChildComponent = () => <div>{text}</div>
-const MockIcon = (
-  <div data-testid="svg-icon">
-    <svg />
-  </div>
-)
+const iconName = "done"
 
 describe(`ListItem`, () => {
   it(`renders with default properties`, () => {
@@ -30,13 +26,13 @@ describe(`ListItem`, () => {
     expect(screen.getByText(text)).toBeInTheDocument()
   })
 
-  it(`renders the list item element with icon`, () => {
+  it(`renders the list item element with the icon when a correct icon name provided`, () => {
     render(
-      <ListItem variant="primary" icon={MockIcon}>
+      <ListItem variant="primary" iconName={iconName}>
         <ChildComponent />
       </ListItem>
     )
 
-    expect(screen.getByTestId("svg-icon")).toBeInTheDocument()
+    expect(screen.getByTitle(iconName)).toBeInTheDocument()
   })
 })
