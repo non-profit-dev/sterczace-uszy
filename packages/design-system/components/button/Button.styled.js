@@ -6,17 +6,14 @@ const sizes = {
   small: {
     typography: theme.typography.desktop.bodySmall,
     padding: "8px 32px",
-    gap: "8px",
   },
   medium: {
     typography: theme.typography.desktop.h5,
     padding: "10px 40px",
-    gap: "10px",
   },
   large: {
     typography: theme.typography.desktop.h4,
     padding: "12px 48px",
-    gap: "12px",
   },
 }
 
@@ -43,7 +40,7 @@ export const Component = styled.a`
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  gap: ${({ size }) => sizes[size].gap};
+  gap: 4px;
   padding: ${({ size }) => sizes[size].padding};
   color: ${({ variant, color }) =>
     variant === "fill" ? colors[color].filledText : colors[color].mainColor};
