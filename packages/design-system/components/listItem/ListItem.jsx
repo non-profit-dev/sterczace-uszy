@@ -24,7 +24,7 @@ ListItem.propTypes = {
 ListItem.defaultProps = {
   variant: "primary",
   iconName: null,
-  iconSize: "medium",
+  iconSize: "small",
 }
 
 export default ListItem

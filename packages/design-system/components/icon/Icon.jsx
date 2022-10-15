@@ -1,6 +1,8 @@
 import { string, oneOf } from "prop-types"
 
 import Heart from "../../icons/Heart.svg"
+import ArrowDown from "../../icons/ArrowDown.svg"
+import Download from "../../icons/Download.svg"
 import Done from "../../icons/Done.svg"
 
 const sizes = {
@@ -9,8 +11,10 @@ const sizes = {
   large: 30,
 }
 
-const icons = {
+export const icons = {
   heart: Heart,
+  arrowDown: ArrowDown,
+  download: Download,
   done: Done,
 }
 
@@ -18,7 +22,13 @@ const Icon = ({ name, color, size }) => {
   const IconComponent = icons[name]
 
   return (
-    <IconComponent color={color} width={sizes[size]} height={sizes[size]} />
+    <IconComponent
+      color={color}
+      width={sizes[size]}
+      height={sizes[size]}
+      title={name}
+      aria-hidden="true"
+    />
   )
 }
 
