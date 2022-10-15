@@ -16,13 +16,6 @@ const variantsMapping = {
   bodySubtitle: "p",
   bodySmallBold: "p",
 }
-export const breakpoints = {
-  xs: "340px",
-  sm: "600px",
-  md: "900px",
-  lg: "1200px",
-  xl: "1536px",
-}
 
 export const Typography = ({
   variant,
@@ -44,16 +37,20 @@ export const Typography = ({
 )
 
 Typography.propTypes = {
-  color: PropTypes.oneOf([
-    "primary",
-    "neutrals",
-    "grey",
-    "complementary",
-    "decorative",
+  color: PropTypes.oneOf([PropTypes.string]),
+  variant: PropTypes.oneOf([
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "bodyLarge",
+    "bodySmall",
+    "bodyTitle",
+    "bodyTiny",
   ]),
-  variant: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6", "p"]),
   as: PropTypes.string,
-  breakpoints: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"]),
   children: PropTypes.node,
 }
 
@@ -61,7 +58,7 @@ Typography.defaultProps = {
   color: "",
   children: "",
   as: "",
-  breakpoints: "",
+
   variants: "",
 }
 
