@@ -2,9 +2,7 @@ import styled from "@emotion/styled"
 
 export const Banner = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   padding: 19px;
   position: relative;
   color: ${({ theme }) => theme.colors.grey[600]};
@@ -12,6 +10,7 @@ export const Banner = styled.div`
 `
 
 export const Heading = styled.h2`
+  display: inline;
   margin: 0;
   ${({ theme }) => theme.typography.desktop.bodySmall};
   }
