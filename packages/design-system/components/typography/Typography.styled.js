@@ -1,25 +1,15 @@
 import styled from "@emotion/styled"
 
 export const Container = styled.h1`
-  ${({ variant, theme }) => theme.typography.breakpoints[variant]};
+  margin: 0;
+  ${({ variant, theme }) => theme.typography.desktop[variant]};
   color: ${({ color }) => color};
-  @media (max-width: 1400px) {
-    ${({ variant, theme }) => theme.typography.breakpoints.xxl[variant]};
+
+  ${({ theme }) => theme.breakpoints.md} {
+    ${({ theme, variant }) => theme.typography.tablet[variant]}
   }
 
-  @media (max-width: 1200px) {
-    ${({ variant, theme }) => theme.typography.breakpoints.xl[variant]};
-  }
-
-  @media (max-width: 992px) {
-    ${({ variant, theme }) => theme.typography.breakpoints.lg[variant]};
-  }
-
-  @media (max-width: 768px) {
-    ${({ variant, theme }) => theme.typography.breakpoints.md[variant]};
-  }
-
-  @media (max-width: 576px) {
-    ${({ variant, theme }) => theme.typography.sm[variant]};
+  ${({ theme }) => theme.breakpoints.sm} {
+    ${({ theme, variant }) => theme.typography.mobile[variant]}
   }
 `

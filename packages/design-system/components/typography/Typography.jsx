@@ -1,5 +1,6 @@
-import PropTypes from "prop-types"
+import { string, oneOf, node } from "prop-types"
 import React from "react"
+
 import * as Styled from "./Typography.styled"
 
 const variantsMapping = {
@@ -10,44 +11,33 @@ const variantsMapping = {
   h5: "h5",
   h6: "h6",
   bodyLarge: "p",
-  bodyMedium: "p",
   bodySmall: "p",
   bodyTitle: "p",
-  bodySubtitle: "p",
-  bodySmallBold: "p",
+  bodyTiny: "p",
 }
 
-export const Typography = ({
-  variant,
-  color,
-  breakpoints,
-  children,
-  as,
-  ...props
-}) => (
+const Typography = ({ variant, color, children, as }) => (
   <Styled.Container
     variant={variant}
     color={color}
-    breakpoints={breakpoints}
     as={as || variantsMapping[variant]}
-    {...props}
   >
     {children}
   </Styled.Container>
 )
 
 Typography.propTypes = {
-  color: PropTypes.oneOf([PropTypes.string]),
-  variant: PropTypes.oneOf([PropTypes.string]),
-  as: PropTypes.string,
-  children: PropTypes.node,
+  color: string,
+  variant: oneOf(Object.keys(variantsMapping)),
+  as: string,
+  children: node,
 }
 
 Typography.defaultProps = {
   color: "",
   children: "",
   as: "",
-  variants: "",
+  variant: "bodySmall",
 }
 
 export default Typography
