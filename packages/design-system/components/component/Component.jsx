@@ -5,16 +5,16 @@ import * as Styled from "./Component.styled"
 
 const typography = {
   small: {
-    heading: "h6",
-    description: "bodySmall",
+    heading: "h5",
+    description: "bodyTiny",
   },
   medium: {
     heading: "h4",
-    description: "bodyMedium",
+    description: "bodySmall",
   },
   large: {
     heading: "h3",
-    description: "bodyLarge",
+    description: "bodyTitle",
   },
 }
 
