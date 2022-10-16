@@ -1,4 +1,4 @@
-import { node, number } from "prop-types"
+import { node, string } from "prop-types"
 
 import * as Styled from "./List.styled"
 
@@ -7,7 +7,7 @@ const List = ({ gap, children }) => (
 )
 
 List.propTypes = {
-  gap: number.isRequired,
+  gap: string.isRequired,
   children: node.isRequired,
 }
 

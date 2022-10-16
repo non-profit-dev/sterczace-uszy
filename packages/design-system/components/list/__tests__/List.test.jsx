@@ -6,6 +6,6 @@ const children = <li>Test1</li>
 
 describe(`List`, () => {
   it(`renders with default properties`, () => {
-    render(<List gap={20}>{children}</List>)
+    render(<List gap="8px">{children}</List>)
   })
 })

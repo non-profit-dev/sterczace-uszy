@@ -11,8 +11,14 @@ import Badge from "../../badge/Badge"
   <Story
     name="Overview"
     args={{
-      gap: "12px",
-      children: <Badge text="Test" />, //to change
+      gap: "8px",
+      children: (
+        <>
+          <Badge text="Test" size="small" variant="primary" />
+          <Badge text="Test 2" size="small" variant="neutrals" />
+          <Badge text="Test 3" size="small" variant="gray" />
+        </>
+      ), //to change to ListItem
     }}
   >
     {Template.bind()}
