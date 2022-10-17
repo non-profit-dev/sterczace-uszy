@@ -1,4 +1,4 @@
-import { node, string } from "prop-types"
+import { node, number } from "prop-types"
 
 import * as Styled from "./List.styled"
 
@@ -7,12 +7,12 @@ const List = ({ gap, children }) => (
 )
 
 List.propTypes = {
-  gap: string,
+  gap: number,
   children: node.isRequired,
 }
 
 List.defaultProps = {
-  gap: "8px",
+  gap: 8,
 }
 
 export default List
