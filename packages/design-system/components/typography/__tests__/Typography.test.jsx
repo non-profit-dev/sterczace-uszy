@@ -15,6 +15,7 @@ describe(`Typography`, () => {
     const typography = screen.getByRole(`heading`, { level: 1 })
     expect(typography).toHaveTextContent(text)
   })
+
   it("should render h1 variant with h4 tag", () => {
     render(
       <Typography variant="h1" as="h4">
