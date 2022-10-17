@@ -5,7 +5,7 @@ import * as Styled from "./Banner.styled"
 const Banner = ({ heading, button }) => (
   <Styled.Banner>
     <Styled.Heading>{heading}</Styled.Heading>
-    {button && button}
+    {button}
   </Styled.Banner>
 )
 
