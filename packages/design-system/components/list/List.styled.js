@@ -7,5 +7,5 @@ export const Component = styled.ul`
   gap: ${({ gap }) => `${gap}px`};
   list-style-type: none;
   padding-left: 0;
-  margin: 0; //to change?
+  margin: 0;
 `
