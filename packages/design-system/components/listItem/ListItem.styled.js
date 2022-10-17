@@ -13,11 +13,13 @@ export const ListItem = styled.li`
   ${theme.typography.desktop.bodySmall};
 `
 export const ChildContainer = styled.div`
+  display: flex;
   color: inherit;
   flex-grow: 0;
   line-height: 30px;
 `
 export const ListItemIcon = styled.div`
+  display: flex;
   flex-grow: 0;
   align-items: center;
   justify-content: center;
