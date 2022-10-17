@@ -11,6 +11,7 @@ import DoubleArrow from "../../icons/DoubleArrow.svg"
 import Download from "../../icons/Download.svg"
 import Facebook from "../../icons/Facebook.svg"
 import Heart from "../../icons/Heart.svg"
+import HeartOutline from "../../icons/HeartOutline.svg"
 import Instagram from "../../icons/Instagram.svg"
 import Location from "../../icons/Location.svg"
 import Mail from "../../icons/Mail.svg"
@@ -32,7 +33,7 @@ const sizes = {
     width: 30,
     height: 30,
   },
-  xLarge: {
+  xlarge: {
     width: 23,
     height: 36,
   },
@@ -41,6 +42,8 @@ const sizes = {
     height: 48,
   },
 }
+
+// sprawdzić wielkości chevron
 
 export const icons = {
   arrowDown: ArrowDown,
@@ -54,6 +57,7 @@ export const icons = {
   download: Download,
   facebook: Facebook,
   heart: Heart,
+  heartOutline: HeartOutline,
   instagram: Instagram,
   location: Location,
   mail: Mail,

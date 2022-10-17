@@ -1,9 +1,7 @@
 import App from "next/app"
 import Head from "next/head"
-import "../assets/css/style.css"
 import { createContext } from "react"
 import { fetchAPI } from "../lib/api"
-import { getStrapiMedia } from "../lib/media"
 import { ThemeProvider } from "@emotion/react"
 import theme from "../../../design-system/components/theme/theme"
 
@@ -15,12 +13,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <>
-      <Head>
-        <link
-          rel="shortcut icon"
-          href={getStrapiMedia(global.attributes.favicon)}
-        />
-      </Head>
+      <Head></Head>
       <ThemeProvider theme={theme}>
         <GlobalContext.Provider value={global.attributes}>
           <Component {...pageProps} />
