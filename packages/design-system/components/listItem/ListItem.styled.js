@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import theme from "../theme/theme"
 
-export const ListItem = styled.div`
+export const ListItem = styled.li`
   display: flex;
   flex-direction: row;
   align-items: center;
