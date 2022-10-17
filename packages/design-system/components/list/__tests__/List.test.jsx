@@ -21,6 +21,7 @@ describe(`List`, () => {
     )
 
     const listItemsElements = screen.getAllByRole("listitem")
+
     expect(listItemsElements).toHaveLength(3)
   })
 })
