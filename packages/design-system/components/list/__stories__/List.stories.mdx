@@ -12,17 +12,6 @@ import ListItem from "../../listItem/ListItem"
     name="Overview"
     args={{
       gap: 8,
-      children: (
-        <>
-          <ListItem children={<>Lista element 1</>} iconName="done" />
-          <ListItem
-            children={<>Lista element 2</>}
-            iconName="done"
-            variant="gray"
-          />
-          <ListItem children={<>Lista element 3</>} iconName="done" />
-        </>
-      ),
     }}
   >
     {Template.bind()}
@@ -31,4 +20,12 @@ import ListItem from "../../listItem/ListItem"
 
 <ArgsTable />
 
-export const Template = (args) => <List {...args} />
+export const Template = (args) => (
+  <List {...args}>
+    <ListItem iconName="done">Lista element 1 </ListItem>
+    <ListItem iconName="done" variant="gray">
+      Lista element 2
+    </ListItem>
+    <ListItem iconName="done">Lista element 3 </ListItem>
+  </List>
+)
