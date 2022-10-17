@@ -20,11 +20,26 @@ import Three from "../../icons/Three.svg"
 import Two from "../../icons/Two.svg"
 
 const sizes = {
-  small: 16,
-  medium: 24,
-  large: 30,
-  // xlarge: 36,
-  // xxlarge: 48,
+  small: {
+    width: 16,
+    height: 16,
+  },
+  medium: {
+    width: 24,
+    height: 24,
+  },
+  large: {
+    width: 30,
+    height: 30,
+  },
+  xLarge: {
+    width: 23,
+    height: 36,
+  },
+  xxlarge: {
+    width: 30,
+    height: 48,
+  },
 }
 
 export const icons = {
@@ -54,8 +69,8 @@ const Icon = ({ name, color, size }) => {
   return (
     <IconComponent
       color={color}
-      width={sizes[size]}
-      height={sizes[size]}
+      width={sizes[size].width}
+      height={sizes[size].height}
       title={name}
       aria-hidden="true"
     />
