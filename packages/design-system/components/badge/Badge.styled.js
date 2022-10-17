@@ -21,6 +21,7 @@ export const Badge = styled.div`
     variant === "primary"
       ? theme.colors.neutrals[100]
       : theme.colors.grey[500]};
+
   ${({ size }) => {
     switch (size) {
       case "small":
