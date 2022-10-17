@@ -1,4 +1,4 @@
-import { render, screen, act } from "../../../test-utils"
+import { render, screen } from "../../../test-utils"
 
 import Banner from "../Banner"
 
