@@ -7,8 +7,12 @@ const List = ({ gap, children }) => (
 )
 
 List.propTypes = {
-  gap: string.isRequired,
+  gap: string,
   children: node.isRequired,
+}
+
+List.defaultProps = {
+  gap: "8px",
 }
 
 export default List

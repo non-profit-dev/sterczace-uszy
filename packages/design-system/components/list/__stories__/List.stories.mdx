@@ -1,7 +1,7 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
 
 import List from "../List"
-import Badge from "../../badge/Badge"
+import ListItem from "../../listItem/ListItem"
 
 <Meta title="Components/List" component={List} />
 
@@ -14,11 +14,15 @@ import Badge from "../../badge/Badge"
       gap: "8px",
       children: (
         <>
-          <Badge text="Test" size="small" variant="primary" />
-          <Badge text="Test 2" size="small" variant="neutrals" />
-          <Badge text="Test 3" size="small" variant="gray" />
+          <ListItem children={<>Lista element 1</>} iconName="done" />
+          <ListItem
+            children={<>Lista element 2</>}
+            iconName="done"
+            variant="gray"
+          />
+          <ListItem children={<>Lista element 3</>} iconName="done" />
         </>
-      ), //to change to ListItem
+      ),
     }}
   >
     {Template.bind()}

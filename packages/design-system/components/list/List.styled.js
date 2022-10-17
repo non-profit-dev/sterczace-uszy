@@ -5,6 +5,7 @@ export const Component = styled.ul`
   flex-direction: column;
   align-items: flex-start;
   gap: ${({ gap }) => `${gap}`};
-  padding-left: 0; //to change?
+  list-style-type: none;
+  padding-left: 0;
   margin: 0; //to change?
 `
