@@ -13,5 +13,4 @@ export const Heading = styled.h2`
   display: inline;
   margin: 0;
   ${({ theme }) => theme.typography.desktop.bodySmall};
-  }
 `
