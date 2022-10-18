@@ -7,7 +7,7 @@ import Icon from "../../components/icon/Icon"
 const Card = ({ text, size, badge }) => (
   <Styled.Card>
     <Styled.ImageContainer>
-      <Icon name="heart" size="small" />
+      <Icon name="heart" size="large" />
     </Styled.ImageContainer>
     <Title text={text} size={size} badge={badge} />
   </Styled.Card>
