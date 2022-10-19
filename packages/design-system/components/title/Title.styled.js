@@ -12,6 +12,7 @@ export const Title = styled.div`
   justify-content: space-between;
   position: relative;
   color: ${({ theme }) => theme.colors.grey[500]};
+  border: 2px solid;
 `
 
 export const Wrapper = styled.div`

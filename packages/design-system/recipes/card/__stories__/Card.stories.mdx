@@ -13,6 +13,9 @@ import Card from "../Card.jsx"
       text: "Szczeniak ",
       size: "small",
       badge: "badge",
+      children: "umożliwiamy adopcję za granicę",
+      variant: "primary",
+      iconName: "done",
     }}
   >
     {Template.bind()}
@@ -24,9 +27,17 @@ import Card from "../Card.jsx"
 export const Template = (args) => (
   <div
     style={{
-      width: "30%",
+      width: "40%",
     }}
   >
-    <Card {...args} />
+    <Card {...args}>
+      <List gap={8}>
+        <ListItem iconName="done">Lista element 1 </ListItem>
+        <ListItem iconName="done" variant="gray">
+          Lista element 2
+        </ListItem>
+        <ListItem iconName="done">Lista element 3 </ListItem>
+      </List>
+    </Card>
   </div>
 )
