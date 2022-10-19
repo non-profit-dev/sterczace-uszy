@@ -1,0 +1,31 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import List from "../List"
+import ListItem from "../../listItem/ListItem"
+
+<Meta title="Components/List" component={List} />
+
+# List
+
+<Canvas>
+  <Story
+    name="Overview"
+    args={{
+      gap: 8,
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => (
+  <List {...args}>
+    <ListItem iconName="done">Lista element 1 </ListItem>
+    <ListItem iconName="done" variant="gray">
+      Lista element 2
+    </ListItem>
+    <ListItem iconName="done">Lista element 3 </ListItem>
+  </List>
+)
