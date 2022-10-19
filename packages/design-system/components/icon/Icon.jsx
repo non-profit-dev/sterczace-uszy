@@ -20,7 +20,7 @@ import Phone from "../../icons/Phone.svg"
 import Three from "../../icons/Three.svg"
 import Two from "../../icons/Two.svg"
 
-const sizes = {
+export const sizes = {
   small: {
     width: 16,
     height: 16,
@@ -43,28 +43,26 @@ const sizes = {
   },
 }
 
-// sprawdzić wielkości chevron
-
 export const icons = {
   arrowDown: ArrowDown,
   arrowRight: ArrowRight,
-  cat: Cat,
   chevronRight: ChevronRight,
-  charity: Charity,
-  dog: Dog,
   done: Done,
   doubleArrow: DoubleArrow,
   download: Download,
   facebook: Facebook,
-  heart: Heart,
-  heartOutline: HeartOutline,
   instagram: Instagram,
   location: Location,
-  mail: Mail,
-  one: One,
   phone: Phone,
-  three: Three,
+  mail: Mail,
+  charity: Charity,
+  heart: Heart,
+  heartOutline: HeartOutline,
+  cat: Cat,
+  dog: Dog,
+  one: One,
   two: Two,
+  three: Three,
 }
 
 const Icon = ({ name, color, size }) => {
@@ -84,7 +82,7 @@ const Icon = ({ name, color, size }) => {
 Icon.propTypes = {
   name: oneOf(Object.keys(icons)).isRequired,
   color: string,
-  size: oneOf(["small", "medium", "large", "xlarge", "xxlarge"]),
+  size: oneOf(Object.keys(sizes)),
 }
 
 Icon.defaultProps = {

@@ -1,89 +1,18 @@
-import { Meta, IconGallery, IconItem } from "@storybook/addon-docs"
-
+import { Meta, Typeset, IconGallery, IconItem } from "@storybook/addon-docs"
 import ArrowDownIcon from "../ArrowDown.svg"
-import ArrowRightIcon from "../ArrowRight.svg"
-import CatIcon from "../Cat.svg"
-import CharityIcon from "../Charity.svg"
-import ChevronRightIcon from "../ChevronRight.svg"
-import DogIcon from "../Dog.svg"
-import DoneIcon from "../Done.svg"
-import DoubleArrowIcon from "../DoubleArrow.svg"
-import DownloadIcon from "../Download.svg"
-import FacebookIcon from "../Facebook.svg"
-import HeartIcon from "../Heart.svg"
-import HeartOutlineIcon from "../HeartOutline.svg"
-import InstagramIcon from "../Instagram.svg"
-import LocationIcon from "../Location.svg"
-import MailIcon from "../Mail.svg"
-import OneIcon from "../One.svg"
-import PhoneIcon from "../Phone.svg"
-import ThreeIcon from "../Three.svg"
-import TwoIcon from "../Two.svg"
+import ArrowRight from "../ArrowRight.svg"
+import { icons } from "../../components/icon/Icon.jsx"
 
 <Meta title="Icons" />
 
-# Icons
+# Icons gallery
 
 A list of all available icons in the project.
 
 <IconGallery>
-
-<IconItem name="Arrow down">
-  <ArrowDownIcon />
-</IconItem>
-<IconItem name="Download">
-  <DownloadIcon />
-</IconItem>
-<IconItem name="ChevronRight">
-  <ChevronRightIcon />
-</IconItem>
-<IconItem name="ArrowRightIcon">
-  <ArrowRightIcon />
-</IconItem>
-<IconItem name="DoubleArrowIcon">
-  <DoubleArrowIcon />
-</IconItem>
-<IconItem name="Done">
-  <DoneIcon />
-</IconItem>
-<IconItem name="Facebook">
-  <FacebookIcon />
-</IconItem>
-<IconItem name="Instagram">
-  <InstagramIcon />
-</IconItem>
-<IconItem name="Location">
-  <LocationIcon />
-</IconItem>
-<IconItem name="Mail">
-  <MailIcon />
-</IconItem>
-<IconItem name="Phone">
-  <PhoneIcon />
-</IconItem>
-<IconItem name="Cat">
-  <CatIcon />
-</IconItem>
-<IconItem name="Charity">
-  <CharityIcon />
-</IconItem>
-<IconItem name="Dog">
-  <DogIcon />
-</IconItem>
-<IconItem name="Heart">
-  <HeartIcon />
-</IconItem>
-<IconItem name="HeartOutline">
-  <HeartOutlineIcon />
-</IconItem>
-<IconItem name="One">
-  <OneIcon />
-</IconItem>
-<IconItem name="Two">
-  <TwoIcon />
-</IconItem>
-<IconItem name="Three">
-  <ThreeIcon />
-</IconItem>
-
+  {Object.entries(icons).map((icon, i) => (
+    <IconItem key={i} name={icon[0]}>
+      {icon[1]()}
+    </IconItem>
+  ))}
 </IconGallery>
