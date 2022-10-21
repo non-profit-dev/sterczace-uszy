@@ -13,6 +13,7 @@ export const Title = styled.div`
   position: relative;
   color: ${({ theme }) => theme.colors.grey[500]};
   border: 2px solid;
+  margin-bottom: 5px;
 `
 
 export const Wrapper = styled.div`

@@ -8,14 +8,53 @@ import Card from "../Card.jsx"
 
 <Canvas>
   <Story
-    name="Overview"
+    name="Overview simple"
+    args={{
+      text: "Porozmawiaj",
+      size: "small",
+      children: "umożliwiamy adopcję za granicę",
+      variant: "primary",
+      cardVariant: "simple",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Overview simple"
+    args={{
+      text: "Porozmawiaj",
+      size: "small",
+      children: "umożliwiamy adopcję za granicę",
+      variant: "primary",
+      buttonVariant: "fill",
+      buttonText: "Przejdź",
+      buttonColor: "primary",
+      buttonSize: "small",
+      iconEnd: "arrowDown",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Overview with illustration"
     args={{
       text: "Szczeniak ",
       size: "small",
       badge: "badge",
       children: "umożliwiamy adopcję za granicę",
-      variant: "primary",
-      iconName: "done",
+      illustrationName: "heartWithDogFace",
+      cardVariant: "simple",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Overview with image"
+    args={{
+      text: "Szczeniak ",
+      size: "small",
+      badge: "badge",
+      children: "umożliwiamy adopcję za granicę",
     }}
   >
     {Template.bind()}
@@ -27,12 +66,12 @@ import Card from "../Card.jsx"
 export const Template = (args) => (
   <div
     style={{
-      width: "40%",
+      width: "50%",
     }}
   >
     <Card {...args}>
       <List gap={8}>
-        <ListItem iconName="done">Lista element 1 </ListItem>
+        <ListItem iconName="done"> Umożliwiamy adopcję za granicę</ListItem>
         <ListItem iconName="done" variant="gray">
           Lista element 2
         </ListItem>

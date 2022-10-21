@@ -1,12 +1,12 @@
 import { render, screen } from "../../../test-utils"
 
-import Ilustration from "../Ilustration"
+import Illustration from "../Illustration"
 
 const name = "heartWithDogFace"
 
-describe(`Ilustration`, () => {
+describe(`Illustration`, () => {
   it(`renders illustration when a correct name provided`, () => {
-    render(<Ilustration name={name} />)
+    render(<Illustration name={name} />)
 
     expect(screen.getByTitle(name)).toBeInTheDocument()
   })

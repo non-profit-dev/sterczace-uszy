@@ -14,10 +14,10 @@ export const illustrations = {
 }
 
 const Illustration = ({ name }) => {
-  const IconComponent = illustrations[name]
+  const IllustrationComponent = illustrations[name]
 
   return (
-    <IconComponent
+    <IllustrationComponent
       width={sizes[name].width}
       height={sizes[name].height}
       title={name}
