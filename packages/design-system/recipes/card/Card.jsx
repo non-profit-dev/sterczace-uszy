@@ -45,7 +45,7 @@ const Card = ({
           color={buttonColor}
           size={buttonSize}
           iconStart={iconStart}
-          // iconEnd={iconEnd}
+          iconEnd={iconEnd}
         />
       )}
     </Styled.ContentContainer>
