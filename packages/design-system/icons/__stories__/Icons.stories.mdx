@@ -10,8 +10,10 @@ A list of all available icons in the project.
 
 <IconGallery>
   {Object.entries(icons).map((icon, i) => (
-    <IconItem key={i} name={icon[0]}>
-      {icon[1]()}
-    </IconItem>
+    <div>
+      <IconItem key={i} name={icon[0]}>
+        {icon[1]()}
+      </IconItem>
+    </div>
   ))}
 </IconGallery>
