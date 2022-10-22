@@ -1,44 +1,42 @@
 import React from "react"
-import { Normalize } from "styled-normalize"
-
-import { fetchAPI } from "../lib/api"
 import Head from "next/head"
 
-import Badge from "../../../design-system/components/badge/Badge"
+import { fetchAPI } from "../lib/api"
 
-const Home = ({ homepage }) => {
+import Typography from "../../../design-system/components/typography/Typography"
+import Button from "../../../design-system/components/button/Button"
+
+const Home = ({ data }) => {
   return (
     <>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <title>{homepage.attributes.seo.metaTitle}</title>
-        <meta
-          name="description"
-          content={homepage.attributes.seo.metaDescription}
-        />
+        <title>{data.seo.metaTitle}</title>
+        <meta name="description" content={data.seo.metaDescription} />
       </Head>
-      <Normalize />
-      <h1>{homepage.attributes.hero.title}</h1>
-      <Badge text="Badge" />
+      <Typography variant="h1">{data.heading}</Typography>
+      <Typography variant="bodyTitle">{data.description}</Typography>
+
+      <Button text={data.link.text} href={data.link.url} />
     </>
   )
 }
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [homepageRes] = await Promise.all([
-    fetchAPI("/homepage", {
+  const [comingSoonRes] = await Promise.all([
+    fetchAPI("/coming-soon", {
       populate: {
-        hero: "*",
         seo: { populate: "*" },
+        link: { populate: "*" },
       },
     }),
   ])
 
   return {
     props: {
-      homepage: homepageRes.data,
+      data: comingSoonRes.data.attributes,
     },
     revalidate: 1,
   }

@@ -1,8 +1,10 @@
 import App from "next/app"
 import Head from "next/head"
 import { createContext } from "react"
-import { fetchAPI } from "../lib/api"
+import { Normalize } from "styled-normalize"
 import { ThemeProvider } from "@emotion/react"
+
+import { fetchAPI } from "../lib/api"
 import theme from "../../../design-system/components/theme/theme"
 
 // Store Strapi Global object in context
@@ -15,6 +17,7 @@ const MyApp = ({ Component, pageProps }) => {
     <>
       <Head></Head>
       <ThemeProvider theme={theme}>
+        <Normalize />
         <GlobalContext.Provider value={global.attributes}>
           <Component {...pageProps} />
         </GlobalContext.Provider>
