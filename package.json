@@ -8,6 +8,7 @@
     "develop": "cross-env FORCE_COLOR=1 npm-run-all -l -p develop:*",
     "start": "yarn --cwd packages/backend start",
     "build": "yarn --cwd packages/backend build",
+    "deploy": "yarn --cwd packages/frontend/app deploy",
     "storybook": "yarn --cwd packages/design-system storybook",
     "build-storybook": "yarn --cwd packages/design-system build-storybook",
     "lint": "yarn --cwd packages/design-system lint",
