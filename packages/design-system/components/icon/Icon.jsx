@@ -15,10 +15,7 @@ import HeartOutline from "../../icons/HeartOutline.svg"
 import Instagram from "../../icons/Instagram.svg"
 import Location from "../../icons/Location.svg"
 import Mail from "../../icons/Mail.svg"
-import One from "../../icons/One.svg"
 import Phone from "../../icons/Phone.svg"
-import Three from "../../icons/Three.svg"
-import Two from "../../icons/Two.svg"
 
 export const sizes = {
   small: {
@@ -60,9 +57,6 @@ export const icons = {
   heartOutline: HeartOutline,
   cat: Cat,
   dog: Dog,
-  one: One,
-  two: Two,
-  three: Three,
 }
 
 const Icon = ({ name, color, size }) => {
