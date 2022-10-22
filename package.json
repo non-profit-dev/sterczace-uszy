@@ -31,5 +31,9 @@
   "dependencies": {
     "@commitlint/cli": "^17.1.2",
     "pg-connection-string": "^2.5.0"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=16.x.x",
+    "npm": ">=6.0.0"
   }
 }
