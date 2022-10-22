@@ -1,0 +1,53 @@
+import { Meta, ColorPalette, ColorItem, Typeset } from "@storybook/addon-docs"
+
+import theme from "../theme"
+
+<Meta
+  title="Theme"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+# Colors
+
+<ColorPalette>
+  {Object.entries(theme.colors).map((palette, i) => (
+    <div key={i}>
+      <ColorItem key={palette[0]} title={palette[0]} colors={palette[1]} />
+      {console.log(parseInt(theme.typography.desktop.h1.fontSize))}
+    </div>
+  ))}
+</ColorPalette>
+
+---
+
+# Typography
+
+<Typeset
+  fontSizes={[
+    parseInt(theme.typography.desktop.h1.fontSize),
+    parseInt(theme.typography.desktop.h2.fontSize),
+    parseInt(theme.typography.desktop.h3.fontSize),
+    parseInt(theme.typography.desktop.h4.fontSize),
+    parseInt(theme.typography.desktop.h5.fontSize),
+    parseInt(theme.typography.desktop.h6.fontSize),
+  ]}
+  fontFamily={theme.typography.desktop.h1.fontFamily}
+  fontWeight={theme.typography.desktop.h1.fontWeight}
+  sampleText="Heading text"
+/>
+
+<Typeset
+  fontSizes={[
+    parseInt(theme.typography.desktop.bodyLarge.fontSize),
+    parseInt(theme.typography.desktop.bodyTitle.fontSize),
+    parseInt(theme.typography.desktop.bodySmall.fontSize),
+    parseInt(theme.typography.desktop.bodyTiny.fontSize),
+  ]}
+  fontFamily={theme.typography.desktop.h1.fontFamily}
+  fontWeight={theme.typography.desktop.bodyLarge.fontWeight}
+  sampleText="Body text"
+/>
