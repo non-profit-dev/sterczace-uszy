@@ -11,7 +11,7 @@ describe(`Banner`, () => {
     expect(screen.getByText(heading)).toBeInTheDocument()
   })
   it(`renders Button with default properties`, () => {
-    render(<Banner button={button} />)
+    render(<Banner button={button} heading={heading} />)
     expect(screen.getByText(button)).toBeInTheDocument()
   })
 })
