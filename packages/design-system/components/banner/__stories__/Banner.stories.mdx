@@ -1,0 +1,33 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import Button from "../../button/Button"
+
+import Banner from "../Banner"
+
+<Meta title="Components/Banner" component={Banner} />
+
+# Banner
+
+<Canvas>
+  <Story
+    name="Overview"
+    args={{
+      heading:
+        "Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj",
+      button: (
+        <Button
+          text="tutaj"
+          variant="textLine"
+          size="small"
+          href="https://google.com"
+        />
+      ),
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => <Banner {...args} />
