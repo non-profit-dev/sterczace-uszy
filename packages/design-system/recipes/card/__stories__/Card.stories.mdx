@@ -10,27 +10,18 @@ import Card from "../Card.jsx"
   <Story
     name="Overview simple"
     args={{
-      text: "Porozmawiaj",
-      size: "small",
-      children: "umożliwiamy adopcję za granicę",
-      variant: "primary",
-      cardVariant: "simple",
+      titleText: "Porozmawiaj",
     }}
   >
     {Template.bind()}
   </Story>
   <Story
-    name="Overview simple"
+    name="Overview simple with button"
     args={{
-      text: "Porozmawiaj",
-      size: "small",
-      children: "umożliwiamy adopcję za granicę",
-      variant: "primary",
-      buttonVariant: "fill",
+      titleText: "Porozmawiaj",
       buttonText: "Przejdź",
-      buttonColor: "primary",
-      buttonSize: "small",
-      iconEnd: "arrowDown",
+      buttonIconStart: "arrowDown",
+      href: "https://google.com",
     }}
   >
     {Template.bind()}
@@ -38,12 +29,10 @@ import Card from "../Card.jsx"
   <Story
     name="Overview with illustration"
     args={{
-      text: "Szczeniak ",
-      size: "small",
-      badge: "badge",
-      children: "umożliwiamy adopcję za granicę",
+      titleText: "Porozmawiaj",
+      buttonText: "Przejdź",
+      buttonIconStart: "arrowDown",
       illustrationName: "heartWithDogFace",
-      cardVariant: "simple",
     }}
   >
     {Template.bind()}
@@ -51,9 +40,9 @@ import Card from "../Card.jsx"
   <Story
     name="Overview with image"
     args={{
-      text: "Szczeniak ",
-      size: "small",
-      badge: "badge",
+      titleText: "Szczeniak ",
+      titleIconEnd: "heart",
+      titleBadge: "badge",
       children: "umożliwiamy adopcję za granicę",
     }}
   >
@@ -71,11 +60,11 @@ export const Template = (args) => (
   >
     <Card {...args}>
       <List gap={8}>
-        <ListItem iconName="done"> Umożliwiamy adopcję za granicę</ListItem>
+        <ListItem iconName="done">Umożliwiamy adopcję za granicę</ListItem>
         <ListItem iconName="done" variant="gray">
-          Lista element 2
+          Umożliwiamy adopcję za granicę
         </ListItem>
-        <ListItem iconName="done">Lista element 3 </ListItem>
+        <ListItem iconName="done">Umożliwiamy adopcję za granicę </ListItem>
       </List>
     </Card>
   </div>

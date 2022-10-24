@@ -6,23 +6,26 @@ import Illustration, {
   illustrations,
 } from "../../components/illustrations/Illustration"
 import Button from "../../components/button/Button"
+// import List from "../../components/list/List"
 import { icons } from "../../components/icon/Icon"
 
 const Card = ({
   href,
-  text,
-  size,
-  badge,
+  titleText,
+  titleSize,
+  titleBadge,
+  titleIconStart,
+  titleIconEnd,
   children,
   illustrationName,
   image,
-  cardVariant,
   buttonVariant,
   buttonText,
   buttonColor,
   buttonSize,
-  iconStart,
-  iconEnd,
+  buttonIconStart,
+  buttonIconEnd,
+  cardVersion,
 }) => (
   <Styled.Card as={href ? `a` : `div`}>
     {illustrationName && (
@@ -35,17 +38,23 @@ const Card = ({
         <Illustration name="heartWithDogFace" />
       </Styled.ImageContainer>
     )}
-    <Styled.ContentContainer cardVariant={cardVariant}>
-      <Title text={text} size={size} badge={badge} />
+    <Styled.ContentContainer cardVersion={cardVersion}>
+      <Title
+        text={titleText}
+        size={titleSize}
+        badge={titleBadge}
+        iconStart={titleIconStart}
+        iconEnd={titleIconEnd}
+      />
       {children}
-      {buttonText && (
+      {href && (
         <Button
           variant={buttonVariant}
           text={buttonText}
           color={buttonColor}
           size={buttonSize}
-          iconStart={iconStart}
-          iconEnd={iconEnd}
+          iconStart={buttonIconStart}
+          iconEnd={buttonIconEnd}
         />
       )}
     </Styled.ContentContainer>
@@ -54,41 +63,39 @@ const Card = ({
 
 Card.propTypes = {
   href: string,
-  text: string.isRequired,
-  badge: string,
-  size: oneOf(["small", "medium", "large"]),
+  cardVersion: oneOf(["left", "center"]),
+  titleText: string.isRequired,
+  titleBadge: string,
+  titleSize: oneOf(["small", "medium", "large"]),
+  titleIconStart: string,
+  titleIconEnd: string,
   children: node,
-  illustrationName: oneOf(Object.keys(illustrations)),
+  illustrationName: string,
   image: node,
-  cardVariant: oneOf([
-    "simple",
-    "illustrationWithoutText",
-    "illustrationWithoutBackground",
-    "illustrationWithBackground",
-    "image",
-  ]),
   buttonText: string,
   buttonVariant: oneOf(["fill", "border", "text", "textLine"]),
   buttonColor: oneOf(["primary", "black", "white"]),
   buttonSize: oneOf(["small", "medium", "large"]),
-  iconStart: oneOf(Object.keys(icons)),
-  iconEnd: oneOf(Object.keys(icons)),
+  buttonIconStart: oneOf(["arrowDown"]),
+  buttonIconEnd: oneOf(["arrowDown"]),
 }
 
 Card.defaultProps = {
   href: null,
-  size: "medium",
-  badge: null,
+  cardVersion: "center",
+  titleSize: "small",
+  titleBadge: null,
+  titleIconStart: null,
+  titleIconEnd: null,
   children: null,
   illustrationName: null,
   image: null,
-  cardVariant: "simple",
-  buttonText: null,
-  buttonVariant: null,
-  buttonColor: null,
-  buttonSize: null,
-  iconStart: null,
-  iconEnd: null,
+  buttonText: "Button",
+  buttonVariant: "text",
+  buttonColor: "primary",
+  buttonSize: "small",
+  buttonIconStart: null,
+  buttonIconEnd: null,
 }
 
 export default Card
