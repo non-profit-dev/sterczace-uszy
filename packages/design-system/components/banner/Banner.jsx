@@ -1,21 +1,17 @@
-import { string, node } from "prop-types"
+import { render, screen } from "../../../test-utils"
 
-import * as Styled from "./Banner.styled"
+import Banner from "../Banner"
 
-const Banner = ({ heading, button }) => (
-  <Styled.Banner>
-    <Styled.Heading>{heading}</Styled.Heading>
-    {button}
-  </Styled.Banner>
-)
+const heading = "heading"
+const button = "button"
 
-Banner.propTypes = {
-  heading: string.isRequired,
-  button: node,
-}
-
-Banner.defaultProps = {
-  button: null,
-}
-
-export default Banner
+describe(`Banner`, () => {
+  it(`renders Banner with default properties`, () => {
+    render(<Banner heading={heading} />)
+    expect(screen.getByText(heading)).toBeInTheDocument()
+  })
+  it(`renders Button with default properties`, () => {
+    render(<Banner button={button} heading={heading} />)
+    expect(screen.getByText(button)).toBeInTheDocument()
+  })
+})
