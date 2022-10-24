@@ -2,10 +2,11 @@ import { string, oneOf, node } from "prop-types"
 
 import * as Styled from "./Card.styled"
 import Title from "../../components/title/Title"
-import Illustration from "../../components/illustrations/Illustration"
+import Illustration, {
+  illustrations,
+} from "../../components/illustrations/Illustration"
 import Button from "../../components/button/Button"
-// import List from "../../components/list/List"
-// import { icons } from "../../components/icon/Icon"
+import { icons } from "../../components/icon/Icon"
 
 const Card = ({
   href,
@@ -25,7 +26,7 @@ const Card = ({
   buttonIconEnd,
   cardVersion,
 }) => (
-  <Styled.Card as={href ? `a` : `div`}>
+  <Styled.Card as={href ? `a` : `div`} shadow={!!href}>
     {illustrationName && (
       <Styled.IllustrationContainer>
         <Illustration name={illustrationName} />
@@ -60,22 +61,22 @@ const Card = ({
 )
 
 Card.propTypes = {
+  titleText: string.isRequired,
   href: string,
   cardVersion: oneOf(["left", "center"]),
-  titleText: string.isRequired,
   titleBadge: string,
   titleSize: oneOf(["small", "medium", "large"]),
-  titleIconStart: string,
-  titleIconEnd: string,
+  titleIconStart: oneOf(Object.keys(icons)),
+  titleIconEnd: oneOf(Object.keys(icons)),
   children: node,
-  illustrationName: string,
+  illustrationName: oneOf(Object.keys(illustrations)),
   image: node,
   buttonText: string,
   buttonVariant: oneOf(["fill", "border", "text", "textLine"]),
   buttonColor: oneOf(["primary", "black", "white"]),
   buttonSize: oneOf(["small", "medium", "large"]),
-  buttonIconStart: oneOf(["arrowDown"]),
-  buttonIconEnd: oneOf(["arrowDown"]),
+  buttonIconStart: oneOf(Object.keys(icons)),
+  buttonIconEnd: oneOf(Object.keys(icons)),
 }
 
 Card.defaultProps = {

@@ -41,9 +41,8 @@ import Card from "../Card.jsx"
     name="Overview with image"
     args={{
       titleText: "Szczeniak ",
-      titleIconEnd: "heart",
+      titleIconEnd: "dog",
       titleBadge: "badge",
-      children: "umożliwiamy adopcję za granicę",
     }}
   >
     {Template.bind()}
@@ -60,11 +59,9 @@ export const Template = (args) => (
   >
     <Card {...args}>
       <List gap={8}>
-        <ListItem iconName="done">Umożliwiamy adopcję za granicę</ListItem>
-        <ListItem iconName="done" variant="gray">
-          Umożliwiamy adopcję za granicę
-        </ListItem>
-        <ListItem iconName="done">Umożliwiamy adopcję za granicę </ListItem>
+        <ListItem>Umożliwiamy adopcję za granicę</ListItem>
+        <ListItem variant="gray">Umożliwiamy adopcję za granicę</ListItem>
+        <ListItem>Umożliwiamy adopcję za granicę </ListItem>
       </List>
     </Card>
   </div>
