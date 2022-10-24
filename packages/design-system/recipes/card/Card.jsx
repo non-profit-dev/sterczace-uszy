@@ -2,12 +2,10 @@ import { string, oneOf, node } from "prop-types"
 
 import * as Styled from "./Card.styled"
 import Title from "../../components/title/Title"
-import Illustration, {
-  illustrations,
-} from "../../components/illustrations/Illustration"
+import Illustration from "../../components/illustrations/Illustration"
 import Button from "../../components/button/Button"
 // import List from "../../components/list/List"
-import { icons } from "../../components/icon/Icon"
+// import { icons } from "../../components/icon/Icon"
 
 const Card = ({
   href,

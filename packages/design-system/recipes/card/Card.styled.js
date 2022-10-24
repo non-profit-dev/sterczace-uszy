@@ -1,17 +1,6 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
-const variants = {
-  simple: {
-    // typography: theme.typography.desktop.bodySmall,
-    padding: "36px 20px",
-  },
-  illustrationWithoutText: {
-    // typography: theme.typography.desktop.h5,
-    padding: "10px 40px",
-  },
-}
-
 export const Card = styled.a`
   display: flex;
   width: 100%;
