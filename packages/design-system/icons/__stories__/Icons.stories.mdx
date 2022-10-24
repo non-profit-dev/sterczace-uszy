@@ -1,27 +1,19 @@
-import { Meta, IconGallery, IconItem } from "@storybook/addon-docs"
+import { Meta, Typeset, IconGallery, IconItem } from "@storybook/addon-docs"
 
-import HeartIcon from "../Heart.svg"
-import ArrowDownIcon from "../ArrowDown.svg"
-import DownloadIcon from "../Download.svg"
-import DoneIcon from "../Done.svg"
+import { icons } from "../../components/icon/Icon.jsx"
 
 <Meta title="Icons" />
 
-# Icons
+# Icons gallery
 
 A list of all available icons in the project.
 
 <IconGallery>
-  <IconItem name="Heart">
-    <HeartIcon />
-  </IconItem>
-  <IconItem name="Arrow down">
-    <ArrowDownIcon />
-  </IconItem>
-  <IconItem name="Download">
-    <DownloadIcon />
-  </IconItem>
-  <IconItem name="Download">
-    <DoneIcon />
-  </IconItem>
+  {Object.entries(icons).map((icon, i) => (
+    <div>
+      <IconItem key={i} name={icon[0]}>
+        {icon[1]()}
+      </IconItem>
+    </div>
+  ))}
 </IconGallery>
