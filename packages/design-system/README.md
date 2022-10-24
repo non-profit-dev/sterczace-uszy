@@ -17,4 +17,4 @@ const icons = {
 }
 ```
 
-5. Make sure to update the `Icons.stories` file so that the icon gallery is always up to date.
+5. `Icons.stories` and `Icon.stories` will update automatically when you update the icons object so the icon gallery and icon stories are always up to date.
