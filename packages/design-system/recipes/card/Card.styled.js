@@ -1,6 +1,5 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
-import theme from "../../components/theme/theme"
 
 export const Card = styled.a`
   display: flex;
