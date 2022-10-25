@@ -8,8 +8,8 @@ export const Card = styled.a`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  ${"" /* border: 1px solid; */}
+  padding: 36px 10px 36px 10px;
+  border: 1px solid;
   ${({ shadow }) =>
     shadow &&
     css`
@@ -29,30 +29,34 @@ export const IllustrationContainer = styled.div`
   display: inline-flex;
   justify-content: center;
   width: 100%;
-  padding: 29px 0px 0px 0px;
-  ${"" /* border: 1px solid; */}
+  padding: 0px;
+  margin-bottom: 30px;
+  border: 1px solid;
 `
 export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 10px;
-  margin: 5px;
-  ${"" /* border: 1px solid; */}
+  padding: 0px;
+  margin-bottom: 36px;
+  border: 1px solid;
 `
 export const ContentContainer = styled.div`
   display: flex;
   background-color: inherit;
   flex-direction: column;
-  ${({ cardVersion }) =>
-    cardVersion === "center" &&
+  ${({ layout }) =>
+    layout === "center" &&
     css`
       align-items: center;
     `}
   width: 100%;
   gap: 10px;
-  ${"" /* border: 1px solid; */}
+  padding: 0px;
+  margin: 0px 20px 0px 20px;
+  border: 1px solid;
+  max-width: 100%;
 `
 
 // TODO paddings depends of card variant

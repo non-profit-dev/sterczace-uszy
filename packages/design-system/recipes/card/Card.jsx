@@ -1,30 +1,18 @@
 import { string, oneOf, node } from "prop-types"
 
 import * as Styled from "./Card.styled"
-import Title from "../../components/title/Title"
 import Illustration, {
   illustrations,
 } from "../../components/illustrations/Illustration"
-import Button from "../../components/button/Button"
-import { icons } from "../../components/icon/Icon"
 
 const Card = ({
-  href,
-  titleText,
-  titleSize,
-  titleBadge,
-  titleIconStart,
-  titleIconEnd,
+  button,
   children,
+  href,
   illustrationName,
   image,
-  buttonVariant,
-  buttonText,
-  buttonColor,
-  buttonSize,
-  buttonIconStart,
-  buttonIconEnd,
-  cardVersion,
+  layout,
+  title,
 }) => (
   <Styled.Card as={href ? `a` : `div`} shadow={!!href}>
     {illustrationName && (
@@ -37,64 +25,31 @@ const Card = ({
         <Illustration name="heartWithDogFace" />
       </Styled.ImageContainer>
     )}
-    <Styled.ContentContainer cardVersion={cardVersion}>
-      <Title
-        text={titleText}
-        size={titleSize}
-        badge={titleBadge}
-        iconStart={titleIconStart}
-        iconEnd={titleIconEnd}
-      />
+    <Styled.ContentContainer layout={layout}>
+      {title && title}
       {children}
-      {href && (
-        <Button
-          variant={buttonVariant}
-          text={buttonText}
-          color={buttonColor}
-          size={buttonSize}
-          iconStart={buttonIconStart}
-          iconEnd={buttonIconEnd}
-        />
-      )}
+      {button && button}
     </Styled.ContentContainer>
   </Styled.Card>
 )
 
 Card.propTypes = {
-  titleText: string.isRequired,
-  href: string,
-  cardVersion: oneOf(["left", "center"]),
-  titleBadge: string,
-  titleSize: oneOf(["small", "medium", "large"]),
-  titleIconStart: oneOf(Object.keys(icons)),
-  titleIconEnd: oneOf(Object.keys(icons)),
+  title: node.isRequired,
+  button: node,
   children: node,
+  href: string,
   illustrationName: oneOf(Object.keys(illustrations)),
   image: node,
-  buttonText: string,
-  buttonVariant: oneOf(["fill", "border", "text", "textLine"]),
-  buttonColor: oneOf(["primary", "black", "white"]),
-  buttonSize: oneOf(["small", "medium", "large"]),
-  buttonIconStart: oneOf(Object.keys(icons)),
-  buttonIconEnd: oneOf(Object.keys(icons)),
+  layout: oneOf(["left", "center"]),
 }
 
 Card.defaultProps = {
-  href: null,
-  cardVersion: "center",
-  titleSize: "small",
-  titleBadge: null,
-  titleIconStart: null,
-  titleIconEnd: null,
+  button: null,
   children: null,
+  href: null,
   illustrationName: null,
   image: null,
-  buttonText: "Button",
-  buttonVariant: "text",
-  buttonColor: "primary",
-  buttonSize: "small",
-  buttonIconStart: null,
-  buttonIconEnd: null,
+  layout: "center",
 }
 
 export default Card
