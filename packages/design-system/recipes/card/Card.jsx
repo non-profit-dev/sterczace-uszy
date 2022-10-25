@@ -1,4 +1,4 @@
-import { string, oneOf, node } from "prop-types"
+import { string, oneOf, node, oneOfType, object } from "prop-types"
 
 import * as Styled from "./Card.styled"
 import Illustration, {
@@ -13,8 +13,10 @@ const Card = ({
   image,
   layout,
   title,
+  bgColor,
+  bgImage,
 }) => (
-  <Styled.Card as={href ? `a` : `div`} shadow={!!href}>
+  <Styled.Card as={href ? `a` : `div`} shadow={!!href} bgColor={bgColor}>
     {illustrationName && (
       <Styled.IllustrationContainer>
         <Illustration name={illustrationName} />
@@ -25,7 +27,7 @@ const Card = ({
         <Illustration name="heartWithDogFace" />
       </Styled.ImageContainer>
     )}
-    <Styled.ContentContainer layout={layout}>
+    <Styled.ContentContainer layout={layout} backgroundImage={bgImage}>
       {title && title}
       {children}
       {button && button}
@@ -41,6 +43,8 @@ Card.propTypes = {
   illustrationName: oneOf(Object.keys(illustrations)),
   image: node,
   layout: oneOf(["left", "center"]),
+  bgColor: oneOfType([object, string]),
+  bgImage: oneOfType([node, string]),
 }
 
 Card.defaultProps = {
@@ -50,6 +54,8 @@ Card.defaultProps = {
   illustrationName: null,
   image: null,
   layout: "center",
+  bgColor: "null",
+  bgImage: null,
 }
 
 export default Card

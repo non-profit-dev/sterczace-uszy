@@ -3,6 +3,7 @@ import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
 import Card from "../Card.jsx"
 import Title from "../../../components/title/Title.jsx"
 import Button from "../../../components/button/Button.jsx"
+import Theme from "../../../components/theme/theme.js"
 
 <Meta title="Recipies/Card" component={Card} />
 
@@ -44,9 +45,44 @@ import Button from "../../../components/button/Button.jsx"
     {Template.bind()}
   </Story>
   <Story
-    name="Overview with image"
+    name="Overview with illustration and button"
     args={{
       title: <Title text="Porozmawiaj" />,
+      illustrationName: "heartWithDogFace",
+      button: (
+        <Button
+          text="Wejdź"
+          variant="border"
+          color="primary"
+          iconEnd="arrowDown"
+        />
+      ),
+      href: "https://google.com",
+      bgColor: "#FEF8EC",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Overview with image"
+    args={{
+      title: <Title text="Porozmawiaj" iconEnd="dog" badge="Szczeniak" />,
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Overview with image and button"
+    args={{
+      title: <Title text="Porozmawiaj" iconEnd="cat" badge="Kot" />,
+      button: (
+        <Button
+          text="Wejdź"
+          variant="fill"
+          color="white"
+          iconEnd="chevronRight"
+        />
+      ),
     }}
   >
     {Template.bind()}
@@ -65,7 +101,9 @@ export const Template = (args) => (
       <List gap={8}>
         <ListItem>Umożliwiamy adopcję za granicę</ListItem>
         <ListItem variant="gray">Umożliwiamy adopcję za granicę</ListItem>
-        <ListItem>Umożliwiamy adopcję za granicę </ListItem>
+        <ListItem>
+          Umożliwiamy adopcję za granicę Umożliwiamy adopcję za granicę
+        </ListItem>
       </List>
     </Card>
   </div>
