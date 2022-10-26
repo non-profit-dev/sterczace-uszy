@@ -57,7 +57,7 @@ export const ContentContainer = styled.div`
   width: 100%;
   gap: 10px;
   padding: 0px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 14px 0px 14px;
   max-width: 100%;
 `
 
