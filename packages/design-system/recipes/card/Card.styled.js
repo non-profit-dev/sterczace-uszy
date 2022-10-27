@@ -13,7 +13,7 @@ export const Card = styled.a`
   ${({ shadow }) =>
     shadow &&
     css`
-      box-shadow: 2px 2px 25px -25px #000000;
+      box-shadow: 2px 2px 9px 0px #000000;
     `}
   border-radius: 30px;
 

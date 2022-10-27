@@ -10,7 +10,7 @@ import Button from "../../../components/button/Button.jsx"
 
 <Canvas>
   <Story
-    name="Overview simple"
+    name="Overview - simple"
     args={{
       title: <Title text="Porozmawiaj" />,
     }}
@@ -18,7 +18,7 @@ import Button from "../../../components/button/Button.jsx"
     {Template.bind()}
   </Story>
   <Story
-    name="Overview simple with button"
+    name="Overview - simple with button"
     args={{
       title: <Title text="Porozmawiaj" />,
       button: (
@@ -35,7 +35,34 @@ import Button from "../../../components/button/Button.jsx"
     {Template.bind()}
   </Story>
   <Story
-    name="Overview with illustration and background"
+    name="Overview - no text"
+    args={{
+      title: <Title text="Porozmawiaj" />,
+      illustrationName: "heartWithDogFace",
+    }}
+  >
+    {SimpleTemplate.bind()}
+  </Story>
+  <Story
+    name="Overview - no text, with button"
+    args={{
+      title: <Title text="Porozmawiaj" />,
+      illustrationName: "heartWithDogFace",
+      button: (
+        <Button
+          text="Button"
+          variant="text"
+          color="primary"
+          iconStart="arrowDown"
+        />
+      ),
+      href: "https://google.com",
+    }}
+  >
+    {SimpleTemplate.bind()}
+  </Story>
+  <Story
+    name="Overview - illustration and background"
     args={{
       title: <Title text="Porozmawiaj" />,
       illustrationName: "heartWithDogFace",
@@ -45,7 +72,7 @@ import Button from "../../../components/button/Button.jsx"
     {Template.bind()}
   </Story>
   <Story
-    name="Overview with illustration"
+    name="Overview - illustration"
     args={{
       title: <Title text="Porozmawiaj" />,
       illustrationName: "heartWithDogFace",
@@ -54,7 +81,7 @@ import Button from "../../../components/button/Button.jsx"
     {Template.bind()}
   </Story>
   <Story
-    name="Overview with illustration and button"
+    name="Overview - illustration and button"
     args={{
       title: <Title text="Porozmawiaj" />,
       illustrationName: "heartWithDogFace",
@@ -72,18 +99,19 @@ import Button from "../../../components/button/Button.jsx"
     {Template.bind()}
   </Story>
   <Story
-    name="Overview with image"
+    name="Overview - image"
     args={{
       title: <Title text="Porozmawiaj" iconEnd="dog" badge="Szczeniak" />,
       imageSrc:
         "https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 ",
       imageAlt: "dog",
+      bgColor: "#FEF8EC",
     }}
   >
     {Template.bind()}
   </Story>
   <Story
-    name="Overview with image and button"
+    name="Overview - image and button"
     args={{
       title: <Title text="Porozmawiaj" iconEnd="cat" badge="Kot" />,
       layout: "left",
@@ -120,5 +148,14 @@ export const Template = (args) => (
         <ListItem>Umożliwiamy adopcję za granicę</ListItem>
       </List>
     </Card>
+  </div>
+)
+export const SimpleTemplate = (args) => (
+  <div
+    style={{
+      width: "50%",
+    }}
+  >
+    <Card {...args} />
   </div>
 )
