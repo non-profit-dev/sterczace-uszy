@@ -13,7 +13,7 @@ export const Card = styled.a`
   ${({ shadow }) =>
     shadow &&
     css`
-      box-shadow: 2px 2px 30px -25px #000000;
+      box-shadow: 2px 2px 25px -25px #000000;
     `}
   border-radius: 30px;
 
@@ -27,7 +27,6 @@ export const Card = styled.a`
   background-color: ${({ bgColor = "transparent" }) => bgColor};
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: ${({ bgImage = "none" }) => bgImage};
 `
 export const IllustrationContainer = styled.div`
   display: inline-flex;
@@ -45,14 +44,22 @@ export const ImageContainer = styled.div`
   padding: 0px;
   margin-bottom: 34px;
 `
+export const Image = styled.img`
+  width: 100%;
+  height: auto;
+`
+
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   ${({ layout }) =>
-    layout === "center" &&
-    css`
-      align-items: center;
-    `}
+    layout === "center"
+      ? css`
+          align-items: center;
+        `
+      : css`
+          align-items: stretch;
+        `}
   box-sizing: border-box;
   width: 100%;
   gap: 10px;

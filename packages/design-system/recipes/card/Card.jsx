@@ -19,11 +19,7 @@ const Card = ({
         <Illustration name={illustrationName} />
       </Styled.IllustrationContainer>
     )}
-    {image && (
-      <Styled.ImageContainer>
-        <Illustration name="heartWithDogFace" />
-      </Styled.ImageContainer>
-    )}
+    {image && <Styled.ImageContainer>{image}</Styled.ImageContainer>}
     <Styled.ContentContainer layout={layout}>
       {title && title}
       {children}

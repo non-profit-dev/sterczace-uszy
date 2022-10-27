@@ -3,6 +3,7 @@ import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
 import Card from "../Card.jsx"
 import Title from "../../../components/title/Title.jsx"
 import Button from "../../../components/button/Button.jsx"
+import * as Styled from "../../../recipes/card/Card.styled.js"
 
 <Meta title="Recipies/Card" component={Card} />
 
@@ -66,6 +67,12 @@ import Button from "../../../components/button/Button.jsx"
     name="Overview with image"
     args={{
       title: <Title text="Porozmawiaj" iconEnd="dog" badge="Szczeniak" />,
+      image: (
+        <Styled.Image
+          src="https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 "
+          alt="dog"
+        />
+      ),
     }}
   >
     {Template.bind()}
@@ -74,6 +81,13 @@ import Button from "../../../components/button/Button.jsx"
     name="Overview with image and button"
     args={{
       title: <Title text="Porozmawiaj" iconEnd="cat" badge="Kot" />,
+      layout: "left",
+      image: (
+        <Styled.Image
+          src="https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 "
+          alt="dog"
+        />
+      ),
       button: (
         <Button
           text="Wejdź"
@@ -82,6 +96,7 @@ import Button from "../../../components/button/Button.jsx"
           iconEnd="chevronRight"
         />
       ),
+      href: "https://google.com",
     }}
   >
     {Template.bind()}
@@ -100,9 +115,7 @@ export const Template = (args) => (
       <List gap={8}>
         <ListItem>Umożliwiamy adopcję za granicę</ListItem>
         <ListItem variant="gray">Umożliwiamy adopcję za granicę</ListItem>
-        <ListItem>
-          Umożliwiamy adopcję za granicę Umożliwiamy adopcję za granicę
-        </ListItem>
+        <ListItem>Umożliwiamy adopcję za granicę</ListItem>
       </List>
     </Card>
   </div>
