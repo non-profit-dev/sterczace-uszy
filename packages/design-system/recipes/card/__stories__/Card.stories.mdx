@@ -36,6 +36,16 @@ import * as Styled from "../../../recipes/card/Card.styled.js"
     {Template.bind()}
   </Story>
   <Story
+    name="Overview with illustration and background"
+    args={{
+      title: <Title text="Porozmawiaj" />,
+      illustrationName: "heartWithDogFace",
+      bgColor: "#FEF8EC",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
     name="Overview with illustration"
     args={{
       title: <Title text="Porozmawiaj" />,
@@ -58,7 +68,6 @@ import * as Styled from "../../../recipes/card/Card.styled.js"
         />
       ),
       href: "https://google.com",
-      bgColor: "#FEF8EC",
     }}
   >
     {Template.bind()}
@@ -67,12 +76,9 @@ import * as Styled from "../../../recipes/card/Card.styled.js"
     name="Overview with image"
     args={{
       title: <Title text="Porozmawiaj" iconEnd="dog" badge="Szczeniak" />,
-      image: (
-        <Styled.Image
-          src="https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 "
-          alt="dog"
-        />
-      ),
+      imageSrc:
+        "https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 ",
+      imageAlt: "dog",
     }}
   >
     {Template.bind()}
@@ -82,12 +88,9 @@ import * as Styled from "../../../recipes/card/Card.styled.js"
     args={{
       title: <Title text="Porozmawiaj" iconEnd="cat" badge="Kot" />,
       layout: "left",
-      image: (
-        <Styled.Image
-          src="https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 "
-          alt="dog"
-        />
-      ),
+      imageSrc:
+        "https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 ",
+      imageAlt: "dog",
       button: (
         <Button
           text="Wejdź"

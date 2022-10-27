@@ -42,9 +42,10 @@ export const ImageContainer = styled.div`
   box-sizing: border-box;
   width: 100%;
   padding: 0px;
-  margin-bottom: 34px;
+  margin-bottom: 24px;
 `
 export const Image = styled.img`
+  display: block;
   width: 100%;
   height: auto;
 `

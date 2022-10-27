@@ -12,6 +12,8 @@ const Card = ({
   layout,
   title,
   bgColor,
+  imageSrc,
+  imageAlt,
 }) => (
   <Styled.Card as={href ? `a` : `div`} shadow={!!href} bgColor={bgColor}>
     {illustrationName && (
@@ -19,7 +21,11 @@ const Card = ({
         <Illustration name={illustrationName} />
       </Styled.IllustrationContainer>
     )}
-    {image && <Styled.ImageContainer>{image}</Styled.ImageContainer>}
+    {imageSrc && (
+      <Styled.ImageContainer>
+        <Styled.Image src={imageSrc} alt={imageAlt} />
+      </Styled.ImageContainer>
+    )}
     <Styled.ContentContainer layout={layout}>
       {title && title}
       {children}
@@ -35,6 +41,8 @@ Card.propTypes = {
   href: string,
   illustrationName: string,
   image: node,
+  imageAlt: string,
+  imageSrc: string,
   layout: oneOf(["left", "center"]),
   bgColor: oneOfType([object, string]),
 }
@@ -45,6 +53,8 @@ Card.defaultProps = {
   href: null,
   illustrationName: null,
   image: null,
+  imageAlt: null,
+  imageSrc: null,
   layout: "center",
   bgColor: "null",
 }
