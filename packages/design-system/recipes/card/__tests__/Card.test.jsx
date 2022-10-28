@@ -1,6 +1,4 @@
-import userEvent from "@testing-library/user-event"
-
-import { render, screen, act } from "../../../test-utils"
+import { render, screen } from "../../../test-utils"
 
 import Card from "../Card"
 
