@@ -46,6 +46,7 @@ export const ImageContainer = styled.div`
 `
 export const Image = styled.img`
   display: block;
+  box-sizing: border-box;
   width: 100%;
   height: auto;
 `
@@ -59,14 +60,11 @@ export const ContentContainer = styled.div`
           align-items: center;
         `
       : css`
-          align-items: stretch;
+          align-items: flex-start;
         `}
   box-sizing: border-box;
   width: 100%;
   gap: 10px;
   padding: 0px;
   padding: 0px 14px 0px 14px;
-  max-width: 100%;
 `
-
-// TODO paddings depends of card variant

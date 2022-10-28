@@ -26,7 +26,7 @@ const Card = ({
       </Styled.ImageContainer>
     )}
     <Styled.ContentContainer layout={layout}>
-      {title && title}
+      {title}
       {children}
       {button && button}
     </Styled.ContentContainer>
