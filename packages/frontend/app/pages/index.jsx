@@ -9,7 +9,7 @@ import Button from "design-system/components/button/Button"
 import { fetchComingSoon } from "../lib/api"
 
 const Home = () => {
-  const { data, isLoading } = useQuery(["coming-soon"], () => fetchComingSoon())
+  const { data, isLoading } = useQuery(["coming-soon"], fetchComingSoon)
 
   return isLoading ? (
     <p>Loading...</p>
@@ -31,7 +31,7 @@ const Home = () => {
 
 export const getStaticProps = async () => {
   const queryClient = new QueryClient()
-  await queryClient.fetchQuery(["coming-soon"], () => fetchComingSoon())
+  await queryClient.prefetchQuery(["coming-soon"], fetchComingSoon)
 
   return {
     props: {
