@@ -1,28 +1,37 @@
 import App from "next/app"
 import Head from "next/head"
-import { createContext } from "react"
+import { createContext, useState } from "react"
 import { Normalize } from "styled-normalize"
 import { ThemeProvider } from "@emotion/react"
+import {
+  QueryClient,
+  QueryClientProvider,
+  Hydrate,
+} from "@tanstack/react-query"
 
 import { fetchAPI } from "../lib/api"
 
 import theme from "../../../design-system/theme/theme"
 
-// Store Strapi Global object in context
 export const GlobalContext = createContext({})
 
 const MyApp = ({ Component, pageProps }) => {
+  const [queryClient] = useState(() => new QueryClient())
   const { global } = pageProps
 
   return (
     <>
-      <Head></Head>
-      <ThemeProvider theme={theme}>
-        <Normalize />
-        <GlobalContext.Provider value={global.attributes}>
-          <Component {...pageProps} />
-        </GlobalContext.Provider>
-      </ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps.dehydratedState}>
+          <ThemeProvider theme={theme}>
+            <Normalize />
+            <GlobalContext.Provider value={global.attributes}>
+              <Component {...pageProps} />
+            </GlobalContext.Provider>
+          </ThemeProvider>
+        </Hydrate>
+        <Head></Head>
+      </QueryClientProvider>
     </>
   )
 }

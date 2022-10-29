@@ -1,4 +1,5 @@
 import qs from "qs"
+import { useQuery } from "@tanstack/react-query"
 
 /**
  * Get full Strapi URL from path
@@ -41,4 +42,17 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
   }
   const data = await response.json()
   return data
+}
+
+export const fetchComingSoon = async () => {
+  const [res] = await Promise.all([
+    fetchAPI("/coming-soon", {
+      populate: {
+        seo: { populate: "*" },
+        link: { populate: "*" },
+      },
+    }),
+  ])
+
+  return res.data.attributes
 }

@@ -1,13 +1,19 @@
 import React from "react"
 import Head from "next/head"
 
-import { fetchAPI } from "../lib/api"
+import { dehydrate, QueryClient, useQuery } from "@tanstack/react-query"
+
+import { fetchComingSoon } from "../lib/api"
 
 import Typography from "../../../design-system/components/typography/Typography"
 import Button from "../../../design-system/components/button/Button"
 
-const Home = ({ data }) => {
-  return (
+const Home = () => {
+  const { data, isLoading } = useQuery(["coming-soon"], () => fetchComingSoon())
+
+  return isLoading ? (
+    <p>Loading...</p>
+  ) : (
     <>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,22 +29,14 @@ const Home = ({ data }) => {
   )
 }
 
-export async function getStaticProps() {
-  // Run API calls in parallel
-  const [comingSoonRes] = await Promise.all([
-    fetchAPI("/coming-soon", {
-      populate: {
-        seo: { populate: "*" },
-        link: { populate: "*" },
-      },
-    }),
-  ])
+export const getStaticProps = async () => {
+  const queryClient = new QueryClient()
+  await queryClient.fetchQuery(["coming-soon"], () => fetchComingSoon())
 
   return {
     props: {
-      data: comingSoonRes.data.attributes,
+      dehydratedState: dehydrate(queryClient),
     },
-    revalidate: 1,
   }
 }
 
