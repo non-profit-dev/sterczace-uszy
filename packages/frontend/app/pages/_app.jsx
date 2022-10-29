@@ -5,7 +5,8 @@ import { Normalize } from "styled-normalize"
 import { ThemeProvider } from "@emotion/react"
 
 import { fetchAPI } from "../lib/api"
-import theme from "../../../design-system/components/theme/theme"
+
+import theme from "../../../design-system/theme/theme"
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})

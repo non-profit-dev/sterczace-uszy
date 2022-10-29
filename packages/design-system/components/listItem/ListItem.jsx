@@ -19,12 +19,12 @@ ListItem.propTypes = {
   children: oneOfType([node, string]).isRequired,
   variant: oneOf(["primary", "gray"]),
   iconName: string,
-  iconSize: string,
+  iconSize: oneOf(["medium"]),
 }
 ListItem.defaultProps = {
   variant: "primary",
   iconName: null,
-  iconSize: "small",
+  iconSize: "medium",
 }
 
 export default ListItem
