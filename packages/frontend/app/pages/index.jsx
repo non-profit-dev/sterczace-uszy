@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import Head from "next/head"
 
 import { dehydrate, QueryClient, useQuery } from "@tanstack/react-query"
@@ -8,8 +8,11 @@ import Button from "design-system/components/button/Button"
 
 import { fetchComingSoon } from "../lib/api"
 
+import { GlobalContext } from "./_app"
+
 const Home = () => {
   const { data, isLoading } = useQuery(["coming-soon"], fetchComingSoon)
+  const global = useContext(GlobalContext)
 
   return isLoading ? (
     <p>Loading...</p>
@@ -21,10 +24,34 @@ const Home = () => {
         <title>{data.seo.metaTitle}</title>
         <meta name="description" content={data.seo.metaDescription} />
       </Head>
+      {global.siteName && (
+        <Typography variant="bodyTiny">{global.siteName}</Typography>
+      )}
+
       <Typography variant="h1">{data.heading}</Typography>
       <Typography variant="bodyTitle">{data.description}</Typography>
 
-      <Button text={data.link.text} href={data.link.url} />
+      {data.link && <Button text={data.link.text} href={data.link.url} />}
+
+      <div>
+        {global.socialMedia?.facebook && (
+          <Button
+            variant="text"
+            size="small"
+            text="Facebook"
+            href={global.socialMedia.facebook}
+          />
+        )}
+
+        {global.socialMedia?.facebook && (
+          <Button
+            variant="text"
+            size="small"
+            text="Instagram"
+            href={global.socialMedia.instagram}
+          />
+        )}
+      </div>
     </>
   )
 }

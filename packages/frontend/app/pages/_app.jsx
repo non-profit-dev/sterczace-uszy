@@ -17,14 +17,13 @@ export const GlobalContext = createContext({})
 
 const MyApp = ({ Component, pageProps }) => {
   const [queryClient] = useState(() => new QueryClient())
-  const { global } = pageProps
 
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
         <ThemeProvider theme={theme}>
           <Normalize />
-          <GlobalContext.Provider value={global.attributes}>
+          <GlobalContext.Provider value={pageProps.global}>
             <Component {...pageProps} />
           </GlobalContext.Provider>
         </ThemeProvider>
@@ -43,7 +42,7 @@ MyApp.getInitialProps = async (ctx) => {
   const globalRes = await fetchAPI("/global", {
     populate: {
       seo: { populate: "*" },
-      link: { populate: "*" },
+      socialMedia: { populate: "*" },
     },
   })
   // Pass the data to our page via props
