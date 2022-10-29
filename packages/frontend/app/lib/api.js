@@ -1,5 +1,4 @@
 import qs from "qs"
-import { useQuery } from "@tanstack/react-query"
 
 /**
  * Get full Strapi URL from path
@@ -7,7 +6,7 @@ import { useQuery } from "@tanstack/react-query"
  * @returns {string} Full Strapi URL
  */
 export function getStrapiURL(path = "") {
-  return `${process.env.MY_HEROKU_URL || "http://localhost:1337"}${path}`
+  return `${process.env.MY_HEROKU_URL}${path}`
 }
 
 /**

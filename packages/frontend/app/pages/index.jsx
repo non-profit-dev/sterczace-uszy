@@ -3,10 +3,10 @@ import Head from "next/head"
 
 import { dehydrate, QueryClient, useQuery } from "@tanstack/react-query"
 
-import { fetchComingSoon } from "../lib/api"
+import Typography from "design-system/components/typography/Typography"
+import Button from "design-system/components/button/Button"
 
-import Typography from "../../../design-system/components/typography/Typography"
-import Button from "../../../design-system/components/button/Button"
+import { fetchComingSoon } from "../lib/api"
 
 const Home = () => {
   const { data, isLoading } = useQuery(["coming-soon"], () => fetchComingSoon())
