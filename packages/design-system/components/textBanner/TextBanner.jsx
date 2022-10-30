@@ -1,7 +1,6 @@
 import { string, oneOf } from "prop-types"
-import Typography from "../../components/typography/Typography"
-import Button from "../../components/button/Button"
-import theme from "../../theme/theme"
+import Typography from "../typography/Typography"
+import Button from "../button/Button"
 
 import * as Styled from "./TextBanner.styled"
 
