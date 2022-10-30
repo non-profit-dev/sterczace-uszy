@@ -1,18 +1,34 @@
 import { string, oneOf } from "prop-types"
-import Button from "../../components/button/Button"
 import Typography from "../../components/typography/Typography"
+import Button from "../../components/button/Button"
+import theme from "../../theme/theme"
 
 import * as Styled from "./TextBanner.styled"
 
+const sizes = {
+  tiny: {
+    size: (Typography.variantsMapping = "bodySmall"),
+  },
+  small: {
+    size: (Typography.variantsMapping = "bodySmall"),
+  },
+  medium: {
+    size: (Typography.variantsMapping = "h2"),
+  },
+  large: {
+    size: (Typography.variantsMapping = "h1"),
+  },
+}
+
 const TextBanner = ({ heading, description, subtitle, layout, size }) => (
   <Styled.TextBanner layout={layout} size={size}>
-    <Typography variant="h6" color="#C1121F">
+    <Typography variants={sizes[size]} color="#C1121F">
       {subtitle}
     </Typography>
-    <Typography variant="h2" color="primary">
+    <Typography variant={sizes[size]} color="primary">
       {heading}
     </Typography>
-    <Typography variant="bodyTitle" color="primary">
+    <Typography variant={sizes[size]} color="primary">
       {description}
     </Typography>
     <Button text="Button" variant="fill" color="primary" iconEnd="arrowDown" />
@@ -24,7 +40,7 @@ TextBanner.propTypes = {
   description: string.isRequired,
   subtitle: string,
   layout: oneOf(["left", "center"]),
-  size: oneOf(["small", "medium", "large"]),
+  size: oneOf(["tiny", "small", "medium", "large"]),
 }
 
 TextBanner.defaultProps = {
