@@ -4,6 +4,8 @@ import { css } from "@emotion/react"
 export const Card = styled.a`
   display: flex;
   box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
   width: 100%;
   color: "black";
   flex-direction: column;
@@ -54,6 +56,7 @@ export const Image = styled.img`
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
+  color: inherit;
   ${({ layout }) =>
     layout === "center"
       ? css`
