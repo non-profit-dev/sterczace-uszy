@@ -5,23 +5,23 @@ export const Card = styled.a`
   display: flex;
   box-sizing: border-box;
   text-decoration: none;
-  cursor: pointer;
   width: 100%;
   color: "black";
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 36px 10px 36px 10px;
-  ${({ shadow }) =>
-    shadow &&
+  ${({ linkStyle }) =>
+    linkStyle &&
     css`
       box-shadow: 2px 2px 9px 0px #000000;
+      cursor: pointer;
     `}
   border-radius: 30px;
 
   :hover {
-    ${({ shadow }) =>
-      shadow &&
+    ${({ linkStyle }) =>
+      linkStyle &&
       css`
         box-shadow: 2px 2px 53px 0px #000000;
       `}

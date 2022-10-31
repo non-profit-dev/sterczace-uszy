@@ -16,7 +16,7 @@ const Card = ({
 }) => (
   <Styled.Card
     as={href ? `a` : `div`}
-    shadow={!!href}
+    linkStyle={!!href}
     bgColor={bgColor}
     href={href}
   >
