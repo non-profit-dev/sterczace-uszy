@@ -11,6 +11,7 @@ export const Card = styled.a`
   align-items: center;
   justify-content: center;
   padding: 36px 10px 36px 10px;
+  overflow: scroll;
   ${({ linkStyle }) =>
     linkStyle &&
     css`

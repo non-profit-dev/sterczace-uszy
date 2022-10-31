@@ -17,6 +17,9 @@ import Button from "../../../components/button/Button.jsx"
   >
     {Template.bind()}
   </Story>
+</Canvas>
+
+<Canvas>
   <Story
     name="Overview - simple with button"
     args={{
@@ -34,6 +37,9 @@ import Button from "../../../components/button/Button.jsx"
   >
     {Template.bind()}
   </Story>
+</Canvas>
+
+<Canvas>
   <Story
     name="Overview - no text"
     args={{
@@ -43,6 +49,9 @@ import Button from "../../../components/button/Button.jsx"
   >
     {SimpleTemplate.bind()}
   </Story>
+</Canvas>
+
+<Canvas>
   <Story
     name="Overview - no text, with button"
     args={{
@@ -61,6 +70,9 @@ import Button from "../../../components/button/Button.jsx"
   >
     {SimpleTemplate.bind()}
   </Story>
+</Canvas>
+
+<Canvas>
   <Story
     name="Overview - illustration and background"
     args={{
@@ -71,6 +83,9 @@ import Button from "../../../components/button/Button.jsx"
   >
     {Template.bind()}
   </Story>
+</Canvas>
+
+<Canvas>
   <Story
     name="Overview - illustration"
     args={{
@@ -80,6 +95,9 @@ import Button from "../../../components/button/Button.jsx"
   >
     {Template.bind()}
   </Story>
+</Canvas>
+
+<Canvas>
   <Story
     name="Overview - illustration and button"
     args={{
@@ -98,6 +116,9 @@ import Button from "../../../components/button/Button.jsx"
   >
     {Template.bind()}
   </Story>
+</Canvas>
+
+<Canvas>
   <Story
     name="Overview - image"
     args={{
@@ -110,6 +131,9 @@ import Button from "../../../components/button/Button.jsx"
   >
     {Template.bind()}
   </Story>
+</Canvas>
+
+<Canvas>
   <Story
     name="Overview - image and button"
     args={{
@@ -143,11 +167,15 @@ export const Template = (args) => (
   >
     <Card {...args}>
       <List gap={8}>
-        <ListItem style={{ color: "red" }}>
+        <ListItem style={{ color: "black" }}>
           Umożliwiamy adopcję za granicę
         </ListItem>
-        <ListItem variant="gray">Umożliwiamy adopcję za granicę</ListItem>
-        <ListItem>Umożliwiamy adopcję za granicę</ListItem>
+        <ListItem style={{ color: "black" }}>
+          Umożliwiamy adopcję za granicę
+        </ListItem>
+        <ListItem style={{ color: "black" }}>
+          Umożliwiamy adopcję za granicę
+        </ListItem>
       </List>
     </Card>
   </div>
