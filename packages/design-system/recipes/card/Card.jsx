@@ -14,7 +14,12 @@ const Card = ({
   imageSrc,
   imageAlt,
 }) => (
-  <Styled.Card as={href ? `a` : `div`} shadow={!!href} bgColor={bgColor}>
+  <Styled.Card
+    as={href ? `a` : `div`}
+    shadow={!!href}
+    bgColor={bgColor}
+    href={href}
+  >
     {illustrationName && (
       <Styled.IllustrationContainer>
         <Illustration name={illustrationName} />
@@ -35,6 +40,7 @@ const Card = ({
 
 Card.propTypes = {
   title: node.isRequired,
+  bgColor: oneOfType([object, string]),
   button: node,
   children: node,
   href: string,
@@ -42,10 +48,10 @@ Card.propTypes = {
   imageAlt: string,
   imageSrc: string,
   layout: oneOf(["left", "center"]),
-  bgColor: oneOfType([object, string]),
 }
 
 Card.defaultProps = {
+  bgColor: "null",
   button: null,
   children: null,
   href: null,
@@ -53,7 +59,6 @@ Card.defaultProps = {
   imageAlt: null,
   imageSrc: null,
   layout: "center",
-  bgColor: "null",
 }
 
 export default Card
