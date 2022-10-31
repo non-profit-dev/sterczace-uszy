@@ -6,12 +6,10 @@ export const Card = styled.a`
   box-sizing: border-box;
   text-decoration: none;
   width: 100%;
-  color: "black";
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 36px 10px 36px 10px;
-  overflow: scroll;
   ${({ linkStyle }) =>
     linkStyle &&
     css`
@@ -36,7 +34,6 @@ export const IllustrationContainer = styled.div`
   justify-content: center;
   box-sizing: border-box;
   width: 100%;
-  padding: 0px;
   margin-bottom: 18px;
 `
 export const ImageContainer = styled.div`
@@ -44,7 +41,6 @@ export const ImageContainer = styled.div`
   justify-content: center;
   box-sizing: border-box;
   width: 100%;
-  padding: 0px;
   margin-bottom: 24px;
 `
 export const Image = styled.img`
@@ -69,6 +65,5 @@ export const ContentContainer = styled.div`
   box-sizing: border-box;
   width: 100%;
   gap: 10px;
-  padding: 0px;
   padding: 0px 14px 0px 14px;
 `
