@@ -37,7 +37,7 @@
         "unnamedComponents": ["function-expression", "arrow-function"]
       }
     ],
-    "react/jsx-filename-extension": [0],
+    "react/jsx-filename-extension": "off",
     "import/extensions": "warn",
     "radix": "off",
     "no-use-before-define": [
