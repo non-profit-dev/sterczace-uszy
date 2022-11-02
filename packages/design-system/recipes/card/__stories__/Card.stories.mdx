@@ -155,7 +155,7 @@ import ListItem from "../../../components/listItem/ListItem.jsx"
       href: "https://google.com",
     }}
   >
-    {Template.bind()}
+    {TextTemplate.bind()}
   </Story>
 </Canvas>
 
@@ -164,18 +164,18 @@ import ListItem from "../../../components/listItem/ListItem.jsx"
 export const Template = (args) => (
   <div
     style={{
-      width: "50%",
+      width: "40%",
     }}
   >
     <Card {...args}>
       <List gap={8}>
-        <ListItem style={{ color: "black" }}>
+        <ListItem variant="primary" iconName="done">
           Umożliwiamy adopcję za granicę
         </ListItem>
-        <ListItem style={{ color: "black" }}>
+        <ListItem variant="gray" iconName="done">
           Umożliwiamy adopcję za granicę
         </ListItem>
-        <ListItem style={{ color: "black" }}>
+        <ListItem variant="gray" iconName="done">
           Umożliwiamy adopcję za granicę
         </ListItem>
       </List>
@@ -185,9 +185,25 @@ export const Template = (args) => (
 export const SimpleTemplate = (args) => (
   <div
     style={{
-      width: "50%",
+      width: "40%",
     }}
   >
     <Card {...args} />
+  </div>
+)
+
+export const TextTemplate = (args) => (
+  <div
+    style={{
+      width: "40%",
+    }}
+  >
+    <Card {...args}>
+      <p>
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
+        zadbać o komfort nowego domownika.
+      </p>
+    </Card>
   </div>
 )
