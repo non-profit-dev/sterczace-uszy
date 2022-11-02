@@ -9,32 +9,33 @@ export const Card = styled.a`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 36px 10px 36px 10px;
+  padding-bottom: 36px;
+  border-radius: 30px;
+  background-color: ${({ bgColor = "transparent" }) => bgColor};
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
   ${({ linkStyle }) =>
     linkStyle &&
     css`
-      box-shadow: 2px 2px 9px 0px #000000;
+      box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.1);
       cursor: pointer;
     `}
-  border-radius: 30px;
 
   :hover {
     ${({ linkStyle }) =>
       linkStyle &&
       css`
-        box-shadow: 2px 2px 53px 0px #000000;
+        box-shadow: 2px 2px 53px 0px rgba(0, 0, 0, 0.3);
       `}
   }
-  background-color: ${({ bgColor = "transparent" }) => bgColor};
-  background-repeat: no-repeat;
-  background-size: cover;
 `
 export const IllustrationContainer = styled.div`
   display: inline-flex;
   justify-content: center;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 18px;
+  margin: 36px 10px 18px 10px;
 `
 export const ImageContainer = styled.div`
   display: inline-flex;
@@ -65,5 +66,6 @@ export const ContentContainer = styled.div`
   box-sizing: border-box;
   width: 100%;
   gap: 10px;
-  padding: 0px 14px 0px 14px;
+  padding: ${({ paddingTop }) =>
+    paddingTop ? `36px 24px 0px 24px` : `0px 24px 0px 24px`};
 `

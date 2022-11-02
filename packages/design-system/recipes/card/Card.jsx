@@ -30,7 +30,10 @@ const Card = ({
         <Styled.Image src={imageSrc} alt={imageAlt} />
       </Styled.ImageContainer>
     )}
-    <Styled.ContentContainer layout={layout}>
+    <Styled.ContentContainer
+      layout={layout}
+      paddingTop={!imageSrc && !illustrationName}
+    >
       {title}
       {children}
       {button && button}
