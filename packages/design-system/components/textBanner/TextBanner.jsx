@@ -6,31 +6,57 @@ import * as Styled from "./TextBanner.styled"
 
 const sizes = {
   tiny: {
-    size: (Typography.variantsMapping = "bodySmall"),
+    subtitle: "h6",
+    heading: "h3",
+    description: "bodySmall",
+    button: "text",
+    buttonSize: "medium",
   },
   small: {
-    size: (Typography.variantsMapping = "bodySmall"),
+    subtitle: "h6",
+    heading: "h2",
+    description: "bodyTitle",
+    button: "fill",
+    buttonSize: "large",
   },
   medium: {
-    size: (Typography.variantsMapping = "h2"),
+    subtitle: "h6",
+    heading: "h1",
+    description: "bodySmall",
+    button: "fill",
+    buttonSize: "large",
   },
   large: {
-    size: (Typography.variantsMapping = "h1"),
+    subtitle: "h6",
+    heading: "h1",
+    description: "bodyTitle",
+    button: "fill",
+    buttonSize: "large",
   },
 }
 
 const TextBanner = ({ heading, description, subtitle, layout, size }) => (
   <Styled.TextBanner layout={layout} size={size}>
-    <Typography variants={sizes[size]} color="#C1121F">
+    <Typography variant={sizes[size].subtitle} color="#C1121F">
       {subtitle}
     </Typography>
-    <Typography variant={sizes[size]} color="primary">
-      {heading}
-    </Typography>
-    <Typography variant={sizes[size]} color="primary">
+    <Styled.Container size={size}>
+      <Typography variant={sizes[size].heading} color="primary">
+        {heading}
+      </Typography>
+    </Styled.Container>
+    <Typography variant={sizes[size].description} color="primary">
       {description}
     </Typography>
-    <Button text="Button" variant="fill" color="primary" iconEnd="arrowDown" />
+    <Styled.ContainerButton size={size}>
+      <Button
+        variant={sizes[size].button}
+        text="Button"
+        color="primary"
+        iconEnd="arrowDown"
+        size={sizes[size].buttonSize}
+      />
+    </Styled.ContainerButton>
   </Styled.TextBanner>
 )
 

@@ -17,3 +17,11 @@ export const TextBanner = styled.div`
           align-items: flex-start;
         `}
 `
+
+export const Container = styled.div`
+  margin: ${({ size }) => (size === "tiny" ? "8px 0 20px 0" : "12px 0 32px 0")};
+`
+
+export const ContainerButton = styled.div`
+  margin-top: ${({ size }) => (size === "tiny" ? "20px" : "40px")};
+`
