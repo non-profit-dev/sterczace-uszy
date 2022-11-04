@@ -65,7 +65,7 @@ export const ContentContainer = styled.div`
         `}
   box-sizing: border-box;
   width: 100%;
-  gap: 10px;
+  gap: 24px;
   padding: ${({ paddingTop }) =>
     paddingTop ? `36px 24px 0px 24px` : `0px 24px 0px 24px`};
 `
