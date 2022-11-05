@@ -2,21 +2,21 @@ import { render, screen } from "../../../test-utils"
 
 import TextBanner from "../TextBanner"
 
-const text = "Lorem ipsum"
-const ChildComponent = () => <div>{text}</div>
+const heading = "Fundacja Sterczące Uszy"
+const description = "Text"
 
 describe(`TextBanner`, () => {
   it(`renders with custom properties`, () => {
     render(
       <TextBanner
-        heading="Lorem ipsum"
-        description="text"
+        heading="Fundacja Sterczące Uszy"
+        description="Text"
         layout="left"
         size="tiny"
-      >
-        <ChildComponent />
-      </TextBanner>
+      />
     )
-    expect(screen.getByText(text)).toBeInTheDocument()
+
+    expect(screen.getByText(heading)).toBeInTheDocument()
+    expect(screen.getByText(description)).toBeInTheDocument()
   })
 })
