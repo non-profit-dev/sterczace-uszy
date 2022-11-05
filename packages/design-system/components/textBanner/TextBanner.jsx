@@ -1,6 +1,7 @@
 import { string, oneOf } from "prop-types"
 import Typography from "../typography/Typography"
 import Button from "../button/Button"
+import { useTheme } from "@emotion/react"
 
 import * as Styled from "./TextBanner.styled"
 
@@ -35,30 +36,42 @@ const sizes = {
   },
 }
 
-const TextBanner = ({ heading, description, subtitle, layout, size }) => (
-  <Styled.TextBanner layout={layout} size={size}>
-    <Typography variant={sizes[size].subtitle} color="#C1121F">
-      {subtitle}
-    </Typography>
-    <Styled.Container size={size}>
-      <Typography variant={sizes[size].heading} color="primary">
-        {heading}
+const TextBanner = ({ heading, description, subtitle, layout, size }) => {
+  const theme = useTheme()
+  return (
+    <Styled.TextBanner layout={layout} size={size}>
+      <Typography
+        variant={sizes[size].subtitle}
+        color={theme.colors.primary[500]}
+      >
+        {subtitle}
       </Typography>
-    </Styled.Container>
-    <Typography variant={sizes[size].description} color="primary">
-      {description}
-    </Typography>
-    <Styled.ContainerButton size={size}>
-      <Button
-        variant={sizes[size].button}
-        text="Button"
-        color="primary"
-        iconEnd="arrowDown"
-        size={sizes[size].buttonSize}
-      />
-    </Styled.ContainerButton>
-  </Styled.TextBanner>
-)
+      <Styled.Container size={size}>
+        <Typography
+          variant={sizes[size].heading}
+          color={theme.colors.grey[600]}
+        >
+          {heading}
+        </Typography>
+      </Styled.Container>
+      <Typography
+        variant={sizes[size].description}
+        color={theme.colors.grey[500]}
+      >
+        {description}
+      </Typography>
+      <Styled.ContainerButton size={size}>
+        <Button
+          variant={sizes[size].button}
+          text="Button"
+          color="primary"
+          iconEnd="arrowDown"
+          size={sizes[size].buttonSize}
+        />
+      </Styled.ContainerButton>
+    </Styled.TextBanner>
+  )
+}
 
 TextBanner.propTypes = {
   heading: string.isRequired,
