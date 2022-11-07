@@ -40,10 +40,7 @@ const TextBanner = ({ heading, description, subtitle, layout, size }) => {
   const theme = useTheme()
   return (
     <Styled.TextBanner layout={layout} size={size}>
-      <Typography
-        variant={sizes[size].subtitle}
-        color={theme.colors.primary[500]}
-      >
+      <Typography variant="h6" color={theme.colors.primary[500]}>
         {subtitle}
       </Typography>
       <Styled.Container size={size}>
@@ -83,7 +80,7 @@ TextBanner.propTypes = {
 
 TextBanner.defaultProps = {
   subtitle: "",
-  layout: oneOf(["left", "center"]),
+  layout: "left",
   size: "medium",
 }
 
