@@ -19,4 +19,10 @@ describe(`TextBanner`, () => {
     expect(screen.getByText(heading)).toBeInTheDocument()
     expect(screen.getByText(description)).toBeInTheDocument()
   })
+  it(`renders with default properties`, () => {
+    render(<TextBanner heading="Fundacja Sterczące Uszy" description="Text" />)
+
+    expect(screen.getByText(heading)).toBeInTheDocument()
+    expect(screen.getByText(description)).toBeInTheDocument()
+  })
 })
