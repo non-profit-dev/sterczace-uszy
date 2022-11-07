@@ -12,13 +12,11 @@ export const Card = styled.a`
   padding-bottom: 36px;
   border-radius: 30px;
   background-color: ${({ bgColor = "transparent" }) => bgColor};
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
   ${({ linkStyle }) =>
     linkStyle &&
     css`
       box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.1);
+      transition: 500ms linear;
       cursor: pointer;
     `}
 
@@ -49,6 +47,7 @@ export const Image = styled.img`
   box-sizing: border-box;
   width: 100%;
   height: auto;
+  border-radius: 30px 30px 0px 0px;
 `
 
 export const ContentContainer = styled.div`
