@@ -4,4 +4,5 @@ export const Image = styled.div`
   display: inline block;
   float: left;
   width: 100%;
+  border radius: 5rem;
 `

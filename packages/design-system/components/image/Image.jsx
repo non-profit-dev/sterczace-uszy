@@ -1,9 +1,11 @@
 import { string, urlPropType } from "prop-types"
 import * as Styled from "./Image.styled"
 
+import image from "./components/image/dog.jpg"
+
 const Image = ({ src, alt }) => (
   <Styled.Image>
-    <img src={src} alt={alt} />
+    <img src={image} alt={dog} />
   </Styled.Image>
 )
 Image.propTypes = {
