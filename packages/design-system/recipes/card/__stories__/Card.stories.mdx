@@ -5,6 +5,7 @@ import Title from "../../../components/title/Title.jsx"
 import Button from "../../../components/button/Button.jsx"
 import List from "../../../components/list/List.jsx"
 import ListItem from "../../../components/listItem/ListItem.jsx"
+import Typography from "../../../components/typography/Typography.jsx"
 
 <Meta title="Recipes/Card" component={Card} />
 
@@ -159,6 +160,31 @@ import ListItem from "../../../components/listItem/ListItem.jsx"
   </Story>
 </Canvas>
 
+<Canvas>
+  <Story
+    name="Cards grid"
+    args={{
+      title: <Title text="Mini" iconEnd="dog" badge="Młodziak" />,
+      layout: "left",
+      imageSrc:
+        "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg ",
+      imageAlt: "cat",
+      button: (
+        <Button
+          text="Poznaj mnie lepiej"
+          variant="textLine"
+          color="primary"
+          size="medium"
+          iconEnd="chevronRight"
+        />
+      ),
+      href: "https://google.com",
+    }}
+  >
+    {TemplateGrid.bind()}
+  </Story>
+</Canvas>
+
 <ArgsTable />
 
 export const Template = (args) => (
@@ -204,6 +230,74 @@ export const TextTemplate = (args) => (
         opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
         zadbać o komfort nowego domownika.
       </p>
+    </Card>
+  </div>
+)
+
+export const TemplateGrid = (args) => (
+  <div
+    style={{
+      maxWidth: "1260px",
+      display: "grid",
+      gridTemplateColumns: "repeat(3, 1fr)",
+      alignItems: "start",
+      gap: "40px",
+    }}
+  >
+    <Card
+      {...args}
+      imageSrc="https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    >
+      <Typography variant="bodySmall">
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka.
+      </Typography>
+    </Card>
+    <Card
+      {...args}
+      imageSrc="https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    >
+      <Typography variant="bodySmall">
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
+        zadbać o komfort nowego domownika.
+      </Typography>
+    </Card>
+    <Card
+      {...args}
+      imageSrc="https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    >
+      <Typography variant="bodySmall">
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka.
+      </Typography>
+    </Card>
+    <Card
+      {...args}
+      imageSrc="https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    >
+      <Typography variant="bodySmall">
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
+        zadbać o komfort nowego domownika.
+      </Typography>
+    </Card>
+    <Card
+      {...args}
+      imageSrc="https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    >
+      <Typography variant="bodySmall">
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
+        zadbać o komfort nowego domownika.
+      </Typography>
+    </Card>
+    <Card {...args}>
+      <Typography variant="bodySmall">
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
+        zadbać o komfort nowego domownika.
+      </Typography>
     </Card>
   </div>
 )
