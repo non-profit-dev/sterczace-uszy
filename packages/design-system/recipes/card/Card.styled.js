@@ -47,7 +47,8 @@ export const Image = styled.img`
   display: block;
   box-sizing: border-box;
   width: 100%;
-  height: auto;
+  height: ${({ imageHeight }) => imageHeight};
+  object-fit: cover;
   border-radius: 30px 30px 0px 0px;
 `
 
