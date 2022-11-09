@@ -11,6 +11,7 @@ export const Card = styled.a`
   justify-content: center;
   padding-bottom: 36px;
   border-radius: 30px;
+  color: ${({ theme }) => theme.colors.grey[600]};
   background-color: ${({ bgColor = "transparent" }) => bgColor};
   ${({ linkStyle }) =>
     linkStyle &&
