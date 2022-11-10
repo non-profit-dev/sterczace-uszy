@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import theme from "../theme/theme"
+import theme from "../../theme/theme"
 
 export const Badge = styled.div`
   display: inline-block;
