@@ -1,6 +1,6 @@
 import { render, screen } from "../../../test-utils"
 
-import List from "../List"
+import { List } from ".."
 
 const children = <li>Test1</li>
 

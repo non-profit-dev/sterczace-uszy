@@ -1,6 +1,6 @@
 import { string, oneOf, func, bool } from "prop-types"
 
-import Icon, { icons } from "../icon/Icon"
+import { Icon, icons } from "../icon"
 
 import * as Styled from "./Button.styled"
 

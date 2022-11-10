@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import theme from "../../theme/theme"
+import { theme } from "../../theme"
 
 export const ListItem = styled.li`
   display: flex;

@@ -1,6 +1,6 @@
 import { render, screen } from "../../../test-utils"
 
-import Banner from "../Banner"
+import { Banner } from ".."
 
 const heading = "heading"
 const button = "button"

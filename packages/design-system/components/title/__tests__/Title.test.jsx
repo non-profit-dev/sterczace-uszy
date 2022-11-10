@@ -1,6 +1,6 @@
 import { render, screen } from "../../../test-utils"
 
-import Title from "../Title"
+import { Title } from ".."
 
 const text = "Example title"
 const badge = "Example badge"

@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event"
 
 import { render, screen, act } from "../../../test-utils"
 
-import Button from "../Button"
+import { Button } from ".."
 
 const text = "Text"
 const iconName = "download"

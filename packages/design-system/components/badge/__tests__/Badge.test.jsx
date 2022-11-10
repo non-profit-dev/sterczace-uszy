@@ -1,6 +1,6 @@
 import { render, screen } from "../../../test-utils"
 
-import Badge from "../Badge"
+import { Badge } from ".."
 
 const text = "Lorem ipsum"
 

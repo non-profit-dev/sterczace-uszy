@@ -1,6 +1,6 @@
 import { render, screen } from "../../../test-utils"
 
-import Typography from "../Typography"
+import { Typography } from ".."
 
 const text = "Lorem ipsum"
 

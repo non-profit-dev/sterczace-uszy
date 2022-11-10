@@ -1,6 +1,6 @@
 import React from "react"
 import { string, oneOf, oneOfType, node } from "prop-types"
-import Icon from "../icon/Icon"
+import { Icon } from "../icon"
 
 import * as Styled from "./ListItem.styled"
 

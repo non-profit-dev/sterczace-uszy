@@ -1,6 +1,6 @@
 import { render, screen } from "../../../test-utils"
 
-import ListItem from "../ListItem"
+import { ListItem } from ".."
 
 const text = "Lorem ipsum"
 const ChildComponent = () => <div>{text}</div>

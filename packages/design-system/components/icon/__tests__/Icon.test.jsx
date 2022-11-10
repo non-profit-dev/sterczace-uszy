@@ -1,6 +1,6 @@
 import { render, screen } from "../../../test-utils"
 
-import Icon from "../Icon"
+import { Icon } from ".."
 
 const name = "heart"
 

@@ -1,7 +1,7 @@
 import { string, oneOf } from "prop-types"
 
-import Icon from "../icon/Icon"
-import Badge from "../badge/Badge"
+import { Icon } from "../icon"
+import { Badge } from "../badge"
 
 import * as Styled from "./Title.styled"
 
