@@ -1,9 +1,9 @@
 import App from "next/app"
 import Head from "next/head"
 import { createContext } from "react"
-import { fetchAPI } from "../lib/api"
+import { fetchAPI } from "frontend/lib/api"
 import { ThemeProvider } from "@emotion/react"
-import theme from "../../../design-system/theme/theme"
+import { theme } from "design-system/theme/theme"
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})

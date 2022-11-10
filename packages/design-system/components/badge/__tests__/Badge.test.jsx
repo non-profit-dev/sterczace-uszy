@@ -1,6 +1,6 @@
-import { render, screen } from "../../../test-utils"
+import { render, screen } from "design-system/test-utils"
 
-import { Badge } from ".."
+import { Badge } from "design-system/components/badge"
 
 const text = "Lorem ipsum"
 

@@ -1,6 +1,6 @@
-import { render, screen } from "../../../test-utils"
+import { render, screen } from "design-system/test-utils"
 
-import { ListItem } from ".."
+import { ListItem } from "design-system/components/listItem"
 
 const text = "Lorem ipsum"
 const ChildComponent = () => <div>{text}</div>

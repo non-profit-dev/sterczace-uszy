@@ -1,8 +1,8 @@
 import userEvent from "@testing-library/user-event"
 
-import { render, screen, act } from "../../../test-utils"
+import { render, screen, act } from "design-system/test-utils"
 
-import { Button } from ".."
+import { Button } from "design-system/components/button"
 
 const text = "Text"
 const iconName = "download"
