@@ -13,7 +13,8 @@
     "storybook": "yarn --cwd packages/design-system storybook",
     "build-storybook": "yarn --cwd packages/design-system build-storybook",
     "lint": "yarn --cwd packages/design-system lint",
-    "cypress": "yarn --cwd packages/frontend/e2e cypress:open",
+    "cypress:open": "yarn --cwd packages/frontend/e2e cypress:open",
+    "cypress:run": "yarn --cwd packages/frontend/e2e cypress:run",
     "test": "yarn --cwd packages/design-system test",
     "postinstall": "husky install"
   },
