@@ -87,7 +87,7 @@ const theme = {
         fontFamily: "Poppins",
       },
       h6: {
-        fontWeight: 700,
+        fontWeight: 600,
         fontSize: "16px",
         lineHeight: "130%",
         fontFamily: "Poppins",
