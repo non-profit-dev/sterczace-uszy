@@ -1,8 +1,8 @@
 import styled from "@emotion/styled"
 
-export const Image = styled.div`
-  display: inline block;
-  float: left;
+export const Image = styled.img`
+  display: inline-block;
+  border-radius: 10px;
   width: 100%;
-  border radius: 5rem;
+  height: 100%;
 `
