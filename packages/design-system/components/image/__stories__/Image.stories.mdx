@@ -1,14 +1,19 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
 
-import Image from "../image"
+import Image from "../Image"
 
-<Meta title="Components/Image" />
+<Meta title="Components/Image" component={Image} />
 
 # Image
 
 <Canvas>
-  <Story>
-    <__Image__ />
+  <Story
+    name="Overview"
+    args={{
+      image: <Image Src="" />,
+    }}
+  >
+    {Template.bind()}
   </Story>
 </Canvas>
 
