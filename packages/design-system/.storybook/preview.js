@@ -2,7 +2,7 @@ import React from "react"
 import { ThemeProvider } from "@emotion/react"
 import { Normalize } from "styled-normalize"
 
-import { theme } from "design-system/theme"
+import theme from "design-system/theme"
 
 import "./styles.css"
 

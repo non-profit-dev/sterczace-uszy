@@ -1,1 +1,3 @@
-export { default as theme } from "design-system/theme/theme"
+import theme from "./theme"
+
+export default theme

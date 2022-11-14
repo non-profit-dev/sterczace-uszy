@@ -1,7 +1,7 @@
 import { string, oneOf } from "prop-types"
 import { useTheme } from "@emotion/react"
 import Typography from "design-system/components/typography/Typography"
-import Button from "design-system/components/button/Button"
+import Button from "design-system/components/button"
 
 import * as Styled from "./TextBanner.styled"
 

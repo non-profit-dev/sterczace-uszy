@@ -1,6 +1,6 @@
 import { render, screen } from "design-system/test-utils"
 
-import { Typography } from "design-system/components/typography"
+import Typography from "design-system/components/typography"
 
 const text = "Lorem ipsum"
 

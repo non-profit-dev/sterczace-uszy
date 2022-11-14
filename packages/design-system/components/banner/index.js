@@ -1,1 +1,3 @@
-export { default as Banner } from "design-system/components/banner/Banner"
+import Banner from "./Banner"
+
+export default Banner

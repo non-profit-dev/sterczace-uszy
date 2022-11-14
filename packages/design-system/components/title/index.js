@@ -1,1 +1,3 @@
-export { default as Title } from "design-system/components/title/Title"
+import Title from "./Title"
+
+export default Title

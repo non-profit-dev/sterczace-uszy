@@ -1,1 +1,3 @@
-export { default as ListItem } from "design-system/components/listItem/ListItem"
+import ListItem from "./ListItem"
+
+export default ListItem

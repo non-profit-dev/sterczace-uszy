@@ -1,1 +1,3 @@
-export { default as TextBanner } from "design-system/recipes/textBanner/TextBanner"
+import TextBanner from "./TextBanner"
+
+export default TextBanner

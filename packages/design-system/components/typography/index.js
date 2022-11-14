@@ -1,1 +1,3 @@
-export { default as Typography } from "design-system/components/typography/Typography"
+import Typography from "./Typography"
+
+export default Typography

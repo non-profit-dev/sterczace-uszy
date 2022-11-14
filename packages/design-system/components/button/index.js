@@ -1,1 +1,3 @@
-export { default as Button } from "design-system/components/button/Button"
+import Button from "./Button"
+
+export default Button

@@ -1,6 +1,6 @@
 import { render, screen } from "design-system/test-utils"
 
-import { List } from "design-system/components/list"
+import List from "design-system/components/list"
 
 const children = <li>Test1</li>
 

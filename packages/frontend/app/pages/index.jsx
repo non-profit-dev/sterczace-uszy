@@ -4,7 +4,7 @@ import { Normalize } from "styled-normalize"
 import { fetchAPI } from "frontend/lib/api"
 import Head from "next/head"
 
-import { Badge } from "design-system/components/badge/Badge"
+import Badge from "design-system/components/badge"
 
 const Home = ({ homepage }) => {
   return (

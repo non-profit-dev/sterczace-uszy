@@ -1,1 +1,3 @@
-export { default as Badge } from "design-system/components/badge/Badge"
+import Badge from "./Badge"
+
+export default Badge

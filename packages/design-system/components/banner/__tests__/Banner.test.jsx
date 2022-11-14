@@ -1,6 +1,6 @@
 import { render, screen } from "design-system/test-utils"
 
-import { Banner } from "design-system/components/banner"
+import Banner from "design-system/components/banner"
 
 const heading = "heading"
 const button = "button"

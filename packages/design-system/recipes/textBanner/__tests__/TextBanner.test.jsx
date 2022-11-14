@@ -1,6 +1,6 @@
 import { render, screen } from "design-system/test-utils"
 
-import { TextBanner } from "design-system/recipes/textBanner"
+import TextBanner from "design-system/recipes/textBanner"
 
 const heading = "Fundacja Sterczące Uszy"
 const description = "Text"
