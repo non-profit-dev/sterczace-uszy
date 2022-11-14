@@ -6,9 +6,10 @@ export const Card = styled.a`
   box-sizing: border-box;
   text-decoration: none;
   width: 100%;
+  height: 100%;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: start;
   padding-bottom: 36px;
   border-radius: 30px;
   color: ${({ theme }) => theme.colors.grey[600]};
@@ -55,6 +56,7 @@ export const Image = styled.img`
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   color: inherit;
   ${({ layout }) =>
     layout === "center"
@@ -64,9 +66,26 @@ export const ContentContainer = styled.div`
       : css`
           align-items: flex-start;
         `}
+  justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
   gap: 24px;
   padding: ${({ paddingTop }) =>
     paddingTop ? `36px 24px 0px 24px` : `0px 24px 0px 24px`};
+`
+export const ChildrenWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  ${({ layout }) =>
+    layout === "center"
+      ? css`
+          align-items: center;
+        `
+      : css`
+          align-items: flex-start;
+        `}
+  gap: 24px;
+  box-sizing: border-box;
+  width: 100%;
 `

@@ -273,25 +273,27 @@ export const TemplateGrid = (args) => (
         opieka.
       </Typography>
     </Card>
-    <Card
-      {...args}
-      imageSrc="https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    >
+    <Card {...args} title=<Title text="Porozmawiaj" />>
       <Typography variant="bodySmall">
         Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
-        opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
-        zadbać o komfort nowego domownika.
+        opieka.
       </Typography>
     </Card>
     <Card
       {...args}
       imageSrc="https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     >
-      <Typography variant="bodySmall">
-        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
-        opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
-        zadbać o komfort nowego domownika.
-      </Typography>
+      <List gap={8}>
+        <ListItem variant="primary" iconName="done">
+          Umożliwiamy adopcję
+        </ListItem>
+        <ListItem variant="gray" iconName="done">
+          Umożliwiamy adopcję
+        </ListItem>
+        <ListItem variant="gray" iconName="done">
+          Umożliwiamy adopcję
+        </ListItem>
+      </List>
     </Card>
     <Card {...args}>
       <Typography variant="bodySmall">
