@@ -73,7 +73,7 @@ export const ContentContainer = styled.div`
   padding: ${({ paddingTop }) =>
     paddingTop ? `36px 24px 0px 24px` : `0px 24px 0px 24px`};
 `
-export const ChildrenWrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   color: inherit;

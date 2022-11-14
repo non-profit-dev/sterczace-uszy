@@ -35,10 +35,10 @@ const Card = ({
       layout={layout}
       paddingTop={!imageSrc && !illustrationName}
     >
-      <Styled.ChildrenWrapper layout={layout}>
+      <Styled.Wrapper layout={layout}>
         {title}
         {children}
-      </Styled.ChildrenWrapper>
+      </Styled.Wrapper>
 
       {button && button}
     </Styled.ContentContainer>
