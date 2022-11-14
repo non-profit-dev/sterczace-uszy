@@ -12,13 +12,13 @@ const href = "https://google.com"
 
 describe(`Card recipes`, () => {
   it(`renders with default properties`, () => {
-    render(<Card title=<Title /> />)
+    render(<Card title={<Title />} />)
     expect(screen.getByText("Title")).toBeInTheDocument()
   })
 
   it(`renders with child component `, () => {
     render(
-      <Card title=<Title />>
+      <Card title={<Title />}>
         <ChildComponent />
       </Card>
     )
@@ -27,7 +27,7 @@ describe(`Card recipes`, () => {
 
   it(`renders with custom properties `, () => {
     render(
-      <Card title=<Title /> layout="left">
+      <Card title={<Title />} layout="left">
         <ChildComponent />
       </Card>
     )
@@ -37,7 +37,7 @@ describe(`Card recipes`, () => {
 
   it(`renders with illustration if illustration name is provided`, () => {
     render(
-      <Card title=<Title /> illustrationName={illustrationName}>
+      <Card title={<Title />} illustrationName={illustrationName}>
         <ChildComponent />
       </Card>
     )
@@ -46,7 +46,7 @@ describe(`Card recipes`, () => {
 
   it(`renders with image if image src is provided`, () => {
     render(
-      <Card title=<Title /> imageSrc={imageSrc} imageAlt={alt}>
+      <Card title={<Title />} imageSrc={imageSrc} imageAlt={alt}>
         <ChildComponent />
       </Card>
     )
@@ -54,7 +54,7 @@ describe(`Card recipes`, () => {
   })
 
   it(`renders the correct link href`, () => {
-    render(<Card title=<Title /> href={href} />)
+    render(<Card title={<Title />} href={href} />)
     expect(screen.getByRole(`link`)).toHaveAttribute(`href`, href)
   })
 })

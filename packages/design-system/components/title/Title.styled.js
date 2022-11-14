@@ -14,7 +14,6 @@ export const Title = styled.div`
   position: relative;
   color: ${({ theme }) => theme.colors.grey[500]};
   margin-bottom: 5px;
-  flex-direction: row;
 `
 
 export const Wrapper = styled.div`
