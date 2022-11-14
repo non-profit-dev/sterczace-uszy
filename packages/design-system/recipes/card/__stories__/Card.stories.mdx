@@ -1,0 +1,306 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import Card from "../Card.jsx"
+import Title from "../../../components/title/Title.jsx"
+import Button from "../../../components/button/Button.jsx"
+import List from "../../../components/list/List.jsx"
+import ListItem from "../../../components/listItem/ListItem.jsx"
+import Typography from "../../../components/typography/Typography.jsx"
+
+<Meta title="Recipes/Card" component={Card} />
+
+# Card
+
+<Canvas>
+  <Story
+    name="Overview - simple"
+    args={{
+      title: <Title text="Porozmawiaj" />,
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - simple with button"
+    args={{
+      title: <Title text="Porozmawiaj" />,
+      button: (
+        <Button
+          text="Button"
+          variant="text"
+          color="primary"
+          iconStart="arrowDown"
+        />
+      ),
+      href: "https://google.com",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - no text"
+    args={{
+      title: <Title text="Porozmawiaj" />,
+      illustrationName: "heartWithDogFace",
+    }}
+  >
+    {SimpleTemplate.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - no text, with button"
+    args={{
+      title: <Title text="Porozmawiaj" />,
+      illustrationName: "heartWithDogFace",
+      button: (
+        <Button
+          text="Button"
+          variant="text"
+          color="primary"
+          iconStart="arrowDown"
+        />
+      ),
+      href: "https://google.com",
+    }}
+  >
+    {SimpleTemplate.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - illustration and background"
+    args={{
+      title: <Title text="Porozmawiaj" />,
+      illustrationName: "heartWithDogFace",
+      bgColor: "#FEF8EC",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - illustration"
+    args={{
+      title: <Title text="Porozmawiaj" />,
+      illustrationName: "heartWithDogFace",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - illustration and button"
+    args={{
+      title: <Title text="Porozmawiaj" />,
+      illustrationName: "heartWithDogFace",
+      button: (
+        <Button
+          text="Wejdź"
+          variant="border"
+          color="primary"
+          iconEnd="arrowDown"
+        />
+      ),
+      href: "https://google.com",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - image"
+    args={{
+      title: <Title text="Porozmawiaj" iconEnd="dog" badge="Szczeniak" />,
+      imageSrc:
+        "https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 ",
+      imageAlt: "dog",
+      bgColor: "#FEF8EC",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - image and button"
+    args={{
+      title: <Title text="Porozmawiaj" iconEnd="cat" badge="Kot" />,
+      layout: "left",
+      imageSrc:
+        "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg ",
+      imageAlt: "cat",
+      button: (
+        <Button
+          text="Wejdź"
+          variant="fill"
+          color="primary"
+          iconEnd="chevronRight"
+        />
+      ),
+      href: "https://google.com",
+    }}
+  >
+    {TextTemplate.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Cards grid"
+    args={{
+      title: <Title text="Mini" iconEnd="dog" badge="Młodziak" />,
+      layout: "left",
+      imageSrc:
+        "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg ",
+      imageAlt: "cat",
+      imageHeight: "300px",
+      button: (
+        <Button
+          text="Poznaj mnie lepiej"
+          variant="textLine"
+          color="primary"
+          size="medium"
+          iconEnd="chevronRight"
+        />
+      ),
+      href: "https://google.com",
+    }}
+  >
+    {TemplateGrid.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => (
+  <div
+    style={{
+      width: "40%",
+    }}
+  >
+    <Card {...args}>
+      <List gap={8}>
+        <ListItem variant="primary" iconName="done">
+          Umożliwiamy adopcję za granicę
+        </ListItem>
+        <ListItem variant="gray" iconName="done">
+          Umożliwiamy adopcję za granicę
+        </ListItem>
+        <ListItem variant="gray" iconName="done">
+          Umożliwiamy adopcję za granicę
+        </ListItem>
+      </List>
+    </Card>
+  </div>
+)
+export const SimpleTemplate = (args) => (
+  <div
+    style={{
+      width: "40%",
+    }}
+  >
+    <Card {...args} />
+  </div>
+)
+
+export const TextTemplate = (args) => (
+  <div
+    style={{
+      width: "40%",
+    }}
+  >
+    <Card {...args}>
+      <p>
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
+        zadbać o komfort nowego domownika.
+      </p>
+    </Card>
+  </div>
+)
+
+export const TemplateGrid = (args) => (
+  <div
+    style={{
+      maxWidth: "1260px",
+      display: "grid",
+      gridTemplateColumns: "repeat(3, 1fr)",
+      alignItems: "start",
+      gap: "40px",
+    }}
+  >
+    <Card
+      {...args}
+      imageSrc="https://images.pexels.com/photos/39317/chihuahua-dog-puppy-cute-39317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    >
+      <Typography variant="bodySmall">
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka.
+      </Typography>
+    </Card>
+    <Card
+      {...args}
+      imageSrc="https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    >
+      <Typography variant="bodySmall">
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
+        zadbać o komfort nowego domownika.
+      </Typography>
+    </Card>
+    <Card
+      {...args}
+      imageSrc="https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    >
+      <Typography variant="bodySmall">
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka.
+      </Typography>
+    </Card>
+    <Card {...args} title=<Title text="Porozmawiaj" />>
+      <Typography variant="bodySmall">
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka.
+      </Typography>
+    </Card>
+    <Card
+      {...args}
+      imageSrc="https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    >
+      <List gap={8}>
+        <ListItem variant="primary" iconName="done">
+          Umożliwiamy adopcję
+        </ListItem>
+        <ListItem variant="gray" iconName="done">
+          Umożliwiamy adopcję
+        </ListItem>
+        <ListItem variant="gray" iconName="done">
+          Umożliwiamy adopcję
+        </ListItem>
+      </List>
+    </Card>
+    <Card {...args}>
+      <Typography variant="bodySmall">
+        Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
+        opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
+        zadbać o komfort nowego domownika.
+      </Typography>
+    </Card>
+  </div>
+)
