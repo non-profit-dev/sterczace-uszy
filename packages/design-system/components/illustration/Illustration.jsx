@@ -1,6 +1,6 @@
 import { oneOf } from "prop-types"
 
-import HeartWithDogFace from "../../illustrations/heartWithDogFace.svg"
+import HeartWithDogFace from "design-system/illustrations/heartWithDogFace.svg"
 
 const sizes = {
   heartWithDogFace: {

@@ -1,4 +1,4 @@
 import Icon from "./Icon"
 
-export { icons } from "design-system/components/icon/Icon"
+export { icons } from "./Icon"
 export default Icon
