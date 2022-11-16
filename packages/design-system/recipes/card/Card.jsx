@@ -1,7 +1,7 @@
 import { string, oneOf, node, oneOfType, object } from "prop-types"
 
+import Illustration from "design-system/components/illustration"
 import * as Styled from "./Card.styled"
-import Illustration from "../../components/illustrations/Illustration"
 
 const Card = ({
   button,

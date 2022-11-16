@@ -1,6 +1,6 @@
-import { render, screen } from "../../../test-utils"
+import { render, screen } from "design-system/test-utils"
 
-import Card from "../Card"
+import Card from "design-system/recipes/card"
 
 const Title = () => <div>Title</div>
 const ChildComponent = () => <div>Child component</div>

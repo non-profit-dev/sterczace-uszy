@@ -8,8 +8,8 @@
 4. Import a new icon into `design-system/components/icon/Icon.jsx` file, update the icons object:
 
 ```js
-import Heart from "../../icons/Heart.svg"
-import NewIcon from "../../icons/NewIcon.svg"
+import Heart from "design-system/icons/Heart.svg"
+import NewIcon from "design-system/icons/NewIcon.svg"
 
 const icons = {
   heart: Heart,

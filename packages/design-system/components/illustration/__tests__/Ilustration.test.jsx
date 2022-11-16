@@ -1,6 +1,6 @@
-import { render, screen } from "../../../test-utils"
+import { render, screen } from "design-system/test-utils"
 
-import Illustration from "../Illustration"
+import Illustration from "design-system/components/illustration"
 
 const name = "heartWithDogFace"
 
