@@ -1,11 +1,10 @@
 import styled from "@emotion/styled"
-import theme from "../../theme/theme"
 
 export const Badge = styled.div`
   display: inline-block;
   padding: 0px 8px;
   border-radius: 4px;
-  background-color: ${({ variant }) => {
+  background-color: ${({ variant, theme }) => {
     switch (variant) {
       case "gray":
         return theme.colors.grey[200]
@@ -17,12 +16,12 @@ export const Badge = styled.div`
         return theme.colors.gray[200]
     }
   }};
-  color: ${({ variant }) =>
+  color: ${({ variant, theme }) =>
     variant === "primary"
       ? theme.colors.neutrals[100]
       : theme.colors.grey[500]};
 
-  ${({ size }) => {
+  ${({ size, theme }) => {
     switch (size) {
       case "small":
         return theme.typography.desktop.bodyTiny

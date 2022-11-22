@@ -1,6 +1,6 @@
-import { render, screen } from "../../../test-utils"
+import { render, screen } from "design-system/test-utils"
 
-import Icon from "../Icon"
+import Icon from "design-system/components/icon"
 
 const name = "heart"
 
