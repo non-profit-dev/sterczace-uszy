@@ -7,8 +7,8 @@ const src =
 const alt = "dog"
 
 describe("Image", () => {
-  it("renders Image with alt text", () => {
-    render(<Image Src={src} Alt={alt} />)
+  it("renders with alt text", () => {
+    render(<Image src={src} alt={alt} />)
     expect(screen.getByAltText(alt)).toBeInTheDocument()
   })
 })
