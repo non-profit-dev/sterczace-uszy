@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
-import theme from "../../theme/theme"
+import theme from "design-system/theme"
 
 const sizes = {
   small: {
