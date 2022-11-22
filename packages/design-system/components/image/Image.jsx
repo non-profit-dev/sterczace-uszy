@@ -1,16 +1,16 @@
 import { string } from "prop-types"
 import * as Styled from "./Image.styled"
 
-const Image = ({ Src, Alt }) => <Styled.Image src={Src} alt={Alt} />
+const Image = ({ src, alt }) => <Styled.Image src={src} alt={alt} />
 
 Image.propTypes = {
-  Alt: string,
-  Src: string,
+  alt: string,
+  src: string,
 }
 
 Image.defaultProps = {
-  Alt: null,
-  Src: null,
+  alt: null,
+  src: null,
 }
 
 export default Image
