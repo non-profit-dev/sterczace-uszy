@@ -5,11 +5,13 @@ import Badge from "../badge/Badge"
 
 import * as Styled from "./Title.styled"
 
-const Title = ({ text, badge, iconStart, iconEnd, size }) => (
+const Title = ({ text, badge, iconStart, iconEnd, size, variant }) => (
   <Styled.Title size={size} fullWidth={!!badge}>
     <Styled.Wrapper>
       {iconStart && <Icon name={iconStart} size={size} />}
-      <Styled.Text size={size}>{text}</Styled.Text>
+      <Styled.Text size={size} variant={variant} >
+        {text}
+      </Styled.Text>
       {iconEnd && <Icon name={iconEnd} size={size} />}
     </Styled.Wrapper>
 
@@ -23,6 +25,7 @@ Title.propTypes = {
   iconStart: string,
   iconEnd: string,
   size: oneOf(["small", "medium", "large"]),
+  variant: oneOf(["text", "textLine"]),
 }
 
 Title.defaultProps = {
@@ -30,6 +33,7 @@ Title.defaultProps = {
   iconStart: null,
   iconEnd: null,
   size: "medium",
+  variant: "textLine",
 }
 
 export default Title
