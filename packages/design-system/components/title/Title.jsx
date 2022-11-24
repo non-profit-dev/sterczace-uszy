@@ -9,7 +9,7 @@ const Title = ({ text, badge, iconStart, iconEnd, size, variant }) => (
   <Styled.Title size={size} fullWidth={!!badge}>
     <Styled.Wrapper>
       {iconStart && <Icon name={iconStart} size={size} />}
-      <Styled.Text size={size} variant={variant} >
+      <Styled.Text size={size} variant={variant}>
         {text}
       </Styled.Text>
       {iconEnd && <Icon name={iconEnd} size={size} />}
