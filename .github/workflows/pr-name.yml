@@ -15,5 +15,5 @@ jobs:
           cache: 'yarn'
 
       - name: Install project dependencies
-        run: yarn add @commitlint/config-conventional --legacy-peer-deps --prefer-offline -W
+        run: yarn --legacy-peer-deps --prefer-offline
       - uses: JulienKode/pull-request-name-linter-action@v0.5.0
