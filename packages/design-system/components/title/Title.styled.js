@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import { css } from "@emotion/react"
 
 const typography = {
   small: "h5",
@@ -26,11 +27,9 @@ export const Text = styled.p`
   position: relative;
   margin: 0;
   ${({ theme, size }) => theme.typography.desktop[typography[size]]};
-
   ${({ theme }) => theme.breakpoints.lg} {
     ${({ theme, size }) => theme.typography.tablet[typography[size]]};
   }
-
   &:before {
     content: "";
     position: absolute;
@@ -42,4 +41,12 @@ export const Text = styled.p`
       `ellipse(50% ${size === `large` ? `3px` : `2px`})`};
     background: ${({ theme }) => theme.colors.primary[500]};
   }
+
+  ${({ variant }) =>
+    variant === "text" &&
+    css`
+      &:before {
+        display: none;
+      }
+    `}
 `
