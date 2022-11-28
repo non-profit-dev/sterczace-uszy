@@ -1,9 +1,13 @@
 import App from "next/app"
 import Head from "next/head"
 import { createContext } from "react"
-import { fetchAPI } from "frontend/lib/api"
+import { Normalize } from "styled-normalize"
 import { ThemeProvider } from "@emotion/react"
-import theme from "design-system/theme/theme"
+import { node, shape } from "prop-types"
+
+import { fetchAPI } from "frontend/lib/api"
+
+import theme from "design-system/theme"
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})
@@ -13,9 +17,10 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <>
-      <Head></Head>
+      <Head />
       <ThemeProvider theme={theme}>
         <GlobalContext.Provider value={global.attributes}>
+          <Normalize />
           <Component {...pageProps} />
         </GlobalContext.Provider>
       </ThemeProvider>
@@ -23,10 +28,11 @@ const MyApp = ({ Component, pageProps }) => {
   )
 }
 
-// getInitialProps disables automatic static optimization for pages that don't
-// have getStaticProps. So article, category and home pages still get SSG.
-// Hopefully we can replace this with getStaticProps once this issue is fixed:
-// https://github.com/vercel/next.js/discussions/10949
+MyApp.propTypes = {
+  Component: node.isRequired,
+  pageProps: shape({}).isRequired,
+}
+
 MyApp.getInitialProps = async (ctx) => {
   // Calls page's `getInitialProps` and fills `appProps.pageProps`
   const appProps = await App.getInitialProps(ctx)
