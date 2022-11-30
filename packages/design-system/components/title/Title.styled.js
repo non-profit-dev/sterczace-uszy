@@ -50,3 +50,13 @@ export const Text = styled.p`
       }
     `}
 `
+export const NumberedList = styled.p`
+  text-align: center;
+  display: inline;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 48px;
+  font-family: "Poppins";
+  color: ${({ theme }) => theme.colors.primary[500]};
+  margin: 0;
+`
