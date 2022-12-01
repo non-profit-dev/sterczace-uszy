@@ -4,8 +4,6 @@ import { ThemeProvider } from "@emotion/react"
 import { node, shape } from "prop-types"
 import { createContext } from "react"
 
-import { fetchAPI } from "frontend/lib/api"
-
 import theme from "design-system/theme"
 
 const MyApp = ({ Component, pageProps }) => (
