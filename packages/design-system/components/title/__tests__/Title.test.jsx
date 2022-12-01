@@ -5,7 +5,7 @@ import Title from "design-system/components/title"
 const text = "Example title"
 const badge = "Example badge"
 const icon = "download"
-const numberStart = "3"
+const count = "3"
 
 describe(`Title`, () => {
   it(`renders with default properties`, () => {
@@ -31,9 +31,9 @@ describe(`Title`, () => {
 
     expect(screen.getByTitle(icon)).toBeInTheDocument()
   })
-  it(`renders the numberStart based on a proper number string prop provided`, () => {
-    render(<Title text={text} numberStart={numberStart} />)
+  it(`renders the count based on a proper number string prop provided`, () => {
+    render(<Title text={text} count={count} />)
 
-    expect(screen.getByText(numberStart)).toBeInTheDocument()
+    expect(screen.getByText(count)).toBeInTheDocument()
   })
 })

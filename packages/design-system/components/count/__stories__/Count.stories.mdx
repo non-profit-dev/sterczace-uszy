@@ -1,0 +1,23 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import Count from "design-system/components/count"
+
+<Meta title="Components/Count" component={Count} />
+
+# Badge
+
+<Canvas>
+  <Story
+    name="Overview"
+    args={{
+      count: "3",
+      size: "small",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => <Count {...args} />
