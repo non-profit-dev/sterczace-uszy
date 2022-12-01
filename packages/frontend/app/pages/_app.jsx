@@ -2,6 +2,9 @@ import Head from "next/head"
 import { Normalize } from "styled-normalize"
 import { ThemeProvider } from "@emotion/react"
 import { node, shape } from "prop-types"
+import { createContext } from "react"
+
+import { fetchAPI } from "frontend/lib/api"
 
 import theme from "design-system/theme"
 
