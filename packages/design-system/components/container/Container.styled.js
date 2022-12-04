@@ -14,4 +14,5 @@ const sizes = {
 
 export const Container = styled.div`
   max-width: ${({ size }) => sizes[size].maxWidth};
+  margin: 0 auto;
 `
