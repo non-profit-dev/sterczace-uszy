@@ -1,4 +1,4 @@
-import { string, oneOf, oneOfType, number } from "prop-types"
+import { oneOf, number } from "prop-types"
 
 import * as Styled from "./Count.styled"
 
@@ -7,7 +7,7 @@ const Count = ({ count, size }) => (
 )
 
 Count.propTypes = {
-  count: oneOfType([string, number]).isRequired,
+  count: number.isRequired,
   size: oneOf(["small", "medium", "large", "xlarge", "xxlarge"]),
 }
 

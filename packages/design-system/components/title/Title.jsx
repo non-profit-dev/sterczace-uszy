@@ -1,4 +1,4 @@
-import { string, oneOf, number, oneOfType } from "prop-types"
+import { string, oneOf, number } from "prop-types"
 
 import Icon from "design-system/components/icon"
 import Badge from "design-system/components/badge"
@@ -26,7 +26,7 @@ Title.propTypes = {
   badge: string,
   iconStart: string,
   iconEnd: string,
-  count: oneOfType([string, number]),
+  count: number,
   size: oneOf(["small", "medium", "large"]),
   variant: oneOf(["text", "textLine"]),
 }

@@ -5,7 +5,7 @@ import Title from "design-system/components/title"
 const text = "Example title"
 const badge = "Example badge"
 const icon = "download"
-const count = "3"
+const count = 3
 
 describe(`Title`, () => {
   it(`renders with default properties`, () => {
