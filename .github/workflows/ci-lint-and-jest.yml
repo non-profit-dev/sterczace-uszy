@@ -28,3 +28,8 @@ jobs:
 
       - name: Tests
         run: yarn test
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v3
+        with:
+        command: yarn cypress:run
