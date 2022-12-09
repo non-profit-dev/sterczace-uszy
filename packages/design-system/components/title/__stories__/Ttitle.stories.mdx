@@ -8,7 +8,7 @@ import Title from "design-system/components/title"
 
 <Canvas>
   <Story
-    name="Overview"
+    name="With icon"
     args={{
       text: "Porozmawiaj",
       size: "medium",
@@ -16,6 +16,18 @@ import Title from "design-system/components/title"
       iconEnd: "heart",
       badge: "Szczeniak",
       variant: "textLine",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="With number"
+    args={{
+      text: "Porozmawiaj",
+      size: "medium",
+      badge: "Szczeniak",
+      variant: "textLine",
+      count: 2,
     }}
   >
     {Template.bind()}
