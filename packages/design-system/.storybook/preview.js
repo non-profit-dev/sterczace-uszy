@@ -22,7 +22,9 @@ export const decorators = [
       <Normalize />
       <Global
         styles={css`
-          * {
+          *,
+          *::before,
+          *::after {
             box-sizing: border-box;
           }
         `}

@@ -12,7 +12,9 @@ const MyApp = ({ Component, pageProps }) => (
       <Normalize />
       <Global
         styles={css`
-          * {
+          *,
+          *::before,
+          *::after {
             box-sizing: border-box;
           }
         `}
