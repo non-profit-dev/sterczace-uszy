@@ -3,7 +3,6 @@ import { css } from "@emotion/react"
 
 export const Card = styled.a`
   display: flex;
-  box-sizing: border-box;
   text-decoration: none;
   width: 100%;
   height: 100%;
@@ -33,20 +32,17 @@ export const Card = styled.a`
 export const IllustrationContainer = styled.div`
   display: inline-flex;
   justify-content: center;
-  box-sizing: border-box;
   width: 100%;
   margin: 36px 10px 18px 10px;
 `
 export const ImageContainer = styled.div`
   display: inline-flex;
   justify-content: center;
-  box-sizing: border-box;
   width: 100%;
   margin-bottom: 24px;
 `
 export const Image = styled.img`
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: ${({ imageHeight }) => imageHeight};
   object-fit: cover;
@@ -67,7 +63,6 @@ export const ContentContainer = styled.div`
           align-items: flex-start;
         `}
   justify-content: space-between;
-  box-sizing: border-box;
   width: 100%;
   gap: 24px;
   padding: ${({ paddingTop }) =>
@@ -86,6 +81,5 @@ export const Wrapper = styled.div`
           align-items: flex-start;
         `}
   gap: 24px;
-  box-sizing: border-box;
   width: 100%;
 `
