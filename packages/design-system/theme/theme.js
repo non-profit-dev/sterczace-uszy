@@ -243,8 +243,8 @@ const theme = {
     },
   },
   breakpoints: getBreakpoints({
-    sm: 576,
-    md: 768,
+    sm: 440,
+    md: 780,
     lg: 992,
     xl: 1200,
     xxl: 1400,

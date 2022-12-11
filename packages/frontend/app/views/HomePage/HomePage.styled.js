@@ -1,23 +1,24 @@
 import styled from "@emotion/styled"
 
 export const HomePageContainer = styled.div`
-  z-index: 1;
+  z-index: 2;
   position: relative;
   margin: 350px 0 0 100px;
   max-width: 700px;
-  @media (max-width: 1200px) {
+
+  ${({ theme }) => theme.breakpoints.xl} {
     margin: 50px auto;
   }
-  @media (max-width: 780px) {
+  ${({ theme }) => theme.breakpoints.md} {
     margin: 100px auto;
   }
-  @media (max-width: 440px) {
+  ${({ theme }) => theme.breakpoints.sm} {
     margin: 30px auto;
   }
 `
 export const ImageContainerDesktop = styled.div`
   z-index: 0;
-  @media (max-width: 1200px) {
+  ${({ theme }) => theme.breakpoints.xl} {
     display: none;
   }
 `
@@ -25,7 +26,7 @@ export const ImageContainerDesktop = styled.div`
 export const ImageContainerMobile = styled.div`
   z-index: 0;
   display: none;
-  @media (max-width: 1200px) {
+  ${({ theme }) => theme.breakpoints.xl} {
     display: block;
   }
 `
@@ -35,6 +36,7 @@ export const IconContainer = styled.div`
   justify-content: center;
   margin-top: 50px;
   gap: 5px;
+  z-index: 1;
 
   &:before {
     content: "";
