@@ -10,7 +10,49 @@ import Input from "design-system/components/input"
   <Story
     name="Overview"
     args={{
+      label: "Example label",
       placeholder: "test",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Overview - required"
+    args={{
+      label: "Example label",
+      placeholder: "test",
+      required: true,
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Overview - disabled"
+    args={{
+      label: "Example label",
+      placeholder: "test",
+      disabled: true,
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Overview - error"
+    args={{
+      label: "Example label",
+      placeholder: "test",
+      state: "error",
+      message: "Wpisz poprawne dane",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+  <Story
+    name="Overview - valid"
+    args={{
+      label: "Example label",
+      placeholder: "test",
+      state: "valid",
     }}
   >
     {Template.bind()}
@@ -21,6 +63,6 @@ import Input from "design-system/components/input"
 
 export const Template = (args) => (
   <div style={{ maxWidth: "270px" }}>
-    <Input />
+    <Input {...args} />
   </div>
 )
