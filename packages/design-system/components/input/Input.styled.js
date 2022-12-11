@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const Input = styled.input`
   width: 100%;
   line-height: 24px;
-  padding: 12px 10px;
+  padding: ${({ state }) => (state ? "12px 38px 12px 10px" : "12px 10px")};
   margin: 0 0 8px;
   background: ${({ theme }) => theme.colors.neutrals[100]};
   border: 1px solid ${({ theme }) => theme.colors.grey[400]};
@@ -34,9 +34,27 @@ export const Input = styled.input`
   &::placeholder {
     color: ${({ theme }) => theme.colors.grey[400]};
   }
+
+  &:disabled {
+    background: ${({ theme }) => theme.colors.grey[200]};
+  }
+
+  &:focus {
+    border: 1px solid ${({ theme }) => theme.colors.grey[400]};
+    outline: 4px solid ${({ theme }) => theme.colors.grey[200]};
+  }
+
+  &:active {
+    border: 1px solid ${({ theme }) => theme.colors.grey[600]};
+  }
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors.grey[600]};
+  }
 `
 export const Icon = styled.span`
   position: absolute;
+  height: 24px;
   right: 10px;
   top: 12px;
 

@@ -16,6 +16,8 @@ import Instagram from "design-system/icons/Instagram.svg"
 import Location from "design-system/icons/Location.svg"
 import Mail from "design-system/icons/Mail.svg"
 import Phone from "design-system/icons/Phone.svg"
+import Error from "design-system/icons/Error.svg"
+import Success from "design-system/icons/Success.svg"
 
 export const sizes = {
   small: {
@@ -57,6 +59,8 @@ export const icons = {
   heartOutline: HeartOutline,
   cat: Cat,
   dog: Dog,
+  error: Error,
+  success: Success,
 }
 
 const Icon = ({ name, color, size }) => {

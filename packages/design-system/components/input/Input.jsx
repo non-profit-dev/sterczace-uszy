@@ -29,9 +29,14 @@ const Input = ({
           name={name}
           id={id}
         />
-        <Styled.Icon state={state}>
-          <Icon name="done" size="medium" />
-        </Styled.Icon>
+        {state && (
+          <Styled.Icon state={state}>
+            <Icon
+              name={state === "valid" ? "success" : "error"}
+              size="medium"
+            />
+          </Styled.Icon>
+        )}
       </Styled.Container>
       <Styled.Message required={required}>
         {required ? "Pole wymagane" : message}
@@ -43,7 +48,7 @@ const Input = ({
 Input.propTypes = {
   label: string,
   placeholder: string,
-  state: oneOf(["valid", "error", null]),
+  state: oneOf(["valid", "error"]),
   message: string,
   required: bool,
   disabled: bool,
