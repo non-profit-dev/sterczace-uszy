@@ -54,7 +54,7 @@ Input.defaultProps = {
   label: null,
   placeholder: "",
   state: null,
-  message: null,
+  message: "",
   required: false,
   disabled: false,
   type: null,

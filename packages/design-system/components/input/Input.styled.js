@@ -72,4 +72,5 @@ export const Icon = styled.span`
 
 export const Message = styled.p`
   margin: 0;
+  min-height: 22.4px;
 `
