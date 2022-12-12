@@ -150,7 +150,7 @@ const theme = {
       },
       h6: {
         fontWeight: 700,
-        fontSize: "16px",
+        fontSize: "20px",
         lineHeight: "130%",
         fontFamily: "Poppins",
       },
