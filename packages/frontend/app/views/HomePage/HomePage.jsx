@@ -22,7 +22,7 @@ const HomePage = () => {
               variant="fill"
               color="primary"
               href="https://www.facebook.com/sterczaceuszy"
-              size="medium"
+              size="large"
             />
           }
         />
