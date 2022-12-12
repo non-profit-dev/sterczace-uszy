@@ -2,13 +2,13 @@ import styled from "@emotion/styled"
 
 const sizes = {
   small: {
-    maxWidth: "390px",
+    maxWidth: "600px",
   },
   medium: {
-    maxWidth: "768px",
+    maxWidth: "1062px",
   },
   large: {
-    maxWidth: "1216px",
+    maxWidth: "1220px",
   },
 }
 
