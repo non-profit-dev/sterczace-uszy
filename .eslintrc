@@ -10,7 +10,7 @@
     },
     "ignorePatterns": ["packages/backend", "packages/frontend/e2e"],
     "extends": ["airbnb", "prettier", "plugin:react/recommended"],
-    "plugins": ["prettier", "react"],
+    "plugins": ["prettier", "react", "check-file"],
     "overrides": [
       {
         "files": ["**/*.test.js", "**/*.test.jsx"],
