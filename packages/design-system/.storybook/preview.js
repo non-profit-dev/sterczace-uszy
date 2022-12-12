@@ -1,5 +1,5 @@
 import React from "react"
-import { ThemeProvider } from "@emotion/react"
+import { ThemeProvider, Global, css } from "@emotion/react"
 import { Normalize } from "styled-normalize"
 
 import theme from "design-system/theme"
@@ -20,6 +20,15 @@ export const decorators = [
   (Story) => (
     <ThemeProvider theme={theme}>
       <Normalize />
+      <Global
+        styles={css`
+          *,
+          *::before,
+          *::after {
+            box-sizing: border-box;
+          }
+        `}
+      />
       <Story />
     </ThemeProvider>
   ),
