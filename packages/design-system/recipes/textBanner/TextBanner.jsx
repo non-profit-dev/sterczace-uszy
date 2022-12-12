@@ -82,6 +82,7 @@ TextBanner.defaultProps = {
   layout: "left",
   size: "medium",
   button: null,
+  color: "primary",
 }
 
 export default TextBanner

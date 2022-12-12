@@ -1,33 +1,36 @@
 import styled from "@emotion/styled"
+import ComingSoonImageDesktop from "frontend/public/home/images/coming-soon-desktop.png"
+import ComingSoonImageMobile from "frontend/public/home/images/coming-soon-mobile.png"
 
 export const HomePageContainer = styled.div`
-  z-index: 2;
   position: relative;
-  margin: 350px 0 0 100px;
   max-width: 700px;
+  padding: 350px 0 0 100px;
 
   ${({ theme }) => theme.breakpoints.xl} {
-    margin: 50px auto;
+    padding: 50px 20px;
+    margin: 0 auto;
   }
   ${({ theme }) => theme.breakpoints.md} {
-    margin: 100px auto;
+    padding: 100px auto 0 0;
   }
   ${({ theme }) => theme.breakpoints.sm} {
-    margin: 30px auto;
+    padding: 20px auto 0 0;
   }
 `
-export const ImageContainerDesktop = styled.div`
-  z-index: 0;
-  ${({ theme }) => theme.breakpoints.xl} {
-    display: none;
-  }
-`
+export const Background = styled.div`
+  background-image: url(${ComingSoonImageDesktop.src});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
 
-export const ImageContainerMobile = styled.div`
-  z-index: 0;
-  display: none;
   ${({ theme }) => theme.breakpoints.xl} {
-    display: block;
+    background-position: bottom;
+  }
+
+  ${({ theme }) => theme.breakpoints.xl} {
+    background-image: url(${ComingSoonImageMobile.src});
   }
 `
 
@@ -36,14 +39,14 @@ export const IconContainer = styled.div`
   justify-content: center;
   margin-top: 50px;
   gap: 5px;
-  z-index: 1;
+  position: relative;
 
   &:before {
     content: "";
     position: absolute;
     bottom: -10px;
-    left: 41%;
-    width: 20%;
+    left: 36%;
+    width: 30%;
     height: 5px;
     clip-path: ${({ size }) =>
       `ellipse(50% ${size === `large` ? `3px` : `2px`})`};
