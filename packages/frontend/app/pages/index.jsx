@@ -4,6 +4,7 @@ import { Normalize } from "styled-normalize"
 import Head from "next/head"
 
 import Badge from "design-system/components/badge"
+import Icon from "design-system/components/icon"
 
 const Home = () => (
   <>
@@ -15,6 +16,7 @@ const Home = () => (
     <Normalize />
     <h1>Sterczące Uszy</h1>
     <Badge text="Badge" />
+    <Icon name="arrowDown" />
   </>
 )
 
