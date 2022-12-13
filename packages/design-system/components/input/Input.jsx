@@ -32,14 +32,14 @@ const Input = ({
         </Styled.Icon>
       )}
     </Styled.Container>
-    <Styled.Message required={required}>
+    <Styled.Message required={required} data-testid="message">
       {required ? "Pole wymagane" : message}
     </Styled.Message>
   </Styled.Label>
 )
 
 Input.propTypes = {
-  label: string,
+  label: string.isRequired,
   placeholder: string,
   state: oneOf(["valid", "error"]),
   message: string,
@@ -51,7 +51,6 @@ Input.propTypes = {
 }
 
 Input.defaultProps = {
-  label: null,
   placeholder: "",
   state: null,
   message: "",
