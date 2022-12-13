@@ -6,9 +6,9 @@ import theme from "../../theme/theme"
 import * as Styled from "./IconButton.styled"
 
 const IconButton = ({ href, name, color, size, onClick }) => (
-  <Styled.Component as={href ? `a` : `button`} href={href} onClick={onClick}>
+  <Styled.IconButton as={href ? `a` : `button`} href={href} onClick={onClick}>
     <Icon name={name} size={size} color={color} />
-  </Styled.Component>
+  </Styled.IconButton>
 )
 
 IconButton.propTypes = {

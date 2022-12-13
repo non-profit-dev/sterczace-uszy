@@ -33,7 +33,7 @@ describe(`IconButton`, () => {
     expect(screen.getByRole("button")).toBeInTheDocument()
   })
 
-  it(`fires onClick callback when is clicked`, () => {
+  it(`fires onClick callback when button is clicked`, () => {
     const onClickMock = jest.fn()
     render(<IconButton name={iconName} onClick={onClickMock} />)
 

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-export const Component = styled.a`
+export const IconButton = styled.a`
   display: flex;
   cursor: pointer;
   text-decoration: none;
