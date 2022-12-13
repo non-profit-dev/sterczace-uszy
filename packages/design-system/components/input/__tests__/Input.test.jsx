@@ -1,6 +1,6 @@
 import userEvent from "@testing-library/user-event"
 
-import { render, screen, act } from "design-system/test-utils"
+import { render, screen } from "design-system/test-utils"
 
 import Input from "design-system/components/input"
 
