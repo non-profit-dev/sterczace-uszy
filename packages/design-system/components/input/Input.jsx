@@ -45,7 +45,7 @@ Input.propTypes = {
   message: string,
   required: bool,
   disabled: bool,
-  type: string,
+  type: oneOf(["text", "number", "email", "tel"]),
   name: string,
   id: string,
 }
