@@ -1,4 +1,4 @@
-import { string, oneOf, func, object } from "prop-types"
+import { string, oneOf, func } from "prop-types"
 
 import Icon, { icons } from "design-system/components/icon"
 import theme from "../../theme/theme"
