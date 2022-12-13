@@ -42,8 +42,12 @@ const theme = {
     },
     decorative: {
       100: "#0D99FF",
-      success: "#14AE5C",
-      error: "#DB3541",
+      success: {
+        100: "#14AE5C",
+      },
+      error: {
+        100: "#DB3541",
+      },
     },
   },
   spacings: {
