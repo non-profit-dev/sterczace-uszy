@@ -1,17 +1,19 @@
 import Typography from "design-system/components/typography/Typography"
-import Icon, { icons } from "design-system/components/icon"
+import Icon from "design-system/components/icon"
 import footerData from "./footerData"
 
 import * as Styled from "./Footer.styled"
 
 const Footer = () => {
   const { contact, foundationData, adoption, foundation, support } = footerData
+  console.log(contact)
+  console.log(foundationData)
 
   return (
     <Styled.FooterContainer>
       <Styled.SectionWrapper>
         <Typography>Adopcja:</Typography>
-        {adoption.map((item, index) => (
+        {adoption.map((item) => (
           <Styled.LinkWrapper key={item.title}>
             <Typography>{item.title}</Typography>
           </Styled.LinkWrapper>
@@ -20,7 +22,7 @@ const Footer = () => {
 
       <Styled.SectionWrapper>
         <Typography>Fundacja:</Typography>
-        {foundation.map((item, index) => (
+        {foundation.map((item) => (
           <Styled.LinkWrapper key={item.title}>
             <Typography>{item.title}</Typography>
           </Styled.LinkWrapper>
@@ -28,7 +30,7 @@ const Footer = () => {
       </Styled.SectionWrapper>
       <Styled.SectionWrapper>
         <Typography>Wsparcie:</Typography>
-        {support.map((item, index) => (
+        {support.map((item) => (
           <Styled.LinkWrapper key={item.title}>
             <Typography>{item.title}</Typography>
           </Styled.LinkWrapper>
