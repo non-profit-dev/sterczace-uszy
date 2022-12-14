@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 
 export const IconButton = styled.a`
-  display: flex;
+  display: inline-flex;
   cursor: pointer;
   text-decoration: none;
   align-items: center;
