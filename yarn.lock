@@ -6376,6 +6376,11 @@ axe-core@^4.4.3:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.4.3.tgz#11c74d23d5013c0fa5d183796729bc3482bd2f6f"
   integrity sha512-32+ub6kkdhhWick/UjvEwRchgoetXqTK14INLqbGm5U2TzBkBNF3nQtLYm8ovxSkQWArjEQvftCKryjZaATu3w==
 
+axe-core@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.6.0.tgz#1d07514866fa51262734b3357932fcf86961383a"
+  integrity sha512-L3ZNbXPTxMrl0+qTXAzn9FBRvk5XdO56K8CvcCKtlxv44Aw2w2NCclGuvCWxHPw1Riiq3ncP/sxFYj2nUqdoTw==
+
 axios@0.27.2:
   version "0.27.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
@@ -8300,6 +8305,11 @@ cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha512-NJGVKPS81XejHcLhaLJS7plab0fK3slPh11mESeeDq2W4ZI5kUKK/LRRdVDvjJseojbPB7ZwjnyOybg3Igea/A==
+
+cypress-axe@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/cypress-axe/-/cypress-axe-1.1.0.tgz#3cf0052be311c34815919fc9a1ade3d981b8fd0b"
+  integrity sha512-4LsLHdjtIRHdOeiiRMk+Yf04UQjpuQ20paOi1x71z8wnL/47n73DBJ9AEdLQkptlljtsDj+DgLtysl7BeCL4Hg==
 
 cypress@^10.8.0:
   version "10.9.0"
