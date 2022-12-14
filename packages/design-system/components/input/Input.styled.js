@@ -5,9 +5,6 @@ export const Label = styled.label`
   color: ${({ theme }) => theme.colors.grey[600]};
 `
 
-export const LabelText = styled.p`
-  margin: 0 0 8px;
-`
 export const Container = styled.div`
   position: relative;
 `
@@ -16,7 +13,7 @@ export const Input = styled.input`
   width: 100%;
   line-height: 24px;
   padding: ${({ state }) => (state ? "12px 38px 12px 10px" : "12px 10px")};
-  margin: 0 0 8px;
+  margin: 8px 0;
   background: ${({ theme }) => theme.colors.neutrals[100]};
   border: 1px solid ${({ theme }) => theme.colors.grey[400]};
   border-radius: 10px;
@@ -52,11 +49,12 @@ export const Input = styled.input`
     border-color: ${({ theme }) => theme.colors.grey[600]};
   }
 `
+
 export const Icon = styled.span`
   position: absolute;
   height: 24px;
   right: 10px;
-  top: 12px;
+  top: 20px;
 
   color: ${({ state, theme }) => {
     switch (state) {
@@ -68,9 +66,4 @@ export const Icon = styled.span`
         return theme.colors.grey[400]
     }
   }};
-`
-
-export const Message = styled.p`
-  margin: 0;
-  min-height: 22.4px;
 `

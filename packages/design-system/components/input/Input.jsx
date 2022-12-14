@@ -1,7 +1,14 @@
 import { bool, oneOf, string } from "prop-types"
 import Icon from "design-system/components/icon"
+import Typography from "design-system/components/typography"
+import theme from "design-system/theme"
 
 import * as Styled from "./Input.styled"
+
+const colors = {
+  valid: theme.colors.decorative.success[100],
+  error: theme.colors.decorative.error[100],
+}
 
 const Input = ({
   label,
@@ -15,7 +22,7 @@ const Input = ({
   id,
 }) => (
   <Styled.Label>
-    <Styled.LabelText>{label}</Styled.LabelText>
+    <Typography variant="bodySmall">{label}</Typography>
     <Styled.Container>
       <Styled.Input
         placeholder={placeholder}
@@ -32,9 +39,14 @@ const Input = ({
         </Styled.Icon>
       )}
     </Styled.Container>
-    <Styled.Message required={required} data-testid="message">
+    <Typography
+      variant="bodyTiny"
+      color={state ? colors[state] : theme.colors.grey[500]}
+      required={required}
+      data-testid="message"
+    >
       {required ? "Pole wymagane" : message}
-    </Styled.Message>
+    </Typography>
   </Styled.Label>
 )
 
@@ -45,7 +57,7 @@ Input.propTypes = {
   message: string,
   required: bool,
   disabled: bool,
-  type: oneOf(["text", "number", "email", "tel"]),
+  type: oneOf(["text", "number", "email", "tel"]).isRequired,
   name: string,
   id: string,
 }
@@ -56,7 +68,6 @@ Input.defaultProps = {
   message: "",
   required: false,
   disabled: false,
-  type: null,
   name: null,
   id: null,
 }

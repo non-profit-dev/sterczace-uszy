@@ -20,6 +20,7 @@ describe(`Input`, () => {
     render(
       <Input
         label={label}
+        type="text"
         placeholder="Example placeholder text"
         state="valid"
       />
@@ -28,24 +29,22 @@ describe(`Input`, () => {
   })
 
   it(`renders disabled when disabled attribute passed`, () => {
-    render(
-      <Input label={label} disabled placeholder="Example placeholder text" />
-    )
+    render(<Input label={label} type="text" disabled />)
     expect(screen.getByRole("textbox")).toBeDisabled()
   })
 
   it(`renders with message when is passed`, () => {
-    render(<Input label={label} message={message} />)
+    render(<Input label={label} type="text" message={message} />)
     expect(screen.getByTestId("message")).toHaveTextContent(message)
   })
 
   it(`renders with hardcoded message when is required`, () => {
-    render(<Input label={label} required />)
+    render(<Input label={label} type="text" required />)
     expect(screen.getByTestId("message")).toHaveTextContent(requiredMessage)
   })
 
   it("has typed text", async () => {
-    render(<Input label={label} />)
+    render(<Input label={label} type="text" />)
 
     const input = screen.getByRole("textbox")
 
