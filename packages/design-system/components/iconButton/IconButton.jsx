@@ -1,7 +1,7 @@
 import { string, oneOf, func } from "prop-types"
 
 import Icon, { icons } from "design-system/components/icon"
-import theme from "../../theme/theme"
+import theme from "design-system/theme"
 
 import * as Styled from "./IconButton.styled"
 
