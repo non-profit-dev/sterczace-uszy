@@ -10,7 +10,7 @@ const message = "Test message"
 
 describe(`Input`, () => {
   it(`renders with default properties`, () => {
-    render(<Input label={label} />)
+    render(<Input label={label} type="text" />)
     expect(screen.getByText(label)).toBeInTheDocument()
     expect(screen.getByRole("textbox")).toBeInTheDocument()
     expect(screen.getByRole("textbox")).toBeEnabled()
