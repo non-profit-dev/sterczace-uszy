@@ -23,3 +23,8 @@ export const Container = styled.div`
 export const ButtonContainer = styled.div`
   margin-top: ${({ size }) => (size === "tiny" ? "20px" : "40px")};
 `
+
+export const IconWrapper = styled.div`
+  position: relative;
+`
+

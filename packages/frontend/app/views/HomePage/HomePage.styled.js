@@ -8,7 +8,7 @@ export const HomePageContainer = styled.div`
   padding: 350px 0 0 100px;
 
   ${({ theme }) => theme.breakpoints.xl} {
-    padding: 50px 20px;
+    padding: 10px;
     margin: 0 auto;
     max-width: 100%;
   }
@@ -28,11 +28,9 @@ export const Background = styled.div`
   background-color: ${({ theme }) => theme.colors.grey[600]};
 
   ${({ theme }) => theme.breakpoints.xl} {
-    background-position: bottom;
-  }
-
-  ${({ theme }) => theme.breakpoints.xl} {
     background-image: url(${ComingSoonImageMobile.src});
+    background-position: bottom;
+    background-size: contain;
   }
 `
 
@@ -54,7 +52,4 @@ export const IconContainer = styled.div`
       `ellipse(50% ${size === `large` ? `3px` : `2px`})`};
     background: ${({ theme }) => theme.colors.primary[500]};
   }
-`
-export const Subtitle = styled.p`
-  text-transform: uppercase;
 `

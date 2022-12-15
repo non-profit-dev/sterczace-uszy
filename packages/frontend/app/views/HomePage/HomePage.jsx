@@ -16,18 +16,19 @@ const HomePage = () => {
           size="large"
           layout="center"
           subtitleColor={theme.colors.primary[500]}
-          headingColor={theme.colors.primary[100]}
+          headingColor={theme.colors.neutrals[100]}
           descriptionColor={theme.colors.neutrals[100]}
           button={
             <Button
               text="Przekaż wsparcie"
               variant="fill"
               color="primary"
-              href="https://www.facebook.com/sterczaceuszy"
+              href="https://www.ratujemyzwierzaki.pl/sterczaceuszy?fbclid=IwAR1Gjv_H7e-lPqWbLzfcAiJYfUl-gcJR6IClupvBL5N8g6y0d9KfFlzXGVE"
               size="large"
             />
           }
         />
+
         <Styled.IconContainer>
           <Icon
             name="facebook"

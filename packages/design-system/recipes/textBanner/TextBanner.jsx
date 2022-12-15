@@ -46,24 +46,22 @@ const TextBanner = ({
   subtitleColor,
   headingColor,
   descriptionColor,
-}) => {
-  return (
-    <Styled.TextBanner layout={layout} size={size}>
-      <Typography variant={sizes[size].subtitle} color={subtitleColor}>
-        {subtitle}
+}) => (
+  <Styled.TextBanner layout={layout} size={size}>
+    <Typography variant={sizes[size].subtitle} color={subtitleColor}>
+      {subtitle}
+    </Typography>
+    <Styled.Container size={size}>
+      <Typography variant={sizes[size].heading} color={headingColor}>
+        {heading}
       </Typography>
-      <Styled.Container size={size}>
-        <Typography variant={sizes[size].heading} color={headingColor}>
-          {heading}
-        </Typography>
-      </Styled.Container>
-      <Typography variant={sizes[size].description} color={descriptionColor}>
-        {description}
-      </Typography>
-      <Styled.ButtonContainer> {button && button}</Styled.ButtonContainer>
-    </Styled.TextBanner>
-  )
-}
+    </Styled.Container>
+    <Typography variant={sizes[size].description} color={descriptionColor}>
+      {description}
+    </Typography>
+    <Styled.ButtonContainer>{button && button}</Styled.ButtonContainer>
+  </Styled.TextBanner>
+)
 
 TextBanner.propTypes = {
   heading: string.isRequired,
