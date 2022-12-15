@@ -19,8 +19,7 @@ const footerData = {
   ],
 
   foundationData: {
-    title: "Dane fundacji",
-    nipKrs: "NIP 7831855392 ",
+    nip: "NIP 7831855392 ",
     krs: "KRS 0000964494 ",
     acountNumber: "41 1870 1045 2078 1072 8639 0001",
   },

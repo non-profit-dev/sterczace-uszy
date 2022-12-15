@@ -7,14 +7,23 @@ export const FooterContainer = styled.div`
   color: "red";
   gap: 24px;
   width: 100%;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    clip-path: ${({ size }) =>
+      `ellipse(50% ${size === `large` ? `3px` : `2px`})`};
+    background: ${({ theme }) => theme.colors.primary[500]};
+  }
 `
+
+export const LogoContainer = styled.div`
+  display: inline-flex;
+`
+
 export const SectionWrapper = styled.div`
   display: flex;
-  ${
-    "" /* margin: ${({ size }) => (size === "tiny" ? "8px 0 20px 0" : "12px 0 32px 0")}; */
-  }
-  ${"" /* flex-direction: column; */}
-  ${"" /* background-color: ${({ bgColor = "transparent" }) => bgColor}; */}
   flex-direction: ${({ direction = "column" }) => direction};
   ${({ layout }) =>
     layout === "stretch"
@@ -28,10 +37,11 @@ export const SectionWrapper = styled.div`
   color: "blue";
   gap: 24px;
   width: 100%;
-  border: 1px solid;
+  ${"" /* border: 1px solid; */}
 `
-export const LinkWrapper = styled.div`
+export const LinkWrapper = styled.a`
   display: flex;
-  flex-direction: row;
+  cursor: pointer;
+  text-decoration: none;
   margin: 10px;
 `
