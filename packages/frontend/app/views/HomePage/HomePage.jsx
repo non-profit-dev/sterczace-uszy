@@ -1,8 +1,8 @@
 import TextBanner from "design-system/recipes/textBanner"
 import Button from "design-system/components/button"
-import Icon from "design-system/components/icon"
 import { useTheme } from "@emotion/react"
 import * as Styled from "./HomePage.styled"
+import  IconButton  from "design-system/components/iconButton"
 
 const HomePage = () => {
   const theme = useTheme()
@@ -30,19 +30,19 @@ const HomePage = () => {
         />
 
         <Styled.IconContainer>
-          <Icon
+          <IconButton
             name="facebook"
             size="large"
             color={theme.colors.neutrals[100]}
             href="https://www.facebook.com/sterczaceuszy"
           />
-          <Icon
+          <IconButton
             name="instagram"
             size="large"
             color={theme.colors.neutrals[100]}
             href="https://www.instagram.com/sterczaceuszy"
           />
-          <Icon
+          <IconButton
             name="mail"
             size="large"
             color={theme.colors.neutrals[100]}
