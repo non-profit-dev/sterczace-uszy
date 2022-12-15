@@ -1,7 +1,7 @@
 import { string, oneOf, node } from "prop-types"
 
-import { useTheme } from "@emotion/react"
 import Typography from "design-system/components/typography/Typography"
+import theme from "design-system/theme"
 
 import * as Styled from "./TextBanner.styled"
 
@@ -43,23 +43,21 @@ const TextBanner = ({
   layout,
   size,
   button,
-  color,
+  subtitleColor,
+  headingColor,
+  descriptionColor,
 }) => {
-  const theme = useTheme()
   return (
     <Styled.TextBanner layout={layout} size={size}>
-      <Typography
-        variant={sizes[size].subtitle}
-        color={theme.colors.primary[500]}
-      >
+      <Typography variant={sizes[size].subtitle} color={subtitleColor}>
         {subtitle}
       </Typography>
       <Styled.Container size={size}>
-        <Typography variant={sizes[size].heading} color={color}>
+        <Typography variant={sizes[size].heading} color={headingColor}>
           {heading}
         </Typography>
       </Styled.Container>
-      <Typography variant={sizes[size].description} color={color}>
+      <Typography variant={sizes[size].description} color={descriptionColor}>
         {description}
       </Typography>
       <Styled.ButtonContainer> {button && button}</Styled.ButtonContainer>
@@ -74,7 +72,9 @@ TextBanner.propTypes = {
   layout: oneOf(["left", "center"]),
   size: oneOf(["tiny", "small", "medium", "large"]),
   button: node,
-  color: string,
+  subtitleColor: string,
+  headingColor: string,
+  descriptionColor: string,
 }
 
 TextBanner.defaultProps = {
@@ -82,7 +82,9 @@ TextBanner.defaultProps = {
   layout: "left",
   size: "medium",
   button: null,
-  color: "primary",
+  subtitleColor: theme.colors.primary[500],
+  headingColor: theme.colors.grey[600],
+  descriptionColor: theme.colors.grey[500],
 }
 
 export default TextBanner

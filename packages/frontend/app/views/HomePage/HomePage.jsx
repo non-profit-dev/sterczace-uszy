@@ -10,12 +10,14 @@ const HomePage = () => {
     <Styled.Background>
       <Styled.HomePageContainer>
         <TextBanner
-          subtitle="FUNDACJA STERCZĄCE USZY"
+          subtitle="Fundacja sterczące uszy"
           heading="Strona w budowie"
           description="Już za chwilę wracamy z nasza nową stroną. Zwierzaki jednak potrzebują pomocy cały czas. Wejdź na stronę ratujemyzwierzaki.pl i wesprzyj naszą fundację ❤"
           size="large"
           layout="center"
-          color={theme.colors.neutrals[100]}
+          subtitleColor={theme.colors.primary[500]}
+          headingColor={theme.colors.primary[100]}
+          descriptionColor={theme.colors.neutrals[100]}
           button={
             <Button
               text="Przekaż wsparcie"

@@ -1,6 +1,5 @@
 import { string, oneOf, node } from "prop-types"
 import React from "react"
-
 import * as Styled from "./Typography.styled"
 
 const variantsMapping = {

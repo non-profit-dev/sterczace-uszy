@@ -4,12 +4,13 @@ import ComingSoonImageMobile from "frontend/public/home/images/coming-soon-mobil
 
 export const HomePageContainer = styled.div`
   position: relative;
-  max-width: 700px;
+  max-width: 50%;
   padding: 350px 0 0 100px;
 
   ${({ theme }) => theme.breakpoints.xl} {
     padding: 50px 20px;
     margin: 0 auto;
+    max-width: 100%;
   }
   ${({ theme }) => theme.breakpoints.md} {
     padding: 100px auto 0 0;
@@ -24,6 +25,7 @@ export const Background = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
+  background-color: ${({ theme }) => theme.colors.grey[600]};
 
   ${({ theme }) => theme.breakpoints.xl} {
     background-position: bottom;
@@ -52,4 +54,7 @@ export const IconContainer = styled.div`
       `ellipse(50% ${size === `large` ? `3px` : `2px`})`};
     background: ${({ theme }) => theme.colors.primary[500]};
   }
+`
+export const Subtitle = styled.p`
+  text-transform: uppercase;
 `
