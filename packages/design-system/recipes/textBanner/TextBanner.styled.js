@@ -1,6 +1,8 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
+import Typography from "design-system/components/typography"
+
 export const TextBanner = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,4 +24,8 @@ export const Container = styled.div`
 
 export const ButtonContainer = styled.div`
   margin-top: ${({ size }) => (size === "tiny" ? "20px" : "40px")};
+`
+
+export const Subtitle = styled(Typography)`
+  text-transform: uppercase;
 `
