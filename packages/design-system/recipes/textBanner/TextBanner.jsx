@@ -48,9 +48,9 @@ const TextBanner = ({
   descriptionColor,
 }) => (
   <Styled.TextBanner layout={layout} size={size}>
-    <Typography variant={sizes[size].subtitle} color={subtitleColor}>
+    <Styled.Subtitle variant={sizes[size].subtitle} color={subtitleColor}>
       {subtitle}
-    </Typography>
+    </Styled.Subtitle>
     <Styled.Container size={size}>
       <Typography variant={sizes[size].heading} color={headingColor}>
         {heading}
