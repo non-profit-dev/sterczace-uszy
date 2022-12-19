@@ -31,6 +31,7 @@ Typography.propTypes = {
   variant: oneOf(Object.keys(variantsMapping)),
   as: string,
   children: node,
+  className: string,
 }
 
 Typography.defaultProps = {
@@ -38,7 +39,7 @@ Typography.defaultProps = {
   children: "",
   as: "",
   variant: "bodySmall",
-  className: string,
+  className: "",
 }
 
 export default Typography
