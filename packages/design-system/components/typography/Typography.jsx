@@ -15,11 +15,12 @@ const variantsMapping = {
   bodyTiny: "p",
 }
 
-const Typography = ({ variant, color, children, as }) => (
+const Typography = ({ variant, color, children, as, className }) => (
   <Styled.Container
     variant={variant}
     color={color}
     as={as || variantsMapping[variant]}
+    className={className}
   >
     {children}
   </Styled.Container>
@@ -37,6 +38,7 @@ Typography.defaultProps = {
   children: "",
   as: "",
   variant: "bodySmall",
+  className: string,
 }
 
 export default Typography
