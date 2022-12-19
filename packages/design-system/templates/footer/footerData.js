@@ -1,4 +1,14 @@
 const footerData = {
+  sectionsTitles: {
+    contactTitle: "Kontakt",
+    foundationDataTitle: "Dane fundacji",
+    adoptionTitle: "Adopcja",
+    foundationTitle: "Fundacja",
+    supportTitle: "Wsparcie",
+  },
+
+  copyright: "Copyright © 2022 Sterczące uszy",
+
   contact: [
     {
       text: "fundacjasterczaceuszy@gmail.com",
@@ -21,7 +31,7 @@ const footerData = {
   foundationData: {
     nip: "NIP 7831855392 ",
     krs: "KRS 0000964494 ",
-    acountNumber: "41 1870 1045 2078 1072 8639 0001",
+    accountNumber: "41 1870 1045 2078 1072 8639 0001",
   },
 
   adoption: [

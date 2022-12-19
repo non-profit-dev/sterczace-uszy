@@ -1,5 +1,5 @@
+import { useTheme } from "@emotion/react"
 import Typography from "design-system/components/typography/Typography"
-import Icon from "design-system/components/icon"
 import IconButton from "design-system/components/iconButton"
 
 import List from "design-system/components/list"
@@ -9,80 +9,111 @@ import footerData from "./footerData"
 import * as Styled from "./Footer.styled"
 
 const Footer = () => {
-  const { contact, foundationData, adoption, foundation, support } = footerData
+  const {
+    contact,
+    foundationData: { nip, krs, accountNumber },
+    adoption,
+    foundation,
+    support,
+    sectionsTitles: {
+      contactTitle,
+      foundationDataTitle,
+      adoptionTitle,
+      foundationTitle,
+      supportTitle,
+    },
+    copyright,
+  } = footerData
+
+  const theme = useTheme()
 
   return (
     <Styled.FooterContainer>
       <Styled.LogoContainer>
-        <Typography>LOGO</Typography>
+        <Typography variant="h4" color={theme.colors.grey[600]}>
+          LOGO
+        </Typography>
       </Styled.LogoContainer>
-      <Styled.SectionWrapper>
-        <Typography>Kontakt:</Typography>
-        <List>
-          {contact.map((item) => (
-            <ListItem
-              key={item.text}
-              iconName={item.icon}
-              size="medium"
-              variant="gray"
-            >
-              <Styled.LinkWrapper>{item.text}</Styled.LinkWrapper>
-            </ListItem>
-          ))}
-        </List>
+
+      <Styled.ContentWrapper>
+        <Styled.Wrapper>
+          <List>
+            <Typography variant="h6" color={theme.colors.grey[600]}>
+              {contactTitle} :
+            </Typography>
+            {contact.map((item) => (
+              <ListItem
+                key={item.text}
+                iconName={item.icon}
+                size="medium"
+                variant="gray"
+              >
+                <Styled.LinkWrapper>{item.text}</Styled.LinkWrapper>
+              </ListItem>
+            ))}
+          </List>
+          <Styled.SectionWrapper>
+            <Typography variant="h6" color={theme.colors.grey[600]}>
+              {foundationDataTitle} :
+            </Typography>
+            <Typography>
+              {nip} {krs}
+            </Typography>
+            <Typography>{accountNumber}</Typography>
+          </Styled.SectionWrapper>
+        </Styled.Wrapper>
+
         <Styled.SectionWrapper>
-          <Typography>Dane fundacji:</Typography>
-          <Typography>
-            {foundationData.nip} {foundationData.krs}
-          </Typography>
-          <Typography>{foundationData.acountNumber}</Typography>
+          <List>
+            <Typography variant="h6" color={theme.colors.grey[600]}>
+              {adoptionTitle} :
+            </Typography>
+            {adoption.map((item) => (
+              <ListItem variant="gray" key={item.title}>
+                <Styled.LinkWrapper href={item.link}>
+                  {item.title}
+                </Styled.LinkWrapper>
+              </ListItem>
+            ))}
+          </List>
+
+          <List>
+            <Typography variant="h6" color={theme.colors.grey[600]}>
+              {foundationTitle} :
+            </Typography>
+            {foundation.map((item) => (
+              <ListItem variant="gray" key={item.title}>
+                <Styled.LinkWrapper href={item.link}>
+                  {item.title}
+                </Styled.LinkWrapper>
+              </ListItem>
+            ))}
+          </List>
+
+          <List>
+            <Typography variant="h6" color={theme.colors.grey[600]}>
+              {supportTitle} :
+            </Typography>
+            {support.map((item) => (
+              <ListItem variant="gray" key={item.title}>
+                <Styled.LinkWrapper href={item.link}>
+                  {item.title}
+                </Styled.LinkWrapper>
+              </ListItem>
+            ))}
+          </List>
         </Styled.SectionWrapper>
-      </Styled.SectionWrapper>
+      </Styled.ContentWrapper>
 
-      <Styled.SectionWrapper>
-        <Typography>Adopcja:</Typography>
-        <List>
-          {adoption.map((item) => (
-            <ListItem variant="gray" key={item.title}>
-              <Styled.LinkWrapper href={item.link}>
-                {item.title}
-              </Styled.LinkWrapper>
-            </ListItem>
-          ))}
-        </List>
-      </Styled.SectionWrapper>
-
-      <Styled.SectionWrapper>
-        <Typography>Fundacja:</Typography>
-        <List>
-          {foundation.map((item) => (
-            <ListItem variant="gray" key={item.title}>
-              <Styled.LinkWrapper href={item.link}>
-                {item.title}
-              </Styled.LinkWrapper>
-            </ListItem>
-          ))}
-        </List>
-      </Styled.SectionWrapper>
-
-      <Styled.SectionWrapper>
-        <Typography>Wsparcie:</Typography>
-        <List>
-          {support.map((item) => (
-            <ListItem variant="gray" key={item.title}>
-              <Styled.LinkWrapper href={item.link}>
-                {item.title}
-              </Styled.LinkWrapper>
-            </ListItem>
-          ))}
-        </List>
-      </Styled.SectionWrapper>
-
-      <Styled.SectionWrapper direction="row" layout="stretch">
-        <Typography>Copyright © 2022 Sterczące uszy</Typography>
-        <IconButton name="facebook" size="medium" />
-        <IconButton name="instagram" size="medium" />
-      </Styled.SectionWrapper>
+      <Styled.CopyrightWrapper direction="row" layout="stretch">
+        <Typography variant="bodySmall" color={theme.colors.grey[600]}>
+          {copyright}
+        </Typography>
+        <Styled.IconsContainer>
+          <IconButton name="facebook" size="medium" />
+          <IconButton name="instagram" size="medium" />
+        </Styled.IconsContainer>
+      </Styled.CopyrightWrapper>
     </Styled.FooterContainer>
   )
 }
