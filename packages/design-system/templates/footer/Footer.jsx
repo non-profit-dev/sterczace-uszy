@@ -4,6 +4,7 @@ import IconButton from "design-system/components/iconButton"
 
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
+import Button from "design-system/components/button"
 import footerData from "./footerData"
 
 import * as Styled from "./Footer.styled"
@@ -11,7 +12,14 @@ import * as Styled from "./Footer.styled"
 const Footer = () => {
   const {
     contact,
-    foundationData: { nip, krs, accountNumber },
+    foundationData: {
+      nip,
+      krs,
+      icon,
+      accountNumberText,
+      buttonText,
+      accountNumber,
+    },
     adoption,
     foundation,
     support,
@@ -36,11 +44,13 @@ const Footer = () => {
       </Styled.LogoContainer>
 
       <Styled.ContentWrapper>
-        <Styled.Wrapper>
-          <List>
-            <Typography variant="h6" color={theme.colors.grey[600]}>
-              {contactTitle} :
-            </Typography>
+        <Styled.FoundationDataWrapper>
+          <List gap={12}>
+            <ListItem>
+              <Typography variant="h6" color={theme.colors.grey[600]}>
+                {contactTitle} :
+              </Typography>
+            </ListItem>
             {contact.map((item) => (
               <ListItem
                 key={item.text}
@@ -48,64 +58,92 @@ const Footer = () => {
                 size="medium"
                 variant="gray"
               >
-                <Styled.LinkWrapper>{item.text}</Styled.LinkWrapper>
+                {item.text}
               </ListItem>
             ))}
           </List>
-          <Styled.SectionWrapper>
-            <Typography variant="h6" color={theme.colors.grey[600]}>
-              {foundationDataTitle} :
-            </Typography>
-            <Typography>
+          <List gap={16}>
+            <ListItem>
+              <Typography variant="h6" color={theme.colors.grey[600]}>
+                {foundationDataTitle} :
+              </Typography>
+            </ListItem>
+            <ListItem variant="grey">
               {nip} {krs}
-            </Typography>
-            <Typography>{accountNumber}</Typography>
-          </Styled.SectionWrapper>
-        </Styled.Wrapper>
+            </ListItem>
+            <ListItem iconName={icon} size="medium" variant="gray">
+              {accountNumberText}
+              <Button
+                variant="text"
+                text={buttonText}
+                size="small"
+                color="primary"
+              />
+            </ListItem>
+            <ListItem variant="gray">{accountNumber}</ListItem>
+          </List>
+        </Styled.FoundationDataWrapper>
 
         <Styled.SectionWrapper>
-          <List>
-            <Typography variant="h6" color={theme.colors.grey[600]}>
-              {adoptionTitle} :
-            </Typography>
+          <List gap={12}>
+            <ListItem>
+              <Typography variant="h6" color={theme.colors.grey[600]}>
+                {adoptionTitle} :
+              </Typography>
+            </ListItem>
             {adoption.map((item) => (
               <ListItem variant="gray" key={item.title}>
-                <Styled.LinkWrapper href={item.link}>
-                  {item.title}
-                </Styled.LinkWrapper>
+                <Button
+                  variant="text"
+                  text={item.title}
+                  size="small"
+                  color="black"
+                  href={item.link}
+                />
               </ListItem>
             ))}
           </List>
 
-          <List>
-            <Typography variant="h6" color={theme.colors.grey[600]}>
-              {foundationTitle} :
-            </Typography>
+          <List gap={12}>
+            <ListItem>
+              <Typography variant="h6" color={theme.colors.grey[600]}>
+                {foundationTitle} :
+              </Typography>
+            </ListItem>
             {foundation.map((item) => (
-              <ListItem variant="gray" key={item.title}>
-                <Styled.LinkWrapper href={item.link}>
-                  {item.title}
-                </Styled.LinkWrapper>
-              </ListItem>
+              <Button
+                variant="text"
+                text={item.title}
+                size="small"
+                color="black"
+                href={item.link}
+                key={item.title}
+              />
             ))}
           </List>
 
-          <List>
-            <Typography variant="h6" color={theme.colors.grey[600]}>
-              {supportTitle} :
-            </Typography>
+          <List gap={12}>
+            <ListItem>
+              <Typography variant="h6" color={theme.colors.grey[600]}>
+                {supportTitle} :
+              </Typography>
+            </ListItem>
             {support.map((item) => (
               <ListItem variant="gray" key={item.title}>
-                <Styled.LinkWrapper href={item.link}>
-                  {item.title}
-                </Styled.LinkWrapper>
+                <Button
+                  variant="text"
+                  text={item.title}
+                  size="small"
+                  color="black"
+                  href={item.link}
+                />
               </ListItem>
             ))}
           </List>
         </Styled.SectionWrapper>
       </Styled.ContentWrapper>
 
-      <Styled.CopyrightWrapper direction="row" layout="stretch">
+      <Styled.CopyrightWrapper>
         <Typography variant="bodySmall" color={theme.colors.grey[600]}>
           {copyright}
         </Typography>

@@ -24,9 +24,8 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-content: space-around;
-  ${({ theme }) => theme.breakpoints.xl} {
-    flex-direction: row;
-  }
+  flex-direction: row;
+
   ${({ theme }) => theme.breakpoints.sm} {
     flex-direction: column;
   }
@@ -44,39 +43,38 @@ export const ContentWrapper = styled.div`
   border: 1px solid;
 `
 
-export const Wrapper = styled.div`
+export const FoundationDataWrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 32;
+
   ${({ theme }) => theme.breakpoints.xl} {
-    flex-direction: column;
-  }
-  ${({ theme }) => theme.breakpoints.lg} {
     flex-direction: row;
+    gap: 68;
   }
   ${({ theme }) => theme.breakpoints.sm} {
     flex-direction: column;
+    gap: 32;
   }
 `
 
 export const SectionWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   padding: 0px;
   gap: 60px;
+  ${({ theme }) => theme.breakpoints.xl} {
+    flex-direction: row;
+    gap: 20;
+  }
+  ${({ theme }) => theme.breakpoints.sm} {
+    flex-direction: column;
+    gap: 32;
+  }
+`
 
-  color: "blue";
-  gap: 24px;
-  border: 1px solid;
-`
-export const LinkWrapper = styled.a`
-  display: flex;
-  cursor: pointer;
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.grey[600]};
-`
 export const IconsContainer = styled.div`
   display: inline-flex;
-  border: 1px solid;
 `
 export const CopyrightWrapper = styled.div`
   display: flex;

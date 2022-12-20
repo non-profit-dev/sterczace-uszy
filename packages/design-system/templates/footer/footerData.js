@@ -31,6 +31,9 @@ const footerData = {
   foundationData: {
     nip: "NIP 7831855392 ",
     krs: "KRS 0000964494 ",
+    icon: "charity",
+    accountNumberText: "Numer konta",
+    buttonText: "Skopiuj",
     accountNumber: "41 1870 1045 2078 1072 8639 0001",
   },
 
