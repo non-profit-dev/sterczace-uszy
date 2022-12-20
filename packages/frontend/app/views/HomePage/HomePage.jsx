@@ -2,7 +2,7 @@ import TextBanner from "design-system/recipes/textBanner"
 import Button from "design-system/components/button"
 import { useTheme } from "@emotion/react"
 import * as Styled from "./HomePage.styled"
-import  IconButton  from "design-system/components/iconButton"
+import IconButton from "design-system/components/iconButton"
 
 const HomePage = () => {
   const theme = useTheme()

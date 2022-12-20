@@ -3,20 +3,22 @@ import ComingSoonImageDesktop from "frontend/public/home/images/coming-soon-desk
 import ComingSoonImageMobile from "frontend/public/home/images/coming-soon-mobile.png"
 
 export const HomePageContainer = styled.div`
-  position: relative;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   max-width: 50%;
-  padding: 350px 0 0 100px;
 
   ${({ theme }) => theme.breakpoints.xl} {
-    padding: 10px;
-    margin: 0 auto;
+    position: relative;
+    transform: translateY(0);
+
     max-width: 100%;
   }
   ${({ theme }) => theme.breakpoints.md} {
-    padding: 100px auto 0 0;
+    padding: 135px 135px 0 135px;
   }
   ${({ theme }) => theme.breakpoints.sm} {
-    padding: 20px auto 0 0;
+    padding: 20px 20px 0 20px;
   }
 `
 export const Background = styled.div`
@@ -32,6 +34,12 @@ export const Background = styled.div`
     background-position: bottom;
     background-size: contain;
   }
+
+  ${({ theme }) => theme.breakpoints.sm} {
+    background-image: url(${ComingSoonImageMobile.src});
+    background-position: bottom;
+    background-size: 70%;
+  }
 `
 
 export const IconContainer = styled.div`
@@ -40,16 +48,7 @@ export const IconContainer = styled.div`
   margin-top: 50px;
   gap: 5px;
   position: relative;
-
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 36%;
-    width: 30%;
-    height: 5px;
-    clip-path: ${({ size }) =>
-      `ellipse(50% ${size === `large` ? `3px` : `2px`})`};
-    background: ${({ theme }) => theme.colors.primary[500]};
+  ${({ theme }) => theme.breakpoints.sm} {
+    margin-top: 20px;
   }
 `

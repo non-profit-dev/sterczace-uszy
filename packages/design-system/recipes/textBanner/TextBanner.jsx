@@ -1,6 +1,6 @@
 import { string, oneOf, node } from "prop-types"
 
-import Typography from "design-system/components/typography/Typography"
+import Typography from "design-system/components/typography"
 import theme from "design-system/theme"
 
 import * as Styled from "./TextBanner.styled"
