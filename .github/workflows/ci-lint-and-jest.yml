@@ -32,4 +32,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v3
         with:
-        command: yarn cypress:run
+          command: yarn cypress:run
