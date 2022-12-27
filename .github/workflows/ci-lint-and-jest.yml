@@ -35,3 +35,5 @@ jobs:
           command: yarn cypress:run
           start: yarn develop
           wait-on: 'http://localhost:3000'
+        env:
+          APP_KEYS: ${{ secrets.APP_KEYS }}
