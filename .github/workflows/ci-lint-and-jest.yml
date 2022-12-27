@@ -28,12 +28,3 @@ jobs:
 
       - name: Tests
         run: yarn test
-
-      - name: Cypress run
-        uses: cypress-io/github-action@v3
-        with:
-          command: yarn cypress:run
-          start: yarn develop
-          wait-on: 'http://localhost:3000'
-        env:
-          APP_KEYS: ${{ secrets.APP_KEYS }}
