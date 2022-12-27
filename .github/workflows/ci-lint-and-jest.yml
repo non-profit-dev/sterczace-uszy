@@ -34,3 +34,4 @@ jobs:
         with:
           command: yarn cypress:run
           start: yarn develop
+          wait-on: 'http://localhost:3000'
