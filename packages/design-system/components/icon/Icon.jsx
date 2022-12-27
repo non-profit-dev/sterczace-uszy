@@ -18,6 +18,10 @@ import Mail from "design-system/icons/Mail.svg"
 import Phone from "design-system/icons/Phone.svg"
 import Error from "design-system/icons/Error.svg"
 import Success from "design-system/icons/Success.svg"
+import Attachment from "design-system/icons/Attachment.svg"
+import Bowl from "design-system/icons/Bowl.svg"
+import Hamburger from "design-system/icons/Hamburger.svg"
+import ArrowUp from "design-system/icons/ArrowUp.svg"
 
 export const sizes = {
   small: {
@@ -44,6 +48,7 @@ export const sizes = {
 
 export const icons = {
   arrowDown: ArrowDown,
+  arrowUp: ArrowUp,
   arrowRight: ArrowRight,
   chevronRight: ChevronRight,
   done: Done,
@@ -61,6 +66,9 @@ export const icons = {
   dog: Dog,
   error: Error,
   success: Success,
+  attachment: Attachment,
+  bowl: Bowl,
+  hamburger: Hamburger,
 }
 
 const Icon = ({ name, color, size }) => {
