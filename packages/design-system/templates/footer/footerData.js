@@ -37,41 +37,6 @@ const footerData = {
     accountNumber: "41 1870 1045 2078 1072 8639 0001",
   },
 
-  adoption: [
-    {
-      title: "Adopcja",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
-    },
-    {
-      title: "Zwierzęta do adopcji",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
-    },
-    {
-      title: "Adopcja wirtualna",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
-    },
-    {
-      title: "Zasady adopcji",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
-    },
-    {
-      title: "Adopcja za granicę",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
-    },
-    {
-      title: "Znalazły nowy dom",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
-    },
-    {
-      title: "Wsparcie po adopcji",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
-    },
-    {
-      title: "Ankiety",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
-    },
-  ],
-
   foundation: [
     {
       title: "O nas",
@@ -126,6 +91,41 @@ const footerData = {
     },
     {
       title: "Bazarek",
+      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+    },
+  ],
+
+  adoption: [
+    {
+      title: "Adopcja",
+      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+    },
+    {
+      title: "Zwierzęta do adopcji",
+      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+    },
+    {
+      title: "Adopcja wirtualna",
+      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+    },
+    {
+      title: "Zasady adopcji",
+      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+    },
+    {
+      title: "Adopcja za granicę",
+      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+    },
+    {
+      title: "Znalazły nowy dom",
+      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+    },
+    {
+      title: "Wsparcie po adopcji",
+      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+    },
+    {
+      title: "Ankiety",
       link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
     },
   ],
