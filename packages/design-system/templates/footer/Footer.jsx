@@ -37,6 +37,10 @@ const Footer = () => {
 
   const theme = useTheme()
 
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text)
+  }
+
   return (
     <Styled.FooterContainer>
       <Container>
@@ -102,6 +106,7 @@ const Footer = () => {
                       text={buttonText}
                       size="small"
                       color="primary"
+                      onClick={copyToClipboard(accountNumber)}
                     />
                   </ListItem>
                   <ListItem variant="gray">{accountNumber}</ListItem>
