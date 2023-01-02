@@ -63,7 +63,6 @@ export const MainDataContainer = styled.div`
   ${({ theme }) => theme.breakpoints.xl} {
     flex-direction: row;
     width: 100%;
-    justify-content: space-around;
     gap: 60px;
   }
   ${({ theme }) => theme.breakpoints.sm} {
@@ -76,7 +75,7 @@ export const SectionsContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 60px;
-  justify-content: space-around;
+  justify-content: space-between;
   ${({ theme }) => theme.breakpoints.xl} {
     flex-direction: row;
     width: 100%;
