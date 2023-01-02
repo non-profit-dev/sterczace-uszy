@@ -20,9 +20,9 @@ export const Input = styled.input`
   border-color: ${({ state, theme }) => {
     switch (state) {
       case "valid":
-        return theme.colors.decorative.success[100]
+        return theme.colors.success[100]
       case "error":
-        return theme.colors.decorative.error[100]
+        return theme.colors.error[100]
       default:
         return theme.colors.grey[400]
     }
@@ -59,9 +59,9 @@ export const Icon = styled.span`
   color: ${({ state, theme }) => {
     switch (state) {
       case "valid":
-        return theme.colors.decorative.success[100]
+        return theme.colors.success[100]
       case "error":
-        return theme.colors.decorative.error[100]
+        return theme.colors.error[100]
       default:
         return theme.colors.grey[400]
     }

@@ -40,14 +40,14 @@ const theme = {
     complementary: {
       100: "#FEF8EC",
     },
-    decorative: {
+    blue: {
       100: "#0D99FF",
-      success: {
-        100: "#14AE5C",
-      },
-      error: {
-        100: "#DB3541",
-      },
+    },
+    success: {
+      100: "#14AE5C",
+    },
+    error: {
+      100: "#DB3541",
     },
   },
   spacings: {

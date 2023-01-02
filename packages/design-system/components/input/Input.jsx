@@ -6,8 +6,8 @@ import theme from "design-system/theme"
 import * as Styled from "./Input.styled"
 
 const colors = {
-  valid: theme.colors.decorative.success[100],
-  error: theme.colors.decorative.error[100],
+  valid: theme.colors.success[100],
+  error: theme.colors.error[100],
 }
 
 const Input = ({
