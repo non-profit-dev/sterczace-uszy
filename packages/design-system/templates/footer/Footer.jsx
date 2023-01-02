@@ -6,6 +6,7 @@ import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 import Button from "design-system/components/button"
 import Container from "design-system/components/container"
+import copyToClipboard from "design-system/templates/footer/copyToClipboard"
 import footerData from "./footerData"
 
 import * as Styled from "./Footer.styled"
@@ -36,10 +37,6 @@ const Footer = () => {
   } = footerData
 
   const theme = useTheme()
-
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text)
-  }
 
   return (
     <Styled.FooterContainer>
