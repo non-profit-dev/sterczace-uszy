@@ -32,6 +32,7 @@ const Footer = () => {
       supportTitle,
     },
     copyright,
+    socialMedia,
   } = footerData
 
   const theme = useTheme()
@@ -64,6 +65,16 @@ const Footer = () => {
                     </ListItem>
                   ))}
                 </List>
+                <Styled.IconsContainerMobile>
+                  {socialMedia.map((item) => (
+                    <IconButton
+                      key={`${item.icon}footerMobile`}
+                      name={item.icon}
+                      size="medium"
+                      href={item.link}
+                    />
+                  ))}
+                </Styled.IconsContainerMobile>
               </Styled.Section>
               <Styled.Section>
                 <Typography variant="h6" color={theme.colors.grey[600]}>
@@ -164,8 +175,14 @@ const Footer = () => {
               {copyright}
             </Typography>
             <Styled.IconsContainer>
-              <IconButton name="facebook" size="medium" />
-              <IconButton name="instagram" size="medium" />
+              {socialMedia.map((item) => (
+                <IconButton
+                  key={`${item.icon}footerWeb`}
+                  name={item.icon}
+                  size="medium"
+                  href={item.link}
+                />
+              ))}
             </Styled.IconsContainer>
           </Styled.CopyrightWrapper>
         </Styled.MainContainer>

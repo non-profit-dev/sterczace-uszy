@@ -129,6 +129,10 @@ const footerData = {
       link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
     },
   ],
+  socialMedia: [
+    { icon: "facebook", link: "https://www.facebook.com/sterczaceuszy/" },
+    { icon: "instagram", link: "https://www.instagram.com/sterczaceuszy" },
+  ],
 }
 
 export default footerData

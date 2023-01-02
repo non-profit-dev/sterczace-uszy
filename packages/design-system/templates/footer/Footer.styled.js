@@ -95,7 +95,17 @@ export const Section = styled.div`
 
 export const IconsContainer = styled.div`
   display: inline-flex;
+  ${({ theme }) => theme.breakpoints.sm} {
+    display: none;
+  }
 `
+export const IconsContainerMobile = styled.div`
+  display: none;
+  ${({ theme }) => theme.breakpoints.sm} {
+    display: inline-flex;
+  }
+`
+
 export const CopyrightWrapper = styled.div`
   display: flex;
   justify-content: space-between;
