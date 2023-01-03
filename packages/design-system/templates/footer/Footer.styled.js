@@ -21,7 +21,7 @@ export const FooterContainer = styled.div`
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 60px;
   width: 100%;
   padding: 0px 25px 84px 25px;
   ${({ theme }) => theme.breakpoints.xl} {
@@ -47,7 +47,7 @@ export const ContentContainer = styled.div`
 
   ${({ theme }) => theme.breakpoints.xl} {
     margin: 0 0 25 0;
-    gap: 32px;
+    gap: 40px;
   }
   ${({ theme }) => theme.breakpoints.sm} {
     flex-direction: column;
@@ -83,7 +83,7 @@ export const SectionsContainer = styled.div`
   }
   ${({ theme }) => theme.breakpoints.sm} {
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
   }
 `
 export const Section = styled.div`
