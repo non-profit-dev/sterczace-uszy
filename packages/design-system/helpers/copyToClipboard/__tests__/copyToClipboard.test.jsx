@@ -1,4 +1,4 @@
-import copyToClipboard from "design-system/templates/footer/copyToClipboard"
+import copyToClipboard from "design-system/helpers/copyToClipboard"
 
 const originalClipboard = { ...global.navigator.clipboard }
 

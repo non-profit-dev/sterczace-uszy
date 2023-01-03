@@ -13,18 +13,22 @@ const footerData = {
     {
       text: "fundacjasterczaceuszy@gmail.com",
       icon: "mail",
+      link: "mailto:fundacjasterczaceuszy@gmail.com",
     },
     {
       text: "500-433-539 - sms",
       icon: "phone",
+      link: "tel:+48500433539",
     },
     {
       text: "661-753-896 - sms",
       icon: "phone",
+      link: "tel:+48661753896",
     },
     {
       text: "Luboń",
       icon: "location",
+      link: "https://www.google.pl/maps/place/Lubo%C5%84/",
     },
   ],
 
@@ -33,7 +37,6 @@ const footerData = {
     krs: "KRS 0000964494 ",
     icon: "charity",
     accountNumberText: "Numer konta",
-    buttonText: "Skopiuj",
     accountNumber: "41 1870 1045 2078 1072 8639 0001",
   },
 

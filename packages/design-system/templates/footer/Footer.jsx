@@ -1,4 +1,5 @@
 import { useTheme } from "@emotion/react"
+import { useState, useEffect } from "react"
 import Typography from "design-system/components/typography/Typography"
 import IconButton from "design-system/components/iconButton"
 
@@ -6,7 +7,7 @@ import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 import Button from "design-system/components/button"
 import Container from "design-system/components/container"
-import copyToClipboard from "design-system/templates/footer/copyToClipboard"
+import copyToClipboard from "design-system/helpers/copyToClipboard"
 import footerData from "./footerData"
 
 import * as Styled from "./Footer.styled"
@@ -14,14 +15,7 @@ import * as Styled from "./Footer.styled"
 const Footer = () => {
   const {
     contact,
-    foundationData: {
-      nip,
-      krs,
-      icon,
-      accountNumberText,
-      buttonText,
-      accountNumber,
-    },
+    foundationData: { nip, krs, icon, accountNumberText, accountNumber },
     adoption,
     foundation,
     support,
@@ -35,8 +29,22 @@ const Footer = () => {
     copyright,
     socialMedia,
   } = footerData
+  const [isTextCopied, setIsTextCopied] = useState(false)
 
   const theme = useTheme()
+
+  const handleCopyToClipboardButton = (textToCopy) => {
+    copyToClipboard(textToCopy)
+    setIsTextCopied(true)
+  }
+
+  useEffect(() => {
+    if (isTextCopied === true) {
+      setTimeout(() => {
+        setIsTextCopied(false)
+      }, 5000)
+    }
+  }, [isTextCopied])
 
   return (
     <Styled.FooterContainer>
@@ -62,7 +70,13 @@ const Footer = () => {
                       size="medium"
                       variant="gray"
                     >
-                      {item.text}
+                      <Button
+                        variant="text"
+                        text={item.text}
+                        size="small"
+                        color="black"
+                        href={item.link}
+                      />
                     </ListItem>
                   ))}
                 </List>
@@ -100,10 +114,10 @@ const Footer = () => {
                     {accountNumberText}
                     <Button
                       variant="text"
-                      text={buttonText}
+                      text={isTextCopied ? "Skopiowano" : "Skopiuj"}
                       size="small"
                       color="primary"
-                      onClick={copyToClipboard(accountNumber)}
+                      onClick={() => handleCopyToClipboardButton(accountNumber)}
                     />
                   </ListItem>
                   <ListItem variant="gray">{accountNumber}</ListItem>
