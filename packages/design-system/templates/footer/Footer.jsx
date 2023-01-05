@@ -26,10 +26,10 @@ const Footer = () => {
       foundationTitle,
       supportTitle,
     },
-    copyright,
     socialMedia,
   } = footerData
   const [isTextCopied, setIsTextCopied] = useState(false)
+  const currentYear = new Date().getFullYear()
 
   const theme = useTheme()
 
@@ -187,7 +187,7 @@ const Footer = () => {
 
           <Styled.CopyrightWrapper>
             <Typography variant="bodySmall" color={theme.colors.grey[600]}>
-              {copyright}
+              Copyright © {currentYear} Sterczące uszy
             </Typography>
             <Styled.IconsContainer>
               {socialMedia.map((item) => (

@@ -7,8 +7,6 @@ const footerData = {
     supportTitle: "Wsparcie",
   },
 
-  copyright: "Copyright © 2022 Sterczące uszy",
-
   contact: [
     {
       text: "fundacjasterczaceuszy@gmail.com",
