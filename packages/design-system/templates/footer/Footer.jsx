@@ -111,9 +111,7 @@ const Footer = () => {
 
             <Styled.SectionsContainer>
               <Styled.Section>
-                <Typography variant="h6" color={theme.colors.grey[600]}>
-                  {foundationTitle}
-                </Typography>
+                <Typography variant="h6">{foundationTitle}</Typography>
                 <List gap={12}>
                   {foundation.map((item) => (
                     <ListItem variant="gray" key={item.title}>
@@ -131,9 +129,7 @@ const Footer = () => {
               </Styled.Section>
 
               <Styled.Section>
-                <Typography variant="h6" color={theme.colors.grey[600]}>
-                  {supportTitle} :
-                </Typography>
+                <Typography variant="h6">{supportTitle} :</Typography>
                 <List gap={12}>
                   {support.map((item) => (
                     <ListItem variant="gray" key={item.title}>
@@ -149,9 +145,7 @@ const Footer = () => {
                 </List>
               </Styled.Section>
               <Styled.Section>
-                <Typography variant="h6" color={theme.colors.grey[600]}>
-                  {adoptionTitle} :
-                </Typography>
+                <Typography variant="h6">{adoptionTitle} :</Typography>
                 <List gap={12}>
                   {adoption.map((item) => (
                     <ListItem variant="gray" key={item.title}>
