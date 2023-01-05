@@ -43,93 +43,93 @@ const footerData = {
   foundation: [
     {
       title: "O nas",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Aktualności",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Nasze osiągnięcia",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Opinie",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Partnerzy i przyjaciele",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Kontakt",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
   ],
 
   support: [
     {
       title: "Lista potrzeb",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Dom tymczasowy",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Wolontariat",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Zbiórki",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Wpłaty",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "FaniMani",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Bazarek",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
   ],
 
   adoption: [
     {
       title: "Adopcja",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Zwierzęta do adopcji",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Adopcja wirtualna",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Zasady adopcji",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Adopcja za granicę",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Znalazły nowy dom",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Wsparcie po adopcji",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
     {
       title: "Ankiety",
-      link: "https://sterczace-uszy-git-fsu-60-coming-soon-page-fsu.vercel.app/",
+      link: "",
     },
   ],
   socialMedia: [
