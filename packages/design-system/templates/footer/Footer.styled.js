@@ -20,9 +20,11 @@ export const FooterContainer = styled.div`
 `
 export const MainContainer = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 60px;
   width: 100%;
+  min-width: 1200px;
   padding: 0px 25px 84px 25px;
   ${({ theme }) => theme.breakpoints.xl} {
     padding: 0px 24px 25px 24px;
@@ -73,6 +75,7 @@ export const MainDataContainer = styled.div`
 
 export const SectionsContainer = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: row;
   gap: 60px;
   justify-content: space-between;

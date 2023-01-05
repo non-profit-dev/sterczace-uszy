@@ -48,20 +48,16 @@ const Footer = () => {
 
   return (
     <Styled.FooterContainer>
-      <Container>
+      <Container size="large">
         <Styled.MainContainer>
           <Styled.LogoContainer>
-            <Typography variant="h4" color={theme.colors.grey[600]}>
-              LOGO
-            </Typography>
+            <Typography variant="h4">LOGO</Typography>
           </Styled.LogoContainer>
 
           <Styled.ContentContainer>
             <Styled.MainDataContainer>
               <Styled.Section>
-                <Typography variant="h6" color={theme.colors.grey[600]}>
-                  {contactTitle} :
-                </Typography>
+                <Typography variant="h6">{contactTitle}</Typography>
                 <List gap={4}>
                   {contact.map((item) => (
                     <ListItem
@@ -92,23 +88,11 @@ const Footer = () => {
                 </Styled.IconsContainerMobile>
               </Styled.Section>
               <Styled.Section>
-                <Typography variant="h6" color={theme.colors.grey[600]}>
-                  {foundationDataTitle} :
-                </Typography>
+                <Typography variant="h6">{foundationDataTitle}</Typography>
                 <List gap={8}>
                   <ListItem variant="grey">
-                    <Typography
-                      variant="bodySmall"
-                      color={theme.colors.grey[600]}
-                    >
-                      {nip}
-                    </Typography>
-                    <Typography
-                      variant="bodySmall"
-                      color={theme.colors.grey[600]}
-                    >
-                      {krs}
-                    </Typography>
+                    <Typography variant="bodySmall">{nip}</Typography>
+                    <Typography variant="bodySmall">{krs}</Typography>
                   </ListItem>
                   <ListItem iconName={icon} size="medium" variant="gray">
                     {accountNumberText}
@@ -128,7 +112,7 @@ const Footer = () => {
             <Styled.SectionsContainer>
               <Styled.Section>
                 <Typography variant="h6" color={theme.colors.grey[600]}>
-                  {foundationTitle} :
+                  {foundationTitle}
                 </Typography>
                 <List gap={12}>
                   {foundation.map((item) => (
@@ -186,7 +170,7 @@ const Footer = () => {
           </Styled.ContentContainer>
 
           <Styled.CopyrightWrapper>
-            <Typography variant="bodySmall" color={theme.colors.grey[600]}>
+            <Typography variant="bodySmall">
               Copyright © {currentYear} Sterczące uszy
             </Typography>
             <Styled.IconsContainer>

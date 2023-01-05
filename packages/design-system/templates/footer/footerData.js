@@ -98,10 +98,6 @@ const footerData = {
 
   adoption: [
     {
-      title: "Adopcja",
-      link: "",
-    },
-    {
       title: "Zwierzęta do adopcji",
       link: "",
     },
