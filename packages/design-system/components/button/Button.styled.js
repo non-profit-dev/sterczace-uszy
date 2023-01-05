@@ -55,8 +55,13 @@ export const Component = styled.a`
   ${({ size }) =>
     size === "large" &&
     css`
+      ${theme.breakpoints.md} {
+        ${theme.typography.mobile.bodyLarge};
+        padding: 8px 32px;
+      }
+
       ${theme.breakpoints.sm} {
-        ${theme.typography.mobile.bodySmall};
+        ${theme.typography.mobile.bodyTitle};
         padding: 8px 32px;
       }
     `}
