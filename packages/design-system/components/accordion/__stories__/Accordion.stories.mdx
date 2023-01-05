@@ -1,0 +1,126 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+import Button from "design-system/components/button"
+import Accordion from "design-system/components/accordion"
+import List from "design-system/components/list"
+import ListItem from "design-system/components/listItem"
+import Typography from "design-system/components/typography"
+
+<Meta title="Components/Accordion" component={Accordion} />
+
+# Accordion
+
+<Canvas>
+  <Story
+    name="Overview - white with button"
+    args={{
+      activeIcon: "arrowDown",
+      inactiveIcon: "arrowUp",
+      text: "Fundacja",
+      variant: "neutrals",
+      button: (
+        <Button
+          text="Button ->"
+          variant="textLine"
+          size="small"
+          href="https://google.com"
+        />
+      ),
+    }}
+  >
+    {TextTemplate.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - black with Button"
+    args={{
+      activeIcon: "arrowDown",
+      inactiveIcon: "arrowUp",
+      text: "Fundacja",
+      variant: "grey",
+      button: (
+        <Button
+          text="Button ->"
+          variant="textLine"
+          size="small"
+          href="https://google.com"
+        />
+      ),
+    }}
+  >
+   {TextTemplate.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - white with links"
+    args={{
+      activeIcon: "arrowDown",
+      inactiveIcon: "arrowUp",
+      text: "Fundacja",
+      variant: "grey",
+    }}
+  >
+    {TemplateGrid.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - black with links"
+    args={{
+      activeIcon: "arrowDown",
+      inactiveIcon: "arrowUp",
+      text: "Fundacja",
+      variant: "grey",
+    }}
+  >
+    {TemplateGrid.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const TemplateGrid = (args) => (
+  <div
+    style={{
+      
+    }}
+  >
+  <Accordion {...args}>
+      <List >
+        <ListItem >
+          O nas
+        </ListItem>
+        <ListItem >
+          Aktualnosci
+        </ListItem>
+        <ListItem >
+          Opinie
+        </ListItem>
+        <ListItem >
+          Partnerzy i przyjaciele
+        </ListItem>
+         <ListItem >
+          Umowa adopcyjna
+        </ListItem>
+      </List>
+    </Accordion>
+  </div>
+)
+
+export const TextTemplate = (args) => (
+  <div
+    style={{
+      
+    }}
+  >
+  <Accordion {...args}>
+      <Typography variant="bodySmall" color="black">
+          Tu wpisz odpowiedź na swoje pytanie
+      </Typography>
+    </Accordion>
+  </div>
+)
