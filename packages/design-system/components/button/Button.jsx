@@ -46,7 +46,7 @@ Button.propTypes = {
   iconStart: oneOf(Object.keys(icons)),
   iconEnd: oneOf(Object.keys(icons)),
   variant: oneOf(["fill", "border", "text", "textLine"]),
-  color: oneOf(["primary", "black", "white"]),
+  color: oneOf(["primary", "black"]),
   size: oneOf(["small", "medium", "large"]),
   active: bool,
   onClick: func,
