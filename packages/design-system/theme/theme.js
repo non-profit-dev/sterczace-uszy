@@ -149,7 +149,7 @@ const theme = {
         fontFamily: "Poppins",
       },
       h6: {
-        fontWeight: 700,
+        fontWeight: 600,
         fontSize: "18px",
         lineHeight: "150%",
         fontFamily: "Poppins",
@@ -157,7 +157,7 @@ const theme = {
       bodyLarge: {
         fontWeight: 400,
         fontSize: "22px",
-        lineHeight: "145%", 
+        lineHeight: "145%",
         fontFamily: "Poppins",
       },
       bodySmall: {
@@ -252,4 +252,3 @@ const theme = {
 }
 
 export default theme
-  
