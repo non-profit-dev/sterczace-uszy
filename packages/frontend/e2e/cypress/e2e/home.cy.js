@@ -10,6 +10,6 @@ describe("Home Page", () => {
     cy.get("h1").contains("Strona w budowie");
   });
   it("find the link with href attribute", () => {
-    cy.get("span").contains("Przekaż wsparcie");
+    cy.get("a").should("have.attr", "href");
   });
 });
