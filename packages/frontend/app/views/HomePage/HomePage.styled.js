@@ -7,11 +7,11 @@ export const HomePageContainer = styled.div`
   top: 50%;
   transform: translateY(-50%);
   max-width: 50%;
+  padding: 0 100px;
 
   ${({ theme }) => theme.breakpoints.xl} {
     position: relative;
     transform: translateY(0);
-
     max-width: 100%;
   }
   ${({ theme }) => theme.breakpoints.md} {
