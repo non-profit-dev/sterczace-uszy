@@ -91,8 +91,17 @@ export const Icon = styled.span`
     ${({ size }) =>
       size === "large" &&
       css`
-        height: 16;
-        width: 16;
+        ${theme.breakpoints.md} {
+          ${theme.typography.mobile.bodyLarge};
+          height: 18px;
+          width: 18px;
+        }
+
+        ${theme.breakpoints.sm} {
+          ${theme.typography.mobile.bodyTitle};
+          height: 16px;
+          width: 16px;
+        }
       `}
   }
 `

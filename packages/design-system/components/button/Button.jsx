@@ -24,7 +24,7 @@ const Button = ({
     onClick={onClick}
   >
     {iconStart && (
-      <Styled.Icon>
+      <Styled.Icon size={size}>
         <Icon name={iconStart} size={size} />
       </Styled.Icon>
     )}
@@ -33,7 +33,7 @@ const Button = ({
     </Styled.Text>
 
     {iconEnd && (
-      <Styled.Icon>
+      <Styled.Icon size={size}>
         <Icon name={iconEnd} size={size} />
       </Styled.Icon>
     )}
