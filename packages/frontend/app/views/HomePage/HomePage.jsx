@@ -26,7 +26,6 @@ const HomePage = () => {
                 color="primary"
                 href="https://www.ratujemyzwierzaki.pl/sterczaceuszy?fbclid=IwAR1Gjv_H7e-lPqWbLzfcAiJYfUl-gcJR6IClupvBL5N8g6y0d9KfFlzXGVE"
                 size="large"
-                aria-label="Link prowadzący do wsparcia fundacji"
               />
             }
           />
