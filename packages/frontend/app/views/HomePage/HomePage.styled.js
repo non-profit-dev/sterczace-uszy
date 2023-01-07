@@ -13,12 +13,10 @@ export const HomePageContainer = styled.div`
     position: relative;
     transform: translateY(0);
     max-width: 100%;
+    padding: 120px 90px 0;
   }
-  ${({ theme }) => theme.breakpoints.md} {
-    padding: 135px 135px 0 135px;
-  }
-  ${({ theme }) => theme.breakpoints.sm} {
-    padding: 20px 20px 0 20px;
+  s ${({ theme }) => theme.breakpoints.sm} {
+    padding: 48px 16px 0;
   }
 `
 export const Background = styled.div`
@@ -47,7 +45,6 @@ export const IconContainer = styled.div`
   justify-content: center;
   margin-top: 50px;
   gap: 5px;
-  position: relative;
   ${({ theme }) => theme.breakpoints.sm} {
     margin-top: 20px;
   }
