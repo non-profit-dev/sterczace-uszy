@@ -15,12 +15,13 @@ const variantsMapping = {
   bodyTiny: "p",
 }
 
-const Typography = ({ variant, color, children, as, className }) => (
+const Typography = ({ variant, color, children, as, className, ...rest }) => (
   <Styled.Container
     variant={variant}
     color={color}
     as={as || variantsMapping[variant]}
     className={className}
+    {...rest}
   >
     {children}
   </Styled.Container>
