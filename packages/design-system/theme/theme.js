@@ -59,7 +59,7 @@ const theme = {
       h1: {
         fontWeight: 600,
         fontSize: "60px",
-        lineHeight: "120% ",
+        lineHeight: "120%",
         fontFamily: "Poppins",
       },
       h2: {
@@ -94,24 +94,24 @@ const theme = {
       },
       bodyLarge: {
         fontWeight: 300,
-        fontSize: "22px",
-        lineHeight: "150%",
-        fontFamily: "Poppins",
-      },
-      bodySmall: {
-        fontWeight: 400,
-        fontSize: "16px",
+        fontSize: "28px",
         lineHeight: "140%",
         fontFamily: "Poppins",
       },
       bodyTitle: {
-        fontWeight: 400,
+        fontWeight: 300,
+        fontSize: "20px",
+        lineHeight: "140%",
+        fontFamily: "Poppins",
+      },
+      bodySmall: {
+        fontWeight: 300,
         fontSize: "16px",
-        lineHeight: "130%",
+        lineHeight: "140%",
         fontFamily: "Poppins",
       },
       bodyTiny: {
-        fontWeight: 400,
+        fontWeight: 300,
         fontSize: "14px",
         lineHeight: "140%",
         fontFamily: "Poppins",
@@ -133,7 +133,7 @@ const theme = {
       h3: {
         fontWeight: 600,
         fontSize: "30px",
-        lineHeight: "150% ",
+        lineHeight: "150%",
         fontFamily: "Poppins",
       },
       h4: {
@@ -155,25 +155,25 @@ const theme = {
         fontFamily: "Poppins",
       },
       bodyLarge: {
-        fontWeight: 400,
+        fontWeight: 300,
         fontSize: "22px",
         lineHeight: "145%",
         fontFamily: "Poppins",
       },
-      bodySmall: {
-        fontWeight: 400,
-        fontSize: "16px",
-        lineHeight: "150%",
-        fontFamily: "Poppins",
-      },
       bodyTitle: {
-        fontWeight: 400,
+        fontWeight: 300,
         fontSize: "20px",
         lineHeight: "145%",
         fontFamily: "Poppins",
       },
+      bodySmall: {
+        fontWeight: 300,
+        fontSize: "16px",
+        lineHeight: "150%",
+        fontFamily: "Poppins",
+      },
       bodyTiny: {
-        fontWeight: 400,
+        fontWeight: 300,
         fontSize: "14px",
         lineHeight: "140%",
         fontFamily: "Poppins",
@@ -217,25 +217,25 @@ const theme = {
         fontFamily: "Poppins",
       },
       bodyLarge: {
-        fontWeight: 400,
+        fontWeight: 300,
         fontSize: "18px",
         lineHeight: "130%",
         fontFamily: "Poppins",
       },
-      bodySmall: {
-        fontWeight: 400,
-        fontSize: "14px",
-        lineHeight: "140%",
-        fontFamily: "Poppins",
-      },
       bodyTitle: {
-        fontWeight: 400,
+        fontWeight: 300,
         fontSize: "16px",
         lineHeight: "130%",
         fontFamily: "Poppins",
       },
+      bodySmall: {
+        fontWeight: 300,
+        fontSize: "14px",
+        lineHeight: "140%",
+        fontFamily: "Poppins",
+      },
       bodyTiny: {
-        fontWeight: 400,
+        fontWeight: 300,
         fontSize: "12px",
         lineHeight: "120%",
         fontFamily: "Poppins",
@@ -247,7 +247,7 @@ const theme = {
     md: 768,
     lg: 992,
     xl: 1200,
-    xxl: 1400,
+    xxl: 1300,
   }),
 }
 
