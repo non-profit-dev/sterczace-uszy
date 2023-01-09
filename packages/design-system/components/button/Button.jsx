@@ -24,7 +24,7 @@ const Button = ({
     onClick={onClick}
   >
     {iconStart && (
-      <Styled.Icon>
+      <Styled.Icon size={size}>
         <Icon name={iconStart} size={size} />
       </Styled.Icon>
     )}
@@ -33,7 +33,7 @@ const Button = ({
     </Styled.Text>
 
     {iconEnd && (
-      <Styled.Icon>
+      <Styled.Icon size={size}>
         <Icon name={iconEnd} size={size} />
       </Styled.Icon>
     )}
@@ -46,7 +46,7 @@ Button.propTypes = {
   iconStart: oneOf(Object.keys(icons)),
   iconEnd: oneOf(Object.keys(icons)),
   variant: oneOf(["fill", "border", "text", "textLine"]),
-  color: oneOf(["primary", "black", "white"]),
+  color: oneOf(["primary", "black"]),
   size: oneOf(["small", "medium", "large"]),
   active: bool,
   onClick: func,
