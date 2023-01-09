@@ -13,3 +13,4 @@ jobs:
           CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
         with:
           project: ./packages/frontend/e2e
+          browser: chrome
