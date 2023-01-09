@@ -14,7 +14,7 @@ jobs:
         with:
           project: ./packages/frontend/e2e
       - name: Upload screenshots
-        uses: actions/upload-artifact@3.1.2
+        uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: cypress-snapshots
