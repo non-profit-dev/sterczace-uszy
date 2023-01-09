@@ -1,4 +1,3 @@
-import { useTheme } from "@emotion/react"
 import { useState, useEffect } from "react"
 import Typography from "design-system/components/typography/Typography"
 import IconButton from "design-system/components/iconButton"
