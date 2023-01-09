@@ -7,8 +7,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Cypress Base URL
-        run: echo ${{ github.event.deployment_status.target_url }}
+      - name: Github Event Log
+        run: echo ${{ github.event }}
       - name: Run Cypress
         uses: cypress-io/github-action@v5
         env:
