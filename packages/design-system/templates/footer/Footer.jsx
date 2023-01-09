@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react"
 import Typography from "design-system/components/typography/Typography"
 import IconButton from "design-system/components/iconButton"
 
@@ -6,7 +5,7 @@ import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 import Button from "design-system/components/button"
 import Container from "design-system/components/container"
-import copyToClipboard from "design-system/helpers/copyToClipboard"
+import useCopyToClipboard from "design-system/helpers/useCopyToClipboard"
 import footerData from "./footerData"
 
 import * as Styled from "./Footer.styled"
@@ -27,21 +26,9 @@ const Footer = () => {
     },
     socialMedia,
   } = footerData
-  const [isTextCopied, setIsTextCopied] = useState(false)
+
+  const { isCopied, copyToClipboard } = useCopyToClipboard()
   const currentYear = new Date().getFullYear()
-
-  const handleCopyToClipboardButton = (textToCopy) => {
-    copyToClipboard(textToCopy)
-    setIsTextCopied(true)
-  }
-
-  useEffect(() => {
-    if (isTextCopied === true) {
-      setTimeout(() => {
-        setIsTextCopied(false)
-      }, 5000)
-    }
-  }, [isTextCopied])
 
   return (
     <Styled.FooterContainer>
@@ -95,10 +82,10 @@ const Footer = () => {
                     {accountNumberText}
                     <Button
                       variant="text"
-                      text={isTextCopied ? "Skopiowano" : "Skopiuj"}
+                      text={isCopied ? "Skopiowano" : "Skopiuj"}
                       size="small"
                       color="primary"
-                      onClick={() => handleCopyToClipboardButton(accountNumber)}
+                      onClick={() => copyToClipboard(accountNumber)}
                     />
                   </ListItem>
                   <ListItem variant="gray">{accountNumber}</ListItem>
