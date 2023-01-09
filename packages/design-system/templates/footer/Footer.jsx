@@ -31,8 +31,6 @@ const Footer = () => {
   const [isTextCopied, setIsTextCopied] = useState(false)
   const currentYear = new Date().getFullYear()
 
-  const theme = useTheme()
-
   const handleCopyToClipboardButton = (textToCopy) => {
     copyToClipboard(textToCopy)
     setIsTextCopied(true)

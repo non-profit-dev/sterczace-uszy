@@ -45,16 +45,16 @@ export const ContentContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 80px;
-  margin: 0 0 80 0;
+  margin: 0px 0px 80px 0px;
 
   ${({ theme }) => theme.breakpoints.xl} {
-    margin: 0 0 25 0;
+    margin: 0px 0px 25px 0px;
     gap: 40px;
   }
   ${({ theme }) => theme.breakpoints.sm} {
     flex-direction: column;
     gap: 32px;
-    margin: 0 0 20 0;
+    margin: 0px 0px 20px 0px;
   }
 `
 
