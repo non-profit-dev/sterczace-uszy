@@ -13,9 +13,3 @@ jobs:
           CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
         with:
           project: ./packages/frontend/e2e
-      - name: Upload screenshots
-        uses: actions/upload-artifact@v3
-        if: failure()
-        with:
-          name: cypress-snapshots
-          path: cypress/snapshots
