@@ -7,9 +7,9 @@ import * as Styled from "./HomePage.styled"
 const HomePage = () => {
   const theme = useTheme()
   return (
-    <main>
-      <Styled.Background>
-        <Styled.HomePageContainer>
+    <Styled.Main>
+      <Styled.Container>
+        <Styled.TextContainer>
           <TextBanner
             subtitle="Fundacja sterczące uszy"
             heading="Strona w budowie"
@@ -52,9 +52,11 @@ const HomePage = () => {
               aria-label="Send message via email"
             />
           </Styled.IconContainer>
-        </Styled.HomePageContainer>
-      </Styled.Background>
-    </main>
+        </Styled.TextContainer>
+
+        <Styled.Background />
+      </Styled.Container>
+    </Styled.Main>
   )
 }
 

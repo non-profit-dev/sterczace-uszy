@@ -2,29 +2,43 @@ import styled from "@emotion/styled"
 import ComingSoonImageDesktop from "frontend/public/home/images/coming-soon-desktop.png"
 import ComingSoonImageMobile from "frontend/public/home/images/coming-soon-mobile.png"
 
-export const HomePageContainer = styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 50%;
-  padding: 0 100px;
+export const Main = styled.main`
+  background-color: ${({ theme }) => theme.colors.grey[600]};
+  min-height: 100vh;
+`
+
+export const Container = styled.div`
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  align-items: center;
 
   ${({ theme }) => theme.breakpoints.xl} {
-    position: relative;
-    transform: translateY(0);
-    max-width: 100%;
-    padding: 120px 90px 0;
-  }
-  s ${({ theme }) => theme.breakpoints.sm} {
-    padding: 48px 16px 0;
+    align-items: start;
+    justify-content: center;
   }
 `
+
+export const TextContainer = styled.div`
+  position: relative;
+  z-index: 1;
+  max-width: 580px;
+  padding: 48px 20px;
+`
+
 export const Background = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 1000px;
   background-image: url(${ComingSoonImageDesktop.src});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100vh;
   background-color: ${({ theme }) => theme.colors.grey[600]};
 
   ${({ theme }) => theme.breakpoints.xl} {
@@ -34,8 +48,6 @@ export const Background = styled.div`
   }
 
   ${({ theme }) => theme.breakpoints.sm} {
-    background-image: url(${ComingSoonImageMobile.src});
-    background-position: bottom;
     background-size: 70%;
   }
 `
