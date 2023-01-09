@@ -20,11 +20,8 @@ export const FooterContainer = styled.div`
 `
 export const MainContainer = styled.div`
   display: flex;
-  flex: 1;
   flex-direction: column;
   gap: 60px;
-  width: 100%;
-  min-width: 1200px;
   padding: 0px 25px 84px 25px;
   ${({ theme }) => theme.breakpoints.xl} {
     padding: 0px 24px 25px 24px;
