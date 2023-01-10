@@ -16,9 +16,10 @@ import Instagram from "design-system/icons/Instagram.svg"
 import Location from "design-system/icons/Location.svg"
 import Mail from "design-system/icons/Mail.svg"
 import Phone from "design-system/icons/Phone.svg"
+import Error from "design-system/icons/Error.svg"
+import Success from "design-system/icons/Success.svg"
 import Attachment from "design-system/icons/Attachment.svg"
 import Bowl from "design-system/icons/Bowl.svg"
-import Error from "design-system/icons/Error.svg"
 import Hamburger from "design-system/icons/Hamburger.svg"
 import ArrowUp from "design-system/icons/ArrowUp.svg"
 
@@ -63,9 +64,10 @@ export const icons = {
   heartOutline: HeartOutline,
   cat: Cat,
   dog: Dog,
+  error: Error,
+  success: Success,
   attachment: Attachment,
   bowl: Bowl,
-  error: Error,
   hamburger: Hamburger,
 }
 
@@ -78,7 +80,6 @@ const Icon = ({ name, color, size }) => {
       width={sizes[size].width}
       height={sizes[size].height}
       title={name}
-      aria-hidden="true"
     />
   )
 }
