@@ -87,8 +87,6 @@ export const SectionsContainer = styled.div`
   flex: 2;
   flex-direction: row;
   gap: 20px;
-  ${"" /* gap: 60px; */}
-  ${"" /* gap: 20px; najmniejszy i reszta na flex??? */}
   justify-content: space-between;
   ${({ theme }) => theme.breakpoints.xl} {
     flex-direction: row;
@@ -97,7 +95,7 @@ export const SectionsContainer = styled.div`
   }
   ${({ theme }) => theme.breakpoints.sm} {
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
   }
 `
 export const Section = styled.div`
