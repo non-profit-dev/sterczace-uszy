@@ -13,6 +13,7 @@ const Button = ({
   color,
   size,
   active,
+  target,
   onClick,
 }) => (
   <Styled.Component
@@ -21,6 +22,7 @@ const Button = ({
     color={color}
     size={size}
     href={href}
+    target={href && target}
     onClick={onClick}
   >
     {iconStart && (
@@ -49,6 +51,7 @@ Button.propTypes = {
   color: oneOf(["primary", "black"]),
   size: oneOf(["small", "medium", "large"]),
   active: bool,
+  target: string,
   onClick: func,
 }
 
@@ -60,6 +63,7 @@ Button.defaultProps = {
   color: "primary",
   size: "medium",
   active: null,
+  target: null,
   onClick: null,
 }
 
