@@ -3,10 +3,11 @@ import styled from "@emotion/styled"
 export const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 60px;
   width: 100%;
+  margin: 0px;
+
   ${({ theme }) => theme.breakpoints.sm} {
-    gap: 0px;
+    gap: 32px;
   }
 
   &:before {
@@ -18,18 +19,30 @@ export const FooterContainer = styled.div`
     background: ${({ theme }) => theme.colors.primary[500]};
   }
 `
+export const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0px auto 0px auto;
+  padding: 60px 25px;
+  ${({ theme }) => theme.breakpoints.xl} {
+    gap: 64px;
+    max-width: 660px;
+    padding: 60px 15px 0px 15px;
+  }
+
+  ${({ theme }) => theme.breakpoints.sm} {
+    gap: 32px;
+    padding: 20px 15px;
+  }
+`
+
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 60px;
-  padding: 0px 25px 84px 25px;
   ${({ theme }) => theme.breakpoints.xl} {
-    padding: 0px 24px 25px 24px;
     gap: 32px;
-  }
-  ${({ theme }) => theme.breakpoints.sm} {
-    gap: 32px;
-    padding: 20px 24px;
   }
 `
 
@@ -42,39 +55,40 @@ export const ContentContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 80px;
-  margin: 0px 0px 80px 0px;
 
   ${({ theme }) => theme.breakpoints.xl} {
-    margin: 0px 0px 25px 0px;
     gap: 40px;
   }
   ${({ theme }) => theme.breakpoints.sm} {
     flex-direction: column;
     gap: 32px;
-    margin: 0px 0px 20px 0px;
   }
 `
 
 export const MainDataContainer = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 32px;
   ${({ theme }) => theme.breakpoints.xl} {
     flex-direction: row;
-    width: 100%;
-    gap: 60px;
+    justify-content: space-between;
+    gap: 20px;
   }
   ${({ theme }) => theme.breakpoints.sm} {
     flex-direction: column;
+    justify-content: flex-start;
     gap: 32px;
   }
 `
 
 export const SectionsContainer = styled.div`
   display: flex;
-  flex: 1;
+  flex: 2;
   flex-direction: row;
-  gap: 60px;
+  gap: 20px;
+  ${"" /* gap: 60px; */}
+  ${"" /* gap: 20px; najmniejszy i reszta na flex??? */}
   justify-content: space-between;
   ${({ theme }) => theme.breakpoints.xl} {
     flex-direction: row;
