@@ -22,7 +22,7 @@ export const Container = styled.div`
   margin: ${({ size }) => (size === "tiny" ? "8px 0 20px 0" : "12px 0 32px 0")};
 
   ${({ theme }) => theme.breakpoints.sm} {
-    margin: 8px 0 24px 0;
+    margin: 8px 0 12px 0;
   }
 `
 
