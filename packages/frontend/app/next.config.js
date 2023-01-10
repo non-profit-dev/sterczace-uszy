@@ -2,7 +2,7 @@
  * @type {import('next').NextConfig}
  */
 
-const { withSentryConfig } = require('@sentry/nextjs');
+const { withSentryConfig } = require("@sentry/nextjs")
 
 const nextConfig = {
   images: {
@@ -28,6 +28,6 @@ const nextConfig = {
 
 const sentryWebpackPluginOptions = {
   silent: true,
-};
+}
 
-module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions);
+module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions)
