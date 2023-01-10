@@ -80,7 +80,6 @@ const Icon = ({ name, color, size }) => {
       width={sizes[size].width}
       height={sizes[size].height}
       title={name}
-      aria-hidden="true"
     />
   )
 }
