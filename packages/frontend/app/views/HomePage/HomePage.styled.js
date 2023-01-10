@@ -26,6 +26,11 @@ export const TextContainer = styled.div`
   z-index: 1;
   max-width: 580px;
   padding: 48px 20px;
+
+  ${({ theme }) => theme.breakpoints.sm} {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 `
 
 export const Background = styled.div`
