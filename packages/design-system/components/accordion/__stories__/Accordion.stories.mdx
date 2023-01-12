@@ -11,12 +11,13 @@ import Typography from "design-system/components/typography"
 
 <Canvas>
   <Story
-    name="Overview - white with button"
+    name="Overview - black with button"
     args={{
-      activeIcon: "arrowDown",
-      inactiveIcon: "arrowUp",
+      icon: "arrowDown",
+      icon: "arrowUp",
       text: "Fundacja",
-      variant: "neutrals",
+      color: "grey",
+      activeColor: "neutrals",
       button: (
         <Button
           text="Button ->"
@@ -33,12 +34,13 @@ import Typography from "design-system/components/typography"
 
 <Canvas>
   <Story
-    name="Overview - black with Button"
+    name="Overview - white with Button"
     args={{
-      activeIcon: "arrowDown",
-      inactiveIcon: "arrowUp",
+      icon: "arrowDown",
+      icon: "arrowUp",
       text: "Fundacja",
-      variant: "grey",
+      color: "white with Button",
+      activeColor: "primary",
       button: (
         <Button
           text="Button ->"
@@ -57,10 +59,11 @@ import Typography from "design-system/components/typography"
   <Story
     name="Overview - white with links"
     args={{
-      activeIcon: "arrowDown",
-      inactiveIcon: "arrowUp",
+      icon: "arrowDown",
+      icon: "arrowUp",
       text: "Fundacja",
-      variant: "grey",
+      color: "white with Links",
+      activeColor: "primary",
     }}
   >
     {TemplateGrid.bind()}
@@ -71,42 +74,49 @@ import Typography from "design-system/components/typography"
   <Story
     name="Overview - black with links"
     args={{
-      activeIcon: "arrowDown",
-      inactiveIcon: "arrowUp",
+      icon: "arrowDown",
+      icon: "arrowUp",
       text: "Fundacja",
-      variant: "grey",
+      color: "grey",
+      activeColor: "neutrals",
     }}
   >
-    {TemplateGrid.bind()}
+    {NewGrid.bind()}
   </Story>
 </Canvas>
 
 <ArgsTable />
 
 export const TemplateGrid = (args) => (
-  <div
+ <div
     style={{
-      
     }}
   >
   <Accordion {...args}>
-      <List >
-        <ListItem >
-          O nas
-        </ListItem>
-        <ListItem >
-          Aktualnosci
-        </ListItem>
-        <ListItem >
-          Opinie
-        </ListItem>
-        <ListItem >
-          Partnerzy i przyjaciele
-        </ListItem>
-         <ListItem >
-          Umowa adopcyjna
-        </ListItem>
+      <List gap={8}>
+      <ListItem variant="gray">O nas</ListItem>
+      <ListItem variant="gray">Aktualności</ListItem>
+      <ListItem variant="gray">Opinie</ListItem>
+      <ListItem variant="gray">Partnerzy i Przyjaciele</ListItem>
+      <ListItem variant="gray">Umowa</ListItem>
       </List>
+    </Accordion>
+  </div>
+)
+
+export const NewGrid = (args) => (
+ <div
+    style={{
+    }}
+  >
+  <Accordion {...args}>
+      <Div gap={8}>
+      <Div>O nas</Div>
+      <Div>Aktualności</Div>
+      <Div>Opinie</Div>
+      <Div>Partnerzy i Przyjaciele</Div>
+      <Div>Umowa</Div>
+      </Div>
     </Accordion>
   </div>
 )
@@ -114,13 +124,12 @@ export const TemplateGrid = (args) => (
 export const TextTemplate = (args) => (
   <div
     style={{
-      
     }}
   >
   <Accordion {...args}>
-      <Typography variant="bodySmall" color="black">
-          Tu wpisz odpowiedź na swoje pytanie
-      </Typography>
+      <div>
+        Tu wpisz odpowiedź na pytanie
+      </div>
     </Accordion>
   </div>
 )
