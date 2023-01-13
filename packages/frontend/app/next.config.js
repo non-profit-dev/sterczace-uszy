@@ -1,9 +1,6 @@
 /**
  * @type {import('next').NextConfig}
  */
-
-const { withSentryConfig } = require("@sentry/nextjs")
-
 const nextConfig = {
   images: {
     loader: "default",
@@ -21,13 +18,6 @@ const nextConfig = {
 
     return config
   },
-  sentry: {
-    hideSourceMaps: true,
-  },
 }
 
-const sentryWebpackPluginOptions = {
-  silent: true,
-}
-
-module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions)
+module.exports = nextConfig
