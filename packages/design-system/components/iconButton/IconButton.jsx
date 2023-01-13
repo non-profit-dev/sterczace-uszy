@@ -10,7 +10,7 @@ const IconButton = ({ href, name, color, size, onClick, ariaLabel }) => (
     as={href ? `a` : `button`}
     href={href}
     onClick={onClick}
-    ariaLabel={ariaLabel}
+    aria-label={ariaLabel}
   >
     <Icon name={name} size={size} color={color} />
   </Styled.IconButton>

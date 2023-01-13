@@ -36,21 +36,21 @@ const HomePage = () => {
               size="large"
               color={theme.colors.neutrals[100]}
               href="https://www.facebook.com/sterczaceuszy"
-              aria-label="Visit our Facebook profile"
+              ariaLabel="Visit our Facebook profile"
             />
             <IconButton
               name="instagram"
               size="large"
               color={theme.colors.neutrals[100]}
               href="https://www.instagram.com/sterczaceuszy"
-              aria-label="Visit our Instagram profile"
+              ariaLabel="Visit our Instagram profile"
             />
             <IconButton
               name="mail"
               size="large"
               color={theme.colors.neutrals[100]}
               href="mailto:fundacjasterczaceuszy@gmail.com"
-              aria-label="Send message via email"
+              ariaLabel="Send message via email"
             />
           </Styled.IconContainer>
         </Styled.TextContainer>
