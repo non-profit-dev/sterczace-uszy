@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { node, string } from "prop-types"
 
-import OgImage from "frontend/public/home/images/coming-soon-desktop.png"
+import OgImage from "frontend/public/OgImage.png"
 
 const Page = ({ title, description, image, children }) => (
   <>
