@@ -6,6 +6,8 @@ import IconButton from "design-system/components/iconButton"
 
 import Page from "../Page"
 
+import data from "./data"
+
 import * as Styled from "./HomePage.styled"
 
 const HomePage = () => {
@@ -29,7 +31,7 @@ const HomePage = () => {
                   text="Przekaż wsparcie"
                   variant="fill"
                   color="primary"
-                  href="https://www.ratujemyzwierzaki.pl/sterczaceuszy?fbclid=IwAR1Gjv_H7e-lPqWbLzfcAiJYfUl-gcJR6IClupvBL5N8g6y0d9KfFlzXGVE"
+                  href={data.fundraising}
                   size="large"
                   target="_blank"
                 />
@@ -40,21 +42,21 @@ const HomePage = () => {
                 name="facebook"
                 size="large"
                 color={theme.colors.neutrals[100]}
-                href="https://www.facebook.com/sterczaceuszy"
+                href={data.socialMedia.facebook}
                 ariaLabel="Visit our Facebook profile"
               />
               <IconButton
                 name="instagram"
                 size="large"
                 color={theme.colors.neutrals[100]}
-                href="https://www.instagram.com/sterczaceuszy"
+                href={data.socialMedia.instagram}
                 ariaLabel="Visit our Instagram profile"
               />
               <IconButton
                 name="mail"
                 size="large"
                 color={theme.colors.neutrals[100]}
-                href="mailto:fundacjasterczaceuszy@gmail.com"
+                href={`mailto:${data.mail}`}
                 ariaLabel="Send message via email"
               />
             </Styled.IconContainer>
