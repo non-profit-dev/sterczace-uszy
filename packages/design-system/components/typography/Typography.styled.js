@@ -9,6 +9,10 @@ export const Container = styled.h1`
     ${({ theme, variant }) => theme.typography.tablet[variant]}
   }
 
+  ${({ theme }) => theme.breakpoints.lg} {
+    ${({ theme, variant }) => theme.typography.tablet[variant]}
+  }
+
   ${({ theme }) => theme.breakpoints.md} {
     ${({ theme, variant }) => theme.typography.tablet[variant]}
   }

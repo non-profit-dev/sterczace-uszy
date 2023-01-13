@@ -25,6 +25,13 @@ export const MainWrapper = styled.div`
   gap: 32px;
   margin: 0px auto 0px auto;
   padding: 60px 25px;
+  ${
+    "" /* ${({ theme }) => theme.breakpoints.lg} {
+    gap: 64px;
+    max-width: 660px;
+    padding: 60px 15px 0px 15px;
+  } */
+  }
   ${({ theme }) => theme.breakpoints.xl} {
     gap: 64px;
     max-width: 660px;
@@ -41,6 +48,11 @@ export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 60px;
+  ${
+    "" /* ${({ theme }) => theme.breakpoints.lg} {
+    gap: 32px;
+  } */
+  }
   ${({ theme }) => theme.breakpoints.xl} {
     gap: 32px;
   }
@@ -56,6 +68,11 @@ export const ContentContainer = styled.div`
   flex-wrap: wrap;
   gap: 80px;
 
+  ${
+    "" /* ${({ theme }) => theme.breakpoints.lg} {
+    gap: 40px;
+  } */
+  }
   ${({ theme }) => theme.breakpoints.xl} {
     gap: 40px;
   }
@@ -70,6 +87,13 @@ export const MainDataContainer = styled.div`
   flex: 1;
   flex-direction: column;
   gap: 32px;
+  ${
+    "" /* ${({ theme }) => theme.breakpoints.lg} {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  } */
+  }
   ${({ theme }) => theme.breakpoints.xl} {
     flex-direction: row;
     justify-content: space-between;
@@ -88,6 +112,11 @@ export const SectionsContainer = styled.div`
   flex-direction: row;
   gap: 20px;
   justify-content: space-between;
+  ${({ theme }) => theme.breakpoints.lg} {
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+  }
   ${({ theme }) => theme.breakpoints.xl} {
     flex-direction: row;
     width: 100%;
