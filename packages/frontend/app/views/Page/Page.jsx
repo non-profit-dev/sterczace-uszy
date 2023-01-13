@@ -26,7 +26,7 @@ Page.propTypes = {
 Page.defaultProps = {
   title: "Fundacja Sterczące Uszy",
   description:
-    "Fundacja Sterczace Uszy to organizacja non-profit skupiająca się na pomocy bezdomnym zwierzętom w znalezieniu nowych rodzin i domów. Najważniejszym celem naszej organizacji jest szerzenie pomocy bezdomnym zwierzętom, zapewnienie im bezpieczeństwa, spokoju i miłości. Chcemy pokazać, że każde zwierzę zasługuje na szansę na nowe życie w ciepłym i kochającym domu.",
+    "Sterczące Uszy to organizacja non-profit, której najważniejszym celem jest szerzenie pomocy bezdomnym zwierzętom, zapewnienie im bezpieczeństwa, spokoju i miłości. Chcemy pokazać, że każde zwierzę zasługuje na szansę, na nowe życie w ciepłym i kochającym domu.",
   image: OgImage.src,
 }
 
