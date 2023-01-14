@@ -1,11 +1,10 @@
 import { useTheme } from "@emotion/react"
-import Image from "next/image"
 
 import TextBanner from "design-system/recipes/textBanner"
 import Button from "design-system/components/button"
 import IconButton from "design-system/components/iconButton"
 
-import ComingSoonImage from "frontend/public/home/coming-soon.png"
+import ComingSoonImage from "frontend/public/home/comingSoon.png"
 
 import Page from "../Page"
 
@@ -66,13 +65,7 @@ const HomePage = () => {
           </Styled.TextContainer>
 
           <Styled.Background>
-            <Image
-              src={ComingSoonImage}
-              alt=""
-              layout="fill"
-              objectFit="contain"
-              priority
-            />
+            <Styled.Img src={ComingSoonImage.src} alt="" />
           </Styled.Background>
         </Styled.Container>
       </Styled.Main>

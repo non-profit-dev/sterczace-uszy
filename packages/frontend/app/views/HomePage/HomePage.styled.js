@@ -51,6 +51,12 @@ export const Background = styled.div`
   }
 `
 
+export const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+`
+
 export const IconContainer = styled.div`
   display: flex;
   justify-content: center;

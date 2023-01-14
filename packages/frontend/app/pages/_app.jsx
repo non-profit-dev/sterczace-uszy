@@ -12,6 +12,9 @@ const MyApp = ({ Component, pageProps }) => (
       <Normalize />
       <Global
         styles={css`
+          body {
+            margin: 0;
+          }
           *,
           *::before,
           *::after {
