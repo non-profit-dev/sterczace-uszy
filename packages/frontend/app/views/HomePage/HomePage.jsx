@@ -5,7 +5,7 @@ import TextBanner from "design-system/recipes/textBanner"
 import Button from "design-system/components/button"
 import IconButton from "design-system/components/iconButton"
 
-import ComingSoonImage from "./assets/coming-soon.png"
+import ComingSoonImage from "frontend/public/home/coming-soon.png"
 
 import Page from "../Page"
 
