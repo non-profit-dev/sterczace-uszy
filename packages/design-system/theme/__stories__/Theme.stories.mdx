@@ -14,11 +14,8 @@ import theme from "design-system/theme"
 # Colors
 
 <ColorPalette>
-  {Object.entries(theme.colors).map((palette, i) => (
-    <div key={i}>
-      <ColorItem key={palette[0]} title={palette[0]} colors={palette[1]} />
-      {console.log(parseInt(theme.typography.desktop.h1.fontSize))}
-    </div>
+  {Object.entries(theme.colors).map((palette) => (
+    <ColorItem key={palette[0]} title={palette[0]} colors={palette[1]} />
   ))}
 </ColorPalette>
 
