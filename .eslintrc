@@ -11,11 +11,15 @@
   "ignorePatterns": [
     "node_modules",
     "packages/backend",
-    "packages/frontend/e2e",
     "packages/frontend/app/out",
     "packages/design-system/storybook-static"
   ],
-  "extends": ["airbnb", "prettier", "plugin:react/recommended"],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:cypress/recommended"
+  ],
   "plugins": ["prettier", "react", "check-file"],
   "overrides": [
     {
