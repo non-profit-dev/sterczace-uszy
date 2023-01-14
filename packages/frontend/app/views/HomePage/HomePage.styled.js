@@ -55,6 +55,7 @@ export const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
+  background-color: ${({ theme }) => theme.colors.grey[600]};
 `
 
 export const IconContainer = styled.div`
