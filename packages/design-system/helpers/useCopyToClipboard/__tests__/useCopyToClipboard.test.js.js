@@ -1,5 +1,4 @@
 import { renderHook, act } from "@testing-library/react-hooks"
-import { waitFor } from "@testing-library/react"
 
 import useCopyToClipboard from "design-system/helpers/useCopyToClipboard"
 
@@ -55,7 +54,7 @@ describe(`useCopyToClipboard`, () => {
     await waitForValueToChange
     rerender()
     expect(result.current[0]).toBe(true)
-  }, 10000)
+  }, 7000)
 
   test("copy text to the Clipboard", () => {
     const { result } = renderHook(useCopyToClipboard)
