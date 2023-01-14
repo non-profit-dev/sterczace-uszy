@@ -18,7 +18,6 @@ const useCopyToClipboard = () => {
   }, [isCopied])
 
   return [isCopied, copyToClipboard]
-  // return { isCopied, copyToClipboard }
 }
 useCopyToClipboard.propTypes = {
   text: oneOfType([string, number]),

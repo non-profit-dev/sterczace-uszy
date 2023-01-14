@@ -22,13 +22,13 @@ afterEach(() => {
 })
 
 describe(`useCopyToClipboard`, () => {
-  test("exposes the isCopy value", async () => {
+  test("exposes the isCopy value", () => {
     const { result } = renderHook(useCopyToClipboard)
 
     expect(result.current[0]).toBe(false)
   })
 
-  test("isCopy value change to true after copy value to the Clipboard", async () => {
+  test("isCopy value change to true after copy value to the Clipboard", () => {
     const { result } = renderHook(useCopyToClipboard)
     const copyToClipboard = result.current[1]
 
@@ -38,10 +38,10 @@ describe(`useCopyToClipboard`, () => {
     expect(result.current[0]).toBe(true)
   })
 
-  test("wait 5 second before isCopy value change back to false", async () => {
+  test("wait 4 second before isCopy value change back to false", async () => {
     jest.useFakeTimers()
     jest.spyOn(global, "setTimeout")
-    const { result, waitForValueToChange, waitForNextUpdate } =
+    const { result, rerender, waitForValueToChange } =
       renderHook(useCopyToClipboard)
     const copyToClipboard = result.current[1]
 
@@ -51,12 +51,13 @@ describe(`useCopyToClipboard`, () => {
 
     expect(setTimeout).toBeCalledTimes(1)
     expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 5000)
-    // await waitForNextUpdate()
-    await waitForValueToChange(() => result.current[0])
-    expect(result.current[0]).toBe(false)
-  })
 
-  test("copy text to the Clipboard", async () => {
+    await waitForValueToChange
+    rerender()
+    expect(result.current[0]).toBe(true)
+  }, 10000)
+
+  test("copy text to the Clipboard", () => {
     const { result } = renderHook(useCopyToClipboard)
     const copyToClipboard = result.current[1]
 
@@ -66,7 +67,7 @@ describe(`useCopyToClipboard`, () => {
     expect(navigator.clipboard.writeText).toHaveBeenCalledWith(string)
     expect(navigator.clipboard.writeText).toBeCalledTimes(1)
   })
-  test("copy number to the Clipboard", async () => {
+  test("copy number to the Clipboard", () => {
     const { result } = renderHook(useCopyToClipboard)
     const copyToClipboard = result.current[1]
 

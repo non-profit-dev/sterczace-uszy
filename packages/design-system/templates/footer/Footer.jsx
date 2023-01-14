@@ -27,7 +27,7 @@ const Footer = () => {
     socialMedia,
   } = footerData
 
-  const { isCopied, copyToClipboard } = useCopyToClipboard()
+  const [isCopied, copyToClipboard] = useCopyToClipboard()
   const currentYear = new Date().getFullYear()
 
   return (
