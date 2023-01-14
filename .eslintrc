@@ -8,7 +8,13 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "ignorePatterns": ["packages/backend", "packages/frontend/e2e"],
+  "ignorePatterns": [
+    "node_modules",
+    "packages/backend",
+    "packages/frontend/e2e",
+    "packages/frontend/app/out",
+    "packages/design-system/storybook-static"
+  ],
   "extends": ["airbnb", "prettier", "plugin:react/recommended"],
   "plugins": ["prettier", "react", "check-file"],
   "overrides": [
