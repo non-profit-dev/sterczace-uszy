@@ -31,142 +31,138 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <Styled.FooterContainer>
+    <Styled.Footer>
       <Container size="large">
-        <Styled.MainWrapper>
-          <Styled.MainContainer>
-            <Styled.LogoContainer>
-              <Typography variant="h4">LOGO</Typography>
-            </Styled.LogoContainer>
+        <Styled.Logo>
+          <Typography variant="h4">LOGO</Typography>
+        </Styled.Logo>
 
-            <Styled.ContentContainer>
-              <Styled.MainDataContainer>
-                <Styled.Section>
-                  <Typography variant="h6">{contactTitle}</Typography>
-                  <List gap={4}>
-                    {contact.map((item) => (
-                      <ListItem
-                        key={item.text}
-                        iconName={item.icon}
-                        size="medium"
-                        variant="gray"
-                      >
-                        <Button
-                          variant="text"
-                          text={item.text}
-                          size="small"
-                          color="black"
-                          href={item.link}
-                        />
-                      </ListItem>
-                    ))}
-                  </List>
-                  <Styled.IconsContainerMobile>
-                    {socialMedia.map((item) => (
-                      <IconButton
-                        key={`${item.icon}footerMobile`}
-                        name={item.icon}
-                        size="medium"
-                        href={item.link}
-                      />
-                    ))}
-                  </Styled.IconsContainerMobile>
-                </Styled.Section>
-                <Styled.Section>
-                  <Typography variant="h6">{foundationDataTitle}</Typography>
-                  <List gap={8}>
-                    <ListItem variant="grey">
-                      <Typography variant="bodySmall">{nip}</Typography>
-                      <Typography variant="bodySmall">{krs}</Typography>
-                    </ListItem>
-                    <ListItem iconName={icon} size="medium" variant="gray">
-                      {accountNumberText}
-                      <Button
-                        variant="text"
-                        text={isCopied ? "Skopiowano" : "Skopiuj"}
-                        size="small"
-                        color="primary"
-                        onClick={() => copyToClipboard(accountNumber)}
-                      />
-                    </ListItem>
-                    <ListItem variant="gray">{accountNumber}</ListItem>
-                  </List>
-                </Styled.Section>
-              </Styled.MainDataContainer>
+        <Styled.Content>
+          <Styled.MainData>
+            <Styled.Section>
+              <Typography variant="h6">{contactTitle}</Typography>
+              <List gap={4}>
+                {contact.map((item) => (
+                  <ListItem
+                    key={item.text}
+                    iconName={item.icon}
+                    size="medium"
+                    variant="gray"
+                  >
+                    <Button
+                      variant="text"
+                      text={item.text}
+                      size="small"
+                      color="black"
+                      href={item.link}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+              <Styled.IconsContainerMobile>
+                {socialMedia.map((item) => (
+                  <IconButton
+                    key={`${item.icon}footerMobile`}
+                    name={item.icon}
+                    size="medium"
+                    href={item.link}
+                  />
+                ))}
+              </Styled.IconsContainerMobile>
+            </Styled.Section>
+            <Styled.Section>
+              <Typography variant="h6">{foundationDataTitle}</Typography>
+              <List gap={8}>
+                <ListItem variant="grey">
+                  <Typography variant="bodySmall">{nip}</Typography>
+                  <Typography variant="bodySmall">{krs}</Typography>
+                </ListItem>
+                <ListItem iconName={icon} size="medium" variant="gray">
+                  {accountNumberText}
+                  <Button
+                    variant="text"
+                    text={isCopied ? "Skopiowano" : "Skopiuj"}
+                    size="small"
+                    color="primary"
+                    onClick={() => copyToClipboard(accountNumber)}
+                  />
+                </ListItem>
+                <ListItem variant="gray">{accountNumber}</ListItem>
+              </List>
+            </Styled.Section>
+          </Styled.MainData>
 
-              <Styled.SectionsContainer>
-                <Styled.Section>
-                  <Typography variant="h6">{foundationTitle}</Typography>
-                  <List gap={4}>
-                    {foundation.map((item) => (
-                      <ListItem variant="gray" key={item.title}>
-                        <Button
-                          variant="text"
-                          text={item.title}
-                          size="small"
-                          color="black"
-                          href={item.link}
-                          key={item.title}
-                        />
-                      </ListItem>
-                    ))}
-                  </List>
-                </Styled.Section>
+          <Styled.Sections>
+            <Styled.Section>
+              <Typography variant="h6">{foundationTitle}</Typography>
+              <List gap={4}>
+                {foundation.map((item) => (
+                  <ListItem variant="gray" key={item.title}>
+                    <Button
+                      variant="text"
+                      text={item.title}
+                      size="small"
+                      color="black"
+                      href={item.link}
+                      key={item.title}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </Styled.Section>
 
-                <Styled.Section>
-                  <Typography variant="h6">{supportTitle} :</Typography>
-                  <List gap={4}>
-                    {support.map((item) => (
-                      <ListItem variant="gray" key={item.title}>
-                        <Button
-                          variant="text"
-                          text={item.title}
-                          size="small"
-                          color="black"
-                          href={item.link}
-                        />
-                      </ListItem>
-                    ))}
-                  </List>
-                </Styled.Section>
-                <Styled.Section>
-                  <Typography variant="h6">{adoptionTitle} :</Typography>
-                  <List gap={4}>
-                    {adoption.map((item) => (
-                      <ListItem variant="gray" key={item.title}>
-                        <Button
-                          variant="text"
-                          text={item.title}
-                          size="small"
-                          color="black"
-                          href={item.link}
-                        />
-                      </ListItem>
-                    ))}
-                  </List>
-                </Styled.Section>
-              </Styled.SectionsContainer>
-            </Styled.ContentContainer>
-          </Styled.MainContainer>
+            <Styled.Section>
+              <Typography variant="h6">{supportTitle} :</Typography>
+              <List gap={4}>
+                {support.map((item) => (
+                  <ListItem variant="gray" key={item.title}>
+                    <Button
+                      variant="text"
+                      text={item.title}
+                      size="small"
+                      color="black"
+                      href={item.link}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </Styled.Section>
+            <Styled.Section>
+              <Typography variant="h6">{adoptionTitle} :</Typography>
+              <List gap={4}>
+                {adoption.map((item) => (
+                  <ListItem variant="gray" key={item.title}>
+                    <Button
+                      variant="text"
+                      text={item.title}
+                      size="small"
+                      color="black"
+                      href={item.link}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </Styled.Section>
+          </Styled.Sections>
+        </Styled.Content>
 
-          <Styled.CopyrightWrapper>
-            <Typography variant="bodySmall">
-              Copyright © {currentYear} Sterczące uszy
-            </Typography>
-            <Styled.IconsContainer>
-              {socialMedia.map((item) => (
-                <IconButton
-                  key={`${item.icon}footerWeb`}
-                  name={item.icon}
-                  size="medium"
-                  href={item.link}
-                />
-              ))}
-            </Styled.IconsContainer>
-          </Styled.CopyrightWrapper>
-        </Styled.MainWrapper>
+        <Styled.CopyrightWrapper>
+          <Typography variant="bodySmall">
+            Copyright © {currentYear} Sterczące uszy
+          </Typography>
+          <Styled.IconsContainer>
+            {socialMedia.map((item) => (
+              <IconButton
+                key={`${item.icon}footerWeb`}
+                name={item.icon}
+                size="medium"
+                href={item.link}
+              />
+            ))}
+          </Styled.IconsContainer>
+        </Styled.CopyrightWrapper>
       </Container>
-    </Styled.FooterContainer>
+    </Styled.Footer>
   )
 }
 export default Footer

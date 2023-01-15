@@ -1,10 +1,9 @@
 import styled from "@emotion/styled"
 
-export const FooterContainer = styled.div`
+export const Footer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0px;
 
   ${({ theme }) => theme.breakpoints.sm} {
     gap: 32px;
@@ -19,112 +18,65 @@ export const FooterContainer = styled.div`
     background: ${({ theme }) => theme.colors.primary[500]};
   }
 `
-export const MainWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin: 0px auto 0px auto;
-  padding: 60px 25px;
-  ${
-    "" /* ${({ theme }) => theme.breakpoints.lg} {
-    gap: 64px;
-    max-width: 660px;
-    padding: 60px 15px 0px 15px;
-  } */
-  }
-  ${({ theme }) => theme.breakpoints.xl} {
-    gap: 64px;
-    max-width: 660px;
-    padding: 60px 15px 0px 15px;
-  }
+
+export const Logo = styled.div`
+  display: inline-flex;
+  padding-top: 60px;
 
   ${({ theme }) => theme.breakpoints.sm} {
-    gap: 32px;
-    padding: 20px 15px;
+    padding-top: 20px;
   }
 `
 
-export const MainContainer = styled.div`
+export const Content = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 60px;
-  ${
-    "" /* ${({ theme }) => theme.breakpoints.lg} {
-    gap: 32px;
-  } */
-  }
-  ${({ theme }) => theme.breakpoints.xl} {
-    gap: 32px;
-  }
-`
-
-export const LogoContainer = styled.div`
-  display: inline-flex;
-`
-
-export const ContentContainer = styled.div`
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 80px;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  border: 2px solid red;
 
-  ${
-    "" /* ${({ theme }) => theme.breakpoints.lg} {
-    gap: 40px;
-  } */
-  }
   ${({ theme }) => theme.breakpoints.xl} {
     gap: 40px;
+    padding-top: 32px;
   }
-  ${({ theme }) => theme.breakpoints.sm} {
+
+  ${({ theme }) => theme.breakpoints.lg} {
     flex-direction: column;
+  }
+
+  ${({ theme }) => theme.breakpoints.sm} {
     gap: 32px;
+    padding-bottom: 40px;
   }
 `
 
-export const MainDataContainer = styled.div`
+export const MainData = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 32px;
-  ${
-    "" /* ${({ theme }) => theme.breakpoints.lg} {
+
+  ${({ theme }) => theme.breakpoints.lg} {
     flex-direction: row;
     justify-content: space-between;
-    gap: 20px;
-  } */
   }
-  ${({ theme }) => theme.breakpoints.xl} {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-  }
+
   ${({ theme }) => theme.breakpoints.sm} {
     flex-direction: column;
     justify-content: flex-start;
-    gap: 32px;
   }
 `
 
-export const SectionsContainer = styled.div`
+export const Sections = styled.div`
   display: flex;
   flex: 2;
   flex-direction: row;
-  gap: 20px;
   justify-content: space-between;
-  ${({ theme }) => theme.breakpoints.lg} {
-    flex-direction: row;
-    width: 100%;
-    gap: 20px;
-  }
-  ${({ theme }) => theme.breakpoints.xl} {
-    flex-direction: row;
-    width: 100%;
-    gap: 20px;
-  }
+
   ${({ theme }) => theme.breakpoints.sm} {
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
   }
 `
 export const Section = styled.div`
