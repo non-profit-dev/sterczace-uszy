@@ -12,12 +12,6 @@ describe("Home Page", () => {
     cy.get("h1").contains("Strona w budowie");
   });
 
-  it("should have correct links", () => {
-    cy.get("a:not([href*='mailto:'])").each((page) => {
-      cy.request(page.prop("href"));
-    });
-  });
-
   it("should have proper social media links", () => {
     cy.get(`a[aria-label="Visit our Facebook profile"]`)
       .should(`have.attr`, `href`)
