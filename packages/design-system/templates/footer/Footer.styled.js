@@ -34,7 +34,6 @@ export const Content = styled.div`
   gap: 80px;
   padding-top: 60px;
   padding-bottom: 50px;
-  border: 2px solid red;
 
   ${({ theme }) => theme.breakpoints.xl} {
     gap: 40px;
