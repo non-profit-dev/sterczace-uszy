@@ -12,6 +12,7 @@ export const Container = styled.div`
 export const Textarea = styled.textarea`
   width: 100%;
   min-height: 160px;
+  resize: vertical;
   padding: ${({ state }) => (state ? "12px 38px 12px 10px" : "12px 10px")};
   margin: 8px 0 0 0;
   background: ${({ theme }) => theme.colors.neutrals[100]};
