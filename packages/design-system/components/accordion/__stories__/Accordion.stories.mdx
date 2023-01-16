@@ -1,9 +1,8 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
-import Button from "design-system/components/button"
 import Accordion from "design-system/components/accordion"
-import List from "design-system/components/list"
-import ListItem from "design-system/components/listItem"
+import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
+import Icon from "design-system/components/icon"
 
 <Meta title="Components/Accordion" component={Accordion} />
 
@@ -11,47 +10,27 @@ import Typography from "design-system/components/typography"
 
 <Canvas>
   <Story
-    name="Overview - black with button"
+    name="Overview - white with button"
     args={{
-      icon: "arrowDown",
-      icon: "arrowUp",
+      color: "white",
+      activeColor: "primary",
       text: "Fundacja",
-      color: "grey",
-      activeColor: "neutrals",
-      button: (
-        <Button
-          text="Button ->"
-          variant="textLine"
-          size="small"
-          href="https://google.com"
-        />
-      ),
     }}
   >
-    {TextTemplate.bind()}
+    {TextNewTemplate.bind()}
   </Story>
 </Canvas>
 
 <Canvas>
   <Story
-    name="Overview - white with Button"
+    name="Overview - black with button"
     args={{
-      icon: "arrowDown",
-      icon: "arrowUp",
       text: "Fundacja",
-      color: "white with Button",
-      activeColor: "primary",
-      button: (
-        <Button
-          text="Button ->"
-          variant="textLine"
-          size="small"
-          href="https://google.com"
-        />
-      ),
+      color: "black",
+      activeColor: "neutrals",
     }}
   >
-   {TextTemplate.bind()}
+    {ButtonNewtemplate.bind()}
   </Story>
 </Canvas>
 
@@ -59,10 +38,8 @@ import Typography from "design-system/components/typography"
   <Story
     name="Overview - white with links"
     args={{
-      icon: "arrowDown",
-      icon: "arrowUp",
       text: "Fundacja",
-      color: "white with Links",
+      color: "white",
       activeColor: "primary",
     }}
   >
@@ -74,10 +51,9 @@ import Typography from "design-system/components/typography"
   <Story
     name="Overview - black with links"
     args={{
-      icon: "arrowDown",
-      icon: "arrowUp",
       text: "Fundacja",
-      color: "grey",
+      text: "Fundacja",
+      color: "black",
       activeColor: "neutrals",
     }}
   >
@@ -88,48 +64,152 @@ import Typography from "design-system/components/typography"
 <ArgsTable />
 
 export const TemplateGrid = (args) => (
- <div
-    style={{
-    }}
-  >
-  <Accordion {...args}>
-      <List gap={8}>
-      <ListItem variant="gray">O nas</ListItem>
-      <ListItem variant="gray">Aktualności</ListItem>
-      <ListItem variant="gray">Opinie</ListItem>
-      <ListItem variant="gray">Partnerzy i Przyjaciele</ListItem>
-      <ListItem variant="gray">Umowa</ListItem>
-      </List>
+  <div style={{}}>
+    <Accordion {...args}>
+      <Div gap={8}>
+        <Div>
+          <Button color="black" variant="text" text="O nas" size="small">
+            O nas
+          </Button>
+        </Div>
+        <Div>
+          <Button color="black" variant="text" text="Aktualności" size="small">
+            Aktualności
+          </Button>
+        </Div>
+        <Div>
+          <Button
+            color="black"
+            variant="text"
+            text="Opinie"
+            size="small"
+          ></Button>
+        </Div>
+        <Div>
+          <Button
+            variant="text"
+            color="black"
+            text="Partnerzy i Przyjaciele"
+            size="small"
+          ></Button>
+        </Div>
+        <Div>
+          <Button
+            text="Umowa"
+            variant="text"
+            color="black"
+            size="small"
+          ></Button>
+        </Div>
+      </Div>
     </Accordion>
   </div>
 )
 
 export const NewGrid = (args) => (
- <div
-    style={{
-    }}
-  >
-  <Accordion {...args}>
+  <div style={{}}>
+    <Accordion {...args}>
       <Div gap={8}>
-      <Div>O nas</Div>
-      <Div>Aktualności</Div>
-      <Div>Opinie</Div>
-      <Div>Partnerzy i Przyjaciele</Div>
-      <Div>Umowa</Div>
+        <Div>
+          <Button variant="text" color="white" text="O nas" size="small">
+            O nas
+          </Button>
+        </Div>
+        <Div>
+          <Button variant="text" color="white" text="Aktualności" size="small">
+            Aktualności
+          </Button>
+        </Div>
+        <Div>
+          <Button
+            variant="text"
+            text="Opinie"
+            color="white"
+            size="small"
+          ></Button>
+        </Div>
+        <Div>
+          <Button
+            variant="text"
+            color="white"
+            text="Partnerzy i Przyjaciele"
+            size="small"
+          ></Button>
+        </Div>
+        <Div>
+          <Button
+            variant="text"
+            color="white"
+            text="Umowa"
+            size="small"
+          ></Button>
+        </Div>
       </Div>
     </Accordion>
   </div>
 )
 
 export const TextTemplate = (args) => (
-  <div
-    style={{
-    }}
-  >
-  <Accordion {...args}>
-      <div>
-        Tu wpisz odpowiedź na pytanie
-      </div>
+  <div style={{}}>
+    <Accordion {...args}>
+      <Div>
+        <Button
+          variant="black"
+          text="Tu wpisz odpowiedź na pytanie"
+          size="small"
+        ></Button>
+      </Div>
+      <Div>
+        <Button variant="gray" text="Button" size="small"></Button>
+      </Div>
+    </Accordion>
+  </div>
+)
+
+export const TextNewTemplate = (args) => (
+  <div style={{}}>
+    <Accordion {...args}>
+      <Div>
+        <Button
+          color="black"
+          text="Tu wpisz odpowiedź na pytanie"
+          size="small"
+          variant="text"
+        ></Button>
+      </Div>
+      <Div>
+        <Button
+          text="Button"
+          variant="text"
+          color="primary"
+          size="small"
+          iconEnd="arrowRight"
+        ></Button>
+      </Div>
+    </Accordion>
+  </div>
+)
+
+export const ButtonNewtemplate = (args) => (
+  <div style={{}}>
+    <Accordion {...args}>
+      <Div>
+        <Button
+          color="white"
+          text="Tu wpisz odpowiedź na pytanie"
+          size="small"
+          variant="text"
+        ></Button>
+      </Div>
+      <Div>
+        <Button
+          text="Button"
+          variant="text"
+          color="primary"
+          size="small"
+          iconEnd="arrowRight"
+        ></Button>
+      </Div>
     </Accordion>
   </div>
 )

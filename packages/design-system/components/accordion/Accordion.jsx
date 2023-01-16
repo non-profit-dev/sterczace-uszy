@@ -1,58 +1,51 @@
-import { string, node, oneOf,  } from "prop-types"
-import * as Styled from "./Accordion.styled"
+import { string, node, oneOf } from "prop-types"
 import Icon from "design-system/components/icon"
-import React, { useState } from 'react'
+import React, { useState } from "react"
+import * as Styled from "./Accordion.styled"
 
-
-const Accordion = ({ children, icon, text, button,
-  color, activeColor,  }) =>  {
-  const [isActive, setIsActive] = useState(false);
+const Accordion = ({ children, text, color, activeColor }) => {
+  const [isActive, setIsActive] = useState(false)
   return (
-  <Styled.Accordion
-  color={isActive ? activeColor : color}
-  activeColor={activeColor}
-  >
-    <Styled.Title  onClick={() => setIsActive(!isActive)}
-    color={isActive ? activeColor : color}
-    activeColor={activeColor}
-    > {text} 
-    <Styled.Icon 
-    color={isActive ? activeColor : color}
-    activeColor={activeColor}
+    <Styled.Accordion
+      color={isActive ? activeColor : color}
+      activeColor={activeColor}
     >
-    <Icon name={icon}/>
-    </Styled.Icon> 
-    </Styled.Title>
-    {isActive &&
-    <Styled.Content
-    color={isActive ? activeColor : color}
-    activeColor={activeColor}
-    >
-    {children} 
-    {button}
-    </Styled.Content>
-    }
-  </Styled.Accordion>
-);
+      <Styled.Title
+        onClick={() => setIsActive(!isActive)}
+        color={isActive ? activeColor : color}
+        activeColor={activeColor}
+      >
+        {text}
+        <Styled.Icon
+          color={isActive ? activeColor : color}
+          activeColor={activeColor}
+        >
+          <Icon name="arrowDown" />
+        </Styled.Icon>
+      </Styled.Title>
+      {isActive && (
+        <Styled.Content
+          color={isActive ? activeColor : color}
+          activeColor={activeColor}
+        >
+          {children}
+        </Styled.Content>
+      )}
+    </Styled.Accordion>
+  )
 }
 
 Accordion.propTypes = {
-  text: string,
+  text: string.isRequired,
   children: node,
-  icon: string,
-  name: string,
-  button: node,
-  color: oneOf(["primary", "neutrals", "grey", "white", "white with Button", "white with Links" ]),
-  activeColor: oneOf(["primary", "neutrals", "grey", "white", "white with Button", "white with Links" ]),
+  color: oneOf(["black", "white", "primary", "neutrals"]),
+  activeColor: oneOf(["black", "white", "primary", "neutrals"]),
 }
 
 Accordion.defaultProps = {
   children: null,
-  icon: null,
-  name: null,
-  button: null,
-  color: "grey",
-  activeColor: "grey",
+  color: "black",
+  activeColor: "black",
 }
 
 export default Accordion
