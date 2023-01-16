@@ -8,7 +8,7 @@ import * as Styled from "./Textarea.styled"
 const Textarea = ({
   label,
   placeholder,
-  state,
+  error,
   message,
   required,
   disabled,
@@ -20,23 +20,21 @@ const Textarea = ({
     <Styled.Container>
       <Styled.Textarea
         placeholder={placeholder}
-        state={state}
+        error={error}
         required={required}
         disabled={disabled}
         name={name}
         id={id}
       />
-      {state && (
-        <Styled.Icon state={state}>
-          <Icon name={state === "error" ? "error" : ""} size="medium" />
+      {error && (
+        <Styled.Icon error={error}>
+          <Icon name="error" size="medium" />
         </Styled.Icon>
       )}
     </Styled.Container>
     <Typography
       variant="bodyTiny"
-      color={
-        state === "error" ? theme.colors.error[100] : theme.colors.grey[500]
-      }
+      color={error ? theme.colors.error[100] : theme.colors.grey[500]}
       required={required}
       data-testid="message"
     >
@@ -48,7 +46,7 @@ const Textarea = ({
 Textarea.propTypes = {
   label: string.isRequired,
   placeholder: string,
-  state: "error",
+  error: bool,
   message: string,
   required: bool,
   disabled: bool,
@@ -58,7 +56,7 @@ Textarea.propTypes = {
 
 Textarea.defaultProps = {
   placeholder: "",
-  state: null,
+  error: false,
   message: "",
   required: false,
   disabled: false,

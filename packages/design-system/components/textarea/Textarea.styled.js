@@ -13,13 +13,13 @@ export const Textarea = styled.textarea`
   width: 100%;
   min-height: 160px;
   resize: vertical;
-  padding: ${({ state }) => (state ? "12px 38px 12px 10px" : "12px 10px")};
+  padding: ${({ error }) => (error ? "12px 38px 12px 10px" : "12px 10px")};
   margin: 8px 0;
   background: ${({ theme }) => theme.colors.neutrals[100]};
   border: 1px solid ${({ theme }) => theme.colors.grey[400]};
   border-radius: 10px;
-  border-color: ${({ state, theme }) =>
-    state === "error" ? theme.colors.error[100] : theme.colors.grey[400]};
+  border-color: ${({ error, theme }) =>
+    error ? theme.colors.error[100] : theme.colors.grey[400]};
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.grey[400]};
@@ -49,6 +49,6 @@ export const Icon = styled.span`
   right: 18px;
   height: 24px;
 
-  color: ${({ state, theme }) =>
-    state === "error" ? theme.colors.error[100] : theme.colors.grey[400]};
+  color: ${({ error, theme }) =>
+    error ? theme.colors.error[100] : theme.colors.grey[400]};
 `
