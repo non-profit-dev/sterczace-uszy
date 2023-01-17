@@ -14,4 +14,4 @@ jobs:
           start: yarn start
           wait-on: "http://localhost:3000"
           browser: chrome
-          project: packages/frontend/e2e
+          project: ./packages/frontend/e2e
