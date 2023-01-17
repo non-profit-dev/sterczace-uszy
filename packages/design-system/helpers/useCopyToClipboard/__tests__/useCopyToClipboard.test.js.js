@@ -3,7 +3,7 @@ import { renderHook, act } from "@testing-library/react-hooks"
 import useCopyToClipboard from "design-system/helpers/useCopyToClipboard"
 
 const string = "test"
-const number = "123"
+const number = 123
 
 Object.assign(navigator, {
   clipboard: {
