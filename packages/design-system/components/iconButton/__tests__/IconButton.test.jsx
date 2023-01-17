@@ -7,16 +7,24 @@ const iconName = "facebook"
 const iconSize = "large"
 const iconColor = "red"
 const href = "https://google.com"
+const ariaLabel = "Visit our facebook site"
 
 describe(`IconButton`, () => {
   it(`renders with default properties`, () => {
-    render(<IconButton name={iconName} />)
+    render(<IconButton name={iconName} ariaLabel={ariaLabel} />)
 
     expect(screen.getByTitle(iconName)).toBeInTheDocument()
   })
 
   it(`renders with custom properties`, () => {
-    render(<IconButton name={iconName} size={iconSize} color={iconColor} />)
+    render(
+      <IconButton
+        name={iconName}
+        size={iconSize}
+        color={iconColor}
+        ariaLabel={ariaLabel}
+      />
+    )
 
     expect(screen.getByTitle(iconName)).toBeInTheDocument()
   })
