@@ -2,7 +2,8 @@
  * @type {import('next').NextConfig}
  */
 
-const { withSentryConfig } = require("@sentry/nextjs")
+const withPlugins = require("next-compose-plugins")
+const optimizedImages = require("next-optimized-images")
 
 const nextConfig = {
   images: {
@@ -21,13 +22,6 @@ const nextConfig = {
 
     return config
   },
-  sentry: {
-    hideSourceMaps: true,
-  },
 }
 
-const sentryWebpackPluginOptions = {
-  silent: true,
-}
-
-module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions)
+module.exports = withPlugins([[optimizedImages, {}], nextConfig])
