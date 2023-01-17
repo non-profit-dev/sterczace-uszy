@@ -9,13 +9,28 @@
     "sourceType": "module"
   },
   "ignorePatterns": ["packages/backend", "packages/frontend/e2e"],
-  "extends": ["airbnb", "prettier", "plugin:react/recommended"],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:mdx/recommended"
+  ],
   "plugins": ["prettier", "react", "check-file"],
   "overrides": [
     {
       "files": ["**/*.test.js", "**/*.test.jsx"],
       "env": {
         "jest": true
+      }
+    },
+    {
+      "files": "*.mdx",
+      "parser": "eslint-mdx",
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": "off",
+        "no-use-before-define": "off",
+        "radix": "off"
       }
     }
   ],
