@@ -23,12 +23,8 @@ export const Title = styled.div`
     switch (color) {
       case "white":
         return theme.colors.neutrals[100]
-      case "black":
-        return theme.colors.grey[600]
       case "primary":
         return theme.colors.neutrals[100]
-      case "neutrals":
-        return theme.colors.grey[600]
       default:
         return theme.colors.grey[600]
     }
@@ -59,8 +55,6 @@ export const Content = styled.div`
     switch (color) {
       case "white":
         return theme.colors.neutrals[100]
-      case "black":
-        return theme.colors.grey[600]
       case "primary":
         return theme.colors.neutrals[100]
       default:
