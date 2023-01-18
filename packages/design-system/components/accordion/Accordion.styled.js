@@ -4,7 +4,6 @@ import { css } from "@emotion/react"
 export const Accordion = styled.div`
   display: flex;
   text-decoration: none;
-  border-radius: 10px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: start;
@@ -15,7 +14,6 @@ export const Title = styled.div`
   justify-content: space-between;
   margin-left: auto;
   width: 100%;
-  float: right;
   text-decoration: none;
   border-radius: 10px 10px 0px 0px;
   padding: 20px 20px 0px 25px;
@@ -53,7 +51,6 @@ export const Title = styled.div`
 
 export const Content = styled.div`
   border-radius: 0px 0px 10px 10px;
-  width: auto;
   text-decoration: none;
   padding: 20px 20px 20px 20px;
   width: 100%;
@@ -83,7 +80,6 @@ export const Content = styled.div`
 `
 
 export const Icon = styled.div`
-  gap: 100px;
   ${({ activeColor, color }) =>
     color === "white" &&
     activeColor === "primary" &&
