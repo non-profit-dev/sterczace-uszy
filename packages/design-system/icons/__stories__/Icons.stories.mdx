@@ -1,4 +1,4 @@
-import { Meta, Typeset, IconGallery, IconItem } from "@storybook/addon-docs"
+import { Meta, IconGallery, IconItem } from "@storybook/addon-docs"
 
 import { icons } from "design-system/components/icon"
 
@@ -9,8 +9,8 @@ import { icons } from "design-system/components/icon"
 A list of all available icons in the project.
 
 <IconGallery>
-  {Object.entries(icons).map((icon, i) => (
-    <IconItem key={i} name={icon[0]}>
+  {Object.entries(icons).map((icon) => (
+    <IconItem key={icon[0]} name={icon[0]}>
       {icon[1]()}
     </IconItem>
   ))}
