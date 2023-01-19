@@ -31,14 +31,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <Styled.FooterContainer>
+    <Styled.Footer>
       <Container size="large">
-        {/* <Styled.MainWrapper> */}
         <Styled.Logo>
           <Typography variant="h4">LOGO</Typography>
         </Styled.Logo>
 
-        <Styled.ContentContainer>
+        <Styled.Content>
           <Styled.MainFoundationData>
             <Styled.Section>
               <Typography variant="h6">{contactTitle}</Typography>
@@ -145,7 +144,7 @@ const Footer = () => {
               </List>
             </Styled.Section>
           </Styled.Sections>
-        </Styled.ContentContainer>
+        </Styled.Content>
 
         <Styled.Copyright>
           <Typography variant="bodySmall">
@@ -162,9 +161,8 @@ const Footer = () => {
             ))}
           </Styled.Icons>
         </Styled.Copyright>
-        {/* </Styled.MainWrapper> */}
       </Container>
-    </Styled.FooterContainer>
+    </Styled.Footer>
   )
 }
 export default Footer
