@@ -38,7 +38,7 @@ const Select = ({
 
 Select.propTypes = {
   label: string.isRequired,
-  options: arrayOf[string].isRequired,
+  options: arrayOf(string).isRequired,
   defaultValue: string,
   disabled: bool,
   name: string,
