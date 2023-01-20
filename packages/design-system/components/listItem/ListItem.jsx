@@ -16,8 +16,14 @@ const ListItem = ({ children, variant, iconName, iconSize }) => (
 )
 
 ListItem.propTypes = {
+  /**
+   * Element or text that should be displayed inside the list item.
+   */
   children: oneOfType([node, string]).isRequired,
   variant: oneOf(["primary", "gray"]),
+  /**
+   * If provided, it renders an icon element before the text based on the icon name.
+   */
   iconName: string,
   iconSize: oneOf(["medium"]),
 }
