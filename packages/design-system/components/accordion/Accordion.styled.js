@@ -50,32 +50,9 @@ export const Content = styled.div`
   padding: 20px 20px 20px 20px;
   width: 100%;
   box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.1);
-  background-color: ${({ color, theme }) => {
-    switch (color) {
-      case "white":
-        return theme.colors.neutrals[100]
-      case "black":
-        return theme.colors.grey[600]
-      case "primary":
-        return theme.colors.neutrals[100]
-      default:
-        return theme.colors.grey[600]
-    }
-  }};
-  color: ${({ color, theme }) => {
-    switch (color) {
-      case "white":
-        return theme.colors.grey[600]
-      case "black":
-        return theme.colors.neutrals[100]
-      default:
-        return theme.colors.grey[600]
-    }
-  }};
 `
 
 export const Icon = styled.div`
-  gap: 100px;
   ${({ activeColor, color }) =>
     color === "white" &&
     activeColor === "primary" &&
