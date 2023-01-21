@@ -6,6 +6,8 @@ import theme from "design-system/theme"
 
 import "./styles.css"
 
+import "normalize.css/normalize.css"
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {

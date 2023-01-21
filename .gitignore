@@ -58,7 +58,6 @@ $RECYCLE.BIN/
 *.swm
 *.out
 *.pid
-packages/backend/public/uploads/
 
 
 ############################
@@ -104,23 +103,12 @@ testApp
 coverage
 
 ############################
-# Strapi
-############################
-
-.env
-license.txt
-exports
-*.cache
-build
-.strapi-updater.json
-
-############################
 # Next.js
 ############################
 .next/
 out/
 
 ############################
-# Next.js
+# Storybook.js
 ############################
 packages/design-system/storybook-static

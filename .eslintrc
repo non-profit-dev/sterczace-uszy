@@ -8,7 +8,7 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "ignorePatterns": ["packages/backend", "packages/frontend/e2e"],
+  "ignorePatterns": ["packages/frontend/e2e"],
   "extends": [
     "airbnb",
     "prettier",

@@ -3,9 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "develop:backend": "yarn --cwd packages/backend develop",
-    "develop:frontend": "wait-on http://localhost:1337/admin && yarn --cwd packages/frontend/app develop",
-    "develop": "cross-env FORCE_COLOR=1 npm-run-all -l -p develop:*",
+    "develop": "yarn --cwd packages/frontend/app develop",
     "storybook": "yarn --cwd packages/design-system storybook",
     "build-storybook": "yarn --cwd packages/design-system build-storybook",
     "deploy:frontend": "yarn --cwd packages/frontend/app deploy",
@@ -19,7 +17,6 @@
   "workspaces": [
     "packages/frontend/app",
     "packages/frontend/e2e",
-    "packages/backend",
     "packages/design-system"
   ],
   "devDependencies": {

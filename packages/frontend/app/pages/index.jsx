@@ -1,5 +1,48 @@
+import { arrayOf, shape, string } from "prop-types"
+
 import HomePage from "../views/HomePage/HomePage"
 
-const Home = () => <HomePage />
+import client from "../lib/api"
+import { GET_ANIMALS, GET_SUPPORTING } from "../lib/queries"
+
+const Home = ({ animals, supporting }) => {
+  console.log(animals, supporting)
+  return <HomePage />
+}
+
+export async function getStaticProps() {
+  const { data: animals } = await client.query({
+    query: GET_ANIMALS,
+  })
+
+  const { data: supporting } = await client.query({
+    query: GET_SUPPORTING,
+  })
+
+  return {
+    props: {
+      animals: animals.animalCollection.items,
+      supporting: supporting.supportingCollection.items,
+      fallback: true,
+    },
+  }
+}
+
+Home.propTypes = {
+  animals: arrayOf(
+    shape({
+      name: string,
+      gender: string,
+      age: string,
+    })
+  ).isRequired,
+  supporting: arrayOf(
+    shape({
+      name: string,
+      description: string,
+      url: string,
+    })
+  ).isRequired,
+}
 
 export default Home
