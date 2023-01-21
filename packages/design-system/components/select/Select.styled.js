@@ -42,6 +42,7 @@ export const Icon = styled.span`
   position: absolute;
   right: 15px;
   top: 19px;
+  pointer-events: none;
 
   ${({ theme }) => theme.breakpoints.sm} {
     top: 21px;
