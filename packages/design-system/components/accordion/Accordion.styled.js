@@ -15,6 +15,8 @@ export const Accordion = styled.div`
         return theme.colors.neutrals[100]
       case "primary":
         return theme.colors.neutrals[100]
+      case "black":
+        return theme.colors.grey[600]
       default:
         return theme.colors.grey[600]
     }
@@ -53,16 +55,9 @@ export const Content = styled.div`
 `
 
 export const Icon = styled.div`
-  ${({ activeColor, color }) =>
-    color === "white" &&
-    activeColor === "primary" &&
-    css`
-      transform: rotate(180deg);
-    `}
-  ${({ activeColor, color }) =>
-    color === "black" &&
-    activeColor === "neutrals" &&
-    css`
+  ${(activeColor) =>
+    activeColor &&
+    `
       transform: rotate(180deg);
     `}
   padding: 20px 20px 0px 20px;
