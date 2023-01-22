@@ -1,0 +1,67 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import Textarea from "design-system/components/textarea"
+
+<Meta title="Components/Textarea" component={Textarea} />
+
+# Textarea
+
+<Canvas>
+  <Story
+    name="Overview"
+    args={{
+      label: "Example label",
+      placeholder: "Text placeholder",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - required"
+    args={{
+      label: "Example label",
+      placeholder: "Text placeholder",
+      required: true,
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - disabled"
+    args={{
+      label: "Example label",
+      placeholder: "Text placeholder",
+      disabled: true,
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - error"
+    args={{
+      label: "Example label",
+      placeholder: "Text placeholder",
+      message: "Wpisz poprawne dane",
+      error: true,
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => (
+  <div style={{ maxWidth: "270px" }}>
+    <Textarea {...args} />
+  </div>
+)
