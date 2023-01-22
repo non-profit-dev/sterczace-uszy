@@ -5,6 +5,10 @@ export const Container = styled.h1`
   ${({ variant, theme }) => theme.typography.desktop[variant]};
   color: ${({ color }) => color};
 
+  ${({ theme }) => theme.breakpoints.lg} {
+    ${({ theme, variant }) => theme.typography.tablet[variant]}
+  }
+
   ${({ theme }) => theme.breakpoints.md} {
     ${({ theme, variant }) => theme.typography.tablet[variant]}
   }
