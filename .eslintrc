@@ -8,11 +8,17 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "ignorePatterns": ["packages/frontend/e2e"],
+  "ignorePatterns": [
+    "node_modules",
+    "packages/backend",
+    "packages/frontend/app/out",
+    "packages/design-system/storybook-static"
+  ],
   "extends": [
     "airbnb",
     "prettier",
     "plugin:react/recommended",
+    "plugin:cypress/recommended",
     "plugin:mdx/recommended"
   ],
   "plugins": ["prettier", "react", "check-file"],
@@ -35,7 +41,6 @@
     }
   ],
   "rules": {
-    "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "no-unused-vars": "warn",
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",

@@ -81,6 +81,7 @@ ssl
 nbproject
 public/uploads/*
 !public/uploads/.gitkeep
+.env
 
 ############################
 # Node.js
@@ -99,7 +100,7 @@ package-lock.json
 # Tests
 ############################
 
-testApp
+packages/frontend/e2e/cypress/screenshots
 coverage
 
 ############################
@@ -109,6 +110,6 @@ coverage
 out/
 
 ############################
-# Storybook.js
+# Storybook
 ############################
 packages/design-system/storybook-static
