@@ -39,9 +39,7 @@ export const Accordion = styled.div`
 export const Title = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-left: auto;
   width: 100%;
-  text-decoration: none;
   border-radius: 10px 10px 0px 0px;
   padding: 20px 20px 0px 25px;
 `
@@ -51,14 +49,9 @@ export const Content = styled.div`
   text-decoration: none;
   padding: 20px 20px 20px 20px;
   width: 100%;
-  box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.1);
 `
 
 export const Icon = styled.div`
-  ${(activeColor) =>
-    activeColor &&
-    `
-      transform: rotate(180deg);
-    `}
+  transform: ${(props) => (props.isActive ? "rotate(180deg)" : "rotate(0)")};
   padding: 20px 20px 0px 20px;
 `
