@@ -1,7 +1,9 @@
 import Head from "next/head"
 import { Normalize } from "styled-normalize"
 import { ThemeProvider, Global, css } from "@emotion/react"
-import { node, shape } from "prop-types"
+import { func, shape } from "prop-types"
+// eslint-disable-next-line import/no-unresolved
+import { Analytics } from "@vercel/analytics/react"
 
 import theme from "design-system/theme"
 
@@ -12,6 +14,9 @@ const MyApp = ({ Component, pageProps }) => (
       <Normalize />
       <Global
         styles={css`
+          body {
+            margin: 0;
+          }
           *,
           *::before,
           *::after {
@@ -20,12 +25,13 @@ const MyApp = ({ Component, pageProps }) => (
         `}
       />
       <Component {...pageProps} />
+      <Analytics />
     </ThemeProvider>
   </>
 )
 
 MyApp.propTypes = {
-  Component: node.isRequired,
+  Component: func.isRequired,
   pageProps: shape({}).isRequired,
 }
 

@@ -4,7 +4,7 @@ import theme from "design-system/theme"
 export const ListItem = styled.li`
   display: flex;
   flex-direction: row;
-  align-items: center;s
+  align-items: center;
   justify-content: flex-start;
   gap: 8px;
   background-color: "transparent";
@@ -17,6 +17,7 @@ export const ChildContainer = styled.div`
   color: inherit;
   flex-grow: 0;
   line-height: 30px;
+  gap: ${({ gap }) => `${gap}px`};
 `
 export const ListItemIcon = styled.div`
   display: flex;

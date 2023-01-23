@@ -1,15 +1,17 @@
 name: e2e tests
-on: [deployment_status]
+on: push
 jobs:
-  e2e:
-    if: github.event.deployment_status.state == 'success'
-    runs-on: ubuntu-latest
+  cypress-run:
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Run Cypress
+
+      - name: Cypress run
         uses: cypress-io/github-action@v5
-        env:
-          CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
         with:
+          build: yarn build
+          start: yarn start
+          wait-on: "http://localhost:3000"
+          browser: chrome
           project: ./packages/frontend/e2e

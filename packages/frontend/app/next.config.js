@@ -1,6 +1,10 @@
 /**
  * @type {import('next').NextConfig}
  */
+
+const withPlugins = require("next-compose-plugins")
+const optimizedImages = require("next-optimized-images")
+
 const nextConfig = {
   images: {
     loader: "default",
@@ -20,4 +24,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = withPlugins([[optimizedImages, {}], nextConfig])

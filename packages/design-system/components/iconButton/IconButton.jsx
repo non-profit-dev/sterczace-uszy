@@ -5,8 +5,13 @@ import theme from "design-system/theme"
 
 import * as Styled from "./IconButton.styled"
 
-const IconButton = ({ href, name, color, size, onClick }) => (
-  <Styled.IconButton as={href ? `a` : `button`} href={href} onClick={onClick}>
+const IconButton = ({ href, name, color, size, onClick, ariaLabel }) => (
+  <Styled.IconButton
+    as={href ? `a` : `button`}
+    href={href}
+    onClick={onClick}
+    aria-label={ariaLabel}
+  >
     <Icon name={name} size={size} color={color} />
   </Styled.IconButton>
 )
@@ -17,6 +22,7 @@ IconButton.propTypes = {
   color: string,
   size: oneOf(["small", "medium", "large", "xlarge", "xxlarge"]),
   onClick: func,
+  ariaLabel: string.isRequired,
 }
 
 IconButton.defaultProps = {

@@ -26,10 +26,6 @@ const colors = {
     mainColor: theme.colors.grey[600],
     filledText: theme.colors.neutrals[100],
   },
-  white: {
-    mainColor: theme.colors.neutrals[100],
-    filledText: theme.colors.primary[300],
-  },
 }
 export const Component = styled.a`
   ${({ size }) => sizes[size].typography};
@@ -55,6 +51,20 @@ export const Component = styled.a`
       border-radius: 0;
       padding: 4px;
     `}
+
+  ${({ size }) =>
+    size === "large" &&
+    css`
+      ${theme.breakpoints.md} {
+        ${theme.typography.mobile.bodyLarge};
+        padding: 8px 32px;
+      }
+
+      ${theme.breakpoints.sm} {
+        ${theme.typography.mobile.bodyTitle};
+        padding: 8px 32px;
+      }
+    `}
 `
 
 export const Text = styled.span`
@@ -70,10 +80,35 @@ export const Text = styled.span`
     css`
       border-bottom: 2px solid ${colors[color].mainColor};
     `}
+    :hover {
+    ${({ variant }) =>
+      variant === "text" &&
+      css`
+        text-decoration: underline;
+      `}
+  }
 `
 
 export const Icon = styled.span`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  svg {
+    ${({ size }) =>
+      size === "large" &&
+      css`
+        ${theme.breakpoints.md} {
+          ${theme.typography.mobile.bodyLarge};
+          height: 18px;
+          width: 18px;
+        }
+
+        ${theme.breakpoints.sm} {
+          ${theme.typography.mobile.bodyTitle};
+          height: 16px;
+          width: 16px;
+        }
+      `}
+  }
 `

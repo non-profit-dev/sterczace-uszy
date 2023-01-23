@@ -94,12 +94,13 @@ logs
 results
 node_modules
 .node_history
+package-lock.json
 
 ############################
 # Tests
 ############################
 
-testApp
+packages/frontend/e2e/cypress/screenshots
 coverage
 
 ############################
@@ -120,6 +121,6 @@ build
 out/
 
 ############################
-# Next.js
+# Storybook
 ############################
 packages/design-system/storybook-static
