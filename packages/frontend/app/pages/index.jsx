@@ -5,10 +5,9 @@ import HomePage from "../views/HomePage/HomePage"
 import client from "../lib/api"
 import { GET_ANIMALS, GET_SUPPORTING } from "../lib/queries"
 
-const Home = ({ animals, supporting }) => {
-  console.log(animals, supporting)
-  return <HomePage />
-}
+const Home = ({ animals, supporting }) => (
+  <HomePage animals={animals} supporting={supporting} />
+)
 
 export async function getStaticProps() {
   const { data: animals } = await client.query({

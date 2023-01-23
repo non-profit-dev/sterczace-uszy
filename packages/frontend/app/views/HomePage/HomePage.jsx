@@ -1,76 +1,41 @@
-import { useTheme } from "@emotion/react"
+import { shape, arrayOf, string } from "prop-types"
 
-import TextBanner from "design-system/recipes/textBanner"
-import Button from "design-system/components/button"
-import IconButton from "design-system/components/iconButton"
-
-import ComingSoonImage from "frontend/public/home/comingSoon.png"
-
+import Typography from "design-system/components/typography"
 import Page from "../Page"
-
-import data from "./data"
 
 import * as Styled from "./HomePage.styled"
 
-const HomePage = () => {
-  const theme = useTheme()
-  return (
-    <Page>
-      <Styled.Main>
-        <Styled.Container>
-          <Styled.TextContainer>
-            <TextBanner
-              subtitle="Fundacja sterczące uszy"
-              heading="Strona w budowie"
-              description="Już za chwilę wracamy z nasza nową stroną. Zwierzaki jednak potrzebują pomocy cały czas. Wejdź na stronę ratujemyzwierzaki.pl i wesprzyj naszą fundację ❤"
-              size="large"
-              layout="center"
-              subtitleColor={theme.colors.primary[500]}
-              headingColor={theme.colors.neutrals[100]}
-              descriptionColor={theme.colors.neutrals[100]}
-              button={
-                <Button
-                  text="Przekaż wsparcie"
-                  variant="fill"
-                  color="primary"
-                  href={data.fundraising}
-                  size="large"
-                  target="_blank"
-                />
-              }
-            />
-            <Styled.IconContainer>
-              <IconButton
-                name="facebook"
-                size="large"
-                color={theme.colors.neutrals[100]}
-                href={data.socialMedia.facebook}
-                ariaLabel="Visit our Facebook profile"
-              />
-              <IconButton
-                name="instagram"
-                size="large"
-                color={theme.colors.neutrals[100]}
-                href={data.socialMedia.instagram}
-                ariaLabel="Visit our Instagram profile"
-              />
-              <IconButton
-                name="mail"
-                size="large"
-                color={theme.colors.neutrals[100]}
-                href={`mailto:${data.mail}`}
-                ariaLabel="Send message via email"
-              />
-            </Styled.IconContainer>
-          </Styled.TextContainer>
+const HomePage = ({ animals, supporting }) => (
+  <Page>
+    <Styled.Main>
+      <Typography variant="h4">Zwierzęta fundacji:</Typography>
+      {animals.map((animal) => (
+        <p key={animal.name}>{animal.name}</p>
+      ))}
 
-          <Styled.Background>
-            <Styled.Img src={ComingSoonImage.src} alt="" />
-          </Styled.Background>
-        </Styled.Container>
-      </Styled.Main>
-    </Page>
-  )
+      <Typography variant="h4">Wspierajacy fundację:</Typography>
+      {supporting.map((support) => (
+        <p key={support.name}>{support.name}</p>
+      ))}
+    </Styled.Main>
+  </Page>
+)
+
+HomePage.propTypes = {
+  animals: arrayOf(
+    shape({
+      name: string,
+      gender: string,
+      age: string,
+    })
+  ).isRequired,
+  supporting: arrayOf(
+    shape({
+      name: string,
+      description: string,
+      url: string,
+    })
+  ).isRequired,
 }
 
 export default HomePage
