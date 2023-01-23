@@ -1,8 +1,6 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
 import Accordion from "design-system/components/accordion"
 import Button from "design-system/components/button"
-import Typography from "design-system/components/typography"
-import Icon from "design-system/components/icon"
 
 <Meta title="Components/Accordion" component={Accordion} />
 
@@ -86,157 +84,85 @@ import Icon from "design-system/components/icon"
   </Story>
 </Canvas>
 
-
-
 <ArgsTable />
 
 export const TemplateGrid = (args) => (
-  <div style={{}}>
-    <Accordion {...args}>
-      <Div gap={8}>
-        <Div>
-          <Button color="black" variant="text" text="O nas" size="small">
-            O nas
-          </Button>
-        </Div>
-        <Div>
-          <Button color="black" variant="text" text="Aktualności" size="small">
-            Aktualności
-          </Button>
-        </Div>
-        <Div>
-          <Button
-            color="black"
-            variant="text"
-            text="Opinie"
-            size="small"
-          ></Button>
-        </Div>
-        <Div>
-          <Button
-            variant="text"
-            color="black"
-            text="Partnerzy i Przyjaciele"
-            size="small"
-          ></Button>
-        </Div>
-        <Div>
-          <Button
-            text="Umowa"
-            variant="text"
-            color="black"
-            size="small"
-          ></Button>
-        </Div>
-      </Div>
-    </Accordion>
-  </div>
+  <Accordion {...args}>
+    <Button color="black" variant="text" text="O nas" size="small">
+      O nas
+    </Button>
+    <Button color="black" variant="text" text="Aktualności" size="small">
+      Aktualności
+    </Button>
+    <Button color="black" variant="text" text="Opinie" size="small" />
+    <Button
+      variant="text"
+      color="black"
+      text="Partnerzy i Przyjaciele"
+      size="small"
+    />
+    <Button text="Umowa" variant="text" color="black" size="small" />
+  </Accordion>
 )
 
 export const NewGrid = (args) => (
-  <div style={{}}>
-    <Accordion {...args}>
-      <Div gap={8}>
-        <Div>
-          <Button variant="text" color="white" text="O nas" size="small">
-            O nas
-          </Button>
-        </Div>
-        <Div>
-          <Button variant="text" color="white" text="Aktualności" size="small">
-            Aktualności
-          </Button>
-        </Div>
-        <Div>
-          <Button
-            variant="text"
-            text="Opinie"
-            color="white"
-            size="small"
-          ></Button>
-        </Div>
-        <Div>
-          <Button
-            variant="text"
-            color="white"
-            text="Partnerzy i Przyjaciele"
-            size="small"
-          ></Button>
-        </Div>
-        <Div>
-          <Button
-            variant="text"
-            color="white"
-            text="Umowa"
-            size="small"
-          ></Button>
-        </Div>
-      </Div>
-    </Accordion>
-  </div>
+  <Accordion {...args}>
+    <Button variant="text" color="white" text="O nas" size="small">
+      O nas
+    </Button>
+    <Button variant="text" color="white" text="Aktualności" size="small">
+      Aktualności
+    </Button>
+    <Button variant="text" text="Opinie" color="white" size="small" />
+    <Button
+      variant="text"
+      color="white"
+      text="Partnerzy i Przyjaciele"
+      size="small"
+    />
+    <Button variant="text" color="white" text="Umowa" size="small" />
+  </Accordion>
 )
 
 export const TextTemplate = (args) => (
-  <div style={{}}>
-    <Accordion {...args}>
-      <Div>
-        <Button
-          variant="black"
-          text="Tu wpisz odpowiedź na pytanie"
-          size="small"
-        ></Button>
-      </Div>
-      <Div>
-        <Button variant="gray" text="Button" size="small"></Button>
-      </Div>
-    </Accordion>
-  </div>
+  <Accordion {...args}>
+    <Button variant="black" text="Tu wpisz odpowiedź na pytanie" size="small" />
+    <Button variant="gray" text="Button" size="small" />
+  </Accordion>
 )
 
 export const TextNewTemplate = (args) => (
-  <div style={{}}>
-    <Accordion {...args}>
-      <Div>
-        <Button
-          color="black"
-          text="Tu wpisz odpowiedź na pytanie"
-          size="small"
-          variant="text"
-        ></Button>
-      </Div>
-      <Div>
-        <Button
-          text="Button"
-          variant="text"
-          color="primary"
-          size="small"
-          iconEnd="arrowRight"
-        ></Button>
-      </Div>
-    </Accordion>
-  </div>
+  <Accordion {...args}>
+    <Button
+      color="black"
+      text="Tu wpisz odpowiedź na pytanie"
+      size="small"
+      variant="text"
+    />
+    <Button
+      text="Button"
+      variant="text"
+      color="primary"
+      size="small"
+      iconEnd="arrowRight"
+    />
+  </Accordion>
 )
 
 export const ButtonNewtemplate = (args) => (
-  <div style={{}}>
-    <Accordion {...args}>
-      <Div>
-        <Button
-          color="white"
-          text="Tu wpisz odpowiedź na pytanie"
-          size="small"
-          variant="text"
-        ></Button>
-      </Div>
-      <Div>
-        <Button
-          text="Button"
-          variant="text"
-          color="primary"
-          size="small"
-          iconEnd="arrowRight"
-        ></Button>
-      </Div>
-    </Accordion>
-  </div>
+  <Accordion {...args}>
+    <Button
+      color="white"
+      text="Tu wpisz odpowiedź na pytanie"
+      size="small"
+      variant="text"
+    />
+    <Button
+      text="Button"
+      variant="text"
+      color="primary"
+      size="small"
+      iconEnd="arrowRight"
+    />
+  </Accordion>
 )
