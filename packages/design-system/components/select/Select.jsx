@@ -26,7 +26,11 @@ const Select = ({
           required={required}
         >
           <>
-            {defaultValue && <option>{defaultValue}</option>}
+            {defaultValue && (
+              <option value={convertToValue(defaultValue)}>
+                {defaultValue}
+              </option>
+            )}
             {options.map((option) => (
               <option key={option} value={convertToValue(option)}>
                 {option}
