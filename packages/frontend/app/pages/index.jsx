@@ -20,8 +20,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      animals: animals.animalCollection.items,
-      supporting: supporting.supportingCollection.items,
+      animals: animals.animalCollection,
+      supporting: supporting.supportingCollection,
       fallback: true,
     },
   }
