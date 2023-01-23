@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run --browser chrome"
   },
   "devDependencies": {
     "axe-core": "^4.6.0",
