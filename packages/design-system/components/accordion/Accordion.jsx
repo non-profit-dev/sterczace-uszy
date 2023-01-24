@@ -19,6 +19,7 @@ const Accordion = ({ children, text, color, activeColor }) => {
         <Styled.Icon
           color={isActive ? activeColor : color}
           activeColor={activeColor}
+          isActive={isActive}
         >
           <Icon name="arrowDown" />
         </Styled.Icon>
@@ -38,8 +39,8 @@ const Accordion = ({ children, text, color, activeColor }) => {
 Accordion.propTypes = {
   text: string.isRequired,
   children: node,
-  color: oneOf(["black", "white", "primary", "neutrals"]),
-  activeColor: oneOf(["black", "white", "primary", "neutrals"]),
+  color: oneOf(["black", "white", "primary", "red"]),
+  activeColor: oneOf(["black", "white", "primary", "red"]),
 }
 
 Accordion.defaultProps = {

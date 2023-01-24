@@ -1,5 +1,4 @@
 import styled from "@emotion/styled"
-import { css } from "@emotion/react"
 
 export const Accordion = styled.div`
   display: flex;
@@ -17,6 +16,8 @@ export const Accordion = styled.div`
         return theme.colors.neutrals[100]
       case "black":
         return theme.colors.grey[600]
+      case "red":
+        return theme.colors.grey[600]
       default:
         return theme.colors.grey[600]
     }
@@ -29,7 +30,7 @@ export const Accordion = styled.div`
         return theme.colors.neutrals[100]
       case "primary":
         return theme.colors.primary[500]
-      case "neutrals":
+      case "red":
         return theme.colors.primary[500]
       default:
         return theme.colors.grey[600]
@@ -52,6 +53,6 @@ export const Content = styled.div`
 `
 
 export const Icon = styled.div`
-  transform: ${(props) => (props.isActive ? "rotate(180deg)" : "rotate(0)")};
-  padding: 20px 20px 0px 20px;
+  transform: ${(props) => (props.isActive ? "" : "rotate(180deg)")};
+  padding: 0px 0px 0px 0px;
 `

@@ -10,8 +10,8 @@ import Button from "design-system/components/button"
   <Story
     name="Overview - white with button"
     args={{
-      color: "white",
-      activeColor: "primary",
+      color: "primary",
+      activeColor: "white",
       text: "Fundacja",
     }}
   >
@@ -24,8 +24,8 @@ import Button from "design-system/components/button"
     name="Overview - black with button"
     args={{
       text: "Fundacja",
-      color: "black",
-      activeColor: "neutrals",
+      color: "red",
+      activeColor: "black",
     }}
   >
     {ButtonNewtemplate.bind()}
@@ -37,8 +37,8 @@ import Button from "design-system/components/button"
     name="Overview - white with links"
     args={{
       text: "Fundacja",
-      color: "white",
-      activeColor: "primary",
+      color: "primary",
+      activeColor: "white",
     }}
   >
     {TemplateGrid.bind()}
@@ -50,8 +50,8 @@ import Button from "design-system/components/button"
     name="Overview - black with links"
     args={{
       text: "Fundacja",
-      color: "black",
-      activeColor: "neutrals",
+      color: "red",
+      activeColor: "black",
     }}
   >
     {NewGrid.bind()}
@@ -88,57 +88,56 @@ import Button from "design-system/components/button"
 
 export const TemplateGrid = (args) => (
   <Accordion {...args}>
-    <Button color="black" variant="text" text="O nas" size="small">
+    <Div>
       O nas
-    </Button>
-    <Button color="black" variant="text" text="Aktualności" size="small">
+    </Div>
+    <Div>
       Aktualności
-    </Button>
-    <Button color="black" variant="text" text="Opinie" size="small" />
-    <Button
-      variant="text"
-      color="black"
-      text="Partnerzy i Przyjaciele"
-      size="small"
-    />
-    <Button text="Umowa" variant="text" color="black" size="small" />
+    </Div>
+    <Div>
+      Opinie
+    </Div>
+    <Div>
+      Partnerzy i Przyjaciele
+    </Div>
+    <Div>
+      Umowa
+    </Div>
   </Accordion>
 )
 
 export const NewGrid = (args) => (
   <Accordion {...args}>
-    <Button variant="text" color="white" text="O nas" size="small">
+    <Div>
       O nas
-    </Button>
-    <Button variant="text" color="white" text="Aktualności" size="small">
+    </Div>
+    <Div>
       Aktualności
-    </Button>
-    <Button variant="text" text="Opinie" color="white" size="small" />
-    <Button
-      variant="text"
-      color="white"
-      text="Partnerzy i Przyjaciele"
-      size="small"
-    />
-    <Button variant="text" color="white" text="Umowa" size="small" />
+    </Div>
+    <Div>
+      Opinie
+    </Div>
+    <Div>
+      Partnerzy i Przyjaciele
+    </Div>
+    <Div>
+      Umowa
+    </Div>
   </Accordion>
 )
 
 export const TextTemplate = (args) => (
   <Accordion {...args}>
-    <Button variant="black" text="Tu wpisz odpowiedź na pytanie" size="small" />
-    <Button variant="gray" text="Button" size="small" />
+    <Div>
+      Tu wpisz odpowiedź na pytanie
+    </Div>
   </Accordion>
 )
 
 export const TextNewTemplate = (args) => (
   <Accordion {...args}>
-    <Button
-      color="black"
-      text="Tu wpisz odpowiedź na pytanie"
-      size="small"
-      variant="text"
-    />
+    <Div>Tu wpisz odpowiedź na pytanie </Div>
+   
     <Button
       text="Button"
       variant="text"
@@ -151,12 +150,8 @@ export const TextNewTemplate = (args) => (
 
 export const ButtonNewtemplate = (args) => (
   <Accordion {...args}>
-    <Button
-      color="white"
-      text="Tu wpisz odpowiedź na pytanie"
-      size="small"
-      variant="text"
-    />
+    <Div>Tu wpisz odpowiedź na pytanie </Div>
+   
     <Button
       text="Button"
       variant="text"
