@@ -1,58 +1,48 @@
 import styled from "@emotion/styled"
 
+import theme from "design-system/theme"
+import Typography from "design-system/components/typography"
+
+const colors = {
+  primary: {
+    color: theme.colors.primary[500],
+    backgroundColor: theme.colors.neutrals[100],
+  },
+  black: {
+    color: theme.colors.grey[600],
+    backgroundColor: theme.colors.neutrals[100],
+  },
+  white: {
+    color: theme.colors.neutrals[100],
+    backgroundColor: theme.colors.grey[600],
+  },
+}
+
 export const Accordion = styled.div`
   display: flex;
-  text-decoration: none;
   flex-direction: column;
   align-items: flex-start;
   justify-content: start;
   border-radius: 10px;
   box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.1);
-  background-color: ${({ activeColor, color, theme }) => {
-    switch ((activeColor, color)) {
-      case "white":
-        return theme.colors.neutrals[100]
-      case "primary":
-        return theme.colors.neutrals[100]
-      case "black":
-        return theme.colors.grey[600]
-      case "red":
-        return theme.colors.grey[600]
-      default:
-        return theme.colors.grey[600]
-    }
-  }};
-  color: ${({ activeColor, color, theme }) => {
-    switch ((activeColor, color)) {
-      case "white":
-        return theme.colors.grey[600]
-      case "black":
-        return theme.colors.neutrals[100]
-      case "primary":
-        return theme.colors.primary[500]
-      case "red":
-        return theme.colors.primary[500]
-      default:
-        return theme.colors.grey[600]
-    }
-  }};
+  background-color: ${({ color }) => colors[color].backgroundColor};
+  color: ${({ color }) => colors[color].color};
 `
-export const Title = styled.div`
+
+export const Title = styled(Typography)`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  border-radius: 10px 10px 0px 0px;
-  padding: 20px 20px 0px 25px;
+  padding: 20px;
+  color: ${({ color }) => colors[color].color};
 `
 
 export const Content = styled.div`
-  border-radius: 0px 0px 10px 10px;
-  text-decoration: none;
-  padding: 20px 20px 20px 20px;
-  width: 100%;
+  padding: 0 20px 20px;
 `
 
 export const Icon = styled.div`
+  display: inline-flex;
   transform: ${(props) => (props.isActive ? "" : "rotate(180deg)")};
-  padding: 0px 0px 0px 0px;
 `

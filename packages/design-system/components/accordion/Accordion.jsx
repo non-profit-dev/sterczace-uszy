@@ -1,37 +1,27 @@
 import { string, node, oneOf } from "prop-types"
-import Icon from "design-system/components/icon"
 import React, { useState } from "react"
+
+import Icon from "design-system/components/icon"
+
 import * as Styled from "./Accordion.styled"
 
 const Accordion = ({ children, text, color, activeColor }) => {
   const [isActive, setIsActive] = useState(false)
+
   return (
-    <Styled.Accordion
-      color={isActive ? activeColor : color}
-      activeColor={activeColor}
-    >
+    <Styled.Accordion color={color}>
       <Styled.Title
+        variant="h5"
+        as="div"
         onClick={() => setIsActive(!isActive)}
         color={isActive ? activeColor : color}
-        activeColor={activeColor}
       >
         {text}
-        <Styled.Icon
-          color={isActive ? activeColor : color}
-          activeColor={activeColor}
-          isActive={isActive}
-        >
+        <Styled.Icon color={color} isActive={isActive}>
           <Icon name="arrowDown" />
         </Styled.Icon>
       </Styled.Title>
-      {isActive && (
-        <Styled.Content
-          color={isActive ? activeColor : color}
-          activeColor={activeColor}
-        >
-          {children}
-        </Styled.Content>
-      )}
+      {isActive && <Styled.Content color={color}>{children}</Styled.Content>}
     </Styled.Accordion>
   )
 }
@@ -39,8 +29,8 @@ const Accordion = ({ children, text, color, activeColor }) => {
 Accordion.propTypes = {
   text: string.isRequired,
   children: node,
-  color: oneOf(["black", "white", "primary", "red"]),
-  activeColor: oneOf(["black", "white", "primary", "red"]),
+  color: oneOf(["black", "white", "primary"]),
+  activeColor: oneOf(["black", "primary"]),
 }
 
 Accordion.defaultProps = {

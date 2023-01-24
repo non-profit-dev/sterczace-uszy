@@ -1,6 +1,11 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+import { useTheme } from "@emotion/react"
+
 import Accordion from "design-system/components/accordion"
 import Button from "design-system/components/button"
+import Typography from "design-system/components/typography"
+import List from "design-system/components/list"
+import ListItem from "design-system/components/listItem"
 
 <Meta title="Components/Accordion" component={Accordion} />
 
@@ -8,156 +13,102 @@ import Button from "design-system/components/button"
 
 <Canvas>
   <Story
-    name="Overview - white with button"
+    name="Overview - black"
     args={{
-      color: "primary",
-      activeColor: "white",
-      text: "Fundacja",
-    }}
-  >
-    {TextNewTemplate.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="Overview - black with button"
-    args={{
-      text: "Fundacja",
-      color: "red",
+      color: "black",
       activeColor: "black",
-    }}
-  >
-    {ButtonNewtemplate.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="Overview - white with links"
-    args={{
       text: "Fundacja",
-      color: "primary",
-      activeColor: "white",
     }}
   >
-    {TemplateGrid.bind()}
+    {TemplateBlack.bind()}
   </Story>
 </Canvas>
 
 <Canvas>
   <Story
-    name="Overview - black with links"
-    args={{
-      text: "Fundacja",
-      color: "red",
-      activeColor: "black",
-    }}
-  >
-    {NewGrid.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="Overview - black and white"
+    name="Overview - black with primary active"
     args={{
       text: "Fundacja",
       color: "black",
-      activeColor: "black",
+      activeColor: "primary",
     }}
   >
-    {NewGrid.bind()}
+    {TemplateBlack.bind()}
   </Story>
 </Canvas>
 
 <Canvas>
   <Story
-    name="Overview - white and black"
+    name="Overview - white with primary active"
     args={{
       text: "Fundacja",
       color: "white",
-      activeColor: "white",
+      activeColor: "primary",
     }}
   >
-    {TemplateGrid.bind()}
+    {TemplateWhitePrimary.bind()}
   </Story>
 </Canvas>
 
 <ArgsTable />
 
-export const TemplateGrid = (args) => (
-  <Accordion {...args}>
-    <Div>
-      O nas
-    </Div>
-    <Div>
-      Aktualności
-    </Div>
-    <Div>
-      Opinie
-    </Div>
-    <Div>
-      Partnerzy i Przyjaciele
-    </Div>
-    <Div>
-      Umowa
-    </Div>
-  </Accordion>
-)
+export const TemplateBlack = (args) => {
+  const theme = useTheme()
+  return (
+    <Accordion {...args}>
+      <Typography color={theme.colors.grey[600]} variant="bodySmall">
+        Tu wpisz odpowiedź na pytanie
+      </Typography>
+      <Button
+        text="Button"
+        variant="text"
+        color="primary"
+        size="small"
+        iconEnd="arrowRight"
+      />
+    </Accordion>
+  )
+}
 
-export const NewGrid = (args) => (
+export const TemplateWhitePrimary = (args) => (
   <Accordion {...args}>
-    <Div>
-      O nas
-    </Div>
-    <Div>
-      Aktualności
-    </Div>
-    <Div>
-      Opinie
-    </Div>
-    <Div>
-      Partnerzy i Przyjaciele
-    </Div>
-    <Div>
-      Umowa
-    </Div>
-  </Accordion>
-)
-
-export const TextTemplate = (args) => (
-  <Accordion {...args}>
-    <Div>
-      Tu wpisz odpowiedź na pytanie
-    </Div>
-  </Accordion>
-)
-
-export const TextNewTemplate = (args) => (
-  <Accordion {...args}>
-    <Div>Tu wpisz odpowiedź na pytanie </Div>
-   
-    <Button
-      text="Button"
-      variant="text"
-      color="primary"
-      size="small"
-      iconEnd="arrowRight"
-    />
-  </Accordion>
-)
-
-export const ButtonNewtemplate = (args) => (
-  <Accordion {...args}>
-    <Div>Tu wpisz odpowiedź na pytanie </Div>
-   
-    <Button
-      text="Button"
-      variant="text"
-      color="primary"
-      size="small"
-      iconEnd="arrowRight"
-    />
+    <List gap={4}>
+      <ListItem>
+        <Button
+          variant="text"
+          color="white"
+          size="small"
+          text="O nas"
+          href="#"
+        />
+      </ListItem>
+      <ListItem>
+        <Button
+          variant="text"
+          color="white"
+          size="small"
+          text="Aktualności"
+          href="#"
+        />
+      </ListItem>
+      <ListItem>
+        <Button
+          variant="text"
+          color="white"
+          size="small"
+          text="Opinie"
+          href="#"
+        />
+      </ListItem>
+      <ListItem>
+        <Button
+          variant="text"
+          color="white"
+          size="small"
+          text="Partnerzy"
+          href="#"
+        />
+      </ListItem>
+    </List>
   </Accordion>
 )
