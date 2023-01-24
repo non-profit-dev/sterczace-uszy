@@ -1,0 +1,45 @@
+import styled from "@emotion/styled"
+
+export const Navigation = styled.nav`
+  width: 100%;
+  background: ${({ theme }) => theme.colors.neutrals[100]};
+  padding: 28px 0;
+`
+
+export const NavigationRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const Menu = styled.div`
+  display: flex;
+  gap: 48px;
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    display: none;
+  }
+`
+
+export const MenuButton = styled.div`
+  position: relative;
+`
+
+export const Dropdown = styled.div`
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 280px;
+  padding: 20px;
+  background: ${({ theme }) => theme.colors.neutrals[100]};
+  border-radius: 4px;
+`
+
+export const MenuIcon = styled.div`
+  display: none;
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    display: inline-flex;
+  }
+`
