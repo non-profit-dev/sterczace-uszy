@@ -28,13 +28,12 @@ const Accordion = ({ children, text, color, activeColor }) => {
 
 Accordion.propTypes = {
   text: string.isRequired,
-  children: node,
+  children: node.isRequired,
   color: oneOf(["black", "white", "primary"]),
   activeColor: oneOf(["black", "primary"]),
 }
 
 Accordion.defaultProps = {
-  children: null,
   color: "black",
   activeColor: "black",
 }
