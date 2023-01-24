@@ -18,7 +18,7 @@ const Accordion = ({ children, text, color, activeColor }) => {
       >
         {text}
         <Styled.Icon color={color} isActive={isActive}>
-          <Icon name="arrowDown" />
+          <Icon name="arrowUp" />
         </Styled.Icon>
       </Styled.Title>
       {isActive && <Styled.Content color={color}>{children}</Styled.Content>}
