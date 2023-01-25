@@ -23,20 +23,8 @@ export const Logo = styled.div`
   display: inline-flex;
   margin-top: 60px;
 
-  ${({ theme }) => theme.breakpoints.desktop} {
-    margin: 60px 30px 0px 30px;
-  }
-
-  ${({ theme }) => theme.breakpoints.tablet} {
-    margin: 60px 45px 0px 45px;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    margin: 60px 20px 0px 20px;
-  }
-
   ${({ theme }) => theme.breakpoints.mobile} {
-    margin: 32px 24px 0px 24px;
+    margin-top: 32px;
   }
 `
 
@@ -44,27 +32,26 @@ export const Content = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 60px auto 32px auto;
+  margin-top: 60px;
+  margin-bottom: 32px;
   gap: 80px;
 
   ${({ theme }) => theme.breakpoints.desktop} {
-    margin: 60px 30px 32px 30px;
     gap: 50px;
   }
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     gap: 40px;
-    margin: 32px 45px 64px 45px;
     flex-direction: column;
   }
 
   ${({ theme }) => theme.breakpoints.tablet} {
-    gap: 40px;
-    margin: 32px 20px 64px 20px;
+    margin-top: 32px;
+    margin-bottom: 64px;
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    margin: 32px 24px 32px 24px;
+    margin-bottom: 32px;
     gap: 32px;
   }
 `
@@ -81,7 +68,7 @@ export const MainFoundationData = styled.div`
     gap: 20px;
   }
 
-  ${({ theme }) => theme.breakpoints.mobile} {
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     flex-direction: column;
     justify-content: flex-start;
     gap: 32px;
@@ -100,7 +87,7 @@ export const Sections = styled.div`
     gap: 20px;
   }
 
-  ${({ theme }) => theme.breakpoints.mobile} {
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     flex-direction: column;
     gap: 32px;
   }
@@ -114,14 +101,14 @@ export const Section = styled.div`
 export const Icons = styled.div`
   display: inline-flex;
 
-  ${({ theme }) => theme.breakpoints.mobile} {
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     display: none;
   }
 `
 export const IconsMobile = styled.div`
   display: none;
 
-  ${({ theme }) => theme.breakpoints.mobile} {
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     display: inline-flex;
   }
 `
@@ -129,20 +116,4 @@ export const IconsMobile = styled.div`
 export const Copyright = styled.div`
   display: flex;
   justify-content: space-between;
-
-  ${({ theme }) => theme.breakpoints.desktop} {
-    margin: 0px 30px;
-  }
-
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    margin: 0px 45px;
-  }
-
-  ${({ theme }) => theme.breakpoints.tablet} {
-    margin: 0px 20px;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobile} {
-    margin: 0px 24px;
-  }
 `
