@@ -46,8 +46,9 @@ const TextBanner = ({
   subtitleColor,
   headingColor,
   descriptionColor,
+  className,
 }) => (
-  <Styled.TextBanner layout={layout} size={size}>
+  <Styled.TextBanner layout={layout} size={size} className={className}>
     <Styled.Subtitle variant={sizes[size].subtitle} color={subtitleColor}>
       {subtitle}
     </Styled.Subtitle>
@@ -73,6 +74,7 @@ TextBanner.propTypes = {
   subtitleColor: string,
   headingColor: string,
   descriptionColor: string,
+  className: string,
 }
 
 TextBanner.defaultProps = {
@@ -83,6 +85,7 @@ TextBanner.defaultProps = {
   subtitleColor: theme.colors.primary[500],
   headingColor: theme.colors.grey[600],
   descriptionColor: theme.colors.grey[500],
+  className: null,
 }
 
 export default TextBanner

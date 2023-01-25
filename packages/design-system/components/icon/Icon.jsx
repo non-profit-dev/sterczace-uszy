@@ -71,7 +71,7 @@ export const icons = {
   hamburger: Hamburger,
 }
 
-const Icon = ({ name, color, size }) => {
+const Icon = ({ name, color, size, className }) => {
   const IconComponent = icons[name]
 
   return (
@@ -80,6 +80,7 @@ const Icon = ({ name, color, size }) => {
       width={sizes[size].width}
       height={sizes[size].height}
       title={name}
+      className={className}
     />
   )
 }
@@ -88,11 +89,13 @@ Icon.propTypes = {
   name: oneOf(Object.keys(icons)).isRequired,
   color: string,
   size: oneOf(Object.keys(sizes)),
+  className: string,
 }
 
 Icon.defaultProps = {
   color: "primary",
   size: "medium",
+  className: null,
 }
 
 export default Icon
