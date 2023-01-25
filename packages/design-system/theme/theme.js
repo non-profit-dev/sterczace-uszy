@@ -260,11 +260,12 @@ const theme = {
     },
   },
   breakpoints: getBreakpoints({
-    sm: 587,
-    md: 768,
-    lg: 992,
-    xl: 1200,
-    xxl: 1300,
+    mobile: 390,
+    mobileLg: 587,
+    tablet: 744,
+    tabletLg: 992,
+    desktopSm: 1200,
+    desktop: 1400,
   }),
 }
 
