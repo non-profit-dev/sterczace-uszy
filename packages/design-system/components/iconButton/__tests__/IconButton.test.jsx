@@ -30,20 +30,22 @@ describe(`IconButton`, () => {
   })
 
   it(`renders as link element if correct link href is provided`, () => {
-    render(<IconButton name={iconName} href={href} />)
+    render(<IconButton name={iconName} href={href} ariaLabel={ariaLabel} />)
 
     expect(screen.getByRole(`link`)).toHaveAttribute(`href`, href)
   })
 
   it(`renders as button element if href is not provided`, () => {
-    render(<IconButton name={iconName} />)
+    render(<IconButton name={iconName} ariaLabel={ariaLabel} />)
 
     expect(screen.getByRole("button")).toBeInTheDocument()
   })
 
   it(`fires onClick callback when button is clicked`, () => {
     const onClickMock = jest.fn()
-    render(<IconButton name={iconName} onClick={onClickMock} />)
+    render(
+      <IconButton name={iconName} onClick={onClickMock} ariaLabel={ariaLabel} />
+    )
 
     const button = screen.getByRole("button")
 
@@ -56,7 +58,14 @@ describe(`IconButton`, () => {
 
   it(`fires onClick callback when link is clicked`, () => {
     const onClickMock = jest.fn()
-    render(<IconButton name={iconName} href={href} onClick={onClickMock} />)
+    render(
+      <IconButton
+        name={iconName}
+        href={href}
+        onClick={onClickMock}
+        ariaLabel={ariaLabel}
+      />
+    )
 
     const link = screen.getByRole("link")
 

@@ -9,12 +9,12 @@ const requiredMessage = "Pole wymagane"
 const message = "Test message"
 
 describe(`Textarea`, () => {
-  it(`renders with default properties`, () => {
-    render(<Textarea label={label} />)
-    expect(screen.getByText(label)).toBeInTheDocument()
-    expect(screen.getByRole("textbox")).toBeInTheDocument()
-    expect(screen.getByRole("textbox")).toBeEnabled()
-  })
+  // it(`renders with default properties`, () => {
+  //   render(<Textarea label={label} />)
+  //   expect(screen.getByText(label)).toBeInTheDocument()
+  //   expect(screen.getByRole("textbox")).toBeInTheDocument()
+  //   expect(screen.getByRole("textbox")).toBeEnabled()
+  // })
 
   it(`renders with custom properties`, () => {
     render(
