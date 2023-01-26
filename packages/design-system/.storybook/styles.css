@@ -1,3 +1,8 @@
+body {
+  font-family: "Poppins";
+  color: #313138;
+}
+
 /* Custom CSS styles for the icons gallery */
 div.docblock-icongallery {
   margin-top: 20px;
@@ -24,4 +29,17 @@ div.docblock-icongallery {
 .docblock-icongallery > div > div:last-of-type {
   margin: 0;
   color: #778;
+}
+
+/* Custom styles for the description below the component's name */
+.sbdocs-content > h1 + p {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* Component's import styles, below the heading or description */
+.sbdocs-content > h1 > code,
+.sbdocs-content > p > code {
+  font-size: 14px;
+  background: #f0f2f5;
 }

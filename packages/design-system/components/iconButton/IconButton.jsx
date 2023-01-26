@@ -26,11 +26,17 @@ const IconButton = ({
 )
 
 IconButton.propTypes = {
+  /**
+   * The URL that the component should redirect to when clicked.
+   */
   href: string,
   name: oneOf(Object.keys(icons)).isRequired,
   color: string,
   size: oneOf(["small", "medium", "large", "xlarge", "xxlarge"]),
   onClick: func,
+  /**
+   * It's used to provide a text description for assistive technologies, like screen readers.
+   */
   ariaLabel: string.isRequired,
   target: string,
 }
