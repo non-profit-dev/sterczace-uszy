@@ -7,6 +7,7 @@ export const Label = styled.label`
 
 export const Container = styled.div`
   position: relative;
+  margin-top: 8px;
 `
 
 export const Select = styled.select`
@@ -18,7 +19,6 @@ export const Select = styled.select`
   appearance: none;
   width: 100%;
   padding: 12px 40px 12px 10px;
-  margin-top: 8px;
   background: ${({ theme }) => theme.colors.neutrals[100]};
   border: 1px solid ${({ theme }) => theme.colors.grey[400]};
   border-radius: 10px;
@@ -39,14 +39,14 @@ export const Select = styled.select`
 `
 
 export const Icon = styled.span`
+  display: inline-flex;
   position: absolute;
   right: 15px;
-  top: 19px;
+  top: 50%;
+  transform: translateY(-50%);
   pointer-events: none;
 
   ${({ theme }) => theme.breakpoints.sm} {
-    top: 21px;
-
     svg {
       height: 20px;
     }
