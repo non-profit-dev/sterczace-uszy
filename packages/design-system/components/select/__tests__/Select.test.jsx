@@ -33,12 +33,16 @@ describe(`Select`, () => {
     expect(screen.getByRole("combobox")).toBeDisabled()
   })
 
-  it(`renders with first option selected, changes selected value to chosen option  `, () => {
+  it(`renders with first option selected`, () => {
     render(<Select label={label} options={["test1", "test2", "test3"]} />)
 
     expect(screen.getByRole("option", { name: "test1" }).selected).toBe(true)
     expect(screen.getByRole("option", { name: "test2" }).selected).toBe(false)
     expect(screen.getByRole("option", { name: "test3" }).selected).toBe(false)
+  })
+
+  it(`changes selected value to chosen option`, () => {
+    render(<Select label={label} options={["test1", "test2", "test3"]} />)
 
     userEvent.selectOptions(screen.getByRole("combobox"), "test3")
 
