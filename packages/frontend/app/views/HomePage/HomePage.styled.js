@@ -14,7 +14,7 @@ export const Container = styled.div`
   display: grid;
   align-items: center;
 
-  ${({ theme }) => theme.breakpoints.xl} {
+  ${({ theme }) => theme.breakpoints.desktopSm} {
     align-items: start;
     justify-content: center;
   }
@@ -26,7 +26,7 @@ export const TextContainer = styled.div`
   max-width: 620px;
   padding: 48px 40px;
 
-  ${({ theme }) => theme.breakpoints.sm} {
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -41,16 +41,16 @@ export const Background = styled.div`
   height: 100%;
   max-height: 1000px;
 
-  ${({ theme }) => theme.breakpoints.xl} {
+  ${({ theme }) => theme.breakpoints.desktopSm} {
     max-height: 700px;
     transform: translateX(0);
   }
 
-  ${({ theme }) => theme.breakpoints.lg} {
+  ${({ theme }) => theme.breakpoints.tablet} {
     max-height: 500px;
   }
 
-  ${({ theme }) => theme.breakpoints.sm} {
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     max-height: 50vh;
   }
 `
@@ -61,7 +61,7 @@ export const Img = styled.img`
   object-fit: contain;
   background-color: ${({ theme }) => theme.colors.grey[600]};
 
-  ${({ theme }) => theme.breakpoints.sm} {
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     object-fit: cover;
     object-position: top;
   }
@@ -72,7 +72,7 @@ export const IconContainer = styled.div`
   justify-content: center;
   margin-top: 50px;
   gap: 5px;
-  ${({ theme }) => theme.breakpoints.sm} {
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     margin-top: 20px;
   }
 `
