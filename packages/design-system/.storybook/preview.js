@@ -33,6 +33,11 @@ export const parameters = {
       },
     },
   },
+  docs: {
+    source: {
+      state: "open",
+    },
+  },
 }
 
 export const decorators = [
