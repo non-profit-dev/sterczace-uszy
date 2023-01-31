@@ -53,7 +53,13 @@ const Input = ({
 Input.propTypes = {
   label: string.isRequired,
   placeholder: string,
+  /**
+   * The state of the input, whether it is valid or has an error.
+   */
   state: oneOf(["valid", "error"]),
+  /**
+   * Additional message to display below the input.
+   */
   message: string,
   required: bool,
   disabled: bool,

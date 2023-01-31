@@ -87,6 +87,9 @@ const Icon = ({ name, color, size }) => {
 Icon.propTypes = {
   name: oneOf(Object.keys(icons)).isRequired,
   color: string,
+  /**
+   * The small, medium and large sizes have square proportions that fit most of the icons we use.
+   */
   size: oneOf(Object.keys(sizes)),
 }
 

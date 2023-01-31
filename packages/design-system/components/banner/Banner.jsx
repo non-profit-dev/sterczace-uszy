@@ -11,6 +11,9 @@ const Banner = ({ heading, button }) => (
 
 Banner.propTypes = {
   heading: string.isRequired,
+  /**
+   * An optional button component that can be displayed right after the heading.
+   */
   button: node,
 }
 
