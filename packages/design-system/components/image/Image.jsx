@@ -6,7 +6,13 @@ const Image = ({ src, alt, className }) => (
 )
 
 Image.propTypes = {
+  /**
+   * The alternate text for the image.
+   */
   alt: string,
+  /**
+   * The source URL of the image.
+   */
   src: string,
   className: string,
 }

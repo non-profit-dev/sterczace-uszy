@@ -22,10 +22,25 @@ const Title = ({ text, badge, iconStart, iconEnd, size, variant, count, classNam
 )
 
 Title.propTypes = {
+  /**
+   * Text that's displayed as the title.
+   */
   text: string.isRequired,
+  /**
+   * If provided, it renders the Badge at the end of the component.
+   */
   badge: string,
+  /**
+   * The name of the icon to be displayed at the start of the title's text.
+   */
   iconStart: string,
+  /**
+   * The name of the icon to be displayed at the end of the title's text.
+   */
   iconEnd: string,
+  /**
+   * If provided, it renders the Count component at the start of the title's text.
+   */
   count: number,
   size: oneOf(["small", "medium", "large"]),
   variant: oneOf(["text", "textLine"]),

@@ -9,6 +9,9 @@ const Badge = ({ variant, size, text, className }) => (
 )
 
 Badge.propTypes = {
+  /**
+   * A text simply displayed inside the component.
+   */
   text: string.isRequired,
   variant: oneOf(["primary", "neutrals", "gray"]),
   size: oneOf(["small", "medium", "large"]),

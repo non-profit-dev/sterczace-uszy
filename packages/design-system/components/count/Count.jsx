@@ -7,6 +7,9 @@ const Count = ({ count, size, className }) => (
 )
 
 Count.propTypes = {
+  /**
+   * The number value that's displayed as a component.
+   */
   count: number.isRequired,
   size: oneOf(["small", "medium", "large", "xlarge", "xxlarge"]),
   className : string,

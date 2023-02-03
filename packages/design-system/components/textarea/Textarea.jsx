@@ -49,6 +49,9 @@ Textarea.propTypes = {
   label: string.isRequired,
   placeholder: string,
   error: bool,
+  /**
+   * Additional message to display below the input.
+   */
   message: string,
   required: bool,
   disabled: bool,
