@@ -2,7 +2,7 @@ import userEvent from "@testing-library/user-event"
 
 import { render, screen } from "design-system/test-utils"
 
-import Textarea from "design-system/components/input"
+import Textarea from "design-system/components/textarea"
 
 const label = "Example label"
 const requiredMessage = "Pole wymagane"
@@ -66,7 +66,7 @@ describe(`Textarea`, () => {
   })
 
   it("has error icon when state is error", async () => {
-    render(<Textarea label={label} state="error" />)
+    render(<Textarea label={label} error />)
 
     const icon = screen.getByTitle("error")
     expect(icon).toBeVisible()

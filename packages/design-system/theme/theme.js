@@ -21,6 +21,7 @@ const theme = {
       300: "#F5989F",
       400: "#EF5460",
       500: "#C1121F",
+      600: "#A0151F",
     },
     neutrals: {
       100: "#FFFEFE",
@@ -35,10 +36,12 @@ const theme = {
       300: "#C4C4C4",
       400: "#818181",
       500: "#414141",
-      600: "#020202",
+      600: "#0C0C0C",
+      700: "#020202",
     },
     complementary: {
-      100: "#FEF8EC",
+      100: "#FAF4F4",
+      200: "#F0DBDA",
     },
     blue: {
       100: "#0D99FF",
@@ -260,11 +263,12 @@ const theme = {
     },
   },
   breakpoints: getBreakpoints({
-    sm: 587,
-    md: 768,
-    lg: 992,
-    xl: 1200,
-    xxl: 1300,
+    mobile: 390,
+    mobileLg: 587,
+    tablet: 744,
+    tabletLg: 992,
+    desktopSm: 1200,
+    desktop: 1400,
   }),
 }
 
