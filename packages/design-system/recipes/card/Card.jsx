@@ -46,10 +46,16 @@ const Card = ({
 )
 
 Card.propTypes = {
+  /**
+   * The main heading of the card.
+   */
   title: node.isRequired,
   bgColor: oneOfType([object, string]),
   button: node,
   children: node,
+  /**
+   * The URL that the card should redirect to when clicked.
+   */
   href: string,
   illustrationName: string,
   imageAlt: string,

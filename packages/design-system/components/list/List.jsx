@@ -7,6 +7,9 @@ const List = ({ gap, children }) => (
 )
 
 List.propTypes = {
+  /**
+   * The spacing between the list's items.
+   */
   gap: number,
   children: node.isRequired,
 }

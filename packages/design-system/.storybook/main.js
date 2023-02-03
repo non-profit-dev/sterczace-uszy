@@ -9,8 +9,9 @@ module.exports = {
   ],
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
+    "@storybook/addon-viewport",
     "@storybook/addon-controls",
+    "@storybook/addon-docs",
   ],
   framework: "@storybook/react",
   core: {
