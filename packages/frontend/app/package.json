@@ -11,10 +11,12 @@
     "deploy": "next build && next export"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.4",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@next/env": "^12.3.0",
     "@vercel/analytics": "^0.1.8",
+    "graphql": "^16.6.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
@@ -22,13 +24,13 @@
     "next": "^11.0.0",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
+    "normalize.css": "^8.0.1",
     "prop-types": "^15.8.1",
     "qs": "^6.10.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-markdown": "^4.2.2",
-    "react-moment": "^0.9.6",
-    "styled-normalize": "^8.0.7"
+    "react-moment": "^0.9.6"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.1"

@@ -1,10 +1,11 @@
 import React from "react"
 import { ThemeProvider, Global, css } from "@emotion/react"
-import { Normalize } from "styled-normalize"
 
 import theme from "design-system/theme"
 
 import "./styles.css"
+
+import "normalize.css/normalize.css"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -43,7 +44,6 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <ThemeProvider theme={theme}>
-      <Normalize />
       <Global
         styles={css`
           *,
