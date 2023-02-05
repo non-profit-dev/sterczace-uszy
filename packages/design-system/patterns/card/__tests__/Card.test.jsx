@@ -1,6 +1,6 @@
 import { render, screen } from "design-system/test-utils"
 
-import Card from "design-system/recipes/card"
+import Card from "design-system/patterns/card"
 
 const Title = () => <div>Title</div>
 const ChildComponent = () => <div>Child component</div>
@@ -10,7 +10,7 @@ const imageSrc =
 const alt = "dog"
 const href = "https://google.com"
 
-describe(`Card recipes`, () => {
+describe(`Card`, () => {
   it(`renders with default properties`, () => {
     render(<Card title={<Title />} />)
     expect(screen.getByText("Title")).toBeInTheDocument()
