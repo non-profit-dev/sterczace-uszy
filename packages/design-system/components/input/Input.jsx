@@ -1,7 +1,7 @@
 import { bool, oneOf, string } from "prop-types"
 import Icon from "design-system/components/icon"
 import Typography from "design-system/components/typography"
-import theme from "design-system/theme"
+import theme from "design-system/tokens/theme"
 
 import * as Styled from "./Input.styled"
 

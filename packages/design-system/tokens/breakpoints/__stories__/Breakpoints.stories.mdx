@@ -1,0 +1,26 @@
+import { Meta, Canvas } from "@storybook/addon-docs"
+
+import breakpoints from "design-system/tokens/breakpoints"
+
+<Meta
+  title="Tokens/Breakpoints"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+# Breakpoints
+
+A helper to handle media queries. It gives you different max-width sizes to use within a mediaquery.
+
+<Canvas>
+  {Object.entries(breakpoints).map((breakpoint) => (
+    <p key={breakpoint}>
+      {breakpoint[0]} - {breakpoint[1]}
+    </p>
+  ))}
+</Canvas>
+
+---

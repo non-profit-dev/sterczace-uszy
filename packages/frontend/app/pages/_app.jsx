@@ -6,7 +6,7 @@ import { ApolloProvider } from "@apollo/client"
 // eslint-disable-next-line import/no-unresolved
 import { Analytics } from "@vercel/analytics/react"
 
-import theme from "design-system/theme"
+import theme from "design-system/tokens/theme"
 
 import client from "../lib/api"
 
