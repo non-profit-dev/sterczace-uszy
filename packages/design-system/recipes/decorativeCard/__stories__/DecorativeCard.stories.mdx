@@ -1,0 +1,29 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import DecorativeCard from "design-system/recipes/decorativeCard"
+
+<Meta title="Recipes/DecorativeCard" component={DecorativeCard} />
+
+# DecorativeCard
+
+It's a flexible component .....
+
+`import DecorativeCard from "design-system/recipes/decorativeCard"`
+
+<Canvas>
+  <Story
+    name="Overview - simple"
+    args={{
+      titleText: "Sterczących uszu",
+      illustrationName: "heartWithDogFace",
+      count: 40,
+      size: "xxlarge",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => <DecorativeCard {...args} />
