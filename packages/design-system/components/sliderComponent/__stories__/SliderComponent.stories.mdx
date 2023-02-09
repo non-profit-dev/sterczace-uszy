@@ -1,0 +1,70 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+import React from "react"
+import Button from "design-system/components/button"
+import Card from "design-system/recipes/card"
+import SliderComponent from "design-system/components/sliderComponent"
+
+<Meta title="Components/SliderComponent" component={SliderComponent} />
+
+#SliderComponent
+
+<Canvas>
+  <Story
+    name="Overview - With Cards as Children"
+    args={{
+      children: (
+        <>
+          <Card
+            title="Child Card 1"
+            illustrationName="heartWithDogFace"
+            imageAlt="child 1"
+            imageSrc="https://picsum.photos/200/300"
+            bgColor="#F5989F"
+            button={
+              <Button
+                text="Button"
+                variant="textLine"
+                size="small"
+                href="https://google.com"
+              />
+            }
+          />
+          <Card
+            title="Child Card 2"
+            illustrationName="heartWithDogFace"
+            imageAlt="child 2"
+            imageSrc="https://picsum.photos/200/300"
+            bgColor="#F5989F"
+            button={
+              <Button
+                text="Button"
+                variant="fill"
+                size="small"
+                href="https://google.com"
+              />
+            }
+          />
+          <Card
+            title="Child Card 3"
+            illustrationName="heartWithDogFace"
+            imageAlt="child 3"
+            imageSrc="https://picsum.photos/200/300"
+            bgColor="#F5989F"
+            button={
+              <Button
+                text="Button"
+                variant="fill"
+                size="small"
+                href="https://google.com"
+              />
+            }
+          />
+        </>
+      ),
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+<ArgsTable />
+export const Template = (args) => <SliderComponent {...args} />

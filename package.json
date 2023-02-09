@@ -45,6 +45,8 @@
   },
   "dependencies": {
     "@commitlint/cli": "^17.1.2",
-    "cypress-axe": "^1.2.0"
+    "cypress-axe": "^1.2.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   }
 }
