@@ -1,7 +1,7 @@
 import React from "react"
 import { ThemeProvider, Global, css } from "@emotion/react"
 
-import theme from "design-system/theme"
+import theme from "../tokens/theme"
 
 import "./styles.css"
 
@@ -32,6 +32,11 @@ export const parameters = {
           height: "667px",
         },
       },
+    },
+  },
+  options: {
+    storySort: {
+      order: ["Tokens", "Components", "Blocks", "Patterns"],
     },
   },
   docs: {

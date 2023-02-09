@@ -1,6 +1,6 @@
 import { arrayOf, shape, string } from "prop-types"
 
-import HomePage from "../views/HomePage/HomePage"
+import HomePage from "../templates/HomePage/HomePage"
 
 import client from "../lib/api"
 import { GET_ANIMALS, GET_SUPPORTING } from "../lib/queries"

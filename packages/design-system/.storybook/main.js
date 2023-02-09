@@ -1,12 +1,5 @@
 module.exports = {
-  stories: [
-    "../components/**/__stories__/*.stories.@(mdx|jsx)",
-    "../recipes/**/__stories__/*.stories.@(mdx|jsx)",
-    "../icons/__stories__/*.stories.@(mdx|jsx)",
-    "../illustrations/__stories__/*.stories.@(mdx|jsx)",
-    "../theme/__stories__/*.stories.@(mdx|jsx)",
-    "../templates/**/__stories__/*.stories.@(mdx|jsx)",
-  ],
+  stories: ["../**/**/__stories__/*.stories.mdx"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-viewport",
