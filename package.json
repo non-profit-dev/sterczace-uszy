@@ -6,9 +6,9 @@
     "develop": "yarn --cwd packages/frontend/app develop",
     "start": "yarn --cwd packages/frontend/app start",
     "build": "yarn --cwd packages/frontend/app build",
+    "deploy:frontend": "yarn --cwd packages/frontend/app deploy",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy:frontend": "yarn --cwd packages/frontend/app deploy",
     "lint": "eslint . --ext js,jsx,mdx",
     "lint:fix": "yarn lint --fix",
     "cypress:open": "yarn --cwd packages/frontend/e2e cypress:open",
@@ -22,7 +22,9 @@
     "packages/design-system"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@svgr/webpack": "^6.4.0",
     "cross-env": "7.0.3",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -39,26 +41,22 @@
     "husky": "^8.0.1",
     "npm-run-all": "4.1.5",
     "prettier": "^2.7.1",
-    "wait-on": "7.0.1",
-    "@storybook/addon-controls": "^6.5.12",
-    "@storybook/addon-links": "^6.5.12",
-    "@storybook/addons": "^6.5.16",
-    "@storybook/builder-webpack5": "^6.5.12",
-    "@storybook/manager-webpack5": "^6.5.12",
-    "@storybook/react": "^6.5.12",
-    "@storybook/testing-library": "^0.0.13",
-    "@storybook/theming": "^6.5.16",
-    "@svgr/webpack": "^6.4.0"
+    "wait-on": "7.0.1"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@storybook/addon-docs": "^6.5.15",
     "@storybook/addon-viewport": "^6.5.15",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "@commitlint/cli": "^17.1.2",
-    "cypress-axe": "^1.2.0",
-    "normalize.css": "^8.0.1"
+    "@storybook/addon-controls": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/addons": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/theming": "^6.5.16",
+    "normalize.css": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
