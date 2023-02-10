@@ -7,7 +7,7 @@ body {
 div.docblock-icongallery {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   grid-gap: 30px 15px;
   justify-content: space-between;
 }
@@ -17,12 +17,20 @@ div.docblock-icongallery {
   min-width: auto;
   margin: 0;
   flex-direction: column;
+  gap: 6px;
   word-break: break-word;
 }
 
 /* icon tile */
 .docblock-icongallery > div > div:first-of-type {
   box-shadow: none;
+  width: 50px;
+  height: 50px;
+}
+
+.docblock-icongallery > div > div:first-of-type svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* icon name */

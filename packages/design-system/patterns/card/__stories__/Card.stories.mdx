@@ -36,7 +36,7 @@ It's a flexible component used to group and display content in a concise format.
           text="Button"
           variant="text"
           color="primary"
-          iconStart="arrowDown"
+          iconEnd="arrowRight"
         />
       ),
       href: "https://google.com",
@@ -69,7 +69,7 @@ It's a flexible component used to group and display content in a concise format.
           text="Button"
           variant="text"
           color="primary"
-          iconStart="arrowDown"
+          iconEnd="arrowRight"
         />
       ),
       href: "https://google.com",
@@ -115,7 +115,7 @@ It's a flexible component used to group and display content in a concise format.
           text="Wejdź"
           variant="border"
           color="primary"
-          iconEnd="arrowDown"
+          iconEnd="arrowRight"
         />
       ),
       href: "https://google.com",
@@ -200,19 +200,20 @@ export const Template = (args) => (
   >
     <Card {...args}>
       <List gap={8}>
-        <ListItem variant="primary" iconName="done">
+        <ListItem variant="primary" iconName="check">
           Umożliwiamy adopcję za granicę
         </ListItem>
-        <ListItem variant="gray" iconName="done">
+        <ListItem variant="gray" iconName="check">
           Umożliwiamy adopcję za granicę
         </ListItem>
-        <ListItem variant="gray" iconName="done">
+        <ListItem variant="gray" iconName="check">
           Umożliwiamy adopcję za granicę
         </ListItem>
       </List>
     </Card>
   </div>
 )
+
 export const SimpleTemplate = (args) => (
   <div
     style={{
@@ -277,7 +278,7 @@ export const TemplateGrid = (args) => (
         opieka.
       </Typography>
     </Card>
-    <Card {...args} title=<Title text="Porozmawiaj" />>
+    <Card {...args} title={<Title text="Porozmawiaj" />}>
       <Typography variant="bodySmall">
         Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
         opieka.
@@ -288,13 +289,13 @@ export const TemplateGrid = (args) => (
       imageSrc="https://images.pexels.com/photos/1254140/pexels-photo-1254140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     >
       <List gap={8}>
-        <ListItem variant="primary" iconName="done">
+        <ListItem variant="primary" iconName="check">
           Umożliwiamy adopcję
         </ListItem>
-        <ListItem variant="gray" iconName="done">
+        <ListItem variant="gray" iconName="check">
           Umożliwiamy adopcję
         </ListItem>
-        <ListItem variant="gray" iconName="done">
+        <ListItem variant="gray" iconName="check">
           Umożliwiamy adopcję
         </ListItem>
       </List>

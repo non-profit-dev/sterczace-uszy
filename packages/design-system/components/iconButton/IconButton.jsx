@@ -1,6 +1,8 @@
 import { string, oneOf, func } from "prop-types"
 
-import Icon, { icons } from "design-system/components/icon"
+import Icon from "design-system/components/icon"
+import { icons } from "design-system/tokens/icons"
+
 import theme from "../../tokens/theme"
 
 import * as Styled from "./IconButton.styled"
