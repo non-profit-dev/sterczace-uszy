@@ -1,7 +1,7 @@
 import React from "react"
 import { ThemeProvider, Global, css } from "@emotion/react"
 
-import theme from "../tokens/theme"
+import theme from "../packages/design-system/tokens/theme"
 
 import "./styles.css"
 

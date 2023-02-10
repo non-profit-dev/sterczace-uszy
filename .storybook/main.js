@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ["../**/**/__stories__/*.stories.mdx"],
+  stories: ["../packages/design-system/**/__stories__/*.stories.mdx"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-viewport",
