@@ -7,12 +7,8 @@ const optimizedImages = require("next-optimized-images")
 
 const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.ctfassets.net",
-      },
-    ],
+    loader: "default",
+    domains: ["localhost", "https://images.ctfassets.net"],
   },
   experimental: {
     externalDir: true,

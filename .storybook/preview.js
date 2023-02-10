@@ -1,14 +1,11 @@
 import React from "react"
 import { ThemeProvider, Global, css } from "@emotion/react"
-import * as NextImage from "next/image"
 
 import theme from "../packages/design-system/tokens/theme"
 
 import "./styles.css"
 
 import "normalize.css/normalize.css"
-
-const OriginalNextImage = NextImage.default
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -65,8 +62,3 @@ export const decorators = [
     </ThemeProvider>
   ),
 ]
-
-Object.defineProperty(NextImage, "default", {
-  configurable: true,
-  value: (props) => <OriginalNextImage {...props} unoptimized />,
-})

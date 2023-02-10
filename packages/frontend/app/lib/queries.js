@@ -25,8 +25,6 @@ export const GET_ANIMALS = gql`
         excerpt
         thumbnail {
           url
-          width
-          height
         }
         description {
           json

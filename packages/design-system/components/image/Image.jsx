@@ -1,9 +1,7 @@
-import { string, number } from "prop-types"
+import { string } from "prop-types"
 import * as Styled from "./Image.styled"
 
-const Image = ({ src, alt, width, height }) => (
-  <Styled.Image src={src} alt={alt || ""} width={width} height={height} />
-)
+const Image = ({ src, alt }) => <Styled.Image src={src} alt={alt} />
 
 Image.propTypes = {
   /**
@@ -14,15 +12,11 @@ Image.propTypes = {
    * The source URL of the image.
    */
   src: string,
-  width: number,
-  height: number,
 }
 
 Image.defaultProps = {
   alt: null,
   src: null,
-  width: null,
-  height: null,
 }
 
 export default Image
