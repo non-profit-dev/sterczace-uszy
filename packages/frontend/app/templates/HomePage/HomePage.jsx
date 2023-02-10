@@ -23,7 +23,12 @@ const HomePage = ({ animals, supporting }) => (
       <Styled.Grid>
         {animals.items.map((animal) => (
           <div key={animal.name}>
-            <Image src={animal.thumbnail.url} />
+            <Image
+              src={animal.thumbnail.url}
+              alt=""
+              width={animal.thumbnail.width}
+              height={animal.thumbnail.height}
+            />
             <Typography variant="bodyTitle">{animal.name}</Typography>
             <Typography variant="bodySmall">{animal.excerpt}</Typography>
           </div>
