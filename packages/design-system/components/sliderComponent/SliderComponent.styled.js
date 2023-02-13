@@ -1,11 +1,11 @@
-// import styled from "@emotion/styled"
+import styled from "@emotion/styled"
 
-const SliderWrapper = styled.div`
+export const SliderWrapper = styled.div`
   position: relative;
   margin: 0 auto;
 `
 
-const Dot = styled.div`
+export const Dot = styled.div`
   &.dot-class-name {
     color: ${({ theme }) => theme.colors.primary[300]};
     width: 10px;
@@ -13,10 +13,14 @@ const Dot = styled.div`
   }
 `
 
-const PrevArrow = styled(Arrow)`
+export const PrevArrow = styled.div`
   width: 30px;
 `
 
-const NextArrow = styled(Arrow)`
+export const NextArrow = styled.div`
   width: 30px;
+`
+
+export const Slide = styled.div`
+  padding: 0 10px;
 `
