@@ -44,21 +44,25 @@ describe(`Input`, () => {
   })
 
   it("has typed text", async () => {
+    const user = userEvent.setup()
+
     render(<Input label={label} type="text" />)
 
     const input = screen.getByRole("textbox")
 
-    await userEvent.type(input, "Test")
+    await user.type(input, "Test")
 
     expect(input).toHaveValue("Test")
   })
 
   it("should not allow letters to be typed when type is set to number", async () => {
+    const user = userEvent.setup()
+
     render(<Input label={label} type="number" />)
 
     const input = screen.getByRole("spinbutton")
 
-    await userEvent.type(input, "Test")
+    await user.type(input, "Test")
 
     expect(input).toHaveValue(null)
   })
