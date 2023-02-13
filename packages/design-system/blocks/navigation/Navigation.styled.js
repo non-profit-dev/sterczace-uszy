@@ -16,7 +16,7 @@ export const Menu = styled.div`
   display: flex;
   gap: 48px;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.desktopSm} {
     display: none;
   }
 `
@@ -39,7 +39,7 @@ export const Dropdown = styled.div`
 export const MenuIcon = styled.div`
   display: none;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.desktopSm} {
     display: inline-flex;
   }
 `
