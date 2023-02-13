@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from "next/document"
-import { Normalize } from "styled-normalize"
 
 class MyDocument extends Document {
   render() {
@@ -14,7 +13,6 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
-          <Normalize />
           <Main />
           <NextScript />
         </body>

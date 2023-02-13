@@ -27,7 +27,8 @@ export const Text = styled.p`
   position: relative;
   margin: 0;
   ${({ theme, size }) => theme.typography.desktop[typography[size]]};
-  ${({ theme }) => theme.breakpoints.lg} {
+
+  ${({ theme }) => theme.breakpoints.tablet} {
     ${({ theme, size }) => theme.typography.tablet[typography[size]]};
   }
   &:before {

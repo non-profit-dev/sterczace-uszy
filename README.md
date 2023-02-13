@@ -20,7 +20,7 @@ and run sequentially:
 ```bash
 cd website # go to the project's directory
 yarn # install all required dependencies
-yarn develop # run admin panel at `localhost:1337/admin` and local server for pages at `localhost:3000`
+yarn develop # run local server at `localhost:3000`
 yarn storybook # start Storybook and check out all available components at `localhost:6006`
 ```
 
@@ -30,7 +30,6 @@ This project consists of 3 different packages, with the following structure:
 
 ```
 packages/
-├── backend
 ├── design-system
   ├── components
   └── icons
