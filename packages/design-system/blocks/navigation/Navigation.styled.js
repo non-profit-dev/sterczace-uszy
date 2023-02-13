@@ -12,16 +12,18 @@ export const NavigationRow = styled.div`
   align-items: center;
 `
 
-export const Menu = styled.div`
+export const Menu = styled.ul`
   display: flex;
   gap: 48px;
+  margin: 0;
+  list-style: none;
 
   ${({ theme }) => theme.breakpoints.desktopSm} {
     display: none;
   }
 `
 
-export const MenuButton = styled.div`
+export const MenuButton = styled.li`
   position: relative;
 `
 
