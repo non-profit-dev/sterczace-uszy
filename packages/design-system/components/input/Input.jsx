@@ -35,7 +35,7 @@ const Input = ({
       />
       {state && (
         <Styled.Icon state={state}>
-          <Icon name={state === "valid" ? "success" : "error"} size="medium" />
+          <Icon name={state === "valid" ? "check" : "close"} size="medium" />
         </Styled.Icon>
       )}
     </Styled.Container>

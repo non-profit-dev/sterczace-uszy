@@ -28,7 +28,7 @@ const Textarea = ({
       />
       {error && (
         <Styled.Icon error={error}>
-          <Icon name="error" size="medium" />
+          <Icon name="close" size="medium" />
         </Styled.Icon>
       )}
     </Styled.Container>
