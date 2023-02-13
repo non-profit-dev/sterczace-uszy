@@ -1,12 +1,11 @@
 import userEvent from "@testing-library/user-event"
 
-import { render, screen, act } from "design-system/test-utils"
+import { render, screen } from "design-system/test-utils"
 
 import Button from "design-system/components/button"
 
 const text = "Text"
 const iconName = "download"
-
 describe(`Button`, () => {
   it(`renders with default properties`, () => {
     render(<Button text={text} />)
@@ -44,30 +43,28 @@ describe(`Button`, () => {
     expect(screen.getByTitle(iconName)).toBeInTheDocument()
   })
 
-  it(`fires onClick callback when button is clicked`, () => {
+  it(`fires onClick callback when button is clicked`, async () => {
+    const user = userEvent.setup()
     const onClickMock = jest.fn()
 
     render(<Button text={text} onClick={onClickMock} />)
 
     const button = screen.getByRole("button")
 
-    act(() => {
-      userEvent.click(button)
-    })
+    await user.click(button)
 
     expect(onClickMock).toBeCalledTimes(1)
   })
 
-  it(`fires onClick callback when link is clicked`, () => {
+  it(`fires onClick callback when link is clicked`, async () => {
+    const user = userEvent.setup()
     const onClickMock = jest.fn()
 
     render(<Button text={text} href="/" onClick={onClickMock} />)
 
     const link = screen.getByRole("link")
 
-    act(() => {
-      userEvent.click(link)
-    })
+    await user.click(link)
 
     expect(onClickMock).toBeCalledTimes(1)
   })

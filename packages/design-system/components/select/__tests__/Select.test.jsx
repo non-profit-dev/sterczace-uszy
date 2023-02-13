@@ -41,10 +41,12 @@ describe(`Select`, () => {
     expect(screen.getByRole("option", { name: "test3" }).selected).toBe(false)
   })
 
-  it(`changes selected value to chosen option`, () => {
+  it(`changes selected value to chosen option`, async () => {
+    const user = userEvent.setup()
+
     render(<Select label={label} options={["test1", "test2", "test3"]} />)
 
-    userEvent.selectOptions(screen.getByRole("combobox"), "test3")
+    await user.selectOptions(screen.getByRole("combobox"), "test3")
 
     expect(screen.getByRole("option", { name: "test3" }).selected).toBe(true)
     expect(screen.getByRole("option", { name: "test1" }).selected).toBe(false)
