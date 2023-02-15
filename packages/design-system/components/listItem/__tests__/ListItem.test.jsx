@@ -4,7 +4,7 @@ import ListItem from "design-system/components/listItem"
 
 const text = "Lorem ipsum"
 const ChildComponent = () => <div>{text}</div>
-const iconName = "done"
+const iconName = "check"
 
 describe(`ListItem`, () => {
   it(`renders with default properties`, () => {

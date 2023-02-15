@@ -1,0 +1,17 @@
+import { Meta, IconGallery, IconItem } from "@storybook/addon-docs"
+
+import { illustrations } from "design-system/components/illustration"
+
+<Meta title="Tokens/Illustrations" />
+
+# Illustrations gallery
+
+A list of all available illustrations in the project.
+
+<IconGallery>
+  {Object.entries(illustrations).map((illustration) => (
+    <IconItem key={illustration[0]} name={illustration[0]}>
+      {illustration[1]()}
+    </IconItem>
+  ))}
+</IconGallery>

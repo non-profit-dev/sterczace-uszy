@@ -1,6 +1,7 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
 
 import Icon from "design-system/components/icon"
+import { icons } from "design-system/tokens/icons"
 
 <Meta title="Components/Icon" component={Icon} />
 
@@ -14,8 +15,13 @@ Displays an icon based on a name provided as a prop. The name should be one of d
   <Story
     name="Overview"
     args={{
-      name: "arrowDown",
+      name: "chevronDown",
       size: "medium",
+    }}
+    argTypes={{
+      name: {
+        options: Object.keys(icons),
+      },
     }}
   >
     {Template.bind()}

@@ -1,7 +1,7 @@
 import { bool, string } from "prop-types"
 import Icon from "design-system/components/icon"
 import Typography from "design-system/components/typography"
-import theme from "design-system/theme"
+import theme from "design-system/tokens/theme"
 
 import * as Styled from "./Textarea.styled"
 
@@ -28,7 +28,7 @@ const Textarea = ({
       />
       {error && (
         <Styled.Icon error={error}>
-          <Icon name="error" size="medium" />
+          <Icon name="close" size="medium" />
         </Styled.Icon>
       )}
     </Styled.Container>

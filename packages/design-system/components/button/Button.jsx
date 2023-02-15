@@ -1,6 +1,7 @@
 import { string, oneOf, func, bool } from "prop-types"
 
-import Icon, { icons } from "design-system/components/icon"
+import Icon from "design-system/components/icon"
+import { icons } from "design-system/tokens/icons"
 
 import * as Styled from "./Button.styled"
 
