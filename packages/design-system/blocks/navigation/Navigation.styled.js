@@ -38,8 +38,11 @@ export const Dropdown = styled.div`
   border-radius: 4px;
 `
 
-export const MenuIcon = styled.div`
+export const MenuIcon = styled.button`
   display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 
   ${({ theme }) => theme.breakpoints.desktopSm} {
     display: inline-flex;
