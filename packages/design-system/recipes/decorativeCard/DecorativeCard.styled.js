@@ -15,8 +15,16 @@ export const Content = styled.div`
 `
 export const Illustration = styled.div`
   position: relative;
-  top: -2px;
-  left: -20px;
+  z-index: -1;
+  left: -24px;
   border: 1px solid;
   padding: 5px;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    left: -20px;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    left: -10px;
+  }
 `

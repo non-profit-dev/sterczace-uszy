@@ -11,7 +11,7 @@ const DecorativeCard = ({ titleText, illustrationName, count, size }) => (
     <Styled.Content>
       <Count count={count} size={size} />
       <Styled.Illustration>
-        <Illustration name={illustrationName} />
+        <Illustration name={illustrationName} size="large" />
       </Styled.Illustration>
     </Styled.Content>
 
@@ -27,7 +27,7 @@ DecorativeCard.propTypes = {
   titleText: string.isRequired,
   illustrationName: string,
   count: number.isRequired,
-  size: oneOf(["small", "medium", "large", "xlarge", ""]),
+  size: oneOf(["small", "medium", "large", "xlarge", "xxlarge"]),
 }
 
 DecorativeCard.defaultProps = {
