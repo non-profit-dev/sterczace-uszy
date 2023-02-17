@@ -15,7 +15,7 @@ Banner.propTypes = {
    * An optional button component that can be displayed right after the heading.
    */
   button: node,
-  className: string, 
+  className: string,
 }
 
 Banner.defaultProps = {

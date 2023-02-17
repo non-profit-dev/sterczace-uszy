@@ -4,7 +4,14 @@ import Icon from "design-system/components/icon"
 
 import * as Styled from "./ListItem.styled"
 
-const ListItem = ({ children, variant, iconName, iconSize, gap, className }) => (
+const ListItem = ({
+  children,
+  variant,
+  iconName,
+  iconSize,
+  gap,
+  className,
+}) => (
   <Styled.ListItem variant={variant} className={className}>
     {iconName && (
       <Styled.ListItemIcon>

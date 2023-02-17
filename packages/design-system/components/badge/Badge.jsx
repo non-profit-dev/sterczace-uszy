@@ -15,13 +15,13 @@ Badge.propTypes = {
   text: string.isRequired,
   variant: oneOf(["primary", "neutrals", "gray"]),
   size: oneOf(["small", "medium", "large"]),
-  className : string,
+  className: string,
 }
 
 Badge.defaultProps = {
   variant: "neutrals",
   size: "medium",
-  className: null
+  className: null,
 }
 
 export default Badge

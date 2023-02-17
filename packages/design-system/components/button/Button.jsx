@@ -1,6 +1,7 @@
 import { string, oneOf, func, bool } from "prop-types"
 
-import Icon, { icons } from "design-system/components/icon"
+import Icon from "design-system/components/icon"
+import { icons } from "design-system/tokens/icons"
 
 import * as Styled from "./Button.styled"
 
@@ -15,7 +16,7 @@ const Button = ({
   active,
   target,
   onClick,
-  className
+  className,
 }) => (
   <Styled.Component
     as={href ? `a` : `button`}
@@ -76,7 +77,7 @@ Button.propTypes = {
    * A function that will be called when the button is clicked.
    */
   onClick: func,
-  className : string,
+  className: string,
 }
 
 Button.defaultProps = {

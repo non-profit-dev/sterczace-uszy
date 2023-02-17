@@ -39,7 +39,7 @@ const Select = ({
           </>
         </Styled.Select>
         <Styled.Icon>
-          <Icon name="arrowDown" size="medium" />
+          <Icon name="chevronDown" size="medium" />
         </Styled.Icon>
       </Styled.Container>
     </Styled.Label>

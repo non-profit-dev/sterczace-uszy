@@ -71,7 +71,7 @@
       "error",
       {
         "packages/design-system/components/*": "CAMEL_CASE",
-        "packages/design-system/recipes/*": "CAMEL_CASE"
+        "packages/design-system/patterns/*": "CAMEL_CASE"
       }
     ]
   }

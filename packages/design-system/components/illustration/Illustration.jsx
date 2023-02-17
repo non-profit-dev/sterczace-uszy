@@ -1,6 +1,6 @@
 import { oneOf, string } from "prop-types"
 
-import HeartWithDogFace from "design-system/illustrations/heartWithDogFace.svg"
+import HeartWithDogFace from "design-system/tokens/illustrations/heartWithDogFace.svg"
 
 const sizes = {
   heartWithDogFace: {
@@ -29,11 +29,11 @@ const Illustration = ({ name, className }) => {
 
 Illustration.propTypes = {
   name: oneOf(Object.keys(illustrations)).isRequired,
-  className : string,
+  className: string,
 }
 
 Illustration.defaultProps = {
-  className: null, 
+  className: null,
 }
 
 export default Illustration

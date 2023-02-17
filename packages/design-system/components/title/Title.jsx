@@ -6,7 +6,16 @@ import Count from "design-system/components/count"
 
 import * as Styled from "./Title.styled"
 
-const Title = ({ text, badge, iconStart, iconEnd, size, variant, count, className }) => (
+const Title = ({
+  text,
+  badge,
+  iconStart,
+  iconEnd,
+  size,
+  variant,
+  count,
+  className,
+}) => (
   <Styled.Title size={size} fullWidth={!!badge} className={className}>
     <Styled.Wrapper>
       {iconStart && <Icon name={iconStart} size={size} />}

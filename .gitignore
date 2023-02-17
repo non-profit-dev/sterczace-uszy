@@ -112,4 +112,4 @@ out/
 ############################
 # Storybook
 ############################
-packages/design-system/storybook-static
+storybook-static

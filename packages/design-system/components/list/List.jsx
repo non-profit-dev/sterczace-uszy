@@ -3,7 +3,9 @@ import { node, number, string } from "prop-types"
 import * as Styled from "./List.styled"
 
 const List = ({ gap, children, className }) => (
-  <Styled.Component gap={gap} className={className}>{children}</Styled.Component>
+  <Styled.Component gap={gap} className={className}>
+    {children}
+  </Styled.Component>
 )
 
 List.propTypes = {

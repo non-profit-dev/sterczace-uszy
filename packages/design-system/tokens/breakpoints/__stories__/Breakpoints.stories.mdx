@@ -1,0 +1,51 @@
+import styled from "@emotion/styled"
+import { Meta, Canvas } from "@storybook/addon-docs"
+
+import breakpoints from "design-system/tokens/breakpoints"
+
+<Meta
+  title="Tokens/Breakpoints"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+# Breakpoints
+
+A helper to handle media queries. It gives you different max-width sizes to use within a mediaquery.
+
+<Canvas isColumn>
+  {Object.entries(breakpoints).map((breakpoint) => (
+    <Title key={breakpoint}>
+      <b>{breakpoint[0]} - </b>
+      <Code style={{}}>{breakpoint[1]}</Code>
+    </Title>
+  ))}
+</Canvas>
+
+## Usage
+
+The red color will be applied to the element when the viewport size is smaller than the 744px value (tablet size).
+
+```jsx
+const Container = styled.div`
+  color: black;
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    color: red;
+  }
+`
+```
+
+export const Title = styled.p`
+  font-weight: 500;
+  font-size: 14px;
+`
+
+export const Code = styled.code`
+  background: #f0f2f5;
+  color: rgba(51, 51, 51, 0.9);
+  border: 1px solid #eeeeee;
+`

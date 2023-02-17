@@ -1,7 +1,7 @@
 import { bool, oneOf, string } from "prop-types"
 import Icon from "design-system/components/icon"
 import Typography from "design-system/components/typography"
-import theme from "design-system/theme"
+import theme from "design-system/tokens/theme"
 
 import * as Styled from "./Input.styled"
 
@@ -20,7 +20,7 @@ const Input = ({
   type,
   name,
   id,
-  className
+  className,
 }) => (
   <Styled.Label>
     <Typography variant="bodySmall">{label}</Typography>
@@ -37,7 +37,7 @@ const Input = ({
       />
       {state && (
         <Styled.Icon state={state}>
-          <Icon name={state === "valid" ? "success" : "error"} size="medium" />
+          <Icon name={state === "valid" ? "check" : "close"} size="medium" />
         </Styled.Icon>
       )}
     </Styled.Container>

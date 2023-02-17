@@ -1,5 +1,5 @@
 import userEvent from "@testing-library/user-event"
-import { render, screen, act } from "design-system/test-utils"
+import { render, screen } from "design-system/test-utils"
 
 import IconButton from "design-system/components/iconButton"
 
@@ -41,7 +41,8 @@ describe(`IconButton`, () => {
     expect(screen.getByRole("button")).toBeInTheDocument()
   })
 
-  it(`fires onClick callback when button is clicked`, () => {
+  it(`fires onClick callback when button is clicked`, async () => {
+    const user = userEvent.setup()
     const onClickMock = jest.fn()
     render(
       <IconButton name={iconName} onClick={onClickMock} ariaLabel={ariaLabel} />
@@ -49,14 +50,13 @@ describe(`IconButton`, () => {
 
     const button = screen.getByRole("button")
 
-    act(() => {
-      userEvent.click(button)
-    })
+    await user.click(button)
 
     expect(onClickMock).toBeCalledTimes(1)
   })
 
-  it(`fires onClick callback when link is clicked`, () => {
+  it(`fires onClick callback when link is clicked`, async () => {
+    const user = userEvent.setup()
     const onClickMock = jest.fn()
     render(
       <IconButton
@@ -69,9 +69,7 @@ describe(`IconButton`, () => {
 
     const link = screen.getByRole("link")
 
-    act(() => {
-      userEvent.click(link)
-    })
+    await user.click(link)
 
     expect(onClickMock).toBeCalledTimes(1)
   })

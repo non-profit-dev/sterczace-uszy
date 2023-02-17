@@ -56,11 +56,13 @@ describe(`Textarea`, () => {
   })
 
   it("has typed text", async () => {
+    const user = userEvent.setup()
+
     render(<Textarea label={label} />)
 
     const input = screen.getByRole("textbox")
 
-    await userEvent.type(input, "Test")
+    await user.type(input, "Test")
 
     expect(input).toHaveValue("Test")
   })
@@ -68,7 +70,7 @@ describe(`Textarea`, () => {
   it("has error icon when state is error", async () => {
     render(<Textarea label={label} error />)
 
-    const icon = screen.getByTitle("error")
+    const icon = screen.getByTitle("close")
     expect(icon).toBeVisible()
   })
 })
