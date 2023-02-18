@@ -1,13 +1,13 @@
 import { Children } from "react"
-import Slider from "react-slick"
+import ReactSlickSlider from "react-slick"
 import PropTypes from "prop-types"
 
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-import * as Styled from "./SliderComponent.styled"
+import * as Styled from "./Slider.styled"
 
-const SliderComponent = ({ children }) => {
+const Slider = ({ children }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -18,18 +18,18 @@ const SliderComponent = ({ children }) => {
 
   return (
     <Styled.SliderWrapper>
-      <Slider {...settings}>
+      <ReactSlickSlider {...settings}>
         {Children.map(children, (child, index) => (
           // eslint-disable-next-line react/no-array-index-key
           <Styled.Slide key={index}>{child}</Styled.Slide>
         ))}
-      </Slider>
+      </ReactSlickSlider>
     </Styled.SliderWrapper>
   )
 }
 
-SliderComponent.propTypes = {
+Slider.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default SliderComponent
+export default Slider
