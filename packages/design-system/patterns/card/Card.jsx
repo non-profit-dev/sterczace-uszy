@@ -14,12 +14,14 @@ const Card = ({
   imageSrc,
   imageAlt,
   imageHeight,
+  className,
 }) => (
   <Styled.Card
     as={href ? `a` : `div`}
     linkStyle={!!href}
     bgColor={bgColor}
     href={href}
+    className={className}
   >
     {illustrationName && (
       <Styled.IllustrationContainer>
@@ -62,6 +64,7 @@ Card.propTypes = {
   imageHeight: string,
   imageSrc: string,
   layout: oneOf(["left", "center"]),
+  className: string,
 }
 
 Card.defaultProps = {
@@ -74,6 +77,7 @@ Card.defaultProps = {
   imageHeight: "auto",
   imageSrc: null,
   layout: "center",
+  className: null,
 }
 
 export default Card
