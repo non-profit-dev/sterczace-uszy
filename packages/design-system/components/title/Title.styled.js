@@ -1,8 +1,6 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
-// import { variantsMapping } from "../typography/Typography"
 
-// const typography = { ...variantsMapping }
 const typography = {
   h1: "h1",
   h2: "h2",

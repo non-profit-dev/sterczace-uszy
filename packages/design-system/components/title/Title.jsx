@@ -11,20 +11,20 @@ const Title = ({
   badge,
   iconStart,
   iconEnd,
-  iconSize,
   size,
+  textSize,
   variant,
   count,
   className,
 }) => (
-  <Styled.Title size={size} fullWidth={!!badge} className={className}>
+  <Styled.Title size={textSize} fullWidth={!!badge} className={className}>
     <Styled.Wrapper>
-      {iconStart && <Icon name={iconStart} size={iconSize} />}
-      {count && <Count count={count} size={iconSize} />}
-      <Styled.Text size={size} variant={variant}>
+      {iconStart && <Icon name={iconStart} size={size} />}
+      {count && <Count count={count} size={size} />}
+      <Styled.Text size={textSize} variant={variant}>
         {text}
       </Styled.Text>
-      {iconEnd && <Icon name={iconEnd} size={iconSize} />}
+      {iconEnd && <Icon name={iconEnd} size={size} />}
     </Styled.Wrapper>
 
     {badge && <Badge text={badge} size="small" />}
@@ -52,8 +52,8 @@ Title.propTypes = {
    * If provided, it renders the Count component at the start of the title's text.
    */
   count: number,
-  iconSize: oneOf(["small", "medium", "large", "xlarge", "xxlarge"]),
-  size: oneOf([
+  size: oneOf(["small", "medium", "large", "xlarge", "xxlarge"]),
+  textSize: oneOf([
     "h1",
     "h2",
     "h3",
@@ -74,8 +74,8 @@ Title.defaultProps = {
   iconStart: null,
   iconEnd: null,
   count: null,
-  iconSize: "medium",
-  size: "h4",
+  size: "medium",
+  textSize: "h4",
   variant: "textLine",
   className: null,
 }
