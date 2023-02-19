@@ -2,7 +2,7 @@ import { string, oneOf, node } from "prop-types"
 import React from "react"
 import * as Styled from "./Typography.styled"
 
-export const variantsMapping = {
+const variantsMapping = {
   h1: "h1",
   h2: "h2",
   h3: "h3",
