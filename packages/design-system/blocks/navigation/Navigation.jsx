@@ -52,7 +52,7 @@ const Navigation = () => {
                   text={item.title}
                   variant="text"
                   size="medium"
-                  color="white"
+                  color="black"
                 />
               </ListItem>
             ))}

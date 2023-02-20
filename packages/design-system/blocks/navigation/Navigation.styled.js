@@ -6,6 +6,10 @@ export const Navigation = styled.nav`
   background: ${({ theme }) => theme.colors.neutrals[100]};
   padding: 28px 0;
 
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    background: ${({ theme }) => theme.colors.neutrals[200]};
+  }
+
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 14px 0;
   }
@@ -62,7 +66,7 @@ export const MobileNavigation = styled.div`
   width: 100%;
   max-width: 480px;
   padding: 40px 60px;
-  background: ${({ theme }) => theme.colors.grey[600]};
+  background: ${({ theme }) => theme.colors.neutrals[200]};
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
