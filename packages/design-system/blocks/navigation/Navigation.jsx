@@ -22,15 +22,16 @@ const Navigation = () => {
 
           <Styled.Menu>
             {data.map((item) => (
-              <Button
-                key={item.title}
-                as="a"
-                href={item.href}
-                text={item.title}
-                variant="text"
-                size="small"
-                color="black"
-              />
+              <li key={item.title}>
+                <Button
+                  as="a"
+                  href={item.href}
+                  text={item.title}
+                  variant="text"
+                  size="small"
+                  color="black"
+                />
+              </li>
             ))}
           </Styled.Menu>
 
