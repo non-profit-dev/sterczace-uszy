@@ -38,6 +38,9 @@ export const Title = styled(Typography)`
   width: 100%;
   padding: 20px;
   color: ${({ color }) => colors[color].color};
+  background: transparent;
+  border: none;
+  cursor: pointer;
 `
 
 export const Content = styled.div`

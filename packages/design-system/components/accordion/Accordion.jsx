@@ -12,7 +12,8 @@ const Accordion = ({ children, heading, color, activeColor, shadow }) => {
     <Styled.Accordion color={color} shadow={shadow}>
       <Styled.Title
         variant="h5"
-        as="div"
+        as="button"
+        aria-expanded={isActive}
         onClick={() => setIsActive(!isActive)}
         color={isActive ? activeColor : color}
       >
@@ -21,7 +22,7 @@ const Accordion = ({ children, heading, color, activeColor, shadow }) => {
           <Icon name="chevronUp" />
         </Styled.Icon>
       </Styled.Title>
-      {isActive && <Styled.Content>{children}</Styled.Content>}
+      {isActive && <Styled.Content role="region">{children}</Styled.Content>}
     </Styled.Accordion>
   )
 }
