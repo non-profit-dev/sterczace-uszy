@@ -23,7 +23,7 @@ export const Menu = styled.ul`
   margin: 0;
   list-style: none;
 
-  ${({ theme }) => theme.breakpoints.desktopSm} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     display: none;
   }
 `
@@ -49,7 +49,7 @@ export const MenuIcon = styled.button`
   border: none;
   cursor: pointer;
 
-  ${({ theme }) => theme.breakpoints.desktopSm} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     display: inline-flex;
   }
 `
@@ -64,7 +64,7 @@ export const MobileNavigation = styled.div`
   padding: 40px 60px;
   background: ${({ theme }) => theme.colors.grey[600]};
 
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
   }
 
