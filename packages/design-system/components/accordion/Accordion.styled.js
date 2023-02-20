@@ -25,7 +25,8 @@ export const Accordion = styled.div`
   align-items: flex-start;
   justify-content: start;
   border-radius: 10px;
-  box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: ${({ shadow }) =>
+    shadow ? `2px 2px 9px 0px rgba(0, 0, 0, 0.1)` : `null`};
   background-color: ${({ color }) => colors[color].backgroundColor};
   color: ${({ color }) => colors[color].color};
 `

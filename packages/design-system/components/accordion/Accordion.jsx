@@ -1,15 +1,15 @@
-import { string, node, oneOf } from "prop-types"
+import { string, node, oneOf, bool } from "prop-types"
 import React, { useState } from "react"
 
 import Icon from "design-system/components/icon"
 
 import * as Styled from "./Accordion.styled"
 
-const Accordion = ({ children, text, color, activeColor }) => {
+const Accordion = ({ children, text, color, activeColor, shadow }) => {
   const [isActive, setIsActive] = useState(false)
 
   return (
-    <Styled.Accordion color={color}>
+    <Styled.Accordion color={color} shadow={shadow}>
       <Styled.Title
         variant="h5"
         as="div"
@@ -31,11 +31,13 @@ Accordion.propTypes = {
   children: node.isRequired,
   color: oneOf(["black", "white", "primary"]),
   activeColor: oneOf(["black", "primary"]),
+  shadow: bool,
 }
 
 Accordion.defaultProps = {
   color: "black",
   activeColor: "black",
+  shadow: false,
 }
 
 export default Accordion
