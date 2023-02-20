@@ -25,7 +25,7 @@ export const sizes = {
   },
 }
 
-const Icon = ({ name, color, size }) => {
+const Icon = ({ name, color, size, className }) => {
   const IconComponent = icons[name]
 
   return (
@@ -34,6 +34,7 @@ const Icon = ({ name, color, size }) => {
       width={sizes[size].width}
       height={sizes[size].height}
       title={name}
+      className={className}
     />
   )
 }
@@ -45,11 +46,13 @@ Icon.propTypes = {
    * The small, medium and large sizes have square proportions that fit most of the icons we use.
    */
   size: oneOf(Object.keys(sizes)),
+  className: string,
 }
 
 Icon.defaultProps = {
   color: "primary",
   size: "medium",
+  className: null,
 }
 
 export default Icon

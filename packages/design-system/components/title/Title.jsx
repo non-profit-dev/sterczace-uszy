@@ -6,8 +6,17 @@ import Count from "design-system/components/count"
 
 import * as Styled from "./Title.styled"
 
-const Title = ({ text, badge, iconStart, iconEnd, size, variant, count }) => (
-  <Styled.Title size={size} fullWidth={!!badge}>
+const Title = ({
+  text,
+  badge,
+  iconStart,
+  iconEnd,
+  size,
+  variant,
+  count,
+  className,
+}) => (
+  <Styled.Title size={size} fullWidth={!!badge} className={className}>
     <Styled.Wrapper>
       {iconStart && <Icon name={iconStart} size={size} />}
       {count && <Count count={count} size={size} />}
@@ -44,6 +53,7 @@ Title.propTypes = {
   count: number,
   size: oneOf(["small", "medium", "large"]),
   variant: oneOf(["text", "textLine"]),
+  className: string,
 }
 
 Title.defaultProps = {
@@ -53,6 +63,7 @@ Title.defaultProps = {
   count: null,
   size: "medium",
   variant: "textLine",
+  className: null,
 }
 
 export default Title
