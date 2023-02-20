@@ -5,7 +5,7 @@ import Icon from "design-system/components/icon"
 
 import * as Styled from "./Accordion.styled"
 
-const Accordion = ({ children, text, color, activeColor, shadow }) => {
+const Accordion = ({ children, heading, color, activeColor, shadow }) => {
   const [isActive, setIsActive] = useState(false)
 
   return (
@@ -16,7 +16,7 @@ const Accordion = ({ children, text, color, activeColor, shadow }) => {
         onClick={() => setIsActive(!isActive)}
         color={isActive ? activeColor : color}
       >
-        {text}
+        {heading}
         <Styled.Icon isActive={isActive}>
           <Icon name="chevronUp" />
         </Styled.Icon>
@@ -27,7 +27,7 @@ const Accordion = ({ children, text, color, activeColor, shadow }) => {
 }
 
 Accordion.propTypes = {
-  text: string.isRequired,
+  heading: string.isRequired,
   children: node.isRequired,
   color: oneOf(["black", "white", "primary"]),
   activeColor: oneOf(["black", "primary"]),
