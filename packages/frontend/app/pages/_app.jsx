@@ -19,6 +19,9 @@ const MyApp = ({ Component, pageProps }) => (
       <ThemeProvider theme={theme}>
         <Global
           styles={css`
+            body {
+              margin: 0;
+            }
             *,
             *::before,
             *::after {
