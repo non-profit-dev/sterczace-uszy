@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 
-import theme from "design-system/theme"
+import theme from "design-system/tokens/theme"
+
 import Typography from "design-system/components/typography"
 
 const colors = {
