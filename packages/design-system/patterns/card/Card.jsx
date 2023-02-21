@@ -91,7 +91,6 @@ Card.defaultProps = {
   imageSrc: null,
   layout: "left",
   mobileLayout: "center",
-  layout: "center",
   className: null,
 }
 
