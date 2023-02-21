@@ -13,4 +13,8 @@ export const Container = styled.h1`
   ${({ theme }) => theme.breakpoints.mobile} {
     ${({ theme, variant }) => theme.typography.mobile[variant]}
   }
+
+  a {
+    color: ${({ theme }) => theme.colors.primary[500]};
+  }
 `
