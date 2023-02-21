@@ -1,32 +1,38 @@
 import Head from "next/head"
-import { Normalize } from "styled-normalize"
 import { ThemeProvider, Global, css } from "@emotion/react"
 import { func, shape } from "prop-types"
+import { ApolloProvider } from "@apollo/client"
+
 // eslint-disable-next-line import/no-unresolved
 import { Analytics } from "@vercel/analytics/react"
 
-import theme from "design-system/theme"
+import theme from "design-system/tokens/theme"
+
+import client from "../lib/api"
+
+import "normalize.css/normalize.css"
 
 const MyApp = ({ Component, pageProps }) => (
   <>
     <Head />
-    <ThemeProvider theme={theme}>
-      <Normalize />
-      <Global
-        styles={css`
-          body {
-            margin: 0;
-          }
-          *,
-          *::before,
-          *::after {
-            box-sizing: border-box;
-          }
-        `}
-      />
-      <Component {...pageProps} />
-      <Analytics />
-    </ThemeProvider>
+    <ApolloProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <Global
+          styles={css`
+            body {
+              margin: 0;
+            }
+            *,
+            *::before,
+            *::after {
+              box-sizing: border-box;
+            }
+          `}
+        />
+        <Component {...pageProps} />
+        <Analytics />
+      </ThemeProvider>
+    </ApolloProvider>
   </>
 )
 

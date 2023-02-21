@@ -8,14 +8,35 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "ignorePatterns": ["packages/backend", "packages/frontend/e2e"],
-  "extends": ["airbnb", "prettier", "plugin:react/recommended"],
+  "ignorePatterns": [
+    "node_modules",
+    "packages/backend",
+    "packages/frontend/app/out",
+    "packages/design-system/storybook-static"
+  ],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:cypress/recommended",
+    "plugin:mdx/recommended"
+  ],
   "plugins": ["prettier", "react", "check-file"],
   "overrides": [
     {
       "files": ["**/*.test.js", "**/*.test.jsx"],
       "env": {
         "jest": true
+      }
+    },
+    {
+      "files": "*.mdx",
+      "parser": "eslint-mdx",
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": "off",
+        "no-use-before-define": "off",
+        "radix": "off"
       }
     }
   ],
@@ -50,7 +71,7 @@
       "error",
       {
         "packages/design-system/components/*": "CAMEL_CASE",
-        "packages/design-system/recipes/*": "CAMEL_CASE"
+        "packages/design-system/patterns/*": "CAMEL_CASE"
       }
     ]
   }

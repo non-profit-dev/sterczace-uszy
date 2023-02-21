@@ -6,6 +6,10 @@ import IconButton from "design-system/components/iconButton"
 
 # IconButton
 
+Allows users to take actions on a website based only on the visual element (icon).
+
+`import IconButton from "design-system/components/iconButton"`
+
 <Canvas>
   <Story
     name="Overview - link variant"
@@ -13,6 +17,7 @@ import IconButton from "design-system/components/iconButton"
       name: "mail",
       size: "large",
       href: "https://google.com",
+      ariaLabel: "Example link",
     }}
   >
     {Template.bind()}

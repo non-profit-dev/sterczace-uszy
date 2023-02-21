@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
-import theme from "design-system/theme"
+import theme from "../../tokens/theme"
 
 const sizes = {
   small: {
@@ -26,9 +26,14 @@ const colors = {
     mainColor: theme.colors.grey[600],
     filledText: theme.colors.neutrals[100],
   },
+  white: {
+    mainColor: theme.colors.neutrals[100],
+    filledText: theme.colors.neutrals[100],
+  },
 }
 export const Component = styled.a`
   ${({ size }) => sizes[size].typography};
+  font-family: ${theme.fontFamily};
   letter-spacing: -0.02em;
   border-radius: 30px;
   cursor: pointer;
@@ -55,12 +60,12 @@ export const Component = styled.a`
   ${({ size }) =>
     size === "large" &&
     css`
-      ${theme.breakpoints.md} {
+      ${theme.breakpoints.tablet} {
         ${theme.typography.mobile.bodyLarge};
         padding: 8px 32px;
       }
 
-      ${theme.breakpoints.sm} {
+      ${theme.breakpoints.mobile} {
         ${theme.typography.mobile.bodyTitle};
         padding: 8px 32px;
       }
@@ -80,6 +85,13 @@ export const Text = styled.span`
     css`
       border-bottom: 2px solid ${colors[color].mainColor};
     `}
+    :hover {
+    ${({ variant }) =>
+      variant === "text" &&
+      css`
+        text-decoration: underline;
+      `}
+  }
 `
 
 export const Icon = styled.span`
@@ -91,13 +103,13 @@ export const Icon = styled.span`
     ${({ size }) =>
       size === "large" &&
       css`
-        ${theme.breakpoints.md} {
+        ${theme.breakpoints.tablet} {
           ${theme.typography.mobile.bodyLarge};
           height: 18px;
           width: 18px;
         }
 
-        ${theme.breakpoints.sm} {
+        ${theme.breakpoints.mobile} {
           ${theme.typography.mobile.bodyTitle};
           height: 16px;
           width: 16px;

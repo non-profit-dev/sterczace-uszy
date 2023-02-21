@@ -1,5 +1,5 @@
-import HomePage from "../views/HomePage/HomePage"
+import ComingSoon from "../templates/ComingSoon"
 
-const Home = () => <HomePage />
+const Home = () => <ComingSoon />
 
 export default Home

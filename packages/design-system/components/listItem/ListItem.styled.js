@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import theme from "design-system/theme"
+import theme from "../../tokens/theme"
 
 export const ListItem = styled.li`
   display: flex;
@@ -17,6 +17,7 @@ export const ChildContainer = styled.div`
   color: inherit;
   flex-grow: 0;
   line-height: 30px;
+  gap: ${({ gap }) => `${gap}px`};
 `
 export const ListItemIcon = styled.div`
   display: flex;

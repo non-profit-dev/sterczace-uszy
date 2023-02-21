@@ -2,14 +2,19 @@ import styled from "@emotion/styled"
 
 export const Container = styled.h1`
   margin: 0;
-  ${({ variant, theme }) => theme.typography.desktop[variant]};
   color: ${({ color }) => color};
+  font-family: ${({ theme }) => theme.fontFamily};
+  ${({ variant, theme }) => theme.typography.desktop[variant]};
 
-  ${({ theme }) => theme.breakpoints.md} {
+  ${({ theme }) => theme.breakpoints.tablet} {
     ${({ theme, variant }) => theme.typography.tablet[variant]}
   }
 
-  ${({ theme }) => theme.breakpoints.sm} {
+  ${({ theme }) => theme.breakpoints.mobile} {
     ${({ theme, variant }) => theme.typography.mobile[variant]}
+  }
+
+  a {
+    color: ${({ theme }) => theme.colors.primary[500]};
   }
 `
