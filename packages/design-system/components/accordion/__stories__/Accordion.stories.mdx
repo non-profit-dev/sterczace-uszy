@@ -1,0 +1,145 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+import { useTheme } from "@emotion/react"
+
+import Accordion from "design-system/components/accordion"
+import Button from "design-system/components/button"
+import Typography from "design-system/components/typography"
+import List from "design-system/components/list"
+import ListItem from "design-system/components/listItem"
+
+<Meta title="Components/Accordion" component={Accordion} />
+
+# Accordion
+
+<Canvas>
+  <Story
+    name="Overview"
+    args={{
+      color: "black",
+      activeColor: "black",
+      heading: "Fundacja",
+      shadow: true,
+    }}
+  >
+    {TemplateBlack.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Black with primary active"
+    args={{
+      heading: "Fundacja",
+      color: "black",
+      activeColor: "primary",
+      shadow: true,
+    }}
+  >
+    {TemplateBlack.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="White with primary active"
+    args={{
+      heading: "Fundacja",
+      color: "white",
+      activeColor: "primary",
+    }}
+  >
+    {TemplateWhitePrimary.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="FAQ example"
+    args={{
+      heading: "Jak wygląda proces adopcyjny?",
+      color: "black",
+      activeColor: "black",
+      shadow: true,
+    }}
+  >
+    {TemplateFAQ.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const TemplateBlack = (args) => {
+  const theme = useTheme()
+  return (
+    <Accordion {...args}>
+      <Typography color={theme.colors.grey[600]} variant="bodySmall">
+        Tu wpisz odpowiedź na pytanie
+      </Typography>
+      <Button
+        text="Button"
+        variant="text"
+        color="primary"
+        size="small"
+        iconEnd="arrowRight"
+      />
+    </Accordion>
+  )
+}
+
+export const TemplateWhitePrimary = (args) => (
+  <Accordion {...args}>
+    <List gap={4}>
+      <ListItem>
+        <Button
+          variant="text"
+          color="white"
+          size="small"
+          text="O nas"
+          href="#"
+        />
+      </ListItem>
+      <ListItem>
+        <Button
+          variant="text"
+          color="white"
+          size="small"
+          text="Aktualności"
+          href="#"
+        />
+      </ListItem>
+      <ListItem>
+        <Button
+          variant="text"
+          color="white"
+          size="small"
+          text="Opinie"
+          href="#"
+        />
+      </ListItem>
+      <ListItem>
+        <Button
+          variant="text"
+          color="white"
+          size="small"
+          text="Partnerzy"
+          href="#"
+        />
+      </ListItem>
+    </List>
+  </Accordion>
+)
+
+export const TemplateFAQ = (args) => {
+  const theme = useTheme()
+  return (
+    <Accordion {...args}>
+      <Typography color={theme.colors.grey[600]} variant="bodySmall">
+        Proces adopcyjny polega na poznaniu rodziny, sprawdzeniu warunków
+        rodziny, jej wiedzy i otwartości na wiedzę. Pierwszym krokiem jest
+        wypełnienie <a href="google.com">ankiety</a> Drugim krokiem jest wizyta
+        przed adopcyjna u rodziny. Trzecim krokiem jest podpisanie umowy
+        adopcyjnej i odbiór psa.
+      </Typography>
+    </Accordion>
+  )
+}
