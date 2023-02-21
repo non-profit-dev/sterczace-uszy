@@ -14,6 +14,7 @@ const Textarea = ({
   disabled,
   name,
   id,
+  className,
 }) => (
   <Styled.Label>
     <Typography variant="bodySmall">{label}</Typography>
@@ -25,6 +26,7 @@ const Textarea = ({
         disabled={disabled}
         name={name}
         id={id}
+        className={className}
       />
       {error && (
         <Styled.Icon error={error}>
@@ -55,6 +57,7 @@ Textarea.propTypes = {
   disabled: bool,
   name: string,
   id: string,
+  className: string,
 }
 
 Textarea.defaultProps = {
@@ -65,6 +68,7 @@ Textarea.defaultProps = {
   disabled: false,
   name: null,
   id: null,
+  className: null,
 }
 
 export default Textarea

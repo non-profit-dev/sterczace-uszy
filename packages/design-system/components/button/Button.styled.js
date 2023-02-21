@@ -26,9 +26,14 @@ const colors = {
     mainColor: theme.colors.grey[600],
     filledText: theme.colors.neutrals[100],
   },
+  white: {
+    mainColor: theme.colors.neutrals[100],
+    filledText: theme.colors.neutrals[100],
+  },
 }
 export const Component = styled.a`
   ${({ size }) => sizes[size].typography};
+  font-family: ${theme.fontFamily};
   letter-spacing: -0.02em;
   border-radius: 30px;
   cursor: pointer;

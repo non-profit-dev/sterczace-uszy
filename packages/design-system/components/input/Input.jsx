@@ -20,6 +20,7 @@ const Input = ({
   type,
   name,
   id,
+  className,
 }) => (
   <Styled.Label>
     <Typography variant="bodySmall">{label}</Typography>
@@ -32,6 +33,7 @@ const Input = ({
         type={type}
         name={name}
         id={id}
+        className={className}
       />
       {state && (
         <Styled.Icon state={state}>
@@ -66,6 +68,7 @@ Input.propTypes = {
   type: oneOf(["text", "number", "email", "tel"]).isRequired,
   name: string,
   id: string,
+  className: string,
 }
 
 Input.defaultProps = {
@@ -76,6 +79,7 @@ Input.defaultProps = {
   disabled: false,
   name: null,
   id: null,
+  className: null,
 }
 
 export default Input

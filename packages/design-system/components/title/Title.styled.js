@@ -2,9 +2,16 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
 const typography = {
-  small: "h5",
-  medium: "h4",
-  large: "h3",
+  h1: "h1",
+  h2: "h2",
+  h3: "h3",
+  h4: "h4",
+  h5: "h5",
+  h6: "h6",
+  bodyLarge: "p",
+  bodySmall: "p",
+  bodyTitle: "p",
+  bodyTiny: "p",
 }
 
 export const Title = styled.div`
