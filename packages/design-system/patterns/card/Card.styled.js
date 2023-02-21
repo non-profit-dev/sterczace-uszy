@@ -34,13 +34,20 @@ export const IllustrationContainer = styled.div`
   justify-content: center;
   width: 100%;
   margin: 36px 10px 18px 10px;
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    display: ${({ hideIllustrationOnMobile }) =>
+      hideIllustrationOnMobile ? `none` : `inline-flex`};
+  }
 `
+
 export const ImageContainer = styled.div`
   display: inline-flex;
   justify-content: center;
   width: 100%;
   margin-bottom: 24px;
 `
+
 export const Image = styled.img`
   display: block;
   width: 100%;
@@ -67,7 +74,15 @@ export const ContentContainer = styled.div`
   gap: 24px;
   padding: ${({ paddingTop }) =>
     paddingTop ? `36px 24px 0px 24px` : `0px 24px 0px 24px`};
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    padding: 0;
+    border-radius: 0;
+    padding: ${({ mobileLayout }) =>
+      mobileLayout === `left` ? `0px` : `0px 24px 0px 24px`};
+  }
 `
+
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -82,4 +97,28 @@ export const Wrapper = styled.div`
         `}
   gap: 24px;
   width: 100%;
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    ${({ mobileLayout }) =>
+      mobileLayout === "center"
+        ? css`
+            align-items: center;
+          `
+        : css`
+            align-items: flex-start;
+          `}
+  }
+`
+
+export const ButtonWrapper = styled.div`
+  ${({ theme }) => theme.breakpoints.tablet} {
+    ${({ hideButtonOnMobile }) =>
+      hideButtonOnMobile
+        ? css`
+            display: none;
+          `
+        : css`
+            display: block;
+          `}
+  }
 `
