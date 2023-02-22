@@ -22,7 +22,6 @@ const ComingSoon = () => {
             <TextBanner
               subtitle="Fundacja sterczące uszy"
               heading="Strona w budowie"
-              description="Już za chwilę wracamy z nasza nową stroną. Zwierzaki jednak potrzebują pomocy cały czas. Wejdź na stronę ratujemyzwierzaki.pl i wesprzyj naszą fundację ❤"
               size="large"
               layout="center"
               subtitleColor={theme.colors.primary[500]}
@@ -38,7 +37,11 @@ const ComingSoon = () => {
                   target="_blank"
                 />
               }
-            />
+            >
+              Już za chwilę wracamy z nasza nową stroną. Zwierzaki jednak
+              potrzebują pomocy cały czas. Wejdź na stronę ratujemyzwierzaki.pl
+              i wesprzyj naszą fundację ❤
+            </TextBanner>
             <Styled.IconContainer>
               <IconButton
                 name="facebook"

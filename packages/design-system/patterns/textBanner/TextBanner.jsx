@@ -38,7 +38,7 @@ const sizes = {
 
 const TextBanner = ({
   heading,
-  description,
+  children,
   subtitle,
   layout,
   size,
@@ -58,7 +58,7 @@ const TextBanner = ({
       </Typography>
     </Styled.Container>
     <Typography variant={sizes[size].description} color={descriptionColor}>
-      {description}
+      {children}
     </Typography>
     <Styled.ButtonContainer>{button && button}</Styled.ButtonContainer>
   </Styled.TextBanner>
@@ -66,7 +66,7 @@ const TextBanner = ({
 
 TextBanner.propTypes = {
   heading: string.isRequired,
-  description: string.isRequired,
+  children: node,
   subtitle: string,
   layout: oneOf(["left", "center"]),
   size: oneOf(["tiny", "small", "medium", "large"]),
@@ -86,6 +86,7 @@ TextBanner.defaultProps = {
   headingColor: theme.colors.grey[600],
   descriptionColor: theme.colors.grey[500],
   className: null,
+  children: null,
 }
 
 export default TextBanner
