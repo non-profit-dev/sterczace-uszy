@@ -17,7 +17,9 @@ describe(`TextBanner`, () => {
     expect(screen.getByText(children)).toBeInTheDocument()
   })
   it(`renders with default properties`, () => {
-    render(<TextBanner heading="Fundacja Sterczące Uszy" />)
+    render(
+      <TextBanner heading="Fundacja Sterczące Uszy">{children}</TextBanner>
+    )
 
     expect(screen.getByText(heading)).toBeInTheDocument()
     expect(screen.getByText(children)).toBeInTheDocument()
