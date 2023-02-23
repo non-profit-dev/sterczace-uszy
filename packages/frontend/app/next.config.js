@@ -10,6 +10,7 @@ const nextConfig = {
     loader: "default",
     domains: ["localhost", "https://images.ctfassets.net"],
   },
+  trailingSlash: true,
   experimental: {
     externalDir: true,
   },
