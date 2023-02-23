@@ -53,11 +53,15 @@ const TextBanner = ({
       {subtitle}
     </Styled.Subtitle>
     <Styled.Container size={size}>
-      <Typography variant={sizes[size].heading} color={headingColor}>
+      <Typography variant={sizes[size].heading} color={headingColor} as="div">
         {heading}
       </Typography>
     </Styled.Container>
-    <Typography variant={sizes[size].description} color={descriptionColor}>
+    <Typography
+      variant={sizes[size].description}
+      color={descriptionColor}
+      as="div"
+    >
       {children}
     </Typography>
     <Styled.ButtonContainer>{button && button}</Styled.ButtonContainer>
