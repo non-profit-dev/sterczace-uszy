@@ -4,12 +4,10 @@ export const SurveyContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 80px;
   gap: 50px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     flex-direction: column;
-    padding-top: 0;
   }
 `
 

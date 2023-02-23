@@ -1,7 +1,7 @@
 import TextBanner from "design-system/patterns/textBanner"
 import Button from "design-system/components/button"
 import * as Styled from "./DocumentsTemplate.styled"
-import Survey from "../../public/home/Survey.svg"
+import Survey from "../../../public/documents/Survey.svg"
 
 const DocumentsTemplate = () => (
   <>

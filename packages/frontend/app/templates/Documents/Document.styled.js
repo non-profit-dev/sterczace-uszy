@@ -5,17 +5,16 @@ export const DocumentContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 120px 269px;
+  padding: 120px 0;
   gap: 80px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     align-items: flex-start;
-    padding: 65px 56px;
+    padding: 0;
     gap: 43px;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding: 56px 24px;
     gap: 40px;
   }
 `
@@ -27,13 +26,21 @@ export const HeaderContainer = styled.div`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     align-items: flex-start;
-    padding: 65px 56px;
+    padding-top: 65px;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding: 56px 24px;
+    padding-top: 56px;
   }
 `
 export const DocumentsInfo = styled.div`
   align-self: flex-start;
+  padding-bottom: 120px;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    align-items: flex-start;
+    padding-bottom: 65px;
+  }
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding-bottom 56px;
+  }
 `
