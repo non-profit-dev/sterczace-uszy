@@ -35,7 +35,7 @@ export const HeaderContainer = styled.div`
 `
 export const DocumentsInfo = styled.div`
   align-self: flex-start;
-  padding-bottom: 120px;
+  
   ${({ theme }) => theme.breakpoints.tabletLg} {
     align-items: flex-start;
     padding-bottom: 65px;
