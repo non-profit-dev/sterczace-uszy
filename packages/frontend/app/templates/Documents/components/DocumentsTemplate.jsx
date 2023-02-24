@@ -7,6 +7,7 @@ import Survey from "../../../public/documents/Survey.svg"
 const Info = () => (
   <>
     <Typography variant="bodySmall">Co musisz zrobić?</Typography>
+<ul>
     <Typography variant="bodySmall" as="li">
       pobierz plik
     </Typography>
@@ -19,6 +20,7 @@ const Info = () => (
     <Typography variant="bodySmall" as="li">
       poczekaj na odpowiedź od nas
     </Typography>
+</ul>
   </>
 )
 
