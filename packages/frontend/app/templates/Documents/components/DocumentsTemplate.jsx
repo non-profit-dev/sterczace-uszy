@@ -49,7 +49,7 @@ const DocumentsTemplate = () => (
             color="primary"
             iconEnd="download"
             size="medium"
-            href="https://docs.google.com/document/d/1bDmI9rASydzVdJyhk14z2AhFZB0nesSH/edit?usp=sharing&ouid=101513882861880625680&rtpof=true&sd=true"
+            href="https://docs.google.com/document/d/1u_tnZ--5rNME2s9Vn9YZstm7dRAcLQyH/edit?fbclid=IwAR01QrME3E_U1_knHoPeYkgWhJiB7AL4Q-dWylvjkXbnTJDdW0_PrTw7guw"
           />
         }
       >
