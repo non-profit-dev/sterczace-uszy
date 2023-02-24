@@ -15,7 +15,7 @@ import * as Styled from "./ComingSoon.styled"
 const ComingSoon = () => {
   const theme = useTheme()
   return (
-    <Page>
+    <Page title="Strona w budowie">
       <Styled.Main>
         <Styled.Container>
           <Styled.TextContainer>
