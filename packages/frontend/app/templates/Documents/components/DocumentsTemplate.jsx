@@ -7,20 +7,20 @@ import Survey from "../../../public/documents/Survey.svg"
 const Info = () => (
   <>
     <Typography variant="bodySmall">Co musisz zrobić?</Typography>
-<ul>
-    <Typography variant="bodySmall" as="li">
-      pobierz plik
-    </Typography>
-    <Typography variant="bodySmall" as="li">
-      wypełnij na komputerze lub wydrukuj
-    </Typography>
-    <Typography variant="bodySmall" as="li">
-      wypełnione dokumenty prześlij na adres fundacjasterczaceuszy@gmail.com
-    </Typography>
-    <Typography variant="bodySmall" as="li">
-      poczekaj na odpowiedź od nas
-    </Typography>
-</ul>
+    <ul>
+      <Typography variant="bodySmall" as="li">
+        pobierz plik
+      </Typography>
+      <Typography variant="bodySmall" as="li">
+        wypełnij na komputerze lub wydrukuj
+      </Typography>
+      <Typography variant="bodySmall" as="li">
+        wypełnione dokumenty prześlij na adres fundacjasterczaceuszy@gmail.com
+      </Typography>
+      <Typography variant="bodySmall" as="li">
+        poczekaj na odpowiedź od nas
+      </Typography>
+    </ul>
   </>
 )
 
