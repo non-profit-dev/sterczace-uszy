@@ -10,29 +10,21 @@ const sizes = {
     subtitle: "h6",
     heading: "h3",
     description: "bodySmall",
-    button: "text",
-    buttonSize: "medium",
   },
   small: {
     subtitle: "h6",
     heading: "h2",
     description: "bodyTitle",
-    button: "fill",
-    buttonSize: "large",
   },
   medium: {
     subtitle: "h6",
     heading: "h1",
-    description: "bodySmall",
-    button: "fill",
-    buttonSize: "large",
+    description: "bodyTitle",
   },
   large: {
     subtitle: "h6",
     heading: "h1",
     description: "bodyTitle",
-    button: "fill",
-    buttonSize: "large",
   },
 }
 
@@ -64,7 +56,9 @@ const TextBanner = ({
     >
       {children}
     </Typography>
-    <Styled.ButtonContainer>{button && button}</Styled.ButtonContainer>
+    <Styled.ButtonContainer size={size}>
+      {button && button}
+    </Styled.ButtonContainer>
   </Styled.TextBanner>
 )
 
