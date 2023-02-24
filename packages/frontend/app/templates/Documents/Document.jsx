@@ -9,7 +9,7 @@ import Page from "../Page"
 const Documents = () => {
   const theme = useTheme()
   return (
-    <Page>
+    <Page title="Dokumenty do pobrania"">
       <Container>
         <Styled.DocumentContainer>
           <Styled.HeaderContainer>
