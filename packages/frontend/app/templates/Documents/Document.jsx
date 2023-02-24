@@ -10,7 +10,7 @@ const Documents = () => {
   const theme = useTheme()
   return (
     <Page title="Dokumenty do pobrania"">
-      <Container>
+      <Container size="medium">
         <Styled.DocumentContainer>
           <Styled.HeaderContainer>
             <Typography color={theme.colors.grey[600]} variant="h2">
