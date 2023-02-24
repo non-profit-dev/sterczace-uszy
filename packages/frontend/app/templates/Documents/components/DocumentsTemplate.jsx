@@ -1,7 +1,26 @@
 import TextBanner from "design-system/patterns/textBanner"
 import Button from "design-system/components/button"
+import Typography from "design-system/components/typography"
 import * as Styled from "./DocumentsTemplate.styled"
 import Survey from "../../../public/documents/Survey.svg"
+
+const Info = () => (
+  <>
+    <Typography variant="bodySmall">Co musisz zrobić?</Typography>
+    <Typography variant="bodySmall" as="li">
+      pobierz plik
+    </Typography>
+    <Typography variant="bodySmall" as="li">
+      wypełnij na komputerze lub wydrukuj
+    </Typography>
+    <Typography variant="bodySmall" as="li">
+      wypełnione dokumenty prześlij na adres fundacjasterczaceuszy@gmail.com
+    </Typography>
+    <Typography variant="bodySmall" as="li">
+      poczekaj na odpowiedź od nas
+    </Typography>
+  </>
+)
 
 const DocumentsTemplate = () => (
   <>
@@ -23,16 +42,7 @@ const DocumentsTemplate = () => (
           />
         }
       >
-        <p>Co musisz zrobić?</p>
-        <ul>
-          <li> pobierz plik </li>
-          <li>wypełnij na komputerze lub wydrukuj</li>
-          <li>
-            wypełnione dokumenty prześlij na adres
-            fundacjasterczaceuszy@gmail.com
-          </li>
-          <li>poczekaj na odpowiedź od nas</li>
-        </ul>
+        <Info />
       </TextBanner>
     </Styled.SurveyContainer>
     <Styled.SurveyContainer>
@@ -53,16 +63,7 @@ const DocumentsTemplate = () => (
           />
         }
       >
-        <p>Co musisz zrobić?</p>
-        <ul>
-          <li> pobierz plik </li>
-          <li>wypełnij na komputerze lub wydrukuj</li>
-          <li>
-            wypełnione dokumenty prześlij na adres
-            fundacjasterczaceuszy@gmail.com
-          </li>
-          <li>poczekaj na odpowiedź od nas</li>
-        </ul>
+        <Info />
       </TextBanner>
     </Styled.SurveyContainer>
   </>
