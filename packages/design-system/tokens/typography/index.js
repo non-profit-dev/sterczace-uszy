@@ -21,17 +21,17 @@ const typography = {
       letterSpacing: "-0.5px",
     },
     h4: {
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: "24px",
       lineHeight: "125%",
     },
     h5: {
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: "20px",
       lineHeight: "120%",
     },
     h6: {
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: "16px",
       lineHeight: "130%",
     },
@@ -77,18 +77,18 @@ const typography = {
       letterSpacing: "-0.5px",
     },
     h4: {
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: "28px",
       lineHeight: "125%",
       letterSpacing: "-0.5px",
     },
     h5: {
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: "22px",
       lineHeight: "150%",
     },
     h6: {
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: "18px",
       lineHeight: "150%",
     },
@@ -133,17 +133,17 @@ const typography = {
       letterSpacing: "-0.5px",
     },
     h4: {
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: "22px",
       lineHeight: "150%",
     },
     h5: {
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: "20px",
       lineHeight: "150%",
     },
     h6: {
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: "16px",
       lineHeight: "120%",
     },
