@@ -45,7 +45,7 @@ const Form = () => {
           label="Twoja wiadomość"
           placeholder="Napisz dla nas wiadomość"
           required
-          minlength="50"
+          minLength="50"
         />
         <Styled.ButtonContainer>
           <Button text="Wyślij" />

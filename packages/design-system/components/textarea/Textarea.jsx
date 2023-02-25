@@ -15,7 +15,7 @@ const Textarea = ({
   name,
   id,
   className,
-  minlength,
+  minLength,
 }) => (
   <Styled.Label>
     <Typography variant="bodySmall">{label}</Typography>
@@ -28,7 +28,7 @@ const Textarea = ({
         name={name}
         id={id}
         className={className}
-        minlength={minlength}
+        minLength={minLength}
       />
       {error && (
         <Styled.Icon error={error}>
@@ -60,7 +60,7 @@ Textarea.propTypes = {
   name: string,
   id: string,
   className: string,
-  minlength: number,
+  minLength: number,
 }
 
 Textarea.defaultProps = {
@@ -72,7 +72,7 @@ Textarea.defaultProps = {
   name: null,
   id: null,
   className: null,
-  minlength: null,
+  minLength: null,
 }
 
 export default Textarea
