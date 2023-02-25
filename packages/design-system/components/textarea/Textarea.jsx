@@ -1,4 +1,4 @@
-import { bool, string } from "prop-types"
+import { bool, number, string } from "prop-types"
 import Icon from "design-system/components/icon"
 import Typography from "design-system/components/typography"
 import theme from "design-system/tokens/theme"
@@ -15,6 +15,7 @@ const Textarea = ({
   name,
   id,
   className,
+  minlength,
 }) => (
   <Styled.Label>
     <Typography variant="bodySmall">{label}</Typography>
@@ -27,6 +28,7 @@ const Textarea = ({
         name={name}
         id={id}
         className={className}
+        minlength={minlength}
       />
       {error && (
         <Styled.Icon error={error}>
@@ -58,6 +60,7 @@ Textarea.propTypes = {
   name: string,
   id: string,
   className: string,
+  minlength: number,
 }
 
 Textarea.defaultProps = {
@@ -69,6 +72,7 @@ Textarea.defaultProps = {
   name: null,
   id: null,
   className: null,
+  minlength: null,
 }
 
 export default Textarea
