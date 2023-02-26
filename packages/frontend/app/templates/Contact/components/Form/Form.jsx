@@ -24,7 +24,7 @@ const Form = () => {
           <Input
             label="Wpisz Twój e-mail"
             placeholder="kate.gregorczyk@gmail.com"
-            type="text"
+            type="email"
             required
           />
         </Styled.InputContainer>
