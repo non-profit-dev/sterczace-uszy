@@ -13,7 +13,3 @@ export const ResponseContainer = styled.div`
     padding: 0;
   }
 `
-
-export const NavLink = styled(Link)`
-  text-decoration: none;
-`

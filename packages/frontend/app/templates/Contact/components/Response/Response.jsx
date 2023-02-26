@@ -13,9 +13,7 @@ const Response = () => {
       <Typography variant="bodySmall" color={theme.colors.grey[500]}>
         Odpowiemy tak szybko, jak to tylko możliwe.
       </Typography>
-      <Styled.NavLink href="/">
-        <Button text="Strona w budowie" variant="border" href="" />
-      </Styled.NavLink>
+      <Button text="Strona w budowie" variant="border" href="/" />
     </Styled.ResponseContainer>
   )
 }
