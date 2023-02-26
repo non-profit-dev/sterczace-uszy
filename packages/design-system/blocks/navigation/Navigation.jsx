@@ -12,7 +12,7 @@ import * as Styled from "./Navigation.styled"
 import data from "./data"
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <Styled.Navigation>
