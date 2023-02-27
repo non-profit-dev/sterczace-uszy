@@ -36,14 +36,15 @@ const Textarea = ({
         </Styled.Icon>
       )}
     </Styled.Container>
-    <Typography
-      variant="bodyTiny"
-      color={error ? theme.colors.error[100] : theme.colors.grey[500]}
-      required={required}
-      data-testid="message"
-    >
-      {required ? "Pole wymagane" : message}
-    </Typography>
+    {message && (
+      <Typography
+        variant="bodyTiny"
+        color={error ? theme.colors.error[100] : theme.colors.grey[500]}
+        data-testid="message"
+      >
+        {message}
+      </Typography>
+    )}
   </Styled.Label>
 )
 

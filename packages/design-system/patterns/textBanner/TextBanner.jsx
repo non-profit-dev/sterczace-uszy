@@ -30,7 +30,7 @@ const sizes = {
 
 const TextBanner = ({
   heading,
-  description,
+  children,
   subtitle,
   layout,
   size,
@@ -41,17 +41,24 @@ const TextBanner = ({
   className,
 }) => (
   <Styled.TextBanner layout={layout} size={size} className={className}>
-    <Styled.Subtitle variant={sizes[size].subtitle} color={subtitleColor}>
-      {subtitle}
-    </Styled.Subtitle>
+    {subtitle && (
+      <Styled.Subtitle variant={sizes[size].subtitle} color={subtitleColor}>
+        {subtitle}
+      </Styled.Subtitle>
+    )}
+
     <Styled.Container size={size}>
-      <Typography variant={sizes[size].heading} color={headingColor}>
+      <Typography variant={sizes[size].heading} color={headingColor} as="div">
         {heading}
       </Typography>
     </Styled.Container>
-    <Typography variant={sizes[size].description} color={descriptionColor}>
-      {description}
-    </Typography>
+    <Styled.Description
+      variant={sizes[size].description}
+      color={descriptionColor}
+      as="div"
+    >
+      {children}
+    </Styled.Description>
     <Styled.ButtonContainer size={size}>
       {button && button}
     </Styled.ButtonContainer>
@@ -60,7 +67,7 @@ const TextBanner = ({
 
 TextBanner.propTypes = {
   heading: string.isRequired,
-  description: string.isRequired,
+  children: node,
   subtitle: string,
   layout: oneOf(["left", "center"]),
   size: oneOf(["tiny", "small", "medium", "large"]),
@@ -80,6 +87,7 @@ TextBanner.defaultProps = {
   headingColor: theme.colors.grey[600],
   descriptionColor: theme.colors.grey[500],
   className: null,
+  children: null,
 }
 
 export default TextBanner
