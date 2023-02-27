@@ -74,7 +74,7 @@ const footerData = {
       link: "",
     },
     {
-      title: "Zasady adopcjii",
+      title: "Zasady adopcji",
       link: "",
     },
     {
