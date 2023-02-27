@@ -6,19 +6,14 @@ import theme from "../../tokens/theme"
 import * as Styled from "./TextBanner.styled"
 
 const sizes = {
-  tiny: {
+  small: {
     subtitle: "h6",
     heading: "h3",
     description: "bodySmall",
   },
-  small: {
-    subtitle: "h6",
-    heading: "h2",
-    description: "bodyTitle",
-  },
   medium: {
     subtitle: "h6",
-    heading: "h1",
+    heading: "h2",
     description: "bodyTitle",
   },
   large: {
@@ -70,7 +65,7 @@ TextBanner.propTypes = {
   children: node,
   subtitle: string,
   layout: oneOf(["left", "center"]),
-  size: oneOf(["tiny", "small", "medium", "large"]),
+  size: oneOf(["small", "medium", "large"]),
   button: node,
   subtitleColor: string,
   headingColor: string,

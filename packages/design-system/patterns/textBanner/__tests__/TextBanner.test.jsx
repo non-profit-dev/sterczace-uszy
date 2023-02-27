@@ -8,7 +8,7 @@ const children = "Text"
 describe(`TextBanner`, () => {
   it(`renders with custom properties`, () => {
     render(
-      <TextBanner heading="Fundacja Sterczące Uszy" layout="left" size="tiny">
+      <TextBanner heading="Fundacja Sterczące Uszy" layout="left" size="small">
         {children}
       </TextBanner>
     )
