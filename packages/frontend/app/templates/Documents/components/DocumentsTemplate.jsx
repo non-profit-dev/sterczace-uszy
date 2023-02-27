@@ -1,8 +1,11 @@
 import TextBanner from "design-system/patterns/textBanner"
 import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
+
+import AdoptionSurvey from "frontend/public/documents/AdoptionSurvey.svg"
+import TempHomeSurvey from "frontend/public/documents/TempHomeSurvey.svg"
+
 import * as Styled from "./DocumentsTemplate.styled"
-import Survey from "../../../public/documents/Survey.svg"
 
 const Info = () => (
   <>
@@ -28,7 +31,7 @@ const DocumentsTemplate = () => (
   <>
     <Styled.SurveyContainer>
       <Styled.Image>
-        <Survey />
+        <AdoptionSurvey />
       </Styled.Image>
       <TextBanner
         heading="Ankieta przedadopcyjna"
@@ -49,7 +52,7 @@ const DocumentsTemplate = () => (
     </Styled.SurveyContainer>
     <Styled.SurveyContainer>
       <Styled.Image>
-        <Survey />
+        <TempHomeSurvey />
       </Styled.Image>
       <TextBanner
         heading="Ankieta dla domu tymczasowego"
