@@ -5,7 +5,6 @@ import { render, screen } from "design-system/test-utils"
 import Input from "design-system/components/input"
 
 const label = "Label"
-const requiredMessage = "Pole wymagane"
 const message = "Test message"
 
 describe(`Input`, () => {
@@ -36,11 +35,6 @@ describe(`Input`, () => {
   it(`renders with message when is passed`, () => {
     render(<Input label={label} type="text" message={message} />)
     expect(screen.getByTestId("message")).toHaveTextContent(message)
-  })
-
-  it(`renders with hardcoded message when is required`, () => {
-    render(<Input label={label} type="text" required />)
-    expect(screen.getByTestId("message")).toHaveTextContent(requiredMessage)
   })
 
   it("has typed text", async () => {

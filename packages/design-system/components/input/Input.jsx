@@ -41,14 +41,15 @@ const Input = ({
         </Styled.Icon>
       )}
     </Styled.Container>
-    <Typography
-      variant="bodyTiny"
-      color={state ? colors[state] : theme.colors.grey[500]}
-      required={required}
-      data-testid="message"
-    >
-      {required ? "Pole wymagane" : message}
-    </Typography>
+    {message && (
+      <Typography
+        variant="bodyTiny"
+        color={state ? colors[state] : theme.colors.grey[500]}
+        data-testid="message"
+      >
+        {message}
+      </Typography>
+    )}
   </Styled.Label>
 )
 
