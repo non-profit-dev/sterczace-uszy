@@ -1,13 +1,15 @@
 import styled from "@emotion/styled"
 
 export const SurveyContainer = styled.div`
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 50px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
   }
 `
 
