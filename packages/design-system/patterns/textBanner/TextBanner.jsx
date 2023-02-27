@@ -52,9 +52,12 @@ const TextBanner = ({
         {heading}
       </Typography>
     </Styled.Container>
-    <Typography variant={sizes[size].description} color={descriptionColor}>
+    <Styled.Description
+      variant={sizes[size].description}
+      color={descriptionColor}
+    >
       {description}
-    </Typography>
+    </Styled.Description>
     <Styled.ButtonContainer size={size}>
       {button && button}
     </Styled.ButtonContainer>
