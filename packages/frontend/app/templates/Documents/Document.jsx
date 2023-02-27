@@ -29,7 +29,7 @@ const Documents = () => {
                 fundacjasterczaceuszy@gmail.com
               </a>
               <br />
-              Jak tylko ją przeanalizujemy skontaktujemy sie z Tobą.
+              Jak tylko ją przeanalizujemy skontaktujemy się z Tobą.
             </Typography>
           </Styled.DocumentsInfo>
         </Styled.DocumentContainer>
