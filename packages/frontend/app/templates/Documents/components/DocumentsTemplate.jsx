@@ -35,7 +35,7 @@ const DocumentsTemplate = () => (
       </Styled.Image>
       <TextBanner
         heading="Ankieta przedadopcyjna"
-        size="tiny"
+        size="small"
         button={
           <Button
             text="Pobierz"
@@ -56,7 +56,7 @@ const DocumentsTemplate = () => (
       </Styled.Image>
       <TextBanner
         heading="Ankieta dla domu tymczasowego"
-        size="tiny"
+        size="small"
         button={
           <Button
             text="Pobierz"
