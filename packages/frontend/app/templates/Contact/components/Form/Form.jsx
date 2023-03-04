@@ -53,7 +53,7 @@ const Form = ({ handleSubmit, submitting }) => {
           placeholder="Napisz dla nas wiadomość"
           required
           name="Wiadomość"
-          minLength={50}
+          minLength={30}
         />
         <Styled.ButtonContainer>
           <Button

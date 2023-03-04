@@ -3,8 +3,8 @@ import Typography from "design-system/components/typography"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 import Button from "design-system/components/button"
+import Contact from "frontend/public/contact/Contact.svg"
 import * as Styled from "./ContactInfo.styled"
-import Contact from "../../../../public/contact/Contact.svg"
 import data from "./data"
 
 const ContactInfo = () => {
