@@ -5,7 +5,7 @@ describe("Contact Page", () => {
 
   it(`should be accessible`, () => {
     cy.injectAxe()
-    cy.checkA11y({
+    cy.checkA11y(null, {
       rules: {
         "color-contrast": { enabled: false },
       },
