@@ -7,7 +7,7 @@ const Response = () => {
   const theme = useTheme()
   return (
     <Styled.ResponseContainer>
-      <Typography variant="h3" color={theme.colors.grey[600]}>
+      <Typography variant="h3" as="h2" color={theme.colors.grey[600]}>
         Wiadomość została wysłana.
       </Typography>
       <Typography variant="bodySmall" color={theme.colors.grey[500]}>

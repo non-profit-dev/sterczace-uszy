@@ -18,7 +18,7 @@ const Contact = () => {
 
   return (
     <Page title="Kontakt">
-      <Container size="medium">
+      <Container as="main" size="medium">
         <Styled.ContactContainer>
           <ContactInfo />
           {state.succeeded ? (
