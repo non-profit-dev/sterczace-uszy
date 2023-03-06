@@ -1,62 +1,63 @@
-import { shape, arrayOf, string } from "prop-types"
+import { shape, arrayOf, string, number } from "prop-types"
 
-import Typography from "design-system/components/typography"
-import Image from "design-system/components/image"
+import Container from "design-system/components/container"
+
+import Navigation from "design-system/blocks/navigation"
+import Footer from "design-system/blocks/footer"
+
+import Achievements from "./components/Achievements"
+import Animals from "./components/Animals"
+import Supporters from "./components/Supporters"
 
 import Page from "../Page"
 
 import * as Styled from "./HomePage.styled"
 
-const HomePage = ({ animals, supporting }) => (
+const HomePage = ({ animals, supporting, adoptedAnimals }) => (
   <Page>
-    <Styled.Main>
-      <Styled.TextContainer>
-        <Typography variant="h5">
-          ♥️ {supporting.total} Pomocnych serc
-        </Typography>
-        <Typography variant="h5">
-          🏡 {animals.total} Znalezionych domów
-        </Typography>
-      </Styled.TextContainer>
+    <Navigation />
 
-      <Typography variant="h4">Do adopcji:</Typography>
-      <Styled.Grid>
-        {animals.items.map((animal) => (
-          <div key={animal.name}>
-            <Image src={animal.thumbnail.url} />
-            <Typography variant="bodyTitle">{animal.name}</Typography>
-            <Typography variant="bodySmall">{animal.excerpt}</Typography>
-          </div>
-        ))}
-      </Styled.Grid>
-      <Typography variant="h4">Wspierajacy fundację:</Typography>
-      <Styled.Grid>
-        {supporting.items.map((item) => (
-          <div key={item.name}>
-            <Typography variant="bodyTitle">{item.name}</Typography>
-            <Typography variant="bodyTiny">{item.description}</Typography>
-          </div>
-        ))}
-      </Styled.Grid>
+    <Styled.Main>
+      <Container>
+        <Achievements
+          supportingNumber={supporting.total}
+          animalsNumber={animals.total}
+          adoptedAnimalsNumber={adoptedAnimals.total}
+        />
+
+        <Animals data={animals.items} />
+
+        <Supporters data={supporting.items} />
+      </Container>
     </Styled.Main>
+
+    <Footer />
   </Page>
 )
 
 HomePage.propTypes = {
-  animals: arrayOf(
-    shape({
-      name: string,
-      gender: string,
-      age: string,
-    })
-  ).isRequired,
-  supporting: arrayOf(
-    shape({
-      name: string,
-      description: string,
-      url: string,
-    })
-  ).isRequired,
+  animals: shape({
+    items: arrayOf(
+      shape({
+        name: string,
+        gender: string,
+        age: string,
+        excerpt: string,
+      })
+    ),
+  }).isRequired,
+  supporting: shape({
+    items: arrayOf(
+      shape({
+        name: string,
+        description: string,
+        url: string,
+      })
+    ),
+  }).isRequired,
+  adoptedAnimals: shape({
+    total: number,
+  }).isRequired,
 }
 
 export default HomePage

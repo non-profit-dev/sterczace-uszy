@@ -21,13 +21,9 @@ export const GET_ANIMALS = gql`
         name
         gender
         age
-        weight
         excerpt
         thumbnail {
           url
-        }
-        description {
-          json
         }
       }
     }
@@ -35,13 +31,9 @@ export const GET_ANIMALS = gql`
 `
 
 export const GET_ADOPTED_ANIMALS = gql`
-  query GetAnimals {
+  query GetAdoptedAnimals {
     animalCollection(where: { adopted: true }) {
-      items {
-        name
-        gender
-        age
-      }
+      total
     }
   }
 `
