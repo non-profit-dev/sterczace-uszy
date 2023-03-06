@@ -25,5 +25,7 @@ describe("Contact Page", () => {
     )
 
     cy.get("form").submit()
+
+    cy.get("h2").contains("Wiadomość została wysłana.").should("be.visible")
   })
 })
