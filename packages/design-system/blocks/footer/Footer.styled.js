@@ -4,9 +4,11 @@ export const Footer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-bottom: 80px;
 
   ${({ theme }) => theme.breakpoints.mobile} {
     gap: 32px;
+    padding-bottom: 40px;
   }
 
   &:before {

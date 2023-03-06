@@ -78,7 +78,9 @@ const Footer = () => {
                   <Typography variant="bodySmall">{krs}</Typography>
                 </ListItem>
                 <ListItem iconName={icon} size="medium" variant="gray">
-                  {accountNumberText}
+                  <Typography variant="bodySmall">
+                    {accountNumberText}
+                  </Typography>
                   <Button
                     variant="text"
                     text={isCopied ? "Skopiowano" : "Skopiuj"}
@@ -87,7 +89,9 @@ const Footer = () => {
                     onClick={() => copyToClipboard(accountNumber)}
                   />
                 </ListItem>
-                <ListItem variant="gray">{accountNumber}</ListItem>
+                <ListItem variant="gray">
+                  <Typography variant="bodySmall">{accountNumber}</Typography>
+                </ListItem>
               </List>
             </Styled.Section>
           </Styled.MainFoundationData>
