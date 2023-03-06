@@ -1,6 +1,10 @@
-import { arrayOf, shape, string, number } from "prop-types"
+import HomePage from "../templates/HomePage"
 
-import HomePage from "../templates/HomePage/HomePage"
+import {
+  supportingType,
+  animalsType,
+  adoptedAnimalsType,
+} from "../templates/HomePage/types"
 
 import client from "../lib/api"
 import {
@@ -41,28 +45,9 @@ export async function getStaticProps() {
 }
 
 Home.propTypes = {
-  animals: shape({
-    items: arrayOf(
-      shape({
-        name: string,
-        gender: string,
-        age: string,
-        excerpt: string,
-      })
-    ),
-  }).isRequired,
-  supporting: shape({
-    items: arrayOf(
-      shape({
-        name: string,
-        description: string,
-        url: string,
-      })
-    ),
-  }).isRequired,
-  adoptedAnimals: shape({
-    total: number,
-  }).isRequired,
+  animals: animalsType.isRequired,
+  supporting: supportingType.isRequired,
+  adoptedAnimals: adoptedAnimalsType.isRequired,
 }
 
 export default Home

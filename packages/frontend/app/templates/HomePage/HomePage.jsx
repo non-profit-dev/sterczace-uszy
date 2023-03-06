@@ -1,5 +1,3 @@
-import { shape, arrayOf, string, number } from "prop-types"
-
 import Container from "design-system/components/container"
 
 import Navigation from "design-system/blocks/navigation"
@@ -12,6 +10,8 @@ import Supporters from "./components/Supporters"
 import Page from "../Page"
 
 import * as Styled from "./HomePage.styled"
+
+import { supportingType, animalsType, adoptedAnimalsType } from "./types"
 
 const HomePage = ({ animals, supporting, adoptedAnimals }) => (
   <Page>
@@ -36,28 +36,9 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
 )
 
 HomePage.propTypes = {
-  animals: shape({
-    items: arrayOf(
-      shape({
-        name: string,
-        gender: string,
-        age: string,
-        excerpt: string,
-      })
-    ),
-  }).isRequired,
-  supporting: shape({
-    items: arrayOf(
-      shape({
-        name: string,
-        description: string,
-        url: string,
-      })
-    ),
-  }).isRequired,
-  adoptedAnimals: shape({
-    total: number,
-  }).isRequired,
+  animals: animalsType.isRequired,
+  supporting: supportingType.isRequired,
+  adoptedAnimals: adoptedAnimalsType.isRequired,
 }
 
 export default HomePage
