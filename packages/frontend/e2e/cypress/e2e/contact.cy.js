@@ -5,11 +5,7 @@ describe("Contact Page", () => {
 
   it(`should be accessible`, () => {
     cy.injectAxe()
-    cy.checkA11y(null, {
-      rules: {
-        "color-contrast": { enabled: false },
-      },
-    })
+    cy.checkA11y()
   })
 
   it(`renders the form heading`, () => {
