@@ -1,4 +1,4 @@
-import HomePage from "../templates/HomePage/HomePage"
+import HomePage from "../templates/HomePage"
 
 import {
   supportingType,
