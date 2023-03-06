@@ -28,7 +28,7 @@ const Form = ({ handleSubmit, submitting }) => {
           />
           <Input
             label="Wpisz Twój e-mail"
-            placeholder="kate.gregorczyk@gmail.com"
+            placeholder="Twój adres e-mail"
             type="email"
             name="Mail"
             required
