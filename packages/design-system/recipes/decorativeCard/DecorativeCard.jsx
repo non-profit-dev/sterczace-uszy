@@ -6,12 +6,30 @@ import Title from "design-system/components/title"
 
 import * as Styled from "./DecorativeCard.styled"
 
+const sizes = {
+  small: {
+    illustrationSize: "small",
+    countSize: "large",
+  },
+  medium: {
+    illustrationSize: "medium",
+    countSize: "xlarge",
+  },
+  large: {
+    illustrationSize: "large",
+    countSize: "xxlarge",
+  },
+}
+
 const DecorativeCard = ({ titleText, illustrationName, count, size }) => (
   <Styled.DecorativeCard>
     <Styled.Content>
-      <Count count={count} size={size} />
+      <Count count={count} size={sizes[size].countSize} />
       <Styled.Illustration>
-        <Illustration name={illustrationName} size="large" />
+        <Illustration
+          name={illustrationName}
+          size={sizes[size].illustrationSize}
+        />
       </Styled.Illustration>
     </Styled.Content>
 
@@ -21,9 +39,6 @@ const DecorativeCard = ({ titleText, illustrationName, count, size }) => (
 export default DecorativeCard
 
 DecorativeCard.propTypes = {
-  /**
-   * The main heading of the card.
-   */
   titleText: string.isRequired,
   illustrationName: string,
   count: number.isRequired,

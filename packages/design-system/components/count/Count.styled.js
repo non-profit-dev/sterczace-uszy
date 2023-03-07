@@ -3,8 +3,8 @@ import styled from "@emotion/styled"
 const sizes = {
   small: "24px",
   medium: "36px",
-  large: "48px",
-  xlarge: "70.27px",
+  large: "70px",
+  xlarge: "94px",
   xxlarge: "110px",
 }
 

@@ -11,7 +11,9 @@ export const DecorativeCard = styled.div`
 export const Content = styled.div`
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  ${"" /* justify-content: center; */}
+  border: 1px solid red;
 `
 export const Illustration = styled.div`
   position: relative;
