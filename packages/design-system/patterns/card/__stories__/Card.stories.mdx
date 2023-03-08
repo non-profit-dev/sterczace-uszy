@@ -28,72 +28,6 @@ It's a flexible component used to group and display content in a concise format.
 
 <Canvas>
   <Story
-    name="Overview - simple with button"
-    args={{
-      title: <Title text="Porozmawiaj" />,
-      button: (
-        <Button
-          text="Button"
-          variant="text"
-          color="primary"
-          iconEnd="arrowRight"
-        />
-      ),
-      href: "https://google.com",
-    }}
-  >
-    {Template.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="Overview - no text"
-    args={{
-      title: <Title text="Porozmawiaj" />,
-      illustrationName: "heartWithDogFace",
-    }}
-  >
-    {SimpleTemplate.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="Overview - no text, with button"
-    args={{
-      title: <Title text="Porozmawiaj" />,
-      illustrationName: "heartWithDogFace",
-      button: (
-        <Button
-          text="Button"
-          variant="text"
-          color="primary"
-          iconEnd="arrowRight"
-        />
-      ),
-      href: "https://google.com",
-    }}
-  >
-    {SimpleTemplate.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="Overview - illustration and background"
-    args={{
-      title: <Title text="Porozmawiaj" />,
-      illustrationName: "heartWithDogFace",
-      bgColor: "#FEF8EC",
-    }}
-  >
-    {Template.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
     name="Overview - illustration"
     args={{
       title: <Title text="Porozmawiaj" />,
@@ -131,7 +65,7 @@ It's a flexible component used to group and display content in a concise format.
     args={{
       title: <Title text="Porozmawiaj" iconEnd="dog" badge="Szczeniak" />,
       imageSrc:
-        "https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 ",
+        "https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       imageAlt: "dog",
       bgColor: "#FEF8EC",
     }}
@@ -148,6 +82,7 @@ It's a flexible component used to group and display content in a concise format.
       layout: "left",
       imageSrc:
         "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg ",
+      imageHeight: "300px",
       imageAlt: "cat",
       button: (
         <Button
@@ -195,7 +130,7 @@ It's a flexible component used to group and display content in a concise format.
 export const Template = (args) => (
   <div
     style={{
-      width: "40%",
+      maxWidth: "400px",
     }}
   >
     <Card {...args}>
@@ -217,7 +152,7 @@ export const Template = (args) => (
 export const SimpleTemplate = (args) => (
   <div
     style={{
-      width: "40%",
+      maxWidth: "400px",
     }}
   >
     <Card {...args} />
@@ -227,7 +162,7 @@ export const SimpleTemplate = (args) => (
 export const TextTemplate = (args) => (
   <div
     style={{
-      width: "40%",
+      maxWidth: "400px",
     }}
   >
     <Card {...args}>

@@ -5,7 +5,6 @@ import { render, screen } from "design-system/test-utils"
 import Textarea from "design-system/components/textarea"
 
 const label = "Example label"
-const requiredMessage = "Pole wymagane"
 const message = "Test message"
 
 describe(`Textarea`, () => {
@@ -48,11 +47,6 @@ describe(`Textarea`, () => {
   it(`renders with message when is passed`, () => {
     render(<Textarea label={label} message={message} />)
     expect(screen.getByTestId("message")).toHaveTextContent(message)
-  })
-
-  it(`renders with hardcoded message when is required`, () => {
-    render(<Textarea label={label} required />)
-    expect(screen.getByTestId("message")).toHaveTextContent(requiredMessage)
   })
 
   it("has typed text", async () => {

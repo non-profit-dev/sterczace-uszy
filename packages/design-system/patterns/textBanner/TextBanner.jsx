@@ -6,39 +6,26 @@ import theme from "../../tokens/theme"
 import * as Styled from "./TextBanner.styled"
 
 const sizes = {
-  tiny: {
+  small: {
     subtitle: "h6",
     heading: "h3",
     description: "bodySmall",
-    button: "text",
-    buttonSize: "medium",
-  },
-  small: {
-    subtitle: "h6",
-    heading: "h2",
-    description: "bodyTitle",
-    button: "fill",
-    buttonSize: "large",
   },
   medium: {
     subtitle: "h6",
-    heading: "h1",
-    description: "bodySmall",
-    button: "fill",
-    buttonSize: "large",
+    heading: "h2",
+    description: "bodyTitle",
   },
   large: {
     subtitle: "h6",
     heading: "h1",
     description: "bodyTitle",
-    button: "fill",
-    buttonSize: "large",
   },
 }
 
 const TextBanner = ({
   heading,
-  description,
+  children,
   subtitle,
   layout,
   size,
@@ -46,33 +33,44 @@ const TextBanner = ({
   subtitleColor,
   headingColor,
   descriptionColor,
+  className,
 }) => (
-  <Styled.TextBanner layout={layout} size={size}>
-    <Styled.Subtitle variant={sizes[size].subtitle} color={subtitleColor}>
-      {subtitle}
-    </Styled.Subtitle>
+  <Styled.TextBanner layout={layout} size={size} className={className}>
+    {subtitle && (
+      <Styled.Subtitle variant={sizes[size].subtitle} color={subtitleColor}>
+        {subtitle}
+      </Styled.Subtitle>
+    )}
+
     <Styled.Container size={size}>
-      <Typography variant={sizes[size].heading} color={headingColor}>
+      <Typography variant={sizes[size].heading} color={headingColor} as="div">
         {heading}
       </Typography>
     </Styled.Container>
-    <Typography variant={sizes[size].description} color={descriptionColor}>
-      {description}
-    </Typography>
-    <Styled.ButtonContainer>{button && button}</Styled.ButtonContainer>
+    <Styled.Description
+      variant={sizes[size].description}
+      color={descriptionColor}
+      as="div"
+    >
+      {children}
+    </Styled.Description>
+    <Styled.ButtonContainer size={size}>
+      {button && button}
+    </Styled.ButtonContainer>
   </Styled.TextBanner>
 )
 
 TextBanner.propTypes = {
   heading: string.isRequired,
-  description: string.isRequired,
+  children: node,
   subtitle: string,
   layout: oneOf(["left", "center"]),
-  size: oneOf(["tiny", "small", "medium", "large"]),
+  size: oneOf(["small", "medium", "large"]),
   button: node,
   subtitleColor: string,
   headingColor: string,
   descriptionColor: string,
+  className: string,
 }
 
 TextBanner.defaultProps = {
@@ -83,6 +81,8 @@ TextBanner.defaultProps = {
   subtitleColor: theme.colors.primary[500],
   headingColor: theme.colors.grey[600],
   descriptionColor: theme.colors.grey[500],
+  className: null,
+  children: null,
 }
 
 export default TextBanner

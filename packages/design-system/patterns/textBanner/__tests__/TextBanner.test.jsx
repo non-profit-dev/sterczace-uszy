@@ -3,26 +3,25 @@ import { render, screen } from "design-system/test-utils"
 import TextBanner from "design-system/patterns/textBanner"
 
 const heading = "Fundacja Sterczące Uszy"
-const description = "Text"
+const children = "Text"
 
 describe(`TextBanner`, () => {
   it(`renders with custom properties`, () => {
     render(
-      <TextBanner
-        heading="Fundacja Sterczące Uszy"
-        description="Text"
-        layout="left"
-        size="tiny"
-      />
+      <TextBanner heading="Fundacja Sterczące Uszy" layout="left" size="small">
+        {children}
+      </TextBanner>
     )
 
     expect(screen.getByText(heading)).toBeInTheDocument()
-    expect(screen.getByText(description)).toBeInTheDocument()
+    expect(screen.getByText(children)).toBeInTheDocument()
   })
   it(`renders with default properties`, () => {
-    render(<TextBanner heading="Fundacja Sterczące Uszy" description="Text" />)
+    render(
+      <TextBanner heading="Fundacja Sterczące Uszy">{children}</TextBanner>
+    )
 
     expect(screen.getByText(heading)).toBeInTheDocument()
-    expect(screen.getByText(description)).toBeInTheDocument()
+    expect(screen.getByText(children)).toBeInTheDocument()
   })
 })
