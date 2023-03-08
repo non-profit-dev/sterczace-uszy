@@ -34,7 +34,7 @@ ListItem.propTypes = {
    * If provided, it renders an icon element before the text based on the icon name.
    */
   iconName: string,
-  iconSize: oneOf(["medium"]),
+  iconSize: oneOf(["small", "medium"]),
   gap: number,
   className: string,
 }
