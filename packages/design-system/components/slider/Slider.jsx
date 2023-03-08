@@ -18,6 +18,7 @@ const Slider = ({ children }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 2,
+    customPaging: () => <Styled.Dots />,
     nextArrow: (
       <NextArrow>
         <IconButton
