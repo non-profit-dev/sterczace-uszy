@@ -25,11 +25,15 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
           animalsNumber={animals.total}
           adoptedAnimalsNumber={adoptedAnimals.total}
         />
+      </Container>
 
+      <Container>
         <Animals data={animals.items} />
+      </Container>
 
-        <Support />
+      <Support />
 
+      <Container>
         <Supporters data={supporting.items} />
       </Container>
     </Styled.Main>
