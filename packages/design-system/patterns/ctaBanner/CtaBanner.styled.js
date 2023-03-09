@@ -11,8 +11,7 @@ export const CtaBanner = styled.div`
   );
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 120px 24px;
   }
 `
 
