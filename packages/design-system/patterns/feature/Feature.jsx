@@ -6,7 +6,7 @@ import Typography from "design-system/components/typography"
 
 import * as Styled from "./Feature.styled"
 
-const TextBanner = ({ heading, description, icon, className }) => {
+const Feature = ({ heading, description, icon, className }) => {
   const theme = useTheme()
 
   return (
@@ -25,16 +25,16 @@ const TextBanner = ({ heading, description, icon, className }) => {
   )
 }
 
-TextBanner.propTypes = {
+Feature.propTypes = {
   heading: string.isRequired,
   icon: string.isRequired,
   description: string,
   className: string,
 }
 
-TextBanner.defaultProps = {
+Feature.defaultProps = {
   description: null,
   className: null,
 }
 
-export default TextBanner
+export default Feature
