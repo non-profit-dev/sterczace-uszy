@@ -1,18 +1,7 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
-const typography = {
-  h1: "h1",
-  h2: "h2",
-  h3: "h3",
-  h4: "h4",
-  h5: "h5",
-  h6: "h6",
-  bodyLarge: "p",
-  bodySmall: "p",
-  bodyTitle: "p",
-  bodyTiny: "p",
-}
+import Typography from "design-system/components/typography"
 
 export const Title = styled.div`
   display: ${({ fullWidth }) => (fullWidth ? `flex` : `inline-flex`)};
@@ -30,14 +19,10 @@ export const Wrapper = styled.div`
   gap: 10px;
 `
 
-export const Text = styled.p`
+export const Text = styled(Typography)`
   position: relative;
   margin: 0;
-  ${({ theme, size }) => theme.typography.desktop[typography[size]]};
 
-  ${({ theme }) => theme.breakpoints.tablet} {
-    ${({ theme, size }) => theme.typography.tablet[typography[size]]};
-  }
   &:before {
     content: "";
     position: absolute;
@@ -50,8 +35,8 @@ export const Text = styled.p`
     background: ${({ theme }) => theme.colors.primary[500]};
   }
 
-  ${({ variant }) =>
-    variant === "text" &&
+  ${({ style }) =>
+    style === "text" &&
     css`
       &:before {
         display: none;

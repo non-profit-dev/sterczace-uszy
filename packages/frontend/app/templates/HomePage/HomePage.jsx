@@ -5,6 +5,7 @@ import Footer from "design-system/blocks/footer"
 
 import Achievements from "./components/Achievements"
 import Animals from "./components/Animals"
+import Support from "./components/Support"
 import Supporters from "./components/Supporters"
 
 import Page from "../Page"
@@ -26,6 +27,8 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
         />
 
         <Animals data={animals.items} />
+
+        <Support />
 
         <Supporters data={supporting.items} />
       </Container>
