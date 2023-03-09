@@ -4,7 +4,7 @@ export const Banner = styled.div`
   text-align: center;
   padding: 19px;
   position: relative;
-  color: ${({ theme }) => theme.colors.grey[600]};
+  color: ${({ theme }) => theme.colors.gray[600]};
   background-color: ${({ theme }) => theme.colors.complementary[100]};
 `
 

@@ -39,7 +39,7 @@ const Textarea = ({
     {message && (
       <Typography
         variant="bodyTiny"
-        color={error ? theme.colors.error[100] : theme.colors.grey[500]}
+        color={error ? theme.colors.error[100] : theme.colors.gray[500]}
         data-testid="message"
       >
         {message}
