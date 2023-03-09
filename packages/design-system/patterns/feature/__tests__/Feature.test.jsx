@@ -1,27 +1,17 @@
 import { render, screen } from "design-system/test-utils"
 
-import TextBanner from "design-system/patterns/textBanner"
+import Feature from "design-system/patterns/feature"
 
-const heading = "Fundacja Sterczące Uszy"
-const children = "Text"
+const heading = "Feature"
+const description = "Lorem ipsum"
+const icon = "check"
 
-describe(`TextBanner`, () => {
-  it(`renders with custom properties`, () => {
-    render(
-      <TextBanner heading="Fundacja Sterczące Uszy" layout="left" size="small">
-        {children}
-      </TextBanner>
-    )
-
-    expect(screen.getByText(heading)).toBeInTheDocument()
-    expect(screen.getByText(children)).toBeInTheDocument()
-  })
+describe(`Feature`, () => {
   it(`renders with default properties`, () => {
-    render(
-      <TextBanner heading="Fundacja Sterczące Uszy">{children}</TextBanner>
-    )
+    render(<Feature heading={heading} description={description} icon={icon} />)
 
     expect(screen.getByText(heading)).toBeInTheDocument()
-    expect(screen.getByText(children)).toBeInTheDocument()
+    expect(screen.getByTitle(icon)).toBeInTheDocument()
+    expect(screen.getByText(description)).toBeInTheDocument()
   })
 })
