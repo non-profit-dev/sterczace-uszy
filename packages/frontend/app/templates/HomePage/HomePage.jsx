@@ -3,6 +3,7 @@ import Container from "design-system/components/container"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 
+import Hero from "./components/Hero"
 import Achievements from "./components/Achievements"
 import Animals from "./components/Animals"
 import Supporters from "./components/Supporters"
@@ -18,6 +19,8 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
     <Navigation />
 
     <Styled.Main>
+      <Hero />
+
       <Container>
         <Achievements
           supportingNumber={supporting.total}
