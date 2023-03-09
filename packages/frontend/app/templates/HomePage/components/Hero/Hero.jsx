@@ -1,10 +1,33 @@
 import { useTheme } from "@emotion/react"
 
 import Button from "design-system/components/button"
+import Title from "design-system/components/title"
 
 import TextBanner from "design-system/patterns/textBanner"
+import Card from "design-system/patterns/card"
 
 import * as Styled from "./Hero.styled"
+
+const cards = [
+  {
+    title: "Sprawdź warunki adopcji",
+    buttonText: "Dowiedz się więcej",
+    buttonHref: "/adopcja",
+    illustration: "heartWithDogFace",
+  },
+  {
+    title: "Zostań domem tymczasowym",
+    buttonText: "Poznaj zasady",
+    buttonHref: "/jak-pomoc",
+    illustration: "heartWithDogFace",
+  },
+  {
+    title: "Przekaż dary rzeczowe",
+    buttonText: "Podaruj",
+    buttonHref: "/adopcja",
+    illustration: "heartWithDogFace",
+  },
+]
 
 const Hero = () => {
   const theme = useTheme()
@@ -28,6 +51,28 @@ const Hero = () => {
             czynić dobro, przekaż wsparcie finansowe.
           </TextBanner>
         </Styled.Content>
+        <Styled.Cards>
+          {cards.map(({ title, buttonText, buttonHref, illustration }) => (
+            <Card
+              key={title}
+              href={buttonHref}
+              layout="center"
+              illustrationName={illustration}
+              hideIllustrationOnMobile
+              title={<Title text={title} variant="text" textSize="h4" />}
+              button={
+                <Button
+                  text={buttonText}
+                  variant="text"
+                  iconEnd="arrowRight"
+                  size="small"
+                  as="div"
+                />
+              }
+              bgColor={theme.colors.neutrals[100]}
+            />
+          ))}
+        </Styled.Cards>
       </Styled.Container>
     </Styled.Hero>
   )

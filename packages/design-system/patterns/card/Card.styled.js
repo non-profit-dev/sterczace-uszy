@@ -65,6 +65,7 @@ export const ContentContainer = styled.div`
     layout === "center"
       ? css`
           align-items: center;
+          text-align: center;
         `
       : css`
           align-items: flex-start;
