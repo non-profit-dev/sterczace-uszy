@@ -1,0 +1,133 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import Slider from "design-system/components/slider"
+import Card from "design-system/patterns/card"
+import Button from "design-system/components/button"
+import Title from "design-system/components/title"
+import Typography from "design-system/components/typography"
+
+<Meta title="Components/Slider" component={Slider} />
+
+<Canvas>
+  <Story name="Overview">
+    <Template
+      slidesPerViewMobile={1}
+      slidesPerViewTablet={1.5}
+      slidesPerViewDesktop={3}
+    />
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+# Slider
+
+export const Template = (args) => (
+  <Slider {...args}>
+    <div
+      style={{
+        maxWidth: "326px",
+      }}
+    >
+      <Card
+        illustrationName="heartWithDogFace"
+        title={<Title text="Pani Ani" />}
+        layout="center"
+      >
+        <Typography variant="bodySmall">
+          Dziękujemy Pani Annie za bycie domem tymczasowym dla Cynki.
+        </Typography>
+        <Button
+          text="Psycholożka"
+          variant="textLine"
+          size="small"
+          href="https://google.com"
+        />
+      </Card>
+    </div>
+    <div
+      style={{
+        maxWidth: "326px",
+      }}
+    >
+      <Card
+        illustrationName="heartWithDogFace"
+        title={<Title text="Fryzjer-psa.pl" />}
+        layout="center"
+      >
+        <Typography variant="bodySmall">
+          Fryzjer-psa.pl za darmowe umycie i wyczesanie naszego chłopaka
+        </Typography>
+        <Button
+          text="fryzjer-psa.pl"
+          variant="textLine"
+          size="small"
+          href="https://google.com"
+        />
+      </Card>
+    </div>
+    <div
+      style={{
+        maxWidth: "326px",
+      }}
+    >
+      <Card
+        illustrationName="heartWithDogFace"
+        title={<Title text="Pani Oli" />}
+        layout="center"
+      >
+        <Typography variant="bodySmall">
+          Dziękujemy Pani Oli za pomoc prawną w kwestii fundacji.
+        </Typography>
+        <Button
+          text="Adw. Aleksandra Musielska"
+          variant="textLine"
+          size="small"
+          href="https://google.com"
+        />
+      </Card>
+    </div>
+    <div
+      style={{
+        maxWidth: "326px",
+      }}
+    >
+      <Card
+        illustrationName="heartWithDogFace"
+        title={<Title text="Fryzjer-psa.pl" />}
+        layout="center"
+      >
+        <Typography variant="bodySmall">
+          Fryzjer-psa.pl za darmowe umycie i wyczesanie naszego chłopaka.
+        </Typography>
+        <Button
+          text="fryzjer-psa.pl"
+          variant="textLine"
+          size="small"
+          href="https://google.com"
+        />
+      </Card>
+    </div>
+    <div
+      style={{
+        maxWidth: "326px",
+      }}
+    >
+      <Card
+        illustrationName="heartWithDogFace"
+        title={<Title text="Pani Ani" />}
+        layout="center"
+      >
+        <Typography variant="bodySmall">
+          Dziękujemy Pani Annie za bycie domem tymczasowym dla Cynki.
+        </Typography>
+        <Button
+          text="Psycholożka"
+          variant="textLine"
+          size="small"
+          href="https://google.com"
+        />
+      </Card>
+    </div>
+  </Slider>
+)
