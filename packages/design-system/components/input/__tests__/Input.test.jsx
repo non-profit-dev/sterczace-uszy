@@ -5,7 +5,6 @@ import { render, screen } from "design-system/test-utils"
 import Input from "design-system/components/input"
 
 const label = "Label"
-const requiredMessage = "Pole wymagane"
 const message = "Test message"
 
 describe(`Input`, () => {
@@ -38,27 +37,26 @@ describe(`Input`, () => {
     expect(screen.getByTestId("message")).toHaveTextContent(message)
   })
 
-  it(`renders with hardcoded message when is required`, () => {
-    render(<Input label={label} type="text" required />)
-    expect(screen.getByTestId("message")).toHaveTextContent(requiredMessage)
-  })
-
   it("has typed text", async () => {
+    const user = userEvent.setup()
+
     render(<Input label={label} type="text" />)
 
     const input = screen.getByRole("textbox")
 
-    await userEvent.type(input, "Test")
+    await user.type(input, "Test")
 
     expect(input).toHaveValue("Test")
   })
 
   it("should not allow letters to be typed when type is set to number", async () => {
+    const user = userEvent.setup()
+
     render(<Input label={label} type="number" />)
 
     const input = screen.getByRole("spinbutton")
 
-    await userEvent.type(input, "Test")
+    await user.type(input, "Test")
 
     expect(input).toHaveValue(null)
   })

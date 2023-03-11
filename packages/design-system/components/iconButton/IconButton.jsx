@@ -1,7 +1,9 @@
 import { string, oneOf, func } from "prop-types"
 
-import Icon, { icons } from "design-system/components/icon"
-import theme from "design-system/theme"
+import Icon from "design-system/components/icon"
+import { icons } from "design-system/tokens/icons"
+
+import theme from "../../tokens/theme"
 
 import * as Styled from "./IconButton.styled"
 
@@ -12,6 +14,7 @@ const IconButton = ({
   size,
   onClick,
   ariaLabel,
+  className,
   target,
 }) => (
   <Styled.IconButton
@@ -19,6 +22,7 @@ const IconButton = ({
     href={href}
     onClick={onClick}
     aria-label={ariaLabel}
+    className={className}
     target={target}
   >
     <Icon name={name} size={size} color={color} />
@@ -38,6 +42,7 @@ IconButton.propTypes = {
    * It's used to provide a text description for assistive technologies, like screen readers.
    */
   ariaLabel: string.isRequired,
+  className: string,
   target: string,
 }
 
@@ -46,6 +51,7 @@ IconButton.defaultProps = {
   color: theme.colors.primary[500],
   size: "medium",
   onClick: null,
+  className: null,
   target: null,
 }
 

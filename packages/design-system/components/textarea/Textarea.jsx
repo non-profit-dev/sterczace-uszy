@@ -1,7 +1,7 @@
 import { bool, string } from "prop-types"
 import Icon from "design-system/components/icon"
 import Typography from "design-system/components/typography"
-import theme from "design-system/theme"
+import theme from "design-system/tokens/theme"
 
 import * as Styled from "./Textarea.styled"
 
@@ -14,6 +14,7 @@ const Textarea = ({
   disabled,
   name,
   id,
+  className,
 }) => (
   <Styled.Label>
     <Typography variant="bodySmall">{label}</Typography>
@@ -25,21 +26,23 @@ const Textarea = ({
         disabled={disabled}
         name={name}
         id={id}
+        className={className}
       />
       {error && (
         <Styled.Icon error={error}>
-          <Icon name="error" size="medium" />
+          <Icon name="close" size="medium" />
         </Styled.Icon>
       )}
     </Styled.Container>
-    <Typography
-      variant="bodyTiny"
-      color={error ? theme.colors.error[100] : theme.colors.grey[500]}
-      required={required}
-      data-testid="message"
-    >
-      {required ? "Pole wymagane" : message}
-    </Typography>
+    {message && (
+      <Typography
+        variant="bodyTiny"
+        color={error ? theme.colors.error[100] : theme.colors.grey[500]}
+        data-testid="message"
+      >
+        {message}
+      </Typography>
+    )}
   </Styled.Label>
 )
 
@@ -55,6 +58,7 @@ Textarea.propTypes = {
   disabled: bool,
   name: string,
   id: string,
+  className: string,
 }
 
 Textarea.defaultProps = {
@@ -65,6 +69,7 @@ Textarea.defaultProps = {
   disabled: false,
   name: null,
   id: null,
+  className: null,
 }
 
 export default Textarea

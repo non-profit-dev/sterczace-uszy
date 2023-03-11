@@ -1,9 +1,9 @@
-import { oneOf } from "prop-types"
+import { oneOf, string } from "prop-types"
 
-import HeartWithDogFace from "design-system/illustrations/heartWithDogFace.svg"
-import HeartIllustration from "design-system/illustrations/HeartIllustration.svg"
-import DogIllustration from "design-system/illustrations/DogIllustration.svg"
-import HomeIllustration from "design-system/illustrations/HomeIllustration.svg"
+import HeartWithDogFace from "design-system/tokens/illustrations/heartWithDogFace.svg"
+import HeartIllustration from "design-system/tokens/illustrations/HeartIllustration.svg"
+import DogIllustration from "design-system/tokens/illustrations/DogIllustration.svg"
+import HomeIllustration from "design-system/tokens/illustrations/HomeIllustration.svg"
 
 const sizes = {
   heartWithDogFace: {
@@ -71,7 +71,7 @@ export const illustrations = {
   home: HomeIllustration,
 }
 
-const Illustration = ({ name, size }) => {
+const Illustration = ({ name, className }) => {
   const IllustrationComponent = illustrations[name]
 
   return (
@@ -80,6 +80,7 @@ const Illustration = ({ name, size }) => {
       height={sizes[name][size].height}
       title={name}
       aria-hidden="true"
+      className={className}
     />
   )
 }
@@ -87,9 +88,12 @@ const Illustration = ({ name, size }) => {
 Illustration.propTypes = {
   name: oneOf(Object.keys(illustrations)).isRequired,
   size: oneOf(["small", "medium", "large"]),
+  className: string,
 }
+
 Illustration.defaultProps = {
   size: "large",
+  className: null,
 }
 
 export default Illustration

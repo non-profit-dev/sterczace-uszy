@@ -1,0 +1,40 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import TextBanner from "design-system/patterns/textBanner"
+import Button from "design-system/components/button"
+
+<Meta title="Patterns/TextBanner" component={TextBanner} />
+
+# TextBanner
+
+Displays a group of text elements in a suitable layout.
+
+`import TextBanner from "design-system/patterns/textBanner"`
+
+<Canvas>
+  <Story
+    name="Overview"
+    args={{
+      layout: "left",
+      heading: "Pomóż nam pomagać",
+      subtitle: "FUNDACJA STERCZĄCE USZY",
+      children:
+        "Nasi podopieczni czekają na Twoją pomoc. Nowy dom, wsparcie finansowe, spacery, pełna miska, opieka lekarza to tylko niektóre formy wsparcia. Jeżeli chcesz czynić dobro sprawdz, co możesz zrobić.",
+      button: (
+        <Button
+          text="Button"
+          variant="text"
+          color="primary"
+          iconEnd="arrowRight"
+        />
+      ),
+      href: "https://google.com",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => <TextBanner {...args} />

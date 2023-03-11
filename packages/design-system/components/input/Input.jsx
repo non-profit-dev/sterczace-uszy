@@ -1,7 +1,7 @@
 import { bool, oneOf, string } from "prop-types"
 import Icon from "design-system/components/icon"
 import Typography from "design-system/components/typography"
-import theme from "design-system/theme"
+import theme from "design-system/tokens/theme"
 
 import * as Styled from "./Input.styled"
 
@@ -20,6 +20,7 @@ const Input = ({
   type,
   name,
   id,
+  className,
 }) => (
   <Styled.Label>
     <Typography variant="bodySmall">{label}</Typography>
@@ -32,21 +33,23 @@ const Input = ({
         type={type}
         name={name}
         id={id}
+        className={className}
       />
       {state && (
         <Styled.Icon state={state}>
-          <Icon name={state === "valid" ? "success" : "error"} size="medium" />
+          <Icon name={state === "valid" ? "check" : "close"} size="medium" />
         </Styled.Icon>
       )}
     </Styled.Container>
-    <Typography
-      variant="bodyTiny"
-      color={state ? colors[state] : theme.colors.grey[500]}
-      required={required}
-      data-testid="message"
-    >
-      {required ? "Pole wymagane" : message}
-    </Typography>
+    {message && (
+      <Typography
+        variant="bodyTiny"
+        color={state ? colors[state] : theme.colors.grey[500]}
+        data-testid="message"
+      >
+        {message}
+      </Typography>
+    )}
   </Styled.Label>
 )
 
@@ -66,6 +69,7 @@ Input.propTypes = {
   type: oneOf(["text", "number", "email", "tel"]).isRequired,
   name: string,
   id: string,
+  className: string,
 }
 
 Input.defaultProps = {
@@ -76,6 +80,7 @@ Input.defaultProps = {
   disabled: false,
   name: null,
   id: null,
+  className: null,
 }
 
 export default Input

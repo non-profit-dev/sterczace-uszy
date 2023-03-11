@@ -1,0 +1,40 @@
+import { Meta, Typeset } from "@storybook/addon-docs"
+
+import typography from "design-system/tokens/typography"
+
+<Meta
+  title="Tokens/Typography"
+  parameters={{
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+# Typography
+
+<Typeset
+  fontSizes={[
+    parseInt(typography.desktop.h1.fontSize),
+    parseInt(typography.desktop.h2.fontSize),
+    parseInt(typography.desktop.h3.fontSize),
+    parseInt(typography.desktop.h4.fontSize),
+    parseInt(typography.desktop.h5.fontSize),
+    parseInt(typography.desktop.h6.fontSize),
+  ]}
+  fontFamily={typography.desktop.h1.fontFamily}
+  fontWeight={typography.desktop.h1.fontWeight}
+  sampleText="Heading text"
+/>
+
+<Typeset
+  fontSizes={[
+    parseInt(typography.desktop.bodyLarge.fontSize),
+    parseInt(typography.desktop.bodyTitle.fontSize),
+    parseInt(typography.desktop.bodySmall.fontSize),
+    parseInt(typography.desktop.bodyTiny.fontSize),
+  ]}
+  fontFamily={typography.desktop.h1.fontFamily}
+  fontWeight={typography.desktop.bodyLarge.fontWeight}
+  sampleText="Body text"
+/>
