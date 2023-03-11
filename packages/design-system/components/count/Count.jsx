@@ -1,11 +1,9 @@
-import { oneOf, number, string } from "prop-types"
+import { number, string } from "prop-types"
 
 import * as Styled from "./Count.styled"
 
-const Count = ({ count, size, className }) => (
-  <Styled.Count size={size} className={className}>
-    {count}
-  </Styled.Count>
+const Count = ({ count, className }) => (
+  <Styled.Count className={className}>{count}</Styled.Count>
 )
 
 Count.propTypes = {
@@ -13,12 +11,10 @@ Count.propTypes = {
    * The number value that's displayed as a component.
    */
   count: number.isRequired,
-  size: oneOf(["small", "medium", "large", "xlarge", "xxlarge"]),
   className: string,
 }
 
 Count.defaultProps = {
-  size: "medium",
   className: null,
 }
 

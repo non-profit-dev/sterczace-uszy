@@ -10,10 +10,4 @@ describe(`Count`, () => {
 
     expect(screen.getByText(countNumber)).toBeInTheDocument()
   })
-
-  it(`renders with custom properties`, () => {
-    render(<Count count={countNumber} size="large" />)
-
-    expect(screen.getByText(countNumber)).toBeInTheDocument()
-  })
 })
