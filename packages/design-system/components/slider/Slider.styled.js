@@ -1,21 +1,40 @@
 import styled from "@emotion/styled"
 
-export const Pagination = styled.div`
-  .swiper-button-prev,
-  .swiper-button-next {
-    color: ${({ theme }) => theme.colors.primary[400]};
-    &:after {
-      font-size: 15px;
-    }
-  }
-  .swiper-button-disabled {
-    color: ${({ theme }) => theme.colors.grey[300]};
-  }
-  .swiper-pagination-bullet {
-    background-color: ${({ theme }) => theme.colors.primary[200]};
-  }
+import { SwiperSlide } from "swiper/react"
 
-  .swiper-pagination-bullet-active {
-    color: ${({ theme }) => theme.colors.primary[300]};
+export const Slide = styled(SwiperSlide)`
+  display: flex;
+  justify-content: center;
+`
+
+export const Arrow = styled.div`
+  position: absolute;
+  top: 50%;
+  left: ${({ direction }) => (direction === "prev" ? "0" : "auto")};
+  right: ${({ direction }) => (direction === "next" ? "0" : "auto")};
+  transform: translateY(-50%);
+  z-index: 100;
+  cursor: pointer;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    top: auto;
+    bottom: 0;
+    transform: translateY(0);
   }
+`
+
+export const BulletContainer = styled.div`
+  display: none;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 12px;
+  }
+`
+
+export const Slider = styled.div`
+  position: relative;
 `
