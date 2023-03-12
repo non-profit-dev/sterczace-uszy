@@ -20,7 +20,7 @@ export const Container = styled(ContainerComponent)`
 
 export const Content = styled.div`
   max-width: 1065px;
-  margin: 310px auto 120px;
+  margin: 105px auto 120px;
   display: grid;
   gap: 80px;
   grid-template-columns: auto 1fr;
