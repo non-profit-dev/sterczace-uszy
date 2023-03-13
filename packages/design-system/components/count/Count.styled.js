@@ -4,15 +4,15 @@ export const Count = styled.p`
   text-align: center;
   display: inline;
   font-weight: 900;
-  font-size: 110px;
+  font-size: ${({ variant }) => (variant === "title" ? `48px` : `110px`)};
   line-height: 100%;
   font-family: "Poppins";
   color: ${({ theme }) => theme.colors.primary[500]};
   margin: 0;
   ${({ theme }) => theme.breakpoints.tablet} {
-    font-size: 94px;
+    font-size: ${({ variant }) => (variant === "title" ? `48px` : `94px`)};
   }
   ${({ theme }) => theme.breakpoints.mobile} {
-    font-size: 70px;
+    font-size: ${({ variant }) => (variant === "title" ? `24px` : `70px`)};
   }
 `
