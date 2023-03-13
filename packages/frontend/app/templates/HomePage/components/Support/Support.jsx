@@ -10,19 +10,19 @@ import * as Styled from "./Support.styled"
 const list = [
   {
     title: "Kierowcy",
-    icon: "charity",
+    illustration: "car",
   },
   {
     title: "Groomera/ki",
-    icon: "charity",
+    illustration: "scissors",
   },
   {
     title: "Fotografa/ki",
-    icon: "charity",
+    illustration: "camera",
   },
   {
     title: "Behawiorysty/ki",
-    icon: "charity",
+    illustration: "training",
   },
 ]
 
@@ -47,7 +47,7 @@ const Support = () => (
         <Styled.List>
           {list.map((item) => (
             <Styled.Item key={item.title}>
-              <Styled.Icon name={item.icon} />
+              <Styled.Icon name={item.illustration} />
               <Title text={item.title} textSize="bodyTitle" />
             </Styled.Item>
           ))}

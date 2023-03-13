@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-import IconComponent from "design-system/components/icon"
+import Illustration from "design-system/components/illustration"
 
 export const Wrapper = styled.div`
   background: url("/home/support-background.png");
@@ -55,7 +55,7 @@ export const Item = styled.li`
   text-align: center;
 `
 
-export const Icon = styled(IconComponent)`
-  width: 90px;
-  height: 90px;
+export const Icon = styled(Illustration)`
+  // width: 90px;
+  // height: 90px;
 `
