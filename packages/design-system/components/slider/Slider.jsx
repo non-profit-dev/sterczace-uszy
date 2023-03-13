@@ -1,13 +1,12 @@
 import React from "react"
-import { useTheme } from "@emotion/react"
-import { Pagination, Navigation } from "swiper"
+import { Pagination } from "swiper"
 import { Swiper } from "swiper/react"
 import { PropTypes, number } from "prop-types"
 import "swiper/swiper-bundle.css"
 
-import Icon from "design-system/components/icon"
-
 import * as Styled from "./Slider.styled"
+
+import Navigation from "./Navigation"
 
 const Slider = ({
   children,
@@ -16,17 +15,9 @@ const Slider = ({
   slidesPerViewTabletLg,
   slidesPerViewMobile,
 }) => {
-  const navigationPrevRef = React.useRef(null)
-  const navigationNextRef = React.useRef(null)
   const paginationRef = React.useRef(null)
 
-  const theme = useTheme()
-
   const swiperSettings = {
-    navigation: {
-      prevEl: navigationPrevRef.current,
-      nextEl: navigationNextRef.current,
-    },
     pagination: {
       el: paginationRef.current,
       clickable: true,
@@ -51,13 +42,10 @@ const Slider = ({
     <Styled.Slider>
       <Swiper
         {...swiperSettings}
-        modules={[Navigation, Pagination]}
+        modules={[Pagination]}
         /* eslint-disable no-param-reassign */
         onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = navigationPrevRef.current
-          swiper.params.navigation.nextEl = navigationNextRef.current
           swiper.params.pagination.el = paginationRef.current
-          swiper.navigation.update()
           swiper.pagination.update()
         }}
       >
@@ -65,12 +53,9 @@ const Slider = ({
           // eslint-disable-next-line react/no-array-index-key
           <Styled.Slide key={index}>{child}</Styled.Slide>
         ))}
-        <Styled.Arrow direction="prev" ref={navigationPrevRef}>
-          <Icon name="chevronLeft" color={theme.colors.primary[400]} />
-        </Styled.Arrow>
-        <Styled.Arrow direction="next" ref={navigationNextRef}>
-          <Icon name="chevronRight" color={theme.colors.primary[400]} />
-        </Styled.Arrow>
+
+        <Navigation />
+
         <Styled.BulletContainer ref={paginationRef} />
       </Swiper>
     </Styled.Slider>
