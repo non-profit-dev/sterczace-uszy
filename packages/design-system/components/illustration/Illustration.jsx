@@ -1,4 +1,4 @@
-import { oneOf } from "prop-types"
+import { oneOf, string } from "prop-types"
 
 import HeartWithDogFace from "design-system/tokens/illustrations/heartWithDogFace.svg"
 import HeartIllustration from "design-system/tokens/illustrations/HeartIllustration.svg"
@@ -71,7 +71,7 @@ export const illustrations = {
   home: HomeIllustration,
 }
 
-const Illustration = ({ name, size }) => {
+const Illustration = ({ name, className, size }) => {
   const IllustrationComponent = illustrations[name]
 
   return (
@@ -80,6 +80,7 @@ const Illustration = ({ name, size }) => {
       height={sizes[name][size].height}
       title={name}
       aria-hidden="true"
+      className={className}
     />
   )
 }
@@ -87,9 +88,12 @@ const Illustration = ({ name, size }) => {
 Illustration.propTypes = {
   name: oneOf(Object.keys(illustrations)).isRequired,
   size: oneOf(["small", "medium", "large"]),
+  className: string,
 }
+
 Illustration.defaultProps = {
   size: "large",
+  className: null,
 }
 
 export default Illustration
