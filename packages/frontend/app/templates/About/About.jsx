@@ -8,7 +8,11 @@ import Footer from "design-system/blocks/footer"
 
 import Page from "../Page"
 
-import { supportingType, animalsType, adoptedAnimalsType } from "./types"
+import {
+  supportingType,
+  animalsType,
+  adoptedAnimalsType,
+} from "../../lib/types"
 
 import * as Styled from "./About.styled"
 
