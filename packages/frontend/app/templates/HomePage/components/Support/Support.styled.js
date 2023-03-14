@@ -56,6 +56,5 @@ export const Item = styled.li`
 `
 
 export const Icon = styled(Illustration)`
-  // width: 90px;
-  // height: 90px;
+  height: 80px;
 `
