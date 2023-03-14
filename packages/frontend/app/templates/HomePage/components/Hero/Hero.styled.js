@@ -6,18 +6,17 @@ export const Container = styled(ContainerComponent)`
   background-image: url("/home/hero-background.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: right;
+  background-position-x: 90%;
 `
 
 export const Hero = styled.header`
-  margin-bottom: 80px;
+  margin-bottom: 180px;
   background-color: ${({ theme }) => theme.colors.grey[700]};
 `
 
 export const Content = styled.div`
-  max-width: 520px;
+  max-width: 580px;
   padding-top: 70px;
-  padding-bottom: 40px;
   padding-left: 70px;
 
   ${({ theme }) => theme.breakpoints.tablet} {
@@ -27,9 +26,10 @@ export const Content = styled.div`
 
 export const Cards = styled.div`
   position: relative;
-  bottom: -80px;
+  bottom: -180px;
   max-width: 1062px;
   margin: 0 auto;
+  margin-top: -80px;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
