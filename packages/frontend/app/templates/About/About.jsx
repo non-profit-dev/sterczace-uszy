@@ -17,7 +17,7 @@ import {
 import * as Styled from "./About.styled"
 
 const About = ({ animals, supporting, adoptedAnimals }) => (
-  <Page>
+  <Page title="O nas">
     <Styled.Banner>
       <Banner
         heading="Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj"
