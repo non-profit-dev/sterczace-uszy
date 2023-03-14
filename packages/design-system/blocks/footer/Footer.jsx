@@ -73,7 +73,7 @@ const Footer = () => {
             <Styled.Section>
               <Typography variant="h6">{foundationDataTitle}</Typography>
               <List gap={8}>
-                <ListItem variant="grey">
+                <ListItem variant="gray">
                   <Typography variant="bodySmall">{nip}</Typography>
                   <Typography variant="bodySmall">{krs}</Typography>
                 </ListItem>

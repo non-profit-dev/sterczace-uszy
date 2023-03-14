@@ -23,7 +23,7 @@ const colors = {
     filledText: theme.colors.neutrals[100],
   },
   black: {
-    mainColor: theme.colors.grey[600],
+    mainColor: theme.colors.gray[600],
     filledText: theme.colors.neutrals[100],
   },
   white: {

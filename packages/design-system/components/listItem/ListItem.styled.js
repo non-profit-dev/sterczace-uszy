@@ -9,7 +9,7 @@ export const ListItem = styled.li`
   gap: 8px;
   background-color: "transparent";
   color: ${({ variant }) =>
-    variant === "primary" ? theme.colors.primary[500] : theme.colors.grey[600]};
+    variant === "primary" ? theme.colors.primary[500] : theme.colors.gray[600]};
   ${theme.typography.desktop.bodySmall};
 `
 export const ChildContainer = styled.div`
