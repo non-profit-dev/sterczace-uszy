@@ -32,8 +32,10 @@ export const Card = styled.a`
 export const IllustrationContainer = styled.div`
   display: inline-flex;
   justify-content: center;
-  width: 100%;
-  margin: 36px 10px 18px 10px;
+  max-width: ${({ fixedSize }) => (fixedSize ? "120px" : "100%")};
+  margin-left: auto;
+  margin-right: auto;
+  padding: 36px 20px 18px 20px;
 
   ${({ theme }) => theme.breakpoints.tablet} {
     display: ${({ hideIllustrationOnMobile }) =>

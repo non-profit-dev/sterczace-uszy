@@ -28,6 +28,7 @@ const Card = ({
   >
     {illustrationName && (
       <Styled.IllustrationContainer
+        fixedSize={!!href}
         hideIllustrationOnMobile={hideIllustrationOnMobile}
       >
         <Illustration name={illustrationName} />

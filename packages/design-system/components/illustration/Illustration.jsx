@@ -2,13 +2,6 @@ import { oneOf, string } from "prop-types"
 
 import HeartWithDogFace from "design-system/tokens/illustrations/heartWithDogFace.svg"
 
-const sizes = {
-  heartWithDogFace: {
-    width: 177,
-    height: 160,
-  },
-}
-
 export const illustrations = {
   heartWithDogFace: HeartWithDogFace,
 }
@@ -18,8 +11,7 @@ const Illustration = ({ name, className }) => {
 
   return (
     <IllustrationComponent
-      width={sizes[name].width}
-      height={sizes[name].height}
+      width="100%"
       title={name}
       aria-hidden="true"
       className={className}
