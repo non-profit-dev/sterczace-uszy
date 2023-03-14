@@ -13,7 +13,11 @@ import Page from "../Page"
 
 import * as Styled from "./HomePage.styled"
 
-import { supportingType, animalsType, adoptedAnimalsType } from "./types"
+import {
+  supportingType,
+  animalsType,
+  adoptedAnimalsType,
+} from "../../lib/types"
 
 const HomePage = ({ animals, supporting, adoptedAnimals }) => (
   <Page>
