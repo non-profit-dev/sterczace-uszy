@@ -2,9 +2,9 @@ import { number, string } from "prop-types"
 
 import Illustration from "design-system/components/illustration"
 import Count from "design-system/components/count"
-import Title from "design-system/components/title"
 
 import * as Styled from "./DecorativeCard.styled"
+import Typography from "../../components/typography/Typography"
 
 const DecorativeCard = ({ titleText, illustrationName, count }) => (
   <Styled.DecorativeCard>
@@ -20,8 +20,7 @@ const DecorativeCard = ({ titleText, illustrationName, count }) => (
         <Illustration name={illustrationName} size="small" />
       </Styled.IllustrationMobile>
     </Styled.Content>
-
-    <Title text={titleText} size="large" variant="text" />
+    <Typography variant="h3">{titleText}</Typography>
   </Styled.DecorativeCard>
 )
 export default DecorativeCard

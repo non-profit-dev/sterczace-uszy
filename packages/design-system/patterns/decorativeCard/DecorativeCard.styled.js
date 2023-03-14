@@ -2,26 +2,31 @@ import styled from "@emotion/styled"
 
 export const DecorativeCard = styled.div`
   display: inline-flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid;
-  padding: 2px;
+  padding: 8px 24px;
 `
 export const Content = styled.div`
   position: relative;
+  left: 12px;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  border: 1px solid red;
+  padding: 0 0 8px 0;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    left: 10px;
+    padding: 0 0 8px 0;
+  }
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    left: 5px;
+    padding: 0;
+  }
 `
 
 export const Illustration = styled.div`
   position: relative;
   z-index: -1;
   left: -24px;
-  border: 1px solid;
-  padding: 5px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: none;
@@ -35,8 +40,6 @@ export const IllustrationTablet = styled.div`
     position: relative;
     z-index: -1;
     left: -20px;
-    border: 1px solid green;
-    padding: 5px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     display: none;
@@ -50,7 +53,5 @@ export const IllustrationMobile = styled.div`
     position: relative;
     z-index: -1;
     left: -10px;
-    border: 1px solid red;
-    padding: 5px;
   }
 `
