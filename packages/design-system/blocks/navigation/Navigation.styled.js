@@ -2,6 +2,7 @@ import styled from "@emotion/styled"
 
 export const Navigation = styled.nav`
   position: relative;
+  z-index: 2;
   width: 100%;
   background: ${({ theme }) => theme.colors.neutrals[100]};
   padding: 28px 0;
@@ -36,17 +37,6 @@ export const MenuButton = styled.li`
   position: relative;
 `
 
-export const Dropdown = styled.div`
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 280px;
-  padding: 20px;
-  background: ${({ theme }) => theme.colors.neutrals[100]};
-  border-radius: 4px;
-`
-
 export const MenuIcon = styled.button`
   display: none;
   background: transparent;
@@ -70,9 +60,26 @@ export const MobileNavigation = styled.div`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
+    max-width: unset;
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
     padding: 40px 30px;
+  }
+`
+
+export const Overlay = styled.div`
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: ${({ theme }) => theme.colors.grey[700]};
+  opacity: 0.2;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: block;
   }
 `
