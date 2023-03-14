@@ -1,5 +1,6 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
 
+import List from "design-system/components/list"
 import Feature from "design-system/patterns/feature"
 
 <Meta title="Patterns/Feature" component={Feature} />
@@ -24,6 +25,32 @@ Displays key information in a concise and visually appealing manner, with a two 
   </Story>
 </Canvas>
 
+## Features list
+
+The `Feature` element can be used with the `List` component to simply display a list of features.
+
+<Canvas>
+  <Story
+    name="List"
+    args={{
+      icon: "heart",
+      heading: "Miłość",
+      description:
+        "Kieruje naszą pasją i zaangażowaniem w ratowanie zwierząt, a każdego podopiecznego traktujemy z uczuciem i troską.",
+    }}
+  >
+    {TemplateList.bind()}
+  </Story>
+</Canvas>
+
 <ArgsTable />
 
 export const Template = (args) => <Feature {...args} />
+
+export const TemplateList = (args) => (
+  <List gap={16}>
+    <Feature {...args} />
+    <Feature {...args} />
+    <Feature {...args} />
+  </List>
+)
