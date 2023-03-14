@@ -7,6 +7,12 @@ export const Feature = styled.div`
 
 export const Content = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    gap: 4px;
+  }
 `
 
 export const Icon = styled.div`
