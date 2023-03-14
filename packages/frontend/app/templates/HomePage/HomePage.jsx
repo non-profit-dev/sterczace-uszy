@@ -1,4 +1,6 @@
 import Container from "design-system/components/container"
+import Banner from "design-system/components/banner"
+import Button from "design-system/components/button"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
@@ -15,6 +17,20 @@ import { supportingType, animalsType, adoptedAnimalsType } from "./types"
 
 const HomePage = ({ animals, supporting, adoptedAnimals }) => (
   <Page>
+    <Styled.Banner>
+      <Banner
+        heading="Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj"
+        button={
+          <Button
+            text="tutaj"
+            href="/jak-pomoc"
+            variant="textLine"
+            size="small"
+          />
+        }
+      />
+    </Styled.Banner>
+
     <Navigation />
 
     <Styled.Main>
