@@ -11,13 +11,13 @@ const DecorativeCard = ({ titleText, illustrationName, count }) => (
     <Styled.Content>
       <Count count={count} variant="decorative" />
       <Styled.Illustration>
-        <Illustration name={illustrationName} size="large" />
+        <Illustration name={illustrationName} size="medium" />
       </Styled.Illustration>
       <Styled.IllustrationTablet>
-        <Styled.Illustration name={illustrationName} size="medium" />
+        <Illustration name={illustrationName} size="medium" />
       </Styled.IllustrationTablet>
       <Styled.IllustrationMobile>
-        <Styled.Illustration name={illustrationName} size="small" />
+        <Illustration name={illustrationName} size="small" />
       </Styled.IllustrationMobile>
     </Styled.Content>
 
