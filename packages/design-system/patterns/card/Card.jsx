@@ -30,7 +30,7 @@ const Card = ({
       <Styled.IllustrationContainer
         hideIllustrationOnMobile={hideIllustrationOnMobile}
       >
-        <Illustration name={illustrationName} />
+        <Illustration name={illustrationName} size="medium" />
       </Styled.IllustrationContainer>
     )}
     {imageSrc && (
