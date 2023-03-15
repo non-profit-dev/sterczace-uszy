@@ -4,7 +4,9 @@ import * as Styled from "./Banner.styled"
 
 const Banner = ({ heading, button, className }) => (
   <Styled.Banner className={className}>
-    <Styled.Heading>{heading}</Styled.Heading>
+    <Styled.Heading variant="bodySmall" tag="p">
+      {heading}
+    </Styled.Heading>
     {button}
   </Styled.Banner>
 )
