@@ -41,7 +41,7 @@ const Slider = ({
           <Styled.Slide key={index}>{child}</Styled.Slide>
         ))}
         <Navigation />
-        <Pagination />
+        <Pagination slidesNumber={React.Children.count(children)} />
       </Swiper>
     </Styled.Slider>
   )

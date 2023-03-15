@@ -28,6 +28,7 @@ const Navigation = () => {
           color={
             isBeginning ? theme.colors.grey[300] : theme.colors.primary[400]
           }
+          size="large"
         />
       </Styled.Arrow>
       <Styled.Arrow
@@ -41,6 +42,7 @@ const Navigation = () => {
         <Icon
           name="chevronRight"
           color={isEnd ? theme.colors.grey[300] : theme.colors.primary[400]}
+          size="large"
         />
       </Styled.Arrow>
     </>

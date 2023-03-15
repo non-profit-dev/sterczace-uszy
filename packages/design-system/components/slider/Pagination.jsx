@@ -1,10 +1,11 @@
 import { useState } from "react"
 import { useSwiper } from "swiper/react"
 import { useTheme } from "@emotion/react"
+import { number } from "prop-types"
 
 import * as Styled from "./Slider.styled"
 
-const Pagination = () => {
+const Pagination = ({ slidesNumber }) => {
   const slider = useSwiper()
 
   const [activeIndex, setActiveIndex] = useState(0)
@@ -13,22 +14,26 @@ const Pagination = () => {
 
   return (
     <Styled.BulletContainer>
-      {slider.slides.map((bullet) => (
+      {[...Array(slidesNumber).keys()].map((index) => (
         <Styled.Bullet
           onClick={() => {
-            slider.slidePrev()
+            slider.slideTo(index)
             setActiveIndex(slider.activeIndex)
           }}
           color={
-            activeIndex ? theme.colors.grey[300] : theme.colors.primary[400]
+            activeIndex === index
+              ? theme.colors.primary[300]
+              : theme.colors.primary[100]
           }
-          key={bullet}
-        >
-          {bullet}
-        </Styled.Bullet>
+          key={index}
+        />
       ))}
     </Styled.BulletContainer>
   )
+}
+
+Pagination.propTypes = {
+  slidesNumber: number.isRequired,
 }
 
 export default Pagination

@@ -18,28 +18,31 @@ export const Arrow = styled.div`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     top: auto;
-    bottom: 0;
     transform: translateY(0);
+    bottom: 0;
+    margin-bottom: -10px;
   }
 `
 
 export const BulletContainer = styled.div`
-
+${({ theme }) => theme.breakpoints.tabletLg} {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    margin-bottom: 12px;
+    justify-content:center;
+    gap: 22px;
   }
+}
 `
 
 export const Slider = styled.div`
   position: relative;
 `
 export const Bullet = styled.div`
-  border: 1px solid blue;
-  display: block;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  ${({ theme }) => theme.breakpoints.tablet} {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: ${({ color }) => color};
+    cursor: pointer;
+  }
 `
