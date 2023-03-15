@@ -1,10 +1,6 @@
 import HomePage from "../templates/HomePage"
 
-import {
-  supportingType,
-  animalsType,
-  adoptedAnimalsType,
-} from "../templates/HomePage/types"
+import { supportingType, animalsType, adoptedAnimalsType } from "../lib/types"
 
 import client from "../lib/api"
 import {
