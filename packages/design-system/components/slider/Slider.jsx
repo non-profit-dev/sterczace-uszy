@@ -1,12 +1,13 @@
 import React from "react"
-import { Pagination } from "swiper"
 import { Swiper } from "swiper/react"
+
 import { PropTypes, number } from "prop-types"
 import "swiper/swiper-bundle.css"
 
 import * as Styled from "./Slider.styled"
 
 import Navigation from "./Navigation"
+import Pagination from "./Pagination"
 
 const Slider = ({
   children,
@@ -15,13 +16,7 @@ const Slider = ({
   slidesPerViewTabletLg,
   slidesPerViewMobile,
 }) => {
-  const paginationRef = React.useRef(null)
-
   const swiperSettings = {
-    pagination: {
-      el: paginationRef.current,
-      clickable: true,
-    },
     breakpoints: {
       390: {
         slidesPerView: slidesPerViewMobile,
@@ -40,23 +35,13 @@ const Slider = ({
 
   return (
     <Styled.Slider>
-      <Swiper
-        {...swiperSettings}
-        modules={[Pagination]}
-        /* eslint-disable no-param-reassign */
-        onBeforeInit={(swiper) => {
-          swiper.params.pagination.el = paginationRef.current
-          swiper.pagination.update()
-        }}
-      >
+      <Swiper {...swiperSettings}>
         {React.Children.map(children, (child, index) => (
           // eslint-disable-next-line react/no-array-index-key
           <Styled.Slide key={index}>{child}</Styled.Slide>
         ))}
-
         <Navigation />
-
-        <Styled.BulletContainer ref={paginationRef} />
+        <Pagination />
       </Swiper>
     </Styled.Slider>
   )

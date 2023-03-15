@@ -24,9 +24,7 @@ export const Arrow = styled.div`
 `
 
 export const BulletContainer = styled.div`
-  display: none;
 
-  ${({ theme }) => theme.breakpoints.tabletLg} {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,4 +35,11 @@ export const BulletContainer = styled.div`
 
 export const Slider = styled.div`
   position: relative;
+`
+export const Bullet = styled.div`
+  border: 1px solid blue;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 `
