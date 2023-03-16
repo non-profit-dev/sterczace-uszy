@@ -37,8 +37,7 @@ export const Content = styled.div`
     display: block;
     max-width: 620px;
     margin: 0;
-    padding-top: 100px;
-    padding-bottom: 100px;
+padding: 100px 0;
   }
 `
 
