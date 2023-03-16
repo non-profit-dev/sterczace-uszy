@@ -30,8 +30,7 @@ export const Content = styled.div`
   }
 
   ${({ theme }) => theme.breakpoints.tablet} {
-    padding-top: 60px;
-    padding-bottom: 60px;
+   padding: 60px 0;
   }
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
