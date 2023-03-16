@@ -29,21 +29,23 @@ const AboutSection = () => {
             />
           }
         >
-          <Typography variant="bodyTitle">
-            Od zawsze naszą pasją było pomaganie. Przez wiele lat angażowałyśmy
-            się w wolontariat oraz byłyśmy domem tymczasowym dla wielu
-            bezdomnych zwierząt.
-            <br />
-            <br />
-            Teraz jako fundacja, wkładamy całe serce w pomoc naszym
-            podopiecznym. Najważniejsze dla nas jest zapewnienie im spokoju,
-            bezpieczeństwa i miłości, a także znalezienie dla nich nowych,
-            kochających rodzin.
-            <br />
-            <br />
-            Jesteśmy przekonani, że tylko dzięki zaufaniu i wzajemnej współpracy
-            możemy razem osiągnąć więcej.
-          </Typography>
+          <Styled.TextContainer>
+            <Typography variant="bodyTitle">
+              Od zawsze naszą pasją było pomaganie. Przez wiele lat
+              angażowałyśmy się w wolontariat oraz byłyśmy domem tymczasowym dla
+              wielu bezdomnych zwierząt.
+            </Typography>
+            <Typography variant="bodyTitle">
+              Teraz jako fundacja, wkładamy całe serce w pomoc naszym
+              podopiecznym. Najważniejsze dla nas jest zapewnienie im spokoju,
+              bezpieczeństwa i miłości, a także znalezienie dla nich nowych,
+              kochających rodzin.
+            </Typography>
+            <Typography variant="bodyTitle">
+              Jesteśmy przekonani, że tylko dzięki zaufaniu i wzajemnej
+              współpracy możemy razem osiągnąć więcej.
+            </Typography>
+          </Styled.TextContainer>
         </TextBanner>
       </Styled.Content>
     </Styled.Container>

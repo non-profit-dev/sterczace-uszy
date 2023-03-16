@@ -49,3 +49,9 @@ export const Image = styled.img`
     display: none;
   }
 `
+
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+`
