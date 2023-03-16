@@ -9,12 +9,8 @@ import Typography from "design-system/components/typography"
 <Meta title="Components/Slider" component={Slider} />
 
 <Canvas>
-  <Story name="Overview">
-    <Template
-      slidesPerViewMobile={1}
-      slidesPerViewTablet={1.5}
-      slidesPerViewDesktop={3}
-    />
+  <Story name="Overview" args={{}}>
+    {Template.bind()}
   </Story>
 </Canvas>
 
@@ -24,112 +20,56 @@ import Typography from "design-system/components/typography"
 
 Displays items in a carousel with the ability to move them via arrows and dots.
 
+export const data = [
+  {
+    title: "Card Heading 1",
+    description:
+      "Lorem ipsum dolor sit amet, consect et eiusmod tempor incididunt ut labore et",
+    button: "Click here",
+  },
+  {
+    title: "Card Heading 2",
+    description:
+      "Lorem ipsum dolor sit amet, consect et eiusmod tempor incididunt ut labore et",
+    button: "Click here",
+  },
+  {
+    title: "Card Heading 3",
+    description:
+      "Lorem ipsum dolor sit amet, consect et eiusmod tempor incididunt ut labore et",
+    button: "Click here",
+  },
+  {
+    title: "Card Heading 4",
+    description:
+      "Lorem ipsum dolor sit amet, consect et eiusmod tempor incididunt ut labore et",
+    button: "Click here",
+  },
+  {
+    title: "Card Heading 5",
+    description:
+      "Lorem ipsum dolor sit amet, consect et eiusmod tempor incididunt ut labore et",
+    button: "Click here",
+  },
+]
+
 export const Template = (args) => (
   <Slider {...args}>
-    <div
-      style={{
-        maxWidth: "326px",
-      }}
-    >
+    {data.map((item) => (
       <Card
         illustrationName="heartWithDogFace"
-        title={<Title text="Pani Ani" />}
+        title={<Title text={item.title} />}
         layout="center"
+        key={item.title}
       >
-        <Typography variant="bodySmall">
-          Dziękujemy Pani Annie za bycie domem tymczasowym dla Cynki.
-        </Typography>
+        <Typography variant="bodySmall">{item.description}</Typography>
         <Button
-          text="Psycholożka"
+          text={item.button}
           variant="textLine"
           size="small"
           href="https://google.com"
         />
       </Card>
-    </div>
-    <div
-      style={{
-        maxWidth: "326px",
-      }}
-    >
-      <Card
-        illustrationName="heartWithDogFace"
-        title={<Title text="Fryzjer-psa.pl" />}
-        layout="center"
-      >
-        <Typography variant="bodySmall">
-          Fryzjer-psa.pl za darmowe umycie i wyczesanie naszego chłopaka
-        </Typography>
-        <Button
-          text="fryzjer-psa.pl"
-          variant="textLine"
-          size="small"
-          href="https://google.com"
-        />
-      </Card>
-    </div>
-    <div
-      style={{
-        maxWidth: "326px",
-      }}
-    >
-      <Card
-        illustrationName="heartWithDogFace"
-        title={<Title text="Pani Oli" />}
-        layout="center"
-      >
-        <Typography variant="bodySmall">
-          Dziękujemy Pani Oli za pomoc prawną w kwestii fundacji.
-        </Typography>
-        <Button
-          text="Adw. Aleksandra Musielska"
-          variant="textLine"
-          size="small"
-          href="https://google.com"
-        />
-      </Card>
-    </div>
-    <div
-      style={{
-        maxWidth: "326px",
-      }}
-    >
-      <Card
-        illustrationName="heartWithDogFace"
-        title={<Title text="Fryzjer-psa.pl" />}
-        layout="center"
-      >
-        <Typography variant="bodySmall">
-          Fryzjer-psa.pl za darmowe umycie i wyczesanie naszego chłopaka.
-        </Typography>
-        <Button
-          text="fryzjer-psa.pl"
-          variant="textLine"
-          size="small"
-          href="https://google.com"
-        />
-      </Card>
-    </div>
-    <div
-      style={{
-        maxWidth: "326px",
-      }}
-    >
-      <Card
-        illustrationName="heartWithDogFace"
-        title={<Title text="Pani Ani" />}
-        layout="center"
-      >
-        <Typography variant="bodySmall">
-          Dziękujemy Pani Annie za bycie domem tymczasowym dla Cynki.
-        </Typography>
-        <Button
-          text="Psycholożka"
-          variant="textLine"
-          size="small"
-          href="https://google.com"
-        />
-      </Card>
-    </div>
+    ))}
   </Slider>
 )
