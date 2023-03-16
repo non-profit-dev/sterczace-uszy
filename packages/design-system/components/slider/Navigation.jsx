@@ -1,12 +1,11 @@
 import { useTheme } from "@emotion/react"
 import { useSwiper } from "swiper/react"
-import { number } from "prop-types"
 
 import Icon from "design-system/components/icon"
 
 import * as Styled from "./Slider.styled"
 
-const Navigation = ({ activeIndex, length }) => {
+const Navigation = () => {
   const slider = useSwiper()
   const theme = useTheme()
 
@@ -21,7 +20,9 @@ const Navigation = ({ activeIndex, length }) => {
         <Icon
           name="chevronLeft"
           color={
-            activeIndex ? theme.colors.primary[400] : theme.colors.grey[300]
+            slider.isBeginning
+              ? theme.colors.grey[300]
+              : theme.colors.primary[400]
           }
           size="large"
         />
@@ -35,20 +36,13 @@ const Navigation = ({ activeIndex, length }) => {
         <Icon
           name="chevronRight"
           color={
-            activeIndex < length - 1
-              ? theme.colors.primary[400]
-              : theme.colors.grey[300]
+            slider.isEnd ? theme.colors.grey[300] : theme.colors.primary[400]
           }
           size="large"
         />
       </Styled.Arrow>
     </>
   )
-}
-
-Navigation.propTypes = {
-  activeIndex: number.isRequired,
-  length: number.isRequired,
 }
 
 export default Navigation
