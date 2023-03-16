@@ -1,5 +1,4 @@
 import { useState, Children } from "react"
-import { Swiper } from "swiper/react"
 
 import { PropTypes, number } from "prop-types"
 import "swiper/swiper-bundle.css"
@@ -29,27 +28,30 @@ const Slider = ({
       },
       744: {
         slidesPerView: slidesPerViewTabletLg,
+        spaceBetween: 48,
       },
-      922: {
+      992: {
+        spaceBetween: 20,
+      },
+      1200: {
         slidesPerView: slidesPerViewDesktop,
+        spaceBetween: 48,
       },
     },
   }
 
   return (
-    <Styled.Slider>
-      <Swiper
-        {...swiperSettings}
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-      >
-        {Children.map(children, (child) => (
-          <Styled.Slide key={child}>{child}</Styled.Slide>
-        ))}
+    <Styled.Slider
+      {...swiperSettings}
+      onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+    >
+      {Children.map(children, (child) => (
+        <Styled.Slide key={child}>{child}</Styled.Slide>
+      ))}
 
-        <Navigation activeIndex={activeIndex} length={children.length} />
+      <Navigation activeIndex={activeIndex} length={children.length} />
 
-        <Pagination length={children.length} activeIndex={activeIndex} />
-      </Swiper>
+      <Pagination length={children.length} activeIndex={activeIndex} />
     </Styled.Slider>
   )
 }
