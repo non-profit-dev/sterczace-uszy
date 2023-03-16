@@ -1,16 +1,13 @@
-import { useState } from "react"
 import { useTheme } from "@emotion/react"
 import { useSwiper } from "swiper/react"
+import { number } from "prop-types"
 
 import Icon from "design-system/components/icon"
 
 import * as Styled from "./Slider.styled"
 
-const Navigation = () => {
+const Navigation = ({ activeIndex, length }) => {
   const slider = useSwiper()
-  const [isEnd, setIsEnd] = useState(false)
-  const [isBeginning, setIsBeginning] = useState(true)
-
   const theme = useTheme()
 
   return (
@@ -19,14 +16,12 @@ const Navigation = () => {
         direction="prev"
         onClick={() => {
           slider.slidePrev()
-          setIsBeginning(slider.isBeginning)
-          setIsEnd(slider.isEnd)
         }}
       >
         <Icon
           name="chevronLeft"
           color={
-            isBeginning ? theme.colors.grey[300] : theme.colors.primary[400]
+            activeIndex ? theme.colors.primary[400] : theme.colors.grey[300]
           }
           size="large"
         />
@@ -35,18 +30,25 @@ const Navigation = () => {
         direction="next"
         onClick={() => {
           slider.slideNext()
-          setIsBeginning(slider.isBeginning)
-          setIsEnd(slider.isEnd)
         }}
       >
         <Icon
           name="chevronRight"
-          color={isEnd ? theme.colors.grey[300] : theme.colors.primary[400]}
+          color={
+            activeIndex < length - 1
+              ? theme.colors.primary[400]
+              : theme.colors.grey[300]
+          }
           size="large"
         />
       </Styled.Arrow>
     </>
   )
+}
+
+Navigation.propTypes = {
+  activeIndex: number.isRequired,
+  length: number.isRequired,
 }
 
 export default Navigation

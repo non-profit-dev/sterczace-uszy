@@ -1,4 +1,4 @@
-import React from "react"
+import { useState, Children } from "react"
 import { Swiper } from "swiper/react"
 
 import { PropTypes, number } from "prop-types"
@@ -16,6 +16,8 @@ const Slider = ({
   slidesPerViewTabletLg,
   slidesPerViewMobile,
 }) => {
+  const [activeIndex, setActiveIndex] = useState(0)
+
   const swiperSettings = {
     breakpoints: {
       390: {
@@ -35,13 +37,17 @@ const Slider = ({
 
   return (
     <Styled.Slider>
-      <Swiper {...swiperSettings}>
-        {React.Children.map(children, (child, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <Styled.Slide key={index}>{child}</Styled.Slide>
+      <Swiper
+        {...swiperSettings}
+        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+      >
+        {Children.map(children, (child) => (
+          <Styled.Slide key={child}>{child}</Styled.Slide>
         ))}
-        <Navigation />
-        <Pagination slidesNumber={React.Children.count(children)} />
+
+        <Navigation activeIndex={activeIndex} length={children.length} />
+
+        <Pagination length={children.length} activeIndex={activeIndex} />
       </Swiper>
     </Styled.Slider>
   )

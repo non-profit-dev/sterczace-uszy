@@ -37,7 +37,7 @@ export const Slider = styled.div`
   position: relative;
 `
 export const Bullet = styled.div`
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
     width: 16px;
     height: 16px;
