@@ -25,19 +25,19 @@ export const Content = styled.div`
   gap: 80px;
   grid-template-columns: auto 1fr;
 
-  ${({ theme }) => theme.breakpoints.desktopSm} {
-    gap: 50px;
-  }
-
-  ${({ theme }) => theme.breakpoints.tablet} {
-   padding: 60px 0;
-  }
-
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
     max-width: 620px;
     margin: 0;
-padding: 100px 0;
+    padding: 100px 0;
+  }
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    padding: 60px 0;
+  }
+
+  ${({ theme }) => theme.breakpoints.desktopSm} {
+    gap: 50px;
   }
 `
 
