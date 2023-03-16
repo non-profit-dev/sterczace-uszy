@@ -19,6 +19,7 @@ const Slider = ({
   const [activeIndex, setActiveIndex] = useState(0)
 
   const swiperSettings = {
+    spaceBetween: 48,
     breakpoints: {
       390: {
         slidesPerView: slidesPerViewMobile,
