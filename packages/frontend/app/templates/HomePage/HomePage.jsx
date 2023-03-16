@@ -1,26 +1,26 @@
-// import Container from "design-system/components/container"
+import Container from "design-system/components/container"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 
-// import Achievements from "./components/Achievements"
-// import Animals from "./components/Animals"
-// import Supporters from "./components/Supporters"
+import Achievements from "./components/Achievements"
+import Animals from "./components/Animals"
+import Supporters from "./components/Supporters"
+import AboutSection from "./components/AboutSection/AboutSection"
 
 import Page from "../Page"
 
 import * as Styled from "./HomePage.styled"
-import AboutSection from "./components/AboutSection/AboutSection"
 
-// import { supportingType, animalsType, adoptedAnimalsType } from "./types"
+import { supportingType, animalsType, adoptedAnimalsType } from "./types"
 
-const HomePage = () => (
+const HomePage = ({ animals, supporting, adoptedAnimals }) => (
   <Page>
     <Navigation />
 
     <Styled.Main>
       <AboutSection />
-      {/* <Container>
+      <Container>
         <Achievements
           supportingNumber={supporting.total}
           animalsNumber={animals.total}
@@ -30,17 +30,17 @@ const HomePage = () => (
         <Animals data={animals.items} />
 
         <Supporters data={supporting.items} />
-      </Container> */}
+      </Container>
     </Styled.Main>
 
     <Footer />
   </Page>
 )
 
-// HomePage.propTypes = {
-//   animals: animalsType.isRequired,
-//   supporting: supportingType.isRequired,
-//   adoptedAnimals: adoptedAnimalsType.isRequired,
-// }
+HomePage.propTypes = {
+  animals: animalsType.isRequired,
+  supporting: supportingType.isRequired,
+  adoptedAnimals: adoptedAnimalsType.isRequired,
+}
 
 export default HomePage
