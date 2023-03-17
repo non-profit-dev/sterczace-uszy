@@ -24,8 +24,7 @@ export const Content = styled.div`
   position: relative;
   z-index: 1;
   max-width: 560px;
-  padding-top: 110px;
-  padding-bottom: 110px;
+padding: 110px 0;
 
   ${({ theme }) => theme.breakpoints.mobile} {
     padding-top: 60px;
