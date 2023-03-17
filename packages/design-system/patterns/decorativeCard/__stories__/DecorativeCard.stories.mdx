@@ -6,15 +6,27 @@ import DecorativeCard from "design-system/patterns/decorativeCard"
 
 # DecorativeCard
 
-It's a flexible component .....
+Decorative card is provided to visualize statistic data in engaging and effective way.
 
 `import DecorativeCard from "design-system/patterns/decorativeCard"`
 
 <Canvas>
   <Story
-    name="Overview "
+    name="Overview - simple"
     args={{
-      titleText: "Uratowanych zwierząt",
+      illustrationName: "dog",
+      count: 40,
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Overview - with title"
+    args={{
+      title: "Uratowanych zwierząt",
       illustrationName: "dog",
       count: 40,
     }}

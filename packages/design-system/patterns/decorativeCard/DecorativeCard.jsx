@@ -6,7 +6,7 @@ import Count from "design-system/components/count"
 import * as Styled from "./DecorativeCard.styled"
 import Typography from "../../components/typography/Typography"
 
-const DecorativeCard = ({ titleText, illustrationName, count }) => (
+const DecorativeCard = ({ title, illustrationName, count }) => (
   <Styled.DecorativeCard>
     <Styled.Content>
       <Count count={count} variant="decorative" />
@@ -20,17 +20,18 @@ const DecorativeCard = ({ titleText, illustrationName, count }) => (
         <Illustration name={illustrationName} size="small" />
       </Styled.IllustrationMobile>
     </Styled.Content>
-    <Typography variant="h3">{titleText}</Typography>
+    {title && <Typography variant="h3">{title}</Typography>}
   </Styled.DecorativeCard>
 )
 export default DecorativeCard
 
 DecorativeCard.propTypes = {
-  titleText: string.isRequired,
+  title: string,
   illustrationName: string,
   count: number.isRequired,
 }
 
 DecorativeCard.defaultProps = {
   illustrationName: "dog",
+  title: null,
 }
