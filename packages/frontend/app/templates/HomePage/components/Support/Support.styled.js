@@ -16,8 +16,7 @@ export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  margin-top: 20px;
-  margin-bottom: 60px;
+margin: 20px 0 60px;
 `
 
 export const Content = styled.div`
