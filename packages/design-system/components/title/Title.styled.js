@@ -33,6 +33,10 @@ export const Text = styled(Typography)`
     clip-path: ${({ size }) =>
       `ellipse(50% ${size === `large` ? `3px` : `2px`})`};
     background: ${({ theme }) => theme.colors.primary[500]};
+
+    ${({ theme }) => theme.breakpoints.tablet} {
+      content: ${({ hideLineOnMobile }) => (hideLineOnMobile ? `none` : "")};
+    }
   }
 
   ${({ type }) =>

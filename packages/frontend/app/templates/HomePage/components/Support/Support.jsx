@@ -48,7 +48,7 @@ const Support = () => (
           {list.map((item) => (
             <Styled.Item key={item.title}>
               <Styled.Icon name={item.illustration} />
-              <Title text={item.title} textSize="bodyTitle" />
+              <Title text={item.title} textSize="bodyTitle" hideLineOnMobile />
             </Styled.Item>
           ))}
         </Styled.List>
