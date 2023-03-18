@@ -5,9 +5,9 @@ import Typography from "design-system/components/typography"
 
 import TextBanner from "design-system/patterns/textBanner"
 
-import * as Styled from "./AboutSection.styled"
+import * as Styled from "./About.styled"
 
-const AboutSection = () => {
+const About = () => {
   const theme = useTheme()
 
   return (
@@ -52,4 +52,4 @@ const AboutSection = () => {
   )
 }
 
-export default AboutSection
+export default About

@@ -1,3 +1,3 @@
-import AboutSection from "./AboutSection"
+import About from "./About"
 
-export default AboutSection
+export default About

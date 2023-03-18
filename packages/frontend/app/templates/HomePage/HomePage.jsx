@@ -6,7 +6,7 @@ import Footer from "design-system/blocks/footer"
 import Achievements from "./components/Achievements"
 import Animals from "./components/Animals"
 import Supporters from "./components/Supporters"
-import AboutSection from "./components/AboutSection/AboutSection"
+import About from "./components/AboutSection"
 
 import Page from "../Page"
 
@@ -19,7 +19,7 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
     <Navigation />
 
     <Styled.Main>
-      <AboutSection />
+      <About />
       <Container>
         <Achievements
           supportingNumber={supporting.total}
