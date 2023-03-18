@@ -35,8 +35,8 @@ export const Text = styled(Typography)`
     background: ${({ theme }) => theme.colors.primary[500]};
   }
 
-  ${({ style }) =>
-    style === "text" &&
+  ${({ type }) =>
+    type === "text" &&
     css`
       &:before {
         display: none;
