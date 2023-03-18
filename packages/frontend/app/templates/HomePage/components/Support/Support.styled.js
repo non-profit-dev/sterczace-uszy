@@ -17,6 +17,11 @@ export const List = styled.ul`
   flex-wrap: wrap;
   gap: 40px;
   margin: 20px 0 60px;
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    flex-direction: column;
+    gap: 26px;
+  }
 `
 
 export const Content = styled.div`
@@ -50,9 +55,23 @@ export const Content = styled.div`
 
 export const Item = styled.li`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   text-align: center;
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    flex-direction: row;
+    text-align: left;
+  }
 `
 
 export const Icon = styled(Illustration)`
   height: 80px;
+  width: auto;
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    height: 30px;
+  }
 `
