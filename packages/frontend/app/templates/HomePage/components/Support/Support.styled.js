@@ -59,7 +59,7 @@ export const Content = styled.div`
 
     ${({ theme }) => theme.breakpoints.mobileLg} {
       height: 50%;
-      background: linear-gradient(0, #ffffff 0%, rgba(255, 255, 255, 0) 126.15%),
+      background: linear-gradient(0, #ffffff 0%, rgba(255, 255, 255, 0) 30%),
         linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 199.9%);
     }
   }
