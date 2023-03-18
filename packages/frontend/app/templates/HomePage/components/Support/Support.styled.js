@@ -16,14 +16,14 @@ export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-margin: 20px 0 60px;
+  margin: 20px 0 60px;
 `
 
 export const Content = styled.div`
   position: relative;
   z-index: 1;
   max-width: 560px;
-padding: 110px 0;
+  padding: 110px 0;
 
   ${({ theme }) => theme.breakpoints.mobile} {
     padding-top: 60px;
