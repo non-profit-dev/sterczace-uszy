@@ -37,7 +37,7 @@ export const IllustrationContainer = styled.div`
   margin-right: auto;
   padding: 36px 20px 18px 20px;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     display: ${({ hideIllustrationOnMobile }) =>
       hideIllustrationOnMobile ? `none` : `inline-flex`};
   }
@@ -114,7 +114,7 @@ export const Wrapper = styled.div`
 `
 
 export const ButtonWrapper = styled.div`
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     ${({ hideButtonOnMobile }) =>
       hideButtonOnMobile
         ? css`

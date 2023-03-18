@@ -4,7 +4,6 @@ import Button from "design-system/components/button"
 import Title from "design-system/components/title"
 
 import TextBanner from "design-system/patterns/textBanner"
-import Card from "design-system/patterns/card"
 
 import * as Styled from "./Hero.styled"
 
@@ -53,12 +52,13 @@ const Hero = () => {
         </Styled.Content>
         <Styled.Cards>
           {cards.map(({ title, buttonText, buttonHref, illustration }) => (
-            <Card
+            <Styled.Card
               key={title}
               href={buttonHref}
               layout="center"
               illustrationName={illustration}
               hideIllustrationOnMobile
+              hideButtonOnMobile
               title={<Title text={title} variant="text" textSize="h4" />}
               button={
                 <Button
