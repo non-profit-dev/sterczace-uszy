@@ -16,6 +16,7 @@ const Slider = ({
   slidesPerViewMobile,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [paginationLength, setPaginationLength] = useState(0)
 
   const swiperSettings = {
     spaceBetween: 48,
@@ -44,14 +45,15 @@ const Slider = ({
     <Styled.Slider
       {...swiperSettings}
       onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+      onSnapGridLengthChange={(swiper) =>
+        setPaginationLength(swiper.snapGrid.length)
+      }
     >
       {Children.map(children, (child) => (
         <Styled.Slide key={child}>{child}</Styled.Slide>
       ))}
-
       <Navigation activeIndex={activeIndex} length={children.length} />
-
-      <Pagination length={children.length} activeIndex={activeIndex} />
+      <Pagination activeIndex={activeIndex} length={paginationLength} />
     </Styled.Slider>
   )
 }
