@@ -1,23 +1,5 @@
 import styled from "@emotion/styled"
 
-import ContainerComponent from "design-system/components/container"
-
-export const Container = styled(ContainerComponent)`
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    background: linear-gradient(
-        132.47deg,
-        #ffffff -6.92%,
-        rgba(255, 255, 255, 0.741134) 59.95%,
-        rgba(255, 255, 255, 0.477001) 80.64%,
-        rgba(255, 255, 255, 0) 112.9%
-      ),
-      url("/home/about-section-image.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-`
-
 export const Content = styled.div`
   max-width: 1065px;
   margin: 105px auto 120px;
@@ -25,19 +7,21 @@ export const Content = styled.div`
   gap: 80px;
   grid-template-columns: auto 1fr;
 
+  ${({ theme }) => theme.breakpoints.desktopSm} {
+    gap: 50px;
+  }
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: block;
-    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
     margin: 0;
     padding: 100px 0;
   }
 
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 60px 0;
-  }
-
-  ${({ theme }) => theme.breakpoints.desktopSm} {
-    gap: 50px;
+    gap: 60px;
   }
 `
 
@@ -46,12 +30,28 @@ export const Image = styled.img`
   width: 100%;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: none;
+    max-width: unset;
+    height: 608px;
+    object-fit: cover;
+  }
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    height: 450px;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    height: 400px;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    height: 348px;
   }
 `
 
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 620px;
+
   gap: 28px;
 `

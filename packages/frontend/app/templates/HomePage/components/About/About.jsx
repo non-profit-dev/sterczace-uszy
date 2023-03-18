@@ -1,6 +1,7 @@
 import { useTheme } from "@emotion/react"
 
 import Button from "design-system/components/button"
+import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
 
 import TextBanner from "design-system/patterns/textBanner"
@@ -11,7 +12,7 @@ const About = () => {
   const theme = useTheme()
 
   return (
-    <Styled.Container as="section">
+    <Container as="section">
       <Styled.Content>
         <Styled.Image src="home/about-section-image.png" />
         <TextBanner
@@ -48,7 +49,7 @@ const About = () => {
           </Styled.TextContainer>
         </TextBanner>
       </Styled.Content>
-    </Styled.Container>
+    </Container>
   )
 }
 
