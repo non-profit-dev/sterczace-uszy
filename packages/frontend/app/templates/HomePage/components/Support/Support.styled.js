@@ -26,6 +26,7 @@ export const List = styled.ul`
   ${({ theme }) => theme.breakpoints.mobileLg} {
     flex-direction: column;
     gap: 26px;
+    margin-bottom: 40px;
   }
 `
 
