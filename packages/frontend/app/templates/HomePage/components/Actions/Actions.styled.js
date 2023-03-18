@@ -8,6 +8,10 @@ export const BannerContent = styled.div`
   flex-direction: column;
   gap: 60px;
   align-items: center;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    text-align: left;
+    align-items: flex-start;
+  }
 `
 
 export const TextContainer = styled.div`
@@ -15,12 +19,12 @@ export const TextContainer = styled.div`
 `
 export const CardsContainer = styled.div`
   font-family: ${({ theme }) => theme.fontFamily};
-  display: flex;
-  gap: 50px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 0;
   }
 `
