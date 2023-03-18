@@ -6,7 +6,7 @@ import Footer from "design-system/blocks/footer"
 import Achievements from "./components/Achievements"
 import Animals from "./components/Animals"
 import Supporters from "./components/Supporters"
-import About from "./components/AboutSection"
+import About from "./components/About"
 
 import Page from "../Page"
 
