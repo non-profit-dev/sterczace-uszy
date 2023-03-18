@@ -7,6 +7,11 @@ export const Wrapper = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    background-size: auto 50%;
+    background-position: top;
+  }
 `
 
 export const List = styled.ul`
@@ -30,7 +35,7 @@ export const Content = styled.div`
   max-width: 560px;
   padding: 110px 0;
 
-  ${({ theme }) => theme.breakpoints.mobile} {
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -50,6 +55,12 @@ export const Content = styled.div`
         rgba(255, 255, 255, 0) 126.15%
       ),
       linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 199.9%);
+
+    ${({ theme }) => theme.breakpoints.mobileLg} {
+      height: 50%;
+      background: linear-gradient(0, #ffffff 0%, rgba(255, 255, 255, 0) 126.15%),
+        linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 199.9%);
+    }
   }
 `
 
