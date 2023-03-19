@@ -8,7 +8,7 @@ export const BannerContent = styled.div`
   flex-direction: column;
   gap: 60px;
   align-items: center;
-  ${({ theme }) => theme.breakpoints.tabletLg} {
+  ${({ theme }) => theme.breakpoints.tablet} {
     text-align: left;
     align-items: flex-start;
   }
@@ -18,7 +18,6 @@ export const TextContainer = styled.div`
   max-width: 596px;
 `
 export const CardsContainer = styled.div`
-  font-family: ${({ theme }) => theme.fontFamily};
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 70px;
