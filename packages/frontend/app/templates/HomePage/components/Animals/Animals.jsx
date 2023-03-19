@@ -1,16 +1,18 @@
 import { shape, arrayOf, string } from "prop-types"
 import { useTheme } from "@emotion/react"
 
-import Typography from "design-system/components/typography"
 import TextBanner from "design-system/patterns/textBanner"
-import Image from "design-system/components/image"
+import Title from "design-system/components/title"
+import Button from "design-system/components/button"
+import Typography from "design-system/components/typography"
+import Card from "design-system/patterns/card"
 
 import * as Styled from "./Animals.styled"
 
 const Animals = ({ data }) => {
   const theme = useTheme()
   return (
-    <div>
+    <>
       <Styled.ContentContainer>
         <TextBanner
           heading="Szukają domu"
@@ -23,16 +25,43 @@ const Animals = ({ data }) => {
           chcesz pomóc, sprawdź, kto czeka na nowy dom.
         </TextBanner>
       </Styled.ContentContainer>
-      <Styled.Grid>
-        {data.map((animal) => (
-          <div key={animal.name}>
-            <Image src={animal.thumbnail.url} />
-            <Typography variant="bodyTitle">{animal.name}</Typography>
-            <Typography variant="bodySmall">{animal.excerpt}</Typography>
-          </div>
+      <Styled.Wrapper>
+        {data.slice(0, 6).map((animal) => (
+          <Styled.CardsWrapper key={animal.name}>
+            <Card
+              button={
+                <Button
+                  iconEnd="arrowRight"
+                  text="Poznaj mnie lepiej"
+                  variant="text"
+                  href={`/do-adopcji/${animal.name}`}
+                />
+              }
+              href={`/do-adopcji/${animal.name}`}
+              imageAlt={animal.name}
+              imageHeight="300px"
+              imageSrc={animal.thumbnail.url}
+              title={
+                <Title
+                  badge={animal.age}
+                  iconEnd={
+                    animal.gender === "ona" ? "femaleAnimal" : "maleAnimal"
+                  }
+                  text={animal.name}
+                />
+              }
+            >
+              <Typography variant="bodyTitle" as="p">
+                {animal.excerpt}
+              </Typography>
+            </Card>
+          </Styled.CardsWrapper>
         ))}
-      </Styled.Grid>
-    </div>
+      </Styled.Wrapper>
+      <Styled.ButtonWrapper>
+        <Button text="Zobacz wszystkich" href="/nasi-podopieczni" />
+      </Styled.ButtonWrapper>
+    </>
   )
 }
 

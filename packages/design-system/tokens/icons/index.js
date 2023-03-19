@@ -19,6 +19,8 @@ import Close from "./Close.svg"
 import Paperclip from "./Paperclip.svg"
 import Bowl from "./Bowl.svg"
 import Menu from "./Menu.svg"
+import FemaleAnimal from "./FemaleAnimal.svg"
+import MaleAnimal from "./MaleAnimal.svg"
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -42,6 +44,8 @@ export const icons = {
   paperClip: Paperclip,
   bowl: Bowl,
   menu: Menu,
+  femaleAnimal: FemaleAnimal,
+  maleAnimal: MaleAnimal,
 }
 
 export {
@@ -66,4 +70,6 @@ export {
   Phone,
   Close,
   Paperclip,
+  FemaleAnimal,
+  MaleAnimal,
 }
