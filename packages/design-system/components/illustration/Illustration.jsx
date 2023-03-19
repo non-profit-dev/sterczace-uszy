@@ -4,6 +4,9 @@ import HeartWithDogFace from "design-system/tokens/illustrations/heartWithDogFac
 import HeartIllustration from "design-system/tokens/illustrations/HeartIllustration.svg"
 import DogIllustration from "design-system/tokens/illustrations/DogIllustration.svg"
 import HomeIllustration from "design-system/tokens/illustrations/HomeIllustration.svg"
+import ruleFirst from "design-system/tokens/illustrations/ruleFirst.svg"
+import ruleSecond from "design-system/tokens/illustrations/ruleSecond.svg"
+import ruleThird from "design-system/tokens/illustrations/ruleThird.svg"
 
 const sizes = {
   heartWithDogFace: {
@@ -62,6 +65,48 @@ const sizes = {
       height: 107,
     },
   },
+  RuleFirst: {
+    small: {
+      width: 250,
+      height: 250,
+    },
+    medium: {
+      width: 250,
+      height: 250,
+    },
+    large: {
+      width: 250,
+      height: 250,
+    },
+  },
+  RuleSecond: {
+    small: {
+      width: 250,
+      height: 250,
+    },
+    medium: {
+      width: 250,
+      height: 250,
+    },
+    large: {
+      width: 250,
+      height: 250,
+    },
+  },
+  RuleThird: {
+    small: {
+      width: 250,
+      height: 250,
+    },
+    medium: {
+      width: 250,
+      height: 250,
+    },
+    large: {
+      width: 250,
+      height: 250,
+    },
+  },
 }
 
 export const illustrations = {
@@ -69,6 +114,9 @@ export const illustrations = {
   heart: HeartIllustration,
   dog: DogIllustration,
   home: HomeIllustration,
+  RuleFirst: ruleFirst,
+  RuleSecond: ruleSecond,
+  RuleThird: ruleThird,
 }
 
 const Illustration = ({ name, className, size }) => {
