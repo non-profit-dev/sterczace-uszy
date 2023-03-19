@@ -125,3 +125,19 @@ export const ButtonWrapper = styled.div`
           `}
   }
 `
+
+export const MobileTitle = styled.div`
+  display: none;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+`
+
+export const Title = styled.div`
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: ${({ hideOnMobile }) => (hideOnMobile ? `none` : `block`)};
+  }
+`

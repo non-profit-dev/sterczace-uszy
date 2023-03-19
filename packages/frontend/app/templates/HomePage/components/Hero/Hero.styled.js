@@ -61,7 +61,12 @@ export const Card = styled(CardComponent)`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     border-radius: 0;
     box-shadow: none;
-    border-top: 1px solid ${({ theme }) => theme.colors.grey[200]};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.grey[200]};
     padding-top: 30px;
+    padding-left: 24px;
+
+    &:hover {
+      box-shadow: none;
+    }
   }
 `
