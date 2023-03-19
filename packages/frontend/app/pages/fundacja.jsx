@@ -1,4 +1,4 @@
-import HomePage from "../templates/HomePage"
+import AboutPage from "../templates/About"
 
 import { supportingType, animalsType, adoptedAnimalsType } from "../lib/types"
 
@@ -9,8 +9,8 @@ import {
   GET_SUPPORTING,
 } from "../lib/queries"
 
-const Home = ({ animals, supporting, adoptedAnimals }) => (
-  <HomePage
+const About = ({ animals, supporting, adoptedAnimals }) => (
+  <AboutPage
     animals={animals}
     supporting={supporting}
     adoptedAnimals={adoptedAnimals}
@@ -40,10 +40,10 @@ export async function getStaticProps() {
   }
 }
 
-Home.propTypes = {
+About.propTypes = {
   animals: animalsType.isRequired,
   supporting: supportingType.isRequired,
   adoptedAnimals: adoptedAnimalsType.isRequired,
 }
 
-export default Home
+export default About
