@@ -11,7 +11,7 @@ export const Container = styled(ContainerComponent)`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     background-size: 50%;
-    background-position: center;
+    background-position: 50% 60%;
   }
 `
 
