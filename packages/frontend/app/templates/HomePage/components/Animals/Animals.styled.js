@@ -11,3 +11,6 @@ export const Grid = styled.div`
     max-height: 340px;
   }
 `
+export const ContentContainer = styled.div`
+  max-width: 640px;
+`
