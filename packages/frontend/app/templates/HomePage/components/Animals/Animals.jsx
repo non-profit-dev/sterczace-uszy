@@ -4,13 +4,35 @@ import { useTheme } from "@emotion/react"
 import TextBanner from "design-system/patterns/textBanner"
 import Title from "design-system/components/title"
 import Button from "design-system/components/button"
-import Typography from "design-system/components/typography"
 import Card from "design-system/patterns/card"
+import Slider from "design-system/components/slider"
 
 import * as Styled from "./Animals.styled"
 
 const Animals = ({ data }) => {
   const theme = useTheme()
+
+  function getAnimalType(age, gender) {
+    switch (true) {
+      case age < 1:
+        return "Szczeniak"
+      case age >= 1 && age < 3 && gender === "on":
+        return "Młodziak"
+      case age >= 1 && age < 3 && gender === "ona":
+        return "Młoda suczka"
+      case age >= 3 && age < 8 && gender === "on":
+        return "Dorosły przystojniak"
+      case age >= 3 && age < 8 && gender === "ona":
+        return "Dorosła piękność"
+      case age >= 8 && gender === "ona":
+        return "Seniorka"
+      case age >= 8 && gender === "on":
+        return "Senior"
+      default:
+        return ""
+    }
+  }
+
   return (
     <>
       <Styled.ContentContainer>
@@ -26,6 +48,8 @@ const Animals = ({ data }) => {
         </TextBanner>
       </Styled.ContentContainer>
       <Styled.Wrapper>
+        {/* <Styled.SliderWrapper>
+          <Slider> */}
         {data.slice(0, 6).map((animal) => (
           <Styled.CardsWrapper key={animal.name}>
             <Card
@@ -34,7 +58,6 @@ const Animals = ({ data }) => {
                   iconEnd="arrowRight"
                   text="Poznaj mnie lepiej"
                   variant="text"
-                  href={`/do-adopcji/${animal.name}`}
                 />
               }
               href={`/do-adopcji/${animal.name}`}
@@ -43,7 +66,7 @@ const Animals = ({ data }) => {
               imageSrc={animal.thumbnail.url}
               title={
                 <Title
-                  badge={animal.age}
+                  badge={getAnimalType(animal.age)}
                   iconEnd={
                     animal.gender === "ona" ? "femaleAnimal" : "maleAnimal"
                   }
@@ -51,12 +74,14 @@ const Animals = ({ data }) => {
                 />
               }
             >
-              <Typography variant="bodyTitle" as="p">
+              <Styled.Description variant="bodyTitle">
                 {animal.excerpt}
-              </Typography>
+              </Styled.Description>
             </Card>
           </Styled.CardsWrapper>
         ))}
+        {/* </Slider>
+        </Styled.SliderWrapper> */}
       </Styled.Wrapper>
       <Styled.ButtonWrapper>
         <Button text="Zobacz wszystkich" href="/nasi-podopieczni" />

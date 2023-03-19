@@ -1,7 +1,6 @@
 import { useState, Children } from "react"
 
 import { PropTypes, number } from "prop-types"
-import "swiper/swiper-bundle.css"
 
 import * as Styled from "./Slider.styled"
 
