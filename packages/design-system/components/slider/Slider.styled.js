@@ -21,16 +21,15 @@ export const Arrow = styled.div`
 `
 
 export const BulletContainer = styled.div`
-${({ theme }) => theme.breakpoints.tabletLg} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    justify-content:center;
+    justify-content: center;
     gap: 22px;
   }
-}
 `
 
 export const Slider = styled(Swiper)`
