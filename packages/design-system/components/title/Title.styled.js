@@ -9,7 +9,7 @@ export const Title = styled.div`
   align-self: ${({ fullWidth }) => (fullWidth ? `stretch` : `auto`)};
   justify-content: space-between;
   position: relative;
-  color: ${({ theme }) => theme.colors.grey[500]};
+  color: ${({ theme }) => theme.colors.grey[600]};
   margin-bottom: 5px;
 `
 
