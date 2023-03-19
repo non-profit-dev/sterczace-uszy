@@ -51,6 +51,8 @@ const Actions = () => {
                 }
                 illustrationName="help"
                 layout="center"
+                hideIllustrationOnMobile
+                mobileLayout="left"
               >
                 <List gap={8}>
                   <ListItem variant="gray" iconName="check">
@@ -74,6 +76,8 @@ const Actions = () => {
                 }
                 illustrationName="protect"
                 layout="center"
+                hideIllustrationOnMobile
+                mobileLayout="left"
               >
                 <List gap={8}>
                   <ListItem variant="gray" iconName="check">
@@ -97,6 +101,8 @@ const Actions = () => {
                 }
                 illustrationName="treat"
                 layout="center"
+                hideIllustrationOnMobile
+                mobileLayout="left"
               >
                 <List gap={8}>
                   <ListItem variant="gray" iconName="check">
