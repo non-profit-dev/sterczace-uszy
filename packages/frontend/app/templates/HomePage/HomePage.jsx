@@ -9,6 +9,7 @@ import Achievements from "./components/Achievements"
 import Animals from "./components/Animals"
 import Support from "./components/Support"
 import Supporters from "./components/Supporters"
+import About from "./components/About"
 
 import Page from "../Page"
 
@@ -39,6 +40,7 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
     <Navigation />
 
     <Styled.Main>
+      <About />
       <Container>
         <Achievements
           supportingNumber={supporting.total}
