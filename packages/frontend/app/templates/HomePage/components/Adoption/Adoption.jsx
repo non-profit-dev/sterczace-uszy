@@ -25,7 +25,7 @@ const Adoption = () => {
           </TextBanner>
         </Styled.TextContainer>
         <Styled.RulesContainer>
-          <Card illustrationName="RuleFirst" size="large" layout="center">
+          <Card illustrationName="ruleFirst" size="large" layout="center">
             <Title
               size="medium"
               text="Zastanów się"
@@ -39,7 +39,7 @@ const Adoption = () => {
               znajdziesz czas na dodatkowe obowiązki.
             </Typography>
           </Card>
-          <Card illustrationName="RuleSecond" size="large" layout="center">
+          <Card illustrationName="ruleSecond" size="large" layout="center">
             <Title
               size="medium"
               text="Przeanalizuj"
@@ -53,7 +53,7 @@ const Adoption = () => {
               masz czas, aby zadbać o komfort nowego domownika.
             </Typography>
           </Card>
-          <Card illustrationName="RuleThird" size="large" layout="center">
+          <Card illustrationName="ruleThird" size="large" layout="center">
             <Title
               size="medium"
               text="Porozmawiaj"
