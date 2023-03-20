@@ -34,7 +34,7 @@ const Card = ({
         fixedSize={!!href}
         hideIllustrationOnMobile={hideIllustrationOnMobile}
       >
-        <Illustration name={illustrationName} />
+        <Illustration name={illustrationName} size="medium" />
       </Styled.IllustrationContainer>
     )}
     {imageSrc && (

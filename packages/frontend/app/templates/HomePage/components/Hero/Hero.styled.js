@@ -17,7 +17,7 @@ export const Container = styled(ContainerComponent)`
 
 export const Hero = styled.header`
   margin-bottom: 180px;
-  background-color: ${({ theme }) => theme.colors.grey[700]};
+  background-color: ${({ theme }) => theme.colors.gray[700]};
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     margin-bottom: 0;
@@ -61,7 +61,7 @@ export const Card = styled(CardComponent)`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     border-radius: 0;
     box-shadow: none;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.grey[200]};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gray[200]};
     padding-top: 30px;
     padding-left: 24px;
 
