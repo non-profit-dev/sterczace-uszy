@@ -43,7 +43,12 @@ const Hero = () => {
             descriptionColor={theme.colors.neutrals[100]}
             size="large"
             button={
-              <Button text="Wesprzyj nas" color="primary" href="/jak-pomoc" />
+              <Button
+                text="Wesprzyj nas"
+                color="primary"
+                size="large"
+                href="/jak-pomoc"
+              />
             }
           >
             Nasi podopieczni czekają na Twoją pomoc. Pełna miska, miejsce do
