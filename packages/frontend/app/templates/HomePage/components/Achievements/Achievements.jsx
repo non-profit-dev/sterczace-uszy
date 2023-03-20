@@ -1,6 +1,7 @@
 import { number } from "prop-types"
 
 import Typography from "design-system/components/typography"
+import DecorativeCard from "design-system/patterns/decorativeCard"
 
 import * as Styled from "./Achievements.styled"
 
@@ -10,15 +11,21 @@ const Achievements = ({
   adoptedAnimalsNumber,
 }) => (
   <Styled.TextContainer>
-    <Typography variant="h4" as="h3">
-      ♥️ {supportingNumber} Pomocnych serc
-    </Typography>
-    <Typography variant="h4" as="h3">
-      🏡 {animalsNumber} Znalezionych domów
-    </Typography>
-    <Typography variant="h4" as="h3">
-      🏡 {adoptedAnimalsNumber + animalsNumber} Uratowanych zwierząt
-    </Typography>
+    <DecorativeCard
+      illustrationName="heart"
+      count={supportingNumber}
+      title="Pomocnych serc"
+    />
+    <DecorativeCard
+      illustrationName="home"
+      count={animalsNumber}
+      title="Znalezionych domów"
+    />
+    <DecorativeCard
+      illustrationName="dog"
+      count={adoptedAnimalsNumber + animalsNumber}
+      title="Uratowanych zwierząt"
+    />
   </Styled.TextContainer>
 )
 
