@@ -16,7 +16,7 @@ export const Container = styled(ContainerComponent)`
 `
 
 export const Hero = styled.header`
-  margin-bottom: 180px;
+  margin-bottom: 280px;
   background-color: ${({ theme }) => theme.colors.gray[700]};
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
