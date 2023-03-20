@@ -16,7 +16,7 @@ const Adoption = () => {
           <TextBanner
             layout="center"
             heading="Zanim adoptujesz"
-            subtitle="ZASADY ADOPCJI"
+            subtitle="zasady adopcji"
           >
             Nasi podopieczni czekają na Twoją pomoc. Nowy dom, wsparcie
             finansowe, spacery, pełna miska, opieka lekarza to tylko niektóre
