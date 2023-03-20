@@ -20,7 +20,7 @@ const Adoption = () => {
           >
             Nasi podopieczni czekają na Twoją pomoc. Nowy dom, wsparcie
             finansowe, spacery, pełna miska, opieka lekarza to tylko niektóre
-            formy wsparcia. Jeżeli chcesz czynić dobro sprawdz, co możesz
+            formy wsparcia. Jeżeli chcesz czynić dobro sprawdź, co możesz
             zrobić.
           </TextBanner>
         </Styled.TextContainer>
