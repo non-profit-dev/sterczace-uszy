@@ -193,7 +193,6 @@ const Illustration = ({ name, className, size }) => {
       title={name}
       aria-hidden="true"
       className={className}
-      fill="currentColor"
     />
   )
 }
