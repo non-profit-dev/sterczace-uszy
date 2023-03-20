@@ -10,7 +10,7 @@ const Container = ({ size, children, as, className }) => (
 Container.propTypes = {
   size: oneOf(["small", "medium", "large"]),
   children: node.isRequired,
-  as: oneOf(["section", "article", "div"]),
+  as: oneOf(["section", "article", "div", "main"]),
   className: string,
 }
 

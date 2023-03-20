@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 
 export const Main = styled.main`
-  background-color: ${({ theme }) => theme.colors.grey[700]};
+  background-color: ${({ theme }) => theme.colors.gray[700]};
   min-height: 100vh;
   overflow: hidden;
 `
@@ -59,7 +59,7 @@ export const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background-color: ${({ theme }) => theme.colors.grey[700]};
+  background-color: ${({ theme }) => theme.colors.gray[700]};
 
   ${({ theme }) => theme.breakpoints.mobile} {
     object-fit: cover;

@@ -21,7 +21,7 @@ const Navigation = () => {
           name="chevronLeft"
           color={
             slider.isBeginning
-              ? theme.colors.grey[300]
+              ? theme.colors.gray[300]
               : theme.colors.primary[400]
           }
           size="large"
@@ -36,7 +36,7 @@ const Navigation = () => {
         <Icon
           name="chevronRight"
           color={
-            slider.isEnd ? theme.colors.grey[300] : theme.colors.primary[400]
+            slider.isEnd ? theme.colors.gray[300] : theme.colors.primary[400]
           }
           size="large"
         />

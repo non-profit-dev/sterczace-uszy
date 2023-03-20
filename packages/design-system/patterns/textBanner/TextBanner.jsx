@@ -79,8 +79,8 @@ TextBanner.defaultProps = {
   size: "medium",
   button: null,
   subtitleColor: theme.colors.primary[500],
-  headingColor: theme.colors.grey[600],
-  descriptionColor: theme.colors.grey[500],
+  headingColor: theme.colors.gray[600],
+  descriptionColor: theme.colors.gray[500],
   className: null,
   children: null,
 }
