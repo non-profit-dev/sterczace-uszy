@@ -91,6 +91,7 @@ export const Wrapper = styled.div`
     layout === "center"
       ? css`
           align-items: center;
+          text-align: center;
         `
       : css`
           align-items: flex-start;
@@ -103,6 +104,7 @@ export const Wrapper = styled.div`
       mobileLayout === "center"
         ? css`
             align-items: center;
+            text-align: center;
           `
         : css`
             align-items: flex-start;
