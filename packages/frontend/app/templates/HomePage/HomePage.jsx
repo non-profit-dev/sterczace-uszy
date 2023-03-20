@@ -20,6 +20,7 @@ import {
   animalsType,
   adoptedAnimalsType,
 } from "../../lib/types"
+import Actions from "./components/Actions"
 
 const HomePage = ({ animals, supporting, adoptedAnimals }) => (
   <Page>
@@ -42,6 +43,7 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
     <Styled.Main>
       <About />
       <Container>
+        <Actions />
         <Achievements
           supportingNumber={supporting.total}
           animalsNumber={animals.total}

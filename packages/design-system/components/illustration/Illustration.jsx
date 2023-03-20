@@ -7,6 +7,9 @@ import HomeIllustration from "design-system/tokens/illustrations/HomeIllustratio
 import RuleFirst from "design-system/tokens/illustrations/ruleFirst.svg"
 import RuleSecond from "design-system/tokens/illustrations/ruleSecond.svg"
 import RuleThird from "design-system/tokens/illustrations/ruleThird.svg"
+import Help from "design-system/tokens/illustrations/help.svg"
+import Protect from "design-system/tokens/illustrations/protect.svg"
+import Treat from "design-system/tokens/illustrations/treat.svg"
 import Car from "design-system/tokens/illustrations/car.svg"
 import Camera from "design-system/tokens/illustrations/camera.svg"
 import Scissors from "design-system/tokens/illustrations/scissors.svg"
@@ -167,6 +170,48 @@ const sizes = {
       height: 100,
     },
   },
+  help: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  protect: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  treat: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
 }
 
 export const illustrations = {
@@ -181,6 +226,9 @@ export const illustrations = {
   ruleFirst: RuleFirst,
   ruleSecond: RuleSecond,
   ruleThird: RuleThird,
+  help: Help,
+  protect: Protect,
+  treat: Treat,
 }
 
 const Illustration = ({ name, className, size }) => {
