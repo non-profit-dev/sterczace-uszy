@@ -49,9 +49,12 @@ const Card = ({
     >
       <Styled.Wrapper layout={layout} mobileLayout={mobileLayout}>
         <Styled.Title hideOnMobile={!!mobileTitle}>{title}</Styled.Title>
-        <Styled.MobileTitle>
-          {mobileTitle} <Icon name="arrowRight" />
-        </Styled.MobileTitle>
+        {mobileTitle && (
+          <Styled.MobileTitle>
+            {mobileTitle} <Icon name="arrowRight" />
+          </Styled.MobileTitle>
+        )}
+
         {children}
       </Styled.Wrapper>
 
