@@ -2,6 +2,7 @@ import styled from "@emotion/styled"
 
 import ContainerComponent from "design-system/components/container"
 import CardComponent from "design-system/patterns/card"
+import TitleComponent from "design-system/components/title"
 
 export const Container = styled(ContainerComponent)`
   background-image: url("/home/hero-background.png");
@@ -69,4 +70,8 @@ export const Card = styled(CardComponent)`
       box-shadow: none;
     }
   }
+`
+
+export const Title = styled(TitleComponent)`
+  padding: 0 20px;
 `
