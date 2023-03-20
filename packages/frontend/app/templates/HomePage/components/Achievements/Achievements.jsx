@@ -1,6 +1,5 @@
 import { number } from "prop-types"
 
-import Typography from "design-system/components/typography"
 import DecorativeCard from "design-system/patterns/decorativeCard"
 
 import * as Styled from "./Achievements.styled"
