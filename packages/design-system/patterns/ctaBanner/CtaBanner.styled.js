@@ -10,8 +10,12 @@ export const CtaBanner = styled.div`
     rgba(250, 244, 244, 0) 123.06%
   );
 
-  ${({ theme }) => theme.breakpoints.mobile} {
-    padding: 120px 24px;
+  ${({ theme }) => theme.breakpoints.tablet} {
+    padding: 100px 24px;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding: 60px 24px;
   }
 `
 
