@@ -99,11 +99,11 @@ const sizes = {
       height: 250,
     },
     medium: {
-      width: 250,
+      width: 350,
       height: 250,
     },
     large: {
-      width: 250,
+      width: 150,
       height: 250,
     },
   },

@@ -43,8 +43,6 @@ export const TextContainer = styled.div`
     display: grid;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    height: 100%;
   }
 `
 
@@ -58,15 +56,11 @@ export const RulesContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    height: 100%;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    height: 60%;
     margin-top: 5px;
   }
 `
@@ -74,8 +68,7 @@ export const RulesContainer = styled.div`
 export const ButtonContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.neutrals[100]};
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   margin-top: 10px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: flex;
