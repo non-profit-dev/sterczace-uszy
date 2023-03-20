@@ -13,19 +13,19 @@ const cards = [
     title: "Sprawdź warunki adopcji",
     buttonText: "Dowiedz się więcej",
     buttonHref: "/adopcja",
-    illustration: "heartWithDogFace",
+    illustration: "womanAndDog",
   },
   {
     title: "Zostań domem tymczasowym",
     buttonText: "Poznaj zasady",
     buttonHref: "/jak-pomoc",
-    illustration: "heartWithDogFace",
+    illustration: "temporaryHome",
   },
   {
     title: "Przekaż dary rzeczowe",
     buttonText: "Podaruj",
     buttonHref: "/adopcja",
-    illustration: "heartWithDogFace",
+    illustration: "bowl",
   },
 ]
 
