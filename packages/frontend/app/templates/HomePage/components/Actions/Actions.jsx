@@ -42,13 +42,7 @@ const Actions = () => {
             </Styled.TextContainer>
             <Styled.CardsContainer>
               <Card
-                title={
-                  <Title
-                    text="Pomagamy"
-                    textSize="h3"
-                    color="theme.colors.grey[600]"
-                  />
-                }
+                title={<Title text="Pomagamy" textSize="h3" />}
                 illustrationName="help"
                 layout="center"
                 hideIllustrationOnMobile
@@ -67,13 +61,7 @@ const Actions = () => {
                 </List>
               </Card>
               <Card
-                title={
-                  <Title
-                    text="Chronimy"
-                    textSize="h3"
-                    color="theme.colors.grey[600]"
-                  />
-                }
+                title={<Title text="Chronimy" textSize="h3" />}
                 illustrationName="protect"
                 layout="center"
                 hideIllustrationOnMobile
@@ -92,13 +80,7 @@ const Actions = () => {
                 </List>
               </Card>
               <Card
-                title={
-                  <Title
-                    text="Leczymy"
-                    textSize="h3"
-                    color="theme.colors.grey[600]"
-                  />
-                }
+                title={<Title text="Leczymy" textSize="h3" />}
                 illustrationName="treat"
                 layout="center"
                 hideIllustrationOnMobile
