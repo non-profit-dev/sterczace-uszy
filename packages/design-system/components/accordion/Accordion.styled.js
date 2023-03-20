@@ -10,12 +10,12 @@ const colors = {
     backgroundColor: theme.colors.neutrals[100],
   },
   black: {
-    color: theme.colors.grey[600],
+    color: theme.colors.gray[600],
     backgroundColor: theme.colors.neutrals[100],
   },
   white: {
     color: theme.colors.neutrals[100],
-    backgroundColor: theme.colors.grey[600],
+    backgroundColor: theme.colors.gray[600],
   },
 }
 

@@ -47,7 +47,7 @@ const typography = {
       letterSpacing: "-0.5px",
     },
     bodySmall: {
-      fontWeight: 300,
+      fontWeight: 400,
       fontSize: "16px",
       lineHeight: "140%",
     },
@@ -103,7 +103,7 @@ const typography = {
       lineHeight: "145%",
     },
     bodySmall: {
-      fontWeight: 300,
+      fontWeight: 400,
       fontSize: "16px",
       lineHeight: "150%",
     },
@@ -158,7 +158,7 @@ const typography = {
       lineHeight: "130%",
     },
     bodySmall: {
-      fontWeight: 300,
+      fontWeight: 400,
       fontSize: "14px",
       lineHeight: "140%",
     },
