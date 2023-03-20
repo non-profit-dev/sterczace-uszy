@@ -4,9 +4,16 @@ import HeartWithDogFace from "design-system/tokens/illustrations/heartWithDogFac
 import HeartIllustration from "design-system/tokens/illustrations/HeartIllustration.svg"
 import DogIllustration from "design-system/tokens/illustrations/DogIllustration.svg"
 import HomeIllustration from "design-system/tokens/illustrations/HomeIllustration.svg"
-import ruleFirst from "design-system/tokens/illustrations/ruleFirst.svg"
-import ruleSecond from "design-system/tokens/illustrations/ruleSecond.svg"
-import ruleThird from "design-system/tokens/illustrations/ruleThird.svg"
+import RuleFirst from "design-system/tokens/illustrations/ruleFirst.svg"
+import RuleSecond from "design-system/tokens/illustrations/ruleSecond.svg"
+import RuleThird from "design-system/tokens/illustrations/ruleThird.svg"
+import Help from "design-system/tokens/illustrations/help.svg"
+import Protect from "design-system/tokens/illustrations/protect.svg"
+import Treat from "design-system/tokens/illustrations/treat.svg"
+import Car from "design-system/tokens/illustrations/car.svg"
+import Camera from "design-system/tokens/illustrations/camera.svg"
+import Scissors from "design-system/tokens/illustrations/scissors.svg"
+import Training from "design-system/tokens/illustrations/training.svg"
 
 const sizes = {
   heartWithDogFace: {
@@ -65,7 +72,7 @@ const sizes = {
       height: 107,
     },
   },
-  RuleFirst: {
+  ruleFirst: {
     small: {
       width: 250,
       height: 250,
@@ -79,7 +86,7 @@ const sizes = {
       height: 250,
     },
   },
-  RuleSecond: {
+  ruleSecond: {
     small: {
       width: 250,
       height: 250,
@@ -93,7 +100,7 @@ const sizes = {
       height: 250,
     },
   },
-  RuleThird: {
+  ruleThird: {
     small: {
       width: 250,
       height: 250,
@@ -107,16 +114,121 @@ const sizes = {
       height: 250,
     },
   },
+  car: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  camera: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  scissors: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  training: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  help: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  protect: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  treat: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
 }
 
 export const illustrations = {
   heartWithDogFace: HeartWithDogFace,
+  car: Car,
+  camera: Camera,
+  scissors: Scissors,
+  training: Training,
   heart: HeartIllustration,
   dog: DogIllustration,
   home: HomeIllustration,
-  RuleFirst: ruleFirst,
-  RuleSecond: ruleSecond,
-  RuleThird: ruleThird,
+  ruleFirst: RuleFirst,
+  ruleSecond: RuleSecond,
+  ruleThird: RuleThird,
+  help: Help,
+  protect: Protect,
+  treat: Treat,
 }
 
 const Illustration = ({ name, className, size }) => {
@@ -129,6 +241,7 @@ const Illustration = ({ name, className, size }) => {
       title={name}
       aria-hidden="true"
       className={className}
+      fill="currentColor"
     />
   )
 }
