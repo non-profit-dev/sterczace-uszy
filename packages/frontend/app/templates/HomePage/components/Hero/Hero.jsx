@@ -17,13 +17,13 @@ const cards = [
   {
     title: "Zostań domem tymczasowym",
     buttonText: "Poznaj zasady",
-    buttonHref: "/jak-pomoc",
+    buttonHref: "/wsparcie",
     illustration: "temporaryHome",
   },
   {
     title: "Przekaż dary rzeczowe",
     buttonText: "Podaruj",
-    buttonHref: "/adopcja",
+    buttonHref: "/wsparcie",
     illustration: "bowl",
   },
 ]
