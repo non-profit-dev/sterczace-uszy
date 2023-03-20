@@ -3,6 +3,7 @@ import { string, oneOf, number, bool } from "prop-types"
 import Icon from "design-system/components/icon"
 import Badge from "design-system/components/badge"
 import Count from "design-system/components/count"
+import theme from "../../tokens/theme"
 
 import * as Styled from "./Title.styled"
 
@@ -17,8 +18,14 @@ const Title = ({
   count,
   hideLineOnMobile,
   className,
+  color,
 }) => (
-  <Styled.Title size={textSize} fullWidth={!!badge} className={className}>
+  <Styled.Title
+    size={textSize}
+    fullWidth={!!badge}
+    className={className}
+    color={color}
+  >
     <Styled.Wrapper>
       {iconStart && <Icon name={iconStart} size={size} />}
       {count && <Count count={count} variant="title" />}
@@ -74,6 +81,7 @@ Title.propTypes = {
   variant: oneOf(["text", "textLine"]),
   hideLineOnMobile: bool,
   className: string,
+  color: string,
 }
 
 Title.defaultProps = {
@@ -86,6 +94,7 @@ Title.defaultProps = {
   variant: "textLine",
   hideLineOnMobile: false,
   className: null,
+  color: theme.colors.grey[500],
 }
 
 export default Title
