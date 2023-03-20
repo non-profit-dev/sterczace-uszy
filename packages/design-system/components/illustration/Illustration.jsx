@@ -4,6 +4,10 @@ import HeartWithDogFace from "design-system/tokens/illustrations/heartWithDogFac
 import HeartIllustration from "design-system/tokens/illustrations/HeartIllustration.svg"
 import DogIllustration from "design-system/tokens/illustrations/DogIllustration.svg"
 import HomeIllustration from "design-system/tokens/illustrations/HomeIllustration.svg"
+import Car from "design-system/tokens/illustrations/car.svg"
+import Camera from "design-system/tokens/illustrations/camera.svg"
+import Scissors from "design-system/tokens/illustrations/scissors.svg"
+import Training from "design-system/tokens/illustrations/training.svg"
 
 const sizes = {
   heartWithDogFace: {
@@ -62,10 +66,70 @@ const sizes = {
       height: 107,
     },
   },
+  car: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  camera: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  scissors: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  training: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
 }
 
 export const illustrations = {
   heartWithDogFace: HeartWithDogFace,
+  car: Car,
+  camera: Camera,
+  scissors: Scissors,
+  training: Training,
   heart: HeartIllustration,
   dog: DogIllustration,
   home: HomeIllustration,
@@ -81,6 +145,7 @@ const Illustration = ({ name, className, size }) => {
       title={name}
       aria-hidden="true"
       className={className}
+      fill="currentColor"
     />
   )
 }
