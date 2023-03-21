@@ -20,7 +20,7 @@ const Supporters = ({ data }) => {
         <Typography variant="h2">Dziękujemy za wsparcie</Typography>
         <Styled.Slider>
           <Slider slidesPerViewDesktop={3}>
-            {data.map((item) => (
+            {data.slice(0, 6).map((item) => (
               <Card
                 key={item.name}
                 title={<Title text={item.name} variant="textLine" />}
