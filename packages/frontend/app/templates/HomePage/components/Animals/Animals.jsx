@@ -39,7 +39,7 @@ const Animals = ({ data }) => {
         <TextBanner
           heading="Szukają domu"
           subtitle="NASI PODOPIECZNI"
-          descriptionColor={theme.colors.grey[600]}
+          descriptionColor={theme.colors.gray[600]}
         >
           Zapewniamy dom i schronienie dla psów i kotów. Obecnie pod naszą
           opieką jest 5 zwierzaków, ale ciągle przyjmujemy nowych podopiecznych.
