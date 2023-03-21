@@ -7,7 +7,9 @@ export const ContentContainer = styled.div`
 `
 
 export const Wrapper = styled.div`
+  margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
@@ -25,7 +27,7 @@ export const CardsWrapper = styled.div`
   display: flex;
   width: 30%;
   align-items: stretch;
-  flex: 1;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 100%;
   }
