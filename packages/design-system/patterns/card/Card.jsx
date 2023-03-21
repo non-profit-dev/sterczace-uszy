@@ -1,4 +1,12 @@
-import { string, oneOf, node, oneOfType, object, bool } from "prop-types"
+import {
+  string,
+  oneOf,
+  node,
+  oneOfType,
+  object,
+  bool,
+  number,
+} from "prop-types"
 
 import Illustration from "design-system/components/illustration"
 import * as Styled from "./Card.styled"
@@ -10,6 +18,7 @@ const Card = ({
   href,
   illustrationName,
   illustrationSrc,
+  illustrationHeight,
   hideIllustrationOnMobile,
   mobileLayout,
   layout,
@@ -30,14 +39,13 @@ const Card = ({
     {(illustrationName || illustrationSrc) && (
       <Styled.IllustrationContainer
         hideIllustrationOnMobile={hideIllustrationOnMobile}
+        height={illustrationHeight}
       >
         {illustrationName && (
           <Illustration name={illustrationName} size="medium" />
         )}
 
-        {illustrationSrc && (
-          <Styled.Illustration src={illustrationSrc} alt="" />
-        )}
+        {illustrationSrc && <img src={illustrationSrc} alt="" />}
       </Styled.IllustrationContainer>
     )}
     {imageSrc && (
@@ -79,6 +87,7 @@ Card.propTypes = {
   href: string,
   illustrationName: string,
   illustrationSrc: string,
+  illustrationHeight: number,
   hideIllustrationOnMobile: bool,
   imageAlt: string,
   imageHeight: string,
@@ -96,6 +105,7 @@ Card.defaultProps = {
   href: null,
   illustrationName: null,
   illustrationSrc: null,
+  illustrationHeight: number,
   hideIllustrationOnMobile: false,
   imageAlt: null,
   imageHeight: null,
