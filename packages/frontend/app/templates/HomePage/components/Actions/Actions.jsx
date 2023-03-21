@@ -19,10 +19,10 @@ const Actions = () => {
       <Styled.Content>
         <TextBanner
           heading="Nasze działania"
-          headingColor={theme.colors.grey[600]}
+          headingColor={theme.colors.gray[600]}
           subtitle="Co robimy?"
           layout="center"
-          descriptionColor={theme.colors.grey[600]}
+          descriptionColor={theme.colors.gray[600]}
           size="medium"
           button={
             <Button
