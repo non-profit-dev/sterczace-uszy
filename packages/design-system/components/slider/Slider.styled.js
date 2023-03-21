@@ -40,7 +40,11 @@ export const Slider = styled(Swiper)`
   padding: 30px 40px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding: 30px 0 60px;
+    padding: 30px 56px 60px;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding: 30px 24px 60px;
   }
 `
 

@@ -35,5 +35,9 @@ export const SliderWrapper = styled.div`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 `

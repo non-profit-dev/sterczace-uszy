@@ -1,10 +1,11 @@
 import { shape, arrayOf, string } from "prop-types"
 import { useTheme } from "@emotion/react"
 
-import TextBanner from "design-system/patterns/textBanner"
 import Button from "design-system/components/button"
-import AnimalCard from "design-system/patterns/animalCard"
 import Slider from "design-system/components/slider"
+
+import TextBanner from "design-system/patterns/textBanner"
+import AnimalCard from "design-system/patterns/animalCard"
 
 import * as Styled from "./Animals.styled"
 
