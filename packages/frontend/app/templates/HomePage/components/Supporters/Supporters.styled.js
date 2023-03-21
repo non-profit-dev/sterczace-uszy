@@ -24,5 +24,9 @@ export const Slider = styled.div`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     margin-top: 20px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 `
