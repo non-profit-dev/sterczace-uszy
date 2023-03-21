@@ -22,6 +22,7 @@ export const GET_ANIMALS = gql`
         gender
         age
         excerpt
+        slug
         thumbnail {
           url
         }

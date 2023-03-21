@@ -60,7 +60,7 @@ const Animals = ({ data }) => {
                   variant="text"
                 />
               }
-              href={`/do-adopcji/${animal.name}`}
+              href={`/${animal.slug}`}
               imageAlt={animal.name}
               imageHeight="300px"
               imageSrc={animal.thumbnail.url}
