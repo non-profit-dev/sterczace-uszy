@@ -2,36 +2,14 @@ import { shape, arrayOf, string } from "prop-types"
 import { useTheme } from "@emotion/react"
 
 import TextBanner from "design-system/patterns/textBanner"
-import Title from "design-system/components/title"
 import Button from "design-system/components/button"
-import Card from "design-system/patterns/card"
+import AnimalCard from "design-system/patterns/animalCard"
 import Slider from "design-system/components/slider"
 
 import * as Styled from "./Animals.styled"
 
 const Animals = ({ data }) => {
   const theme = useTheme()
-
-  function getAnimalType(age, gender) {
-    switch (true) {
-      case age < 1:
-        return "Szczeniak"
-      case age >= 1 && age < 3 && gender === "on":
-        return "Młodziak"
-      case age >= 1 && age < 3 && gender === "ona":
-        return "Młoda suczka"
-      case age >= 3 && age < 8 && gender === "on":
-        return "Dorosły przystojniak"
-      case age >= 3 && age < 8 && gender === "ona":
-        return "Dorosła piękność"
-      case age >= 8 && gender === "ona":
-        return "Seniorka"
-      case age >= 8 && gender === "on":
-        return "Senior"
-      default:
-        return ""
-    }
-  }
 
   return (
     <>
@@ -52,32 +30,14 @@ const Animals = ({ data }) => {
           <Slider> */}
         {data.slice(0, 6).map((animal) => (
           <Styled.CardsWrapper key={animal.name}>
-            <Card
-              button={
-                <Button
-                  iconEnd="arrowRight"
-                  text="Poznaj mnie lepiej"
-                  variant="text"
-                />
-              }
-              href={`/${animal.slug}`}
-              imageAlt={animal.name}
-              imageHeight="300px"
-              imageSrc={animal.thumbnail.url}
-              title={
-                <Title
-                  badge={getAnimalType(animal.age, animal.gender)}
-                  iconEnd={
-                    animal.gender === "ona" ? "femaleAnimal" : "maleAnimal"
-                  }
-                  text={animal.name}
-                />
-              }
-            >
-              <Styled.Description variant="bodyTitle">
-                {animal.excerpt}
-              </Styled.Description>
-            </Card>
+            <AnimalCard
+              name={animal.name}
+              age={animal.age}
+              gender={animal.gender}
+              excerpt={animal.excerpt}
+              slug={animal.slug}
+              image={animal.thumbnail.url}
+            />
           </Styled.CardsWrapper>
         ))}
         {/* </Slider>
