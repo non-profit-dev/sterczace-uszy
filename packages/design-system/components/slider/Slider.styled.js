@@ -17,6 +17,8 @@ export const Arrow = styled.div`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     top: auto;
+    left: ${({ direction }) => (direction === "prev" ? "30px" : "auto")};
+    right: ${({ direction }) => (direction === "next" ? "30px" : "auto")};
     transform: translateY(0);
     bottom: 0;
     margin-bottom: -10px;
