@@ -66,7 +66,7 @@ const Animals = ({ data }) => {
               imageSrc={animal.thumbnail.url}
               title={
                 <Title
-                  badge={getAnimalType(animal.age)}
+                  badge={getAnimalType(animal.age, animal.gender)}
                   iconEnd={
                     animal.gender === "ona" ? "femaleAnimal" : "maleAnimal"
                   }
