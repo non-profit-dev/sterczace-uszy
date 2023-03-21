@@ -3,8 +3,6 @@ import styled from "@emotion/styled"
 export const MainContainer = styled.div`
   display: grid;
   grid-auto-flow: column;
-  border: 2px solid blue;
-
   gap: 42px;
 
   ${({ theme }) => theme.breakpoints.desktopSm} {
@@ -33,5 +31,8 @@ export const Achievements = styled.div`
   ${({ theme }) => theme.breakpoints.mobileLg} {
     gap: 60px;
     padding: 60px 24px;
+  }
+  ${({ theme }) => theme.breakpoints.mobileSm} {
+    padding: 60px 14px;
   }
 `

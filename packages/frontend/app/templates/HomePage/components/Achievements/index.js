@@ -1,3 +1,3 @@
-import Supporters from "./Achievements"
+import Achievements from "./Achievements"
 
-export default Supporters
+export default Achievements

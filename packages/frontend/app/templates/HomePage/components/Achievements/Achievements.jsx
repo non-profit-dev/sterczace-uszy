@@ -16,11 +16,6 @@ const Achievements = ({
       heading="Nasze osiągnięcia"
       subtitle="FUNDACJA W LICZBACH"
       layout="center"
-      size="large"
-      // subtitleColor="red"
-      // headingColor="blue"
-      // descriptionColor="orange"
-      className="rr"
     >
       <Typography variant="bodyTitle">
         Te liczby są dla nas ważne. Działamy, aby stale rosły. Pokazują nasze
