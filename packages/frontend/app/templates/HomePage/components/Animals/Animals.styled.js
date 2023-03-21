@@ -1,7 +1,5 @@
 import styled from "@emotion/styled"
 
-import Typography from "design-system/components/typography"
-
 export const ContentContainer = styled.div`
   max-width: 640px;
 `
@@ -38,8 +36,4 @@ export const SliderWrapper = styled.div`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: flex;
   }
-`
-
-export const Description = styled(Typography)`
-  text-align: left;
 `
