@@ -16,7 +16,7 @@ const Animals = ({ data }) => {
       <Styled.ContentContainer>
         <TextBanner
           heading="Szukają domu"
-          subtitle="NASI PODOPIECZNI"
+          subtitle="Nasi podopieczni"
           descriptionColor={theme.colors.gray[600]}
         >
           Zapewniamy dom i schronienie dla psów i kotów. Obecnie pod naszą
