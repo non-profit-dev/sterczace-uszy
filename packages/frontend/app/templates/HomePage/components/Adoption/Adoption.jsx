@@ -10,7 +10,6 @@ import * as Styled from "./Adoption.styled"
 const Adoption = () => {
   const theme = useTheme()
   return (
-    <Styled.Main>
       <Styled.Container>
         <Styled.TextContainer>
           <TextBanner
@@ -77,7 +76,6 @@ const Adoption = () => {
           />
         </Styled.ButtonContainer>
       </Styled.Container>
-    </Styled.Main>
   )
 }
 

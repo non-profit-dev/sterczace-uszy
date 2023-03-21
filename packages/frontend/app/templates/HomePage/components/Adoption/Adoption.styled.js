@@ -1,22 +1,13 @@
 import styled from "@emotion/styled"
-import Typography from "design-system/components/typography"
-
-export const Main = styled.main`
-  margin: 80px auto;
-`
 
 export const Container = styled.div`
   text-align: center;
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    flex-direction: column;
-    margin: 140px auto;
+    margin: 200px auto;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     margin: 190px auto;
   }
-`
-export const Subtitle = styled(Typography)`
-  text-transform: uppercase;
 `
 
 export const TextContainer = styled.div`
