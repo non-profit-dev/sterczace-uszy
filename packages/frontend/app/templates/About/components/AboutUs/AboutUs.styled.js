@@ -39,9 +39,12 @@ export const Wrapper = styled.div`
     flex-direction: column-reverse;
     align-items: center;
     gap: 100px;
+    margin-bottom: 100px;
   }
+
   ${({ theme }) => theme.breakpoints.mobileLg} {
     gap: 60px;
+    margin-bottom: 80px;
   }
 `
 
@@ -49,12 +52,14 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
     gap: 40px;
   }
 `
 export const BannerContainer = styled.div`
   margin-bottom: -20px;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
     margin-bottom: -80px;
@@ -63,6 +68,7 @@ export const BannerContainer = styled.div`
 
 export const ContainerSection = styled(Container)`
   margin: 120px 0;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding: 0;
     max-width: 100vw;
