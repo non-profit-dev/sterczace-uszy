@@ -52,6 +52,7 @@ const Navigation = () => {
                     href={item.href}
                     text={item.title}
                     variant="text"
+                    x
                     size="medium"
                     color="black"
                   />

@@ -1,19 +1,35 @@
 import styled from "@emotion/styled"
 import Container from "design-system/components/container"
 
-export const Image = styled.img`
-  max-width: 425px;
-  width: 100%;
+export const ImageWrapper = styled.div`
+  display: block;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
-    height: 572px;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: block;
+    width: 100vw;
+    position: relative;
+  }
+`
+
+export const Image = styled.img`
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  object-position: 40%;
+  margin-top: 200px;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     object-fit: cover;
+    height: 100%;
+    max-width: 100vw;
+    margin-top: 0;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     height: 300px;
   }
 `
+
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -37,15 +53,19 @@ export const TextWrapper = styled.div`
     gap: 40px;
   }
 `
+export const BannerContainer = styled.div`
+  margin-bottom: -20px;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: block;
+    margin-bottom: -80px;
+  }
+`
 
 export const ContainerSection = styled(Container)`
   margin: 120px 0;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding: 0;
-    margin: 100px 0 0;
-  }
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding: 0;
-    margin: 80px 0 0;
+    max-width: 100vw;
+    margin: 0;
   }
 `
