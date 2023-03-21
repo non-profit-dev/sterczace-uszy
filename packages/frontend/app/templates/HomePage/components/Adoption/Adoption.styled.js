@@ -21,7 +21,7 @@ export const Subtitle = styled(Typography)`
 
 export const TextContainer = styled.div`
   margin: 0px auto;
-  width: 80%;
+  width: 90%;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: flex;
     flex-direction: column;
@@ -34,7 +34,6 @@ export const RulesContainer = styled.div`
   margin: 0 auto;
   display: flex;
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: flex;
     flex-direction: column;
   }
 `

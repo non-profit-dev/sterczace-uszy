@@ -79,7 +79,7 @@ const sizes = {
     },
     medium: {
       width: 250,
-      height: 250,
+      height: 270,
     },
     large: {
       width: 250,
