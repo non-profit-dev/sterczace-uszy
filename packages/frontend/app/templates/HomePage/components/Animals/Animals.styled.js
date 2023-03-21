@@ -4,14 +4,14 @@ export const ContentContainer = styled.div`
   max-width: 640px;
 `
 
-export const Wrapper = styled.div`
+export const CardsWrapper = styled.div`
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    flex-direction: column;
+    display: none;
   }
 `
 
@@ -21,7 +21,7 @@ export const ButtonWrapper = styled.div`
   margin: 60px 0 120px;
 `
 
-export const CardsWrapper = styled.div`
+export const CardWrapper = styled.div`
   display: flex;
   width: 30%;
   align-items: stretch;
@@ -34,6 +34,6 @@ export const SliderWrapper = styled.div`
   display: none;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: flex;
+    display: block;
   }
 `

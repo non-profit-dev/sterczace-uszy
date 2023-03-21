@@ -25,11 +25,10 @@ const Animals = ({ data }) => {
           chcesz pomóc, sprawdź, kto czeka na nowy dom.
         </TextBanner>
       </Styled.ContentContainer>
-      <Styled.Wrapper>
-        {/* <Styled.SliderWrapper>
-          <Slider> */}
+
+      <Styled.CardsWrapper>
         {data.slice(0, 6).map((animal) => (
-          <Styled.CardsWrapper key={animal.name}>
+          <Styled.CardWrapper key={animal.name}>
             <AnimalCard
               name={animal.name}
               age={animal.age}
@@ -38,11 +37,25 @@ const Animals = ({ data }) => {
               slug={animal.slug}
               image={animal.thumbnail.url}
             />
-          </Styled.CardsWrapper>
+          </Styled.CardWrapper>
         ))}
-        {/* </Slider>
-        </Styled.SliderWrapper> */}
-      </Styled.Wrapper>
+      </Styled.CardsWrapper>
+
+      <Styled.SliderWrapper>
+        <Slider>
+          {data.slice(0, 6).map((animal) => (
+            <AnimalCard
+              key={animal.name}
+              name={animal.name}
+              age={animal.age}
+              gender={animal.gender}
+              excerpt={animal.excerpt}
+              slug={animal.slug}
+              image={animal.thumbnail.url}
+            />
+          ))}
+        </Slider>
+      </Styled.SliderWrapper>
       <Styled.ButtonWrapper>
         <Button text="Zobacz wszystkich" href="/nasi-podopieczni" />
       </Styled.ButtonWrapper>
