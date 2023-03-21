@@ -22,7 +22,7 @@ export const TextContainer = styled.div`
 export const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 70px;
+  gap: 50px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     grid-template-columns: 1fr;
