@@ -53,9 +53,7 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
         />
       </Container>
 
-      <Container>
-        <Animals data={animals.items} />
-      </Container>
+      <Animals data={animals.items} />
 
       <Support />
 

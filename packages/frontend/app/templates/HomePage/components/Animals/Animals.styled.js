@@ -1,5 +1,17 @@
 import styled from "@emotion/styled"
 
+export const Wrapper = styled.div`
+  padding-top: 120px;
+  background-image: url("/home/animals-background.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding-top: 60px;
+  }
+`
+
 export const ContentContainer = styled.div`
   max-width: 640px;
 `
