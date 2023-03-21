@@ -9,6 +9,7 @@ const Card = ({
   children,
   href,
   illustrationName,
+  illustrationSrc,
   hideIllustrationOnMobile,
   mobileLayout,
   layout,
@@ -26,11 +27,17 @@ const Card = ({
     href={href}
     className={className}
   >
-    {illustrationName && (
+    {(illustrationName || illustrationSrc) && (
       <Styled.IllustrationContainer
         hideIllustrationOnMobile={hideIllustrationOnMobile}
       >
-        <Illustration name={illustrationName} size="medium" />
+        {illustrationName && (
+          <Illustration name={illustrationName} size="medium" />
+        )}
+
+        {illustrationSrc && (
+          <Styled.Illustration src={illustrationSrc} alt="" />
+        )}
       </Styled.IllustrationContainer>
     )}
     {imageSrc && (
@@ -41,16 +48,18 @@ const Card = ({
     <Styled.ContentContainer
       layout={layout}
       mobileLayout={mobileLayout}
-      paddingTop={!imageSrc && !illustrationName}
+      paddingTop={!imageSrc && !illustrationName && !illustrationSrc}
     >
       <Styled.Wrapper layout={layout} mobileLayout={mobileLayout}>
         {title}
         {children}
       </Styled.Wrapper>
 
-      <Styled.ButtonWrapper hideButtonOnMobile={hideButtonOnMobile}>
-        {button && button}
-      </Styled.ButtonWrapper>
+      {button && (
+        <Styled.ButtonWrapper hideButtonOnMobile={hideButtonOnMobile}>
+          {button}
+        </Styled.ButtonWrapper>
+      )}
     </Styled.ContentContainer>
   </Styled.Card>
 )
@@ -69,6 +78,7 @@ Card.propTypes = {
    */
   href: string,
   illustrationName: string,
+  illustrationSrc: string,
   hideIllustrationOnMobile: bool,
   imageAlt: string,
   imageHeight: string,
@@ -85,6 +95,7 @@ Card.defaultProps = {
   children: null,
   href: null,
   illustrationName: null,
+  illustrationSrc: null,
   hideIllustrationOnMobile: false,
   imageAlt: null,
   imageHeight: null,

@@ -124,3 +124,7 @@ export const ButtonWrapper = styled.div`
           `}
   }
 `
+
+export const Illustration = styled.img`
+  height: 100px;
+`

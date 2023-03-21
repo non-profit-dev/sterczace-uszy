@@ -27,8 +27,9 @@ const Supporters = ({ data }) => {
                 href={item.url}
                 layout="center"
                 bgColor={theme.colors.neutrals[100]}
+                illustrationSrc={item.logo ? item.logo.url : null}
+                illustrationName={item.logo ? null : "help"}
               >
-                {/* <img src={item.logo?.url} alt="" width="100" /> */}
                 <Typography variant="bodySmall">{item.description}</Typography>
                 <Button
                   text={item.urlText}
