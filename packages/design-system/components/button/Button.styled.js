@@ -33,7 +33,6 @@ const colors = {
 }
 export const Component = styled.a`
   ${({ size }) => sizes[size].typography};
-  font-family: ${theme.fontFamily};
   letter-spacing: -0.02em;
   border-radius: 30px;
   cursor: pointer;

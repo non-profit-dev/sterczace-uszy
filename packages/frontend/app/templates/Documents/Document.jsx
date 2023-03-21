@@ -13,9 +13,7 @@ const Documents = () => {
       <Container size="medium">
         <Styled.DocumentContainer>
           <Styled.HeaderContainer>
-            <Typography color={theme.colors.gray[600]} variant="h2">
-              Dokumenty do pobrania
-            </Typography>
+            <Typography variant="h2">Dokumenty do pobrania</Typography>
             <Typography color={theme.colors.gray[500]} variant="bodyTitle">
               Chcesz zaopiekować się naszym zwierzakiem? Tutaj znajdziesz
               niezbędne dokumenty, abyśmy mogły powierzyć go w Twoje ręce.
@@ -23,7 +21,7 @@ const Documents = () => {
           </Styled.HeaderContainer>
           <DocumentsTemplate />
           <Styled.DocumentsInfo>
-            <Typography color={theme.colors.gray[600]} variant="bodyTitle">
+            <Typography variant="bodyTitle">
               Ankietę wyślij na adres{" "}
               <a href="mailto:fundacjasterczaceuszy@gmail.com">
                 fundacjasterczaceuszy@gmail.com

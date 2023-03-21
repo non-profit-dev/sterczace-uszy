@@ -23,6 +23,7 @@ const MyApp = ({ Component, pageProps }) => (
           styles={css`
             body {
               margin: 0;
+              font-family: ${theme.fontFamily};
             }
             *,
             *::before,

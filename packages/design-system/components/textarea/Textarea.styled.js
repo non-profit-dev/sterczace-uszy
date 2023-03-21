@@ -1,7 +1,6 @@
 import styled from "@emotion/styled"
 
 export const Label = styled.label`
-  font-family: ${({ theme }) => theme.fontFamily};
   ${({ theme }) => theme.typography.desktop.bodySmall};
   color: ${({ theme }) => theme.colors.gray[600]};
 `

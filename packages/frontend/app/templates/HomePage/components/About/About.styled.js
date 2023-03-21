@@ -30,6 +30,10 @@ export const Image = styled.img`
   width: 100%;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     max-width: unset;
     height: 608px;
     object-fit: cover;
