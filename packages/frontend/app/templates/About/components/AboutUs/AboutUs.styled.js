@@ -62,8 +62,6 @@ export const TextWrapper = styled.div`
   max-width: 575px;
 `
 export const BannerContainer = styled.div`
-  margin-bottom: -20px;
-
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
     margin-bottom: -80px;
