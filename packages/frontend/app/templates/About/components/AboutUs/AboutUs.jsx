@@ -16,7 +16,7 @@ const AboutUs = () => {
           <Styled.BannerContainer>
             <TextBanner
               heading="Fundacja Sterczące Uszy"
-              subtitle="WIĘCEJ O NAS"
+              subtitle="Więcej o nas"
               descriptionColor={theme.colors.gray[600]}
               size="medium"
             />
