@@ -47,16 +47,20 @@ const TextBanner = ({
         {heading}
       </Typography>
     </Styled.Container>
-    <Styled.Description
-      variant={sizes[size].description}
-      color={descriptionColor}
-      as="div"
-    >
-      {children}
-    </Styled.Description>
-    <Styled.ButtonContainer size={size}>
-      {button && button}
-    </Styled.ButtonContainer>
+
+    {children && (
+      <Styled.Description
+        variant={sizes[size].description}
+        color={descriptionColor}
+        as="div"
+      >
+        {children}
+      </Styled.Description>
+    )}
+
+    {button && (
+      <Styled.ButtonContainer size={size}>{button}</Styled.ButtonContainer>
+    )}
   </Styled.TextBanner>
 )
 
