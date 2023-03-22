@@ -58,7 +58,7 @@ const AboutUs = () => {
         <Styled.ImageWrapper>
           <Styled.Img
             alt="dog with heart"
-            src="../home/aboutus-section-image.png"
+            src="../about/aboutus-section-image.png"
           />
         </Styled.ImageWrapper>
       </Styled.Wrapper>
