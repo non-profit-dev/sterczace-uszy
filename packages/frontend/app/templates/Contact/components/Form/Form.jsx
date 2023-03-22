@@ -39,7 +39,7 @@ const Form = ({ handleSubmit, submitting }) => {
           name="Temat"
           options={[
             "Adopcja",
-            "dDm tymczasowy",
+            "Dom tymczasowy",
             "Współpraca",
             "Wpłaty",
             "Dary rzeczowe",
