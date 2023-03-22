@@ -39,14 +39,11 @@ export const ImageWrapper = styled.div`
 `
 
 export const Img = styled(Image)`
-  width: 100%;
   height: 700px;
-  object-fit: cover;
   object-position: 40%;
   margin-top: 200px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    object-fit: cover;
     height: 100%;
     max-width: 100vw;
     margin-top: 0;
