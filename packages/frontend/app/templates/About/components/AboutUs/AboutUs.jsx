@@ -56,7 +56,10 @@ const AboutUs = () => {
           </Typography>
         </Styled.TextWrapper>
         <Styled.ImageWrapper>
-          <Styled.Image src="../home/aboutus-section-image.png" />
+          <Styled.Img
+            alt="dog with heart"
+            src="../home/aboutus-section-image.png"
+          />
         </Styled.ImageWrapper>
       </Styled.Wrapper>
     </Styled.ContainerSection>

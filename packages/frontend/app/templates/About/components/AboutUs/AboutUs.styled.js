@@ -1,5 +1,6 @@
 import styled from "@emotion/styled"
 import Container from "design-system/components/container"
+import Image from "design-system/components/image"
 
 export const ContainerSection = styled(Container)`
   margin: 120px 0;
@@ -37,7 +38,7 @@ export const ImageWrapper = styled.div`
   }
 `
 
-export const Image = styled.img`
+export const Img = styled(Image)`
   width: 100%;
   height: 700px;
   object-fit: cover;
@@ -49,6 +50,7 @@ export const Image = styled.img`
     height: 100%;
     max-width: 100vw;
     margin-top: 0;
+    border-radius: 0;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
@@ -59,11 +61,8 @@ export const Image = styled.img`
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    gap: 40px;
-  }
+  gap: 20px;
+  max-width: 575px;
 `
 export const BannerContainer = styled.div`
   margin-bottom: -20px;
@@ -71,5 +70,10 @@ export const BannerContainer = styled.div`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
     margin-bottom: -80px;
+  }
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: block;
+    margin-bottom: -20px;
   }
 `
