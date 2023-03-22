@@ -14,6 +14,8 @@ import {
   adoptedAnimalsType,
 } from "../../lib/types"
 
+import Microchips from "./components/Microchips"
+
 import * as Styled from "./About.styled"
 
 const About = ({ animals, supporting, adoptedAnimals }) => (
@@ -46,6 +48,8 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
           🏡 {animals.total + adoptedAnimals.total} Uratowanych zwierząt
         </Typography>
       </Container>
+
+      <Microchips />
     </Styled.Main>
 
     <Footer />
