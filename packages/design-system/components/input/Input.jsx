@@ -44,7 +44,7 @@ const Input = ({
     {message && (
       <Typography
         variant="bodyTiny"
-        color={state ? colors[state] : theme.colors.grey[500]}
+        color={state ? colors[state] : theme.colors.gray[500]}
         data-testid="message"
       >
         {message}

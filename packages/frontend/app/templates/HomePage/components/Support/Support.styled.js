@@ -82,6 +82,7 @@ export const Item = styled.li`
 export const Icon = styled(Illustration)`
   height: 80px;
   width: auto;
+  fill: currentColor;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     height: 30px;

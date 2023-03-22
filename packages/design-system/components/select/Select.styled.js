@@ -2,7 +2,7 @@ import styled from "@emotion/styled"
 
 export const Label = styled.label`
   ${({ theme }) => theme.typography.desktop.bodySmall};
-  color: ${({ theme }) => theme.colors.grey[600]};
+  color: ${({ theme }) => theme.colors.gray[600]};
 `
 
 export const Container = styled.div`
@@ -15,26 +15,26 @@ export const Select = styled.select`
   ${({ theme }) => theme.breakpoints.sm} {
     ${({ theme }) => theme.typography.mobile.bodySmall}
   }
-  color: ${({ theme }) => theme.colors.grey[400]};
+  color: ${({ theme }) => theme.colors.gray[400]};
   appearance: none;
   width: 100%;
   padding: 12px 40px 12px 10px;
   background: ${({ theme }) => theme.colors.neutrals[100]};
-  border: 1px solid ${({ theme }) => theme.colors.grey[400]};
+  border: 1px solid ${({ theme }) => theme.colors.gray[400]};
   border-radius: 10px;
 
   &:disabled {
-    background: ${({ theme }) => theme.colors.grey[200]};
-    color: ${({ theme }) => theme.colors.grey[400]};
+    background: ${({ theme }) => theme.colors.gray[200]};
+    color: ${({ theme }) => theme.colors.gray[400]};
   }
 
   &:focus {
-    border: 1px solid ${({ theme }) => theme.colors.grey[400]};
-    outline: 4px solid ${({ theme }) => theme.colors.grey[200]};
+    border: 1px solid ${({ theme }) => theme.colors.gray[400]};
+    outline: 4px solid ${({ theme }) => theme.colors.gray[200]};
   }
 
   &:active {
-    border: 1px solid ${({ theme }) => theme.colors.grey[600]};
+    border: 1px solid ${({ theme }) => theme.colors.gray[600]};
   }
 `
 
