@@ -38,7 +38,7 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => {
       href={`/${slug}`}
       className={className}
       imageSrc={image}
-      imageAlt=""
+      imageAlt={name}
       imageHeight="314px"
       title={
         <Title

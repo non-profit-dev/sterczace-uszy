@@ -30,33 +30,38 @@ const Animals = ({ data }) => {
         </Styled.ContentContainer>
 
         <Styled.CardsWrapper>
-          {data.slice(0, 6).map((animal) => (
-            <Styled.CardWrapper key={animal.name}>
-              <AnimalCard
-                name={animal.name}
-                age={animal.age}
-                gender={animal.gender}
-                excerpt={animal.excerpt}
-                slug={animal.slug}
-                image={animal.thumbnail.url}
-              />
-            </Styled.CardWrapper>
-          ))}
+          {data
+            .slice(0, 6)
+            .map(({ name, age, gender, excerpt, thumbnail, slug }) => (
+              <Styled.CardWrapper key={name}>
+                <AnimalCard
+                  key={name}
+                  name={name}
+                  age={age}
+                  gender={gender}
+                  excerpt={excerpt}
+                  slug={slug}
+                  image={thumbnail.url}
+                />
+              </Styled.CardWrapper>
+            ))}
         </Styled.CardsWrapper>
 
         <Styled.SliderWrapper>
           <Slider>
-            {data.slice(0, 6).map((animal) => (
-              <AnimalCard
-                key={animal.name}
-                name={animal.name}
-                age={animal.age}
-                gender={animal.gender}
-                excerpt={animal.excerpt}
-                slug={animal.slug}
-                image={animal.thumbnail.url}
-              />
-            ))}
+            {data
+              .slice(0, 6)
+              .map(({ name, age, gender, excerpt, thumbnail, slug }) => (
+                <AnimalCard
+                  key={name}
+                  name={name}
+                  age={age}
+                  gender={gender}
+                  excerpt={excerpt}
+                  slug={slug}
+                  image={thumbnail.url}
+                />
+              ))}
           </Slider>
         </Styled.SliderWrapper>
         <Styled.ButtonWrapper>
