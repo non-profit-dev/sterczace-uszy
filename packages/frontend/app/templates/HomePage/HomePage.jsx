@@ -44,8 +44,10 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
     <Styled.Main>
       <Hero />
       <About />
+
+      <Actions />
+
       <Container>
-        <Actions />
         <Achievements
           supportingNumber={supporting.total}
           animalsNumber={animals.total}
