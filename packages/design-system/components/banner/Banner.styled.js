@@ -15,3 +15,7 @@ export const Heading = styled(Typography)`
   display: inline;
   margin: 0;
 `
+
+export const Button = styled.span`
+  padding-left: 3px;
+`
