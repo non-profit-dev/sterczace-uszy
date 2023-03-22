@@ -10,72 +10,71 @@ import * as Styled from "./Adoption.styled"
 const Adoption = () => {
   const theme = useTheme()
   return (
-      <Styled.Container>
-        <Styled.TextContainer>
-          <TextBanner
-            layout="center"
-            heading="Zanim adoptujesz"
-            subtitle="zasady adopcji"
-          >
-            Nasi podopieczni czekają na Twoją pomoc. Nowy dom, wsparcie
-            finansowe, spacery, pełna miska, opieka lekarza to tylko niektóre
-            formy wsparcia. Jeżeli chcesz czynić dobro sprawdź, co możesz
-            zrobić.
-          </TextBanner>
-        </Styled.TextContainer>
-        <Styled.RulesContainer>
-          <Card illustrationName="ruleFirst" size="large" layout="center">
-            <Title
-              size="medium"
-              text="Zastanów się"
-              variant="text"
-              textSize="h3"
-              count={1}
-            />
-            <Typography variant="bodyTitle" color={theme.colors.grey[700]}>
-              Pojawienie się nowego członka rodziny to rewolucja. Praca, sprawy
-              domowe, hobby - czasami ciężko to pogodzić. Przemyśl dobrze czy
-              znajdziesz czas na dodatkowe obowiązki.
-            </Typography>
-          </Card>
-          <Card illustrationName="ruleSecond" size="large" layout="center">
-            <Title
-              size="medium"
-              text="Przeanalizuj"
-              variant="text"
-              textSize="h3"
-              count={2}
-            />
-            <Typography variant="bodyTitle" color={theme.colors.grey[700]}>
-              Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u
-              weterynarza i opieka. Sprawdź czy Twój budżet na to pozwala i czy
-              masz czas, aby zadbać o komfort nowego domownika.
-            </Typography>
-          </Card>
-          <Card illustrationName="ruleThird" size="large" layout="center">
-            <Title
-              size="medium"
-              text="Porozmawiaj"
-              variant="text"
-              textSize="h3"
-              count={3}
-            />
-            <Typography variant="bodyTitle" color={theme.colors.grey[700]}>
-              To ważna decyzja, więc wyrażenie zgody i zobowiązanie całej
-              rodziny ma kluczowe znaczenie. Wszyscy powinni się cieszyć z
-              obecności nowego członka Waszej rodziny.
-            </Typography>
-          </Card>
-        </Styled.RulesContainer>
-        <Styled.ButtonContainer>
-          <Button
-            text="Sprawdź warunki adopcji"
-            href="/adopcja"
+    <Styled.Container>
+      <Styled.TextContainer>
+        <TextBanner
+          layout="center"
+          heading="Zanim adoptujesz"
+          subtitle="zasady adopcji"
+        >
+          Nasi podopieczni czekają na Twoją pomoc. Nowy dom, wsparcie finansowe,
+          spacery, pełna miska, opieka lekarza to tylko niektóre formy wsparcia.
+          Jeżeli chcesz czynić dobro sprawdź, co możesz zrobić.
+        </TextBanner>
+      </Styled.TextContainer>
+      <Styled.RulesContainer>
+        <Card illustrationName="ruleFirst" size="large" layout="center">
+          <Title
+            size="medium"
+            text="Zastanów się"
             variant="text"
-            iconEnd="arrowRight"
+            textSize="h3"
+            count={1}
           />
-        </Styled.ButtonContainer>
-      </Styled.Container>
+          <Typography variant="bodyTitle" color={theme.colors.grey[700]}>
+            Pojawienie się nowego członka rodziny to rewolucja. Praca, sprawy
+            domowe, hobby - czasami ciężko to pogodzić. Przemyśl dobrze czy
+            znajdziesz czas na dodatkowe obowiązki.
+          </Typography>
+        </Card>
+        <Card illustrationName="ruleSecond" size="large" layout="center">
+          <Title
+            size="medium"
+            text="Przeanalizuj"
+            variant="text"
+            textSize="h3"
+            count={2}
+          />
+          <Typography variant="bodyTitle" color={theme.colors.grey[700]}>
+            Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u
+            weterynarza i opieka. Sprawdź czy Twój budżet na to pozwala i czy
+            masz czas, aby zadbać o komfort nowego domownika.
+          </Typography>
+        </Card>
+        <Card illustrationName="ruleThird" size="large" layout="center">
+          <Title
+            size="medium"
+            text="Porozmawiaj"
+            variant="text"
+            textSize="h3"
+            count={3}
+          />
+          <Typography variant="bodyTitle" color={theme.colors.grey[700]}>
+            To ważna decyzja, więc wyrażenie zgody i zobowiązanie całej rodziny
+            ma kluczowe znaczenie. Wszyscy powinni się cieszyć z obecności
+            nowego członka Waszej rodziny.
+          </Typography>
+        </Card>
+      </Styled.RulesContainer>
+      <Styled.ButtonContainer>
+        <Button
+          text="Sprawdź warunki adopcji"
+          href="/adopcja"
+          variant="text"
+          iconEnd="arrowRight"
+        />
+      </Styled.ButtonContainer>
+    </Styled.Container>
   )
 }
 
