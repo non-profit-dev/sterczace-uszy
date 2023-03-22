@@ -18,7 +18,7 @@ Image.propTypes = {
 }
 
 Image.defaultProps = {
-  alt: null,
+  alt: "",
   src: null,
   className: null,
 }
