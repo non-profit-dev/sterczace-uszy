@@ -59,7 +59,7 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 575px;
+  max-width: 585px;
 `
 export const BannerContainer = styled.div`
   ${({ theme }) => theme.breakpoints.tabletLg} {
