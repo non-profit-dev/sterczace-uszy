@@ -7,19 +7,19 @@ export const Badge = styled.div`
   background-color: ${({ variant, theme }) => {
     switch (variant) {
       case "gray":
-        return theme.colors.grey[200]
+        return theme.colors.gray[200]
       case "neutrals":
         return theme.colors.neutrals[400]
       case "primary":
         return theme.colors.primary[500]
       default:
-        return theme.colors.grey[200]
+        return theme.colors.gray[200]
     }
   }};
   color: ${({ variant, theme }) =>
     variant === "primary"
       ? theme.colors.neutrals[100]
-      : theme.colors.grey[500]};
+      : theme.colors.gray[500]};
 
   ${({ size, theme }) => {
     switch (size) {

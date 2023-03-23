@@ -15,51 +15,54 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <Styled.Navigation>
-      <Container>
-        <Styled.NavigationRow>
-          <Typography variant="h5">logo</Typography>
+    <>
+      <Styled.Navigation>
+        <Container>
+          <Styled.NavigationRow>
+            <Typography variant="h5">logo</Typography>
 
-          <Styled.Menu>
-            {data.map((item) => (
-              <li key={item.title}>
-                <Button
-                  as="a"
-                  href={item.href}
-                  text={item.title}
-                  variant="text"
-                  size="small"
-                  color="black"
-                />
-              </li>
-            ))}
-          </Styled.Menu>
+            <Styled.Menu>
+              {data.map((item) => (
+                <li key={item.title}>
+                  <Button
+                    as="a"
+                    href={item.href}
+                    text={item.title}
+                    variant="text"
+                    size="small"
+                    color="black"
+                  />
+                </li>
+              ))}
+            </Styled.Menu>
 
-          <Styled.MenuIcon onClick={() => setIsOpen(!isOpen)}>
-            <Icon name={isOpen ? "close" : "menu"} />
-          </Styled.MenuIcon>
-        </Styled.NavigationRow>
-      </Container>
+            <Styled.MenuIcon onClick={() => setIsOpen(!isOpen)}>
+              <Icon name={isOpen ? "close" : "menu"} />
+            </Styled.MenuIcon>
+          </Styled.NavigationRow>
+        </Container>
 
-      {isOpen ? (
-        <Styled.MobileNavigation>
-          <List>
-            {data.map((item) => (
-              <ListItem key={item.title}>
-                <Button
-                  as="a"
-                  href={item.href}
-                  text={item.title}
-                  variant="text"
-                  size="medium"
-                  color="black"
-                />
-              </ListItem>
-            ))}
-          </List>
-        </Styled.MobileNavigation>
-      ) : null}
-    </Styled.Navigation>
+        {isOpen ? (
+          <Styled.MobileNavigation>
+            <List gap={24}>
+              {data.map((item) => (
+                <ListItem key={item.title}>
+                  <Button
+                    as="a"
+                    href={item.href}
+                    text={item.title}
+                    variant="text"
+                    size="medium"
+                    color="black"
+                  />
+                </ListItem>
+              ))}
+            </List>
+          </Styled.MobileNavigation>
+        ) : null}
+      </Styled.Navigation>
+      {isOpen ? <Styled.Overlay onClick={() => setIsOpen(!isOpen)} /> : null}
+    </>
   )
 }
 

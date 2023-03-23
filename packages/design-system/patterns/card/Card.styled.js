@@ -11,7 +11,7 @@ export const Card = styled.a`
   justify-content: start;
   padding-bottom: 36px;
   border-radius: 30px;
-  color: ${({ theme }) => theme.colors.grey[600]};
+  color: ${({ theme }) => theme.colors.gray[600]};
   background-color: ${({ bgColor = "transparent" }) => bgColor};
   ${({ linkStyle }) =>
     linkStyle &&
@@ -91,6 +91,7 @@ export const Wrapper = styled.div`
     layout === "center"
       ? css`
           align-items: center;
+          text-align: center;
         `
       : css`
           align-items: flex-start;
@@ -103,6 +104,7 @@ export const Wrapper = styled.div`
       mobileLayout === "center"
         ? css`
             align-items: center;
+            text-align: center;
           `
         : css`
             align-items: flex-start;

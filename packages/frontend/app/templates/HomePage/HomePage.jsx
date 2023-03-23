@@ -4,10 +4,12 @@ import Button from "design-system/components/button"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
-
+import Adoption from "./components/Adoption"
 import Achievements from "./components/Achievements"
 import Animals from "./components/Animals"
+import Support from "./components/Support"
 import Supporters from "./components/Supporters"
+import About from "./components/About"
 
 import Page from "../Page"
 
@@ -18,6 +20,7 @@ import {
   animalsType,
   adoptedAnimalsType,
 } from "../../lib/types"
+import Actions from "./components/Actions"
 
 const HomePage = ({ animals, supporting, adoptedAnimals }) => (
   <Page>
@@ -38,15 +41,26 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
     <Navigation />
 
     <Styled.Main>
+      <About />
+
+      <Actions />
+
       <Container>
         <Achievements
           supportingNumber={supporting.total}
           animalsNumber={animals.total}
           adoptedAnimalsNumber={adoptedAnimals.total}
         />
+      </Container>
 
+      <Container>
         <Animals data={animals.items} />
+        <Adoption />
+      </Container>
 
+      <Support />
+
+      <Container>
         <Supporters data={supporting.items} />
       </Container>
     </Styled.Main>

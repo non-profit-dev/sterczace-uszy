@@ -44,19 +44,7 @@ const footerData = {
       link: "",
     },
     {
-      title: "Aktualności",
-      link: "",
-    },
-    {
       title: "Nasze osiągnięcia",
-      link: "",
-    },
-    {
-      title: "Opinie",
-      link: "",
-    },
-    {
-      title: "Partnerzy i przyjaciele",
       link: "",
     },
     {
@@ -67,10 +55,6 @@ const footerData = {
 
   support: [
     {
-      title: "Lista potrzeb",
-      link: "",
-    },
-    {
       title: "Dom tymczasowy",
       link: "",
     },
@@ -79,19 +63,7 @@ const footerData = {
       link: "",
     },
     {
-      title: "Zbiórki",
-      link: "",
-    },
-    {
       title: "Wpłaty",
-      link: "",
-    },
-    {
-      title: "FaniMani",
-      link: "",
-    },
-    {
-      title: "Bazarek",
       link: "",
     },
   ],
@@ -102,27 +74,11 @@ const footerData = {
       link: "",
     },
     {
-      title: "Adopcja wirtualna",
-      link: "",
-    },
-    {
       title: "Zasady adopcji",
       link: "",
     },
     {
-      title: "Adopcja za granicę",
-      link: "",
-    },
-    {
-      title: "Znalazły nowy dom",
-      link: "",
-    },
-    {
-      title: "Wsparcie po adopcji",
-      link: "",
-    },
-    {
-      title: "Ankiety",
+      title: "Dokumenty do pobrania",
       link: "",
     },
   ],

@@ -23,7 +23,7 @@ const colors = {
     filledText: theme.colors.neutrals[100],
   },
   black: {
-    mainColor: theme.colors.grey[600],
+    mainColor: theme.colors.gray[600],
     filledText: theme.colors.neutrals[100],
   },
   white: {
@@ -33,7 +33,6 @@ const colors = {
 }
 export const Component = styled.a`
   ${({ size }) => sizes[size].typography};
-  font-family: ${theme.fontFamily};
   letter-spacing: -0.02em;
   border-radius: 30px;
   cursor: pointer;
