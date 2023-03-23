@@ -17,10 +17,12 @@ const Achievements = ({
       subtitle="FUNDACJA W LICZBACH"
       layout="center"
     >
-      <Typography variant="bodyTitle">
-        Te liczby są dla nas ważne. Działamy, aby stale rosły. Pokazują nasze
-        zaangażowanie i Waszą pomoc. Razem możemy więcej.
-      </Typography>
+      <Styled.Description>
+        <Typography variant="bodyTitle">
+          Te liczby są dla nas ważne. Działamy, aby stale rosły. Pokazują nasze
+          zaangażowanie i Waszą pomoc. Razem możemy więcej.
+        </Typography>
+      </Styled.Description>
     </TextBanner>
     <Styled.MainContainer>
       <DecorativeCard
@@ -30,7 +32,7 @@ const Achievements = ({
       />
       <DecorativeCard
         illustrationName="home"
-        count={animalsNumber}
+        count={adoptedAnimalsNumber}
         title="Znalezionych domów"
       />
       <DecorativeCard
