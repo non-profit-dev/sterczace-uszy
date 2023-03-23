@@ -4,6 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react"
 export const Slide = styled(SwiperSlide)`
   align-self: stretch;
   height: auto;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    margin-bottom: 84px;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    margin-bottom: 0;
+  }
 `
 
 export const Arrow = styled.div`

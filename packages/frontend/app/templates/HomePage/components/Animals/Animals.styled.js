@@ -37,6 +37,7 @@ export const CardWrapper = styled.div`
   display: flex;
   width: 30%;
   align-items: stretch;
+  margin-top: 60px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 100%;
@@ -51,5 +52,9 @@ export const SliderWrapper = styled.div`
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 96px;
+  }
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    margin-top: 26px;
   }
 `
