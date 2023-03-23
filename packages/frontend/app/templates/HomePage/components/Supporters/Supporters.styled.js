@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     padding: 60px 0;
+    background: none;
   }
 `
 
