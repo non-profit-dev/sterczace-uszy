@@ -14,7 +14,7 @@ const Achievements = ({
   <Styled.Achievements>
     <TextBanner
       heading="Nasze osiągnięcia"
-      subtitle="FUNDACJA W LICZBACH"
+      subtitle="Fundacja w liczbach"
       layout="center"
     >
       <Styled.Description>
