@@ -9,6 +9,10 @@ export const Tabs = styled.div`
     transparentContent
       ? "drop-shadow(2px 3px 9px rgba(0, 0, 0, 0.1))"
       : "none"};
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    overflow-x: auto;
+  }
 `
 
 export const Content = styled.div`
@@ -27,6 +31,7 @@ export const Tab = styled.button`
   width: 100%;
   padding: 10px 50px;
   cursor: pointer;
+  white-space: nowrap;
   background: ${({ theme, active }) =>
     active ? theme.colors.complementary[100] : theme.colors.gray[100]};
   border: 1px solid ${({ theme }) => theme.colors.gray[300]};
