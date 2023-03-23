@@ -4,6 +4,9 @@ import HeartWithDogFace from "design-system/tokens/illustrations/heartWithDogFac
 import HeartIllustration from "design-system/tokens/illustrations/HeartIllustration.svg"
 import DogIllustration from "design-system/tokens/illustrations/DogIllustration.svg"
 import HomeIllustration from "design-system/tokens/illustrations/HomeIllustration.svg"
+import RuleFirst from "design-system/tokens/illustrations/ruleFirst.svg"
+import RuleSecond from "design-system/tokens/illustrations/ruleSecond.svg"
+import RuleThird from "design-system/tokens/illustrations/ruleThird.svg"
 import Help from "design-system/tokens/illustrations/help.svg"
 import Protect from "design-system/tokens/illustrations/protect.svg"
 import Treat from "design-system/tokens/illustrations/treat.svg"
@@ -67,6 +70,48 @@ const sizes = {
     large: {
       width: 91,
       height: 107,
+    },
+  },
+  ruleFirst: {
+    small: {
+      width: 250,
+      height: 250,
+    },
+    medium: {
+      width: 250,
+      height: 270,
+    },
+    large: {
+      width: 250,
+      height: 250,
+    },
+  },
+  ruleSecond: {
+    small: {
+      width: 250,
+      height: 250,
+    },
+    medium: {
+      width: 250,
+      height: 250,
+    },
+    large: {
+      width: 250,
+      height: 250,
+    },
+  },
+  ruleThird: {
+    small: {
+      width: 250,
+      height: 250,
+    },
+    medium: {
+      width: 350,
+      height: 250,
+    },
+    large: {
+      width: 150,
+      height: 250,
     },
   },
   car: {
@@ -178,6 +223,9 @@ export const illustrations = {
   heart: HeartIllustration,
   dog: DogIllustration,
   home: HomeIllustration,
+  ruleFirst: RuleFirst,
+  ruleSecond: RuleSecond,
+  ruleThird: RuleThird,
   help: Help,
   protect: Protect,
   treat: Treat,
