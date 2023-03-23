@@ -20,8 +20,7 @@ export const Content = styled.div`
   }
 
   ${({ theme }) => theme.breakpoints.tablet} {
-    padding-top: 0;
-    padding-bottom: 60px;
+    padding: 0 0 60px;
     gap: 60px;
   }
 `
