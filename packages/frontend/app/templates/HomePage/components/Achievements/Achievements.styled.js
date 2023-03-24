@@ -17,7 +17,7 @@ export const MainContainer = styled.div`
   }
 `
 export const Description = styled.div`
-  display: flex-inline;
+  display: inline-flex;
   margin: 0 auto;
   width: 600px;
 
