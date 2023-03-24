@@ -39,13 +39,8 @@ export const Achievements = styled.div`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     gap: 80px;
-    padding: 100px 56px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     gap: 60px;
-    padding: 60px 24px;
-  }
-  ${({ theme }) => theme.breakpoints.mobileSm} {
-    padding: 60px 14px;
   }
 `
