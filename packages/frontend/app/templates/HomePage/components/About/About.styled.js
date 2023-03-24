@@ -16,7 +16,7 @@ export const Content = styled.div`
     flex-direction: column;
     gap: 100px;
     margin: 0;
-    padding: 100px 0;
+    padding: 0 0 100px 0;
   }
 
   ${({ theme }) => theme.breakpoints.tablet} {
