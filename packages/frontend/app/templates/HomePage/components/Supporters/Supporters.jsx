@@ -6,6 +6,7 @@ import Slider from "design-system/components/slider"
 import Title from "design-system/components/title"
 import Button from "design-system/components/button"
 import Container from "design-system/components/container"
+import Icon from "design-system/components/icon"
 
 import Card from "design-system/patterns/card"
 
@@ -17,7 +18,9 @@ const Supporters = ({ data }) => {
   return (
     <Styled.Wrapper>
       <Container>
-        <Typography variant="h2">Dziękujemy za wsparcie</Typography>
+        <Typography variant="h2">
+          Dziękujemy za wsparcie <Icon name="heartFilled" size="large" />
+        </Typography>
         <Styled.Slider>
           <Slider slidesPerViewDesktop={3}>
             {data.slice(0, 6).map((item) => (
