@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 
 import Illustration from "design-system/components/illustration"
+import TypographyComponent from "design-system/components/typography"
 
 export const Wrapper = styled.div`
   background: url("/home/support-background.png");
@@ -82,9 +83,12 @@ export const Item = styled.li`
 export const Icon = styled(Illustration)`
   height: 80px;
   width: auto;
-  fill: currentColor;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     height: 30px;
   }
+`
+
+export const Typography = styled(TypographyComponent)`
+  margin: 24px 0;
 `
