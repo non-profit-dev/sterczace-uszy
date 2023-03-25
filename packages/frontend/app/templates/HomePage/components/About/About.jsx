@@ -15,9 +15,10 @@ const About = () => {
     <Styled.Wrapper>
       <Container>
         <Styled.Content>
-          <Styled.Image src="home/about-section-image.png" />
+          <Styled.Image src="home/about-section-image.png" alt="" />
           <TextBanner
             heading="Zwierzęta to nasza  rodzina"
+            headingTag="h2"
             headingColor={theme.colors.gray[600]}
             subtitle="O nas"
             descriptionColor={theme.colors.gray[600]}

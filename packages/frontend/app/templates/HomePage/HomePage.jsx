@@ -43,23 +43,16 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
 
     <Styled.Main>
       <Hero />
-
       <About />
-
       <Achievements
         supportingNumber={supporting.total}
         animalsNumber={animals.total}
         adoptedAnimalsNumber={adoptedAnimals.total}
       />
-
       <Actions />
-
       <Animals data={animals.items} />
-
       <Adoption />
-
       <Support />
-
       <Supporters data={supporting.items} />
     </Styled.Main>
 

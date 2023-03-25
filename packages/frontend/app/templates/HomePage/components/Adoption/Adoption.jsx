@@ -12,6 +12,7 @@ const Adoption = () => (
       <TextBanner
         layout="center"
         heading="Zanim adoptujesz"
+        headingTag="h2"
         subtitle="zasady adopcji"
       >
         Zostanie domem adopcyjnym to wielkie wyzwanie. To może być początek

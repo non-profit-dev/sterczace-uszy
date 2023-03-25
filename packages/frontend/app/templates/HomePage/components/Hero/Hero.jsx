@@ -41,6 +41,7 @@ const Hero = () => {
             subtitle="Fundacja Sterczące Uszy"
             descriptionColor={theme.colors.neutrals[100]}
             size="large"
+            headingTag="h1"
             button={
               <Button text="Wesprzyj nas" size="large" href="/wsparcie" />
             }
@@ -59,7 +60,14 @@ const Hero = () => {
               illustrationName={illustration}
               hideIllustrationOnMobile
               hideButtonOnMobile
-              title={<Styled.Title text={title} variant="text" textSize="h4" />}
+              title={
+                <Styled.Title
+                  text={title}
+                  variant="text"
+                  textSize="h4"
+                  as="div"
+                />
+              }
               mobileTitle={<Typography variant="h5">{title}</Typography>}
               mobileLayout="left"
               button={

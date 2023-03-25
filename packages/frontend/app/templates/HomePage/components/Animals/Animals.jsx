@@ -19,6 +19,7 @@ const Animals = ({ data }) => {
         <Styled.ContentContainer>
           <TextBanner
             heading="Szukają domu"
+            headingTag="h2"
             subtitle="Nasi podopieczni"
             descriptionColor={theme.colors.gray[600]}
           >
