@@ -1,11 +1,13 @@
 import Typography from "design-system/components/typography/Typography"
 import IconButton from "design-system/components/iconButton"
-
+import Logo from "design-system/components/logo"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 import Button from "design-system/components/button"
 import Container from "design-system/components/container"
+
 import useCopyToClipboard from "design-system/helpers/useCopyToClipboard"
+
 import footerData from "./footerData"
 
 import * as Styled from "./Footer.styled"
@@ -34,7 +36,7 @@ const Footer = () => {
     <Styled.Footer>
       <Container size="large">
         <Styled.Logo>
-          <Typography variant="h4">LOGO</Typography>
+          <Logo />
         </Styled.Logo>
 
         <Styled.Content>
