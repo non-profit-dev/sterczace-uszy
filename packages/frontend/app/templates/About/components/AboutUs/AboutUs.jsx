@@ -8,7 +8,7 @@ const AboutUs = () => {
   const theme = useTheme()
 
   return (
-    <Styled.ContainerSection as="section">
+    <Styled.ContainerSection as="section" size="medium">
       <Styled.Wrapper>
         <Styled.Banner
           heading="Fundacja Sterczące Uszy"

@@ -30,6 +30,7 @@ export const Wrapper = styled.div`
 `
 
 export const Img = styled(Image)`
+  object-position: 40%;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 100vw;
     border-radius: 0;
