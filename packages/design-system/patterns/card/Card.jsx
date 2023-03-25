@@ -1,4 +1,12 @@
-import { string, oneOf, node, oneOfType, object, bool } from "prop-types"
+import {
+  string,
+  oneOf,
+  node,
+  oneOfType,
+  object,
+  bool,
+  number,
+} from "prop-types"
 
 import Illustration from "design-system/components/illustration"
 import Icon from "design-system/components/icon"
@@ -11,6 +19,8 @@ const Card = ({
   children,
   href,
   illustrationName,
+  illustrationSrc,
+  illustrationHeight,
   hideIllustrationOnMobile,
   mobileLayout,
   layout,
@@ -29,12 +39,17 @@ const Card = ({
     href={href}
     className={className}
   >
-    {illustrationName && (
+    {(illustrationName || illustrationSrc) && (
       <Styled.IllustrationContainer
         fixedSize={!!href}
         hideIllustrationOnMobile={hideIllustrationOnMobile}
+        height={illustrationHeight}
       >
-        <Illustration name={illustrationName} size="medium" />
+        {illustrationName && (
+          <Illustration name={illustrationName} size="medium" />
+        )}
+
+        {illustrationSrc && <img src={illustrationSrc} alt="" />}
       </Styled.IllustrationContainer>
     )}
     {imageSrc && (
@@ -45,7 +60,7 @@ const Card = ({
     <Styled.ContentContainer
       layout={layout}
       mobileLayout={mobileLayout}
-      paddingTop={!imageSrc && !illustrationName}
+      paddingTop={!imageSrc && !illustrationName && !illustrationSrc}
     >
       <Styled.Wrapper layout={layout} mobileLayout={mobileLayout}>
         <Styled.Title hideOnMobile={!!mobileTitle}>{title}</Styled.Title>
@@ -58,9 +73,11 @@ const Card = ({
         {children}
       </Styled.Wrapper>
 
-      <Styled.ButtonWrapper hideButtonOnMobile={hideButtonOnMobile}>
-        {button && button}
-      </Styled.ButtonWrapper>
+      {button && (
+        <Styled.ButtonWrapper hideButtonOnMobile={hideButtonOnMobile}>
+          {button}
+        </Styled.ButtonWrapper>
+      )}
     </Styled.ContentContainer>
   </Styled.Card>
 )
@@ -79,6 +96,8 @@ Card.propTypes = {
    */
   href: string,
   illustrationName: string,
+  illustrationSrc: string,
+  illustrationHeight: number,
   hideIllustrationOnMobile: bool,
   imageAlt: string,
   imageHeight: string,
@@ -96,6 +115,8 @@ Card.defaultProps = {
   children: null,
   href: null,
   illustrationName: null,
+  illustrationSrc: null,
+  illustrationHeight: number,
   hideIllustrationOnMobile: false,
   imageAlt: null,
   imageHeight: null,

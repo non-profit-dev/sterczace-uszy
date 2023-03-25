@@ -40,7 +40,9 @@ const Footer = () => {
         <Styled.Content>
           <Styled.MainFoundationData>
             <Styled.Section>
-              <Typography variant="h6">{contactTitle}</Typography>
+              <Typography variant="h6" as="p">
+                {contactTitle}
+              </Typography>
               <List gap={4}>
                 {contact.map((item) => (
                   <ListItem
@@ -66,12 +68,15 @@ const Footer = () => {
                     name={item.icon}
                     size="medium"
                     href={item.link}
+                    ariaLabel={item.title}
                   />
                 ))}
               </Styled.IconsMobile>
             </Styled.Section>
             <Styled.Section>
-              <Typography variant="h6">{foundationDataTitle}</Typography>
+              <Typography variant="h6" as="p">
+                {foundationDataTitle}
+              </Typography>
               <List gap={8}>
                 <ListItem variant="gray">
                   <Typography variant="bodySmall">{nip}</Typography>
@@ -98,7 +103,9 @@ const Footer = () => {
 
           <Styled.Sections>
             <Styled.Section>
-              <Typography variant="h6">{foundationTitle}</Typography>
+              <Typography variant="h6" as="p">
+                {foundationTitle}
+              </Typography>
               <List gap={4}>
                 {foundation.map((item) => (
                   <ListItem variant="gray" key={item.title}>
@@ -116,7 +123,9 @@ const Footer = () => {
             </Styled.Section>
 
             <Styled.Section>
-              <Typography variant="h6">{supportTitle}</Typography>
+              <Typography variant="h6" as="p">
+                {supportTitle}
+              </Typography>
               <List gap={4}>
                 {support.map((item) => (
                   <ListItem variant="gray" key={item.title}>
@@ -132,7 +141,9 @@ const Footer = () => {
               </List>
             </Styled.Section>
             <Styled.Section>
-              <Typography variant="h6">{adoptionTitle}</Typography>
+              <Typography variant="h6" as="p">
+                {adoptionTitle}
+              </Typography>
               <List gap={4}>
                 {adoption.map((item) => (
                   <ListItem variant="gray" key={item.title}>
@@ -161,6 +172,7 @@ const Footer = () => {
                 name={item.icon}
                 size="medium"
                 href={item.link}
+                ariaLabel={item.title}
               />
             ))}
           </Styled.Icons>

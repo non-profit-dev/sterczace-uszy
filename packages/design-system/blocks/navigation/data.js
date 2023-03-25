@@ -5,7 +5,7 @@ const data = [
   },
   {
     title: "Nasi podopieczni",
-    href: "/podopieczni",
+    href: "/do-adopcji",
   },
   {
     title: "Adopcja",
@@ -13,7 +13,7 @@ const data = [
   },
   {
     title: "Jak pomóc",
-    href: "/jak-pomoc",
+    href: "/wsparcie",
   },
   {
     title: "Kontakt",
@@ -21,7 +21,7 @@ const data = [
   },
   {
     title: "Pliki do pobrania",
-    href: "/dokumenty",
+    href: "/pliki-do-pobrania",
   },
 ]
 

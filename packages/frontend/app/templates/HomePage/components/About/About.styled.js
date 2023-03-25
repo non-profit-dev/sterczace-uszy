@@ -1,8 +1,23 @@
 import styled from "@emotion/styled"
 
+export const Wrapper = styled.section`
+  padding-top: 280px;
+  padding-bottom: 120px;
+  background-image: url("/home/about-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    padding-top: 0px;
+    background-size: 100% 50%;
+    background-position: bottom;
+  }
+`
+
 export const Content = styled.div`
   max-width: 1065px;
-  margin: 105px auto 120px;
+  margin: 0 auto;
   display: grid;
   gap: 80px;
   grid-template-columns: auto 1fr;

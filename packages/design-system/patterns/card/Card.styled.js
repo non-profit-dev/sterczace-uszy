@@ -41,6 +41,11 @@ export const IllustrationContainer = styled.div`
     display: ${({ hideIllustrationOnMobile }) =>
       hideIllustrationOnMobile ? `none` : `inline-flex`};
   }
+
+  svg,
+  img {
+    height: ${({ height }) => `${height}px`};
+  }
 `
 
 export const ImageContainer = styled.div`
@@ -128,6 +133,10 @@ export const ButtonWrapper = styled.div`
   }
 `
 
+export const Illustration = styled.img`
+  height: 100px;
+`
+
 export const MobileTitle = styled.div`
   display: none;
 
@@ -139,6 +148,7 @@ export const MobileTitle = styled.div`
 `
 
 export const Title = styled.div`
+  width: 100%;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: ${({ hideOnMobile }) => (hideOnMobile ? `none` : `block`)};
   }

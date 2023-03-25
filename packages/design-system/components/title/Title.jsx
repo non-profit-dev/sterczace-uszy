@@ -16,6 +16,7 @@ const Title = ({
   variant,
   count,
   hideLineOnMobile,
+  as,
   className,
 }) => (
   <Styled.Title size={textSize} fullWidth={!!badge} className={className}>
@@ -27,6 +28,7 @@ const Title = ({
         variant={textSize}
         type={variant}
         hideLineOnMobile={hideLineOnMobile}
+        as={as}
       >
         {text}
       </Styled.Text>
@@ -73,6 +75,7 @@ Title.propTypes = {
   ]),
   variant: oneOf(["text", "textLine"]),
   hideLineOnMobile: bool,
+  as: string,
   className: string,
 }
 
@@ -85,6 +88,7 @@ Title.defaultProps = {
   textSize: "h4",
   variant: "textLine",
   hideLineOnMobile: false,
+  as: null,
   className: null,
 }
 

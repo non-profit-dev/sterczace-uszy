@@ -1,19 +1,23 @@
 import styled from "@emotion/styled"
 
-export const Container = styled.div`
+import ContainerComponent from "design-system/components/container"
+
+export const Container = styled(ContainerComponent)`
   text-align: center;
   margin: 80px auto;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    margin: 200px auto;
+    margin: 120px auto;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    margin: 190px auto;
+    margin: 90px auto;
   }
 `
 
 export const TextContainer = styled.div`
+  max-width: 730px;
   margin: 0px auto;
-  width: 90%;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: flex;
     flex-direction: column;
