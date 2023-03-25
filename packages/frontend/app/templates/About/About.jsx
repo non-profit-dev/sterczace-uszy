@@ -36,8 +36,8 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
     <Navigation />
 
     <Styled.Main>
+      <AboutUs />
       <Container>
-        <AboutUs />
         <Typography variant="h4" as="h3">
           ♥️ {supporting.total} Pomocnych serc
         </Typography>

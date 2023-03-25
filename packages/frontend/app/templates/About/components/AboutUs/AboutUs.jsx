@@ -2,25 +2,21 @@ import { useTheme } from "@emotion/react"
 
 import Typography from "design-system/components/typography"
 
-import TextBanner from "design-system/patterns/textBanner"
-
 import * as Styled from "./AboutUs.styled"
 
 const AboutUs = () => {
   const theme = useTheme()
 
   return (
-    <Styled.ContainerSection variant="section">
+    <Styled.ContainerSection as="section">
       <Styled.Wrapper>
+        <Styled.Banner
+          heading="Fundacja Sterczące Uszy"
+          subtitle="Więcej o nas"
+          descriptionColor={theme.colors.gray[600]}
+          size="medium"
+        />
         <Styled.TextWrapper>
-          <Styled.BannerContainer>
-            <TextBanner
-              heading="Fundacja Sterczące Uszy"
-              subtitle="Więcej o nas"
-              descriptionColor={theme.colors.gray[600]}
-              size="medium"
-            />
-          </Styled.BannerContainer>
           <Typography variant="bodyTitle">
             Poznajcie <strong>Fundację Sterczące Uszy</strong> - organizację,
             którą założyły <strong>dwie kobiety z pasji i miłości</strong> do
@@ -55,12 +51,10 @@ const AboutUs = () => {
             przeciwności losu.
           </Typography>
         </Styled.TextWrapper>
-        <Styled.ImageWrapper>
-          <Styled.Img
-            alt="dog with heart"
-            src="../about/aboutus-section-image.png"
-          />
-        </Styled.ImageWrapper>
+        <Styled.Img
+          alt="dog with heart"
+          src="../about/aboutus-section-image.png"
+        />
       </Styled.Wrapper>
     </Styled.ContainerSection>
   )

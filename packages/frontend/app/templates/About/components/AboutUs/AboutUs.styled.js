@@ -1,74 +1,71 @@
 import styled from "@emotion/styled"
 import Container from "design-system/components/container"
 import Image from "design-system/components/image"
+import TextBanner from "design-system/patterns/textBanner"
 
 export const ContainerSection = styled(Container)`
-  margin: 120px 0;
+  margin: 120px auto;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 `
 
 export const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 60px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: auto;
+  grid-column-gap: 60px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     margin-bottom: 100px;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    gap: 60px;
     margin-bottom: 80px;
   }
 `
 
-export const ImageWrapper = styled.div`
-  display: block;
-
+export const Img = styled(Image)`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 100vw;
-    position: relative;
-  }
-`
-
-export const Img = styled(Image)`
-  height: 700px;
-  object-position: 40%;
-  margin-top: 200px;
-
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    height: 100%;
-    max-width: 100vw;
-    margin-top: 0;
     border-radius: 0;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    height: 300px;
+    grid-row: 1;
   }
 `
-
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 585px;
-`
-export const BannerContainer = styled.div`
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: block;
-    margin-bottom: -80px;
-  }
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: block;
-    margin-bottom: -20px;
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+`
+
+export const Banner = styled(TextBanner)`
+  grid-column: 1 / 3;
+  grid-row: 1;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 100px;
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    margin-top: 60px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 `
