@@ -5,7 +5,7 @@ import TextBanner from "design-system/patterns/textBanner"
 import * as Styled from "./Donations.styled"
 
 const Donations = () => (
-  <Container as="section">
+  <Container as="section" id="wplaty">
     <Styled.Content>
       <TextBanner heading="Pomóż nam pomagać" subtitle="Wpłaty" size="medium">
         Nasze potrzeby nigdy nie maleją. Każdego dnia mierzymy się z ogromnymi

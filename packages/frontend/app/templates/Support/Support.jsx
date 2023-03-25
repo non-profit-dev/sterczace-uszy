@@ -5,6 +5,7 @@ import CtaBanner from "design-system/patterns/ctaBanner"
 
 import Hero from "./components/Hero"
 import Subnav from "./components/Subnav"
+import Tax from "./components/Tax"
 import Donations from "./components/Donations"
 import OneTimeDonation from "./components/OneTimeDonation"
 import TemporaryHome from "./components/TemporaryHome"
@@ -20,6 +21,7 @@ const Support = () => (
     <Styled.Main>
       <Hero />
       <Subnav />
+      <Tax />
       <Donations />
       <OneTimeDonation />
       <TemporaryHome />

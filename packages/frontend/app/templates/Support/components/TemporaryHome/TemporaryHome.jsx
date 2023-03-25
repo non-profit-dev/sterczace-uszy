@@ -7,7 +7,7 @@ import TextBanner from "design-system/patterns/textBanner"
 import * as Styled from "./TemporaryHome.styled"
 
 const TemporaryHome = () => (
-  <Container as="section">
+  <Container as="section" id="dom-tymczasowy">
     <Styled.Content>
       <TextBanner
         heading="Zostań domem tymczasowym"
