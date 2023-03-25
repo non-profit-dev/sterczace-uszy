@@ -20,11 +20,22 @@ const Donations = () => (
         </TextBanner>
 
         <Styled.Box>
-          <Title text="Przelew jednorazowy lub zlecenie stałe" variant="text" />
-          <Typography variant="bodyTitle">
-            Fundacja Sterczące Uszy ul. Adres 1, 91-666 Poznań NIP 5648753 Tytuł
-            przelewu: Wsparcie dla Fundacji
-          </Typography>
+          <Title
+            text="Przelew jednorazowy lub zlecenie stałe"
+            variant="text"
+            textSize="h5"
+          />
+          <div>
+            <Typography variant="bodyTitle">Fundacja Sterczące Uszy</Typography>
+            <Typography variant="bodyTitle">
+              ul. Adres 1, 91-666 Poznań
+            </Typography>
+            <Typography variant="bodyTitle">NIP 5648753</Typography>
+            <Typography variant="bodyTitle">
+              Tytuł przelewu: Wsparcie dla Fundacji
+            </Typography>
+          </div>
+
           <Typography variant="h5">41 1870 1045 2078 1072 8639 0001</Typography>
         </Styled.Box>
       </div>
