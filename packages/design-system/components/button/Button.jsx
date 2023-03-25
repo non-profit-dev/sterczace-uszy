@@ -18,7 +18,6 @@ const Button = ({
   onClick,
   as,
   className,
-  as,
 }) => (
   <Styled.Component
     as={as || (href ? `a` : `button`)}
@@ -81,7 +80,6 @@ Button.propTypes = {
   onClick: func,
   as: string,
   className: string,
-  as: string,
 }
 
 Button.defaultProps = {
@@ -96,7 +94,6 @@ Button.defaultProps = {
   onClick: null,
   as: null,
   className: null,
-  as: null,
 }
 
 export default Button

@@ -258,7 +258,7 @@ const sizes = {
       height: 100,
     },
   },
-    support: {
+  support: {
     small: {
       width: 100,
       height: 100,
