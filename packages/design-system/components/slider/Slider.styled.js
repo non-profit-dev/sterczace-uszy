@@ -1,7 +1,16 @@
 import styled from "@emotion/styled"
 import { Swiper, SwiperSlide } from "swiper/react"
 
-export const Slide = styled(SwiperSlide)``
+export const Slide = styled(SwiperSlide)`
+  align-self: stretch;
+  height: auto;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    margin-bottom: 40px;
+  }
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    margin-bottom: 0;
+  }
+`
 
 export const Arrow = styled.div`
   position: absolute;
@@ -11,9 +20,10 @@ export const Arrow = styled.div`
   transform: translateY(-50%);
   z-index: 100;
   cursor: pointer;
-
   ${({ theme }) => theme.breakpoints.tabletLg} {
     top: auto;
+    left: ${({ direction }) => (direction === "prev" ? "30px" : "auto")};
+    right: ${({ direction }) => (direction === "next" ? "30px" : "auto")};
     transform: translateY(0);
     bottom: 0;
     margin-bottom: -10px;
@@ -34,7 +44,13 @@ export const BulletContainer = styled.div`
 
 export const Slider = styled(Swiper)`
   position: relative;
-  padding: 0 40px 30px;
+  padding: 30px 40px;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    padding: 30px 56px 60px;
+  }
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding: 30px 24px 60px;
+  }
 `
 
 export const Bullet = styled.div`

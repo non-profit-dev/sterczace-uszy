@@ -38,12 +38,12 @@ const Form = ({ handleSubmit, submitting }) => {
           label="Temat"
           name="Temat"
           options={[
-            "adopcja",
-            "dom tymczasowy",
-            "współpraca",
-            "wpłaty",
-            "dary rzeczowe",
-            "inne",
+            "Adopcja",
+            "Dom tymczasowy",
+            "Współpraca",
+            "Wpłaty",
+            "Dary rzeczowe",
+            "Inne",
           ]}
           defaultValue="Wybierz temat wiadomości"
           required
