@@ -1,6 +1,5 @@
 import Count from "design-system/components/count"
 import Button from "design-system/components/button"
-import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
 
 import * as Styled from "./OneTimeDonation.styled"
@@ -22,12 +21,13 @@ const data = [
 ]
 
 const OneTimeDonation = () => (
-  <Container as="section">
+  <Styled.Container as="section">
     <Styled.Wrapper>
-      <Typography variant="h3">Jednorazowa wpłata</Typography>
+      <Styled.Heading variant="h3">Jednorazowa wpłata</Styled.Heading>
+
       <Typography variant="bodyTitle">
         Wybierz wygodną formę dokonania wpłaty za pośrednictwem strony
-        www.ratujemyzwierzaki.pl
+        <strong> www.ratujemyzwierzaki.pl</strong>
       </Typography>
 
       <Styled.Options>
@@ -47,7 +47,7 @@ const OneTimeDonation = () => (
         target="_blank"
       />
     </Styled.Wrapper>
-  </Container>
+  </Styled.Container>
 )
 
 export default OneTimeDonation
