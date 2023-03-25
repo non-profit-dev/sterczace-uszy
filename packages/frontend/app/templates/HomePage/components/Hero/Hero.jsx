@@ -17,7 +17,7 @@ const cards = [
   {
     title: "Zostań domem tymczasowym",
     buttonText: "Poznaj zasady",
-    buttonHref: "/wsparcie",
+    buttonHref: "/wsparcie#dom-tymczasowy",
     illustration: "temporaryHome",
   },
   {
@@ -42,7 +42,7 @@ const Hero = () => {
             descriptionColor={theme.colors.neutrals[100]}
             size="large"
             button={
-              <Button text="Wesprzyj nas" size="large" href="/jak-pomoc" />
+              <Button text="Wesprzyj nas" size="large" href="/wsparcie" />
             }
           >
             Nasi podopieczni czekają na Twoją pomoc. Pełna miska, miejsce do

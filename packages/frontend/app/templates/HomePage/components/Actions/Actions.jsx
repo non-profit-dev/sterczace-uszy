@@ -97,6 +97,7 @@ const Actions = () => {
           <Button
             text="Sprawdź aktualności"
             href="https://www.facebook.com/sterczaceuszy"
+            target="_blank"
             size="large"
           />
         </Styled.ButtonWrapper>

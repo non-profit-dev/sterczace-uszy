@@ -65,11 +65,7 @@ const Animals = ({ data }) => {
           </Slider>
         </Styled.SliderWrapper>
         <Styled.ButtonWrapper>
-          <Button
-            text="Zobacz wszystkich"
-            href="/nasi-podopieczni"
-            size="large"
-          />
+          <Button text="Zobacz wszystkich" href="/do-adopcji" size="large" />
         </Styled.ButtonWrapper>
       </Container>
     </Styled.Wrapper>

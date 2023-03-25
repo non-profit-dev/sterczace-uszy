@@ -32,7 +32,7 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
         button={
           <Button
             text="tutaj"
-            href="/jak-pomoc"
+            href="/wsparcie"
             variant="textLine"
             size="small"
           />
