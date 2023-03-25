@@ -41,6 +41,11 @@ export const IllustrationContainer = styled.div`
     display: ${({ hideIllustrationOnMobile }) =>
       hideIllustrationOnMobile ? `none` : `inline-flex`};
   }
+
+  svg,
+  img {
+    height: ${({ height }) => `${height}px`};
+  }
 `
 
 export const ImageContainer = styled.div`
@@ -126,6 +131,10 @@ export const ButtonWrapper = styled.div`
             display: block;
           `}
   }
+`
+
+export const Illustration = styled.img`
+  height: 100px;
 `
 
 export const MobileTitle = styled.div`
