@@ -5,10 +5,10 @@ export const Container = styled.div`
   margin: 80px auto;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    margin: 200px auto;
+    margin: 120px auto;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    margin: 190px auto;
+    margin: 90px auto;
   }
 `
 

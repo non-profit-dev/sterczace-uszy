@@ -85,7 +85,7 @@ export const Icon = styled(Illustration)`
   width: auto;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    height: 30px;
+    height: 40px;
   }
 `
 
