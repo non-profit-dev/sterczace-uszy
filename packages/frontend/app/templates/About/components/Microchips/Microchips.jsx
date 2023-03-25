@@ -1,4 +1,5 @@
 import { useTheme } from "@emotion/react"
+import { useState } from "react"
 
 import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
@@ -6,10 +7,13 @@ import Container from "design-system/components/container"
 
 import TextBanner from "design-system/patterns/textBanner"
 
+import Form from "./Form"
+
 import * as Styled from "./Microchips.styled"
 
 const Microchips = () => {
   const theme = useTheme()
+  const [activeForm, setActiveForm] = useState(false)
 
   return (
     <section>
@@ -35,12 +39,14 @@ const Microchips = () => {
             descriptionColor={theme.colors.gray[600]}
             size="medium"
             button={
-              <Button
-                text="Skontaktuj się z nami"
-                color="primary"
-                href="/kontakt"
-                size="large"
-              />
+              activeForm ? null : (
+                <Button
+                  text="Skontaktuj się z nami"
+                  color="primary"
+                  size="large"
+                  onClick={() => setActiveForm(!activeForm)}
+                />
+              )
             }
           >
             <Typography variant="bodyTitle">
@@ -57,6 +63,10 @@ const Microchips = () => {
               promocyjnych.
             </Typography>
           </TextBanner>
+
+          {activeForm ? (
+            <Form handleFormAgain={() => setActiveForm(true)} />
+          ) : null}
         </Styled.TextWrapper>
       </Container>
     </section>
