@@ -7,7 +7,7 @@ const Banner = ({ heading, button, className }) => (
     <Styled.Heading variant="bodySmall" tag="p">
       {heading}
     </Styled.Heading>
-    {button && <Styled.Button>{button}</Styled.Button>}
+    {button}
   </Styled.Banner>
 )
 
