@@ -66,6 +66,7 @@ const Footer = () => {
                     name={item.icon}
                     size="medium"
                     href={item.link}
+                    ariaLabel={item.title}
                   />
                 ))}
               </Styled.IconsMobile>
@@ -161,6 +162,7 @@ const Footer = () => {
                 name={item.icon}
                 size="medium"
                 href={item.link}
+                ariaLabel={item.title}
               />
             ))}
           </Styled.Icons>

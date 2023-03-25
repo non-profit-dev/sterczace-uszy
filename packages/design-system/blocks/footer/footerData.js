@@ -83,8 +83,16 @@ const footerData = {
     },
   ],
   socialMedia: [
-    { icon: "facebook", link: "https://www.facebook.com/sterczaceuszy/" },
-    { icon: "instagram", link: "https://www.instagram.com/sterczaceuszy" },
+    {
+      icon: "facebook",
+      link: "https://www.facebook.com/sterczaceuszy/",
+      title: "Facebook",
+    },
+    {
+      icon: "instagram",
+      link: "https://www.instagram.com/sterczaceuszy",
+      title: "Instagram",
+    },
   ],
 }
 
