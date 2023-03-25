@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import Illustration from "design-system/components/illustration"
 import TypographyComponent from "design-system/components/typography"
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   background: url("/home/support-background.png");
   background-position: center;
   background-repeat: no-repeat;

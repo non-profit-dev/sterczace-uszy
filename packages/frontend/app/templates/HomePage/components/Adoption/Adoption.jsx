@@ -7,7 +7,7 @@ import Card from "design-system/patterns/card"
 import * as Styled from "./Adoption.styled"
 
 const Adoption = () => (
-  <Styled.Container>
+  <Styled.Container as="section">
     <Styled.TextContainer>
       <TextBanner
         layout="center"

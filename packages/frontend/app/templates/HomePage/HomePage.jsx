@@ -1,4 +1,3 @@
-import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
 
@@ -47,20 +46,17 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
 
       <About />
 
-      <Container>
-        <Achievements
-          supportingNumber={supporting.total}
-          animalsNumber={animals.total}
-          adoptedAnimalsNumber={adoptedAnimals.total}
-        />
-      </Container>
+      <Achievements
+        supportingNumber={supporting.total}
+        animalsNumber={animals.total}
+        adoptedAnimalsNumber={adoptedAnimals.total}
+      />
 
       <Actions />
 
       <Animals data={animals.items} />
-      <Container>
-        <Adoption />
-      </Container>
+
+      <Adoption />
 
       <Support />
 

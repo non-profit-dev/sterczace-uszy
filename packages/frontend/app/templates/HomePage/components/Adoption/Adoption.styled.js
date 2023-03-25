@@ -1,6 +1,8 @@
 import styled from "@emotion/styled"
 
-export const Container = styled.div`
+import ContainerComponent from "design-system/components/container"
+
+export const Container = styled(ContainerComponent)`
   text-align: center;
   margin: 80px auto;
 
