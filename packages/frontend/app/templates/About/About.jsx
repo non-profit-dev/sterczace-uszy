@@ -5,7 +5,9 @@ import Typography from "design-system/components/typography"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+
 import AboutUs from "./components/AboutUs"
+import Supporters from "./components/Supporters"
 
 import Page from "../Page"
 
@@ -37,6 +39,7 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
 
     <Styled.Main>
       <AboutUs />
+
       <Container>
         <Typography variant="h4" as="h3">
           ♥️ {supporting.total} Pomocnych serc
@@ -48,6 +51,8 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
           🏡 {animals.total + adoptedAnimals.total} Uratowanych zwierząt
         </Typography>
       </Container>
+
+      <Supporters data={supporting.items} />
     </Styled.Main>
 
     <Footer />
