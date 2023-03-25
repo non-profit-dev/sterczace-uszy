@@ -19,14 +19,20 @@ const Adoption = () => (
       </TextBanner>
     </Styled.TextContainer>
     <Styled.RulesContainer>
-      <Card illustrationName="ruleFirst" size="large" layout="center">
-        <Title
-          size="medium"
-          text="Zastanów się"
-          variant="text"
-          textSize="h3"
-          count={1}
-        />
+      <Card
+        illustrationName="ruleFirst"
+        size="large"
+        layout="center"
+        title={
+          <Title
+            size="medium"
+            text="Zastanów się"
+            variant="text"
+            textSize="h3"
+            count={1}
+          />
+        }
+      >
         <Typography variant="bodyTitle">
           Pojawienie się nowego członka rodziny to rewolucja. Praca, sprawy
           domowe, hobby - czasami ciężko to pogodzić. Przemyśl dobrze czy
@@ -34,14 +40,20 @@ const Adoption = () => (
         </Typography>
       </Card>
 
-      <Card illustrationName="ruleSecond" size="large" layout="center">
-        <Title
-          size="medium"
-          text="Przeanalizuj"
-          variant="text"
-          textSize="h3"
-          count={2}
-        />
+      <Card
+        illustrationName="ruleSecond"
+        size="large"
+        layout="center"
+        title={
+          <Title
+            size="medium"
+            text="Przeanalizuj"
+            variant="text"
+            textSize="h3"
+            count={2}
+          />
+        }
+      >
         <Typography variant="bodyTitle">
           Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza
           i opieka. Sprawdź czy Twój budżet na to pozwala i czy masz czas, aby
@@ -49,14 +61,20 @@ const Adoption = () => (
         </Typography>
       </Card>
 
-      <Card illustrationName="ruleThird" size="large" layout="center">
-        <Title
-          size="medium"
-          text="Porozmawiaj"
-          variant="text"
-          textSize="h3"
-          count={3}
-        />
+      <Card
+        illustrationName="ruleThird"
+        size="large"
+        layout="center"
+        title={
+          <Title
+            size="medium"
+            text="Porozmawiaj"
+            variant="text"
+            textSize="h3"
+            count={3}
+          />
+        }
+      >
         <Typography variant="bodyTitle">
           To ważna decyzja, więc wyrażenie zgody i zobowiązanie całej rodziny ma
           kluczowe znaczenie. Wszyscy powinni się cieszyć z obecności nowego
