@@ -9,6 +9,8 @@ import {
 } from "prop-types"
 
 import Illustration from "design-system/components/illustration"
+import Icon from "design-system/components/icon"
+
 import * as Styled from "./Card.styled"
 
 const Card = ({
@@ -27,6 +29,7 @@ const Card = ({
   imageSrc,
   imageAlt,
   imageHeight,
+  mobileTitle,
   className,
 }) => (
   <Styled.Card
@@ -38,6 +41,7 @@ const Card = ({
   >
     {(illustrationName || illustrationSrc) && (
       <Styled.IllustrationContainer
+        fixedSize={!!href}
         hideIllustrationOnMobile={hideIllustrationOnMobile}
         height={illustrationHeight}
       >
@@ -59,7 +63,13 @@ const Card = ({
       paddingTop={!imageSrc && !illustrationName && !illustrationSrc}
     >
       <Styled.Wrapper layout={layout} mobileLayout={mobileLayout}>
-        {title}
+        <Styled.Title hideOnMobile={!!mobileTitle}>{title}</Styled.Title>
+        {mobileTitle && (
+          <Styled.MobileTitle>
+            {mobileTitle} <Icon name="arrowRight" />
+          </Styled.MobileTitle>
+        )}
+
         {children}
       </Styled.Wrapper>
 
@@ -94,6 +104,7 @@ Card.propTypes = {
   imageSrc: string,
   layout: oneOf(["left", "center"]),
   mobileLayout: oneOf(["left", "center"]),
+  mobileTitle: node,
   className: string,
 }
 
@@ -112,6 +123,7 @@ Card.defaultProps = {
   imageSrc: null,
   layout: "left",
   mobileLayout: "center",
+  mobileTitle: null,
   className: null,
 }
 

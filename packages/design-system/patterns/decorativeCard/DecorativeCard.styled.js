@@ -7,6 +7,7 @@ export const DecorativeCard = styled.div`
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
+  text-align: center;
 `
 export const Content = styled.div`
   position: relative;
