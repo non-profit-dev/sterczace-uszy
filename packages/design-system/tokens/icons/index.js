@@ -19,6 +19,7 @@ import Close from "./Close.svg"
 import Paperclip from "./Paperclip.svg"
 import Bowl from "./Bowl.svg"
 import Menu from "./Menu.svg"
+import HeartFilled from "./HeartFilled.svg"
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -42,6 +43,7 @@ export const icons = {
   paperClip: Paperclip,
   bowl: Bowl,
   menu: Menu,
+  heartFilled: HeartFilled,
 }
 
 export {
@@ -66,4 +68,5 @@ export {
   Phone,
   Close,
   Paperclip,
+  HeartFilled,
 }

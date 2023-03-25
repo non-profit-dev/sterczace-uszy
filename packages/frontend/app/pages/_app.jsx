@@ -6,6 +6,8 @@ import { ApolloProvider } from "@apollo/client"
 // eslint-disable-next-line import/no-unresolved
 import { Analytics } from "@vercel/analytics/react"
 
+import "swiper/swiper-bundle.css"
+
 import theme from "design-system/tokens/theme"
 
 import client from "../lib/api"

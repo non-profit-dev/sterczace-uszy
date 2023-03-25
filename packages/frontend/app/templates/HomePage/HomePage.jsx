@@ -4,6 +4,8 @@ import Button from "design-system/components/button"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+
+import Hero from "./components/Hero"
 import Adoption from "./components/Adoption"
 import Achievements from "./components/Achievements"
 import Animals from "./components/Animals"
@@ -41,6 +43,8 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
     <Navigation />
 
     <Styled.Main>
+      <Hero />
+
       <About />
 
       <Actions />
@@ -60,9 +64,7 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
 
       <Support />
 
-      <Container>
-        <Supporters data={supporting.items} />
-      </Container>
+      <Supporters data={supporting.items} />
     </Styled.Main>
 
     <Footer />

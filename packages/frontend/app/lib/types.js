@@ -17,6 +17,7 @@ export const supportingType = shape({
       name: string,
       description: string,
       url: string,
+      urlText: string,
     })
   ),
 })

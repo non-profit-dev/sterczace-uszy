@@ -16,10 +16,11 @@ const Button = ({
   active,
   target,
   onClick,
+  as,
   className,
 }) => (
   <Styled.Component
-    as={href ? `a` : `button`}
+    as={as || (href ? `a` : `button`)}
     variant={variant}
     color={color}
     size={size}
@@ -77,6 +78,7 @@ Button.propTypes = {
    * A function that will be called when the button is clicked.
    */
   onClick: func,
+  as: string,
   className: string,
 }
 
@@ -90,6 +92,7 @@ Button.defaultProps = {
   active: null,
   target: null,
   onClick: null,
+  as: null,
   className: null,
 }
 
