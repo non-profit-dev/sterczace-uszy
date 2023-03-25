@@ -148,6 +148,7 @@ export const MobileTitle = styled.div`
 `
 
 export const Title = styled.div`
+  width: 100%;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: ${({ hideOnMobile }) => (hideOnMobile ? `none` : `block`)};
   }
