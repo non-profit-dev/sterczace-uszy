@@ -14,6 +14,7 @@ import Car from "design-system/tokens/illustrations/car.svg"
 import Camera from "design-system/tokens/illustrations/camera.svg"
 import Scissors from "design-system/tokens/illustrations/scissors.svg"
 import Training from "design-system/tokens/illustrations/training.svg"
+import Support from "design-system/tokens/illustrations/support.svg"
 
 const sizes = {
   heartWithDogFace: {
@@ -212,6 +213,20 @@ const sizes = {
       height: 100,
     },
   },
+  support: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
 }
 
 export const illustrations = {
@@ -229,6 +244,7 @@ export const illustrations = {
   help: Help,
   protect: Protect,
   treat: Treat,
+  support: Support,
 }
 
 const Illustration = ({ name, className, size }) => {

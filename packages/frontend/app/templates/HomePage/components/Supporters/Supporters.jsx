@@ -31,7 +31,7 @@ const Supporters = ({ data }) => {
                 layout="center"
                 bgColor={theme.colors.neutrals[100]}
                 illustrationSrc={item.logo ? item.logo.url : null}
-                illustrationName={item.logo ? null : "help"}
+                illustrationName={item.logo ? null : "support"}
                 illustrationHeight={80}
               >
                 <Typography variant="bodySmall">{item.description}</Typography>
