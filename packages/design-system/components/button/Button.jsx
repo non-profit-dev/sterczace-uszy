@@ -17,9 +17,10 @@ const Button = ({
   target,
   onClick,
   className,
+  as,
 }) => (
   <Styled.Component
-    as={href ? `a` : `button`}
+    as={as || (href ? `a` : `button`)}
     variant={variant}
     color={color}
     size={size}
@@ -78,6 +79,7 @@ Button.propTypes = {
    */
   onClick: func,
   className: string,
+  as: string,
 }
 
 Button.defaultProps = {
@@ -91,6 +93,7 @@ Button.defaultProps = {
   target: null,
   onClick: null,
   className: null,
+  as: null,
 }
 
 export default Button

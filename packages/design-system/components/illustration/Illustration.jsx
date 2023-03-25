@@ -14,20 +14,23 @@ import Car from "design-system/tokens/illustrations/car.svg"
 import Camera from "design-system/tokens/illustrations/camera.svg"
 import Scissors from "design-system/tokens/illustrations/scissors.svg"
 import Training from "design-system/tokens/illustrations/training.svg"
+import WomanAndDog from "design-system/tokens/illustrations/womanAndDog.svg"
+import Bowl from "design-system/tokens/illustrations/bowl.svg"
+import TemporaryHome from "design-system/tokens/illustrations/temporaryHome.svg"
 
 const sizes = {
   heartWithDogFace: {
     small: {
       width: 177,
-      height: 160,
+      height: 80,
     },
     medium: {
       width: 177,
-      height: 160,
+      height: 80,
     },
     large: {
       width: 177,
-      height: 160,
+      height: 80,
     },
   },
   heart: {
@@ -212,6 +215,48 @@ const sizes = {
       height: 100,
     },
   },
+  bowl: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  womanAndDog: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  temporaryHome: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
 }
 
 export const illustrations = {
@@ -229,6 +274,9 @@ export const illustrations = {
   help: Help,
   protect: Protect,
   treat: Treat,
+  bowl: Bowl,
+  womanAndDog: WomanAndDog,
+  temporaryHome: TemporaryHome,
 }
 
 const Illustration = ({ name, className, size }) => {
