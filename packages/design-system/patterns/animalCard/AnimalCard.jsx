@@ -45,6 +45,7 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => {
           badge={getAnimalType(age, gender)}
           iconEnd={gender === "ona" ? "femaleAnimal" : "maleAnimal"}
           text={name}
+          as="h3"
         />
       }
       button={

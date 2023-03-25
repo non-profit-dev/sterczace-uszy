@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   padding-top: 120px;
   background-image: url("/home/animals-background.png");
   background-position: top;
@@ -17,7 +17,7 @@ export const ContentContainer = styled.div`
 `
 
 export const CardsWrapper = styled.div`
-  margin-top: 20px;
+  margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -37,7 +37,6 @@ export const CardWrapper = styled.div`
   display: flex;
   width: 30%;
   align-items: stretch;
-  margin-top: 60px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 100%;

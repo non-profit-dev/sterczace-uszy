@@ -19,6 +19,7 @@ const Animals = ({ data }) => {
         <Styled.ContentContainer>
           <TextBanner
             heading="Szukają domu"
+            headingTag="h2"
             subtitle="Nasi podopieczni"
             descriptionColor={theme.colors.gray[600]}
           >
@@ -65,7 +66,7 @@ const Animals = ({ data }) => {
           </Slider>
         </Styled.SliderWrapper>
         <Styled.ButtonWrapper>
-          <Button text="Zobacz wszystkich" href="/nasi-podopieczni" />
+          <Button text="Zobacz wszystkich" href="/do-adopcji" size="large" />
         </Styled.ButtonWrapper>
       </Container>
     </Styled.Wrapper>

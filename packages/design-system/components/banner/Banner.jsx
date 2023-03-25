@@ -3,7 +3,7 @@ import { string, node } from "prop-types"
 import * as Styled from "./Banner.styled"
 
 const Banner = ({ heading, button, className }) => (
-  <Styled.Banner className={className}>
+  <Styled.Banner className={className} role="alert">
     <Styled.Heading variant="bodySmall" tag="p">
       {heading}
     </Styled.Heading>
