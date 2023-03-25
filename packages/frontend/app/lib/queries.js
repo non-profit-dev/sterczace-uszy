@@ -8,6 +8,10 @@ export const GET_SUPPORTING = gql`
         name
         description
         url
+        urlText
+        logo {
+          url
+        }
       }
     }
   }
