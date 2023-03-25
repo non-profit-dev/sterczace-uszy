@@ -53,7 +53,7 @@ export const Component = styled.a`
     (variant === "textLine" || variant === "text") &&
     css`
       border-radius: 0;
-      padding: 4px 0;
+      padding: 4px;
     `}
 
   ${({ size }) =>
