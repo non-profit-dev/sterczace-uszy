@@ -35,7 +35,7 @@ export const Achievements = styled.div`
   align-items: center;
   justify-content: center;
   gap: 60px;
-  padding: 120px 0px;
+  padding: 60px 0px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     gap: 80px;

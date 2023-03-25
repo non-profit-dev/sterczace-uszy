@@ -14,9 +14,8 @@ const Adoption = () => (
         heading="Zanim adoptujesz"
         subtitle="zasady adopcji"
       >
-        Nasi podopieczni czekają na Twoją pomoc. Nowy dom, wsparcie finansowe,
-        spacery, pełna miska, opieka lekarza to tylko niektóre formy wsparcia.
-        Jeżeli chcesz czynić dobro sprawdź, co możesz zrobić.
+        Zostanie domem adopcyjnym to wielkie wyzwanie. To może być początek
+        pięknej przygody, ale musisz wiedzieć jak się do niej przygotować.
       </TextBanner>
     </Styled.TextContainer>
     <Styled.RulesContainer>
@@ -34,6 +33,7 @@ const Adoption = () => (
           znajdziesz czas na dodatkowe obowiązki.
         </Typography>
       </Card>
+
       <Card illustrationName="ruleSecond" size="large" layout="center">
         <Title
           size="medium"
@@ -48,6 +48,7 @@ const Adoption = () => (
           zadbać o komfort nowego domownika.
         </Typography>
       </Card>
+
       <Card illustrationName="ruleThird" size="large" layout="center">
         <Title
           size="medium"
@@ -63,6 +64,7 @@ const Adoption = () => (
         </Typography>
       </Card>
     </Styled.RulesContainer>
+
     <Styled.ButtonContainer>
       <Button
         text="Sprawdź warunki adopcji"

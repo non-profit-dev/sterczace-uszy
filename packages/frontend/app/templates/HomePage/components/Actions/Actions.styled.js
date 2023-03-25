@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 
 export const Content = styled.div`
-  padding-bottom: 120px;
+  padding: 120px 0;
 `
 
 export const BannerContent = styled.div`
@@ -19,7 +19,9 @@ export const BannerContent = styled.div`
 export const TextContainer = styled.div`
   max-width: 596px;
 `
+
 export const CardsContainer = styled.div`
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;

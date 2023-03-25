@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 export const Container = styled.div`
   text-align: center;
   margin: 80px auto;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
     margin: 200px auto;
   }
@@ -12,8 +13,9 @@ export const Container = styled.div`
 `
 
 export const TextContainer = styled.div`
+  max-width: 730px;
   margin: 0px auto;
-  width: 90%;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: flex;
     flex-direction: column;

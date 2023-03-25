@@ -47,8 +47,6 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
 
       <About />
 
-      <Actions />
-
       <Container>
         <Achievements
           supportingNumber={supporting.total}
@@ -56,6 +54,9 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
           adoptedAnimalsNumber={adoptedAnimals.total}
         />
       </Container>
+
+      <Actions />
+
       <Animals data={animals.items} />
       <Container>
         <Adoption />
