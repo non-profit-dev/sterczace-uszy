@@ -52,7 +52,7 @@ export const SliderWrapper = styled.div`
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 96px;
+    margin-top: 66px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     margin-top: 26px;

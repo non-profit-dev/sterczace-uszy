@@ -6,7 +6,7 @@ export const Slide = styled(SwiperSlide)`
   height: auto;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    margin-bottom: 84px;
+    margin-bottom: 40px;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
