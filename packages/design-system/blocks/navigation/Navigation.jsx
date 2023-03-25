@@ -20,7 +20,7 @@ const Navigation = () => {
       <Styled.Navigation>
         <Container>
           <Styled.NavigationRow>
-            <Link href="/">
+            <Link href="/" title="Strona główna">
               <Logo />
             </Link>
 
