@@ -47,4 +47,5 @@ export const CardContainer = styled.div`
   align-items: cetner;
   justify-content: center;
   gap: 24px;
+  max-width: 385px;
 `
