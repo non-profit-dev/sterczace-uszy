@@ -44,15 +44,6 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
           animalsNumber={animals.total}
           adoptedAnimalsNumber={adoptedAnimals.total}
         />
-        <Typography variant="h4" as="h3">
-          ♥️ {supporting.total} Pomocnych serc
-        </Typography>
-        <Typography variant="h4" as="h3">
-          🏡 {adoptedAnimals.total} Znalezionych domów
-        </Typography>
-        <Typography variant="h4" as="h3">
-          🏡 {animals.total + adoptedAnimals.total} Uratowanych zwierząt
-        </Typography>
       </Container>
     </Styled.Main>
 
