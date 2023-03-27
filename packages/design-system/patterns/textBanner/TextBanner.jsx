@@ -48,7 +48,7 @@ const TextBanner = ({
     {subtitle && (
       <Styled.Subtitle
         variant={sizes[size].subtitle}
-        as="p"
+        as={headingTag || sizes[size].heading}
         color={subtitleColor}
       >
         {subtitle}
@@ -59,7 +59,7 @@ const TextBanner = ({
       <Typography
         variant={sizes[size].heading}
         color={headingColor}
-        as={headingTag || "div"}
+        as={subtitle ? "p" : headingTag || sizes[size].heading}
       >
         {heading}
       </Typography>
