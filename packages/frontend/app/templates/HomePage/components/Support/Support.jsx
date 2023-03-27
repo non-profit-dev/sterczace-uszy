@@ -30,9 +30,7 @@ const Support = () => (
       <Styled.Content>
         <TextBanner
           heading="Potrzebujemy wsparcia"
-          headingTag="h2"
           subtitle="Wolontariat"
-          size="medium"
           tabletLayout="left"
           mobileLayout="left"
         >
