@@ -23,6 +23,7 @@ const Card = ({
   illustrationHeight,
   hideIllustrationOnMobile,
   mobileLayout,
+  tabletLayout,
   layout,
   title,
   bgColor,
@@ -60,9 +61,14 @@ const Card = ({
     <Styled.ContentContainer
       layout={layout}
       mobileLayout={mobileLayout}
+      tabletLayout={tabletLayout}
       paddingTop={!imageSrc && !illustrationName && !illustrationSrc}
     >
-      <Styled.Wrapper layout={layout} mobileLayout={mobileLayout}>
+      <Styled.Wrapper
+        layout={layout}
+        tabletLayout={tabletLayout}
+        mobileLayout={mobileLayout}
+      >
         <Styled.Title hideOnMobile={!!mobileTitle}>{title}</Styled.Title>
         {mobileTitle && (
           <Styled.MobileTitle>
@@ -104,6 +110,7 @@ Card.propTypes = {
   imageSrc: string,
   layout: oneOf(["left", "center"]),
   mobileLayout: oneOf(["left", "center"]),
+  tabletLayout: oneOf(["left", "center"]),
   mobileTitle: node,
   className: string,
 }
@@ -116,13 +123,14 @@ Card.defaultProps = {
   href: null,
   illustrationName: null,
   illustrationSrc: null,
-  illustrationHeight: number,
+  illustrationHeight: null,
   hideIllustrationOnMobile: false,
   imageAlt: null,
   imageHeight: null,
   imageSrc: null,
   layout: "left",
   mobileLayout: "center",
+  tabletLayout: "center",
   mobileTitle: null,
   className: null,
 }

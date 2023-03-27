@@ -103,11 +103,25 @@ export const Wrapper = styled.div`
         `
       : css`
           align-items: flex-start;
+          text-align: left;
         `}
   gap: 24px;
   width: 100%;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    ${({ tabletLayout }) =>
+      tabletLayout === "center"
+        ? css`
+            align-items: center;
+            text-align: center;
+          `
+        : css`
+            align-items: flex-start;
+            text-align: left;
+          `}
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     ${({ mobileLayout }) =>
       mobileLayout === "center"
         ? css`
@@ -116,6 +130,7 @@ export const Wrapper = styled.div`
           `
         : css`
             align-items: flex-start;
+            text-align: left;
           `}
   }
 `
@@ -148,6 +163,7 @@ export const MobileTitle = styled.div`
 `
 
 export const Title = styled.div`
+  width: 100%;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: ${({ hideOnMobile }) => (hideOnMobile ? `none` : `block`)};
   }

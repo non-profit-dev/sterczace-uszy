@@ -1,11 +1,13 @@
 import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
-import Typography from "design-system/components/typography"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+
+import Achievements from "./components/AboutUs/Achievements"
 import AboutUs from "./components/AboutUs"
+import Supporters from "./components/Supporters"
 
 import Page from "../Page"
 
@@ -25,7 +27,7 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
         button={
           <Button
             text="tutaj"
-            href="/jak-pomoc"
+            href="/wsparcie"
             variant="textLine"
             size="small"
           />
@@ -37,17 +39,16 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
 
     <Styled.Main>
       <AboutUs />
+
       <Container>
-        <Typography variant="h4" as="h3">
-          ♥️ {supporting.total} Pomocnych serc
-        </Typography>
-        <Typography variant="h4" as="h3">
-          🏡 {adoptedAnimals.total} Znalezionych domów
-        </Typography>
-        <Typography variant="h4" as="h3">
-          🏡 {animals.total + adoptedAnimals.total} Uratowanych zwierząt
-        </Typography>
+        <Achievements
+          supportingNumber={supporting.total}
+          animalsNumber={animals.total}
+          adoptedAnimalsNumber={adoptedAnimals.total}
+        />
       </Container>
+
+      <Supporters data={supporting.items} />
     </Styled.Main>
 
     <Footer />

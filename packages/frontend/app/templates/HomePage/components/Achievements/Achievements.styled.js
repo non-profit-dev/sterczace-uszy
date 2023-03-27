@@ -19,14 +19,10 @@ export const MainContainer = styled.div`
 export const Description = styled.div`
   display: inline-flex;
   margin: 0 auto;
-  width: 600px;
+  max-width: 600px;
 
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    width: 630px;
-    text-align: left;
-  }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    width: 100%;
+    max-width: 100%;
   }
 `
 export const Achievements = styled.div`
@@ -35,7 +31,7 @@ export const Achievements = styled.div`
   align-items: center;
   justify-content: center;
   gap: 60px;
-  padding: 120px 0px;
+  padding: 60px 0px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     gap: 80px;

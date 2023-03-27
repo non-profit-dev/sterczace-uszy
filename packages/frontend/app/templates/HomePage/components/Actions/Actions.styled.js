@@ -1,7 +1,11 @@
 import styled from "@emotion/styled"
 
 export const Content = styled.div`
-  padding-bottom: 120px;
+  padding: 120px 0;
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    padding: 60px 0;
+  }
 `
 
 export const BannerContent = styled.div`
@@ -10,16 +14,17 @@ export const BannerContent = styled.div`
   gap: 60px;
   align-items: center;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
-    text-align: left;
-    align-items: flex-start;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    align-items: start;
   }
 `
 
 export const TextContainer = styled.div`
   max-width: 596px;
 `
+
 export const CardsContainer = styled.div`
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
@@ -36,7 +41,7 @@ export const ButtonWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     margin-top: 0;
     align-items: flex-start;
   }

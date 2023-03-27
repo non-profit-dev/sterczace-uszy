@@ -17,7 +17,7 @@ const cards = [
   {
     title: "Zostań domem tymczasowym",
     buttonText: "Poznaj zasady",
-    buttonHref: "/wsparcie",
+    buttonHref: "/wsparcie#dom-tymczasowy",
     illustration: "temporaryHome",
   },
   {
@@ -41,8 +41,9 @@ const Hero = () => {
             subtitle="Fundacja Sterczące Uszy"
             descriptionColor={theme.colors.neutrals[100]}
             size="large"
+            headingTag="h1"
             button={
-              <Button text="Wesprzyj nas" size="large" href="/jak-pomoc" />
+              <Button text="Wesprzyj nas" size="large" href="/wsparcie" />
             }
           >
             Nasi podopieczni czekają na Twoją pomoc. Pełna miska, miejsce do
@@ -59,7 +60,14 @@ const Hero = () => {
               illustrationName={illustration}
               hideIllustrationOnMobile
               hideButtonOnMobile
-              title={<Styled.Title text={title} variant="text" textSize="h4" />}
+              title={
+                <Styled.Title
+                  text={title}
+                  variant="text"
+                  textSize="h4"
+                  as="div"
+                />
+              }
               mobileTitle={<Typography variant="h5">{title}</Typography>}
               mobileLayout="left"
               button={

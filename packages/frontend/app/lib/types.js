@@ -3,9 +3,10 @@ import { shape, arrayOf, string, number } from "prop-types"
 export const animalsType = shape({
   items: arrayOf(
     shape({
+      slug: string,
       name: string,
       gender: string,
-      age: string,
+      age: number,
       excerpt: string,
     })
   ),
