@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-export const Footer = styled.div`
+export const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   width: 100%;

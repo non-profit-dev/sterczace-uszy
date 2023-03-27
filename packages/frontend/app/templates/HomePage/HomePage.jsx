@@ -1,4 +1,3 @@
-import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
 
@@ -32,7 +31,7 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
         button={
           <Button
             text="tutaj"
-            href="/jak-pomoc"
+            href="/wsparcie"
             variant="textLine"
             size="small"
           />
@@ -44,26 +43,16 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
 
     <Styled.Main>
       <Hero />
-
       <About />
-
+      <Achievements
+        supportingNumber={supporting.total}
+        animalsNumber={animals.total}
+        adoptedAnimalsNumber={adoptedAnimals.total}
+      />
       <Actions />
-
-      <Container>
-        <Achievements
-          supportingNumber={supporting.total}
-          animalsNumber={animals.total}
-          adoptedAnimalsNumber={adoptedAnimals.total}
-        />
-      </Container>
-
-      <Container>
-        <Animals data={animals.items} />
-        <Adoption />
-      </Container>
-
+      <Animals data={animals.items} />
+      <Adoption />
       <Support />
-
       <Supporters data={supporting.items} />
     </Styled.Main>
 

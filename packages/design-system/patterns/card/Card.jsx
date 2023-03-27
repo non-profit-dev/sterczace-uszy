@@ -116,7 +116,7 @@ Card.defaultProps = {
   href: null,
   illustrationName: null,
   illustrationSrc: null,
-  illustrationHeight: number,
+  illustrationHeight: null,
   hideIllustrationOnMobile: false,
   imageAlt: null,
   imageHeight: null,
