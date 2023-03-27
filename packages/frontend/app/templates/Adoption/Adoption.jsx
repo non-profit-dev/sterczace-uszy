@@ -2,21 +2,16 @@ import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
-
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 
 import Page from "../Page"
 
-import {
-  supportingType,
-  animalsType,
-  adoptedAnimalsType,
-} from "../../lib/types"
+import { animalsType } from "../../lib/types"
 
 import * as Styled from "./Adoption.styled"
 
-const Adoption = ({ animals, supporting, adoptedAnimals }) => (
+const Adoption = ({ animals }) => (
   <Page title="Nasi podopieczni">
     <Styled.Banner>
       <Banner
@@ -37,13 +32,7 @@ const Adoption = ({ animals, supporting, adoptedAnimals }) => (
     <Styled.Main>
       <Container>
         <Typography variant="h4" as="h3">
-          ♥️ {supporting.total} Pomocnych serc
-        </Typography>
-        <Typography variant="h4" as="h3">
-          🏡 {adoptedAnimals.total} Znalezionych domów
-        </Typography>
-        <Typography variant="h4" as="h3">
-          🏡 {animals.total + adoptedAnimals.total} Uratowanych zwierząt
+          ♥️ {animals.total} Pomocnych serc
         </Typography>
       </Container>
     </Styled.Main>
@@ -54,8 +43,6 @@ const Adoption = ({ animals, supporting, adoptedAnimals }) => (
 
 Adoption.propTypes = {
   animals: animalsType.isRequired,
-  supporting: supportingType.isRequired,
-  adoptedAnimals: adoptedAnimalsType.isRequired,
 }
 
 export default Adoption
