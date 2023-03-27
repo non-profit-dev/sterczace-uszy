@@ -4,11 +4,13 @@ import ImageComponent from "design-system/components/image"
 import Typography from "design-system/components/typography"
 
 export const Content = styled.div`
+  padding-top: 120px;
   display: grid;
   gap: 70px;
   grid-template-columns: 2fr 1fr;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
+    padding-top: 60px;
     grid-template-columns: auto;
   }
 `

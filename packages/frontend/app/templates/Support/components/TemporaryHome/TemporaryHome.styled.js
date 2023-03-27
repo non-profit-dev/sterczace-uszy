@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 
 export const Content = styled.div`
+  padding-top: 150px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 60px;
@@ -11,6 +12,7 @@ export const Content = styled.div`
   }
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
+    padding-top: 40px;
     grid-template-columns: auto;
   }
 `

@@ -18,8 +18,8 @@ const Tax = () => {
   const [isCopied, copyToClipboard] = useCopyToClipboard()
 
   return (
-    <Styled.Wrapper>
-      <Container as="section" id="podatek">
+    <Styled.Wrapper id="podatek">
+      <Container as="section">
         <Styled.Content>
           <Styled.Graphic>
             <Illustration name="dogCat" />

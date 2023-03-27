@@ -4,18 +4,16 @@ import Typography from "design-system/components/typography"
 
 export const Wrapper = styled.div`
   margin-top: 120px;
-  margin-bottom: 120px;
   padding: 60px;
   background-color: ${({ theme }) => theme.colors.complementary[100]};
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding: 60px 40px;
+    padding: 60px 0;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     margin-top: 0;
-    margin-bottom: 60px;
-    padding: 60px 24px;
+    padding: 60px 0;
   }
 `
 

@@ -14,13 +14,13 @@ export const Heading = styled(Typography)`
 `
 
 export const Wrapper = styled.div`
-  margin: 120px 0;
+  margin-top: 120px;
   padding: 60px;
   background-color: ${({ theme }) => theme.colors.complementary[100]};
   text-align: center;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    margin: 80px 0;
+    margin-top: 80px;
     padding: 60px 40px;
   }
 
