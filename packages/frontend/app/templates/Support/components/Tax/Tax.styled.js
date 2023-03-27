@@ -1,5 +1,7 @@
 import styled from "@emotion/styled"
 
+import Typography from "design-system/components/typography"
+
 export const Wrapper = styled.div`
   margin-top: 120px;
   margin-bottom: 120px;
@@ -59,4 +61,20 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+`
+
+export const CopyButton = styled.button`
+  display: inline;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+`
+
+export const CopyInfo = styled(Typography)`
+  display: inline-flex;
+  min-height: 30.5px;
+  padding-left: 4px;
+  vertical-align: middle;
+  align-items: center;
 `

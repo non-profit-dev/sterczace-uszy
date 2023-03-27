@@ -18,6 +18,8 @@ const Hero = () => {
             headingColor={theme.colors.gray[600]}
             subtitle="Ty też możesz pomagać"
             size="large"
+            tabletLayout="left"
+            mobileLayout="left"
           />
         </Styled.HeaderWrapper>
       </Container>

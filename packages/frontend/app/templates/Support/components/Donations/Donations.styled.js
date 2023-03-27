@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 
 import ImageComponent from "design-system/components/image"
+import Typography from "design-system/components/typography"
 
 export const Content = styled.div`
   display: grid;
@@ -31,4 +32,20 @@ export const Image = styled(ImageComponent)`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: none;
   }
+`
+
+export const CopyButton = styled.button`
+  display: inline;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+`
+
+export const CopyInfo = styled(Typography)`
+  display: inline-flex;
+  min-height: 30.5px;
+  padding-left: 4px;
+  vertical-align: middle;
+  align-items: center;
 `

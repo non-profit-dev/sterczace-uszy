@@ -47,6 +47,8 @@ const TemporaryHome = () => {
           heading="Zostań domem tymczasowym"
           subtitle="Dom tymczasowy"
           size="medium"
+          tabletLayout="left"
+          mobileLayout="left"
         >
           By skutecznie ratować psy i koty nie wystarczy je zabrać z koszmarnych
           warunków. Potrzeba też miejsca, by je ulokować do czasu adopcji, umyć,
@@ -64,6 +66,7 @@ const TemporaryHome = () => {
         {steps.map(({ title, description, button }, index) => (
           <Card
             key={title}
+            tabletLayout="left"
             mobileLayout="left"
             title={<Title text={title} variant="text" count={index + 1} />}
           >
