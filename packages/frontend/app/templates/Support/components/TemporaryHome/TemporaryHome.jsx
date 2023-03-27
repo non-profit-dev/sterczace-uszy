@@ -21,7 +21,8 @@ const steps = [
         variant="text"
         text="Pobierz ankietę"
         iconStart="download"
-        href="#"
+        target="_blank"
+        href="https://docs.google.com/document/d/1u_tnZ--5rNME2s9Vn9YZstm7dRAcLQyH/edit?fbclid=IwAR01QrME3E_U1_knHoPeYkgWhJiB7AL4Q-dWylvjkXbnTJDdW0_PrTw7guw"
       />
     ),
   },
