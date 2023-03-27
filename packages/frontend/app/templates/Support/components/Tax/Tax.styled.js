@@ -13,6 +13,8 @@ export const Wrapper = styled.div`
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
+    margin-top: 0;
+    margin-bottom: 60px;
     padding: 60px 24px;
   }
 `
@@ -44,7 +46,7 @@ export const Graphic = styled.div`
     width: 260px;
     height: 260px;
 
-    ${({ theme }) => theme.breakpoints.mobileLg} {
+    ${({ theme }) => theme.breakpoints.tablet} {
       width: 120px;
       height: 120px;
     }
@@ -53,6 +55,7 @@ export const Graphic = styled.div`
 
 export const Info = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
   margin-top: 10px;
 `
