@@ -5,8 +5,10 @@ import Typography from "design-system/components/typography"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+
 import Achievements from "./components/AboutUs/Achievements"
 import AboutUs from "./components/AboutUs"
+import Supporters from "./components/Supporters"
 
 import Page from "../Page"
 
@@ -38,6 +40,7 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
 
     <Styled.Main>
       <AboutUs />
+
       <Container>
         <Achievements
           supportingNumber={supporting.total}
@@ -45,6 +48,8 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
           adoptedAnimalsNumber={adoptedAnimals.total}
         />
       </Container>
+
+      <Supporters data={supporting.items} />
     </Styled.Main>
 
     <Footer />
