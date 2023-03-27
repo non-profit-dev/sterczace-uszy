@@ -21,6 +21,8 @@ const About = () => {
             headingTag="h2"
             headingColor={theme.colors.gray[600]}
             subtitle="O nas"
+            tabletLayout="left"
+            mobileLayout="left"
             descriptionColor={theme.colors.gray[600]}
             size="medium"
             button={

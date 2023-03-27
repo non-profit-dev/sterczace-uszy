@@ -22,6 +22,8 @@ const Animals = ({ data }) => {
             headingTag="h2"
             subtitle="Nasi podopieczni"
             descriptionColor={theme.colors.gray[600]}
+            tabletLayout="left"
+            mobileLayout="left"
           >
             Zapewniamy dom i schronienie dla psów i kotów. Obecnie pod naszą
             opieką jest 5 zwierzaków, ale ciągle przyjmujemy nowych

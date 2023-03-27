@@ -24,6 +24,7 @@ const Adoption = () => (
         illustrationName="ruleFirst"
         size="large"
         layout="center"
+        tabletLayout="center"
         title={
           <Title
             size="medium"
