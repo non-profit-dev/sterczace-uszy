@@ -106,7 +106,7 @@ TextBanner.defaultProps = {
   button: null,
   subtitleColor: theme.colors.primary[500],
   headingColor: theme.colors.gray[600],
-  headingTag: null,
+  headingTag: "h2",
   descriptionColor: theme.colors.gray[500],
   className: null,
   children: null,

@@ -15,6 +15,7 @@ const Hero = () => {
         <Styled.HeaderWrapper>
           <TextBanner
             heading="Zaangażuj się i zmieniaj życie zwierząt razem z nami"
+            headingTag="h1"
             headingColor={theme.colors.gray[600]}
             subtitle="Ty też możesz pomagać"
             size="large"

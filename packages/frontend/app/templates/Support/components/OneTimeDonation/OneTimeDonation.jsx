@@ -23,7 +23,9 @@ const data = [
 const OneTimeDonation = () => (
   <Styled.Container as="section">
     <Styled.Wrapper>
-      <Styled.Heading variant="h3">Jednorazowa wpłata</Styled.Heading>
+      <Styled.Heading variant="h3" as="h2">
+        Jednorazowa wpłata
+      </Styled.Heading>
 
       <Typography variant="bodyTitle">
         Wybierz wygodną formę dokonania wpłaty za pośrednictwem strony
@@ -33,7 +35,7 @@ const OneTimeDonation = () => (
       <Styled.Options>
         {data.map(({ title, description }) => (
           <div key={title}>
-            <Count count={title} />
+            <Count count={title} as="h3" />
             <Typography variant="bodySmall">{description}</Typography>
           </div>
         ))}

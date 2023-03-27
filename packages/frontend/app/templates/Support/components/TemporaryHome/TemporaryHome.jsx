@@ -46,7 +46,6 @@ const TemporaryHome = () => {
         <TextBanner
           heading="Zostań domem tymczasowym"
           subtitle="Dom tymczasowy"
-          size="medium"
           tabletLayout="left"
           mobileLayout="left"
         >
@@ -68,7 +67,9 @@ const TemporaryHome = () => {
             key={title}
             tabletLayout="left"
             mobileLayout="left"
-            title={<Title text={title} variant="text" count={index + 1} />}
+            title={
+              <Title text={title} variant="text" count={index + 1} as="h3" />
+            }
           >
             <Typography variant="bodySmall" color={theme.colors.gray[600]}>
               {description}

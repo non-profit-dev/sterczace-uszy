@@ -40,6 +40,7 @@ const Donations = () => {
               text="Przelew jednorazowy lub zlecenie stałe"
               variant="text"
               textSize="h5"
+              as="p"
             />
             <div>
               <Typography variant="bodyTitle">
@@ -54,7 +55,7 @@ const Donations = () => {
               </Typography>
             </div>
 
-            <Typography variant="h5">
+            <Typography variant="h5" as="div">
               41 1870 1045 2078 1072 8639 0001
               {isCopied ? (
                 <Styled.CopyInfo

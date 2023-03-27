@@ -24,9 +24,13 @@ const Tax = () => {
           <Styled.Graphic>
             <Illustration name="dogCat" />
             <Styled.Header>
-              <Typography variant="h1">Przekaż</Typography>
+              <Typography variant="h1" as="p">
+                Przekaż
+              </Typography>
               <Count count="1.5%" variant="decorative" />
-              <Typography variant="h3">KRS: 0000270261</Typography>
+              <Typography variant="h3" as="p">
+                KRS: 0000270261
+              </Typography>
             </Styled.Header>
           </Styled.Graphic>
 

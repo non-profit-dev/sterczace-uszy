@@ -25,13 +25,12 @@ const Support = () => (
       <Donations />
       <OneTimeDonation />
       <TemporaryHome />
+      <CtaBanner
+        heading="Masz pytania lub wątpliwości?"
+        buttonText="Skontaktuj się z nami"
+        buttonHref="/kontakt"
+      />
     </Styled.Main>
-
-    <CtaBanner
-      heading="Masz pytania lub wątpliwości?"
-      buttonText="Skontaktuj się z nami"
-      buttonHref="/kontakt"
-    />
 
     <Footer />
   </Page>
