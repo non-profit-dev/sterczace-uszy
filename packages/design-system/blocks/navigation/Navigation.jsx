@@ -1,11 +1,12 @@
 import { useState } from "react"
+import Link from "next/link"
 
-import Typography from "design-system/components/typography"
 import Button from "design-system/components/button"
 import Container from "design-system/components/container"
 import Icon from "design-system/components/icon"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
+import Logo from "design-system/components/logo"
 
 import * as Styled from "./Navigation.styled"
 
@@ -19,7 +20,9 @@ const Navigation = () => {
       <Styled.Navigation>
         <Container>
           <Styled.NavigationRow>
-            <Typography variant="h5">logo</Typography>
+            <Link href="/" title="Strona główna">
+              <Logo />
+            </Link>
 
             <Styled.Menu>
               {data.map((item) => (
