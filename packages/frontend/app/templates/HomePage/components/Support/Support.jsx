@@ -26,6 +26,8 @@ const list = [
 
 const Support = () => (
   <Styled.Wrapper>
+    <Styled.ImageBackground />
+
     <Container>
       <Styled.Content>
         <TextBanner
