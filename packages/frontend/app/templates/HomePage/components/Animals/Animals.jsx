@@ -24,10 +24,9 @@ const Animals = ({ data }) => {
             tabletLayout="left"
             mobileLayout="left"
           >
-            Zapewniamy dom i schronienie dla psów i kotów. Obecnie pod naszą
-            opieką jest 5 zwierzaków, ale ciągle przyjmujemy nowych
-            podopiecznych. Dokładamy wszelkich starań, aby zapewnić im jak
-            lepsze życie. Jeśli chcesz pomóc, sprawdź, kto czeka na nowy dom.
+            Oferujemy dom i schronienie dla psów i kotów. Dokładamy wszelkich
+            starań, aby zapewnić im jak najlepsze życie. Jeśli chcesz pomóc,
+            zapraszamy do sprawdzenia, kto czeka na nowy dom.
           </TextBanner>
         </Styled.ContentContainer>
 
