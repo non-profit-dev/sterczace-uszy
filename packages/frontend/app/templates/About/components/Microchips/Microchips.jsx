@@ -37,12 +37,10 @@ const Microchips = () => {
             heading="Zniżka na rejestrację mikroczipa"
             headingColor={theme.colors.gray[600]}
             descriptionColor={theme.colors.gray[600]}
-            size="medium"
             button={
               activeForm ? null : (
                 <Button
                   text="Skontaktuj się z nami"
-                  color="primary"
                   size="large"
                   onClick={() => setActiveForm(!activeForm)}
                 />

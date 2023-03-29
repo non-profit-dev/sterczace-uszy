@@ -23,13 +23,7 @@ const Form = ({ handleFormAgain }) => {
           <TextBanner
             size="small"
             heading="Generujemy kod promocyjny"
-            button={
-              <Button
-                text="Poproś o więcej"
-                variant="fill"
-                onClick={handleFormAgain}
-              />
-            }
+            button={<Button text="Poproś o więcej" onClick={handleFormAgain} />}
           >
             <Typography variant="bodySmall">
               Dostaliśmy Twoją prośbę o kod promocyjny, w ciągu kilku dni
