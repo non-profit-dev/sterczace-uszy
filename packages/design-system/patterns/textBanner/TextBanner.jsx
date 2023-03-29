@@ -66,13 +66,13 @@ const TextBanner = ({
     </Styled.Container>
 
     {children && (
-      <Styled.Description
+      <Typography
         variant={sizes[size].description}
         color={descriptionColor}
         as="div"
       >
         {children}
-      </Styled.Description>
+      </Typography>
     )}
 
     {button && (
@@ -107,7 +107,7 @@ TextBanner.defaultProps = {
   subtitleColor: theme.colors.primary[500],
   headingColor: theme.colors.gray[600],
   headingTag: null,
-  descriptionColor: theme.colors.gray[500],
+  descriptionColor: theme.colors.gray[600],
   className: null,
   children: null,
 }
