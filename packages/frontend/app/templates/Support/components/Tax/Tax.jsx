@@ -62,7 +62,7 @@ const Tax = () => {
                   <Styled.CopyButton
                     onClick={() => copyToClipboardKrs("0000270261")}
                   >
-                    <Icon name="copy" />
+                    <Icon name="copy" color={theme.colors.primary[500]} />
                   </Styled.CopyButton>
                 )}
               </Typography>
@@ -85,7 +85,7 @@ const Tax = () => {
                       copyToClipboard("Fundacja Sterczące Uszy 13146")
                     }
                   >
-                    <Icon name="copy" />
+                    <Icon name="copy" color={theme.colors.primary[500]} />
                   </Styled.CopyButton>
                 )}
               </Typography>
