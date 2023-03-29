@@ -14,9 +14,8 @@ export const BannerContent = styled.div`
   gap: 60px;
   align-items: center;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
-    text-align: left;
-    align-items: flex-start;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    align-items: start;
   }
 `
 
@@ -42,7 +41,7 @@ export const ButtonWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     margin-top: 0;
     align-items: flex-start;
   }

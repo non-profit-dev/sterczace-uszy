@@ -19,12 +19,12 @@ const Actions = () => {
       <Styled.Content>
         <TextBanner
           heading="Nasze działania"
-          headingTag="h2"
           headingColor={theme.colors.gray[600]}
           subtitle="Co robimy?"
           layout="center"
+          tabletLayout="left"
+          mobileLayout="left"
           descriptionColor={theme.colors.gray[600]}
-          size="medium"
         >
           <Styled.TextContainer>
             <Typography variant="bodyTitle">
@@ -40,6 +40,7 @@ const Actions = () => {
               illustrationName="help"
               layout="center"
               hideIllustrationOnMobile
+              tabletLayout="left"
               mobileLayout="left"
             >
               <List gap={8}>
@@ -59,6 +60,7 @@ const Actions = () => {
               illustrationName="protect"
               layout="center"
               hideIllustrationOnMobile
+              tabletLayout="left"
               mobileLayout="left"
             >
               <List gap={8}>
@@ -78,6 +80,7 @@ const Actions = () => {
               illustrationName="treat"
               layout="center"
               hideIllustrationOnMobile
+              tabletLayout="left"
               mobileLayout="left"
             >
               <List gap={8}>

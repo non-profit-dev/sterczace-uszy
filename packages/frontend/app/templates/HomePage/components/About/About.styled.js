@@ -9,9 +9,13 @@ export const Wrapper = styled.section`
   background-position: center;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding-top: 0px;
-    background-size: 100% 50%;
+    padding: 0;
+    background-size: 100% 60%;
     background-position: bottom;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    background-size: 100% 100%;
   }
 `
 

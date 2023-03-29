@@ -3,7 +3,6 @@ import styled from "@emotion/styled"
 import ContainerComponent from "design-system/components/container"
 
 export const Container = styled(ContainerComponent)`
-  text-align: center;
   margin: 80px auto;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
@@ -17,11 +16,6 @@ export const Container = styled(ContainerComponent)`
 export const TextContainer = styled.div`
   max-width: 730px;
   margin: 0px auto;
-
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: flex;
-    flex-direction: column;
-  }
 `
 
 export const RulesContainer = styled.div`

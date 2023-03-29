@@ -3,7 +3,6 @@ import { number } from "prop-types"
 import DecorativeCard from "design-system/patterns/decorativeCard"
 import TextBanner from "design-system/patterns/textBanner"
 import Typography from "design-system/components/typography"
-import Container from "design-system/components/container"
 
 import * as Styled from "./Achievements.styled"
 
@@ -11,8 +10,29 @@ const Achievements = ({
   supportingNumber,
   animalsNumber,
   adoptedAnimalsNumber,
-}) => (
-  <Container as="section">
+}) => {
+  const cardsData = [
+    {
+      illustrationName: "heart",
+      count: supportingNumber,
+      description:
+        "To liczba dobrych serc ludzi, dzięki którym możemy pomagać zwierzakom",
+    },
+    {
+      illustrationName: "home",
+      count: adoptedAnimalsNumber,
+      description:
+        "To liczba nowych domów, gdzie nasi podopieczni zostali otoczeni opieką",
+    },
+    {
+      illustrationName: "dog",
+      count: adoptedAnimalsNumber + animalsNumber,
+      description:
+        "To liczba pupili, którzy są pod naszą opieką i którym już udzieliłyśmy pomocy",
+    },
+  ]
+
+  return (
     <Styled.Achievements>
       <TextBanner
         heading="Nasze osiągnięcia"
@@ -26,26 +46,17 @@ const Achievements = ({
           </Typography>
         </Styled.Description>
       </TextBanner>
-      <Styled.MainContainer>
-        <DecorativeCard
-          illustrationName="heart"
-          count={supportingNumber}
-          title="Pomocnych serc"
-        />
-        <DecorativeCard
-          illustrationName="home"
-          count={adoptedAnimalsNumber}
-          title="Znalezionych domów"
-        />
-        <DecorativeCard
-          illustrationName="dog"
-          count={adoptedAnimalsNumber + animalsNumber}
-          title="Uratowanych zwierząt"
-        />
-      </Styled.MainContainer>
+      <Styled.Container>
+        {cardsData.map(({ illustrationName, count, description }) => (
+          <Styled.CardContainer key={description}>
+            <DecorativeCard illustrationName={illustrationName} count={count} />
+            <Typography variant="h4">{description}</Typography>
+          </Styled.CardContainer>
+        ))}
+      </Styled.Container>
     </Styled.Achievements>
-  </Container>
-)
+  )
+}
 
 Achievements.propTypes = {
   supportingNumber: number.isRequired,
