@@ -37,8 +37,8 @@ const Form = ({ handleFormAgain }) => {
           <Typography variant="h3">Prośba o kod promocyjny</Typography>
           <Typography variant="bodySmall">
             Otrzymasz od nas kod promocyjny na -10% przy rejestracji na stronie
-            www.safe-animal.eu Możesz poprosić o dowolną ilość kodów
-            promocyjnych.
+            <a href="https://www.safe-animal.eu">www.safe-animal.eu</a> Możesz
+            poprosić o dowolną ilość kodów promocyjnych.
           </Typography>
           <Styled.InputContainer>
             <Input
