@@ -50,11 +50,11 @@ export const Content = styled.div`
   position: relative;
   z-index: 1;
   max-width: 560px;
-  padding: 110px 0;
+  padding: 100px 0;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 
   &:before {
@@ -84,12 +84,13 @@ export const Item = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 6px;
   text-align: center;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     flex-direction: row;
     text-align: left;
+    gap: 24px;
   }
 `
 
@@ -103,5 +104,5 @@ export const Icon = styled(Illustration)`
 `
 
 export const Typography = styled(TypographyComponent)`
-  margin: 24px 0;
+  margin: 48px 0 24px 0;
 `
