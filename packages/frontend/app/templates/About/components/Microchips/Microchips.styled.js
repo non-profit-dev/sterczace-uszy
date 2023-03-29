@@ -30,6 +30,13 @@ export const FormWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.gray[100]};
   border-radius: 10px;
 
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   ${({ theme }) => theme.breakpoints.mobileLg} {
     padding: 56px 24px;
   }
