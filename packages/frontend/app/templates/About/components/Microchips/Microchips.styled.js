@@ -19,7 +19,6 @@ export const Image = styled.img`
   display: block;
   margin: 0 auto;
   height: 300px;
-  object-fit: cover;
 `
 
 export const Form = styled.form`
