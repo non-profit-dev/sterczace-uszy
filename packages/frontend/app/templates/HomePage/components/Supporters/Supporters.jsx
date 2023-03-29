@@ -28,6 +28,7 @@ const Supporters = ({ data }) => {
                 key={item.name}
                 title={<Title text={item.name} variant="textLine" as="h3" />}
                 href={item.url}
+                target="_blank"
                 layout="center"
                 bgColor={theme.colors.neutrals[100]}
                 illustrationSrc={item.logo ? item.logo.url : null}
