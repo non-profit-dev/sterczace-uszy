@@ -21,7 +21,7 @@ export const Image = styled.img`
   height: 300px;
 `
 
-export const Form = styled.form`
+export const FormWrapper = styled.div`
   margin-top: 48px;
   padding: 48px;
   display: flex;
@@ -33,6 +33,12 @@ export const Form = styled.form`
   ${({ theme }) => theme.breakpoints.mobileLg} {
     padding: 56px 24px;
   }
+`
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `
 
 export const InputContainer = styled.div`

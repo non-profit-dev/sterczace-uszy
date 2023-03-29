@@ -13,7 +13,7 @@ import * as Styled from "./Microchips.styled"
 
 const Microchips = () => {
   const theme = useTheme()
-  const [activeForm, setActiveForm] = useState(false)
+  const [formSection, setFormSection] = useState(false)
 
   return (
     <section>
@@ -38,11 +38,11 @@ const Microchips = () => {
             headingColor={theme.colors.gray[600]}
             descriptionColor={theme.colors.gray[600]}
             button={
-              activeForm ? null : (
+              formSection ? null : (
                 <Button
                   text="Skontaktuj się z nami"
                   size="large"
-                  onClick={() => setActiveForm(!activeForm)}
+                  onClick={() => setFormSection(!formSection)}
                 />
               )
             }
@@ -62,8 +62,10 @@ const Microchips = () => {
             </Typography>
           </TextBanner>
 
-          {activeForm ? (
-            <Form handleFormAgain={() => setActiveForm(true)} />
+          {formSection ? (
+            <Styled.FormWrapper>
+              <Form />
+            </Styled.FormWrapper>
           ) : null}
         </Styled.TextWrapper>
       </Container>
