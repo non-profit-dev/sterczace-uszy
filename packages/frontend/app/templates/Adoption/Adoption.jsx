@@ -5,6 +5,7 @@ import Typography from "design-system/components/typography"
 import CtaBanner from "design-system/patterns/ctaBanner"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+import HomeFound from "./components/HomeFound/HomeFound"
 
 import Page from "../Page"
 
@@ -36,6 +37,7 @@ const Adoption = ({ animals }) => (
           ♥️ {animals.total} Pomocnych serc
         </Typography>
       </Container>
+      <HomeFound />
       <CtaBanner
         buttonHref="/kontakt"
         buttonText="Skontaktuj się z nami"
