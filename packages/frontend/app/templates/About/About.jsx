@@ -2,10 +2,10 @@ import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
-
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 import AboutUs from "./components/AboutUs"
+import Values from "./components/Values"
 
 import Page from "../Page"
 
@@ -37,6 +37,7 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
 
     <Styled.Main>
       <AboutUs />
+      <Values/>
       <Container>
         <Typography variant="h4" as="h3">
           ♥️ {supporting.total} Pomocnych serc
@@ -49,7 +50,6 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
         </Typography>
       </Container>
     </Styled.Main>
-
     <Footer />
   </Page>
 )
