@@ -6,7 +6,7 @@ export const Container = styled(ContainerComponent)`
   margin: 80px auto;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    margin: 120px auto;
+    margin: 120px auto 80px auto;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     margin: 90px auto;

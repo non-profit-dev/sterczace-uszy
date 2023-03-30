@@ -22,7 +22,6 @@ const About = () => {
             subtitle="O nas"
             tabletLayout="left"
             mobileLayout="left"
-            descriptionColor={theme.colors.gray[600]}
             button={
               <Button
                 text="Poznaj nas lepiej"

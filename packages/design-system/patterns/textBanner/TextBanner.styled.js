@@ -70,8 +70,6 @@ export const Subtitle = styled(Typography)`
 `
 
 export const Description = styled(Typography)`
-  opacity: 0.9;
-
   & > * + * {
     padding-top: 30px;
   }
