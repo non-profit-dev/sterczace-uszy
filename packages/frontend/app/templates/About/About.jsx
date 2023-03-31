@@ -1,7 +1,6 @@
 import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
-FSU-151-Values-section
 import Typography from "design-system/components/typography"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
