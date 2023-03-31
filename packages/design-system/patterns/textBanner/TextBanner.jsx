@@ -28,6 +28,8 @@ const TextBanner = ({
   children,
   subtitle,
   layout,
+  tabletLayout,
+  mobileLayout,
   size,
   button,
   subtitleColor,
@@ -36,11 +38,17 @@ const TextBanner = ({
   descriptionColor,
   className,
 }) => (
-  <Styled.TextBanner layout={layout} size={size} className={className}>
+  <Styled.TextBanner
+    layout={layout}
+    mobileLayout={mobileLayout}
+    tabletLayout={tabletLayout}
+    size={size}
+    className={className}
+  >
     {subtitle && (
       <Styled.Subtitle
         variant={sizes[size].subtitle}
-        as="p"
+        as={headingTag || sizes[size].heading}
         color={subtitleColor}
       >
         {subtitle}
@@ -51,20 +59,20 @@ const TextBanner = ({
       <Typography
         variant={sizes[size].heading}
         color={headingColor}
-        as={headingTag || "div"}
+        as={subtitle ? "p" : headingTag || sizes[size].heading}
       >
         {heading}
       </Typography>
     </Styled.Container>
 
     {children && (
-      <Styled.Description
+      <Typography
         variant={sizes[size].description}
         color={descriptionColor}
         as="div"
       >
         {children}
-      </Styled.Description>
+      </Typography>
     )}
 
     {button && (
@@ -78,6 +86,8 @@ TextBanner.propTypes = {
   children: node,
   subtitle: string,
   layout: oneOf(["left", "center"]),
+  tabletLayout: oneOf(["left", "center"]),
+  mobileLayout: oneOf(["left", "center"]),
   size: oneOf(["small", "medium", "large"]),
   button: node,
   subtitleColor: string,
@@ -90,12 +100,14 @@ TextBanner.propTypes = {
 TextBanner.defaultProps = {
   subtitle: "",
   layout: "left",
+  tabletLayout: "center",
+  mobileLayout: "center",
   size: "medium",
   button: null,
   subtitleColor: theme.colors.primary[500],
   headingColor: theme.colors.gray[600],
   headingTag: null,
-  descriptionColor: theme.colors.gray[500],
+  descriptionColor: theme.colors.gray[600],
   className: null,
   children: null,
 }

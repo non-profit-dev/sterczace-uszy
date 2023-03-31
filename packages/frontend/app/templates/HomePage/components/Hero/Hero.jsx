@@ -41,7 +41,6 @@ const Hero = () => {
             subtitle="Fundacja Sterczące Uszy"
             descriptionColor={theme.colors.neutrals[100]}
             size="large"
-            headingTag="h1"
             button={
               <Button text="Wesprzyj nas" size="large" href="/wsparcie" />
             }
@@ -65,10 +64,14 @@ const Hero = () => {
                   text={title}
                   variant="text"
                   textSize="h4"
-                  as="div"
+                  as="h2"
                 />
               }
-              mobileTitle={<Typography variant="h5">{title}</Typography>}
+              mobileTitle={
+                <Typography variant="h5" as="h2">
+                  {title}
+                </Typography>
+              }
               mobileLayout="left"
               button={
                 <Button

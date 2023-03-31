@@ -26,7 +26,7 @@ const Supporters = ({ data }) => {
             {data.slice(0, 6).map((item) => (
               <Card
                 key={item.name}
-                title={<Title text={item.name} variant="textLine" as="h3" />}
+                title={<Title text={item.name} variant="textLine" />}
                 href={item.url}
                 target="_blank"
                 layout="center"

@@ -26,13 +26,15 @@ const list = [
 
 const Support = () => (
   <Styled.Wrapper>
+    <Styled.ImageBackground />
+
     <Container>
       <Styled.Content>
         <TextBanner
           heading="Potrzebujemy wsparcia"
-          headingTag="h2"
           subtitle="Wolontariat"
-          size="medium"
+          tabletLayout="left"
+          mobileLayout="left"
         >
           Mimo, że z całego serca staramy się pomagać zwierzętom, nie jesteśmy w
           stanie zrobić wszystkiego same. Dlatego szukamy ludzi, którzy chcą

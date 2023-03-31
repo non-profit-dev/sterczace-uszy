@@ -14,6 +14,11 @@ export const Container = styled(ContainerComponent)`
     background-size: 50%;
     background-position: 50% 60%;
   }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    background-size: 60%;
+    background-position: 50% 60%;
+  }
 `
 
 export const Hero = styled.header`
@@ -28,6 +33,7 @@ export const Content = styled.div`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding-left: 0px;
     padding-bottom: 260px;
+    margin: 0 auto;
   }
 `
 
