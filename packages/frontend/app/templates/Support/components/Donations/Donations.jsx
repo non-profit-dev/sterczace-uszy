@@ -47,9 +47,9 @@ const Donations = () => {
                 Fundacja Sterczące Uszy
               </Typography>
               <Typography variant="bodyTitle">
-                ul. Adres 1, 91-666 Poznań
+                ul. Gen. Władysława Sikorskiego 3, 62-030 Luboń
               </Typography>
-              <Typography variant="bodyTitle">NIP 5648753</Typography>
+              <Typography variant="bodyTitle">NIP 7831855392</Typography>
               <Typography variant="bodyTitle">
                 Tytuł przelewu: Wsparcie dla Fundacji
               </Typography>
