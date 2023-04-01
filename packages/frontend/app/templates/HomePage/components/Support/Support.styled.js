@@ -1,16 +1,32 @@
 import styled from "@emotion/styled"
 
 import Illustration from "design-system/components/illustration"
+import TypographyComponent from "design-system/components/typography"
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   background: url("/home/support-background.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    background: none;
+  }
+`
+export const ImageBackground = styled.div`
+  display: none;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: block;
+    background: url("/home/support-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+  }
+
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    background-size: auto 50%;
-    background-position: top;
+    height: 348px;
   }
 `
 
@@ -34,11 +50,11 @@ export const Content = styled.div`
   position: relative;
   z-index: 1;
   max-width: 560px;
-  padding: 110px 0;
+  padding: 100px 0;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 
   &:before {
@@ -57,10 +73,8 @@ export const Content = styled.div`
       ),
       linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 199.9%);
 
-    ${({ theme }) => theme.breakpoints.mobileLg} {
-      height: 50%;
-      background: linear-gradient(0, #ffffff 0%, rgba(255, 255, 255, 0) 30%),
-        linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 199.9%);
+    ${({ theme }) => theme.breakpoints.tabletLg} {
+      content: none;
     }
   }
 `
@@ -70,21 +84,25 @@ export const Item = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 6px;
   text-align: center;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     flex-direction: row;
     text-align: left;
+    gap: 24px;
   }
 `
 
 export const Icon = styled(Illustration)`
   height: 80px;
   width: auto;
-  fill: currentColor;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    height: 30px;
+    height: 40px;
   }
+`
+
+export const Typography = styled(TypographyComponent)`
+  margin: 48px 0 24px 0;
 `

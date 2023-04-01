@@ -22,8 +22,8 @@ const Actions = () => {
           headingColor={theme.colors.gray[600]}
           subtitle="Co robimy?"
           layout="center"
-          descriptionColor={theme.colors.gray[600]}
-          size="medium"
+          tabletLayout="left"
+          mobileLayout="left"
         >
           <Styled.TextContainer>
             <Typography variant="bodyTitle">
@@ -39,6 +39,7 @@ const Actions = () => {
               illustrationName="help"
               layout="center"
               hideIllustrationOnMobile
+              tabletLayout="left"
               mobileLayout="left"
             >
               <List gap={8}>
@@ -58,6 +59,7 @@ const Actions = () => {
               illustrationName="protect"
               layout="center"
               hideIllustrationOnMobile
+              tabletLayout="left"
               mobileLayout="left"
             >
               <List gap={8}>
@@ -77,6 +79,7 @@ const Actions = () => {
               illustrationName="treat"
               layout="center"
               hideIllustrationOnMobile
+              tabletLayout="left"
               mobileLayout="left"
             >
               <List gap={8}>
@@ -97,6 +100,7 @@ const Actions = () => {
           <Button
             text="Sprawdź aktualności"
             href="https://www.facebook.com/sterczaceuszy"
+            target="_blank"
             size="large"
           />
         </Styled.ButtonWrapper>

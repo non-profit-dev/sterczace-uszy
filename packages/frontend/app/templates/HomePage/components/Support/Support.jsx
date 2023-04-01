@@ -1,5 +1,3 @@
-import Typography from "design-system/components/typography"
-import Button from "design-system/components/button"
 import Title from "design-system/components/title"
 import Container from "design-system/components/container"
 
@@ -28,21 +26,24 @@ const list = [
 
 const Support = () => (
   <Styled.Wrapper>
+    <Styled.ImageBackground />
+
     <Container>
       <Styled.Content>
         <TextBanner
           heading="Potrzebujemy wsparcia"
           subtitle="Wolontariat"
-          size="medium"
+          tabletLayout="left"
+          mobileLayout="left"
         >
           Mimo, że z całego serca staramy się pomagać zwierzętom, nie jesteśmy w
           stanie zrobić wszystkiego same. Dlatego szukamy ludzi, którzy chcą
           dołączyć do naszych działań i razem z nami czynić dobro.
         </TextBanner>
 
-        <Typography variant="h5" as="p">
+        <Styled.Typography variant="h5" as="p">
           Aktualnie poszukujemy:
-        </Typography>
+        </Styled.Typography>
 
         <Styled.List>
           {list.map((item) => (
@@ -52,8 +53,6 @@ const Support = () => (
             </Styled.Item>
           ))}
         </Styled.List>
-
-        <Button text="Poznaj szczegóły" href="/jak-pomoc" size="large" />
       </Styled.Content>
     </Container>
   </Styled.Wrapper>

@@ -4,6 +4,7 @@ export const Badge = styled.div`
   display: inline-block;
   padding: 0px 8px;
   border-radius: 4px;
+  font-family: ${({ theme }) => theme.fontFamily};
   background-color: ${({ variant, theme }) => {
     switch (variant) {
       case "gray":

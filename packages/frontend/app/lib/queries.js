@@ -8,6 +8,10 @@ export const GET_SUPPORTING = gql`
         name
         description
         url
+        urlText
+        logo {
+          url
+        }
       }
     }
   }
@@ -22,6 +26,7 @@ export const GET_ANIMALS = gql`
         gender
         age
         excerpt
+        slug
         thumbnail {
           url
         }

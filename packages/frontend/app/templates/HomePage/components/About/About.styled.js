@@ -1,8 +1,27 @@
 import styled from "@emotion/styled"
 
+export const Wrapper = styled.section`
+  padding-top: 280px;
+  padding-bottom: 120px;
+  background-image: url("/home/about-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    padding: 0;
+    background-size: 100% 60%;
+    background-position: bottom;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    background-size: 100% 100%;
+  }
+`
+
 export const Content = styled.div`
   max-width: 1065px;
-  margin: 105px auto 120px;
+  margin: 0 auto;
   display: grid;
   gap: 80px;
   grid-template-columns: auto 1fr;
@@ -16,11 +35,11 @@ export const Content = styled.div`
     flex-direction: column;
     gap: 100px;
     margin: 0;
-    padding: 100px 0;
+    padding: 0 0 100px 0;
   }
 
   ${({ theme }) => theme.breakpoints.tablet} {
-    padding: 60px 0;
+    padding: 0 0 60px;
     gap: 60px;
   }
 `

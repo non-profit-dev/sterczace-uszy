@@ -32,12 +32,19 @@ export const Card = styled.a`
 export const IllustrationContainer = styled.div`
   display: inline-flex;
   justify-content: center;
-  width: 100%;
-  margin: 36px 10px 18px 10px;
+  max-width: ${({ fixedSize }) => (fixedSize ? "120px" : "100%")};
+  margin-left: auto;
+  margin-right: auto;
+  padding: 36px 20px 18px 20px;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     display: ${({ hideIllustrationOnMobile }) =>
       hideIllustrationOnMobile ? `none` : `inline-flex`};
+  }
+
+  svg,
+  img {
+    height: ${({ height }) => `${height}px`};
   }
 `
 
@@ -65,6 +72,7 @@ export const ContentContainer = styled.div`
     layout === "center"
       ? css`
           align-items: center;
+          text-align: center;
         `
       : css`
           align-items: flex-start;
@@ -95,11 +103,25 @@ export const Wrapper = styled.div`
         `
       : css`
           align-items: flex-start;
+          text-align: left;
         `}
   gap: 24px;
   width: 100%;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    ${({ tabletLayout }) =>
+      tabletLayout === "center"
+        ? css`
+            align-items: center;
+            text-align: center;
+          `
+        : css`
+            align-items: flex-start;
+            text-align: left;
+          `}
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     ${({ mobileLayout }) =>
       mobileLayout === "center"
         ? css`
@@ -108,12 +130,13 @@ export const Wrapper = styled.div`
           `
         : css`
             align-items: flex-start;
+            text-align: left;
           `}
   }
 `
 
 export const ButtonWrapper = styled.div`
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     ${({ hideButtonOnMobile }) =>
       hideButtonOnMobile
         ? css`
@@ -122,5 +145,26 @@ export const ButtonWrapper = styled.div`
         : css`
             display: block;
           `}
+  }
+`
+
+export const Illustration = styled.img`
+  height: 100px;
+`
+
+export const MobileTitle = styled.div`
+  display: none;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+`
+
+export const Title = styled.div`
+  width: 100%;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: ${({ hideOnMobile }) => (hideOnMobile ? `none` : `block`)};
   }
 `
