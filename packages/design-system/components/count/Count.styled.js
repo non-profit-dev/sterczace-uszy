@@ -2,37 +2,37 @@ import styled from "@emotion/styled"
 
 const sizes = {
   xsmall: {
-    desktop: { fontSize: "48px" },
-    tablet: { fontSize: "44px" },
-    mobile: { fontSize: "40px" },
+    desktop: "48px",
+    tablet: "44px",
+    mobile: "40px",
   },
   small: {
-    desktop: { fontSize: "72px" },
-    tablet: { fontSize: "56px" },
-    mobile: { fontSize: "40px" },
+    desktop: "72px",
+    tablet: "56px",
+    mobile: "40px",
   },
   medium: {
-    desktop: { fontSize: "110px" },
-    tablet: { fontSize: "90px" },
-    mobile: { fontSize: "60px" },
+    desktop: "110px",
+    tablet: "90px",
+    mobile: "60px",
   },
   large: {
-    desktop: { fontSize: "140px" },
-    tablet: { fontSize: "100px" },
-    mobile: { fontSize: "70px" },
+    desktop: "140px",
+    tablet: "100px",
+    mobile: "70px",
   },
 }
 
 export const Count = styled.p(
   ({ size, variant, theme }) => `
- font-size : ${sizes[size].desktop.fontSize};
+ font-size : ${sizes[size].desktop};
 
   ${theme.breakpoints.tabletLg} {
-    font-size: ${sizes[size].tablet.fontSize};
+    font-size: ${sizes[size].tablet};
   }
 
   ${theme.breakpoints.mobileLg} {
-    font-size: ${sizes[size].mobile.fontSize};
+    font-size: ${sizes[size].mobile};
   }
 
   text-align: center;
