@@ -1,9 +1,9 @@
-import AdoptionPage from "../templates/Adoption"
+import AdoptionPage from "../../templates/Adoption"
 
-import { animalsType } from "../lib/types"
+import { animalsType } from "../../lib/types"
 
-import client from "../lib/api"
-import { GET_ANIMALS } from "../lib/queries"
+import client from "../../lib/api"
+import { GET_ANIMALS } from "../../lib/queries"
 
 const Adoption = ({ animals }) => <AdoptionPage animals={animals} />
 

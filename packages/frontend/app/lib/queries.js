@@ -22,6 +22,9 @@ export const GET_ANIMALS = gql`
     animalCollection(where: { adopted: false }) {
       total
       items {
+        sys {
+          id
+        }
         name
         gender
         age
@@ -39,6 +42,23 @@ export const GET_ADOPTED_ANIMALS = gql`
   query GetAdoptedAnimals {
     animalCollection(where: { adopted: true }) {
       total
+    }
+  }
+`
+
+export const GET_ANIMAL = gql`
+  query GetAnimal($slug: String) {
+    animalCollection(where: { slug: $slug }) {
+      items {
+        slug
+        name
+        gender
+        age
+        excerpt
+        thumbnail {
+          url
+        }
+      }
     }
   }
 `
