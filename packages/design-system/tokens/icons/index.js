@@ -22,6 +22,7 @@ import Menu from "./Menu.svg"
 import FemaleAnimal from "./FemaleAnimal.svg"
 import MaleAnimal from "./MaleAnimal.svg"
 import HeartFilled from "./HeartFilled.svg"
+import DoubleVector from "./DoubleVector.svg"
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -32,6 +33,7 @@ export const icons = {
   chevronUp: ChevronUp,
   chevronDown: ChevronDown,
   close: Close,
+  doubleVector: DoubleVector,
   download: Download,
   facebook: Facebook,
   instagram: Instagram,
