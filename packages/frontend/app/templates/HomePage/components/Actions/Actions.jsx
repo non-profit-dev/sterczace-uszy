@@ -24,7 +24,6 @@ const Actions = () => {
           layout="center"
           tabletLayout="left"
           mobileLayout="left"
-          descriptionColor={theme.colors.gray[600]}
         >
           <Styled.TextContainer>
             <Typography variant="bodyTitle">

@@ -68,7 +68,3 @@ export const ButtonContainer = styled.div`
 export const Subtitle = styled(Typography)`
   text-transform: uppercase;
 `
-
-export const Description = styled(Typography)`
-  opacity: 0.9;
-`
