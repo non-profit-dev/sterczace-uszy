@@ -26,18 +26,14 @@ const sizes = {
 export const Count = styled.p(
   ({ size, variant, theme }) => `
  font-size : ${sizes[size].desktop};
-
   ${theme.breakpoints.tabletLg} {
     font-size: ${sizes[size].tablet};
   }
-
   ${theme.breakpoints.mobileLg} {
     font-size: ${sizes[size].mobile};
   }
-
   text-align: center;
   display: inline-flex;
-  align-items: ${variant === "title" ? `center` : `flex-end`};
   font-weight: 900;
   line-height: 74%;
   font-family: "Poppins";
