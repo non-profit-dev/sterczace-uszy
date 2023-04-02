@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import { Image } from "design-system/components/image/Image.styled"
 
 export const Wrapper = styled.section`
   padding-bottom: 120px;
@@ -8,7 +9,6 @@ export const Wrapper = styled.section`
   background-position: center;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    background-image: url("/adoption/tablet-home-found-background.png");
     background-size: 100% 60%;
     background-position: bottom;
     padding-bottom: 100px;
@@ -48,13 +48,10 @@ export const Content = styled.div`
   }
 `
 
-export const Image = styled.img`
+export const Img = styled(Image)`
   max-width: 425px;
-  width: 100%;
   min-height: 570px;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
+  object-position: 80% 50%;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     border-radius: unset;

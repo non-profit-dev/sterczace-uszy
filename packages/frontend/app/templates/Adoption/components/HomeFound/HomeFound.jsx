@@ -26,7 +26,7 @@ const HomeFound = () => {
           </TextBanner>
         </Styled.TopContainer>
         <Styled.Content>
-          <Styled.Image src="../adoption/home-found.png" alt="" />
+          <Styled.Img src="../adoption/home-found.png" alt="" />
           <TextBanner
             heading="Do trzech razy sztuka"
             headingColor={theme.colors.gray[600]}
