@@ -1,7 +1,6 @@
 import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
-import Typography from "design-system/components/typography"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 import Achievements from "./components/AboutUs/Achievements"
@@ -38,7 +37,7 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
 
     <Styled.Main>
       <AboutUs />
-      <Values/>
+      <Values />
       <Container>
         <Achievements
           supportingNumber={supporting.total}

@@ -1,8 +1,8 @@
 import { useTheme } from "@emotion/react"
 import Typography from "design-system/components/typography"
-import * as Styled from "./Values.styled"
-import Feature from "design-system/patterns/Feature"
+import Feature from "design-system/patterns/feature"
 import List from "design-system/components/list"
+import * as Styled from "./Values.styled"
 
 const Values = () => {
   const theme = useTheme()
@@ -18,15 +18,15 @@ const Values = () => {
         />
         <Styled.TextWrapper>
           <Typography variant="bodyTitle">
-            Stawiamy na dobre relacje i prowadzimy otwarty dialog z rodzinami
-            adopcyjnymi. Angażujemy się w nasze działania z wielką pasją, dbając
-            o dobre warunki i opiekę dla każdego zwierzaka, którego ratujemy.
+            Stawiamy na dobre relacje i prowadzimy otwarty dialog z rodzinami
+            adopcyjnymi. Angażujemy się w nasze działania z wielką pasją, dbając
+            o dobre warunki i opiekę dla każdego zwierzaka, którego ratujemy.
           </Typography>
         </Styled.TextWrapper>
         <Styled.TextBottomWrapper>
           <Typography variant="bodyTitle">
             <strong>
-              Wartości stanowią podstawę naszej fundacji i kierują naszymi
+              Wartości stanowią podstawę naszej fundacji i kierują naszymi
               działaniami.
             </strong>
           </Typography>
