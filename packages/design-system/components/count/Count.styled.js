@@ -24,7 +24,7 @@ const sizes = {
 }
 
 export const Count = styled.p(
-  ({ size, variant, theme }) => `
+  ({ size, theme }) => `
  font-size : ${sizes[size].desktop};
   ${theme.breakpoints.tabletLg} {
     font-size: ${sizes[size].tablet};
@@ -33,9 +33,11 @@ export const Count = styled.p(
     font-size: ${sizes[size].mobile};
   }
   text-align: center;
+  align-items: flex-end;
   display: inline-flex;
   font-weight: 900;
   font-family: 'Montserrat';
+  line-height: 74%;
   color: ${theme.colors.primary[500]};
   margin: 0;
   padding: 0;
