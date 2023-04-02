@@ -18,7 +18,7 @@ const Donations = () => {
   return (
     <Container as="section" id="wplaty">
       <Styled.Content>
-        <div>
+        <Styled.TextWrapper>
           <TextBanner
             heading="Pomóż nam pomagać"
             subtitle="Wpłaty"
@@ -75,7 +75,7 @@ const Donations = () => {
               )}
             </Typography>
           </Styled.Box>
-        </div>
+        </Styled.TextWrapper>
 
         <Styled.Image src="/support/donations-image.png" />
       </Styled.Content>

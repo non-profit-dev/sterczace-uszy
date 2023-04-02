@@ -5,13 +5,12 @@ import Typography from "design-system/components/typography"
 
 export const Content = styled.div`
   padding-top: 120px;
-  display: grid;
+  display: flex;
   gap: 70px;
-  grid-template-columns: 2fr 1fr;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding-top: 60px;
-    grid-template-columns: auto;
+    padding-top: 0;
+    flex-direction: column;
   }
 `
 
@@ -30,9 +29,29 @@ export const Box = styled.div`
   }
 `
 
-export const Image = styled(ImageComponent)`
+export const TextWrapper = styled.div`
+  width: 60%;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: none;
+    width: 100%;
+    order: 1;
+  }
+`
+
+export const Image = styled(ImageComponent)`
+  width: 35%;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 600px;
+    border-radius: 0;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    height: 320px;
   }
 `
 
