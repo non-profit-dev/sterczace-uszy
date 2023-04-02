@@ -22,9 +22,11 @@ export const Wrapper = styled.section`
 
 export const TopContainer = styled.div`
   padding: 120px 0 60px;
+  max-width: 794px;
 
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 100px 0 60px;
+    max-width: 516px;
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
