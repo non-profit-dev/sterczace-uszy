@@ -1,11 +1,11 @@
 import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
-import Typography from "design-system/components/typography"
 import CtaBanner from "design-system/patterns/ctaBanner"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 import HomeFound from "./components/HomeFound/HomeFound"
+import Animals from "./components/Animals"
 
 import Page from "../Page"
 
@@ -33,9 +33,7 @@ const Adoption = ({ animals }) => (
 
     <Styled.Main>
       <Container>
-        <Typography variant="h4" as="h3">
-          ♥️ {animals.total} Pomocnych serc
-        </Typography>
+        <Animals data={animals.items} />
       </Container>
       <HomeFound />
       <CtaBanner
