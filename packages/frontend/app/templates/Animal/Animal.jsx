@@ -33,41 +33,45 @@ const Animal = ({ data }) => (
 
     <Styled.Main>
       <Container>
-        <Typography variant="h3">imię: {data.name}</Typography>
-        <Typography variant="bodyTitle">krótki opis: {data.excerpt}</Typography>
-        <Typography variant="bodyTitle">waga: {data.weight}</Typography>
+        <Typography variant="h3">imię: {data?.name}</Typography>
         <Typography variant="bodyTitle">
-          waga docelowa: {data.targetWeight}
+          krótki opis: {data?.excerpt}
         </Typography>
-        <Typography variant="bodyTitle">wiek: {data.age}</Typography>
-        <Typography variant="bodyTitle">płeć: {data.gender}</Typography>
+        <Typography variant="bodyTitle">waga: {data?.weight}</Typography>
+        <Typography variant="bodyTitle">
+          waga docelowa: {data?.targetWeight}
+        </Typography>
+        <Typography variant="bodyTitle">wiek: {data?.age}</Typography>
+        <Typography variant="bodyTitle">płeć: {data?.gender}</Typography>
         <Typography variant="bodyTitle">zdrowie:</Typography>
-        {data.health.map((item) => (
+        {data?.health?.map((item) => (
           <Typography variant="bodyTitle" key={item}>
             - {item}
           </Typography>
         ))}
         <Typography variant="bodyTitle">zachowanie:</Typography>
-        {data.behavior.map((item) => (
+        {data?.behavior?.map((item) => (
           <Typography variant="bodyTitle" key={item}>
             - {item}
           </Typography>
         ))}
         <Typography variant="bodyTitle">dodatkowe info:</Typography>
-        {data.additionalInfo.map((item) => (
+        {data?.additionalInfo?.map((item) => (
           <Typography variant="bodyTitle" key={item}>
             - {item}
           </Typography>
         ))}
         <Typography variant="bodyTitle">historia:</Typography>
-        {documentToReactComponents(data.story.json)}
+        {data.story && documentToReactComponents(data.story.json)}
         <Typography variant="bodyTitle">zachowanie:</Typography>
-        {documentToReactComponents(data.behaviorStory.json)}
+        {data.behaviorStory &&
+          documentToReactComponents(data.behaviorStory.json)}
         <Typography variant="bodyTitle">opis zdrowia:</Typography>
-        {documentToReactComponents(data.healthStory.json)}
+        {data.healthStory && documentToReactComponents(data.healthStory.json)}
         <Typography variant="bodyTitle">życie z innymi:</Typography>
-        {documentToReactComponents(data.socialBehavior.json)}
-        <img src={data.thumbnail.url} alt="" width="400" />
+        {data.socialBehavior &&
+          documentToReactComponents(data.socialBehavior.json)}
+        <img src={data?.thumbnail.url} alt="" width="400" />
       </Container>
     </Styled.Main>
 
