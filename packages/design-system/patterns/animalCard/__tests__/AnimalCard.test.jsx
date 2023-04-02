@@ -30,7 +30,10 @@ describe(`AnimalCard`, () => {
 
     expect(screen.getByText(animal.name)).toBeInTheDocument()
     expect(screen.getByText(animal.excerpt)).toBeInTheDocument()
-    expect(screen.getByRole(`link`)).toHaveAttribute(`href`, `/${animal.slug}`)
+    expect(screen.getByRole(`link`)).toHaveAttribute(
+      `href`,
+      `/do-adopcji/${animal.slug}`
+    )
   })
 
   describe(`- getAnimalType`, () => {
