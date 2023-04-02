@@ -61,7 +61,7 @@ export const Banner = styled(TextBanner)`
 
 export const FeatureWrapper = styled.div`
   grid-row: 3;
-  padding-top: 15px;
+  padding-top: 30px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding-left: 20px;
     padding-right: 10px;

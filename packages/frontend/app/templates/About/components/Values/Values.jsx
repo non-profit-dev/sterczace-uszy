@@ -7,6 +7,33 @@ import * as Styled from "./Values.styled"
 const Values = () => {
   const theme = useTheme()
 
+  const values = [
+    {
+      heading: "Miłość",
+      description:
+        "Kieruje naszą pasją i zaangażowaniem w ratowanie zwierząt, a każdego podopiecznego traktujemy z uczuciem i troską.",
+      icon: "love",
+    },
+    {
+      heading: "Odpowiedzialność",
+      description:
+        "Ponosimy pełną odpowiedzialność za wszystkie nasze działania i decyzje.",
+      icon: "responsibility",
+    },
+    {
+      heading: "Zaufanie",
+      description:
+        "Budujemy zaufanie poprzez uczciwe i przejrzyste działanie, zawsze trzymając się naszych wartości.",
+      icon: "transparency",
+    },
+    {
+      heading: "Transparentność",
+      description:
+        "Jesteśmy otwarte i uczciwe wobec naszych darczyńców, wolontariuszy, rodzin adopcyjnych i społeczności.",
+      icon: "trust",
+    },
+  ]
+
   return (
     <Styled.ContainerSection as="section" size="medium">
       <Styled.Wrapper>
@@ -31,27 +58,10 @@ const Values = () => {
         </Styled.Banner>
         <Styled.Img alt="dog for values section" src="../about/values.png" />
         <Styled.FeatureWrapper>
-          <List gap={30}>
-            <Feature
-              description="Kieruje naszą pasją i zaangażowaniem w ratowanie zwierząt, a każdego podopiecznego traktujemy z uczuciem i troską."
-              heading="Miłość"
-              icon="love"
-            />
-            <Feature
-              description="Ponosimy pełną odpowiedzialność za wszystkie nasze działania i decyzje."
-              heading="Odpowiedzialność"
-              icon="responsibility"
-            />
-            <Feature
-              description="Budujemy zaufanie poprzez uczciwe i przejrzyste działanie, zawsze trzymając się naszych wartości."
-              heading="Zaufanie"
-              icon="transparency"
-            />
-            <Feature
-              description="Jesteśmy otwarte i uczciwe wobec naszych darczyńców, wolontariuszy, rodzin adopcyjnych i społeczności."
-              heading="Transparentność"
-              icon="trust"
-            />
+          <List gap={40}>
+            {values.map(({ heading, description, icon }) => (
+              <Feature key={heading} description={description} icon={icon} />
+            ))}
           </List>
         </Styled.FeatureWrapper>
       </Styled.Wrapper>
