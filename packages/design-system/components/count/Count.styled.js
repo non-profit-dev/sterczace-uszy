@@ -1,23 +1,45 @@
 import styled from "@emotion/styled"
 
-export const Count = styled.p`
+const sizes = {
+  xsmall: {
+    desktop: "48px",
+    tablet: "44px",
+    mobile: "40px",
+  },
+  small: {
+    desktop: "72px",
+    tablet: "56px",
+    mobile: "40px",
+  },
+  medium: {
+    desktop: "110px",
+    tablet: "90px",
+    mobile: "60px",
+  },
+  large: {
+    desktop: "140px",
+    tablet: "100px",
+    mobile: "70px",
+  },
+}
+
+export const Count = styled.p(
+  ({ size, theme }) => `
+ font-size : ${sizes[size].desktop};
+  ${theme.breakpoints.tabletLg} {
+    font-size: ${sizes[size].tablet};
+  }
+  ${theme.breakpoints.mobileLg} {
+    font-size: ${sizes[size].mobile};
+  }
   text-align: center;
+  align-items: flex-end;
   display: inline-flex;
-  align-items: ${({ variant }) =>
-    variant === "title" ? `center` : `flex-end`};
   font-weight: 900;
-  font-size: ${({ variant }) => (variant === "title" ? `48px` : `110px`)};
-  line-height: 81px;
-  font-family: "Poppins";
-  color: ${({ theme }) => theme.colors.primary[500]};
+  font-family: 'Montserrat';
+  line-height: 74%;
+  color: ${theme.colors.primary[500]};
   margin: 0;
   padding: 0;
-  ${({ theme }) => theme.breakpoints.tablet} {
-    font-size: ${({ variant }) => (variant === "title" ? `48px` : `94px`)};
-    line-height: 70px;
-  }
-  ${({ theme }) => theme.breakpoints.mobile} {
-    font-size: ${({ variant }) => (variant === "title" ? `48px` : `70px`)};
-    line-height: 52px;
-  }
 `
+)
