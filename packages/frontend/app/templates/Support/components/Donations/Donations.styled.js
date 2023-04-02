@@ -15,7 +15,7 @@ export const Content = styled.div`
 `
 
 export const Box = styled.div`
-  max-width: 460px;
+  max-width: 465px;
   margin-top: 40px;
   padding: 20px;
   display: flex;
