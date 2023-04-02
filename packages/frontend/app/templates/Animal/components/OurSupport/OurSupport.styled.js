@@ -33,7 +33,6 @@ export const ContainerSection = styled(Container)`
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     margin: 60px auto;
-    padding: 0;
   }
 `
 
