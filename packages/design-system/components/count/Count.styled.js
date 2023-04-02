@@ -36,7 +36,7 @@ export const Count = styled.p(
   display: inline-flex;
   font-weight: 900;
   line-height: 74%;
-  font-family: "Poppins";
+  font-family: 'Montserrat';
   color: ${theme.colors.primary[500]};
   margin: 0;
   padding: 0;
