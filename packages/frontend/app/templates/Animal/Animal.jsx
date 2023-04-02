@@ -15,7 +15,7 @@ import * as Styled from "./Animal.styled"
 
 const Animal = ({ data }) => (
   <Page title={`${data.name} - Nasi podopieczni`}>
-    <Banner>
+    <Styled.Banner>
       <Banner
         heading="Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj"
         button={
@@ -27,7 +27,7 @@ const Animal = ({ data }) => (
           />
         }
       />
-    </Banner>
+    </Styled.Banner>
 
     <Navigation />
 
