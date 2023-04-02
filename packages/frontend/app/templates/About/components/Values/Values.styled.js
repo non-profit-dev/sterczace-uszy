@@ -30,7 +30,7 @@ export const Img = styled(Image)`
   width: 80%;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 100vw;
-    height: 130vw;
+    height: 150vw;
     border-radius: 0;
     grid-row: 1;
   }
