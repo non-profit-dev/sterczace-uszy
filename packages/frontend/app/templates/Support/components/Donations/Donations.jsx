@@ -37,7 +37,7 @@ const Donations = () => {
 
           <Styled.Box>
             <Title
-              text="Przelew jednorazowy lub zlecenie stałe"
+              text="Przelew lub zlecenie stałe"
               iconStart="donation"
               variant="text"
               textSize="h5"
