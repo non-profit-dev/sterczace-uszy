@@ -30,7 +30,7 @@ export const Img = styled(Image)`
   width: 80%;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 100vw;
-    height: 90%;
+    height: 130vw;
     border-radius: 0;
     grid-row: 1;
   }
@@ -50,11 +50,12 @@ export const TextBottomWrapper = styled.div`
 export const Banner = styled(TextBanner)`
   grid-column: 1 / 3;
   grid-row: 1;
+  padding-top: 20px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    grid-column: 1;
+    grid-column: 1 / 3;
     grid-row: 2;
     padding-left: 20px;
-    padding-right: 26px;
+    padding-right: 20px;
     max-width: 100%;
   }
 `
