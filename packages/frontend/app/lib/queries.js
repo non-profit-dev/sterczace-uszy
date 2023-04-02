@@ -54,9 +54,30 @@ export const GET_ANIMAL = gql`
         name
         gender
         age
+        height
+        weight
+        targetWeight
         excerpt
+        additionalInfo
+        behavior
+        health
         thumbnail {
           url
+        }
+        story {
+          json
+        }
+        behaviorStory {
+          json
+        }
+        socialBehavior {
+          json
+        }
+        healthStory {
+          json
+        }
+        important {
+          json
         }
       }
     }

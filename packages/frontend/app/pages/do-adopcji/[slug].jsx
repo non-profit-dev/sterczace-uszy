@@ -2,8 +2,8 @@ import AnimalPage from "../../templates/Animal"
 
 import client from "../../lib/api"
 import { GET_ANIMALS, GET_ANIMAL } from "../../lib/queries"
+import { animalType } from "../../lib/types"
 
-// eslint-disable-next-line react/prop-types
 const Animal = ({ data }) => <AnimalPage data={data} />
 
 export const getStaticProps = async ({ params }) => {
@@ -31,6 +31,10 @@ export const getStaticPaths = async () => {
     })),
     fallback: false,
   }
+}
+
+Animal.propTypes = {
+  data: animalType.isRequired,
 }
 
 export default Animal

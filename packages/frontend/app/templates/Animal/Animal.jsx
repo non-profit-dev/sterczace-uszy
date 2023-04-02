@@ -1,3 +1,5 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+
 import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
@@ -5,11 +7,12 @@ import Typography from "design-system/components/typography"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 
+import { animalType } from "../../lib/types"
+
 import Page from "../Page"
 
 import * as Styled from "./Animal.styled"
 
-// eslint-disable-next-line react/prop-types
 const Animal = ({ data }) => (
   <Page title={`${data.name} - Nasi podopieczni`}>
     <Banner>
@@ -30,8 +33,40 @@ const Animal = ({ data }) => (
 
     <Styled.Main>
       <Container>
-        <Typography variant="h1">{data.name}</Typography>
-        <Typography variant="pLarge">{data.excerpt}</Typography>
+        <Typography variant="h3">imię: {data.name}</Typography>
+        <Typography variant="bodyTitle">krótki opis: {data.excerpt}</Typography>
+        <Typography variant="bodyTitle">waga: {data.weight}</Typography>
+        <Typography variant="bodyTitle">
+          waga docelowa: {data.targetWeight}
+        </Typography>
+        <Typography variant="bodyTitle">wiek: {data.age}</Typography>
+        <Typography variant="bodyTitle">płeć: {data.gender}</Typography>
+        <Typography variant="bodyTitle">zdrowie:</Typography>
+        {data.health.map((item) => (
+          <Typography variant="bodyTitle" key={item}>
+            - {item}
+          </Typography>
+        ))}
+        <Typography variant="bodyTitle">zachowanie:</Typography>
+        {data.behavior.map((item) => (
+          <Typography variant="bodyTitle" key={item}>
+            - {item}
+          </Typography>
+        ))}
+        <Typography variant="bodyTitle">dodatkowe info:</Typography>
+        {data.additionalInfo.map((item) => (
+          <Typography variant="bodyTitle" key={item}>
+            - {item}
+          </Typography>
+        ))}
+        <Typography variant="bodyTitle">historia:</Typography>
+        {documentToReactComponents(data.story.json)}
+        <Typography variant="bodyTitle">zachowanie:</Typography>
+        {documentToReactComponents(data.behaviorStory.json)}
+        <Typography variant="bodyTitle">opis zdrowia:</Typography>
+        {documentToReactComponents(data.healthStory.json)}
+        <Typography variant="bodyTitle">życie z innymi:</Typography>
+        {documentToReactComponents(data.socialBehavior.json)}
         <img src={data.thumbnail.url} alt="" width="400" />
       </Container>
     </Styled.Main>
@@ -39,5 +74,9 @@ const Animal = ({ data }) => (
     <Footer />
   </Page>
 )
+
+Animal.propTypes = {
+  data: animalType.isRequired,
+}
 
 export default Animal
