@@ -11,6 +11,8 @@ import { animalType } from "../../lib/types"
 
 import Page from "../Page"
 
+import Details from "./components/Details"
+
 import * as Styled from "./Animal.styled"
 
 const Animal = ({ data }) => (
@@ -33,34 +35,16 @@ const Animal = ({ data }) => (
 
     <Styled.Main>
       <Container>
-        <Typography variant="h3">imię: {data?.name}</Typography>
-        <Typography variant="bodyTitle">
-          krótki opis: {data?.excerpt}
-        </Typography>
-        <Typography variant="bodyTitle">waga: {data?.weight}</Typography>
-        <Typography variant="bodyTitle">
-          waga docelowa: {data?.targetWeight}
-        </Typography>
-        <Typography variant="bodyTitle">wiek: {data?.age}</Typography>
-        <Typography variant="bodyTitle">płeć: {data?.gender}</Typography>
-        <Typography variant="bodyTitle">zdrowie:</Typography>
-        {data?.health?.map((item) => (
-          <Typography variant="bodyTitle" key={item}>
-            - {item}
-          </Typography>
-        ))}
-        <Typography variant="bodyTitle">zachowanie:</Typography>
-        {data?.behavior?.map((item) => (
-          <Typography variant="bodyTitle" key={item}>
-            - {item}
-          </Typography>
-        ))}
-        <Typography variant="bodyTitle">dodatkowe info:</Typography>
-        {data?.additionalInfo?.map((item) => (
-          <Typography variant="bodyTitle" key={item}>
-            - {item}
-          </Typography>
-        ))}
+        <Details
+          gender={data.gender}
+          age={data.age}
+          weight={data.weight}
+          targetWeight={data.targetWeight}
+          health={data?.health}
+          behavior={data?.behavior}
+          info={data?.info}
+          imageSrc={data?.thumbnail?.url}
+        />
         <Typography variant="bodyTitle">historia:</Typography>
         {data.story && documentToReactComponents(data.story.json)}
         <Typography variant="bodyTitle">zachowanie:</Typography>
@@ -71,7 +55,6 @@ const Animal = ({ data }) => (
         <Typography variant="bodyTitle">życie z innymi:</Typography>
         {data.socialBehavior &&
           documentToReactComponents(data.socialBehavior.json)}
-        <img src={data?.thumbnail.url} alt="" width="400" />
       </Container>
     </Styled.Main>
 
