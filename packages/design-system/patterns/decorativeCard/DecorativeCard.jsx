@@ -9,7 +9,7 @@ import Typography from "../../components/typography/Typography"
 const DecorativeCard = ({ title, illustrationName, count }) => (
   <Styled.DecorativeCard>
     <Styled.Content>
-      <Count count={count} variant="decorative" />
+      <Count count={count} size="medium" />
       <Styled.Illustration>
         <Illustration name={illustrationName} size="large" />
       </Styled.Illustration>
