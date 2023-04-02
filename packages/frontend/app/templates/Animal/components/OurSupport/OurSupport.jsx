@@ -69,7 +69,7 @@ const OurSupport = () => (
         </Styled.TextWrapper>
         <Styled.Img
           alt="pet relation"
-          src="../../single-animal/pet-realation.png"
+          src="../../single-animal/pet-relation.png"
         />
       </Styled.Wrapper>
     </Styled.ContainerSection>
