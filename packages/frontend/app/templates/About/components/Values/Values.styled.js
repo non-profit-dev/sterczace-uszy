@@ -43,7 +43,7 @@ export const TextBottomWrapper = styled.div`
   padding-bottom: 30px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding-top: 20px;
-    max-width: 80%;
+    max-width: 90%;
   }
 `
 
