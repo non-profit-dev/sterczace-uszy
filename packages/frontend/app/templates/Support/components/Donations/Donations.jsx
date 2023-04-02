@@ -47,7 +47,9 @@ const Donations = () => {
                 Fundacja Sterczące Uszy
               </Typography>
               <Typography variant="bodyTitle">
-                ul. Gen. Władysława Sikorskiego 3, 62-030 Luboń
+                ul. Gen. Władysława Sikorskiego 3,
+                <br />
+                62-030 Luboń
               </Typography>
               <Typography variant="bodyTitle">NIP 7831855392</Typography>
               <Typography variant="bodyTitle">
