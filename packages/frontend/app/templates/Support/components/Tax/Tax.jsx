@@ -43,8 +43,9 @@ const Tax = () => {
               mobileLayout="left"
             >
               Możesz wesprzeć działania naszej Fundacji przekazując 1,5% swojego
-              podatku na konto Fundacji. Aby to zrobić w trakcie wypełniania
-              swojego zeznania podatkowego wybierz:
+              podatku na konto Fundacji. <br />
+              Aby to zrobić w trakcie wypełniania swojego zeznania podatkowego
+              wybierz:
             </TextBanner>
 
             <Styled.Info>
