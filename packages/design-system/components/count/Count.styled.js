@@ -35,7 +35,6 @@ export const Count = styled.p(
   text-align: center;
   display: inline-flex;
   font-weight: 900;
-  line-height: 74%;
   font-family: 'Montserrat';
   color: ${theme.colors.primary[500]};
   margin: 0;
