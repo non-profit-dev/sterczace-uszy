@@ -35,7 +35,7 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => {
   return (
     <Card
       bgColor={theme.colors.neutrals[100]}
-      href={`/${slug}`}
+      href={`/do-adopcji/${slug}`}
       className={className}
       imageSrc={image}
       imageAlt={name}
