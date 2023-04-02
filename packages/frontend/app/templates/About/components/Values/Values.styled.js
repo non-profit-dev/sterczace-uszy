@@ -17,10 +17,10 @@ export const Wrapper = styled.div`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    margin-bottom: 80px;
+    margin-bottom: 10px;
     grid-template-columns: 1fr;
   }
 `
@@ -30,38 +30,19 @@ export const Img = styled(Image)`
   width: 80%;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 100vw;
+    height: 90%;
     border-radius: 0;
     grid-row: 1;
-  }
-`
-export const TextWrapper = styled.div`
-  grid-column: 1 / 3;
-  grid-row: 2;
-  padding-bottom: 50px;
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding-top: 250px;
-    padding-left: 20px;
-    padding-right: 10px;
-  }
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    grid-row: 3;
-    padding-top: 20px;
   }
 `
 
 export const TextBottomWrapper = styled.div`
   grid-column: 1 / 3;
-  grid-row: 2;
-  padding-top: 70px;
+  grid-row: 1;
+  padding-top: 30px;
   padding-bottom: 30px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding-left: 20px;
-    padding-right: 56px;
-    padding-top: 350px;
-  }
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    grid-row: 4;
-    padding-top: 5px;
+    padding-top: 20px;
   }
 `
 
@@ -71,18 +52,16 @@ export const Banner = styled(TextBanner)`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     grid-column: 1;
     grid-row: 2;
-    margin-top: 50px;
     padding-left: 20px;
-    padding-right: 56px;
+    padding-right: 26px;
   }
 `
 
-export const Featurecomp = styled.div`
+export const FeatureWrapper = styled.div`
   grid-row: 3;
-  padding-top: 30px;
+  padding-top: 15px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding-left: 20px;
-    padding-right: 6px;
-    grid-row: 6;
+    padding-right: 10px;
   }
 `
