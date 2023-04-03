@@ -4,6 +4,11 @@ export const Section = styled.section`
   display: grid;
   grid-template-columns: 50% 40%;
   gap: 96px;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    grid-template-columns: auto;
+    gap: 40px;
+  }
 `
 
 export const Feature = styled.div`
@@ -14,7 +19,7 @@ export const Feature = styled.div`
 `
 
 export const Tabs = styled.div`
-  margin-top: 20px;
+  margin-top: 40px;
 `
 
 export const Content = styled.div`

@@ -29,7 +29,7 @@ export const Content = styled.div`
 
 export const Tab = styled.button`
   width: 100%;
-  padding: 10px 50px;
+  padding: 10px 10px;
   cursor: pointer;
   white-space: nowrap;
   background: ${({ theme, active }) =>

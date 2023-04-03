@@ -86,7 +86,7 @@ const Details = ({
   return (
     <Styled.Section>
       <div>
-        <img src={imageSrc} alt="" width="600" />
+        <img src={imageSrc} alt="" width="100%" />
       </div>
 
       <div>
