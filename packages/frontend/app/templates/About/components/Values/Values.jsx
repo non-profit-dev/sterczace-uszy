@@ -35,7 +35,7 @@ const Values = () => {
   ]
 
   return (
-    <Styled.ContainerSection as="section" size="medium">
+    <Styled.ContainerSection as="section">
       <Styled.Wrapper>
         <Styled.Banner
           heading="Pomagamy kierując się wartościami"
