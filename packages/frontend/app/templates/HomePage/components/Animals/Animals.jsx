@@ -28,12 +28,12 @@ const Animals = ({ data }) => (
       <Styled.CardsWrapper>
         {data
           .slice(0, 6)
-          .map(({ name, age2, gender, excerpt, thumbnail, slug }) => (
+          .map(({ name, age, gender, excerpt, thumbnail, slug }) => (
             <Styled.CardWrapper key={name}>
               <AnimalCard
                 key={name}
                 name={name}
-                age={age2}
+                age={age}
                 gender={gender}
                 excerpt={excerpt}
                 slug={slug}
@@ -47,11 +47,11 @@ const Animals = ({ data }) => (
         <Slider>
           {data
             .slice(0, 6)
-            .map(({ name, age2, gender, excerpt, thumbnail, slug }) => (
+            .map(({ name, age, gender, excerpt, thumbnail, slug }) => (
               <AnimalCard
                 key={name}
                 name={name}
-                age={age2}
+                age={age}
                 gender={gender}
                 excerpt={excerpt}
                 slug={slug}

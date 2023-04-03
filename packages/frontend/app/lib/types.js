@@ -4,7 +4,7 @@ export const animalType = shape({
   slug: string,
   name: string,
   gender: string,
-  age: number,
+  age: string,
   excerpt: string,
   height: number,
   weight: number,
@@ -20,7 +20,7 @@ export const animalsType = shape({
       slug: string,
       name: string,
       gender: string,
-      age: number,
+      age: string,
       excerpt: string,
     })
   ),

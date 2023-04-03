@@ -25,12 +25,12 @@ const Animals = ({ data }) => (
       </Styled.ContentContainer>
 
       <Styled.CardsWrapper>
-        {data.map(({ name, age2, gender, excerpt, thumbnail, slug }) => (
+        {data.map(({ name, age, gender, excerpt, thumbnail, slug }) => (
           <Styled.CardWrapper key={name}>
             <AnimalCard
               key={name}
               name={name}
-              age={age2}
+              age={age}
               gender={gender}
               excerpt={excerpt}
               slug={slug}
