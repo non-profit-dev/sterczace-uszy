@@ -1,10 +1,9 @@
-import { useMemo, useState } from "react"
-import { string, number, arrayOf, shape } from "prop-types"
+import { useMemo } from "react"
+import { string, number, arrayOf } from "prop-types"
 
 import Typography from "design-system/components/typography"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
-import Image from "design-system/components/image"
 
 import Tabs from "design-system/patterns/tabs"
 
@@ -21,10 +20,7 @@ const Details = ({
   health,
   behavior,
   info,
-  images,
-  imageSrc,
 }) => {
-  const [activeIndex, setActiveIndex] = useState(0)
   const features = useMemo(
     () => [
       {
@@ -81,61 +77,24 @@ const Details = ({
   }, [health, behavior, info])
 
   return (
-    <Styled.Section>
-      <Styled.Gallery>
-        <Styled.MainImage
-          src={images.length ? images[activeIndex].url : imageSrc}
-        />
+    <Styled.Content>
+      <Typography variant="h4">Cechy psa</Typography>
 
-        {images.length ? (
-          <>
-            <Styled.Slider
-              gap={15}
-              onSlideChange={(index) => setActiveIndex(index)}
-              activeIndex={activeIndex}
-              slidesPerView={3}
-              slidesPerViewTablet={3}
-              slidesPerViewTabletLg={3}
-              slidesPerViewMobile={3}
-            >
-              {images.map((item, i) => (
-                <Styled.ImageWrapper
-                  key={item.url}
-                  active={i === activeIndex}
-                  onClick={() => setActiveIndex(i)}
-                >
-                  <Image src={item.url} alt="" />
-                </Styled.ImageWrapper>
-              ))}
-            </Styled.Slider>
-            <Styled.Length>
-              <Typography variant="h6">
-                {activeIndex + 1} / {images.length}
-              </Typography>
-            </Styled.Length>
-          </>
-        ) : null}
-      </Styled.Gallery>
+      <div>
+        {features.map(({ name, value }) =>
+          value ? (
+            <Styled.Feature key={name}>
+              <Typography>{name}</Typography>
+              <Typography>{value}</Typography>
+            </Styled.Feature>
+          ) : null
+        )}
+      </div>
 
-      <Styled.Content>
-        <Typography variant="h4">Cechy psa</Typography>
-
-        <div>
-          {features.map(({ name, value }) =>
-            value ? (
-              <Styled.Feature key={name}>
-                <Typography>{name}</Typography>
-                <Typography>{value}</Typography>
-              </Styled.Feature>
-            ) : null
-          )}
-        </div>
-
-        <Styled.Tabs>
-          <Tabs data={data} id="animal-details" transparentContent />
-        </Styled.Tabs>
-      </Styled.Content>
-    </Styled.Section>
+      <Styled.Tabs>
+        <Tabs data={data} id="animal-details" transparentContent />
+      </Styled.Tabs>
+    </Styled.Content>
   )
 }
 
@@ -148,12 +107,6 @@ Details.propTypes = {
   health: arrayOf(string),
   behavior: arrayOf(string),
   info: arrayOf(string),
-  images: arrayOf(
-    shape({
-      url: string,
-    })
-  ),
-  imageSrc: string.isRequired,
 }
 
 Details.defaultProps = {
@@ -165,7 +118,6 @@ Details.defaultProps = {
   health: [],
   behavior: [],
   info: [],
-  images: [],
 }
 
 export default Details

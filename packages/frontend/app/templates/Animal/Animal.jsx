@@ -8,6 +8,7 @@ import { animalType } from "../../lib/types"
 
 import Page from "../Page"
 
+import Gallery from "./components/Gallery"
 import Details from "./components/Details"
 import MoreInfo from "./components/MoreInfo"
 
@@ -33,18 +34,23 @@ const Animal = ({ data }) => (
 
     <Styled.Main>
       <Container>
-        <Details
-          gender={data.gender}
-          age={data.age}
-          height={data.height}
-          weight={data.weight}
-          targetWeight={data.targetWeight}
-          health={data?.health}
-          behavior={data?.behavior}
-          info={data?.additionalInfo}
-          imageSrc={data?.thumbnail?.url}
-          images={data?.imagesCollection?.items}
-        />
+        <Styled.Section>
+          <Gallery
+            imageSrc={data?.thumbnail?.url}
+            images={data?.imagesCollection?.items}
+          />
+
+          <Details
+            gender={data.gender}
+            age={data.age}
+            height={data.height}
+            weight={data.weight}
+            targetWeight={data.targetWeight}
+            health={data?.health}
+            behavior={data?.behavior}
+            info={data?.additionalInfo}
+          />
+        </Styled.Section>
 
         <MoreInfo
           story={data.story?.json}
