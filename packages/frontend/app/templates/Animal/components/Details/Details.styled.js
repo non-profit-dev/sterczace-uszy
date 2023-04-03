@@ -38,6 +38,8 @@ export const Slider = styled(SliderComponent)`
 `
 
 export const Image = styled(ImageComponent)`
+  width: 190px;
+  height: 190px;
   border: 3px solid
     ${({ active, theme }) =>
       active ? theme.colors.primary[500] : "transparent"};
