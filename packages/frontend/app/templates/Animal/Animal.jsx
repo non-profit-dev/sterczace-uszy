@@ -1,9 +1,6 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-
 import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
-import Typography from "design-system/components/typography"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 
@@ -12,6 +9,7 @@ import { animalType } from "../../lib/types"
 import Page from "../Page"
 
 import Details from "./components/Details"
+import MoreInfo from "./components/MoreInfo"
 
 import * as Styled from "./Animal.styled"
 
@@ -43,19 +41,19 @@ const Animal = ({ data }) => (
           targetWeight={data.targetWeight}
           health={data?.health}
           behavior={data?.behavior}
-          info={data?.info}
+          info={data?.additionalInfo}
           imageSrc={data?.thumbnail?.url}
         />
-        <Typography variant="bodyTitle">historia:</Typography>
-        {data.story && documentToReactComponents(data.story.json)}
-        <Typography variant="bodyTitle">zachowanie:</Typography>
-        {data.behaviorStory &&
-          documentToReactComponents(data.behaviorStory.json)}
-        <Typography variant="bodyTitle">opis zdrowia:</Typography>
-        {data.healthStory && documentToReactComponents(data.healthStory.json)}
-        <Typography variant="bodyTitle">życie z innymi:</Typography>
-        {data.socialBehavior &&
-          documentToReactComponents(data.socialBehavior.json)}
+
+        <MoreInfo
+          story={data.story.json}
+          behaviorStory={data.behaviorStory.json}
+          healthStory={data.healthStory.json}
+          socialBehavior={data.socialBehavior.json}
+          important={data.important.json}
+          needs={data.needs.json}
+          family={data.family.json}
+        />
       </Container>
     </Styled.Main>
 

@@ -76,6 +76,12 @@ export const GET_ANIMAL = gql`
         healthStory {
           json
         }
+        needs {
+          json
+        }
+        family {
+          json
+        }
         important {
           json
         }
