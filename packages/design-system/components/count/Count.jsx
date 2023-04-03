@@ -2,8 +2,8 @@ import { oneOf, number, string } from "prop-types"
 
 import * as Styled from "./Count.styled"
 
-const Count = ({ count, className, as, variant }) => (
-  <Styled.Count variant={variant} className={className} as={as}>
+const Count = ({ count, className, size, as }) => (
+  <Styled.Count className={className} size={size} as={as}>
     {count}
   </Styled.Count>
 )
@@ -14,13 +14,13 @@ Count.propTypes = {
   count: number.isRequired,
   className: string,
   as: string,
-  variant: oneOf(["title", "decorative"]),
+  size: oneOf(["xsmall", "small", "medium", "large"]),
 }
 
 Count.defaultProps = {
   className: null,
   as: null,
-  variant: "title",
+  size: "medium",
 }
 
 export default Count
