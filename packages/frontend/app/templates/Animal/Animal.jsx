@@ -43,6 +43,7 @@ const Animal = ({ data }) => (
           behavior={data?.behavior}
           info={data?.additionalInfo}
           imageSrc={data?.thumbnail?.url}
+          images={data.imagesCollection.items}
         />
 
         <MoreInfo

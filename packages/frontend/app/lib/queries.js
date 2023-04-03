@@ -85,6 +85,11 @@ export const GET_ANIMAL = gql`
         important {
           json
         }
+        imagesCollection {
+          items {
+            url
+          }
+        }
       }
     }
   }

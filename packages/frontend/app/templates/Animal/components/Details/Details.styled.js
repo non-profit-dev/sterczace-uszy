@@ -1,5 +1,8 @@
 import styled from "@emotion/styled"
 
+import ImageComponent from "design-system/components/image"
+import SliderComponent from "design-system/components/slider"
+
 export const Section = styled.section`
   display: grid;
   grid-template-columns: 50% 40%;
@@ -22,14 +25,14 @@ export const Tabs = styled.div`
   margin-top: 40px;
 `
 
-export const Content = styled.div`
-  max-width: 580px;
-  padding-top: 70px;
-  padding-left: 70px;
+export const Gallery = styled.div``
 
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding-left: 0px;
-    padding-bottom: 260px;
-    margin: 0 auto;
-  }
+export const MainImage = styled(ImageComponent)`
+  width: 600px;
+  height: 600px;
+`
+
+export const Slider = styled(SliderComponent)`
+  margin-left: -40px;
+  padding-top: 16px;
 `

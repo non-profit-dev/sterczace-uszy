@@ -1,9 +1,10 @@
-import { useMemo } from "react"
+import { useMemo, useState } from "react"
 import { string, number, arrayOf } from "prop-types"
 
 import Typography from "design-system/components/typography"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
+import Image from "design-system/components/image"
 
 import Tabs from "design-system/patterns/tabs"
 
@@ -20,8 +21,9 @@ const Details = ({
   health,
   behavior,
   info,
-  imageSrc,
+  images,
 }) => {
+  const [activeIndex, setActiveIndex] = useState(0)
   const features = useMemo(
     () => [
       {
@@ -79,9 +81,15 @@ const Details = ({
 
   return (
     <Styled.Section>
-      <div>
-        <img src={imageSrc} alt="" width="100%" />
-      </div>
+      <Styled.Gallery>
+        <Styled.MainImage src={images[activeIndex].url} />
+
+        <Styled.Slider gap={15}>
+          {images.map((item) => (
+            <Image key={item.url} src={item.url} alt="" />
+          ))}
+        </Styled.Slider>
+      </Styled.Gallery>
 
       <div>
         <Typography variant="h4">Cechy psa</Typography>
@@ -111,10 +119,10 @@ Details.propTypes = {
   height: number,
   weight: number,
   targetWeight: number,
-  imageSrc: string,
   health: arrayOf(string),
   behavior: arrayOf(string),
   info: arrayOf(string),
+  images: arrayOf(string),
 }
 
 Details.defaultProps = {
@@ -123,10 +131,10 @@ Details.defaultProps = {
   height: null,
   weight: null,
   targetWeight: null,
-  imageSrc: null,
   health: [],
   behavior: [],
   info: [],
+  images: [],
 }
 
 export default Details

@@ -1,6 +1,6 @@
 import { useState, Children } from "react"
 
-import { PropTypes, number } from "prop-types"
+import { PropTypes, number, string } from "prop-types"
 
 import * as Styled from "./Slider.styled"
 
@@ -13,12 +13,14 @@ const Slider = ({
   slidesPerViewTablet,
   slidesPerViewTabletLg,
   slidesPerViewMobile,
+  gap,
+  className,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [paginationLength, setPaginationLength] = useState(0)
 
   const swiperSettings = {
-    spaceBetween: 48,
+    spaceBetween: gap,
     breakpoints: {
       390: {
         slidesPerView: slidesPerViewMobile,
@@ -28,14 +30,14 @@ const Slider = ({
       },
       744: {
         slidesPerView: slidesPerViewTabletLg,
-        spaceBetween: 48,
+        spaceBetween: gap,
       },
       992: {
         spaceBetween: 20,
       },
       1200: {
         slidesPerView: slidesPerViewDesktop,
-        spaceBetween: 48,
+        spaceBetween: gap,
       },
     },
   }
@@ -47,6 +49,7 @@ const Slider = ({
       onSnapGridLengthChange={(swiper) =>
         setPaginationLength(swiper.snapGrid.length)
       }
+      className={className}
     >
       {Children.map(children, (child) => (
         <Styled.Slide key={child}>{child}</Styled.Slide>
@@ -63,6 +66,8 @@ Slider.propTypes = {
   slidesPerViewTablet: number,
   slidesPerViewTabletLg: number,
   slidesPerViewMobile: number,
+  gap: number,
+  className: string,
 }
 
 Slider.defaultProps = {
@@ -70,6 +75,8 @@ Slider.defaultProps = {
   slidesPerViewTablet: 1.5,
   slidesPerViewTabletLg: 2,
   slidesPerViewMobile: 1,
+  gap: 48,
+  className: null,
 }
 
 export default Slider
