@@ -17,6 +17,7 @@ const Details = ({
   height,
   weight,
   targetWeight,
+  location,
   health,
   behavior,
   info,
@@ -42,6 +43,10 @@ const Details = ({
       {
         name: "Waga docelowa",
         value: targetWeight ? `${targetWeight} kg` : null,
+      },
+      {
+        name: "Lokalizacja",
+        value: location || null,
       },
     ],
     [gender, age, weight, targetWeight]
@@ -104,6 +109,7 @@ Details.propTypes = {
   height: number,
   weight: number,
   targetWeight: number,
+  location: string,
   health: arrayOf(string),
   behavior: arrayOf(string),
   info: arrayOf(string),
@@ -115,6 +121,7 @@ Details.defaultProps = {
   height: null,
   weight: null,
   targetWeight: null,
+  location: null,
   health: [],
   behavior: [],
   info: [],

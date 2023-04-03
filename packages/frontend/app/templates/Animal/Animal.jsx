@@ -49,6 +49,7 @@ const Animal = ({ data }) => (
             height={data.height}
             weight={data.weight}
             targetWeight={data.targetWeight}
+            location={data.location2}
             health={data?.health}
             behavior={data?.behavior}
             info={data?.additionalInfo}

@@ -57,6 +57,7 @@ export const GET_ANIMAL = gql`
         height
         weight
         targetWeight
+        location2
         excerpt
         additionalInfo
         behavior
