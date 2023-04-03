@@ -49,3 +49,10 @@ export const Options = styled.div`
     grid-template-columns: auto;
   }
 `
+
+export const Option = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+`
