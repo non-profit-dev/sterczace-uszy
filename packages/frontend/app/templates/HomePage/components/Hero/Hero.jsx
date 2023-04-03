@@ -21,10 +21,10 @@ const cards = [
     illustration: "temporaryHome",
   },
   {
-    title: "Przekaż dary rzeczowe",
-    buttonText: "Podaruj",
-    buttonHref: "/wsparcie",
-    illustration: "bowl",
+    title: "Przekaż 1.5% podatku",
+    buttonText: "Dowiedz się więcej",
+    buttonHref: "/wsparcie#podatek",
+    illustration: "percentage",
   },
 ]
 

@@ -20,6 +20,7 @@ import WomanAndDog from "design-system/tokens/illustrations/womanAndDog.svg"
 import Bowl from "design-system/tokens/illustrations/bowl.svg"
 import TemporaryHome from "design-system/tokens/illustrations/temporaryHome.svg"
 import DogRescue from "design-system/tokens/illustrations/dogRescue.svg"
+import Percentage from "design-system/tokens/illustrations/percentage.svg"
 
 const sizes = {
   heartWithDogFace: {
@@ -302,6 +303,20 @@ const sizes = {
       height: 100,
     },
   },
+  percentage: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
 }
 
 export const illustrations = {
@@ -325,6 +340,7 @@ export const illustrations = {
   womanAndDog: WomanAndDog,
   temporaryHome: TemporaryHome,
   dogRescue: DogRescue,
+  percentage: Percentage,
 }
 
 const Illustration = ({ name, className, size }) => {
