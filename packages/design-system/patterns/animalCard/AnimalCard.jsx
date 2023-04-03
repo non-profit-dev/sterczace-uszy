@@ -6,20 +6,9 @@ import Title from "design-system/components/title"
 
 import Card from "design-system/patterns/card"
 
+import getAge from "../../helpers/getAge"
+
 import * as Styled from "./AnimalCard.styled"
-
-function getAge(date) {
-  const birthDate = new Date(date)
-  const year = birthDate.getFullYear()
-  const month = birthDate.getMonth()
-  const day = birthDate.getDay()
-
-  const birth = new Date(year, month - 1, day)
-  const now = new Date()
-  const diff = new Date(now.valueOf() - birth.valueOf())
-
-  return Math.abs(diff.getFullYear() - 1970)
-}
 
 function getAnimalType(age, gender) {
   switch (true) {
