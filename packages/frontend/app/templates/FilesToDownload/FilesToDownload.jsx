@@ -6,6 +6,8 @@ import Typography from "design-system/components/typography"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
 
+import CtaBanner from "design-system/patterns/ctaBanner"
+
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 
@@ -138,6 +140,12 @@ const FilesToDownload = () => {
           </Styled.DocumentsInfo>
         </Styled.DocumentContainer>
       </Container>
+
+      <CtaBanner
+        buttonHref="/kontakt"
+        buttonText="Skontaktuj się z nami"
+        heading="Masz pytania lub wątpliwości?"
+      />
 
       <Footer />
     </Page>
