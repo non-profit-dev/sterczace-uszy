@@ -41,6 +41,7 @@ export const Slider = styled(SliderComponent)`
 
 export const ImageWrapper = styled.div`
   display: flex;
+  height: 180px;
   border-radius: 14px;
   border: 3px solid
     ${({ active, theme }) =>
