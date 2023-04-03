@@ -4,7 +4,7 @@ import AnimalCard from "design-system/patterns/animalCard"
 
 const animal = {
   name: "Doggy",
-  age: 2,
+  age: "2021-03-24T00:00:00.000Z",
   gender: "on",
   excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing",
   image: "http://images/animal.jpg",
@@ -15,7 +15,7 @@ const animalBadge = "Młodziak"
 
 const femaleAnimal = {
   name: "She doggy",
-  age: 2,
+  age: "2021-03-24T00:00:00.000Z",
   gender: "ona",
   excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing",
   image: "http://images/animal.jpg",

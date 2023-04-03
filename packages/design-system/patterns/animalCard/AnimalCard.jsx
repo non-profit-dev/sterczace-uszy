@@ -55,7 +55,7 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => {
       imageHeight="314px"
       title={
         <Title
-          badge={getAnimalType(getAge(age), gender)}
+          badge={age ? getAnimalType(getAge(age), gender) : null}
           iconEnd={gender === "ona" ? "femaleAnimal" : "maleAnimal"}
           text={name}
           as="h3"
@@ -78,7 +78,7 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => {
 AnimalCard.propTypes = {
   slug: string.isRequired,
   name: string.isRequired,
-  age: number.isRequired,
+  age: string,
   gender: string.isRequired,
   excerpt: string.isRequired,
   image: string.isRequired,
@@ -87,6 +87,7 @@ AnimalCard.propTypes = {
 
 AnimalCard.defaultProps = {
   className: null,
+  age: null,
 }
 
 export default AnimalCard
