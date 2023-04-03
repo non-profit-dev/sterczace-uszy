@@ -8,6 +8,7 @@ import { animalType } from "../../lib/types"
 
 import Page from "../Page"
 
+import Hero from "./components/Hero"
 import Gallery from "./components/Gallery"
 import Details from "./components/Details"
 import MoreInfo from "./components/MoreInfo"
@@ -33,6 +34,8 @@ const Animal = ({ data }) => (
     <Navigation />
 
     <Styled.Main>
+      <Hero name={data.name} />
+
       <Container>
         <Styled.Section>
           <Gallery
