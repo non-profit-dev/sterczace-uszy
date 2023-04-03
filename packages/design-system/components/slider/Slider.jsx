@@ -1,6 +1,6 @@
 import { useState, Children } from "react"
 
-import { PropTypes, number, string } from "prop-types"
+import { PropTypes, number, string, func } from "prop-types"
 
 import * as Styled from "./Slider.styled"
 
@@ -14,6 +14,7 @@ const Slider = ({
   slidesPerViewTabletLg,
   slidesPerViewMobile,
   gap,
+  onSlideChange,
   className,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -42,10 +43,15 @@ const Slider = ({
     },
   }
 
+  const onChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex)
+    onSlideChange(swiper.activeIndex)
+  }
+
   return (
     <Styled.Slider
       {...swiperSettings}
-      onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+      onSlideChange={(swiper) => onChange(swiper)}
       onSnapGridLengthChange={(swiper) =>
         setPaginationLength(swiper.snapGrid.length)
       }
@@ -68,6 +74,7 @@ Slider.propTypes = {
   slidesPerViewMobile: number,
   gap: number,
   className: string,
+  onSlideChange: func,
 }
 
 Slider.defaultProps = {
@@ -77,6 +84,7 @@ Slider.defaultProps = {
   slidesPerViewMobile: 1,
   gap: 48,
   className: null,
+  onSlideChange: null,
 }
 
 export default Slider
