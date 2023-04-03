@@ -46,6 +46,14 @@ export const ImageWrapper = styled.div`
   border: 3px solid
     ${({ active, theme }) =>
       active ? theme.colors.primary[500] : "transparent"};
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    height: 140px;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    height: 100px;
+  }
 `
 
 export const Length = styled.div`
