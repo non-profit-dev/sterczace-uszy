@@ -46,17 +46,21 @@ const MoreInfo = ({
       },
     ]
 
-    return tabs.map((tab) => ({
-      tab: tab.name,
-      content: documentToReactComponents(tab.content),
-    }))
+    return tabs
+      .filter((tab) => tab.content)
+      .map((tab) => ({
+        tab: tab.name,
+        content: documentToReactComponents(tab.content),
+      }))
   }, [story, behaviorStory, healthStory, socialBehavior])
 
   return (
     <Styled.Section>
-      <Styled.Tabs>
-        <Tabs data={data} id="animal-more-info" />
-      </Styled.Tabs>
+      {data.length ? (
+        <Styled.Tabs>
+          <Tabs data={data} id="animal-more-info" />
+        </Styled.Tabs>
+      ) : null}
 
       <Styled.Buttons>
         <Button text="Adoptuj" href="/adopcja" />

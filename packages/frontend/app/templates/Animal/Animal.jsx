@@ -43,17 +43,17 @@ const Animal = ({ data }) => (
           behavior={data?.behavior}
           info={data?.additionalInfo}
           imageSrc={data?.thumbnail?.url}
-          images={data.imagesCollection.items}
+          images={data?.imagesCollection?.items}
         />
 
         <MoreInfo
-          story={data.story.json}
-          behaviorStory={data.behaviorStory.json}
-          healthStory={data.healthStory.json}
-          socialBehavior={data.socialBehavior.json}
-          important={data.important.json}
-          needs={data.needs.json}
-          family={data.family.json}
+          story={data.story?.json}
+          behaviorStory={data.behaviorStory?.json}
+          healthStory={data.healthStory?.json}
+          socialBehavior={data.socialBehavior?.json}
+          important={data.important?.json}
+          needs={data.needs?.json}
+          family={data.family?.json}
         />
       </Container>
     </Styled.Main>
