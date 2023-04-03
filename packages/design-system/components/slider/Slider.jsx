@@ -17,9 +17,10 @@ const Slider = ({
   onSlideChange,
   pagination,
   navigation,
+  activeIndex,
   className,
 }) => {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [index, setIndex] = useState(activeIndex)
   const [paginationLength, setPaginationLength] = useState(0)
 
   const swiperSettings = {
@@ -46,7 +47,7 @@ const Slider = ({
   }
 
   const onChange = (swiper) => {
-    setActiveIndex(swiper.activeIndex)
+    setIndex(swiper.activeIndex)
     onSlideChange?.(swiper.activeIndex)
   }
 
@@ -54,6 +55,7 @@ const Slider = ({
     <Styled.Slider
       {...swiperSettings}
       onSlideChange={(swiper) => onChange(swiper)}
+      slideToClickedSlide
       onSnapGridLengthChange={(swiper) =>
         setPaginationLength(swiper.snapGrid.length)
       }
@@ -63,11 +65,11 @@ const Slider = ({
         <Styled.Slide key={child}>{child}</Styled.Slide>
       ))}
       {navigation ? (
-        <Navigation activeIndex={activeIndex} length={children.length} />
+        <Navigation activeIndex={index} length={children.length} />
       ) : null}
 
       {pagination ? (
-        <Pagination activeIndex={activeIndex} length={paginationLength} />
+        <Pagination activeIndex={index} length={paginationLength} />
       ) : null}
     </Styled.Slider>
   )
@@ -84,6 +86,7 @@ Slider.propTypes = {
   onSlideChange: func,
   pagination: bool,
   navigation: bool,
+  activeIndex: number,
 }
 
 Slider.defaultProps = {
@@ -96,6 +99,7 @@ Slider.defaultProps = {
   onSlideChange: null,
   pagination: false,
   navigation: false,
+  activeIndex: 0,
 }
 
 export default Slider
