@@ -38,6 +38,7 @@ const Animal = ({ data }) => (
         <Details
           gender={data.gender}
           age={data.age}
+          height={data.height}
           weight={data.weight}
           targetWeight={data.targetWeight}
           health={data?.health}

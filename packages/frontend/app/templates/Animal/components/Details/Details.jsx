@@ -1,5 +1,5 @@
 import { useMemo } from "react"
-import { string, number } from "prop-types"
+import { string, number, arrayOf } from "prop-types"
 
 import Typography from "design-system/components/typography"
 import List from "design-system/components/list"
@@ -12,6 +12,7 @@ import * as Styled from "./Details.styled"
 const Details = ({
   gender,
   age,
+  height,
   weight,
   targetWeight,
   health,
@@ -27,61 +28,52 @@ const Details = ({
       },
       {
         name: "Wiek",
-        value: `${age} lat/lata`,
+        value: age ? `${age} lat/lata` : null,
+      },
+      {
+        name: "Wzrost",
+        value: height ? `${height} cm` : null,
       },
       {
         name: "Waga",
-        value: `${weight} kg`,
+        value: weight ? `${weight} kg` : null,
       },
       {
         name: "Waga docelowa",
-        value: `${targetWeight} kg`,
+        value: targetWeight ? `${targetWeight} kg` : null,
       },
     ],
-    gender,
-    age,
-    weight,
-    targetWeight
+    [gender, age, weight, targetWeight]
   )
 
-  const data = useMemo(() => [
-    {
-      tab: "Zdrowie",
-      content: (
-        <List>
-          {health?.map((item) => (
-            <ListItem key={item} variant="gray" iconName="check">
-              {item}
-            </ListItem>
-          ))}
-        </List>
-      ),
-    },
-    {
-      tab: "Zachowanie",
-      content: (
-        <List>
-          {behavior?.map((item) => (
-            <ListItem key={item} variant="gray" iconName="check">
-              {item}
-            </ListItem>
-          ))}
-        </List>
-      ),
-    },
-    {
-      tab: "Informacje",
-      content: (
-        <List>
-          {info?.map((item) => (
-            <ListItem key={item} variant="gray" iconName="check">
-              {item}
-            </ListItem>
-          ))}
-        </List>
-      ),
-    },
-  ])
+  const data = useMemo(() => {
+    const tabs = [
+      { name: "Zdrowie", content: health },
+      {
+        name: "Zachowanie",
+        content: behavior,
+      },
+      {
+        name: "Informacje",
+        content: info,
+      },
+    ]
+
+    return tabs
+      .filter((item) => item.content.length > 0)
+      .map((tab) => ({
+        tab: tab.name,
+        content: (
+          <List>
+            {tab.content?.map((item) => (
+              <ListItem key={item} variant="gray" iconName="check">
+                {item}
+              </ListItem>
+            ))}
+          </List>
+        ),
+      }))
+  }, [health, behavior, info])
 
   return (
     <Styled.Section>
@@ -93,12 +85,14 @@ const Details = ({
         <Typography variant="h4">Cechy psa</Typography>
 
         <div>
-          {features.map(({ name, value }) => (
-            <Styled.Feature key={name}>
-              <Typography>{name}</Typography>
-              <Typography>{value}</Typography>
-            </Styled.Feature>
-          ))}
+          {features.map(({ name, value }) =>
+            value ? (
+              <Styled.Feature key={name}>
+                <Typography>{name}</Typography>
+                <Typography>{value}</Typography>
+              </Styled.Feature>
+            ) : null
+          )}
         </div>
 
         <Styled.Tabs>
@@ -112,17 +106,25 @@ const Details = ({
 Details.propTypes = {
   gender: string,
   age: number,
+  height: number,
   weight: number,
   targetWeight: number,
   imageSrc: string,
+  health: arrayOf(string),
+  behavior: arrayOf(string),
+  info: arrayOf(string),
 }
 
 Details.defaultProps = {
   gender: null,
   age: null,
+  height: null,
   weight: null,
   targetWeight: null,
   imageSrc: null,
+  health: [],
+  behavior: [],
+  info: [],
 }
 
 export default Details
