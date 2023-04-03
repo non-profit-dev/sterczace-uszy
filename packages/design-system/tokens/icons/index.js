@@ -26,6 +26,8 @@ import Love from "./Love.svg"
 import Responsibility from "./Responsibility.svg"
 import Transparency from "./Transparency.svg"
 import Trust from "./Trust.svg"
+import Copy from "./Copy.svg"
+import Donation from "./Donation.svg"
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -56,6 +58,8 @@ export const icons = {
   responsibility: Responsibility,
   transparency: Transparency,
   trust: Trust,
+  copy: Copy,
+  donation: Donation,
 }
 
 export {
@@ -87,4 +91,6 @@ export {
   Responsibility,
   Transparency,
   Trust,
+  Copy,
+  Donation,
 }

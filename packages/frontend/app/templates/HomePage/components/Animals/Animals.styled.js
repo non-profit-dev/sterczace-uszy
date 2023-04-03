@@ -2,13 +2,18 @@ import styled from "@emotion/styled"
 
 export const Wrapper = styled.section`
   padding-top: 120px;
-  background-image: url("/home/animals-background.png");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding-bottom: 120px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) -64.46%,
+      #faf4f4 109.44%,
+      rgba(255, 255, 255, 0) 283.33%
+    ),
+    #ffffff;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     padding-top: 60px;
+    padding-bottom: 60px;
   }
 `
 
@@ -30,7 +35,7 @@ export const CardsWrapper = styled.div`
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin: 60px 0 120px;
+  padding-top: 60px;
 `
 
 export const CardWrapper = styled.div`
