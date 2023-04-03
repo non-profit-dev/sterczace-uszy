@@ -12,6 +12,8 @@ import { animalType } from "../../lib/types"
 
 import Page from "../Page"
 
+import Hero from "./components/Hero"
+
 import * as Styled from "./Animal.styled"
 
 const Animal = ({ data }) => (
@@ -33,11 +35,9 @@ const Animal = ({ data }) => (
     <Navigation />
 
     <Styled.Main>
+      <Hero name={data.name} />
+
       <Container>
-        <Typography variant="h3">imię: {data?.name}</Typography>
-        <Typography variant="bodyTitle">
-          krótki opis: {data?.excerpt}
-        </Typography>
         <Typography variant="bodyTitle">waga: {data?.weight}</Typography>
         <Typography variant="bodyTitle">
           waga docelowa: {data?.targetWeight}
