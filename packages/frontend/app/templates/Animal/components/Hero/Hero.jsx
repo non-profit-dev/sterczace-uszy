@@ -35,7 +35,7 @@ const Hero = ({ name }) => (
         </Typography>
         <Typography variant="bodyTitle">
           Jak przebiega adopcja? Dowiedz się więcej
-          <Button variant="textLine" text="tutaj" href="/adopcja" />.
+          <Button variant="textLine" text=" tutaj" href="/adopcja" />.
         </Typography>
       </TextBanner>
     </Styled.Content>
