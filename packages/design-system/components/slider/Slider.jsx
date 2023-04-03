@@ -1,6 +1,6 @@
 import { useState, Children } from "react"
 
-import { PropTypes, number, string, func } from "prop-types"
+import { PropTypes, number, string, func, bool } from "prop-types"
 
 import * as Styled from "./Slider.styled"
 
@@ -15,6 +15,8 @@ const Slider = ({
   slidesPerViewMobile,
   gap,
   onSlideChange,
+  pagination,
+  navigation,
   className,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -45,7 +47,7 @@ const Slider = ({
 
   const onChange = (swiper) => {
     setActiveIndex(swiper.activeIndex)
-    onSlideChange(swiper.activeIndex)
+    onSlideChange?.(swiper.activeIndex)
   }
 
   return (
@@ -60,8 +62,13 @@ const Slider = ({
       {Children.map(children, (child) => (
         <Styled.Slide key={child}>{child}</Styled.Slide>
       ))}
-      <Navigation activeIndex={activeIndex} length={children.length} />
-      <Pagination activeIndex={activeIndex} length={paginationLength} />
+      {navigation ? (
+        <Navigation activeIndex={activeIndex} length={children.length} />
+      ) : null}
+
+      {pagination ? (
+        <Pagination activeIndex={activeIndex} length={paginationLength} />
+      ) : null}
     </Styled.Slider>
   )
 }
@@ -75,6 +82,8 @@ Slider.propTypes = {
   gap: number,
   className: string,
   onSlideChange: func,
+  pagination: bool,
+  navigation: bool,
 }
 
 Slider.defaultProps = {
@@ -85,6 +94,8 @@ Slider.defaultProps = {
   gap: 48,
   className: null,
   onSlideChange: null,
+  pagination: false,
+  navigation: false,
 }
 
 export default Slider
