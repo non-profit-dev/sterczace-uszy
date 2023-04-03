@@ -9,6 +9,40 @@ import Tabs from "design-system/patterns/tabs"
 
 import * as Styled from "./Details.styled"
 
+export function polishPlurals(
+  singularNominativ,
+  pluralNominativ,
+  pluralGenitive,
+  value
+) {
+  const newVal = Math.abs(value)
+
+  if (newVal === 1) {
+    return singularNominativ
+  }
+  if (
+    newVal % 10 >= 2 &&
+    newVal % 10 <= 4 &&
+    (newVal % 100 < 10 || newVal % 100 >= 20)
+  ) {
+    return pluralNominativ
+  }
+  return pluralGenitive
+}
+
+function getAge(date) {
+  const birthDate = new Date(date)
+  const year = birthDate.getFullYear()
+  const month = birthDate.getMonth()
+  const day = birthDate.getDay()
+
+  const birth = new Date(year, month - 1, day)
+  const now = new Date()
+  const diff = new Date(now.valueOf() - birth.valueOf())
+
+  return Math.abs(diff.getFullYear() - 1970)
+}
+
 const Details = ({
   gender,
   age,
@@ -28,7 +62,9 @@ const Details = ({
       },
       {
         name: "Wiek",
-        value: age ? `${age} lat/lata` : null,
+        value: age
+          ? `${getAge(age)} ${polishPlurals("rok", "lata", "lat", getAge(age))}`
+          : null,
       },
       {
         name: "Wzrost",
@@ -60,7 +96,7 @@ const Details = ({
     ]
 
     return tabs
-      .filter((item) => item.content.length > 0)
+      .filter((item) => item.content?.length > 0)
       .map((tab) => ({
         tab: tab.name,
         content: (
