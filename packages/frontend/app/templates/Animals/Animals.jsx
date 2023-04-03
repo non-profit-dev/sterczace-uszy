@@ -11,11 +11,11 @@ import Page from "../Page"
 
 import { animalsType } from "../../lib/types"
 
-import * as Styled from "./Adoption.styled"
+import * as Styled from "./Animals.styled"
 
-const Adoption = ({ animals }) => (
+const AnimalsPage = ({ animals }) => (
   <Page title="Nasi podopieczni">
-    <Banner>
+    <Styled.Banner>
       <Banner
         heading="Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj"
         button={
@@ -27,7 +27,7 @@ const Adoption = ({ animals }) => (
           />
         }
       />
-    </Banner>
+    </Styled.Banner>
 
     <Navigation />
 
@@ -48,8 +48,8 @@ const Adoption = ({ animals }) => (
   </Page>
 )
 
-Adoption.propTypes = {
+AnimalsPage.propTypes = {
   animals: animalsType.isRequired,
 }
 
-export default Adoption
+export default AnimalsPage
