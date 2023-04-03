@@ -10,12 +10,14 @@ export const BackgroundWrapper = styled.div`
   background-size: cover;
   background-position: center;
   padding: 120px 189px;
+
   ${({ theme }) => theme.breakpoints.desktopSm} {
     padding: 120px 50px;
   }
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    background-size: 100% 100%;
+    background-image: url("/single-animal/our-support-background-mobile.png");
+    background-position: bottom;
     padding: 0 0 100px 0;
   }
 
