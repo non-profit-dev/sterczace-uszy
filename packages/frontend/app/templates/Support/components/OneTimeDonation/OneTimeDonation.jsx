@@ -35,7 +35,7 @@ const OneTimeDonation = () => (
       <Styled.Options>
         {data.map(({ title, description }) => (
           <div key={title}>
-            <Count count={title} as="h3" />
+            <Count count={title} as="h3" size="xsmall" />
             <Typography variant="bodySmall">{description}</Typography>
           </div>
         ))}

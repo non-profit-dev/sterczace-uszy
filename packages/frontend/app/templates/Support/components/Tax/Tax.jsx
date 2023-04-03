@@ -27,7 +27,7 @@ const Tax = () => {
               <Typography variant="h1" as="p">
                 Przekaż
               </Typography>
-              <Count count="1.5%" variant="decorative" />
+              <Count count="1.5%" size="large" />
               <Typography variant="h3" as="p">
                 KRS: 0000270261
               </Typography>
