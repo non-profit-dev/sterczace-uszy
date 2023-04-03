@@ -52,7 +52,7 @@ const data = {
         `upewnij się, że wszystko jest dla Ciebie jasne i rozumiesz warunki`,
         `podpisz i przekaż umowę osobiście lub według indywidualnych ustaleń`,
       ],
-      link: ``,
+      link: `https://docs.google.com/document/d/1wYQ_WWakft8Vid5C4Xgzy0ZvvBTSmo4a/edit?usp=sharing&ouid=101513882861880625680&rtpof=true&sd=true`,
       asset: <Agreement />,
     },
     {
@@ -62,7 +62,7 @@ const data = {
         `upewnij się, że wszystko jest dla Ciebie jasne i rozumiesz warunki`,
         `podpisz i przekaż umowę osobiście lub według indywidualnych ustaleń`,
       ],
-      link: ``,
+      link: `https://docs.google.com/document/d/1jQoQAv9CzZ1NCbaw37saek7LJ4PXz2It8QR6ut05MxU/edit?usp=sharing`,
       asset: <Agreement />,
     },
   ],
@@ -130,8 +130,10 @@ const FilesToDownload = () => {
 
           <Styled.DocumentsInfo>
             <Typography variant="bodyTitle">
-              Umowę możesz dostarczyć osobiście odbierając zwierzę. Jeśli jest
-              to niemożliwe ustalimy indywidualnie.
+              Umowę możesz dostarczyć osobiście odbierając zwierzę.
+            </Typography>
+            <Typography variant="bodyTitle">
+              Jeśli jest to niemożliwe, ustalimy indywidualnie.
             </Typography>
           </Styled.DocumentsInfo>
         </Styled.DocumentContainer>

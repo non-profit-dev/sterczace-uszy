@@ -22,18 +22,21 @@ const DocumentsTemplate = ({ data }) =>
             iconEnd="download"
             size="medium"
             href={document.link}
+            target="_blank"
           />
         }
       >
-        <Typography variant="bodySmall">Co musisz zrobić?</Typography>
+        <div>
+          <Typography variant="bodyTitle">Co musisz zrobić?</Typography>
 
-        <ul>
-          {document?.steps?.map((step) => (
-            <Typography variant="bodySmall" as="li" key={step}>
-              {step}
-            </Typography>
-          ))}
-        </ul>
+          <ul>
+            {document?.steps?.map((step) => (
+              <Typography variant="bodyTitle" as="li" key={step}>
+                {step}
+              </Typography>
+            ))}
+          </ul>
+        </div>
       </TextBanner>
     </Styled.SurveyContainer>
   ))
