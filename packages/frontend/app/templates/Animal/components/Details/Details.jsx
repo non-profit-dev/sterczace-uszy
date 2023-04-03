@@ -4,6 +4,7 @@ import { string, number, arrayOf, shape } from "prop-types"
 import Typography from "design-system/components/typography"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
+import Image from "design-system/components/image"
 
 import Tabs from "design-system/patterns/tabs"
 
@@ -86,19 +87,31 @@ const Details = ({
         <Styled.Slider
           gap={15}
           onSlideChange={(index) => setActiveIndex(index)}
+          activeIndex={activeIndex}
+          slidesPerView={3}
+          slidesPerViewTablet={3}
+          slidesPerViewTabletLg={3}
+          slidesPerViewMobile={3}
         >
           {images.map((item, i) => (
-            <Styled.Image
+            <Styled.ImageWrapper
               key={item.url}
-              src={item.url}
-              alt=""
               active={i === activeIndex}
-            />
+              onClick={() => setActiveIndex(i)}
+            >
+              <Image src={item.url} alt="" />
+            </Styled.ImageWrapper>
           ))}
         </Styled.Slider>
+
+        <Styled.Length>
+          <Typography variant="h6">
+            {activeIndex + 1} / {images.length}
+          </Typography>
+        </Styled.Length>
       </Styled.Gallery>
 
-      <div>
+      <Styled.Content>
         <Typography variant="h4">Cechy psa</Typography>
 
         <div>
@@ -115,7 +128,7 @@ const Details = ({
         <Styled.Tabs>
           <Tabs data={data} id="animal-details" transparentContent />
         </Styled.Tabs>
-      </div>
+      </Styled.Content>
     </Styled.Section>
   )
 }
