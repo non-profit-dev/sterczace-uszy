@@ -6,7 +6,7 @@ import Title from "design-system/components/title"
 
 import Card from "design-system/patterns/card"
 
-import getAge from "../../helpers/getAge"
+import getAgeNumber from "../../helpers/getAgeNumber"
 
 import * as Styled from "./AnimalCard.styled"
 
@@ -44,7 +44,7 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => {
       imageHeight="314px"
       title={
         <Title
-          badge={age ? getAnimalType(getAge(age), gender) : null}
+          badge={age ? getAnimalType(getAgeNumber(age), gender) : null}
           iconEnd={gender === "ona" ? "femaleAnimal" : "maleAnimal"}
           text={name}
           as="h3"

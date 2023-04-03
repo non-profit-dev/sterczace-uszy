@@ -7,41 +7,9 @@ import ListItem from "design-system/components/listItem"
 
 import Tabs from "design-system/patterns/tabs"
 
+import getAge from "design-system/helpers/getAge"
+
 import * as Styled from "./Details.styled"
-
-export function polishPlurals(
-  singularNominativ,
-  pluralNominativ,
-  pluralGenitive,
-  value
-) {
-  const newVal = Math.abs(value)
-
-  if (newVal === 1) {
-    return singularNominativ
-  }
-  if (
-    newVal % 10 >= 2 &&
-    newVal % 10 <= 4 &&
-    (newVal % 100 < 10 || newVal % 100 >= 20)
-  ) {
-    return pluralNominativ
-  }
-  return pluralGenitive
-}
-
-function getAge(date) {
-  const birthDate = new Date(date)
-  const year = birthDate.getFullYear()
-  const month = birthDate.getMonth()
-  const day = birthDate.getDay()
-
-  const birth = new Date(year, month - 1, day)
-  const now = new Date()
-  const diff = new Date(now.valueOf() - birth.valueOf())
-
-  return Math.abs(diff.getFullYear() - 1970)
-}
 
 const Details = ({
   gender,
@@ -62,9 +30,7 @@ const Details = ({
       },
       {
         name: "Wiek",
-        value: age
-          ? `${getAge(age)} ${polishPlurals("rok", "lata", "lat", getAge(age))}`
-          : null,
+        value: age ? getAge(age) : null,
       },
       {
         name: "Wzrost",
@@ -141,7 +107,7 @@ const Details = ({
 
 Details.propTypes = {
   gender: string,
-  age: number,
+  age: string,
   height: number,
   weight: number,
   targetWeight: number,
