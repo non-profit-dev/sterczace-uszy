@@ -12,7 +12,7 @@ describe(`Count`, () => {
   })
 
   it(`renders with custom properties`, () => {
-    render(<Count count={countNumber} variant="decorative" />)
+    render(<Count count={countNumber} size="medium" />)
 
     expect(screen.getByText(countNumber)).toBeInTheDocument()
   })
