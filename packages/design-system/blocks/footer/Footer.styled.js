@@ -1,5 +1,7 @@
 import styled from "@emotion/styled"
 
+import Typography from "design-system/components/typography"
+
 export const Footer = styled.footer`
   display: flex;
   flex-direction: column;
@@ -118,4 +120,20 @@ export const IconsMobile = styled.div`
 export const Copyright = styled.div`
   display: flex;
   justify-content: space-between;
+`
+
+export const CopyButton = styled.button`
+  display: inline-flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+`
+
+export const CopyInfo = styled(Typography)`
+  display: inline-flex;
+  min-height: 26px;
+  padding-left: 4px;
+  vertical-align: middle;
+  align-items: center;
 `

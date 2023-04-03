@@ -1,6 +1,9 @@
-import Typography from "design-system/components/typography/Typography"
+import { useTheme } from "@emotion/react"
+
+import Typography from "design-system/components/typography"
 import IconButton from "design-system/components/iconButton"
 import Logo from "design-system/components/logo"
+import Icon from "design-system/components/icon"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 import Button from "design-system/components/button"
@@ -28,7 +31,7 @@ const Footer = () => {
     },
     socialMedia,
   } = footerData
-
+  const theme = useTheme()
   const [isCopied, copyToClipboard] = useCopyToClipboard()
   const currentYear = new Date().getFullYear()
 
@@ -88,13 +91,20 @@ const Footer = () => {
                   <Typography variant="bodySmall">
                     {accountNumberText}
                   </Typography>
-                  <Button
-                    variant="text"
-                    text={isCopied ? "Skopiowano" : "Skopiuj"}
-                    size="small"
-                    color="primary"
-                    onClick={() => copyToClipboard(accountNumber)}
-                  />
+                  {isCopied ? (
+                    <Styled.CopyInfo
+                      variant="bodyTiny"
+                      color={theme.colors.primary[500]}
+                    >
+                      Skopiowano
+                    </Styled.CopyInfo>
+                  ) : (
+                    <Styled.CopyButton
+                      onClick={() => copyToClipboard(accountNumber)}
+                    >
+                      <Icon name="copy" color={theme.colors.primary[500]} />
+                    </Styled.CopyButton>
+                  )}
                 </ListItem>
                 <ListItem variant="gray">
                   <Typography variant="bodySmall">{accountNumber}</Typography>
