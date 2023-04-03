@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import { string, number, arrayOf } from "prop-types"
+import { string, number, arrayOf, shape } from "prop-types"
 
 import Typography from "design-system/components/typography"
 import List from "design-system/components/list"
@@ -129,7 +129,11 @@ Details.propTypes = {
   health: arrayOf(string),
   behavior: arrayOf(string),
   info: arrayOf(string),
-  images: arrayOf(string),
+  images: arrayOf(
+    shape({
+      url: string,
+    })
+  ),
 }
 
 Details.defaultProps = {
