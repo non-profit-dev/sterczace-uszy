@@ -28,6 +28,7 @@ export const GET_ANIMALS = gql`
         name
         gender
         age
+        age2
         excerpt
         slug
         thumbnail {
@@ -54,6 +55,7 @@ export const GET_ANIMAL = gql`
         name
         gender
         age
+        age2
         height
         weight
         targetWeight
