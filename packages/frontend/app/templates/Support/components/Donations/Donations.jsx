@@ -70,7 +70,7 @@ const Donations = () => {
               ) : (
                 <Styled.CopyButton
                   onClick={() =>
-                    copyToClipboard("Fundacja Sterczące Uszy 13146")
+                    copyToClipboard("41 1870 1045 2078 1072 8639 0001")
                   }
                 >
                   <Icon name="copy" color={theme.colors.primary[500]} />
