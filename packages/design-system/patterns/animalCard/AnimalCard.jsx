@@ -1,4 +1,4 @@
-import { string, number } from "prop-types"
+import { string } from "prop-types"
 import { useTheme } from "@emotion/react"
 
 import Button from "design-system/components/button"
