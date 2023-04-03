@@ -1,10 +1,12 @@
-import { string, number } from "prop-types"
+import { string } from "prop-types"
 import { useTheme } from "@emotion/react"
 
 import Button from "design-system/components/button"
 import Title from "design-system/components/title"
 
 import Card from "design-system/patterns/card"
+
+import getAge from "../../helpers/getAge"
 
 import * as Styled from "./AnimalCard.styled"
 
@@ -35,14 +37,14 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => {
   return (
     <Card
       bgColor={theme.colors.neutrals[100]}
-      href={`/${slug}`}
+      href={`/do-adopcji/${slug}`}
       className={className}
       imageSrc={image}
       imageAlt={name}
       imageHeight="314px"
       title={
         <Title
-          badge={getAnimalType(age, gender)}
+          badge={age ? getAnimalType(getAge(age), gender) : null}
           iconEnd={gender === "ona" ? "femaleAnimal" : "maleAnimal"}
           text={name}
           as="h3"
@@ -65,7 +67,7 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => {
 AnimalCard.propTypes = {
   slug: string.isRequired,
   name: string.isRequired,
-  age: number.isRequired,
+  age: string,
   gender: string.isRequired,
   excerpt: string.isRequired,
   image: string.isRequired,
@@ -74,6 +76,7 @@ AnimalCard.propTypes = {
 
 AnimalCard.defaultProps = {
   className: null,
+  age: null,
 }
 
 export default AnimalCard

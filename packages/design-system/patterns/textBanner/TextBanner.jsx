@@ -66,13 +66,13 @@ const TextBanner = ({
     </Styled.Container>
 
     {children && (
-      <Typography
+      <Styled.Description
         variant={sizes[size].description}
         color={descriptionColor}
         as="div"
       >
         {children}
-      </Typography>
+      </Styled.Description>
     )}
 
     {button && (

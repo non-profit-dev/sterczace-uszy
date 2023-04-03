@@ -22,7 +22,7 @@ const Title = ({
   <Styled.Title size={textSize} fullWidth={!!badge} className={className}>
     <Styled.Wrapper>
       {iconStart && <Icon name={iconStart} size={size} />}
-      {count && <Count count={count} variant="title" />}
+      {count && <Count count={count} size="xsmall" />}
       <Styled.Text
         size={size}
         variant={textSize}

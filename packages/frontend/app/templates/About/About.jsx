@@ -15,6 +15,8 @@ import {
   adoptedAnimalsType,
 } from "../../lib/types"
 
+import Microchips from "./components/Microchips"
+
 import * as Styled from "./About.styled"
 
 const About = ({ animals, supporting, adoptedAnimals }) => (
@@ -45,6 +47,8 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
           adoptedAnimalsNumber={adoptedAnimals.total}
         />
       </Container>
+
+      <Microchips />
 
       <Supporters data={supporting.items} />
     </Styled.Main>
