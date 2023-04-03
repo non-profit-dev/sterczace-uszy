@@ -67,10 +67,7 @@ const OurSupport = () => (
             <Button text="Skontaktuj się z nami" href="/kontakt" />
           </Styled.ButtonContainer>
         </Styled.TextWrapper>
-        <Styled.Img
-          alt="pet relation"
-          src="../../single-animal/pet-relation.png"
-        />
+        <Styled.Img alt="pet relation" src="/single-animal/pet-relation.png" />
       </Styled.Wrapper>
     </Styled.ContainerSection>
   </Styled.BackgroundWrapper>
