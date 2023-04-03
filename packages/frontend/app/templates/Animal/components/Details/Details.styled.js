@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 
 export const Feature = styled.div`
-  margin-top: 12px;
+  margin-top: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;

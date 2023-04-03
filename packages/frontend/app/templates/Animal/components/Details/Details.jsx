@@ -68,7 +68,7 @@ const Details = ({
           <List>
             {tab.content?.map((item) => (
               <ListItem key={item} variant="gray" iconName="check">
-                {item}
+                <Typography variant="bodyTitle">{item}</Typography>
               </ListItem>
             ))}
           </List>
@@ -84,8 +84,8 @@ const Details = ({
         {features.map(({ name, value }) =>
           value ? (
             <Styled.Feature key={name}>
-              <Typography>{name}</Typography>
-              <Typography>{value}</Typography>
+              <Typography variant="bodyTitle">{name}</Typography>
+              <Typography variant="h5">{value}</Typography>
             </Styled.Feature>
           ) : null
         )}
