@@ -6,6 +6,7 @@ import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+import OurSupport from "./components/OurSupport"
 
 import { animalType } from "../../lib/types"
 
@@ -73,6 +74,7 @@ const Animal = ({ data }) => (
           documentToReactComponents(data.socialBehavior.json)}
         <img src={data?.thumbnail.url} alt="" width="400" />
       </Container>
+      <OurSupport />
     </Styled.Main>
 
     <Footer />
