@@ -9,6 +9,7 @@ import Pagination from "./Pagination"
 
 const Slider = ({
   children,
+  slidesPerView,
   slidesPerViewDesktop,
   slidesPerViewTablet,
   slidesPerViewTabletLg,
@@ -25,6 +26,7 @@ const Slider = ({
 
   const swiperSettings = {
     spaceBetween: gap,
+    slidesPerView,
     breakpoints: {
       390: {
         slidesPerView: slidesPerViewMobile,
@@ -77,6 +79,7 @@ const Slider = ({
 
 Slider.propTypes = {
   children: PropTypes.node.isRequired,
+  slidesPerView: number,
   slidesPerViewDesktop: number,
   slidesPerViewTablet: number,
   slidesPerViewTabletLg: number,
@@ -90,6 +93,7 @@ Slider.propTypes = {
 }
 
 Slider.defaultProps = {
+  slidesPerView: 1,
   slidesPerViewDesktop: 3,
   slidesPerViewTablet: 1.5,
   slidesPerViewTabletLg: 2,
