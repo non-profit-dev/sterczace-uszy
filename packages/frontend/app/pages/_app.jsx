@@ -20,6 +20,9 @@ const MyApp = ({ Component, pageProps }) => (
       <ThemeProvider theme={theme}>
         <Global
           styles={css`
+            html {
+              scroll-behavior: smooth;
+            }
             body {
               margin: 0;
               font-family: ${theme.fontFamily};
