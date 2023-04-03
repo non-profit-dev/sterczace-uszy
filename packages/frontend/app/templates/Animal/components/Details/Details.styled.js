@@ -36,3 +36,9 @@ export const Slider = styled(SliderComponent)`
   margin-left: -40px;
   padding-top: 16px;
 `
+
+export const Image = styled(ImageComponent)`
+  border: 3px solid
+    ${({ active, theme }) =>
+      active ? theme.colors.primary[500] : "transparent"};
+`

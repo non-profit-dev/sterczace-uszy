@@ -4,7 +4,6 @@ import { string, number, arrayOf } from "prop-types"
 import Typography from "design-system/components/typography"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
-import Image from "design-system/components/image"
 
 import Tabs from "design-system/patterns/tabs"
 
@@ -84,9 +83,17 @@ const Details = ({
       <Styled.Gallery>
         <Styled.MainImage src={images[activeIndex].url} />
 
-        <Styled.Slider gap={15}>
-          {images.map((item) => (
-            <Image key={item.url} src={item.url} alt="" />
+        <Styled.Slider
+          gap={15}
+          onSlideChange={(index) => setActiveIndex(index)}
+        >
+          {images.map((item, i) => (
+            <Styled.Image
+              key={item.url}
+              src={item.url}
+              alt=""
+              active={i === activeIndex}
+            />
           ))}
         </Styled.Slider>
       </Styled.Gallery>
