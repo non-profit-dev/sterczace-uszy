@@ -12,12 +12,12 @@ export const Container = styled(ContainerComponent)`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     background-size: 50%;
-    background-position: 50% 60%;
+    background-position: 50% 30%;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     background-size: 60%;
-    background-position: 50% 60%;
+    background-position: 50% 30%;
   }
 `
 
@@ -64,7 +64,6 @@ export const Card = styled(CardComponent)`
     border-radius: 0;
     box-shadow: none;
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray[200]};
-    padding-top: 30px;
     padding-left: 24px;
 
     &:hover {

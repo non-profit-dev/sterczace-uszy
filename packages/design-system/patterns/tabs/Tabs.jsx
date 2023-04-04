@@ -28,6 +28,7 @@ const Tabs = ({ data, id, transparentContent, className }) => {
             id={convertToSlug(tab)}
             onClick={() => setActiveIndex(index)}
             borderBottom={transparentContent || activeIndex !== index}
+            transparentContent={transparentContent}
           >
             {activeIndex === index ? (
               <Title text={tab} textSize="h6" variant="textLine" />

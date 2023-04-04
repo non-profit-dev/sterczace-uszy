@@ -9,3 +9,16 @@ export const Banner = styled.div`
     display: none;
   }
 `
+
+export const Section = styled.section`
+  display: flex;
+  gap: 96px;
+
+  ${({ theme }) => theme.breakpoints.desktopSm} {
+    gap: 40px;
+  }
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    flex-direction: column;
+  }
+`

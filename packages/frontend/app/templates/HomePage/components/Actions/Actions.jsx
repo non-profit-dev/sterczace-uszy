@@ -22,8 +22,8 @@ const Actions = () => {
           headingColor={theme.colors.gray[600]}
           subtitle="Co robimy?"
           layout="center"
-          tabletLayout="left"
-          mobileLayout="left"
+          tabletLayout="center"
+          mobileLayout="center"
         >
           <Styled.TextContainer>
             <Typography variant="bodyTitle">
@@ -38,9 +38,8 @@ const Actions = () => {
               title={<Title text="Pomagamy" textSize="h3" />}
               illustrationName="help"
               layout="center"
-              hideIllustrationOnMobile
-              tabletLayout="left"
-              mobileLayout="left"
+              tabletLayout="center"
+              mobileLayout="center"
             >
               <List gap={8}>
                 <ListItem variant="gray" iconName="check">
@@ -58,9 +57,8 @@ const Actions = () => {
               title={<Title text="Chronimy" textSize="h3" />}
               illustrationName="protect"
               layout="center"
-              hideIllustrationOnMobile
-              tabletLayout="left"
-              mobileLayout="left"
+              tabletLayout="center"
+              mobileLayout="center"
             >
               <List gap={8}>
                 <ListItem variant="gray" iconName="check">
@@ -78,9 +76,8 @@ const Actions = () => {
               title={<Title text="Leczymy" textSize="h3" />}
               illustrationName="treat"
               layout="center"
-              hideIllustrationOnMobile
-              tabletLayout="left"
-              mobileLayout="left"
+              tabletLayout="center"
+              mobileLayout="center"
             >
               <List gap={8}>
                 <ListItem variant="gray" iconName="check">
