@@ -38,6 +38,7 @@ export const Tab = styled.button`
   border-bottom: 1px solid
     ${({ borderBottom, theme }) =>
       borderBottom ? theme.colors.gray[300] : "transparent"};
+  border-right-color: transparent;
 
   &:first-of-type {
     border-radius: ${({ transparentContent }) =>
@@ -47,5 +48,6 @@ export const Tab = styled.button`
   &:last-of-type {
     border-radius: ${({ transparentContent }) =>
       transparentContent ? "0 10px 10px 0" : "0 10px 0 0"};
+    border-right-color: ${({ theme }) => theme.colors.gray[300]};
   }
 `
