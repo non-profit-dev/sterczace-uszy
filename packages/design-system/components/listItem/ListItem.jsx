@@ -1,4 +1,4 @@
-import React from "react"
+import { useTheme } from "@emotion/react"
 import { string, oneOf, oneOfType, node, number } from "prop-types"
 import Icon from "design-system/components/icon"
 
@@ -11,25 +11,36 @@ const ListItem = ({
   iconSize,
   gap,
   className,
-}) => (
-  <Styled.ListItem variant={variant} className={className}>
-    {iconName && (
-      <Styled.ListItemIcon>
-        <Icon name={iconName} size={iconSize} />
-      </Styled.ListItemIcon>
-    )}
-    <Styled.ChildContainer variant={variant} gap={gap}>
-      {children}
-    </Styled.ChildContainer>
-  </Styled.ListItem>
-)
+}) => {
+  const theme = useTheme()
+  return (
+    <Styled.ListItem variant={variant} className={className}>
+      {iconName && (
+        <Styled.ListItemIcon>
+          <Icon
+            name={iconName}
+            size={iconSize}
+            color={
+              variant === "primary-gray"
+                ? theme.colors.primary[500]
+                : theme.colors.gray[600]
+            }
+          />
+        </Styled.ListItemIcon>
+      )}
+      <Styled.ChildContainer variant={variant} gap={gap}>
+        {children}
+      </Styled.ChildContainer>
+    </Styled.ListItem>
+  )
+}
 
 ListItem.propTypes = {
   /**
    * Element or text that should be displayed inside the list item.
    */
   children: oneOfType([node, string]).isRequired,
-  variant: oneOf(["primary", "gray"]),
+  variant: oneOf(["primary", "gray", "primary-gray"]),
   /**
    * If provided, it renders an icon element before the text based on the icon name.
    */
