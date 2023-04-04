@@ -1,12 +1,4 @@
-import {
-  string,
-  oneOf,
-  node,
-  oneOfType,
-  object,
-  bool,
-  number,
-} from "prop-types"
+import { string, oneOf, node, oneOfType, object, number } from "prop-types"
 
 import Illustration from "design-system/components/illustration"
 import Icon from "design-system/components/icon"
@@ -15,13 +7,11 @@ import * as Styled from "./Card.styled"
 
 const Card = ({
   button,
-  hideButtonOnMobile,
   children,
   href,
   illustrationName,
   illustrationSrc,
   illustrationHeight,
-  hideIllustrationOnMobile,
   mobileLayout,
   tabletLayout,
   layout,
@@ -30,7 +20,6 @@ const Card = ({
   imageSrc,
   imageAlt,
   imageHeight,
-  mobileTitle,
   className,
 }) => (
   <Styled.Card
@@ -43,7 +32,6 @@ const Card = ({
     {(illustrationName || illustrationSrc) && (
       <Styled.IllustrationContainer
         fixedSize={!!href}
-        hideIllustrationOnMobile={hideIllustrationOnMobile}
         height={illustrationHeight}
       >
         {illustrationName && (
@@ -69,21 +57,11 @@ const Card = ({
         tabletLayout={tabletLayout}
         mobileLayout={mobileLayout}
       >
-        <Styled.Title hideOnMobile={!!mobileTitle}>{title}</Styled.Title>
-        {mobileTitle && (
-          <Styled.MobileTitle>
-            {mobileTitle} <Icon name="arrowRight" />
-          </Styled.MobileTitle>
-        )}
-
+        <Styled.Title>{title}</Styled.Title>
         {children}
       </Styled.Wrapper>
 
-      {button && (
-        <Styled.ButtonWrapper hideButtonOnMobile={hideButtonOnMobile}>
-          {button}
-        </Styled.ButtonWrapper>
-      )}
+      {button}
     </Styled.ContentContainer>
   </Styled.Card>
 )
@@ -95,7 +73,6 @@ Card.propTypes = {
   title: node.isRequired,
   bgColor: oneOfType([object, string]),
   button: node,
-  hideButtonOnMobile: bool,
   children: node,
   /**
    * The URL that the card should redirect to when clicked.
@@ -104,34 +81,29 @@ Card.propTypes = {
   illustrationName: string,
   illustrationSrc: string,
   illustrationHeight: number,
-  hideIllustrationOnMobile: bool,
   imageAlt: string,
   imageHeight: string,
   imageSrc: string,
   layout: oneOf(["left", "center"]),
   mobileLayout: oneOf(["left", "center"]),
   tabletLayout: oneOf(["left", "center"]),
-  mobileTitle: node,
   className: string,
 }
 
 Card.defaultProps = {
   bgColor: "null",
   button: null,
-  hideButtonOnMobile: false,
   children: null,
   href: null,
   illustrationName: null,
   illustrationSrc: null,
   illustrationHeight: null,
-  hideIllustrationOnMobile: false,
   imageAlt: null,
   imageHeight: null,
   imageSrc: null,
   layout: "left",
   mobileLayout: "center",
   tabletLayout: "center",
-  mobileTitle: null,
   className: null,
 }
 
