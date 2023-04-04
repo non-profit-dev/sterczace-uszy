@@ -22,7 +22,7 @@ const Supporters = ({ data }) => {
           Dziękujemy za wsparcie <Icon name="heartFilled" size="large" />
         </Typography>
         <Styled.Slider>
-          <Slider slidesPerViewDesktop={3}>
+          <Slider pagination navigation slidesPerViewDesktop={3}>
             {data.slice(0, 6).map((item) => (
               <Card
                 key={item.name}
