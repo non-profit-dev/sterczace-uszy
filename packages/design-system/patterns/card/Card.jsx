@@ -1,7 +1,6 @@
 import { string, oneOf, node, oneOfType, object, number } from "prop-types"
 
 import Illustration from "design-system/components/illustration"
-import Icon from "design-system/components/icon"
 
 import * as Styled from "./Card.styled"
 
