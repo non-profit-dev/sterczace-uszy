@@ -104,6 +104,7 @@ export const Section = styled.div`
 
 export const Icons = styled.div`
   display: inline-flex;
+  gap: 6px;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     display: none;
@@ -111,6 +112,7 @@ export const Icons = styled.div`
 `
 export const IconsMobile = styled.div`
   display: none;
+  gap: 6px;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     display: inline-flex;
