@@ -1,5 +1,3 @@
-import { useTheme } from "@emotion/react"
-
 import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
 
