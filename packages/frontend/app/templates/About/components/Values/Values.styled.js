@@ -18,7 +18,7 @@ export const ContainerSection = styled(Container)`
 export const Wrapper = styled.div`
   background: linear-gradient(0deg, #eeeeee 0%, rgba(255, 255, 255, 0) 100%),
     #ffffff;
-    padding: 10px auto;
+  padding: 10px auto;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
