@@ -1,7 +1,6 @@
 import { useTheme } from "@emotion/react"
 
 import Button from "design-system/components/button"
-import Typography from "design-system/components/typography"
 
 import TextBanner from "design-system/patterns/textBanner"
 
