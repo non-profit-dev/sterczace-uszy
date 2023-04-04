@@ -21,19 +21,17 @@ export const MainImage = styled(ImageComponent)`
 `
 
 export const Slider = styled(SliderComponent)`
-  width: calc(100% + 40px);
-  margin-left: -40px;
+  width: 100%;
   padding-top: 16px;
+  padding-left: 0;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    width: calc(100% + 60px);
-    margin-left: -60px;
     padding-bottom: 0;
+    padding-left: 0;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    width: calc(100% + 24px);
-    margin-left: -24px;
+    padding-left: 0;
     padding-bottom: 16px;
   }
 `
