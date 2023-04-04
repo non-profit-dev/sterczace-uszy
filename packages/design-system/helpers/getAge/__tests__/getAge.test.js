@@ -3,15 +3,15 @@ import getAge from "design-system/helpers/getAge"
 const testCases = [
   {
     value: "2021-03-24T00:00:00.000Z",
-    expected: 2,
+    expected: "~ 2 lata",
   },
   {
     value: "2022-07-24T00:00:00.000Z",
-    expected: 0,
+    expected: "poniżej roku",
   },
   {
     value: "2015-03-24T00:00:00.000Z",
-    expected: 8,
+    expected: "~ 8 lat",
   },
 ]
 

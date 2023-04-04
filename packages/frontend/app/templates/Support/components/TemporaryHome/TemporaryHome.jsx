@@ -29,7 +29,7 @@ const steps = [
   {
     title: "Zdecyduj na jak długo",
     description:
-      "Domem tymczasowym można zostać na wybrany okres czasu (2, 4, 6 miesięcy) lub bezterminowo - do czasu znalezienia nowego domu dla zwierzaka.Nie musisz podejmować takiej decyzji od razu. Pamiętaj, że dom stały ma pierwszeństwo w adopcji zwierzaka.",
+      "Zostając domem tymczasowym deklarujesz jak długo jesteś w stanie zapewnić pomoc. Minimalny okres przyjęcia podopiecznego to 6 miesięcy. Pamiętaj jednak, że dom stały ma pierwszeństwo w adopcji zwierzaka, więc jeżeli się zakochasz i zdecydujesz zostać domem stałym daj nam koniecznie znać!",
   },
   {
     title: "Daj dom i miłość",
@@ -64,19 +64,19 @@ const TemporaryHome = () => {
 
       <Styled.Steps>
         {steps.map(({ title, description, button }, index) => (
-          <Card
-            key={title}
-            tabletLayout="left"
-            mobileLayout="left"
-            title={
-              <Title text={title} variant="text" count={index + 1} as="h3" />
-            }
-          >
-            <Typography variant="bodySmall" color={theme.colors.gray[600]}>
-              {description}
-            </Typography>
-            {button}
-          </Card>
+          <div key={title}>
+            <Styled.Count count={index + 1} size="small" />
+            <Card
+              tabletLayout="left"
+              mobileLayout="left"
+              title={<Title text={title} variant="text" as="h3" />}
+            >
+              <Typography variant="bodyTitle" color={theme.colors.gray[600]}>
+                {description}
+              </Typography>
+              {button}
+            </Card>
+          </div>
         ))}
       </Styled.Steps>
     </Container>

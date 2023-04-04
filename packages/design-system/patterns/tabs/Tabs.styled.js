@@ -29,7 +29,7 @@ export const Content = styled.div`
 
 export const Tab = styled.button`
   width: 100%;
-  padding: 10px 50px;
+  padding: 10px 10px;
   cursor: pointer;
   white-space: nowrap;
   background: ${({ theme, active }) =>
@@ -38,12 +38,16 @@ export const Tab = styled.button`
   border-bottom: 1px solid
     ${({ borderBottom, theme }) =>
       borderBottom ? theme.colors.gray[300] : "transparent"};
+  border-right-color: transparent;
 
   &:first-of-type {
-    border-radius: 10px 0 0 0;
+    border-radius: ${({ transparentContent }) =>
+      transparentContent ? "10px 0 0 10px" : "10px 0 0 0"};
   }
 
   &:last-of-type {
-    border-radius: 0 10px 0 0;
+    border-radius: ${({ transparentContent }) =>
+      transparentContent ? "0 10px 10px 0" : "0 10px 0 0"};
+    border-right-color: ${({ theme }) => theme.colors.gray[300]};
   }
 `

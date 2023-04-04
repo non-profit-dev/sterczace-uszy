@@ -57,6 +57,7 @@ export const GET_ANIMAL = gql`
         height
         weight
         targetWeight
+        location2
         excerpt
         additionalInfo
         behavior
@@ -76,8 +77,19 @@ export const GET_ANIMAL = gql`
         healthStory {
           json
         }
+        needs {
+          json
+        }
+        family {
+          json
+        }
         important {
           json
+        }
+        imagesCollection {
+          items {
+            url
+          }
         }
       }
     }
