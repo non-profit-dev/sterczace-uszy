@@ -72,7 +72,7 @@ const Details = ({
         content: (
           <List>
             {tab.content?.map((item) => (
-              <ListItem key={item} variant="gray" iconName="check">
+              <ListItem key={item} variant="primary-gray" iconName="check">
                 <Typography variant="bodyTitle">{item}</Typography>
               </ListItem>
             ))}
