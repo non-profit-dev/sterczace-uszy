@@ -38,18 +38,21 @@ export const Slider = styled(SliderComponent)`
 
 export const ImageWrapper = styled.div`
   display: flex;
-  height: 180px;
+  width: 100%;
+  max-height: 180px;
+  height: 100%;
+  aspect-ratio: 1;
   border-radius: 14px;
   border: 3px solid
     ${({ active, theme }) =>
       active ? theme.colors.primary[500] : "transparent"};
 
-  ${({ theme }) => theme.breakpoints.tablet} {
-    height: 140px;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    max-height: 260px;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    height: 100px;
+    max-height: 150px;
   }
 `
 
