@@ -35,8 +35,8 @@ const Values = () => {
   ]
 
   return (
-    <Styled.ContainerSection as="section">
-      <Styled.Wrapper>
+    <Styled.Wrapper>
+      <Styled.ContainerSection as="section">
         <Styled.Banner
           heading="Pomagamy kierując się wartościami"
           subtitle="Nasze wartości"
@@ -56,7 +56,7 @@ const Values = () => {
             </Typography>
           </Styled.TextBottomWrapper>
         </Styled.Banner>
-        <Styled.Img alt="dog for values section" src="../about/values.png" />
+        <Styled.Img alt="" src="../about/values.png" />
         <Styled.FeatureWrapper>
           <List gap={40}>
             {values.map(({ heading, description, icon }) => (
@@ -69,8 +69,8 @@ const Values = () => {
             ))}
           </List>
         </Styled.FeatureWrapper>
-      </Styled.Wrapper>
-    </Styled.ContainerSection>
+      </Styled.ContainerSection>
+    </Styled.Wrapper>
   )
 }
 

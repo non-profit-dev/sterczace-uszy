@@ -15,6 +15,7 @@ const breakpoints = getBreakpoints({
   tabletLg: 992,
   desktopSm: 1200,
   desktop: 1400,
+  tabletImage: 820,
 })
 
 export default breakpoints
