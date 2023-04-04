@@ -7,15 +7,14 @@ import Typography from "design-system/components/typography"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 
-import { animalType } from "../../lib/types"
+import { animalType, animalsType } from "../../lib/types"
 
 import Page from "../Page"
 
-import Hero from "./components/Hero"
-
 import * as Styled from "./Animal.styled"
+import OtherAnimals from "./components/OtherAnimals/OtherAnimals"
 
-const Animal = ({ data }) => (
+const Animal = ({ data, otherAnimals }) => (
   <Page title={`${data.name} - Nasi podopieczni`}>
     <Styled.Banner>
       <Banner
@@ -34,9 +33,11 @@ const Animal = ({ data }) => (
     <Navigation />
 
     <Styled.Main>
-      <Hero name={data.name} />
-
       <Container>
+        <Typography variant="h3">imię: {data?.name}</Typography>
+        <Typography variant="bodyTitle">
+          krótki opis: {data?.excerpt}
+        </Typography>
         <Typography variant="bodyTitle">waga: {data?.weight}</Typography>
         <Typography variant="bodyTitle">
           waga docelowa: {data?.targetWeight}
@@ -73,6 +74,7 @@ const Animal = ({ data }) => (
           documentToReactComponents(data.socialBehavior.json)}
         <img src={data?.thumbnail.url} alt="" width="400" />
       </Container>
+      <OtherAnimals data={otherAnimals.items} />
     </Styled.Main>
 
     <Footer />
@@ -81,6 +83,7 @@ const Animal = ({ data }) => (
 
 Animal.propTypes = {
   data: animalType.isRequired,
+  otherAnimals: animalsType.isRequired,
 }
 
 export default Animal
