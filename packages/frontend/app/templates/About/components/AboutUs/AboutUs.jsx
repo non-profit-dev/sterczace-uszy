@@ -20,7 +20,7 @@ const AboutUs = () => (
         </Typography>
         <Typography variant="bodyTitle">
           Nasza historia zaczęła się w innej organizacji pomagającej zwierzętom.
-          Poznałyśmy się szukając dla nich nowych domów oraz tymczvariantowo
+          Poznałyśmy się szukając dla nich nowych domów oraz tymczasowo
           przyjmując ich pod naszym dachem.
         </Typography>
         <Typography variant="bodyTitle">
