@@ -48,6 +48,10 @@ const footerData = {
       link: "/fundacja",
     },
     {
+      title: "Polityka prywatności",
+      link: "/polityka-prywatnosci",
+    },
+    {
       title: "Kontakt",
       link: "/kontakt",
     },
