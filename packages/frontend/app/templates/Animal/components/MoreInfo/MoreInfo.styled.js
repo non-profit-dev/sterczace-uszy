@@ -10,8 +10,10 @@ export const Buttons = styled.div`
   display: flex;
   gap: 32px;
   margin-top: 80px;
+  margin-bottom: 80px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     margin-top: 40px;
+    margin-bottom: 40px;
   }
 `
