@@ -36,6 +36,8 @@ const DocumentsTemplate = () => (
       <TextBanner
         heading="Ankieta przedadopcyjna"
         size="small"
+        tabletLayout="left"
+        mobileLayout="left"
         button={
           <Button
             text="Pobierz"
@@ -57,6 +59,8 @@ const DocumentsTemplate = () => (
       <TextBanner
         heading="Ankieta dla domu tymczasowego"
         size="small"
+        tabletLayout="left"
+        mobileLayout="left"
         button={
           <Button
             text="Pobierz"
