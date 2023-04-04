@@ -1,20 +1,21 @@
-import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
-import Typography from "design-system/components/typography"
-import CtaBanner from "design-system/patterns/ctaBanner"
+
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 
-import Page from "../Page"
+import CtaBanner from "design-system/patterns/ctaBanner"
 
-import { animalsType } from "../../lib/types"
+import Hero from "./components/Hero"
+import TemporaryHome from "./components/AdoptionRules"
+
+import Page from "../Page"
 
 import * as Styled from "./Adoption.styled"
 
-const Adoption = ({ animals }) => (
-  <Page title="Nasi podopieczni">
-    <Banner>
+const Adoption = () => (
+  <Page title="Adopcja">
+    <Styled.Banner>
       <Banner
         heading="Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj"
         button={
@@ -26,30 +27,24 @@ const Adoption = ({ animals }) => (
           />
         }
       />
-    </Banner>
+    </Styled.Banner>
 
     <Navigation />
 
-    <Styled.Main>
-      <Container>
-        <Typography variant="h4" as="h3">
-          ♥️ {animals.total} Pomocnych serc
-        </Typography>
-      </Container>
+    <main>
+      <Hero />
+      <TemporaryHome />
       <CtaBanner
-        buttonHref="/kontakt"
-        buttonText="Skontaktuj się z nami"
         heading="Masz pytania lub wątpliwości?"
-        mobileLayout="left"
+        buttonText="Skontaktuj się z nami"
+        buttonHref="/kontakt"
       />
-    </Styled.Main>
+    </main>
 
     <Footer />
   </Page>
 )
 
-Adoption.propTypes = {
-  animals: animalsType.isRequired,
-}
+Adoption.propTypes = {}
 
 export default Adoption

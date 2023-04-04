@@ -15,6 +15,7 @@ export const Container = styled.h1`
 
   a {
     color: ${({ theme }) => theme.colors.primary[500]};
+    padding-left: 3px;
   }
 
   strong {

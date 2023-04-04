@@ -44,7 +44,7 @@ const Animals = ({ data }) => (
       </Styled.CardsWrapper>
 
       <Styled.SliderWrapper>
-        <Slider>
+        <Slider pagination navigation>
           {data
             .slice(0, 6)
             .map(({ name, age, gender, excerpt, thumbnail, slug }) => (

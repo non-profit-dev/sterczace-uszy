@@ -14,10 +14,14 @@ import Car from "design-system/tokens/illustrations/car.svg"
 import Camera from "design-system/tokens/illustrations/camera.svg"
 import Scissors from "design-system/tokens/illustrations/scissors.svg"
 import Training from "design-system/tokens/illustrations/training.svg"
+import DogCat from "design-system/tokens/illustrations/dog-cat.svg"
 import Support from "design-system/tokens/illustrations/support.svg"
 import WomanAndDog from "design-system/tokens/illustrations/womanAndDog.svg"
 import Bowl from "design-system/tokens/illustrations/bowl.svg"
 import TemporaryHome from "design-system/tokens/illustrations/temporaryHome.svg"
+import DogRescue from "design-system/tokens/illustrations/dogRescue.svg"
+import Percentage from "design-system/tokens/illustrations/percentage.svg"
+import Hugging from "design-system/tokens/illustrations/hugging.svg"
 
 const sizes = {
   heartWithDogFace: {
@@ -272,6 +276,62 @@ const sizes = {
       height: 100,
     },
   },
+  dogCat: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  dogRescue: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  percentage: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 100,
+      height: 100,
+    },
+  },
+  hugging: {
+    small: {
+      width: 100,
+      height: 100,
+    },
+    medium: {
+      width: 100,
+      height: 100,
+    },
+    large: {
+      width: 280,
+      height: 375,
+    },
+  },
 }
 
 export const illustrations = {
@@ -289,10 +349,14 @@ export const illustrations = {
   help: Help,
   protect: Protect,
   treat: Treat,
+  dogCat: DogCat,
   support: Support,
   bowl: Bowl,
   womanAndDog: WomanAndDog,
   temporaryHome: TemporaryHome,
+  dogRescue: DogRescue,
+  percentage: Percentage,
+  hugging: Hugging,
 }
 
 const Illustration = ({ name, className, size }) => {

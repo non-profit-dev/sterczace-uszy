@@ -38,8 +38,7 @@ export const IllustrationContainer = styled.div`
   padding: 36px 20px 18px 20px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: ${({ hideIllustrationOnMobile }) =>
-      hideIllustrationOnMobile ? `none` : `inline-flex`};
+    display: inline-flex;
   }
 
   svg,
@@ -135,36 +134,10 @@ export const Wrapper = styled.div`
   }
 `
 
-export const ButtonWrapper = styled.div`
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    ${({ hideButtonOnMobile }) =>
-      hideButtonOnMobile
-        ? css`
-            display: none;
-          `
-        : css`
-            display: block;
-          `}
-  }
-`
-
 export const Illustration = styled.img`
   height: 100px;
 `
 
-export const MobileTitle = styled.div`
-  display: none;
-
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-  }
-`
-
 export const Title = styled.div`
   width: 100%;
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: ${({ hideOnMobile }) => (hideOnMobile ? `none` : `block`)};
-  }
 `

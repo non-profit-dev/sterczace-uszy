@@ -33,7 +33,9 @@ const Navigation = () => {
                     text={item.title}
                     variant="text"
                     size="small"
-                    color="black"
+                    color={
+                      item.href === "/pliki-do-pobrania" ? "primary" : "black"
+                    }
                   />
                 </li>
               ))}
@@ -56,7 +58,9 @@ const Navigation = () => {
                     text={item.title}
                     variant="text"
                     size="medium"
-                    color="black"
+                    color={
+                      item.href === "/pliki-do-pobrania" ? "primary" : "black"
+                    }
                   />
                 </ListItem>
               ))}

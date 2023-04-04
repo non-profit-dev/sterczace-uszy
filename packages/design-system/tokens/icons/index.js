@@ -23,6 +23,8 @@ import FemaleAnimal from "./FemaleAnimal.svg"
 import MaleAnimal from "./MaleAnimal.svg"
 import HeartFilled from "./HeartFilled.svg"
 import DoubleVector from "./DoubleVector.svg"
+import Copy from "./Copy.svg"
+import Donation from "./Donation.svg"
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -50,6 +52,8 @@ export const icons = {
   femaleAnimal: FemaleAnimal,
   maleAnimal: MaleAnimal,
   heartFilled: HeartFilled,
+  copy: Copy,
+  donation: Donation,
 }
 
 export {
@@ -77,4 +81,6 @@ export {
   FemaleAnimal,
   MaleAnimal,
   HeartFilled,
+  Copy,
+  Donation,
 }

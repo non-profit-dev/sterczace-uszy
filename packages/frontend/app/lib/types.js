@@ -1,12 +1,26 @@
 import { shape, arrayOf, string, number } from "prop-types"
 
+export const animalType = shape({
+  slug: string,
+  name: string,
+  gender: string,
+  age: string,
+  excerpt: string,
+  height: number,
+  weight: number,
+  targetWeight: number,
+  additionalInfo: arrayOf(string),
+  health: arrayOf(string),
+  behavior: arrayOf(string),
+})
+
 export const animalsType = shape({
   items: arrayOf(
     shape({
       slug: string,
       name: string,
       gender: string,
-      age: number,
+      age: string,
       excerpt: string,
     })
   ),

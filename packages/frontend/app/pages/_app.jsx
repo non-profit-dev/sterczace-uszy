@@ -20,6 +20,11 @@ const MyApp = ({ Component, pageProps }) => (
       <ThemeProvider theme={theme}>
         <Global
           styles={css`
+            html {
+              scroll-behavior: smooth;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            }
             body {
               margin: 0;
               font-family: ${theme.fontFamily};

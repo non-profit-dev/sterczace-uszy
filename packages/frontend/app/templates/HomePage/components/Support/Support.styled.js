@@ -64,7 +64,7 @@ export const Content = styled.div`
     left: 0;
     transform: translateX(-100px);
     width: calc(100% + 200px);
-    height: 100%;
+    height: calc(100% + 1px);
     z-index: -1;
     background: linear-gradient(
         90deg,

@@ -9,6 +9,8 @@ const AboutUs = () => (
         heading="Fundacja Sterczące Uszy"
         subtitle="Więcej o nas"
         size="medium"
+        tabletLayout="left"
+        mobileLayout="left"
       />
       <Styled.TextWrapper>
         <Typography variant="bodyTitle">
@@ -18,7 +20,7 @@ const AboutUs = () => (
         </Typography>
         <Typography variant="bodyTitle">
           Nasza historia zaczęła się w innej organizacji pomagającej zwierzętom.
-          Poznałyśmy się szukając dla nich nowych domów oraz tymczvariantowo
+          Poznałyśmy się szukając dla nich nowych domów oraz tymczasowo
           przyjmując ich pod naszym dachem.
         </Typography>
         <Typography variant="bodyTitle">

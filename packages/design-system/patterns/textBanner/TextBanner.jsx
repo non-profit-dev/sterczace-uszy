@@ -9,7 +9,7 @@ const sizes = {
   small: {
     subtitle: "h6",
     heading: "h3",
-    description: "bodySmall",
+    description: "bodyTitle",
   },
   medium: {
     subtitle: "h6",
@@ -66,13 +66,13 @@ const TextBanner = ({
     </Styled.Container>
 
     {children && (
-      <Typography
+      <Styled.Description
         variant={sizes[size].description}
         color={descriptionColor}
         as="div"
       >
         {children}
-      </Typography>
+      </Styled.Description>
     )}
 
     {button && (
