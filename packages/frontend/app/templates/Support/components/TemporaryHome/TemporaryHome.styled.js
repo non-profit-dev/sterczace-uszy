@@ -14,7 +14,7 @@ export const Content = styled.div`
   }
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding-top: 40px;
+    padding-top: 100px;
     grid-template-columns: auto;
   }
 `
@@ -25,7 +25,7 @@ export const Steps = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 
-  ${({ theme }) => theme.breakpoints.tabletLg} {
+  ${({ theme }) => theme.breakpoints.desktopSm} {
     margin-top: 80px;
     grid-template-columns: auto;
     gap: 0;
