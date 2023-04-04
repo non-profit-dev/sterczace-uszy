@@ -28,7 +28,6 @@ export const Slider = styled(SliderComponent)`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: calc(100% + 60px);
     margin-left: -60px;
-    padding-top: 16px;
     padding-bottom: 0;
   }
 
