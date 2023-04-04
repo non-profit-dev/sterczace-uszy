@@ -13,10 +13,6 @@ export const BannerContent = styled.div`
   flex-direction: column;
   gap: 60px;
   align-items: center;
-
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    align-items: start;
-  }
 `
 
 export const TextContainer = styled.div`
@@ -41,8 +37,7 @@ export const ButtonWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  ${({ theme }) => theme.breakpoints.tabletLg} {
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     margin-top: 0;
-    align-items: flex-start;
   }
 `
