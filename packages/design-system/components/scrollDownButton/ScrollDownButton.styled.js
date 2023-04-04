@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
+import { css } from "@emotion/react"
 
-export const ScrollDownButton = styled.a`
+export const ScrollDownButton = styled.button`
   display: inline-flex;
   width: 64px;
   height: 64px;
@@ -18,5 +19,26 @@ export const ScrollDownButton = styled.a`
   ${({ theme }) => theme.breakpoints.mobile} {
     width: 32px;
     height: 32px;
+  }
+`
+export const Icon = styled.span`
+  display: inline-flex;
+
+  svg {
+    ${({ theme }) =>
+      css`
+          height: 28px;
+          width: 21px;
+          
+        ${theme.breakpoints.tablet} {
+          height: 21px;
+          width: 13.5px;
+        }
+
+        ${theme.breakpoints.mobile} {
+          height: 14px;
+          width: 10.5px;
+        
+      `}
   }
 `

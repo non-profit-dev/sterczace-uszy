@@ -1,29 +1,42 @@
-import { string, oneOf } from "prop-types"
+import { string } from "prop-types"
 
 import Icon from "design-system/components/icon"
-
 import theme from "../../tokens/theme"
 
 import * as Styled from "./ScrollDownButton.styled"
 
-const ScrollDownButton = ({ href, ariaLabel, className, size }) => (
-  <Styled.ScrollDownButton
-    href={href}
-    aria-label={ariaLabel}
-    className={className}
-  >
-    {/* <Styled.Icon size="medium" color={theme.colors.primary[300]}> */}
-    <Icon name="doubleVector" size={size} color={theme.colors.neutrals[100]} />
-    {/* </Styled.Icon> */}
-  </Styled.ScrollDownButton>
-)
+const ScrollDownButton = ({ sectionIdToScroll, ariaLabel, className }) => {
+  const handleScrollToSection = () => {
+    // const element = document.getElementsByClassName(scrollTo)
+    const element = document.getElementsById(sectionIdToScroll)
+
+    element.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+
+  return (
+    <Styled.ScrollDownButton
+      onClick={() => handleScrollToSection()}
+      aria-label={ariaLabel}
+      className={className}
+    >
+      <Styled.Icon>
+        <Icon
+          name="doubleVector"
+          size="medium"
+          color={theme.colors.neutrals[100]}
+        />
+      </Styled.Icon>
+    </Styled.ScrollDownButton>
+  )
+}
 
 ScrollDownButton.propTypes = {
   /**
-   * The URL that the component should redirect to when clicked.
+   * The section id name that the component should scroll into when clicked.
    */
-  href: string,
-  size: oneOf(["small", "medium", "large"]),
+  sectionIdToScroll: string.isRequired,
   /**
    * It's used to provide a text description for assistive technologies, like screen readers.
    */
@@ -32,9 +45,7 @@ ScrollDownButton.propTypes = {
 }
 
 ScrollDownButton.defaultProps = {
-  href: null,
   className: null,
-  size: "small",
 }
 
 export default ScrollDownButton
