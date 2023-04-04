@@ -64,7 +64,6 @@ export const Card = styled(CardComponent)`
     border-radius: 0;
     box-shadow: none;
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray[200]};
-    padding-left: 24px;
 
     &:hover {
       box-shadow: none;
