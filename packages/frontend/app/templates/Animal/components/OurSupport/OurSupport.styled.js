@@ -105,7 +105,6 @@ export const ButtonContainer = styled.div`
 
 export const Items = styled(ListItem)`
   font-size: 20px;
-  font-weight: 300;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     font-size: 18px;
