@@ -3,6 +3,7 @@ import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+import OurSupport from "./components/OurSupport"
 
 import { animalType } from "../../lib/types"
 
@@ -66,6 +67,7 @@ const Animal = ({ data }) => (
           family={data.family?.json}
         />
       </Container>
+      <OurSupport />
     </Styled.Main>
 
     <Footer />
