@@ -97,13 +97,10 @@ export const GET_ANIMAL = gql`
 `
 
 export const GET_OTHER_ANIMALS = gql`
-  query GetAnimal($slug: String) {
+  query GetOtherAnimals($slug: String) {
     animalCollection(where: { slug_not: $slug }) {
       total
       items {
-        sys {
-          id
-        }
         name
         gender
         age
