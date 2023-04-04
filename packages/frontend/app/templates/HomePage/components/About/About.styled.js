@@ -3,19 +3,15 @@ import styled from "@emotion/styled"
 export const Wrapper = styled.section`
   padding-top: 280px;
   padding-bottom: 120px;
-  background-image: url("/home/about-background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) -64.46%,
+    #faf4f4 109.44%,
+    rgba(255, 255, 255, 0) 283.33%
+  );
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding: 0;
-    background-size: 100% 60%;
-    background-position: bottom;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    background-size: 100% 100%;
   }
 `
 
