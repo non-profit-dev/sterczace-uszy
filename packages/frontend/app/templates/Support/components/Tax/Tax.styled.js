@@ -19,12 +19,13 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   display: grid;
-  gap: 30px;
+  gap: 50px;
   grid-auto-flow: column;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
 
   ${({ theme }) => theme.breakpoints.desktopSm} {
+    gap: 30px;
     grid-auto-flow: row;
     grid-template-columns: auto;
   }

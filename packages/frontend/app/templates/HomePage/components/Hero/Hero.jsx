@@ -1,7 +1,6 @@
 import { useTheme } from "@emotion/react"
 
 import Button from "design-system/components/button"
-import Typography from "design-system/components/typography"
 
 import TextBanner from "design-system/patterns/textBanner"
 
@@ -57,8 +56,6 @@ const Hero = () => {
               href={buttonHref}
               layout="center"
               illustrationName={illustration}
-              hideIllustrationOnMobile
-              hideButtonOnMobile
               title={
                 <Styled.Title
                   text={title}
@@ -67,12 +64,7 @@ const Hero = () => {
                   as="h2"
                 />
               }
-              mobileTitle={
-                <Typography variant="h5" as="h2">
-                  {title}
-                </Typography>
-              }
-              mobileLayout="left"
+              mobileLayout="center"
               button={
                 <Button
                   text={buttonText}

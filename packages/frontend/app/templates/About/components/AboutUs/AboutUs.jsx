@@ -9,6 +9,8 @@ const AboutUs = () => (
         heading="Fundacja Sterczące Uszy"
         subtitle="Więcej o nas"
         size="medium"
+        tabletLayout="left"
+        mobileLayout="left"
       />
       <Styled.TextWrapper>
         <Typography variant="bodyTitle">

@@ -37,6 +37,8 @@ const Microchips = () => {
             heading="Zniżka na rejestrację mikroczipa"
             headingColor={theme.colors.gray[600]}
             descriptionColor={theme.colors.gray[600]}
+            tabletLayout="left"
+            mobileLayout="left"
             button={
               formSection ? null : (
                 <Button

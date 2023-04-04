@@ -9,7 +9,7 @@ const sizes = {
   small: {
     subtitle: "h6",
     heading: "h3",
-    description: "bodySmall",
+    description: "bodyTitle",
   },
   medium: {
     subtitle: "h6",
