@@ -23,7 +23,7 @@ export const Footer = styled.footer`
   }
 `
 
-export const Logo = styled.div`
+export const Logo = styled.a`
   display: inline-flex;
   margin-top: 60px;
 

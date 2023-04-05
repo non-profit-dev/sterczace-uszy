@@ -38,7 +38,7 @@ const Footer = () => {
   return (
     <Styled.Footer>
       <Container size="large">
-        <Styled.Logo>
+        <Styled.Logo href="/">
           <Logo />
         </Styled.Logo>
 
