@@ -23,18 +23,14 @@ export const MainImage = styled(ImageComponent)`
 
 export const Slider = styled(SliderComponent)`
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 0;
+  padding: 16px 0;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding-bottom: 0;
-    padding-left: 0;
+    padding: 16px 0;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding-left: 0;
-    padding-bottom: 16px;
+    padding: 16px 0;
   }
 `
 
