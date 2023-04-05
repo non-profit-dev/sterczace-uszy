@@ -17,7 +17,7 @@ export const Card = styled.a`
     linkStyle &&
     css`
       box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.1);
-      transition: 500ms linear;
+      transition: 300ms linear;
       cursor: pointer;
     `}
 
@@ -25,7 +25,7 @@ export const Card = styled.a`
     ${({ linkStyle }) =>
       linkStyle &&
       css`
-        box-shadow: 2px 2px 53px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 2px 2px 30px 0px rgba(0, 0, 0, 0.2);
       `}
   }
 `
