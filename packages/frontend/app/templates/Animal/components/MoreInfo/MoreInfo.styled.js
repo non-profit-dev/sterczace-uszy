@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 export const Section = styled.section``
 
 export const Tabs = styled.div`
-  margin-top: 40px;
+  margin-top: 56px;
 `
 
 export const Buttons = styled.div`

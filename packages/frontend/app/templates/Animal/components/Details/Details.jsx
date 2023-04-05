@@ -70,7 +70,7 @@ const Details = ({
       .map((tab) => ({
         tab: tab.name,
         content: (
-          <List>
+          <List gap={12}>
             {tab.content?.map((item) => (
               <ListItem key={item} variant="primary-gray" iconName="check">
                 <Typography variant="bodyTitle">{item}</Typography>
