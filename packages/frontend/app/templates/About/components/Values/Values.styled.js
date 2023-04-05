@@ -65,21 +65,26 @@ export const Banner = styled(TextBanner)`
     grid-column: 1 / 3;
     grid-row: 2;
     padding-top: 40px;
-    padding-left: 50px;
-    padding-right: 40px;
+    padding-left: 56px;
+    padding-right: 56px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding-left: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 `
 
 export const FeatureWrapper = styled.div`
   grid-row: 3;
   padding-top: 30px;
-  max-width: 90%;
+  max-width: 100%;
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding-left: 40px;
-    padding-right: 10px;
+    padding-left: 56px;
+    padding-right: 56px;
     padding-bottom: 20px;
+  }
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 `
