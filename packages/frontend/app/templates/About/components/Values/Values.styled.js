@@ -11,22 +11,22 @@ export const ContainerSection = styled(Container)`
   padding-left: 100px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     margin: 0;
-    padding: 0;
+    padding: 0px 0px 20px 0px;
   }
 `
 
 export const Wrapper = styled.div`
   background: linear-gradient(0deg, #eeeeee 0%, rgba(255, 255, 255, 0) 100%),
     #ffffff;
-  padding: 10px auto;
+  padding: 10px 0px 0px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     margin-bottom: 10px;
-    padding: 0px auto;
+    padding: 10px 0px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding: 20px auto;
+    padding: 20px 0px;
   }
 `
 
@@ -35,13 +35,13 @@ export const Img = styled(Image)`
   width: 80%;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 100vw;
-    height: 100vw;
+    max-height: 78vh;
     border-radius: 0;
     grid-row: 1;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     width: 100vw;
-    height: 100vw;
+    height: 110vw;
   }
 `
 
@@ -65,8 +65,11 @@ export const Banner = styled(TextBanner)`
     grid-column: 1 / 3;
     grid-row: 2;
     padding-top: 40px;
-    padding-left: 40px;
+    padding-left: 50px;
     padding-right: 40px;
+  }
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding-left: 20px;
   }
 `
 
