@@ -60,7 +60,7 @@ const Details = ({
         content: behavior,
       },
       {
-        name: "Informacje",
+        name: "Ważne",
         content: info,
       },
     ]
