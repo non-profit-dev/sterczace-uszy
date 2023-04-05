@@ -23,23 +23,25 @@ export const Wrapper = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     margin-bottom: 10px;
+    padding: 0px auto;
+  }
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding: 20px auto;
   }
 `
 
 export const Img = styled(Image)`
   grid-row: 3;
   width: 80%;
-  ${({ theme }) => theme.breakpoints.tabletImage} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 100vw;
     height: 100vw;
     border-radius: 0;
     grid-row: 1;
-    object-fit: fill;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     width: 100vw;
-    height: 130vw;
-    object-fit: fill;
+    height: 100vw;
   }
 `
 
@@ -75,5 +77,6 @@ export const FeatureWrapper = styled.div`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding-left: 40px;
     padding-right: 10px;
+    padding-bottom: 20px;
   }
 `
