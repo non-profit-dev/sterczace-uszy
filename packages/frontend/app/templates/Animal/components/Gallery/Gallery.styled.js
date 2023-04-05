@@ -37,7 +37,7 @@ export const Slider = styled(SliderComponent)`
 export const ImageWrapper = styled.div`
   display: flex;
   width: 100%;
-  max-height: 180px;
+  max-height: 190px;
   height: 100%;
   aspect-ratio: 1;
   border-radius: 14px;
