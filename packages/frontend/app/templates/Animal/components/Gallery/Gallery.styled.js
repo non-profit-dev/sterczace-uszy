@@ -12,6 +12,7 @@ export const Gallery = styled.div`
 `
 
 export const MainImage = styled(ImageComponent)`
+  display: block;
   width: 100%;
   height: 600px;
 
@@ -23,6 +24,7 @@ export const MainImage = styled(ImageComponent)`
 export const Slider = styled(SliderComponent)`
   width: 100%;
   padding-top: 16px;
+  padding-bottom: 16px;
   padding-left: 0;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
@@ -43,7 +45,7 @@ export const ImageWrapper = styled.div`
   height: 100%;
   aspect-ratio: 1;
   border-radius: 14px;
-  border: 3px solid
+  border: 2px solid
     ${({ active, theme }) =>
       active ? theme.colors.primary[500] : "transparent"};
 
