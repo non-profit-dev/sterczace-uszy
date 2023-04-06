@@ -22,6 +22,10 @@ import Menu from "./Menu.svg"
 import FemaleAnimal from "./FemaleAnimal.svg"
 import MaleAnimal from "./MaleAnimal.svg"
 import HeartFilled from "./HeartFilled.svg"
+import Love from "./Love.svg"
+import Responsibility from "./Responsibility.svg"
+import Transparency from "./Transparency.svg"
+import Trust from "./Trust.svg"
 import Copy from "./Copy.svg"
 import Donation from "./Donation.svg"
 
@@ -50,6 +54,10 @@ export const icons = {
   femaleAnimal: FemaleAnimal,
   maleAnimal: MaleAnimal,
   heartFilled: HeartFilled,
+  love: Love,
+  responsibility: Responsibility,
+  transparency: Transparency,
+  trust: Trust,
   copy: Copy,
   donation: Donation,
 }
@@ -79,6 +87,10 @@ export {
   FemaleAnimal,
   MaleAnimal,
   HeartFilled,
+  Love,
+  Responsibility,
+  Transparency,
+  Trust,
   Copy,
   Donation,
 }

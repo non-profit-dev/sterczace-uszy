@@ -1,14 +1,12 @@
 import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
-
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
-
 import Achievements from "./components/AboutUs/Achievements"
 import AboutUs from "./components/AboutUs"
+import Values from "./components/Values"
 import Supporters from "./components/Supporters"
-
 import Page from "../Page"
 
 import {
@@ -41,7 +39,7 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
 
     <Styled.Main>
       <AboutUs />
-
+      <Values />
       <Container>
         <Achievements
           supportingNumber={supporting.total}
@@ -54,7 +52,6 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
 
       <Supporters data={supporting.items} />
     </Styled.Main>
-
     <Footer />
   </Page>
 )
