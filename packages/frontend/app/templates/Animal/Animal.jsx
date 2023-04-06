@@ -5,7 +5,7 @@ import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 import OurSupport from "./components/OurSupport"
 
-import { animalType } from "../../lib/types"
+import { animalType, animalsType } from "../../lib/types"
 
 import Page from "../Page"
 
@@ -15,8 +15,9 @@ import Details from "./components/Details"
 import MoreInfo from "./components/MoreInfo"
 
 import * as Styled from "./Animal.styled"
+import OtherAnimals from "./components/OtherAnimals/OtherAnimals"
 
-const Animal = ({ data }) => (
+const Animal = ({ data, otherAnimals }) => (
   <Page title={`${data.name} - Nasi podopieczni`}>
     <Styled.Banner>
       <Banner
@@ -36,7 +37,6 @@ const Animal = ({ data }) => (
 
     <Styled.Main>
       <Hero name={data.name} />
-
       <Container>
         <Styled.Section>
           <Gallery
@@ -67,6 +67,8 @@ const Animal = ({ data }) => (
           family={data.family?.json}
         />
       </Container>
+
+      <OtherAnimals data={otherAnimals.items} />
       <OurSupport />
     </Styled.Main>
 
@@ -76,6 +78,7 @@ const Animal = ({ data }) => (
 
 Animal.propTypes = {
   data: animalType.isRequired,
+  otherAnimals: animalsType.isRequired,
 }
 
 export default Animal

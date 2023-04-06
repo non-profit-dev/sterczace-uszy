@@ -1,20 +1,28 @@
 import AnimalPage from "../../templates/Animal"
 
 import client from "../../lib/api"
-import { GET_ANIMALS, GET_ANIMAL } from "../../lib/queries"
-import { animalType } from "../../lib/types"
+import { GET_ANIMALS, GET_ANIMAL, GET_OTHER_ANIMALS } from "../../lib/queries"
+import { animalType, animalsType } from "../../lib/types"
 
-const Animal = ({ data }) => <AnimalPage data={data} />
+const Animal = ({ data, otherAnimals }) => (
+  <AnimalPage data={data} otherAnimals={otherAnimals} />
+)
 
 export const getStaticProps = async ({ params }) => {
-  const { data } = await client.query({
+  const { data: animalData } = await client.query({
     query: GET_ANIMAL,
+    variables: { slug: params.slug },
+  })
+
+  const { data: otherAnimals } = await client.query({
+    query: GET_OTHER_ANIMALS,
     variables: { slug: params.slug },
   })
 
   return {
     props: {
-      data: data.animalCollection.items[0],
+      data: animalData.animalCollection.items[0],
+      otherAnimals: otherAnimals.animalCollection,
       fallback: true,
     },
   }
@@ -35,6 +43,7 @@ export const getStaticPaths = async () => {
 
 Animal.propTypes = {
   data: animalType.isRequired,
+  otherAnimals: animalsType.isRequired,
 }
 
 export default Animal

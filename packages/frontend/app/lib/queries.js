@@ -95,3 +95,21 @@ export const GET_ANIMAL = gql`
     }
   }
 `
+
+export const GET_OTHER_ANIMALS = gql`
+  query GetOtherAnimals($slug: String) {
+    animalCollection(where: { slug_not: $slug, AND: { adopted: false } }) {
+      total
+      items {
+        name
+        gender
+        age
+        excerpt
+        slug
+        thumbnail {
+          url
+        }
+      }
+    }
+  }
+`
