@@ -46,10 +46,18 @@ export const Item = styled.li`
 
   &:first-of-type {
     border-radius: 10px 0 0 10px;
+
+    ${({ theme }) => theme.breakpoints.tabletLg} {
+      border-radius: 0;
+    }
   }
 
   &:last-of-type {
     border-radius: 0 10px 10px 0;
+
+    ${({ theme }) => theme.breakpoints.tabletLg} {
+      border-radius: 0;
+    }
   }
 `
 
