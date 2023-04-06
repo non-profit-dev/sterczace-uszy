@@ -63,7 +63,7 @@ const Form = () => {
       <Select
         label="Wpisz ilość potrzebnych kodów (jednorazowo nie więcej niż 10)"
         name="Ilość potrzebnych kodów"
-        options={["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]}
+        options={["2", "3", "4", "5", "6", "7", "8", "9", "10"]}
         defaultValue="1"
         required
       />
