@@ -18,23 +18,17 @@ export const BackgroundWrapper = styled.div`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     background-image: url("/single-animal/our-support-background-mobile.png");
     background-position: bottom;
-    padding: 0 0 100px 0;
+    padding: 60px 0 100px 0;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding: 0 0 60px 0;
+    padding: 60px 0 60px 0;
   }
 `
 
 export const ContainerSection = styled(Container)`
-  margin: 120px auto;
-
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    margin: 100px auto;
     padding: 0;
-  }
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    margin: 60px auto;
   }
 `
 
@@ -47,11 +41,6 @@ export const Wrapper = styled.div`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    margin-bottom: 100px;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    margin-bottom: 80px;
   }
 `
 
