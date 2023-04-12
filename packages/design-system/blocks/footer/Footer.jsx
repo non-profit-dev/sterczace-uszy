@@ -38,7 +38,7 @@ const Footer = () => {
   return (
     <Styled.Footer>
       <Container size="large">
-        <Styled.Logo href="/">
+        <Styled.Logo href="/" aria-label="Strona główna">
           <Logo />
         </Styled.Logo>
 
