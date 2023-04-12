@@ -7,7 +7,9 @@ export const animalType = shape({
   age: string,
   excerpt: string,
   height: number,
-  weight: number,
+  weight: string,
+  // the "location" field is temporarily disabled as it would require google maps to be loaded
+  location2: string,
   targetWeight: number,
   additionalInfo: arrayOf(string),
   health: arrayOf(string),

@@ -107,7 +107,7 @@ Details.propTypes = {
   gender: string,
   age: string,
   height: number,
-  weight: number,
+  weight: string,
   targetWeight: number,
   location: string,
   health: arrayOf(string),
