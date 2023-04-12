@@ -1,5 +1,4 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
-import { useTheme } from "@emotion/react"
 
 import Accordion from "design-system/components/accordion"
 import Button from "design-system/components/button"
@@ -68,23 +67,18 @@ import ListItem from "design-system/components/listItem"
 
 <ArgsTable />
 
-export const TemplateBlack = (args) => {
-  const theme = useTheme()
-  return (
-    <Accordion {...args}>
-      <Typography color={theme.colors.gray[600]} variant="bodySmall">
-        Tu wpisz odpowiedź na pytanie
-      </Typography>
-      <Button
-        text="Button"
-        variant="text"
-        color="primary"
-        size="small"
-        iconEnd="arrowRight"
-      />
-    </Accordion>
-  )
-}
+export const TemplateBlack = (args) => (
+  <Accordion {...args}>
+    <Typography variant="bodySmall">Tu wpisz odpowiedź na pytanie</Typography>
+    <Button
+      text="Button"
+      variant="text"
+      color="primary"
+      size="small"
+      iconEnd="arrowRight"
+    />
+  </Accordion>
+)
 
 export const TemplateWhitePrimary = (args) => (
   <Accordion {...args}>
@@ -129,17 +123,14 @@ export const TemplateWhitePrimary = (args) => (
   </Accordion>
 )
 
-export const TemplateFAQ = (args) => {
-  const theme = useTheme()
-  return (
-    <Accordion {...args}>
-      <Typography color={theme.colors.gray[600]} variant="bodySmall">
-        Proces adopcyjny polega na poznaniu rodziny, sprawdzeniu warunków
-        rodziny, jej wiedzy i otwartości na wiedzę. Pierwszym krokiem jest
-        wypełnienie <a href="google.com">ankiety</a> Drugim krokiem jest wizyta
-        przed adopcyjna u rodziny. Trzecim krokiem jest podpisanie umowy
-        adopcyjnej i odbiór psa.
-      </Typography>
-    </Accordion>
-  )
-}
+export const TemplateFAQ = (args) => (
+  <Accordion {...args}>
+    <Typography variant="bodySmall">
+      Proces adopcyjny polega na poznaniu rodziny, sprawdzeniu warunków rodziny,
+      jej wiedzy i otwartości na wiedzę. Pierwszym krokiem jest wypełnienie{" "}
+      <a href="google.com">ankiety</a> Drugim krokiem jest wizyta przed
+      adopcyjna u rodziny. Trzecim krokiem jest podpisanie umowy adopcyjnej i
+      odbiór psa.
+    </Typography>
+  </Accordion>
+)

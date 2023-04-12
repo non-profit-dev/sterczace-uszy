@@ -6,12 +6,14 @@ export const ListItem = styled.li`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  text-align: left;
   gap: 8px;
   background-color: "transparent";
   color: ${({ variant }) =>
     variant === "primary" ? theme.colors.primary[500] : theme.colors.gray[600]};
   ${theme.typography.desktop.bodySmall};
 `
+
 export const ChildContainer = styled.div`
   display: flex;
   color: inherit;
@@ -19,6 +21,7 @@ export const ChildContainer = styled.div`
   line-height: 30px;
   gap: ${({ gap }) => `${gap}px`};
 `
+
 export const ListItemIcon = styled.div`
   display: flex;
   flex-grow: 0;

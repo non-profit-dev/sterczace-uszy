@@ -76,7 +76,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100vw;
   min-height: 100vh;
-  background: ${({ theme }) => theme.colors.grey[700]};
+  background: ${({ theme }) => theme.colors.gray[700]};
   opacity: 0.2;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {

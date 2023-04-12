@@ -2,8 +2,7 @@ import styled from "@emotion/styled"
 
 export const Container = styled.h1`
   margin: 0;
-  color: ${({ color }) => color};
-  font-family: ${({ theme }) => theme.fontFamily};
+  color: ${({ color, theme }) => color || theme.colors.gray[600]};
   ${({ variant, theme }) => theme.typography.desktop[variant]};
 
   ${({ theme }) => theme.breakpoints.tablet} {
@@ -16,5 +15,10 @@ export const Container = styled.h1`
 
   a {
     color: ${({ theme }) => theme.colors.primary[500]};
+    padding-left: 3px;
+  }
+
+  strong {
+    font-weight: 600;
   }
 `

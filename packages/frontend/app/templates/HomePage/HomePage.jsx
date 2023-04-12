@@ -1,62 +1,69 @@
-import { shape, arrayOf, string } from "prop-types"
+import Banner from "design-system/components/banner"
+import Button from "design-system/components/button"
 
-import Typography from "design-system/components/typography"
-import Image from "design-system/components/image"
+import Navigation from "design-system/blocks/navigation"
+import Footer from "design-system/blocks/footer"
+
+import Hero from "./components/Hero"
+import Adoption from "./components/Adoption"
+import Achievements from "./components/Achievements"
+import Animals from "./components/Animals"
+import Support from "./components/Support"
+import Supporters from "./components/Supporters"
+import About from "./components/About"
 
 import Page from "../Page"
 
 import * as Styled from "./HomePage.styled"
 
-const HomePage = ({ animals, supporting }) => (
-  <Page>
-    <Styled.Main>
-      <Styled.TextContainer>
-        <Typography variant="h5">
-          ♥️ {supporting.total} Pomocnych serc
-        </Typography>
-        <Typography variant="h5">
-          🏡 {animals.total} Znalezionych domów
-        </Typography>
-      </Styled.TextContainer>
+import {
+  supportingType,
+  animalsType,
+  adoptedAnimalsType,
+} from "../../lib/types"
+import Actions from "./components/Actions"
 
-      <Typography variant="h4">Do adopcji:</Typography>
-      <Styled.Grid>
-        {animals.items.map((animal) => (
-          <div key={animal.name}>
-            <Image src={animal.thumbnail.url} />
-            <Typography variant="bodyTitle">{animal.name}</Typography>
-            <Typography variant="bodySmall">{animal.excerpt}</Typography>
-          </div>
-        ))}
-      </Styled.Grid>
-      <Typography variant="h4">Wspierajacy fundację:</Typography>
-      <Styled.Grid>
-        {supporting.items.map((item) => (
-          <div key={item.name}>
-            <Typography variant="bodyTitle">{item.name}</Typography>
-            <Typography variant="bodyTiny">{item.description}</Typography>
-          </div>
-        ))}
-      </Styled.Grid>
+const HomePage = ({ animals, supporting, adoptedAnimals }) => (
+  <Page>
+    <Styled.Banner>
+      <Banner
+        heading="Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj"
+        button={
+          <Button
+            text="tutaj"
+            href="/wsparcie"
+            variant="textLine"
+            size="small"
+          />
+        }
+      />
+    </Styled.Banner>
+
+    <Navigation />
+
+    <Styled.Main>
+      <Hero />
+      <About />
+      <Achievements
+        supportingNumber={supporting.total}
+        animalsNumber={animals.total}
+        adoptedAnimalsNumber={adoptedAnimals.total}
+      />
+      <Actions />
+      <Animals data={animals.items} />
+      <Adoption />
+      <Support />
+      <Supporters data={supporting.items} />
     </Styled.Main>
+
+    <Footer />
   </Page>
 )
 
 HomePage.propTypes = {
-  animals: arrayOf(
-    shape({
-      name: string,
-      gender: string,
-      age: string,
-    })
-  ).isRequired,
-  supporting: arrayOf(
-    shape({
-      name: string,
-      description: string,
-      url: string,
-    })
-  ).isRequired,
+  animals: animalsType.isRequired,
+  supporting: supportingType.isRequired,
+  adoptedAnimals: adoptedAnimalsType.isRequired,
 }
 
 export default HomePage
