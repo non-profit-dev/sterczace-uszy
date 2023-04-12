@@ -15,6 +15,37 @@ export const TextBanner = styled.div`
         `
       : css`
           align-items: flex-start;
+          text-align: left;
+        `}
+
+  ${({ tabletLayout, theme }) =>
+    tabletLayout === "center"
+      ? css`
+          ${theme.breakpoints.tabletLg} {
+            align-items: center;
+            text-align: center;
+          }
+        `
+      : css`
+          ${theme.breakpoints.tabletLg} {
+            align-items: flex-start;
+            text-align: left;
+          }
+        `}
+
+  ${({ mobileLayout, theme }) =>
+    mobileLayout === "center"
+      ? css`
+          ${theme.breakpoints.mobileLg} {
+            align-items: center;
+            text-align: center;
+          }
+        `
+      : css`
+          ${theme.breakpoints.mobileLg} {
+            align-items: flex-start;
+            text-align: left;
+          }
         `}
 `
 
@@ -39,5 +70,7 @@ export const Subtitle = styled(Typography)`
 `
 
 export const Description = styled(Typography)`
-  opacity: 0.9;
+  & > * + * {
+    padding-top: 30px;
+  }
 `

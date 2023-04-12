@@ -41,50 +41,62 @@ const footerData = {
   foundation: [
     {
       title: "O nas",
-      link: "",
+      link: "/fundacja",
     },
     {
       title: "Nasze osiągnięcia",
-      link: "",
+      link: "/fundacja",
+    },
+    {
+      title: "Polityka prywatności",
+      link: "/polityka-prywatnosci",
     },
     {
       title: "Kontakt",
-      link: "",
+      link: "/kontakt",
     },
   ],
 
   support: [
     {
       title: "Dom tymczasowy",
-      link: "",
+      link: "/wsparcie#dom-tymczasowy",
     },
     {
-      title: "Wolontariat",
-      link: "",
+      title: "1.5% Podatku",
+      link: "/wsparcie/#podatek",
     },
     {
       title: "Wpłaty",
-      link: "",
+      link: "/wsparcie#wplaty",
     },
   ],
 
   adoption: [
     {
       title: "Zwierzęta do adopcji",
-      link: "",
+      link: "/do-adopcji",
     },
     {
       title: "Zasady adopcji",
-      link: "",
+      link: "/adopcja",
     },
     {
       title: "Dokumenty do pobrania",
-      link: "",
+      link: "/pliki-do-pobrania",
     },
   ],
   socialMedia: [
-    { icon: "facebook", link: "https://www.facebook.com/sterczaceuszy/" },
-    { icon: "instagram", link: "https://www.instagram.com/sterczaceuszy" },
+    {
+      icon: "facebook",
+      link: "https://www.facebook.com/sterczaceuszy/",
+      title: "Facebook",
+    },
+    {
+      icon: "instagram",
+      link: "https://www.instagram.com/sterczaceuszy",
+      title: "Instagram",
+    },
   ],
 }
 

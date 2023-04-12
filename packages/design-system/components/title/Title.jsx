@@ -1,4 +1,4 @@
-import { string, oneOf, number } from "prop-types"
+import { string, oneOf, number, bool } from "prop-types"
 
 import Icon from "design-system/components/icon"
 import Badge from "design-system/components/badge"
@@ -15,13 +15,21 @@ const Title = ({
   textSize,
   variant,
   count,
+  hideLineOnMobile,
+  as,
   className,
 }) => (
   <Styled.Title size={textSize} fullWidth={!!badge} className={className}>
     <Styled.Wrapper>
       {iconStart && <Icon name={iconStart} size={size} />}
-      {count && <Count count={count} size={size} />}
-      <Styled.Text size={textSize} variant={variant}>
+      {count && <Count count={count} size="xsmall" />}
+      <Styled.Text
+        size={size}
+        variant={textSize}
+        type={variant}
+        hideLineOnMobile={hideLineOnMobile}
+        as={as}
+      >
         {text}
       </Styled.Text>
       {iconEnd && <Icon name={iconEnd} size={size} />}
@@ -66,6 +74,8 @@ Title.propTypes = {
     "bodyTiny",
   ]),
   variant: oneOf(["text", "textLine"]),
+  hideLineOnMobile: bool,
+  as: string,
   className: string,
 }
 
@@ -77,6 +87,8 @@ Title.defaultProps = {
   size: "medium",
   textSize: "h4",
   variant: "textLine",
+  hideLineOnMobile: false,
+  as: null,
   className: null,
 }
 

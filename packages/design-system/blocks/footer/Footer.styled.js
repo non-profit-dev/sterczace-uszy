@@ -1,12 +1,16 @@
 import styled from "@emotion/styled"
 
-export const Footer = styled.div`
+import Typography from "design-system/components/typography"
+
+export const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-bottom: 80px;
 
   ${({ theme }) => theme.breakpoints.mobile} {
     gap: 32px;
+    padding-bottom: 40px;
   }
 
   &:before {
@@ -19,7 +23,7 @@ export const Footer = styled.div`
   }
 `
 
-export const Logo = styled.div`
+export const Logo = styled.a`
   display: inline-flex;
   margin-top: 60px;
 
@@ -100,6 +104,7 @@ export const Section = styled.div`
 
 export const Icons = styled.div`
   display: inline-flex;
+  gap: 6px;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     display: none;
@@ -107,6 +112,7 @@ export const Icons = styled.div`
 `
 export const IconsMobile = styled.div`
   display: none;
+  gap: 6px;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     display: inline-flex;
@@ -116,4 +122,20 @@ export const IconsMobile = styled.div`
 export const Copyright = styled.div`
   display: flex;
   justify-content: space-between;
+`
+
+export const CopyButton = styled.button`
+  display: inline-flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+`
+
+export const CopyInfo = styled(Typography)`
+  display: inline-flex;
+  min-height: 26px;
+  padding-left: 4px;
+  vertical-align: middle;
+  align-items: center;
 `

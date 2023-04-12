@@ -17,7 +17,7 @@ export const Card = styled.a`
     linkStyle &&
     css`
       box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.1);
-      transition: 500ms linear;
+      transition: 300ms linear;
       cursor: pointer;
     `}
 
@@ -25,19 +25,25 @@ export const Card = styled.a`
     ${({ linkStyle }) =>
       linkStyle &&
       css`
-        box-shadow: 2px 2px 53px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 2px 2px 30px 0px rgba(0, 0, 0, 0.2);
       `}
   }
 `
 export const IllustrationContainer = styled.div`
   display: inline-flex;
   justify-content: center;
-  width: 100%;
-  margin: 36px 10px 18px 10px;
+  max-width: ${({ fixedSize }) => (fixedSize ? "120px" : "100%")};
+  margin-left: auto;
+  margin-right: auto;
+  padding: 36px 20px 18px 20px;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
-    display: ${({ hideIllustrationOnMobile }) =>
-      hideIllustrationOnMobile ? `none` : `inline-flex`};
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: inline-flex;
+  }
+
+  svg,
+  img {
+    height: ${({ height }) => `${height}px`};
   }
 `
 
@@ -65,6 +71,7 @@ export const ContentContainer = styled.div`
     layout === "center"
       ? css`
           align-items: center;
+          text-align: center;
         `
       : css`
           align-items: flex-start;
@@ -91,34 +98,46 @@ export const Wrapper = styled.div`
     layout === "center"
       ? css`
           align-items: center;
+          text-align: center;
         `
       : css`
           align-items: flex-start;
+          text-align: left;
         `}
   gap: 24px;
   width: 100%;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    ${({ tabletLayout }) =>
+      tabletLayout === "center"
+        ? css`
+            align-items: center;
+            text-align: center;
+          `
+        : css`
+            align-items: flex-start;
+            text-align: left;
+          `}
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
     ${({ mobileLayout }) =>
       mobileLayout === "center"
         ? css`
             align-items: center;
+            text-align: center;
           `
         : css`
             align-items: flex-start;
+            text-align: left;
           `}
   }
 `
 
-export const ButtonWrapper = styled.div`
-  ${({ theme }) => theme.breakpoints.tablet} {
-    ${({ hideButtonOnMobile }) =>
-      hideButtonOnMobile
-        ? css`
-            display: none;
-          `
-        : css`
-            display: block;
-          `}
-  }
+export const Illustration = styled.img`
+  height: 100px;
+`
+
+export const Title = styled.div`
+  width: 100%;
 `

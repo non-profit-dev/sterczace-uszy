@@ -1,6 +1,13 @@
-import Typography from "design-system/components/typography"
 import { useTheme } from "@emotion/react"
-import Container from "design-system/components/container/Container"
+
+import Container from "design-system/components/container"
+import Typography from "design-system/components/typography"
+import Banner from "design-system/components/banner"
+import Button from "design-system/components/button"
+
+import Navigation from "design-system/blocks/navigation"
+import Footer from "design-system/blocks/footer"
+
 import * as Styled from "./Document.styled"
 import DocumentsTemplate from "./components/DocumentsTemplate"
 
@@ -10,12 +17,26 @@ const Documents = () => {
   const theme = useTheme()
   return (
     <Page title="Dokumenty do pobrania">
+      <Styled.Banner>
+        <Banner
+          heading="Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj"
+          button={
+            <Button
+              text="tutaj"
+              href="/wsparcie"
+              variant="textLine"
+              size="small"
+            />
+          }
+        />
+      </Styled.Banner>
+
+      <Navigation />
+
       <Container size="medium">
         <Styled.DocumentContainer>
           <Styled.HeaderContainer>
-            <Typography color={theme.colors.gray[600]} variant="h2">
-              Dokumenty do pobrania
-            </Typography>
+            <Typography variant="h2">Dokumenty do pobrania</Typography>
             <Typography color={theme.colors.gray[500]} variant="bodyTitle">
               Chcesz zaopiekować się naszym zwierzakiem? Tutaj znajdziesz
               niezbędne dokumenty, abyśmy mogły powierzyć go w Twoje ręce.
@@ -23,7 +44,7 @@ const Documents = () => {
           </Styled.HeaderContainer>
           <DocumentsTemplate />
           <Styled.DocumentsInfo>
-            <Typography color={theme.colors.gray[600]} variant="bodyTitle">
+            <Typography variant="bodyTitle">
               Ankietę wyślij na adres{" "}
               <a href="mailto:fundacjasterczaceuszy@gmail.com">
                 fundacjasterczaceuszy@gmail.com
@@ -34,6 +55,8 @@ const Documents = () => {
           </Styled.DocumentsInfo>
         </Styled.DocumentContainer>
       </Container>
+
+      <Footer />
     </Page>
   )
 }
