@@ -1,6 +1,5 @@
 import { useTheme } from "@emotion/react"
 import Typography from "design-system/components/typography"
-import Button from "design-system/components/button"
 import * as Styled from "./Response.styled"
 
 const Response = () => {
@@ -13,7 +12,6 @@ const Response = () => {
       <Typography variant="bodySmall" color={theme.colors.gray[500]}>
         Odpowiemy tak szybko, jak to tylko możliwe.
       </Typography>
-      <Button text="Strona w budowie" variant="border" href="/" />
     </Styled.ResponseContainer>
   )
 }
