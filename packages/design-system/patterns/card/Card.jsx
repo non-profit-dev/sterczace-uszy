@@ -1,4 +1,4 @@
-import { string, oneOf, node, oneOfType, object, number } from "prop-types"
+import { string, oneOf, node, oneOfType, object } from "prop-types"
 
 import Illustration from "design-system/components/illustration"
 
@@ -10,7 +10,7 @@ const Card = ({
   href,
   illustrationName,
   illustrationSrc,
-  illustrationHeight,
+  illustrationSize,
   mobileLayout,
   tabletLayout,
   layout,
@@ -29,15 +29,12 @@ const Card = ({
     className={className}
   >
     {(illustrationName || illustrationSrc) && (
-      <Styled.IllustrationContainer
-        fixedSize={!!href}
-        height={illustrationHeight}
-      >
-        {illustrationName && (
-          <Illustration name={illustrationName} size="medium" />
-        )}
+      <Styled.IllustrationContainer size={illustrationSize}>
+        {illustrationName && <Illustration name={illustrationName} />}
 
-        {illustrationSrc && <img src={illustrationSrc} alt="" />}
+        {illustrationSrc && (
+          <img src={illustrationSrc} alt="" width="100%" height="100%" />
+        )}
       </Styled.IllustrationContainer>
     )}
     {imageSrc && (
@@ -79,7 +76,7 @@ Card.propTypes = {
   href: string,
   illustrationName: string,
   illustrationSrc: string,
-  illustrationHeight: number,
+  illustrationSize: oneOf(["small", "large"]),
   imageAlt: string,
   imageHeight: string,
   imageSrc: string,
@@ -96,7 +93,7 @@ Card.defaultProps = {
   href: null,
   illustrationName: null,
   illustrationSrc: null,
-  illustrationHeight: null,
+  illustrationSize: "small",
   imageAlt: null,
   imageHeight: null,
   imageSrc: null,

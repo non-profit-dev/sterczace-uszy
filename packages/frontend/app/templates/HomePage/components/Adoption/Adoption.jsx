@@ -21,6 +21,7 @@ const Adoption = () => (
     <Styled.RulesContainer>
       <Card
         illustrationName="ruleFirst"
+        illustrationSize="large"
         size="large"
         layout="center"
         tabletLayout="center"
@@ -43,6 +44,7 @@ const Adoption = () => (
 
       <Card
         illustrationName="ruleSecond"
+        illustrationSize="large"
         size="large"
         layout="center"
         title={
@@ -64,6 +66,7 @@ const Adoption = () => (
 
       <Card
         illustrationName="ruleThird"
+        illustrationSize="large"
         size="large"
         layout="center"
         title={
