@@ -21,7 +21,7 @@ const OtherAnimals = ({ data }) => (
         >
           Każdy z nich jest wyjątkowy. Starszaki i szczeniaki, duże i małe,
           lubiące kanapę lub długie spacery. Potrzebują jedynie miłości.
-          Sprawdz, któremu odmienisz życie?
+          Sprawdź, któremu odmienisz życie?
         </TextBanner>
       </Styled.ContentContainer>
 
