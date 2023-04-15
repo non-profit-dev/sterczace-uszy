@@ -1,5 +1,3 @@
-import userEvent from "@testing-library/user-event"
-
 import { render, screen } from "design-system/test-utils"
 
 import ScrollButton from "design-system/components/scrollButton"
@@ -18,7 +16,7 @@ describe(`ScrollButton`, () => {
     expect(screen.getByRole(`link`)).toBeInTheDocument()
   })
 
-  it(`renders the correct link href`, async () => {
+  it(`renders the correct link href`, () => {
     render(
       <ScrollButton
         ariaLabel={ariaLabel}
