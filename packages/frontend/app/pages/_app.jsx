@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { ThemeProvider, Global, css } from "@emotion/react"
+import { ThemeProvider } from "@emotion/react"
 import { func, shape } from "prop-types"
 import { ApolloProvider } from "@apollo/client"
 import "swiper/swiper-bundle.css"
@@ -8,6 +8,7 @@ import "swiper/swiper-bundle.css"
 import { Analytics } from "@vercel/analytics/react"
 
 import theme from "design-system/tokens/theme"
+import GlobalReset from "design-system/helpers/globalReset/GlobalReset"
 
 import client from "../lib/api"
 
@@ -18,24 +19,7 @@ const MyApp = ({ Component, pageProps }) => (
     <Head />
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
-        <Global
-          styles={css`
-            html {
-              scroll-behavior: smooth;
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-            }
-            body {
-              margin: 0;
-              font-family: ${theme.fontFamily};
-            }
-            *,
-            *::before,
-            *::after {
-              box-sizing: border-box;
-            }
-          `}
-        />
+        <GlobalReset />
         <Component {...pageProps} />
         <Analytics />
       </ThemeProvider>

@@ -1,11 +1,12 @@
 import React from "react"
-import { ThemeProvider, Global, css } from "@emotion/react"
+import { ThemeProvider } from "@emotion/react"
 
 import theme from "../packages/design-system/tokens/theme"
 
 import "./styles.css"
 
 import "normalize.css/normalize.css"
+import GlobalReset from "design-system/helpers/globalReset/GlobalReset"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -49,15 +50,7 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <ThemeProvider theme={theme}>
-      <Global
-        styles={css`
-          *,
-          *::before,
-          *::after {
-            box-sizing: border-box;
-          }
-        `}
-      />
+      <GlobalReset />
       <Story />
     </ThemeProvider>
   ),

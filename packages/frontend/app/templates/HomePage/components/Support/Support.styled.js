@@ -32,8 +32,6 @@ export const ImageBackground = styled.div`
 
 export const List = styled.ul`
   max-width: 360px;
-  list-style: none;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
