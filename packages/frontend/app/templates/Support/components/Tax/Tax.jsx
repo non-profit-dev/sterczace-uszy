@@ -9,6 +9,7 @@ import Illustration from "design-system/components/illustration"
 import TextBanner from "design-system/patterns/textBanner"
 
 import useCopyToClipboard from "design-system/helpers/useCopyToClipboard"
+import globalData from "shared/data"
 
 import * as Styled from "./Tax.styled"
 
@@ -72,7 +73,7 @@ const Tax = () => {
             <Styled.Info>
               <Typography variant="bodyTitle">Dopisek:</Typography>
               <Typography variant="bodyTitle">
-                <strong>Fundacja Sterczące Uszy 13146</strong>
+                <strong>Fundacja {globalData.organizationName} 13146</strong>
                 {isCopied ? (
                   <Styled.CopyInfo
                     variant="bodyTiny"
@@ -83,7 +84,9 @@ const Tax = () => {
                 ) : (
                   <Styled.CopyButton
                     onClick={() =>
-                      copyToClipboard("Fundacja Sterczące Uszy 13146")
+                      copyToClipboard(
+                        `Fundacja ${globalData.organizationName} 13146`
+                      )
                     }
                   >
                     <Icon name="copy" color={theme.colors.primary[500]} />

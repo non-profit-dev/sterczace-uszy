@@ -15,6 +15,7 @@ import AdoptionSurvey from "frontend/public/documents/AdoptionSurvey.svg"
 import TempHomeSurvey from "frontend/public/documents/TempHomeSurvey.svg"
 import Agreement from "frontend/public/documents/Agreement.svg"
 
+import globalData from "shared/data"
 import DocumentsTemplate from "./components/DocumentsTemplate"
 
 import * as Styled from "./FilesToDownload.styled"
@@ -28,10 +29,10 @@ const data = {
       steps: [
         `pobierz plik`,
         `wypełnij na komputerze lub wydrukuj`,
-        `wypełnione dokumenty prześlij na adres fundacjasterczaceuszy@gmail.com`,
+        `wypełnione dokumenty prześlij na adres ${globalData.contact.mail.text}`,
         `poczekaj na odpowiedź od nas`,
       ],
-      link: `https://docs.google.com/document/d/1hKhjrIHAuosckCYc-DP4DIuMxG4GhsPI/edit?fbclid=IwAR3nJ1rn9BzM8NZg--T1SET96Xxg0WVZ40IC98ZHfRDWW9kSstgzWYlaDQg`,
+      link: `${globalData.surveys.preAdoption}`,
       asset: <AdoptionSurvey />,
     },
     {
@@ -39,10 +40,10 @@ const data = {
       steps: [
         `pobierz plik`,
         `wypełnij na komputerze lub wydrukuj`,
-        `wypełnione dokumenty prześlij na adres fundacjasterczaceuszy@gmail.com`,
+        `wypełnione dokumenty prześlij na adres ${globalData.contact.mail.text}`,
         `poczekaj na odpowiedź od nas`,
       ],
-      link: `https://docs.google.com/document/d/1u_tnZ--5rNME2s9Vn9YZstm7dRAcLQyH/edit?fbclid=IwAR01QrME3E_U1_knHoPeYkgWhJiB7AL4Q-dWylvjkXbnTJDdW0_PrTw7guw`,
+      link: `${globalData.surveys.temporaryHome}`,
       asset: <TempHomeSurvey />,
     },
   ],
@@ -54,7 +55,7 @@ const data = {
         `upewnij się, że wszystko jest dla Ciebie jasne i rozumiesz warunki`,
         `podpisz i przekaż umowę osobiście lub według indywidualnych ustaleń`,
       ],
-      link: `https://docs.google.com/document/d/1wYQ_WWakft8Vid5C4Xgzy0ZvvBTSmo4a/edit?usp=sharing&ouid=101513882861880625680&rtpof=true&sd=true`,
+      link: `${globalData.agreements.adoption}`,
       asset: <Agreement />,
     },
     {
@@ -64,7 +65,7 @@ const data = {
         `upewnij się, że wszystko jest dla Ciebie jasne i rozumiesz warunki`,
         `podpisz i przekaż umowę osobiście lub według indywidualnych ustaleń`,
       ],
-      link: `https://docs.google.com/document/d/1jQoQAv9CzZ1NCbaw37saek7LJ4PXz2It8QR6ut05MxU/edit?usp=sharing`,
+      link: `${globalData.agreements.temporaryHome}`,
       asset: <Agreement />,
     },
   ],
@@ -110,8 +111,8 @@ const FilesToDownload = () => {
           <Styled.DocumentsInfo>
             <Typography variant="bodyTitle">
               Ankietę wyślij na adres{" "}
-              <a href="mailto:fundacjasterczaceuszy@gmail.com">
-                fundacjasterczaceuszy@gmail.com
+              <a href={globalData.contact.mail.link}>
+                {globalData.contact.mail.text}
               </a>
               <br />
               Jak tylko ją przeanalizujemy skontaktujemy się z Tobą.

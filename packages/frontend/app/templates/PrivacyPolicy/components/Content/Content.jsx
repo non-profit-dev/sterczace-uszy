@@ -1,5 +1,6 @@
 import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
+import globalData from "shared/data"
 
 import * as Styled from "./Content.styled"
 
@@ -19,7 +20,7 @@ const Content = () => (
 
       <Typography variant="bodyTitle">
         W razie pytań lub wątpliwości możesz się z nami skontaktować pod adresem
-        e-mail: fundacjasterczaceuszy@gmail.com.
+        e-mail: {globalData.contact.mail.text}.
       </Typography>
 
       <Typography variant="bodyTitle">
@@ -40,8 +41,9 @@ const Content = () => (
         </Typography>
 
         <Typography variant="bodyTitle">
-          Administratorem Twoich danych osobowych jest Fundacja Sterczące Uszy,
-          ul. Gen. Władysława Sikorskiego 3, 62-030 Luboń.
+          Administratorem Twoich danych osobowych jest Fundacja{" "}
+          {globalData.organizationName}, {globalData.address.street},{" "}
+          {globalData.address.zipCode}.
         </Typography>
       </Styled.ContentSection>
 
@@ -182,10 +184,10 @@ const Content = () => (
 
         <Typography variant="bodyTitle">
           - realizacji dokonywanych przez darczyńców darowizn na rzecz Fundacji
-          Sterczące Uszy, w tym darowizn finansowych, tradycyjnych przelewów
-          bankowych, jak również zbiórek za pośrednictwem portalu Facebook i
-          strony ratujemyzwierzaki.pl, a także odpisów 1,5% podatku oraz
-          przekazów pocztowych,
+          {globalData.organizationName}, w tym darowizn finansowych,
+          tradycyjnych przelewów bankowych, jak również zbiórek za pośrednictwem
+          portalu Facebook i strony ratujemyzwierzaki.pl, a także odpisów 1,5%
+          podatku oraz przekazów pocztowych,
         </Typography>
         <Typography variant="bodyTitle">
           - realizacji procesu przekazywanych przez Darczyńców darowizn
@@ -197,11 +199,11 @@ const Content = () => (
           - prowadzenia z Tobą komunikacji, odnośnie adopcji czy bycia domem
           tymczasowym, współpracy, wpłat, darowizn rzeczowych, wysyłania zapytań
           o psa, prośby o kod promocyjny na rejestrację chipa lub zapraszania na
-          wydarzenia organizowane przez Fundacje Sterczące Uszy,
+          wydarzenia organizowane przez Fundacje {globalData.organizationName},
         </Typography>
         <Typography variant="bodyTitle">
-          - pokazania opinii o Fundacji Sterczące Uszy i umieszczania
-          podziękowań na naszej stronie internetowej,
+          - pokazania opinii o Fundacji {globalData.organizationName} i
+          umieszczania podziękowań na naszej stronie internetowej,
         </Typography>
         <Typography variant="bodyTitle">
           - wszelkich działań poprzez media społecznościowe, które mają na celu
@@ -239,11 +241,12 @@ const Content = () => (
         <Typography variant="bodyTitle">
           - Przetwarzamy Twoje dane na podstawie wyrażonej przez Ciebie zgody
           zgodnie z art. 6 ust. 1 lit. a) Rozporządzenia 2016/679 z dnia 27
-          kwietnia 2016 r. (dalej również: ”RODO”) – w przypadku przetwarzania
+          kwietnia 2016 r. (dalej również: ”RODO”) - w przypadku przetwarzania
           Twoich danych w określonych kanałach komunikacji z Tobą, a także w
           przypadku wyrażenia zgody na przekazanie nam Twoich danych osobowych,
-          gdy przekazałeś Fundacji Sterczące Uszy darowiznę w drodze 1,5%
-          podatku dochodowego (zgoda jest umieszczona na formularzu PIT-OP),
+          gdy przekazałeś Fundacji {globalData.organizationName} darowiznę w
+          drodze 1,5% podatku dochodowego (zgoda jest umieszczona na formularzu
+          PIT-OP),
         </Typography>
 
         <Typography variant="bodyTitle">
@@ -254,12 +257,13 @@ const Content = () => (
         </Typography>
         <Typography variant="bodyTitle">
           - Przetwarzamy Twoje dane, jeżeli jest to niezbędne do wypełnienia
-          obowiązku prawnego ciążącego na Fundacji Sterczące Uszy zgodnie z art.
-          6 ust. 1 lit. c) RODO – w zakresie obowiązków względem organu
-          nadzorującego, czy też w celu wywiązania się z obowiązków wynikających
-          między innymi z ustawy o rachunkowości, ustawy o działalności pożytku
-          publicznego i wolontariacie czy przepisów podatkowych, jak również
-          realizacji statutu Fundacji Sterczące Uszy.
+          obowiązku prawnego ciążącego na Fundacji {globalData.organizationName}{" "}
+          zgodnie z art. 6 ust. 1 lit. c) RODO - w zakresie obowiązków względem
+          organu nadzorującego, czy też w celu wywiązania się z obowiązków
+          wynikających między innymi z ustawy o rachunkowości, ustawy o
+          działalności pożytku publicznego i wolontariacie czy przepisów
+          podatkowych, jak również realizacji statutu Fundacji{" "}
+          {globalData.organizationName}.
         </Typography>
         <Typography variant="bodyTitle">
           - Na podstawie uzasadnionego interesu administratora danych, zgodnie z
@@ -268,7 +272,7 @@ const Content = () => (
           danych do kontaktu z Tobą, przekazywania Ci materiałów informacyjnych
           (np. wysyłka komunikacji papierowej do Darczyńców), prowadzenie
           komunikacji z Tobą oraz zapewnienia sprawnego działania strony
-          internetowej Fundacji Sterczące Uszy.
+          internetowej Fundacji {globalData.organizationName}.
         </Typography>
       </Styled.ContentSection>
 
@@ -278,11 +282,11 @@ const Content = () => (
         </Typography>
         <Typography variant="bodyTitle">
           Odbiorcami Twoich danych osobowych będą działacze i wolontariusze
-          Fundacji Sterczące Uszy odpowiadający za bieżące akcje i opiekę nad
-          zwierzętami lub odpowiedzialni za usprawnianie jej działań, a także za
-          przeprowadzenie i pomoc przy Twojej procedurze adopcyjnej i o bycie
-          domem tymczasowym. Twoje dane osobowe możemy przekazywać także naszym
-          księgowym.
+          Fundacji {globalData.organizationName} odpowiadający za bieżące akcje
+          i opiekę nad zwierzętami lub odpowiedzialni za usprawnianie jej
+          działań, a także za przeprowadzenie i pomoc przy Twojej procedurze
+          adopcyjnej i o bycie domem tymczasowym. Twoje dane osobowe możemy
+          przekazywać także naszym księgowym.
         </Typography>
       </Styled.ContentSection>
 
@@ -298,7 +302,7 @@ const Content = () => (
         </Typography>
 
         <Typography variant="bodyTitle">
-          - w przypadku gdy nie dojdzie do adopcji – Twoje dane osobowe zostaną
+          - w przypadku gdy nie dojdzie do adopcji - Twoje dane osobowe zostaną
           usunięte niezwłocznie po zakończeniu procedury adopcyjnej,{" "}
         </Typography>
         <Typography variant="bodyTitle">
@@ -322,19 +326,19 @@ const Content = () => (
           Jakie są Twoje uprawnienia dotyczące danych osobowych?
         </Typography>
         <Typography variant="bodyTitle">
-          - Prawo dostępu do danych – przysługuje Ci prawo uzyskania od nas
+          - Prawo dostępu do danych - przysługuje Ci prawo uzyskania od nas
           potwierdzenia, czy przetwarzamy Twoje dane osobowe, a jeżeli ma to
           miejsce, prawo do uzyskania dostępu do nich, w tym otrzymania ich
           kopii, oraz uzyskania poszczególnych informacji np. na temat celów
           przetwarzania danych, na podstawie art. 15 RODO.
         </Typography>
         <Typography variant="bodyTitle">
-          - Prawo żądania sprostowania danych – przysługuje Ci prawo żądania od
+          - Prawo żądania sprostowania danych - przysługuje Ci prawo żądania od
           nas niezwłocznego sprostowania czy uzupełnienia dotyczących Ciebie
           danych osobowych, które są nieprawidłowe, na podstawie art. 16 RODO.
         </Typography>
         <Typography variant="bodyTitle">
-          - Prawo do żądania usunięcia danych („prawo do bycia zapomnianym”) –
+          - Prawo do żądania usunięcia danych („prawo do bycia zapomnianym”) -
           przysługuje Ci prawo żądania od nas niezwłocznego usunięcia Twoich
           danych osobowych, a my mamy obowiązek bez zbędnej zwłoki usunąć Twoje
           dane osobowe, o ile prawo nie nakazuje nam dalszego ich przetwarzania
@@ -342,13 +346,13 @@ const Content = () => (
           na podstawie art. 17 RODO.
         </Typography>
         <Typography variant="bodyTitle">
-          - Prawo ograniczenia przetwarzania danych – przysługuje Ci prawo do
+          - Prawo ograniczenia przetwarzania danych - przysługuje Ci prawo do
           żądania od nas nieprzetwarzania Twoich danych w inny sposób niż tylko
           ich przechowywanie na czas rozpatrzenia przez nas Twojego innego
           żądania w zakresie danych osobowych, na podstawie art. 18 RODO.
         </Typography>
         <Typography variant="bodyTitle">
-          - Prawo do przenoszenia danych – przysługuje Ci prawo otrzymania od
+          - Prawo do przenoszenia danych - przysługuje Ci prawo otrzymania od
           nas w ustrukturyzowanym, powszechnie używanym formacie nadającym się
           do odczytu maszynowego lub innej preferowanej przez Ciebie formy,
           Twoich danych osobowych, oraz prawo do przesłania tych danych
@@ -357,14 +361,14 @@ const Content = () => (
           20 RODO.
         </Typography>
         <Typography variant="bodyTitle">
-          - Prawo wniesienia sprzeciwu – przysługuje Ci prawo do wniesienia
+          - Prawo wniesienia sprzeciwu - przysługuje Ci prawo do wniesienia
           sprzeciwu wobec przetwarzania przez nas Twoich danych, jeśli
           przetwarzamy je na mocy naszego uzasadnionego interesu lub w interesie
           publicznym, a także jeśli przetwarzamy je w celu marketingowym, na
           postawie art. 21 RODO.
         </Typography>
         <Typography variant="bodyTitle">
-          - Prawo wycofania zgody – przysługuje Ci prawo, aby w dowolnym
+          - Prawo wycofania zgody - przysługuje Ci prawo, aby w dowolnym
           momencie wycofać zgodę, na podstawie której przetwarzamy Twoje dane.
           Wycofanie zgody nie wpływa na zgodność z prawem przetwarzania, którego
           dokonano na podstawie zgody przed jej wycofaniem, na podstawie art. 7
@@ -382,19 +386,20 @@ const Content = () => (
           odnośnie adopcji czy bycia domem tymczasowym, współpracy, wpłat,
           darowizn rzeczowych, wysyłania zapytań o psa, prośby o kod promocyjny
           na rejestrację chipa lub zapraszania na wydarzenia organizowane przez
-          Fundacje Sterczące Uszy. Usunięcie danych nastąpi automatycznie po
-          wysłaniu na maila fundacjasterczaceuszy@gmail.com prośby o wycofanie
-          zgody. Musisz jednak pamiętać, że wycofanie zgody w tym zakresie
-          oznacza jedynie usunięcie Twoich danych przetwarzanych przez nas w tym
-          celu, jednak ponieważ adoptowałeś zwierzę lub przekazałeś nam
-          darowiznę to mogą ciążyć na nas obowiązki prawne, na podstawie których
-          musimy przetwarzać Twoje dane także po wycofaniu przez Ciebie zgody.
-          Jest tak, ponieważ podstawą prawną przetwarzania Twoich danych w
-          przypadku adopcji czy przekazania nam darowizny jest łącząca nas umowa
-          adopcyjna lub darowizny, a także ciążące na Fundacji Sterczące Uszy
-          obowiązki prawne. W celu realizacji powyższych uprawnień lub uzyskania
-          dodatkowych informacji na temat przetwarzania Twoich danych,
-          skontaktuj się z nami na maila fundacjasterczaceuszy@gmail.com.
+          Fundacje {globalData.organizationName}. Usunięcie danych nastąpi
+          automatycznie po wysłaniu na maila {globalData.contact.mail.text}
+          prośby o wycofanie zgody. Musisz jednak pamiętać, że wycofanie zgody w
+          tym zakresie oznacza jedynie usunięcie Twoich danych przetwarzanych
+          przez nas w tym celu, jednak ponieważ adoptowałeś zwierzę lub
+          przekazałeś nam darowiznę to mogą ciążyć na nas obowiązki prawne, na
+          podstawie których musimy przetwarzać Twoje dane także po wycofaniu
+          przez Ciebie zgody. Jest tak, ponieważ podstawą prawną przetwarzania
+          Twoich danych w przypadku adopcji czy przekazania nam darowizny jest
+          łącząca nas umowa adopcyjna lub darowizny, a także ciążące na Fundacji
+          {globalData.organizationName} obowiązki prawne. W celu realizacji
+          powyższych uprawnień lub uzyskania dodatkowych informacji na temat
+          przetwarzania Twoich danych, skontaktuj się z nami na maila
+          {globalData.contact.mail.text}.
         </Typography>
       </Styled.ContentSection>
 
@@ -405,7 +410,7 @@ const Content = () => (
         <Typography variant="bodyTitle">
           W przypadku gdy masz zastrzeżenia co do sposobu, w jaki przetwarzamy
           Twoje dane, prosimy w pierwszej kolejności o kontakt z nami za pomocą
-          adresu e-mail: fundacjasterczaceuszy@gmail.com. Jednocześnie
+          adresu e-mail: {globalData.contact.mail.text}. Jednocześnie
           informujemy, że przysługuje Ci prawo do wniesienia skargi do organu
           nadzorczego zajmującego się ochroną danych osobowych, tj. Prezesa
           Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa.
@@ -417,13 +422,13 @@ const Content = () => (
         <Typography variant="bodyTitle">
           Podanie przez Adoptującego danych osobowych jest dobrowolne, lecz
           niezbędne do realizacja procesu adopcji czy bycia domem tymczasowym.
-          Wyrażenie zgody na przekazanie Fundacji Sterczące Uszy Twoich danych
-          osobowych podanych na formularzu PIT-OP w związku z przekazaniem 1,5%
-          podatku dochodowego jest dobrowolne i nie jest niezbędne do
-          przekazania nam 1,5% podatku. W pozostałych przypadkach podanie danych
-          osobowych jest dobrowolne. Masz prawo w dowolnym momencie wnieść
-          sprzeciw wobec przetwarzania danych w oparciu o prawnie uzasadniony
-          interes na podstawie art. 6 ust. 1 lit. f RODO.{" "}
+          Wyrażenie zgody na przekazanie Fundacji {globalData.organizationName}{" "}
+          Twoich danych osobowych podanych na formularzu PIT-OP w związku z
+          przekazaniem 1,5% podatku dochodowego jest dobrowolne i nie jest
+          niezbędne do przekazania nam 1,5% podatku. W pozostałych przypadkach
+          podanie danych osobowych jest dobrowolne. Masz prawo w dowolnym
+          momencie wnieść sprzeciw wobec przetwarzania danych w oparciu o
+          prawnie uzasadniony interes na podstawie art. 6 ust. 1 lit. f RODO.{" "}
         </Typography>
       </Styled.ContentSection>
     </Styled.Content>

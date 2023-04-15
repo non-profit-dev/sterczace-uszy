@@ -19,7 +19,8 @@
   "workspaces": [
     "packages/frontend/app",
     "packages/frontend/e2e",
-    "packages/design-system"
+    "packages/design-system",
+    "packages/shared"
   ],
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

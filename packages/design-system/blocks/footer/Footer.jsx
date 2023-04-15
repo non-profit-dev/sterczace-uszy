@@ -8,17 +8,13 @@ import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 import Button from "design-system/components/button"
 import Container from "design-system/components/container"
-
 import useCopyToClipboard from "design-system/helpers/useCopyToClipboard"
-
+import globalData from "shared/data"
 import footerData from "./footerData"
-
 import * as Styled from "./Footer.styled"
 
 const Footer = () => {
   const {
-    contact,
-    foundationData: { nip, krs, icon, accountNumberText, accountNumber },
     adoption,
     foundation,
     support,
@@ -29,7 +25,6 @@ const Footer = () => {
       foundationTitle,
       supportTitle,
     },
-    socialMedia,
   } = footerData
   const theme = useTheme()
   const [isCopied, copyToClipboard] = useCopyToClipboard()
@@ -49,33 +44,56 @@ const Footer = () => {
                 {contactTitle}
               </Typography>
               <List gap={4}>
-                {contact.map((item) => (
-                  <ListItem
-                    key={item.text}
-                    iconName={item.icon}
-                    size="medium"
-                    variant="gray"
-                  >
-                    <Button
-                      variant="text"
-                      text={item.text}
-                      size="small"
-                      color="black"
-                      href={item.link}
-                    />
-                  </ListItem>
-                ))}
+                <ListItem iconName="mail" size="medium" variant="gray">
+                  <Button
+                    variant="text"
+                    text={globalData.contact.mail.text}
+                    size="small"
+                    color="black"
+                    href={globalData.contact.mail.link}
+                  />
+                </ListItem>
+                <ListItem iconName="phone" size="medium" variant="gray">
+                  <Button
+                    variant="text"
+                    text={globalData.contact.phoneFirst.text}
+                    size="small"
+                    color="black"
+                    href={globalData.contact.phoneFirst.link}
+                  />
+                </ListItem>
+                <ListItem iconName="phone" size="medium" variant="gray">
+                  <Button
+                    variant="text"
+                    text={globalData.contact.phoneSecond.text}
+                    size="small"
+                    color="black"
+                    href={globalData.contact.phoneSecond.link}
+                  />
+                </ListItem>
+                <ListItem iconName="location" size="medium" variant="gray">
+                  <Button
+                    variant="text"
+                    text={globalData.contact.location.text}
+                    size="small"
+                    color="black"
+                    href={globalData.contact.location.link}
+                  />
+                </ListItem>
               </List>
               <Styled.IconsMobile>
-                {socialMedia.map((item) => (
-                  <IconButton
-                    key={`${item.icon}footerMobile`}
-                    name={item.icon}
-                    size="medium"
-                    href={item.link}
-                    ariaLabel={item.title}
-                  />
-                ))}
+                <IconButton
+                  name="facebook"
+                  size="medium"
+                  href={globalData.socialMedia.facebook}
+                  ariaLabel="Facebook"
+                />
+                <IconButton
+                  name="instagram"
+                  size="medium"
+                  href={globalData.socialMedia.instagram}
+                  ariaLabel="Instagram"
+                />
               </Styled.IconsMobile>
             </Styled.Section>
             <Styled.Section>
@@ -84,13 +102,11 @@ const Footer = () => {
               </Typography>
               <List gap={8}>
                 <ListItem variant="gray">
-                  <Typography variant="bodySmall">{nip}</Typography>
-                  <Typography variant="bodySmall">{krs}</Typography>
+                  <Typography variant="bodySmall">{globalData.nip}</Typography>
+                  <Typography variant="bodySmall">{globalData.krs}</Typography>
                 </ListItem>
-                <ListItem iconName={icon} size="medium" variant="gray">
-                  <Typography variant="bodySmall">
-                    {accountNumberText}
-                  </Typography>
+                <ListItem iconName="charity" size="medium" variant="gray">
+                  <Typography variant="bodySmall">Numer konta</Typography>
                   {isCopied ? (
                     <Styled.CopyInfo
                       variant="bodyTiny"
@@ -100,14 +116,16 @@ const Footer = () => {
                     </Styled.CopyInfo>
                   ) : (
                     <Styled.CopyButton
-                      onClick={() => copyToClipboard(accountNumber)}
+                      onClick={() => copyToClipboard(globalData.accountNumber)}
                     >
                       <Icon name="copy" color={theme.colors.primary[500]} />
                     </Styled.CopyButton>
                   )}
                 </ListItem>
                 <ListItem variant="gray">
-                  <Typography variant="bodySmall">{accountNumber}</Typography>
+                  <Typography variant="bodySmall">
+                    {globalData.accountNumber}
+                  </Typography>
                 </ListItem>
               </List>
             </Styled.Section>
@@ -178,15 +196,18 @@ const Footer = () => {
             Copyright © {currentYear} Sterczące uszy
           </Typography>
           <Styled.Icons>
-            {socialMedia.map((item) => (
-              <IconButton
-                key={`${item.icon}footerWeb`}
-                name={item.icon}
-                size="medium"
-                href={item.link}
-                ariaLabel={item.title}
-              />
-            ))}
+            <IconButton
+              name="facebook"
+              size="medium"
+              href={globalData.socialMedia.facebook}
+              ariaLabel="Facebook"
+            />
+            <IconButton
+              name="instagram"
+              size="medium"
+              href={globalData.socialMedia.instagram}
+              ariaLabel="Instagram"
+            />
           </Styled.Icons>
         </Styled.Copyright>
       </Container>

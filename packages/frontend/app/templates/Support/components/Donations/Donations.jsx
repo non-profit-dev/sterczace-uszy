@@ -8,6 +8,7 @@ import Typography from "design-system/components/typography"
 import TextBanner from "design-system/patterns/textBanner"
 
 import useCopyToClipboard from "design-system/helpers/useCopyToClipboard"
+import globalData from "shared/data"
 
 import * as Styled from "./Donations.styled"
 
@@ -45,21 +46,21 @@ const Donations = () => {
             />
             <div>
               <Typography variant="bodyTitle">
-                Fundacja Sterczące Uszy
+                Fundacja {globalData.organizationName}
               </Typography>
               <Typography variant="bodyTitle">
-                ul. Gen. Władysława Sikorskiego 3,
+                {globalData.address.street},
                 <br />
-                62-030 Luboń
+                {globalData.address.zipCode}
               </Typography>
-              <Typography variant="bodyTitle">NIP 7831855392</Typography>
+              <Typography variant="bodyTitle">NIP {globalData.nip}</Typography>
               <Typography variant="bodyTitle">
                 Tytuł przelewu: Wsparcie dla Fundacji
               </Typography>
             </div>
 
             <Typography variant="h5" as="div">
-              41 1870 1045 2078 1072 8639 0001
+              {globalData.accountNumber}
               {isCopied ? (
                 <Styled.CopyInfo
                   variant="bodyTiny"
@@ -69,9 +70,7 @@ const Donations = () => {
                 </Styled.CopyInfo>
               ) : (
                 <Styled.CopyButton
-                  onClick={() =>
-                    copyToClipboard("41 1870 1045 2078 1072 8639 0001")
-                  }
+                  onClick={() => copyToClipboard(globalData.accountNumber)}
                 >
                   <Icon name="copy" color={theme.colors.primary[500]} />
                 </Styled.CopyButton>

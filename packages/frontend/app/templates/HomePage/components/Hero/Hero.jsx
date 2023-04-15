@@ -3,6 +3,7 @@ import { useTheme } from "@emotion/react"
 import Button from "design-system/components/button"
 
 import TextBanner from "design-system/patterns/textBanner"
+import globalData from "shared/data"
 
 import * as Styled from "./Hero.styled"
 
@@ -37,7 +38,7 @@ const Hero = () => {
           <TextBanner
             heading="Pomóż nam pomagać"
             headingColor={theme.colors.neutrals[100]}
-            subtitle="Fundacja Sterczące Uszy"
+            subtitle={`Fundacja ${globalData.organizationName}`}
             descriptionColor={theme.colors.neutrals[100]}
             size="large"
             button={
