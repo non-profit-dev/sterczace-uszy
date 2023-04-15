@@ -1,7 +1,7 @@
 const globalData = {
   organizationName: "Streczące Uszy",
-  nip: "NIP 7831855392 ",
-  krs: "KRS 0000964494 ",
+  nip: "7831855392",
+  krs: "0000964494",
   accountNumber: "41 1870 1045 2078 1072 8639 0001",
   socialMedia: {
     facebook: "https://www.facebook.com/sterczaceuszy",
@@ -13,11 +13,11 @@ const globalData = {
       link: "mailto:fundacjasterczaceuszy@gmail.com",
     },
     phoneFirst: {
-      text: "500-433-539 - sms",
+      text: "500-433-539",
       link: "tel:+48500433539",
     },
     phoneSecond: {
-      text: "661-753-896 - sms",
+      text: "661-753-896",
       link: "tel:+48661753896",
     },
     location: {

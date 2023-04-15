@@ -56,7 +56,7 @@ const Footer = () => {
                 <ListItem iconName="phone" size="medium" variant="gray">
                   <Button
                     variant="text"
-                    text={globalData.contact.phoneFirst.text}
+                    text={`${globalData.contact.phoneFirst.text} - sms`}
                     size="small"
                     color="black"
                     href={globalData.contact.phoneFirst.link}
@@ -65,7 +65,7 @@ const Footer = () => {
                 <ListItem iconName="phone" size="medium" variant="gray">
                   <Button
                     variant="text"
-                    text={globalData.contact.phoneSecond.text}
+                    text={`${globalData.contact.phoneSecond.text} - sms`}
                     size="small"
                     color="black"
                     href={globalData.contact.phoneSecond.link}
@@ -102,8 +102,12 @@ const Footer = () => {
               </Typography>
               <List gap={8}>
                 <ListItem variant="gray">
-                  <Typography variant="bodySmall">{globalData.nip}</Typography>
-                  <Typography variant="bodySmall">{globalData.krs}</Typography>
+                  <Typography variant="bodySmall">
+                    NIP {globalData.nip}
+                  </Typography>
+                  <Typography variant="bodySmall">
+                    KRS {globalData.krs}
+                  </Typography>
                 </ListItem>
                 <ListItem iconName="charity" size="medium" variant="gray">
                   <Typography variant="bodySmall">Numer konta</Typography>

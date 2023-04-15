@@ -19,7 +19,7 @@ const ContactInfo = () => {
         <ListItem iconName="phone" variant="gray" iconSize="small">
           <Button
             variant="text"
-            text={globalData.contact.phoneFirst.text}
+            text={`${globalData.contact.phoneFirst.text} - sms`}
             size="small"
             color="black"
             href={globalData.contact.phoneFirst.link}
@@ -28,7 +28,7 @@ const ContactInfo = () => {
         <ListItem iconName="phone" variant="gray" iconSize="small">
           <Button
             variant="text"
-            text={globalData.contact.phoneSecond.text}
+            text={`${globalData.contact.phoneSecond.text} - sms`}
             size="small"
             color="black"
             href={globalData.contact.phoneSecond.link}
