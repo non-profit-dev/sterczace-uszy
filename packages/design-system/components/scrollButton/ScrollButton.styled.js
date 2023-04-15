@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
-export const ScrollDownButton = styled.button`
+export const ScrollButton = styled.a`
   display: inline-flex;
   width: 64px;
   height: 64px;
