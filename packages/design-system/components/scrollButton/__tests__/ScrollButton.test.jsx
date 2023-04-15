@@ -17,9 +17,8 @@ describe(`ScrollButton`, () => {
     )
     expect(screen.getByRole(`link`)).toBeInTheDocument()
   })
-  it(`fires onClick callback when scroll button is clicked`, async () => {
-    const user = userEvent.setup()
-    const onClickMock = jest.fn()
+
+  it(`renders the correct link href`, async () => {
     render(
       <ScrollButton
         ariaLabel={ariaLabel}
@@ -27,10 +26,9 @@ describe(`ScrollButton`, () => {
       />
     )
 
-    const link = screen.getByRole("link")
-
-    await user.click(link)
-
-    expect(onClickMock).toBeCalledTimes(1)
+    expect(screen.getByRole("link", { ariaLabel })).toHaveAttribute(
+      "href",
+      `#${sectionIdToScroll}`
+    )
   })
 })
