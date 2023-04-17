@@ -5,9 +5,9 @@ import theme from "../../tokens/theme"
 
 import * as Styled from "./ScrollButton.styled"
 
-const ScrollButton = ({ sectionIdToScroll, ariaLabel, className }) => (
+const ScrollButton = ({ sectionId, ariaLabel, className }) => (
   <Styled.ScrollButton
-    href={`#${sectionIdToScroll}`}
+    href={`#${sectionId}`}
     aria-label={ariaLabel}
     className={className}
   >
@@ -25,7 +25,7 @@ ScrollButton.propTypes = {
   /**
    * The section id name that the component should scroll into when clicked.
    */
-  sectionIdToScroll: string.isRequired,
+  sectionId: string.isRequired,
   /**
    * It's used to provide a text description for assistive technologies, like screen readers.
    */
