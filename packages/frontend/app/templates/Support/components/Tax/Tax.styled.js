@@ -67,8 +67,6 @@ export const Header = styled.div`
 
 export const CopyButton = styled.button`
   display: inline;
-  background: transparent;
-  border: none;
   cursor: pointer;
   vertical-align: middle;
 `
