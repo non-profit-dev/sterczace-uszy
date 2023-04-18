@@ -126,8 +126,6 @@ export const Copyright = styled.div`
 
 export const CopyButton = styled.button`
   display: inline-flex;
-  background: transparent;
-  border: none;
   cursor: pointer;
   vertical-align: middle;
 `

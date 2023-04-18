@@ -25,8 +25,6 @@ export const NavigationRow = styled.div`
 export const Menu = styled.ul`
   display: flex;
   gap: 48px;
-  margin: 0;
-  list-style: none;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: none;
@@ -39,8 +37,6 @@ export const MenuButton = styled.li`
 
 export const MenuIcon = styled.button`
   display: none;
-  background: transparent;
-  border: none;
   cursor: pointer;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {

@@ -16,8 +16,6 @@ export const Container = styled(ContainerComponent)`
 export const Nav = styled.ul`
   margin-top: 120px;
   margin-bottom: 120px;
-  list-style: none;
-  padding: 0;
   display: flex;
   text-align: center;
   filter: drop-shadow(2px 3px 9px rgba(0, 0, 0, 0.1));
