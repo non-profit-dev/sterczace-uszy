@@ -28,6 +28,7 @@ import Transparency from "./Transparency.svg"
 import Trust from "./Trust.svg"
 import Copy from "./Copy.svg"
 import Donation from "./Donation.svg"
+import DoubleVector from "./DoubleVector.svg"
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -39,6 +40,7 @@ export const icons = {
   chevronDown: ChevronDown,
   close: Close,
   download: Download,
+  doubleVector: DoubleVector,
   facebook: Facebook,
   instagram: Instagram,
   location: Location,
