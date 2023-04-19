@@ -1,5 +1,5 @@
 const globalData = {
-  organizationName: "Streczące Uszy",
+  organizationName: "Sterczące Uszy",
   nip: "7831855392",
   krs: "0000964494",
   accountNumber: "41 1870 1045 2078 1072 8639 0001",
