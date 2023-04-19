@@ -15,8 +15,7 @@ import * as Styled from "./TemporaryHome.styled"
 const steps = [
   {
     title: "Wypełnij ankietę",
-    description:
-      "Cieszymy się, że chcesz zostać domem tymczasowym. Dla dobra naszych podopiecznych musimy być jednak pewni, że spełniasz odpowiednie warunki. Dlatego prosimy Cię o odpowiedzenie na parę pytań. Uzupełnij ankietę i prześlij ją na naszego maila:  fundacjastercaceuszy@gmail.com",
+    description: `Cieszymy się, że chcesz zostać domem tymczasowym. Dla dobra naszych podopiecznych musimy być jednak pewni, że spełniasz odpowiednie warunki. Dlatego prosimy Cię o odpowiedzenie na parę pytań. Uzupełnij ankietę i prześlij ją na naszego maila:  ${globalData.contact.mail.text}`,
     button: (
       <Button
         variant="text"

@@ -197,7 +197,7 @@ const Footer = () => {
 
         <Styled.Copyright>
           <Typography variant="bodySmall">
-            Copyright © {currentYear} Sterczące uszy
+            Copyright © {currentYear} {globalData.organizationName}
           </Typography>
           <Styled.Icons>
             <IconButton
