@@ -32,19 +32,8 @@ export const Card = styled.a`
 export const IllustrationContainer = styled.div`
   display: inline-flex;
   justify-content: center;
-  max-width: ${({ fixedSize }) => (fixedSize ? "120px" : "100%")};
-  margin-left: auto;
-  margin-right: auto;
-  padding: 36px 20px 18px 20px;
-
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: inline-flex;
-  }
-
-  svg,
-  img {
-    height: ${({ height }) => `${height}px`};
-  }
+  height: ${({ size }) => (size === "small" ? "90px" : "220px")};
+  margin: 36px auto 18px auto;
 `
 
 export const ImageContainer = styled.div`

@@ -1,5 +1,7 @@
 import styled from "@emotion/styled"
 
+import IllustrationComponent from "design-system/components/illustration"
+
 export const DecorativeCard = styled.div`
   display: inline-flex;
   position: relative;
@@ -24,32 +26,20 @@ export const Content = styled.div`
   }
 `
 
-export const Illustration = styled.div`
+export const Illustration = styled(IllustrationComponent)`
   position: relative;
   z-index: -1;
   left: -24px;
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: none;
-  }
-`
-export const IllustrationTablet = styled.div`
-  display: none;
+  height: 110px;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: inline-flex;
-    position: relative;
-    z-index: -1;
+    height: 90px;
     left: -20px;
   }
+
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    display: none;
-  }
-`
-export const IllustrationMobile = styled.div`
-  display: none;
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    display: inline-flex;
-    position: relative;
-    z-index: -1;
+    height: 70px;
     left: -10px;
   }
 `

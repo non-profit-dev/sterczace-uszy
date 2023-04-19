@@ -57,8 +57,6 @@ export const Image = styled(ImageComponent)`
 
 export const CopyButton = styled.button`
   display: inline;
-  background: transparent;
-  border: none;
   cursor: pointer;
   vertical-align: middle;
 `
