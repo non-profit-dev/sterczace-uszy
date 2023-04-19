@@ -7,6 +7,7 @@ import Button from "design-system/components/button"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+import globalData from "shared/data"
 
 import * as Styled from "./Document.styled"
 import DocumentsTemplate from "./components/DocumentsTemplate"
@@ -46,8 +47,8 @@ const Documents = () => {
           <Styled.DocumentsInfo>
             <Typography variant="bodyTitle">
               Ankietę wyślij na adres{" "}
-              <a href="mailto:fundacjasterczaceuszy@gmail.com">
-                fundacjasterczaceuszy@gmail.com
+              <a href={globalData.contact.mail.link}>
+                {globalData.contact.mail.text}
               </a>
               <br />
               Jak tylko ją przeanalizujemy skontaktujemy się z Tobą.

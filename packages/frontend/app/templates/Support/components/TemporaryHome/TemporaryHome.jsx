@@ -8,6 +8,7 @@ import Typography from "design-system/components/typography"
 
 import TextBanner from "design-system/patterns/textBanner"
 import Card from "design-system/patterns/card"
+import globalData from "shared/data"
 
 import * as Styled from "./TemporaryHome.styled"
 
@@ -22,7 +23,7 @@ const steps = [
         text="Pobierz ankietę"
         iconStart="download"
         target="_blank"
-        href="https://docs.google.com/document/d/1u_tnZ--5rNME2s9Vn9YZstm7dRAcLQyH/edit?fbclid=IwAR01QrME3E_U1_knHoPeYkgWhJiB7AL4Q-dWylvjkXbnTJDdW0_PrTw7guw"
+        href={globalData.surveys.temporaryHome}
       />
     ),
   },
