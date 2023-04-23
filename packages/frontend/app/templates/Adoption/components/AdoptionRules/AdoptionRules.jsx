@@ -7,6 +7,7 @@ import Illustration from "design-system/components/illustration"
 
 import TextBanner from "design-system/patterns/textBanner"
 import Card from "design-system/patterns/card"
+import globalData from "shared/data"
 
 import * as Styled from "./AdoptionRules.styled"
 
@@ -20,7 +21,7 @@ const data = [
         text="Pobierz ankietę"
         iconStart="download"
         target="_blank"
-        href="https://docs.google.com/document/d/1hKhjrIHAuosckCYc-DP4DIuMxG4GhsPI/edit?fbclid=IwAR3nJ1rn9BzM8NZg--T1SET96Xxg0WVZ40IC98ZHfRDWW9kSstgzWYlaDQg"
+        href={globalData.surveys.preAdoption}
       />
     ),
   },
@@ -37,7 +38,7 @@ const data = [
         text="Pobierz wzór umowy"
         iconStart="download"
         target="_blank"
-        href="https://docs.google.com/document/d/1wYQ_WWakft8Vid5C4Xgzy0ZvvBTSmo4a/edit?usp=sharing&ouid=101513882861880625680&rtpof=true&sd=true"
+        href={globalData.agreements.adoption}
       />
     ),
   },

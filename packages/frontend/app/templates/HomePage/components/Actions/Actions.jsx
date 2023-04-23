@@ -9,6 +9,8 @@ import Typography from "design-system/components/typography"
 import Card from "design-system/patterns/card/Card"
 import TextBanner from "design-system/patterns/textBanner"
 
+import globalData from "shared/data"
+
 import * as Styled from "./Actions.styled"
 
 const Actions = () => {
@@ -96,7 +98,7 @@ const Actions = () => {
         <Styled.ButtonWrapper>
           <Button
             text="Sprawdź aktualności"
-            href="https://www.facebook.com/sterczaceuszy"
+            href={globalData.socialMedia.facebook}
             target="_blank"
             size="large"
           />

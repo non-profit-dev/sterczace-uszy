@@ -4,6 +4,7 @@ import Typography from "design-system/components/typography"
 
 import AdoptionSurvey from "frontend/public/documents/AdoptionSurvey.svg"
 import TempHomeSurvey from "frontend/public/documents/TempHomeSurvey.svg"
+import globalData from "shared/data"
 
 import * as Styled from "./DocumentsTemplate.styled"
 
@@ -18,7 +19,7 @@ const Info = () => (
         wypełnij na komputerze lub wydrukuj
       </Typography>
       <Typography variant="bodySmall" as="li">
-        wypełnione dokumenty prześlij na adres fundacjasterczaceuszy@gmail.com
+        wypełnione dokumenty prześlij na adres {globalData.contact.mail.text}
       </Typography>
       <Typography variant="bodySmall" as="li">
         poczekaj na odpowiedź od nas
@@ -45,7 +46,7 @@ const DocumentsTemplate = () => (
             color="primary"
             iconEnd="download"
             size="medium"
-            href="https://docs.google.com/document/d/1hKhjrIHAuosckCYc-DP4DIuMxG4GhsPI/edit?fbclid=IwAR3nJ1rn9BzM8NZg--T1SET96Xxg0WVZ40IC98ZHfRDWW9kSstgzWYlaDQg"
+            href={globalData.surveys.preAdoption}
           />
         }
       >
@@ -68,7 +69,7 @@ const DocumentsTemplate = () => (
             color="primary"
             iconEnd="download"
             size="medium"
-            href="https://docs.google.com/document/d/1u_tnZ--5rNME2s9Vn9YZstm7dRAcLQyH/edit?fbclid=IwAR01QrME3E_U1_knHoPeYkgWhJiB7AL4Q-dWylvjkXbnTJDdW0_PrTw7guw"
+            href={globalData.surveys.temporaryHome}
           />
         }
       >

@@ -2,7 +2,7 @@ import { render, screen } from "design-system/test-utils"
 
 import DecorativeCard from "design-system/patterns/decorativeCard"
 
-const text = "Sterczące uszy"
+const text = "Sterczące Uszy"
 const illustrationName = "home"
 const number = 32
 

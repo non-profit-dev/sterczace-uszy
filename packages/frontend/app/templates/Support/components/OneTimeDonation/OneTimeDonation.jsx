@@ -1,6 +1,7 @@
 import Count from "design-system/components/count"
 import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
+import globalData from "shared/data"
 
 import * as Styled from "./OneTimeDonation.styled"
 
@@ -29,7 +30,7 @@ const OneTimeDonation = () => (
 
       <Typography variant="bodyTitle">
         Wybierz wygodną formę dokonania wpłaty za pośrednictwem strony
-        <strong> www.ratujemyzwierzaki.pl</strong>
+        <strong> {globalData.fundraising.text}</strong>
       </Typography>
 
       <Styled.Options>
@@ -45,7 +46,7 @@ const OneTimeDonation = () => (
         variant="fill"
         size="large"
         text="Wpłać"
-        href="https://www.ratujemyzwierzaki.pl/sterczaceuszy"
+        href={globalData.fundraising.link}
         target="_blank"
       />
     </Styled.Wrapper>

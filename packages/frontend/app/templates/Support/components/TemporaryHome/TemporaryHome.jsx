@@ -8,21 +8,21 @@ import Typography from "design-system/components/typography"
 
 import TextBanner from "design-system/patterns/textBanner"
 import Card from "design-system/patterns/card"
+import globalData from "shared/data"
 
 import * as Styled from "./TemporaryHome.styled"
 
 const steps = [
   {
     title: "Wypełnij ankietę",
-    description:
-      "Cieszymy się, że chcesz zostać domem tymczasowym. Dla dobra naszych podopiecznych musimy być jednak pewni, że spełniasz odpowiednie warunki. Dlatego prosimy Cię o odpowiedzenie na parę pytań. Uzupełnij ankietę i prześlij ją na naszego maila:  fundacjastercaceuszy@gmail.com",
+    description: `Cieszymy się, że chcesz zostać domem tymczasowym. Dla dobra naszych podopiecznych musimy być jednak pewni, że spełniasz odpowiednie warunki. Dlatego prosimy Cię o odpowiedzenie na parę pytań. Uzupełnij ankietę i prześlij ją na naszego maila:  ${globalData.contact.mail.text}`,
     button: (
       <Button
         variant="text"
         text="Pobierz ankietę"
         iconStart="download"
         target="_blank"
-        href="https://docs.google.com/document/d/1u_tnZ--5rNME2s9Vn9YZstm7dRAcLQyH/edit?fbclid=IwAR01QrME3E_U1_knHoPeYkgWhJiB7AL4Q-dWylvjkXbnTJDdW0_PrTw7guw"
+        href={globalData.surveys.temporaryHome}
       />
     ),
   },

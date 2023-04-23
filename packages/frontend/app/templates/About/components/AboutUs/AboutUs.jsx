@@ -1,4 +1,5 @@
 import Typography from "design-system/components/typography"
+import globalData from "shared/data"
 
 import * as Styled from "./AboutUs.styled"
 
@@ -6,7 +7,7 @@ const AboutUs = () => (
   <Styled.ContainerSection as="section" size="medium">
     <Styled.Wrapper>
       <Styled.Banner
-        heading="Fundacja Sterczące Uszy"
+        heading={`Fundacja ${globalData.organizationName}`}
         subtitle="Więcej o nas"
         size="medium"
         tabletLayout="left"
@@ -14,9 +15,10 @@ const AboutUs = () => (
       />
       <Styled.TextWrapper>
         <Typography variant="bodyTitle">
-          Poznajcie <strong>Fundację Sterczące Uszy</strong> - organizację,
-          którą założyły <strong>dwie kobiety z pasji i miłości</strong> do
-          czworonogów 14 kwietnia 2022 roku.
+          Poznajcie <strong>Fundację {globalData.organizationName}</strong> -
+          organizację, którą założyły{" "}
+          <strong>dwie kobiety z pasji i miłości</strong> do czworonogów 14
+          kwietnia 2022 roku.
         </Typography>
         <Typography variant="bodyTitle">
           Nasza historia zaczęła się w innej organizacji pomagającej zwierzętom.
@@ -42,9 +44,9 @@ const AboutUs = () => (
           </strong>
         </Typography>
         <Typography variant="bodyTitle">
-          Fundacja Sterczące Uszy to historia o kobietach, które nie poddają się
-          i podejmują działania dla dobra zwierząt, niezależnie od przeciwności
-          losu.
+          Fundacja {globalData.organizationName} to historia o kobietach, które
+          nie poddają się i podejmują działania dla dobra zwierząt, niezależnie
+          od przeciwności losu.
         </Typography>
       </Styled.TextWrapper>
       <Styled.Img

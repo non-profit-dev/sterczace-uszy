@@ -4,8 +4,8 @@ import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 import Button from "design-system/components/button"
 import Contact from "frontend/public/contact/Contact.svg"
+import globalData from "shared/data"
 import * as Styled from "./ContactInfo.styled"
-import data from "./data"
 
 const ContactInfo = () => {
   const theme = useTheme()
@@ -16,22 +16,33 @@ const ContactInfo = () => {
       </Typography>
       <Contact />
       <List gap={8}>
-        {data.map((item) => (
-          <ListItem
-            key={item.text}
-            iconName={item.icon}
-            variant="gray"
-            iconSize="small"
-          >
-            <Button
-              variant="text"
-              text={item.text}
-              size="small"
-              color="black"
-              href={item.link}
-            />
-          </ListItem>
-        ))}
+        <ListItem iconName="phone" variant="gray" iconSize="small">
+          <Button
+            variant="text"
+            text={`${globalData.contact.phoneFirst.text} - sms`}
+            size="small"
+            color="black"
+            href={globalData.contact.phoneFirst.link}
+          />
+        </ListItem>
+        <ListItem iconName="phone" variant="gray" iconSize="small">
+          <Button
+            variant="text"
+            text={`${globalData.contact.phoneSecond.text} - sms`}
+            size="small"
+            color="black"
+            href={globalData.contact.phoneSecond.link}
+          />
+        </ListItem>
+        <ListItem iconName="mail" variant="gray" iconSize="small">
+          <Button
+            variant="text"
+            text={globalData.contact.mail.text}
+            size="small"
+            color="black"
+            href={globalData.contact.mail.link}
+          />
+        </ListItem>
       </List>
     </Styled.ContactInfoContainer>
   )

@@ -7,37 +7,6 @@ const footerData = {
     supportTitle: "Wsparcie",
   },
 
-  contact: [
-    {
-      text: "fundacjasterczaceuszy@gmail.com",
-      icon: "mail",
-      link: "mailto:fundacjasterczaceuszy@gmail.com",
-    },
-    {
-      text: "500-433-539 - sms",
-      icon: "phone",
-      link: "tel:+48500433539",
-    },
-    {
-      text: "661-753-896 - sms",
-      icon: "phone",
-      link: "tel:+48661753896",
-    },
-    {
-      text: "Luboń",
-      icon: "location",
-      link: "https://www.google.pl/maps/place/Lubo%C5%84/",
-    },
-  ],
-
-  foundationData: {
-    nip: "NIP 7831855392 ",
-    krs: "KRS 0000964494 ",
-    icon: "charity",
-    accountNumberText: "Numer konta",
-    accountNumber: "41 1870 1045 2078 1072 8639 0001",
-  },
-
   foundation: [
     {
       title: "O nas",
@@ -84,18 +53,6 @@ const footerData = {
     {
       title: "Dokumenty do pobrania",
       link: "/pliki-do-pobrania",
-    },
-  ],
-  socialMedia: [
-    {
-      icon: "facebook",
-      link: "https://www.facebook.com/sterczaceuszy/",
-      title: "Facebook",
-    },
-    {
-      icon: "instagram",
-      link: "https://www.instagram.com/sterczaceuszy",
-      title: "Instagram",
     },
   ],
 }
