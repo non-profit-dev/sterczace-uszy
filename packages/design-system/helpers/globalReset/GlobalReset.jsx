@@ -28,6 +28,10 @@ const GlobalReset = () => (
         border: none;
       }
 
+      ::-moz-placeholder {
+        opacity: 1;
+      }
+
       *,
       *::before,
       *::after {
