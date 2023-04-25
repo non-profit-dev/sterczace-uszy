@@ -22,3 +22,17 @@ export const Section = styled.section`
     flex-direction: column;
   }
 `
+export const ScrollContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 60px;
+  margin-bottom: 120px;
+  text-align: center;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
+`

@@ -3,6 +3,8 @@ import Banner from "design-system/components/banner"
 import Button from "design-system/components/button"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+import ScrollButton from "design-system/components/scrollButton"
+import Typography from "design-system/components/typography"
 import OurSupport from "./components/OurSupport"
 
 import { animalType, animalsType } from "../../lib/types"
@@ -66,6 +68,12 @@ const Animal = ({ data, otherAnimals }) => (
           needs={data.needs?.json}
           family={data.family?.json}
         />
+        <Styled.ScrollContainer>
+          <Typography variant="h3">
+            Sprawdź, kto jeszcze czeka na miłość
+          </Typography>
+          <ScrollButton sectionId="other-animals" />
+        </Styled.ScrollContainer>
       </Container>
 
       <OtherAnimals data={otherAnimals.items} />
