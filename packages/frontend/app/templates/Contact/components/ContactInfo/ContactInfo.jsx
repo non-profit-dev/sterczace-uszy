@@ -10,45 +10,18 @@ import * as Styled from "./ContactInfo.styled"
 const listData = [
   {
     iconName: "phone",
-    variant: "gray",
-    iconSize: "small",
-    button: (
-      <Button
-        variant="text"
-        text={`${globalData.contact.phoneFirst.text} - sms`}
-        size="small"
-        color="black"
-        href={globalData.contact.phoneFirst.link}
-      />
-    ),
+    text: `${globalData.contact.phoneFirst.text} - sms`,
+    link: globalData.contact.phoneFirst.link,
   },
   {
     iconName: "phone",
-    variant: "gray",
-    iconSize: "small",
-    button: (
-      <Button
-        variant="text"
-        text={`${globalData.contact.phoneSecond.text} - sms`}
-        size="small"
-        color="black"
-        href={globalData.contact.phoneSecond.link}
-      />
-    ),
+    text: `${globalData.contact.phoneSecond.text} - sms`,
+    link: globalData.contact.phoneSecond.link,
   },
   {
     iconName: "mail",
-    variant: "gray",
-    iconSize: "small",
-    button: (
-      <Button
-        variant="text"
-        text={globalData.contact.mail.text}
-        size="small"
-        color="black"
-        href={globalData.contact.mail.link}
-      />
-    ),
+    text: globalData.contact.mail.text,
+    link: globalData.contact.mail.link,
   },
 ]
 
@@ -60,13 +33,24 @@ const ContactInfo = () => {
         Bądźmy w kontakcie!
       </Typography>
       <Contact />
-      {listData.map(({ iconName, variant, iconSize, button }) => (
-        <List gap={8} key={variant}>
-          <ListItem iconName={iconName} iconSize={iconSize}>
-            {button}
+      <List gap={8}>
+        {listData.map(({ text, iconName, link }) => (
+          <ListItem
+            key={text}
+            iconName={iconName}
+            variant="gray"
+            iconSize="small"
+          >
+            <Button
+              variant="text"
+              text={text}
+              size="small"
+              color="black"
+              href={link}
+            />
           </ListItem>
-        </List>
-      ))}
+        ))}
+      </List>
     </Styled.ContactInfoContainer>
   )
 }
