@@ -168,6 +168,86 @@ const typography = {
       lineHeight: "120%",
     },
   },
+  underlined: {
+    desktop: {
+      L: {
+        fontWeight: 600,
+        fontSize: "28px",
+        lineHeight: "120%",
+        textDecoration: "undeline",
+      },
+      M: {
+        fontWeight: 600,
+        fontSize: "20px",
+        lineHeight: "120%",
+        textDecoration: "undeline",
+      },
+      S: {
+        fontWeight: 400,
+        fontSize: "16px",
+        lineHeight: "140%",
+        textDecoration: "undeline",
+      },
+      XS: {
+        fontWeight: 400,
+        fontSize: "14px",
+        lineHeight: "140%",
+        textDecoration: "undeline",
+      },
+    },
+    tablet: {
+      L: {
+        fontWeight: 600,
+        fontSize: "20px",
+        lineHeight: "120%",
+        textDecoration: "undeline",
+      },
+      M: {
+        fontWeight: 600,
+        fontSize: "18px",
+        lineHeight: "120%",
+        textDecoration: "undeline",
+      },
+      S: {
+        fontWeight: 400,
+        fontSize: "16px",
+        lineHeight: "140%",
+        textDecoration: "undeline",
+      },
+      XS: {
+        fontWeight: 400,
+        fontSize: "14px",
+        lineHeight: "140%",
+        textDecoration: "undeline",
+      },
+    },
+    mobile: {
+      L: {
+        fontWeight: 600,
+        fontSize: "18px",
+        lineHeight: "140%",
+        textDecoration: "undeline",
+      },
+      M: {
+        fontWeight: 600,
+        fontSize: "16px",
+        lineHeight: "120%",
+        textDecoration: "undeline",
+      },
+      S: {
+        fontWeight: 400,
+        fontSize: "14px",
+        lineHeight: "120%",
+        textDecoration: "undeline",
+      },
+      XS: {
+        fontWeight: 400,
+        fontSize: "12px",
+        lineHeight: "120%",
+        textDecoration: "undeline",
+      },
+    },
+  },
 }
 
 export default typography
