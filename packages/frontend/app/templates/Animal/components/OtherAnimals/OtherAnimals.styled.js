@@ -1,10 +1,14 @@
 import styled from "@emotion/styled"
 
 export const Wrapper = styled.section`
-  padding-top: 60px;
+  padding-top: 120px;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    padding-top: 100px;
+  }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding-top: 60px;
+    padding-top: 20px;
   }
 `
 
