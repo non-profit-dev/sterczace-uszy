@@ -13,6 +13,24 @@ import globalData from "shared/data"
 
 import * as Styled from "./Actions.styled"
 
+const cardData = [
+  {
+    id: "0",
+    title: "Pomagamy",
+    illustrationName: "help",
+  },
+  {
+    id: "1",
+    title: "Chronimy",
+    illustrationName: "protect",
+  },
+  {
+    id: "2",
+    title: "Leczymy",
+    illustrationName: "treat",
+  },
+]
+
 const Actions = () => {
   const theme = useTheme()
 
@@ -36,63 +54,50 @@ const Actions = () => {
         </TextBanner>
         <Styled.BannerContent>
           <Styled.CardsContainer>
-            <Card
-              title={<Title text="Pomagamy" textSize="h3" />}
-              illustrationName="help"
-              layout="center"
-              tabletLayout="center"
-              mobileLayout="center"
-            >
-              <List gap={8}>
-                <ListItem variant="gray" iconName="check">
-                  Umożliwiamy adopcję za granicę
-                </ListItem>
-                <ListItem variant="gray" iconName="check">
-                  Pomagamy w adopcji
-                </ListItem>
-                <ListItem variant="gray" iconName="check">
-                  Prowadzimy zbiórki wirtualne
-                </ListItem>
-              </List>
-            </Card>
-            <Card
-              title={<Title text="Chronimy" textSize="h3" />}
-              illustrationName="protect"
-              layout="center"
-              tabletLayout="center"
-              mobileLayout="center"
-            >
-              <List gap={8}>
-                <ListItem variant="gray" iconName="check">
-                  Znajdujemy domy tymczasowe
-                </ListItem>
-                <ListItem variant="gray" iconName="check">
-                  Szczepimy i budujemy odporność
-                </ListItem>
-                <ListItem variant="gray" iconName="check">
-                  Szukamy różnych form pomocy
-                </ListItem>
-              </List>
-            </Card>
-            <Card
-              title={<Title text="Leczymy" textSize="h3" />}
-              illustrationName="treat"
-              layout="center"
-              tabletLayout="center"
-              mobileLayout="center"
-            >
-              <List gap={8}>
-                <ListItem variant="gray" iconName="check">
-                  Leczymy pilne przypadki
-                </ListItem>
-                <ListItem variant="gray" iconName="check">
-                  Zapewniamy opiekę weterynaryjną
-                </ListItem>
-                <ListItem variant="gray" iconName="check">
-                  Stosujemy zabiegi profilaktyczne
-                </ListItem>
-              </List>
-            </Card>
+            {cardData.map(({ illustrationName, title, id }) => (
+              <Card
+                key={id}
+                title={<Title text={title} textSize="h3" />}
+                illustrationName={illustrationName}
+                layout="center"
+                tabletLayout="center"
+                mobileLayout="center"
+              />
+            ))}
+
+            <List gap={8}>
+              <ListItem variant="gray" iconName="check">
+                Umożliwiamy adopcję za granicę
+              </ListItem>
+              <ListItem variant="gray" iconName="check">
+                Pomagamy w adopcji
+              </ListItem>
+              <ListItem variant="gray" iconName="check">
+                Prowadzimy zbiórki wirtualne
+              </ListItem>
+            </List>
+            <List gap={8}>
+              <ListItem variant="gray" iconName="check">
+                Znajdujemy domy tymczasowe
+              </ListItem>
+              <ListItem variant="gray" iconName="check">
+                Szczepimy i budujemy odporność
+              </ListItem>
+              <ListItem variant="gray" iconName="check">
+                Szukamy różnych form pomocy
+              </ListItem>
+            </List>
+            <List gap={8}>
+              <ListItem variant="gray" iconName="check">
+                Leczymy pilne przypadki
+              </ListItem>
+              <ListItem variant="gray" iconName="check">
+                Zapewniamy opiekę weterynaryjną
+              </ListItem>
+              <ListItem variant="gray" iconName="check">
+                Stosujemy zabiegi profilaktyczne
+              </ListItem>
+            </List>
           </Styled.CardsContainer>
         </Styled.BannerContent>
         <Styled.ButtonWrapper>
