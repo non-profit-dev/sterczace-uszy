@@ -6,11 +6,11 @@ import Title from "design-system/components/title"
 
 import * as Styled from "./Tabs.styled"
 
-function convertToSlug(Text) {
-  return Text.toLowerCase()
+const convertToSlug = (text) =>
+  text
+    .toLowerCase()
     .replace(/ /g, "-")
     .replace(/[^\w-]+/g, "")
-}
 
 const Tabs = ({ data, id, transparentContent, className }) => {
   const [activeIndex, setActiveIndex] = useState(0)
