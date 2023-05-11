@@ -12,6 +12,8 @@ import TemporaryHome from "./components/AdoptionRules"
 import Page from "../Page"
 
 import * as Styled from "./Adoption.styled"
+import PreAdoptionVisit from "./PreAdoptionVisit"
+import ActionDuringVisit from "./components/ActionDuringVisit"
 
 const Adoption = () => (
   <Page title="Adopcja">
@@ -34,6 +36,8 @@ const Adoption = () => (
     <main>
       <Hero />
       <TemporaryHome />
+      <PreAdoptionVisit />
+      <ActionDuringVisit />
       <CtaBanner
         heading="Masz pytania lub wątpliwości?"
         buttonText="Skontaktuj się z nami"
