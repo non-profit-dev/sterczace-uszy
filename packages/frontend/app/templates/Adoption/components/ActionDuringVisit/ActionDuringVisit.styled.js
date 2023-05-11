@@ -12,8 +12,8 @@ export const Content = styled.div`
 export const BannerContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 60px;
   align-items: center;
+  gap: 60px;
 `
 
 export const TextContainer = styled.div`
@@ -29,6 +29,7 @@ export const CardsContainer = styled.div`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     grid-template-columns: 1fr;
     gap: 0;
+    max-width: 326px;
   }
 `
 export const Description = styled(Typography)`
