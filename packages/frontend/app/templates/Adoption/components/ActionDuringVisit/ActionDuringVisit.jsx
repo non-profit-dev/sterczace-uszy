@@ -22,7 +22,7 @@ const cardsData = [
     title: <Title text="Rozmawiamy" textSize="h3" />,
     illustrationName: "womanAndDog",
     description:
-      "Upewniamy sie czy wiesz jak zaopiekować się nowym członkiem Waszej rodziny.",
+      "Upewniamy się czy wiesz jak zaopiekować się nowym członkiem Waszej rodziny.",
   },
 ]
 

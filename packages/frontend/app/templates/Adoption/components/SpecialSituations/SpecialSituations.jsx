@@ -24,7 +24,7 @@ const SpecialSituations = () => (
         }
       >
         <Typography variant="bodyTitle">
-          Wiemy, że w życiu zdarza sie, że zorganizowanie wizyty może być bardzo
+          Wiemy, że w życiu zdarza się, że zorganizowanie wizyty może być bardzo
           kłopotliwe, dlatego w wyjątkowych sytuacjach może się ona odbyć
           online, za pośrednictwem Messengera, Zoom, Google duo, Discord. Takie
           spotkanie ustalamy indywidualnie.

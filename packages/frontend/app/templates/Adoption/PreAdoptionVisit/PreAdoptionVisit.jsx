@@ -26,7 +26,7 @@ const values = [
   {
     heading: "Ważne informacje",
     description:
-      "Na wizycie możemy pojawić się z psem. Wizytatorem/ką  może być każda osoba upoważniona przez fundację..",
+      "Na wizycie możemy pojawić się z psem. Wizytatorem/ką może być każda osoba upoważniona przez fundację..",
     icon: "trust",
   },
 ]
