@@ -102,16 +102,18 @@ export const Section = styled.div`
   gap: 20px;
 `
 
-export const Icons = styled.div`
-  display: inline-flex;
-  gap: 6px;
+// export const Icons = styled.div`
+//   display: inline-flex;
+//   gap: 6px;
 
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    display: none;
-  }
-`
-export const IconsMobile = styled.div`
-  display: none;
+//   ${({ theme }) => theme.breakpoints.mobileLg} {
+//     display: none;
+//   }
+// `
+export const Icons = styled.div`
+  //TODO Social media icons moved under the “Kontakt”  on all resolutions/breakpoints.
+  ${"" /* display: none; //TODO */}
+  display: inline-flex;
   gap: 6px;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
@@ -125,9 +127,11 @@ export const Copyright = styled.div`
 `
 
 export const CopyButton = styled.button`
-  display: inline-flex;
+  display: flex;
+  align-items: flex-start;
   cursor: pointer;
   vertical-align: middle;
+  transform: translateY(-2px);
 `
 
 export const CopyInfo = styled(Typography)`
@@ -135,5 +139,11 @@ export const CopyInfo = styled(Typography)`
   min-height: 26px;
   padding-left: 4px;
   vertical-align: middle;
+  align-items: center;
+  transform: translateY(1px);
+`
+
+export const BankInfo = styled.span`
+  display: inline-flex;
   align-items: center;
 `
