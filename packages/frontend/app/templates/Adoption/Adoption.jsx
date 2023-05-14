@@ -12,6 +12,7 @@ import TemporaryHome from "./components/AdoptionRules"
 import Page from "../Page"
 
 import * as Styled from "./Adoption.styled"
+import AdoptionDecision from "./components/AdoptionDecision/AdoptionDecision"
 
 const Adoption = () => (
   <Page title="Adopcja">
@@ -33,6 +34,7 @@ const Adoption = () => (
 
     <main>
       <Hero />
+      <AdoptionDecision />
       <TemporaryHome />
       <CtaBanner
         heading="Masz pytania lub wątpliwości?"
