@@ -15,7 +15,7 @@ const Title = ({
   iconStart,
   iconEnd,
   textSize,
-  variant,
+  line,
   count,
   hideLineOnMobile,
   as,
@@ -27,7 +27,7 @@ const Title = ({
       {count && <Count count={count} size="xsmall" />}
       <Styled.Text
         variant={textSize}
-        type={variant}
+        line={line}
         hideLineOnMobile={hideLineOnMobile}
         as={as}
       >
@@ -67,7 +67,7 @@ Title.propTypes = {
     "bodyTitle",
     "bodyTiny",
   ]),
-  variant: oneOf(["text", "textLine"]),
+  line: bool,
   hideLineOnMobile: bool,
   as: string,
   className: string,
@@ -78,7 +78,7 @@ Title.defaultProps = {
   iconEnd: null,
   count: null,
   textSize: "h4",
-  variant: "textLine",
+  line: true,
   hideLineOnMobile: false,
   as: null,
   className: null,

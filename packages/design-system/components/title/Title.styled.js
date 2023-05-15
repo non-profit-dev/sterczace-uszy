@@ -35,8 +35,8 @@ export const Text = styled(Typography)`
     }
   }
 
-  ${({ type }) =>
-    type === "text" &&
+  ${({ line }) =>
+    !line &&
     css`
       &:before {
         display: none;
