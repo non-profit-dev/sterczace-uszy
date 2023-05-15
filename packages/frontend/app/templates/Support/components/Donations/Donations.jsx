@@ -41,7 +41,7 @@ const Donations = () => {
               text="Przelew lub zlecenie stałe"
               iconStart="donation"
               line={false}
-              textSize="h5"
+              variant="h5"
               as="p"
             />
             <div>

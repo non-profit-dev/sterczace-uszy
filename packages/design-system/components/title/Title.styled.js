@@ -26,8 +26,7 @@ export const Text = styled(Typography)`
     left: 0;
     width: 100%;
     height: 5px;
-    clip-path: ${({ size }) =>
-      `ellipse(50% ${size === `large` ? `3px` : `2px`})`};
+    clip-path: ellipse(50% 2px);
     background: ${({ theme }) => theme.colors.primary[500]};
 
     ${({ theme }) => theme.breakpoints.tablet} {

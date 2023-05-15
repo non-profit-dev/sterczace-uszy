@@ -58,12 +58,7 @@ const Hero = () => {
               layout="center"
               illustrationName={illustration}
               title={
-                <Styled.Title
-                  text={title}
-                  variant="text"
-                  textSize="h4"
-                  as="h2"
-                />
+                <Styled.Title text={title} line={false} variant="h3" as="h2" />
               }
               mobileLayout="center"
               button={
