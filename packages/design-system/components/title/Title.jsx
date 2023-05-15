@@ -5,11 +5,15 @@ import Count from "design-system/components/count"
 
 import * as Styled from "./Title.styled"
 
+const getIconSize = (textSize) =>
+  textSize === `h1` || textSize === `h2` || textSize === `h3`
+    ? `xxlarge`
+    : `medium`
+
 const Title = ({
   text,
   iconStart,
   iconEnd,
-  size,
   textSize,
   variant,
   count,
@@ -19,10 +23,9 @@ const Title = ({
 }) => (
   <Styled.Title size={textSize} className={className}>
     <Styled.Wrapper>
-      {iconStart && <Icon name={iconStart} size={size} />}
+      {iconStart && <Icon name={iconStart} size={getIconSize(textSize)} />}
       {count && <Count count={count} size="xsmall" />}
       <Styled.Text
-        size={size}
         variant={textSize}
         type={variant}
         hideLineOnMobile={hideLineOnMobile}
@@ -30,7 +33,7 @@ const Title = ({
       >
         {text}
       </Styled.Text>
-      {iconEnd && <Icon name={iconEnd} size={size} />}
+      {iconEnd && <Icon name={iconEnd} size={getIconSize(textSize)} />}
     </Styled.Wrapper>
   </Styled.Title>
 )
@@ -52,7 +55,6 @@ Title.propTypes = {
    * If provided, it renders the Count component at the start of the title's text.
    */
   count: number,
-  size: oneOf(["small", "medium", "large", "xlarge", "xxlarge"]),
   textSize: oneOf([
     "h1",
     "h2",
@@ -75,7 +77,6 @@ Title.defaultProps = {
   iconStart: null,
   iconEnd: null,
   count: null,
-  size: "medium",
   textSize: "h4",
   variant: "textLine",
   hideLineOnMobile: false,
