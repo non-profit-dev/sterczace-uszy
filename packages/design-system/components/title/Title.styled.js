@@ -4,10 +4,6 @@ import { css } from "@emotion/react"
 import Typography from "design-system/components/typography"
 
 export const Title = styled.div`
-  display: ${({ fullWidth }) => (fullWidth ? `flex` : `inline-flex`)};
-  align-items: center;
-  align-self: ${({ fullWidth }) => (fullWidth ? `stretch` : `auto`)};
-  justify-content: space-between;
   position: relative;
   color: ${({ theme }) => theme.colors.gray[600]};
   margin-bottom: 5px;

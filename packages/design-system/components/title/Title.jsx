@@ -1,14 +1,12 @@
 import { string, oneOf, number, bool } from "prop-types"
 
 import Icon from "design-system/components/icon"
-import Badge from "design-system/components/badge"
 import Count from "design-system/components/count"
 
 import * as Styled from "./Title.styled"
 
 const Title = ({
   text,
-  badge,
   iconStart,
   iconEnd,
   size,
@@ -19,7 +17,7 @@ const Title = ({
   as,
   className,
 }) => (
-  <Styled.Title size={textSize} fullWidth={!!badge} className={className}>
+  <Styled.Title size={textSize} className={className}>
     <Styled.Wrapper>
       {iconStart && <Icon name={iconStart} size={size} />}
       {count && <Count count={count} size="xsmall" />}
@@ -34,8 +32,6 @@ const Title = ({
       </Styled.Text>
       {iconEnd && <Icon name={iconEnd} size={size} />}
     </Styled.Wrapper>
-
-    {badge && <Badge text={badge} size="small" />}
   </Styled.Title>
 )
 
@@ -44,10 +40,6 @@ Title.propTypes = {
    * Text that's displayed as the title.
    */
   text: string.isRequired,
-  /**
-   * If provided, it renders the Badge at the end of the component.
-   */
-  badge: string,
   /**
    * The name of the icon to be displayed at the start of the title's text.
    */
@@ -80,7 +72,6 @@ Title.propTypes = {
 }
 
 Title.defaultProps = {
-  badge: null,
   iconStart: null,
   iconEnd: null,
   count: null,
