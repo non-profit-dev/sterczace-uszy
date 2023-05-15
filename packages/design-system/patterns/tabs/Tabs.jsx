@@ -24,6 +24,7 @@ const Tabs = ({ data, id, transparentContent, className }) => {
   return (
     <Styled.Wrapper className={className}>
       <Styled.Tabs
+        role="tablist"
         gap={0}
         breakpoints={{
           390: {
