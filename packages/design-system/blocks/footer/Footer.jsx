@@ -112,11 +112,9 @@ const Footer = () => {
                   </Typography>
                 </ListItem>
                 <ListItem variant="gray" gap={0}>
-                  {/* <Styled.BankInfo> */}
                   <Typography variant="bodySmall">
                     Numer konta w NestBank
                   </Typography>
-                  {/* </Styled.BankInfo> */}
                   {isCopied ? (
                     <Styled.CopyInfo
                       variant="bodyTiny"
