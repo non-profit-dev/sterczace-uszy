@@ -1,6 +1,6 @@
 import Typography from "design-system/components/typography"
 import Feature from "design-system/patterns/feature"
-import List from "design-system/components/list"
+
 import Container from "design-system/components/container"
 import * as Styled from "./PreAdoptionVisit.styled"
 
@@ -26,7 +26,7 @@ const values = [
   {
     heading: "Ważne informacje",
     description:
-      "Na wizycie możemy pojawić się z psem. Wizytatorem/ką może być każda osoba upoważniona przez fundację..",
+      "Na wizycie możemy pojawić się z psem. Wizytatorem/ką może być każda osoba upoważniona przez fundację.",
     icon: "trust",
   },
 ]
@@ -51,7 +51,7 @@ const PreAdoptionVisit = () => (
           zapytać to właściwy moment. Chętnie wszystko dokładnie wyjaśnimy.
         </Typography>
       </Styled.Banner>
-      <List gap={40}>
+      <Styled.ListItems gap={40}>
         {values.map(({ heading, description, icon }) => (
           <Feature
             key={heading}
@@ -60,7 +60,7 @@ const PreAdoptionVisit = () => (
             icon={icon}
           />
         ))}
-      </List>
+      </Styled.ListItems>
     </Container>
   </Styled.Section>
 )

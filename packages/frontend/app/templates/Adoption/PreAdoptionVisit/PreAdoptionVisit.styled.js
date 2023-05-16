@@ -1,5 +1,6 @@
 import styled from "@emotion/styled"
 import TextBanner from "design-system/patterns/textBanner"
+import List from "design-system/components/list"
 
 export const Section = styled.div`
   background-color: ${({ theme }) => theme.colors.complementary[100]};
@@ -18,6 +19,7 @@ export const Section = styled.div`
 
 export const Banner = styled(TextBanner)`
   margin-bottom: 83px;
+  max-width: 873px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     margin-bottom: 80px;
@@ -25,4 +27,8 @@ export const Banner = styled(TextBanner)`
   ${({ theme }) => theme.breakpoints.mobileLg} {
     margin-bottom: 60px;
   }
+`
+
+export const ListItems = styled(List)`
+  max-width: 696px;
 `
