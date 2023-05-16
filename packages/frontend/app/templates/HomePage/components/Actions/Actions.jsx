@@ -1,14 +1,14 @@
-import { useTheme } from "@emotion/react";
-import Button from "design-system/components/button";
-import List from "design-system/components/list";
-import Title from "design-system/components/title";
-import ListItem from "design-system/components/listItem";
-import Container from "design-system/components/container";
-import Typography from "design-system/components/typography";
-import Card from "design-system/patterns/card/Card";
-import TextBanner from "design-system/patterns/textBanner";
-import globalData from "shared/data";
-import * as Styled from "./Actions.styled";
+import { useTheme } from "@emotion/react"
+import Button from "design-system/components/button"
+import List from "design-system/components/list"
+import Title from "design-system/components/title"
+import ListItem from "design-system/components/listItem"
+import Container from "design-system/components/container"
+import Typography from "design-system/components/typography"
+import Card from "design-system/patterns/card/Card"
+import TextBanner from "design-system/patterns/textBanner"
+import globalData from "shared/data"
+import * as Styled from "./Actions.styled"
 
 const cardData = [
   {
@@ -18,7 +18,11 @@ const cardData = [
     array: [
       {
         id: "0",
-        list: ["Leczymy pilne przypadki", "Zapewniamy opiekę weterynaryjną", "Stosujemy zabiegi profilaktyczne"],
+        list: [
+          "Leczymy pilne przypadki",
+          "Zapewniamy opiekę weterynaryjną",
+          "Stosujemy zabiegi profilaktyczne",
+        ],
       },
     ],
   },
@@ -29,7 +33,11 @@ const cardData = [
     array: [
       {
         id: "1",
-        list: ["Znajdujemy domy tymczasowe", "Szczepimy i budujemy odporność", "Szukamy różnych form pomocy"],
+        list: [
+          "Znajdujemy domy tymczasowe",
+          "Szczepimy i budujemy odporność",
+          "Szukamy różnych form pomocy",
+        ],
       },
     ],
   },
@@ -40,14 +48,18 @@ const cardData = [
     array: [
       {
         id: "2",
-        list: ["Leczymy pilne przypadki", "Zapewniamy opiekę weterynaryjną", "Stosujemy zabiegi profilaktyczne"],
+        list: [
+          "Leczymy pilne przypadki",
+          "Zapewniamy opiekę weterynaryjną",
+          "Stosujemy zabiegi profilaktyczne",
+        ],
       },
     ],
   },
-];
+]
 
 const Actions = () => {
-  const theme = useTheme();
+  const theme = useTheme()
 
   return (
     <Container as="section">
@@ -77,15 +89,19 @@ const Actions = () => {
                 layout="center"
                 tabletLayout="center"
                 mobileLayout="center"
-              >            
+              >
                 <List gap={8}>
                   {array[0].list.map(({ list, index }) => (
-                    <ListItem variant="gray" iconName="check" key={index} list={index} />
+                    <ListItem
+                      variant="gray"
+                      iconName="check"
+                      key={index}
+                      list={list}
+                    />
                   ))}
                 </List>
-            </Card>
+              </Card>
             ))}
-
           </Styled.CardsContainer>
         </Styled.BannerContent>
         <Styled.ButtonWrapper>
@@ -98,7 +114,7 @@ const Actions = () => {
         </Styled.ButtonWrapper>
       </Styled.Content>
     </Container>
-  );
-};
+  )
+}
 
-export default Actions;
+export default Actions
