@@ -3,6 +3,10 @@ import styled from "@emotion/styled"
 export const Feature = styled.div`
   display: flex;
   gap: 32px;
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    flex-direction: column;
+  }
 `
 
 export const Content = styled.div`
