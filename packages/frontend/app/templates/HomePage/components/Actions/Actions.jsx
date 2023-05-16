@@ -91,13 +91,10 @@ const Actions = () => {
                 mobileLayout="center"
               >
                 <List gap={8}>
-                  {array[0].list.map(({ list, index }) => (
-                    <ListItem
-                      variant="gray"
-                      iconName="check"
-                      key={index}
-                      list={list}
-                    />
+                  {array[0].list.map((item) => (
+                    <ListItem variant="gray" iconName="check" key={item}>
+                      {item}
+                    </ListItem>
                   ))}
                 </List>
               </Card>
