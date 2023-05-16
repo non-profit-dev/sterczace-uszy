@@ -102,17 +102,7 @@ export const Section = styled.div`
   gap: 20px;
 `
 
-// export const Icons = styled.div`
-//   display: inline-flex;
-//   gap: 6px;
-
-//   ${({ theme }) => theme.breakpoints.mobileLg} {
-//     display: none;
-//   }
-// `
 export const Icons = styled.div`
-  //TODO Social media icons moved under the “Kontakt”  on all resolutions/breakpoints.
-  ${"" /* display: none; //TODO */}
   display: inline-flex;
   gap: 6px;
 
