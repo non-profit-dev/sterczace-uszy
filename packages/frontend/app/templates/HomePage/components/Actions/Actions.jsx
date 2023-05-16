@@ -1,38 +1,53 @@
-import { useTheme } from "@emotion/react"
-
-import Button from "design-system/components/button"
-import List from "design-system/components/list"
-import Title from "design-system/components/title"
-import ListItem from "design-system/components/listItem"
-import Container from "design-system/components/container"
-import Typography from "design-system/components/typography"
-import Card from "design-system/patterns/card/Card"
-import TextBanner from "design-system/patterns/textBanner"
-
-import globalData from "shared/data"
-
-import * as Styled from "./Actions.styled"
+import { useTheme } from "@emotion/react";
+import Button from "design-system/components/button";
+import List from "design-system/components/list";
+import Title from "design-system/components/title";
+import ListItem from "design-system/components/listItem";
+import Container from "design-system/components/container";
+import Typography from "design-system/components/typography";
+import Card from "design-system/patterns/card/Card";
+import TextBanner from "design-system/patterns/textBanner";
+import globalData from "shared/data";
+import * as Styled from "./Actions.styled";
 
 const cardData = [
   {
     id: "0",
     title: "Pomagamy",
     illustrationName: "help",
+    array: [
+      {
+        id: "0",
+        list: ["Leczymy pilne przypadki", "Zapewniamy opiekę weterynaryjną", "Stosujemy zabiegi profilaktyczne"],
+      },
+    ],
   },
   {
     id: "1",
     title: "Chronimy",
     illustrationName: "protect",
+    array: [
+      {
+        id: "1",
+        list: ["Znajdujemy domy tymczasowe", "Szczepimy i budujemy odporność", "Szukamy różnych form pomocy"],
+      },
+    ],
   },
   {
     id: "2",
     title: "Leczymy",
     illustrationName: "treat",
+    array: [
+      {
+        id: "2",
+        list: ["Leczymy pilne przypadki", "Zapewniamy opiekę weterynaryjną", "Stosujemy zabiegi profilaktyczne"],
+      },
+    ],
   },
-]
+];
 
 const Actions = () => {
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <Container as="section">
@@ -54,7 +69,7 @@ const Actions = () => {
         </TextBanner>
         <Styled.BannerContent>
           <Styled.CardsContainer>
-            {cardData.map(({ illustrationName, title, id }) => (
+            {cardData.map(({ illustrationName, title, id, array }) => (
               <Card
                 key={id}
                 title={<Title text={title} textSize="h3" />}
@@ -62,42 +77,15 @@ const Actions = () => {
                 layout="center"
                 tabletLayout="center"
                 mobileLayout="center"
-              />
+              >            
+                <List gap={8}>
+                  {array[0].list.map(({ list, index }) => (
+                    <ListItem variant="gray" iconName="check" key={index} list={index} />
+                  ))}
+                </List>
+            </Card>
             ))}
 
-            <List gap={8}>
-              <ListItem variant="gray" iconName="check">
-                Umożliwiamy adopcję za granicę
-              </ListItem>
-              <ListItem variant="gray" iconName="check">
-                Pomagamy w adopcji
-              </ListItem>
-              <ListItem variant="gray" iconName="check">
-                Prowadzimy zbiórki wirtualne
-              </ListItem>
-            </List>
-            <List gap={8}>
-              <ListItem variant="gray" iconName="check">
-                Znajdujemy domy tymczasowe
-              </ListItem>
-              <ListItem variant="gray" iconName="check">
-                Szczepimy i budujemy odporność
-              </ListItem>
-              <ListItem variant="gray" iconName="check">
-                Szukamy różnych form pomocy
-              </ListItem>
-            </List>
-            <List gap={8}>
-              <ListItem variant="gray" iconName="check">
-                Leczymy pilne przypadki
-              </ListItem>
-              <ListItem variant="gray" iconName="check">
-                Zapewniamy opiekę weterynaryjną
-              </ListItem>
-              <ListItem variant="gray" iconName="check">
-                Stosujemy zabiegi profilaktyczne
-              </ListItem>
-            </List>
           </Styled.CardsContainer>
         </Styled.BannerContent>
         <Styled.ButtonWrapper>
@@ -110,7 +98,7 @@ const Actions = () => {
         </Styled.ButtonWrapper>
       </Styled.Content>
     </Container>
-  )
-}
+  );
+};
 
-export default Actions
+export default Actions;
