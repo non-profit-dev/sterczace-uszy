@@ -32,6 +32,7 @@ export const AccordionContainer = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 32px;
+  align-items: start;
   ${({ theme }) => theme.breakpoints.mobileLg} {
     grid-template-columns: 1fr;
   }
