@@ -30,8 +30,8 @@ const ActionDuringVisit = () => (
   <Container as="section">
     <Styled.Content>
       <TextBanner
-        heading="Wizyta"
-        subtitle="Co robimy w czasie wizyty?"
+        heading="Co robimy w czasie wizyty?"
+        subtitle="Wizyta"
         layout="center"
       >
         <Styled.TextContainer>
