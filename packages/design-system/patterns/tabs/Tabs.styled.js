@@ -12,6 +12,8 @@ export const Tabs = styled(Swiper)`
 
   ${({ theme }) => theme.breakpoints.desktopSm} {
     padding: 0 44px;
+    border-radius: ${({ transparentContent }) =>
+      transparentContent ? "10px" : "10px 10px 0 0"};
   }
 `
 

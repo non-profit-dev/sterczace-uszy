@@ -61,7 +61,7 @@ const Tabs = ({ data, id, transparentContent, className }) => {
           </Styled.Tab>
         ))}
 
-        <Navigation />
+        <Navigation transparentContent={transparentContent} />
       </Styled.Tabs>
 
       {data.map(({ tab, content }, index) => (

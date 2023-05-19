@@ -1,11 +1,12 @@
 import { useTheme } from "@emotion/react"
 import { useSwiper } from "swiper/react"
+import { bool } from "prop-types"
 
 import Icon from "design-system/components/icon"
 
 import * as Styled from "./Tabs.styled"
 
-const Navigation = () => {
+const Navigation = ({ transparentContent }) => {
   const slider = useSwiper()
   const theme = useTheme()
 
@@ -13,6 +14,7 @@ const Navigation = () => {
     <>
       <Styled.NavButton
         direction="prev"
+        transparentContent={transparentContent}
         onClick={() => {
           slider.slidePrev()
         }}
@@ -29,6 +31,7 @@ const Navigation = () => {
       </Styled.NavButton>
       <Styled.NavButton
         direction="next"
+        transparentContent={transparentContent}
         onClick={() => {
           slider.slideNext()
         }}
@@ -43,6 +46,14 @@ const Navigation = () => {
       </Styled.NavButton>
     </>
   )
+}
+
+Navigation.propTypes = {
+  transparentContent: bool,
+}
+
+Navigation.defaultProps = {
+  transparentContent: false,
 }
 
 export default Navigation
