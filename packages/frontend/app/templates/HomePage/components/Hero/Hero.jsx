@@ -57,9 +57,7 @@ const Hero = () => {
               href={buttonHref}
               layout="center"
               illustrationName={illustration}
-              title={
-                <Styled.Title text={title} line={false} variant="h3" as="h2" />
-              }
+              title={<Styled.Title text={title} line={false} as="h2" />}
               mobileLayout="center"
               button={
                 <Button
