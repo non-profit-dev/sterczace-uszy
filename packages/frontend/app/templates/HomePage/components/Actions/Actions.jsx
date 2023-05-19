@@ -15,9 +15,9 @@ const cardData = [
     title: "Pomagamy",
     illustrationName: "help",
     array: [
-      "Leczymy pilne przypadki",
-      "Zapewniamy opiekę weterynaryjną",
-      "Stosujemy zabiegi profilaktyczne",
+      "Umożliwiamy adopcję za granicę",
+      "Pomagamy w adopcji",
+      "Prowadzimy zbiórki wirtualne",
     ],
   },
   {
