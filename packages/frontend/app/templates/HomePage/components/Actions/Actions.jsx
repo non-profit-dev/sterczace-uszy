@@ -12,48 +12,30 @@ import * as Styled from "./Actions.styled"
 
 const cardData = [
   {
-    id: "0",
     title: "Pomagamy",
     illustrationName: "help",
     array: [
-      {
-        id: "0",
-        list: [
-          "Leczymy pilne przypadki",
-          "Zapewniamy opiekę weterynaryjną",
-          "Stosujemy zabiegi profilaktyczne",
-        ],
-      },
+      "Leczymy pilne przypadki",
+      "Zapewniamy opiekę weterynaryjną",
+      "Stosujemy zabiegi profilaktyczne",
     ],
   },
   {
-    id: "1",
     title: "Chronimy",
     illustrationName: "protect",
     array: [
-      {
-        id: "1",
-        list: [
-          "Znajdujemy domy tymczasowe",
-          "Szczepimy i budujemy odporność",
-          "Szukamy różnych form pomocy",
-        ],
-      },
+      "Znajdujemy domy tymczasowe",
+      "Szczepimy i budujemy odporność",
+      "Szukamy różnych form pomocy",
     ],
   },
   {
-    id: "2",
     title: "Leczymy",
     illustrationName: "treat",
     array: [
-      {
-        id: "2",
-        list: [
-          "Leczymy pilne przypadki",
-          "Zapewniamy opiekę weterynaryjną",
-          "Stosujemy zabiegi profilaktyczne",
-        ],
-      },
+      "Leczymy pilne przypadki",
+      "Zapewniamy opiekę weterynaryjną",
+      "Stosujemy zabiegi profilaktyczne",
     ],
   },
 ]
@@ -81,9 +63,9 @@ const Actions = () => {
         </TextBanner>
         <Styled.BannerContent>
           <Styled.CardsContainer>
-            {cardData.map(({ illustrationName, title, id, array }) => (
+            {cardData.map(({ illustrationName, title, array }) => (
               <Card
-                key={id}
+                key={title}
                 title={<Title text={title} textSize="h3" />}
                 illustrationName={illustrationName}
                 layout="center"
@@ -91,7 +73,7 @@ const Actions = () => {
                 mobileLayout="center"
               >
                 <List gap={8}>
-                  {array[0].list.map((item) => (
+                  {array.map((item) => (
                     <ListItem variant="gray" iconName="check" key={item}>
                       {item}
                     </ListItem>
