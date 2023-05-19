@@ -16,7 +16,7 @@ const typography = {
     },
     h3: {
       fontWeight: 600,
-      fontSize: "28px",
+      fontSize: "32px",
       lineHeight: "120%",
       letterSpacing: "-0.5px",
     },
@@ -78,13 +78,13 @@ const typography = {
     },
     h4: {
       fontWeight: 600,
-      fontSize: "28px",
+      fontSize: "24px",
       lineHeight: "125%",
       letterSpacing: "-0.5px",
     },
     h5: {
       fontWeight: 600,
-      fontSize: "22px",
+      fontSize: "20px",
       lineHeight: "150%",
     },
     h6: {
@@ -94,12 +94,12 @@ const typography = {
     },
     bodyLarge: {
       fontWeight: 400,
-      fontSize: "22px",
+      fontSize: "20px",
       lineHeight: "145%",
     },
     bodyTitle: {
       fontWeight: 400,
-      fontSize: "20px",
+      fontSize: "18px",
       lineHeight: "145%",
     },
     bodySmall: {
