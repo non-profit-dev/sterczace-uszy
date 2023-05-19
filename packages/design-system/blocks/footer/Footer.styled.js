@@ -130,7 +130,7 @@ export const CopyInfo = styled(Typography)`
   padding-left: 4px;
   vertical-align: middle;
   align-items: center;
-  transform: translateY(1px);
+  transform: translateY(-2px);
 `
 
 export const BankInfo = styled.span`
