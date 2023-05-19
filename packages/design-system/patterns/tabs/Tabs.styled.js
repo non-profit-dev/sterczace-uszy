@@ -62,6 +62,7 @@ export const Tab = styled(SwiperSlide)`
 
     ${({ theme }) => theme.breakpoints.desktopSm} {
       border-radius: 0;
+      border-bottom: 1px solid ${({ theme }) => theme.colors.gray[300]};
     }
   }
 `
