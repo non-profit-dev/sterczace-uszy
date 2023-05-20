@@ -12,13 +12,13 @@ const values = [
     icon: "transparency",
   },
   {
-    heading: "Gdzie sie odbywa?",
+    heading: "Gdzie się odbywa?",
     description:
-      "Wizyta odbywa się w mieszkaniu lub domu potencjalnej rodziny, niezależnie od kraju zamieszkania rodziny.",
+      "Wizyta odbywa się w mieszkaniu lub domu potencjalnej rodziny, niezależnie od kraju zamieszkania.",
     icon: "location",
   },
   {
-    heading: "Jak sie przygotować?",
+    heading: "Jak się przygotować?",
     description:
       "Nie musisz robić porządków! Zadbaj jedynie, aby, w miarę możliwości, byli obecni wszyscy domownicy.",
     icon: "responsibility",
