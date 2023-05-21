@@ -65,7 +65,7 @@ const AdoptionDecision = () => {
         color: "primary",
         icon: "download",
         size: "medium",
-        href: `${globalData.surveys.preAdoption}`,
+        href: globalData.surveys.preAdoption,
       },
       icon: "decisionHeart",
     },
@@ -127,7 +127,7 @@ const AdoptionDecision = () => {
                     color={accordion.button.color}
                     iconEnd={accordion.button.icon}
                     size={accordion.button.size}
-                    href={accordion.button.link}
+                    href={accordion.button.href}
                     target="_blank"
                   />
                 )}
