@@ -28,12 +28,11 @@ const Feature = ({ heading, description, icon, className }) => {
 Feature.propTypes = {
   heading: string.isRequired,
   icon: string.isRequired,
-  description: string,
+  description: string.isRequired,
   className: string,
 }
 
 Feature.defaultProps = {
-  description: null,
   className: null,
 }
 
