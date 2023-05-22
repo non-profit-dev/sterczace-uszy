@@ -43,6 +43,7 @@ const Adoption = () => (
       <PreAdoptionVisit />
       <ActionDuringVisit />
       <SpecialSituations />
+      {/* virtual adoption */}
       <CtaBanner
         heading="Masz pytania lub wątpliwości?"
         buttonText="Skontaktuj się z nami"
