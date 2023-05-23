@@ -67,7 +67,13 @@ Card.propTypes = {
    * The URL that the card should redirect to when clicked. When provided, the card has a white background and a shadow.
    */
   href: string,
+  /**
+   * The name of an illustration from our gallery. If you need to display an illustration from another source, please use the `illustrationSrc` property.
+   */
   illustrationName: string,
+  /**
+   * The path to an illustration from outside of our repository.
+   */
   illustrationSrc: string,
   illustrationSize: oneOf(["small", "large"]),
   imageSrc: string,
