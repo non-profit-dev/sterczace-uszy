@@ -32,7 +32,7 @@ export const Card = styled.a`
 export const IllustrationContainer = styled.div`
   display: inline-flex;
   justify-content: center;
-  height: ${({ size }) => (size === "small" ? "90px" : "220px")};
+  height: ${({ size }) => (size === "small" ? "100px" : "217px")};
   margin: 36px auto 18px auto;
 `
 
@@ -93,10 +93,6 @@ export const Wrapper = styled.div`
         `}
   gap: 24px;
   width: 100%;
-`
-
-export const Illustration = styled.img`
-  height: 100px;
 `
 
 export const Title = styled.div`
