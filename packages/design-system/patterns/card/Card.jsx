@@ -23,14 +23,21 @@ const Card = ({
       </Styled.ImageContainer>
     )}
     <Styled.Container layout={layout}>
-      {(illustrationName || illustrationSrc) && (
-        <Styled.IllustrationContainer size={illustrationSize}>
-          {illustrationName && <Illustration name={illustrationName} />}
+      {illustrationName && (
+        <Styled.Illustration
+          name={illustrationName}
+          size={illustrationSize}
+          as={Illustration}
+        />
+      )}
 
-          {illustrationSrc && (
-            <img src={illustrationSrc} alt="" width="100%" height="100%" />
-          )}
-        </Styled.IllustrationContainer>
+      {illustrationSrc && (
+        <Styled.Illustration
+          src={illustrationSrc}
+          alt=""
+          size={illustrationSize}
+          as="img"
+        />
       )}
 
       <Styled.Wrapper layout={layout}>

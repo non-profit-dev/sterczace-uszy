@@ -28,9 +28,8 @@ export const Card = styled.a`
       `}
   }
 `
-export const IllustrationContainer = styled.div`
-  display: inline-flex;
-  justify-content: center;
+export const Illustration = styled.div`
+  width: auto;
   height: ${({ size }) => (size === "small" ? "100px" : "217px")};
 `
 
@@ -66,11 +65,6 @@ export const Container = styled.div`
           align-items: flex-start;
         `}
   width: 100%;
-
-  ${({ theme }) => theme.breakpoints.tablet} {
-    padding: 0;
-    border-radius: 0;
-  }
 `
 
 export const Wrapper = styled.div`
