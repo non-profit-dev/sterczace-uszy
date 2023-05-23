@@ -64,8 +64,6 @@ const AdoptionRules = () => (
             <Styled.Count size="small" count={index + 1} />
             <Card
               key={title}
-              tabletLayout="center"
-              mobileLayout="center"
               title={<Title text={title} variant="text" as="h3" />}
             >
               <List>

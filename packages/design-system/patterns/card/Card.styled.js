@@ -74,8 +74,6 @@ export const ContentContainer = styled.div`
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 0;
     border-radius: 0;
-    padding: ${({ mobileLayout }) =>
-      mobileLayout === `left` ? `0px` : `0px 24px 0px 24px`};
   }
 `
 
@@ -95,32 +93,6 @@ export const Wrapper = styled.div`
         `}
   gap: 24px;
   width: 100%;
-
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    ${({ tabletLayout }) =>
-      tabletLayout === "center"
-        ? css`
-            align-items: center;
-            text-align: center;
-          `
-        : css`
-            align-items: flex-start;
-            text-align: left;
-          `}
-  }
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    ${({ mobileLayout }) =>
-      mobileLayout === "center"
-        ? css`
-            align-items: center;
-            text-align: center;
-          `
-        : css`
-            align-items: flex-start;
-            text-align: left;
-          `}
-  }
 `
 
 export const Illustration = styled.img`

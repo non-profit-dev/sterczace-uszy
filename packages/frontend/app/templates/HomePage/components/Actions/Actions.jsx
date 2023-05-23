@@ -69,8 +69,6 @@ const Actions = () => {
                 title={<Title text={title} textSize="h3" />}
                 illustrationName={illustrationName}
                 layout="center"
-                tabletLayout="center"
-                mobileLayout="center"
               >
                 <List gap={8}>
                   {array.map((item) => (

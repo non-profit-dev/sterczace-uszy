@@ -65,7 +65,6 @@ const Hero = () => {
                   as="h2"
                 />
               }
-              mobileLayout="center"
               button={
                 <Button
                   text={buttonText}
