@@ -46,7 +46,7 @@ export const ImageContainer = styled.div`
 export const Image = styled.img`
   display: block;
   width: 100%;
-  height: ${({ imageHeight }) => imageHeight};
+  height: 314px;
   object-fit: cover;
   border-radius: 30px 30px 0px 0px;
 `

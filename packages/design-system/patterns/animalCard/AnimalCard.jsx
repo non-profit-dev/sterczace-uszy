@@ -36,7 +36,6 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => (
     className={className}
     imageSrc={image}
     imageAlt={name}
-    imageHeight="314px"
     title={
       <Title
         badge={age ? getAnimalType(getAgeNumber(age), gender) : null}

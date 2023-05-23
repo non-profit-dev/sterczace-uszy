@@ -15,7 +15,6 @@ const Card = ({
   title,
   imageSrc,
   imageAlt,
-  imageHeight,
   className,
 }) => (
   <Styled.Card
@@ -35,7 +34,7 @@ const Card = ({
     )}
     {imageSrc && (
       <Styled.ImageContainer>
-        <Styled.Image src={imageSrc} alt={imageAlt} imageHeight={imageHeight} />
+        <Styled.Image src={imageSrc} alt={imageAlt} />
       </Styled.ImageContainer>
     )}
     <Styled.ContentContainer
@@ -67,7 +66,6 @@ Card.propTypes = {
   illustrationSrc: string,
   illustrationSize: oneOf(["small", "large"]),
   imageAlt: string,
-  imageHeight: string,
   imageSrc: string,
   layout: oneOf(["left", "center"]),
   className: string,
@@ -81,7 +79,6 @@ Card.defaultProps = {
   illustrationSrc: null,
   illustrationSize: "small",
   imageAlt: null,
-  imageHeight: null,
   imageSrc: null,
   layout: "left",
   className: null,
