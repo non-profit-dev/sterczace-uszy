@@ -53,13 +53,19 @@ const Card = ({
 
 Card.propTypes = {
   /**
-   * The main heading of the card.
+   * The Title component used as a heading of the card.
    */
   title: node.isRequired,
+  /**
+   * The Button component used to encourage users to click the card.
+   */
   button: node,
+  /**
+   * The content of the card.
+   */
   children: node,
   /**
-   * The URL that the card should redirect to when clicked.
+   * The URL that the card should redirect to when clicked. When provided, the card has a white background and a shadow.
    */
   href: string,
   illustrationName: string,
@@ -67,6 +73,9 @@ Card.propTypes = {
   illustrationSize: oneOf(["small", "large"]),
   imageAlt: string,
   imageSrc: string,
+  /**
+   * The alignment of the card, used for all breakpoints.
+   */
   layout: oneOf(["left", "center"]),
   className: string,
 }
