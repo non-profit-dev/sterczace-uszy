@@ -17,9 +17,10 @@ It's a flexible component used to group and display content in a concise format.
 
 <Canvas>
   <Story
-    name="Overview - simple"
+    name="Overview"
     args={{
       title: <Title text="Porozmawiaj" />,
+      layout: "center",
     }}
   >
     {Template.bind()}
@@ -28,19 +29,7 @@ It's a flexible component used to group and display content in a concise format.
 
 <Canvas>
   <Story
-    name="Overview - illustration"
-    args={{
-      title: <Title text="Porozmawiaj" />,
-      illustrationName: "heartWithDogFace",
-    }}
-  >
-    {Template.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="Overview - illustration and button"
+    name="With illustration and button"
     args={{
       title: <Title text="Porozmawiaj" />,
       illustrationName: "heartWithDogFace",
@@ -53,6 +42,7 @@ It's a flexible component used to group and display content in a concise format.
         />
       ),
       href: "https://google.com",
+      layout: "center",
     }}
   >
     {Template.bind()}
@@ -61,23 +51,9 @@ It's a flexible component used to group and display content in a concise format.
 
 <Canvas>
   <Story
-    name="Overview - image"
-    args={{
-      title: <Title text="Porozmawiaj" iconEnd="dog" badge="Szczeniak" />,
-      imageSrc:
-        "https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    }}
-  >
-    {Template.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="Overview - image and button"
+    name="With image and button"
     args={{
       title: <Title text="Porozmawiaj" iconEnd="cat" badge="Kot" />,
-      layout: "left",
       imageSrc:
         "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg ",
       button: (
@@ -89,6 +65,7 @@ It's a flexible component used to group and display content in a concise format.
         />
       ),
       href: "https://google.com",
+      layout: "left",
     }}
   >
     {TextTemplate.bind()}
@@ -143,16 +120,6 @@ export const Template = (args) => (
   </div>
 )
 
-export const SimpleTemplate = (args) => (
-  <div
-    style={{
-      maxWidth: "400px",
-    }}
-  >
-    <Card {...args} />
-  </div>
-)
-
 export const TextTemplate = (args) => (
   <div
     style={{
@@ -160,11 +127,11 @@ export const TextTemplate = (args) => (
     }}
   >
     <Card {...args}>
-      <p>
+      <Typography variant="bodySmall">
         Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
         opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
         zadbać o komfort nowego domownika.
-      </p>
+      </Typography>
     </Card>
   </div>
 )
