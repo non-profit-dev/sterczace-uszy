@@ -9,7 +9,6 @@ export const Card = styled.a`
   flex-direction: column;
   align-items: flex-start;
   justify-content: start;
-  padding-bottom: 36px;
   border-radius: 30px;
   color: ${({ theme }) => theme.colors.gray[600]};
   ${({ href, theme }) =>
@@ -33,14 +32,12 @@ export const IllustrationContainer = styled.div`
   display: inline-flex;
   justify-content: center;
   height: ${({ size }) => (size === "small" ? "100px" : "217px")};
-  margin: 36px auto 18px auto;
 `
 
 export const ImageContainer = styled.div`
   display: inline-flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 24px;
 `
 
 export const Image = styled.img`
@@ -51,10 +48,13 @@ export const Image = styled.img`
   border-radius: 30px 30px 0px 0px;
 `
 
-export const ContentContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-grow: 1;
+  gap: 24px;
+  padding: 24px 24px 36px;
   color: inherit;
   ${({ layout }) =>
     layout === "center"
@@ -65,11 +65,7 @@ export const ContentContainer = styled.div`
       : css`
           align-items: flex-start;
         `}
-  justify-content: space-between;
   width: 100%;
-  gap: 24px;
-  padding: ${({ paddingTop }) =>
-    paddingTop ? `36px 24px 0px 24px` : `0px 24px 0px 24px`};
 
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 0;

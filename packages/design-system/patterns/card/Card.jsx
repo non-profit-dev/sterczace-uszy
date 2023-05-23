@@ -17,31 +17,29 @@ const Card = ({
   className,
 }) => (
   <Styled.Card as={href ? `a` : `div`} href={href} className={className}>
-    {(illustrationName || illustrationSrc) && (
-      <Styled.IllustrationContainer size={illustrationSize}>
-        {illustrationName && <Illustration name={illustrationName} />}
-
-        {illustrationSrc && (
-          <img src={illustrationSrc} alt="" width="100%" height="100%" />
-        )}
-      </Styled.IllustrationContainer>
-    )}
     {imageSrc && (
       <Styled.ImageContainer>
         <Styled.Image src={imageSrc} alt="" />
       </Styled.ImageContainer>
     )}
-    <Styled.ContentContainer
-      layout={layout}
-      paddingTop={!imageSrc && !illustrationName && !illustrationSrc}
-    >
+    <Styled.Container layout={layout}>
+      {(illustrationName || illustrationSrc) && (
+        <Styled.IllustrationContainer size={illustrationSize}>
+          {illustrationName && <Illustration name={illustrationName} />}
+
+          {illustrationSrc && (
+            <img src={illustrationSrc} alt="" width="100%" height="100%" />
+          )}
+        </Styled.IllustrationContainer>
+      )}
+
       <Styled.Wrapper layout={layout}>
         <Styled.Title>{title}</Styled.Title>
         {children}
       </Styled.Wrapper>
 
       {button}
-    </Styled.ContentContainer>
+    </Styled.Container>
   </Styled.Card>
 )
 
