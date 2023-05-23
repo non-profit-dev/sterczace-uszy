@@ -31,16 +31,14 @@ const Card = ({
       {illustrationSrc && (
         <Styled.Illustration
           src={illustrationSrc}
-          alt=""
           size={illustrationSize}
-          as="img"
+          alt=""
         />
       )}
 
-      <Styled.Wrapper layout={layout}>
-        <Styled.Title>{title}</Styled.Title>
-        {children}
-      </Styled.Wrapper>
+      <Styled.Title>{title}</Styled.Title>
+
+      {children && <Styled.Content>{children}</Styled.Content>}
 
       {button}
     </Styled.Container>

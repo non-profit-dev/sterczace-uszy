@@ -28,9 +28,10 @@ export const Card = styled.a`
       `}
   }
 `
-export const Illustration = styled.div`
+export const Illustration = styled.img`
   width: auto;
-  height: ${({ size }) => (size === "small" ? "100px" : "217px")};
+  height: 100%;
+  max-height: ${({ size }) => (size === "small" ? "100px" : "217px")};
 `
 
 export const Image = styled.img`
@@ -44,27 +45,11 @@ export const Image = styled.img`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-grow: 1;
   gap: 24px;
   padding: 24px 24px 36px;
-  color: inherit;
-  ${({ layout }) =>
-    layout === "center"
-      ? css`
-          align-items: center;
-          text-align: center;
-        `
-      : css`
-          align-items: flex-start;
-        `}
   width: 100%;
-`
 
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  color: inherit;
   ${({ layout }) =>
     layout === "center"
       ? css`
@@ -73,12 +58,14 @@ export const Wrapper = styled.div`
         `
       : css`
           align-items: flex-start;
-          text-align: left;
         `}
-  gap: 24px;
-  width: 100%;
 `
 
 export const Title = styled.div`
   width: 100%;
+`
+
+export const Content = styled.div`
+  height: 100%;
+  justify-selft: stretch;
 `
