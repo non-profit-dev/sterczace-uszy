@@ -34,7 +34,9 @@ const OurSupport = () => (
           <Typography variant="bodyTitle">
             Mając na uwadze potrzeby naszych podopiecznych i ich przyszłych
             właścicieli współpracujemy na stałe z behawiorystką{" "}
-            <a href="https://cotenpies.pl/">Joanną Jankowską.</a>
+            <a href="https://cotenpies.pl/" target="_blank" rel="noreferrer">
+              Joanną Jankowską.
+            </a>
           </Typography>
           <Typography variant="h5">
             W czym uzyskacie od niej wsparcie?
@@ -52,8 +54,22 @@ const OurSupport = () => (
           </List>
           <Typography variant="bodyTitle">
             Więcej o Asi na{" "}
-            <a href="https://www.facebook.com/CoTenPies">Facebooku</a> i{" "}
-            <a href="https://www.instagram.com/co_ten_pies/"> Instagramie.</a>
+            <a
+              href="https://www.facebook.com/CoTenPies"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebooku
+            </a>{" "}
+            i{" "}
+            <a
+              href="https://www.instagram.com/co_ten_pies/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              Instagramie.
+            </a>
           </Typography>
           <Typography variant="bodyTitle">
             Usługi zostaną wykonane odpłatnie ze specjalnym rabatem dla naszych
