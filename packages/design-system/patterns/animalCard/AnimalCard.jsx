@@ -35,7 +35,6 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => (
     href={`/do-adopcji/${slug}`}
     className={className}
     imageSrc={image}
-    imageAlt={name}
     title={
       <Title
         badge={age ? getAnimalType(getAgeNumber(age), gender) : null}

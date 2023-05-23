@@ -14,7 +14,6 @@ const Card = ({
   layout,
   title,
   imageSrc,
-  imageAlt,
   className,
 }) => (
   <Styled.Card
@@ -34,7 +33,7 @@ const Card = ({
     )}
     {imageSrc && (
       <Styled.ImageContainer>
-        <Styled.Image src={imageSrc} alt={imageAlt} />
+        <Styled.Image src={imageSrc} alt="" />
       </Styled.ImageContainer>
     )}
     <Styled.ContentContainer
@@ -71,7 +70,6 @@ Card.propTypes = {
   illustrationName: string,
   illustrationSrc: string,
   illustrationSize: oneOf(["small", "large"]),
-  imageAlt: string,
   imageSrc: string,
   /**
    * The alignment of the card, used for all breakpoints.
@@ -87,7 +85,6 @@ Card.defaultProps = {
   illustrationName: null,
   illustrationSrc: null,
   illustrationSize: "small",
-  imageAlt: null,
   imageSrc: null,
   layout: "left",
   className: null,

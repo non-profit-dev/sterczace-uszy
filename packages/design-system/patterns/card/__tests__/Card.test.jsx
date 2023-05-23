@@ -7,7 +7,6 @@ const ChildComponent = () => <div>Child component</div>
 const illustrationName = "heartWithDogFace"
 const imageSrc =
   "https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-const alt = "dog"
 const href = "https://google.com"
 
 describe(`Card`, () => {
@@ -46,11 +45,11 @@ describe(`Card`, () => {
 
   it(`renders with image if image src is provided`, () => {
     render(
-      <Card title={<Title />} imageSrc={imageSrc} imageAlt={alt}>
+      <Card title={<Title />} imageSrc={imageSrc}>
         <ChildComponent />
       </Card>
     )
-    expect(screen.getByAltText(alt)).toHaveAttribute("src", imageSrc)
+    expect(screen.getByRole(`img`)).toHaveAttribute("src", imageSrc)
   })
 
   it(`renders the correct link href`, () => {
