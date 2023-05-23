@@ -1,4 +1,4 @@
-import { string, oneOf, node, oneOfType, object } from "prop-types"
+import { string, oneOf, node } from "prop-types"
 
 import Illustration from "design-system/components/illustration"
 
@@ -13,7 +13,6 @@ const Card = ({
   illustrationSize,
   layout,
   title,
-  bgColor,
   imageSrc,
   imageAlt,
   imageHeight,
@@ -22,7 +21,6 @@ const Card = ({
   <Styled.Card
     as={href ? `a` : `div`}
     linkStyle={!!href}
-    bgColor={bgColor}
     href={href}
     className={className}
   >
@@ -59,7 +57,6 @@ Card.propTypes = {
    * The main heading of the card.
    */
   title: node.isRequired,
-  bgColor: oneOfType([object, string]),
   button: node,
   children: node,
   /**
@@ -77,7 +74,6 @@ Card.propTypes = {
 }
 
 Card.defaultProps = {
-  bgColor: "null",
   button: null,
   children: null,
   href: null,

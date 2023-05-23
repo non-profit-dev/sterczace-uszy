@@ -74,7 +74,6 @@ const Hero = () => {
                   as="div"
                 />
               }
-              bgColor={theme.colors.neutrals[100]}
             />
           ))}
         </Styled.Cards>

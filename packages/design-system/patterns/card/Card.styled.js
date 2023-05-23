@@ -12,13 +12,13 @@ export const Card = styled.a`
   padding-bottom: 36px;
   border-radius: 30px;
   color: ${({ theme }) => theme.colors.gray[600]};
-  background-color: ${({ bgColor = "transparent" }) => bgColor};
   ${({ linkStyle }) =>
     linkStyle &&
     css`
       box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.1);
       transition: 300ms linear;
       cursor: pointer;
+      background: ${({ theme }) => theme.colors.neutrals[100]};
     `}
 
   :hover {
