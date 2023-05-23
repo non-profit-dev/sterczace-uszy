@@ -3,6 +3,8 @@ import { useTheme } from "@emotion/react"
 import Button from "design-system/components/button"
 
 import TextBanner from "design-system/patterns/textBanner"
+import Card from "design-system/patterns/card"
+
 import globalData from "shared/data"
 
 import * as Styled from "./Hero.styled"
@@ -52,7 +54,7 @@ const Hero = () => {
         </Styled.Content>
         <Styled.Cards>
           {cards.map(({ title, buttonText, buttonHref, illustration }) => (
-            <Styled.Card
+            <Card
               key={title}
               href={buttonHref}
               layout="center"
