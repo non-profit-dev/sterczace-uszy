@@ -17,11 +17,8 @@ const Card = ({
   className,
 }) => (
   <Styled.Card as={href ? `a` : `div`} href={href} className={className}>
-    {imageSrc && (
-      <Styled.ImageContainer>
-        <Styled.Image src={imageSrc} alt="" />
-      </Styled.ImageContainer>
-    )}
+    {imageSrc && <Styled.Image src={imageSrc} alt="" />}
+
     <Styled.Container layout={layout}>
       {illustrationName && (
         <Styled.Illustration

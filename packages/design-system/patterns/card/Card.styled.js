@@ -33,12 +33,6 @@ export const Illustration = styled.div`
   height: ${({ size }) => (size === "small" ? "100px" : "217px")};
 `
 
-export const ImageContainer = styled.div`
-  display: inline-flex;
-  justify-content: center;
-  width: 100%;
-`
-
 export const Image = styled.img`
   display: block;
   width: 100%;
