@@ -81,20 +81,22 @@ const Footer = () => {
                   />
                 </ListItem>
               </List>
-              <Styled.IconsMobile>
+              <Styled.Icons>
                 <IconButton
                   name="facebook"
                   size="medium"
                   href={globalData.socialMedia.facebook}
                   ariaLabel="Facebook"
+                  target="_blank"
                 />
                 <IconButton
                   name="instagram"
                   size="medium"
                   href={globalData.socialMedia.instagram}
                   ariaLabel="Instagram"
+                  target="_blank"
                 />
-              </Styled.IconsMobile>
+              </Styled.Icons>
             </Styled.Section>
             <Styled.Section>
               <Typography variant="h6" as="p">
@@ -105,12 +107,16 @@ const Footer = () => {
                   <Typography variant="bodySmall">
                     NIP {globalData.nip}
                   </Typography>
+                </ListItem>
+                <ListItem variant="gray">
                   <Typography variant="bodySmall">
                     KRS {globalData.krs}
                   </Typography>
                 </ListItem>
-                <ListItem iconName="charity" size="medium" variant="gray">
-                  <Typography variant="bodySmall">Numer konta</Typography>
+                <ListItem variant="gray" gap={0}>
+                  <Typography variant="bodySmall">
+                    Numer konta w NestBank
+                  </Typography>
                   {isCopied ? (
                     <Styled.CopyInfo
                       variant="bodyTiny"
@@ -199,22 +205,6 @@ const Footer = () => {
           <Typography variant="bodySmall">
             Copyright © {currentYear} {globalData.organizationName}
           </Typography>
-          <Styled.Icons>
-            <IconButton
-              name="facebook"
-              size="medium"
-              href={globalData.socialMedia.facebook}
-              ariaLabel="Facebook"
-              target="_blank"
-            />
-            <IconButton
-              name="instagram"
-              size="medium"
-              href={globalData.socialMedia.instagram}
-              ariaLabel="Instagram"
-              target="_blank"
-            />
-          </Styled.Icons>
         </Styled.Copyright>
       </Container>
     </Styled.Footer>

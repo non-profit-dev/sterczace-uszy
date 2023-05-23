@@ -4,7 +4,6 @@ import CountComponent from "design-system/components/count"
 
 export const Section = styled.section`
   padding-top: 120px;
-  background: ${({ theme }) => theme.colors.neutrals[200]};
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding-top: 40px;
