@@ -87,12 +87,14 @@ const Footer = () => {
                   size="medium"
                   href={globalData.socialMedia.facebook}
                   ariaLabel="Facebook"
+                  target="_blank"
                 />
                 <IconButton
                   name="instagram"
                   size="medium"
                   href={globalData.socialMedia.instagram}
                   ariaLabel="Instagram"
+                  target="_blank"
                 />
               </Styled.Icons>
             </Styled.Section>

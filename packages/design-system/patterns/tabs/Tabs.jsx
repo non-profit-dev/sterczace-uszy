@@ -54,7 +54,7 @@ const Tabs = ({ data, id, transparentContent, className }) => {
             transparentContent={transparentContent}
           >
             {activeIndex === index ? (
-              <Title text={tab} textSize="h6" variant="textLine" />
+              <Title text={tab} variant="h6" />
             ) : (
               <Typography variant="bodySmall">{tab}</Typography>
             )}
