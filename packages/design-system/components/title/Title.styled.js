@@ -4,10 +4,6 @@ import { css } from "@emotion/react"
 import Typography from "design-system/components/typography"
 
 export const Title = styled.div`
-  display: ${({ fullWidth }) => (fullWidth ? `flex` : `inline-flex`)};
-  align-items: center;
-  align-self: ${({ fullWidth }) => (fullWidth ? `stretch` : `auto`)};
-  justify-content: space-between;
   position: relative;
   color: ${({ theme }) => theme.colors.gray[600]};
   margin-bottom: 5px;
@@ -30,8 +26,7 @@ export const Text = styled(Typography)`
     left: 0;
     width: 100%;
     height: 5px;
-    clip-path: ${({ size }) =>
-      `ellipse(50% ${size === `large` ? `3px` : `2px`})`};
+    clip-path: ellipse(50% 2px);
     background: ${({ theme }) => theme.colors.primary[500]};
 
     ${({ theme }) => theme.breakpoints.tablet} {
@@ -39,8 +34,8 @@ export const Text = styled(Typography)`
     }
   }
 
-  ${({ type }) =>
-    type === "text" &&
+  ${({ line }) =>
+    !line &&
     css`
       &:before {
         display: none;

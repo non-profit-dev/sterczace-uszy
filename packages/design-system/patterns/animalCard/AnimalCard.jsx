@@ -42,9 +42,9 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => {
       imageSrc={image}
       imageAlt={name}
       imageHeight="314px"
+      badge={age ? getAnimalType(getAgeNumber(age), gender) : null}
       title={
         <Title
-          badge={age ? getAnimalType(getAgeNumber(age), gender) : null}
           iconEnd={gender === "ona" ? "femaleAnimal" : "maleAnimal"}
           text={name}
           as="h3"
