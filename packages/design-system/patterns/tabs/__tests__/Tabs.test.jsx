@@ -1,8 +1,27 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 import userEvent from "@testing-library/user-event"
 
 import { render, screen } from "design-system/test-utils"
 
 import Tabs from "design-system/patterns/tabs"
+
+jest.mock("swiper/react", () => ({
+  Swiper: (props) => (
+    <div data-testid="Swiper-testId" {...props}>
+      {props.children}
+    </div>
+  ),
+  SwiperSlide: (props) => (
+    <div data-testid="SwiperSlide-testId" {...props}>
+      {props.children}
+    </div>
+  ),
+  useSwiper: () => ({
+    isBeginning: false,
+    isEnd: false,
+  }),
+}))
 
 const id = "Test tabs"
 export const data = [
