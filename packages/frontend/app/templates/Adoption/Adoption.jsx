@@ -45,7 +45,7 @@ const Adoption = ({ animals }) => (
       <PreAdoptionVisit />
       <ActionDuringVisit />
       <SpecialSituations />
-      <PaymentConfirmationForm />
+      <PaymentConfirmationForm data={animals.items} />
       <CtaBanner
         heading="Masz pytania lub wątpliwości?"
         buttonText="Skontaktuj się z nami"

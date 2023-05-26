@@ -115,7 +115,7 @@ export const GET_OTHER_ANIMALS = gql`
 `
 
 export const GET_ANIMALS_NAME = gql`
-  query GetAnimalsName($slug: String) {
+  query GetAnimalsName {
     animalCollection(where: { adopted: false }) {
       total
       items {

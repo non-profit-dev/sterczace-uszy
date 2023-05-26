@@ -10,7 +10,7 @@ import TextBanner from "design-system/patterns/textBanner"
 import Container from "design-system/components/container"
 import * as Styled from "./PaymentConfirmationForm.styled"
 
-const PaymentConfirmationForm = () => {
+const PaymentConfirmationForm = ({ data }) => {
   const [activeForm, setActiveForm] = useState(true)
   const [state, handleSubmit] = useForm(
     process.env.NEXT_PUBLIC_CONFIRM_VIRTUAL_ADOPTION_FORM_ID,
@@ -26,6 +26,8 @@ const PaymentConfirmationForm = () => {
     setActiveForm(false)
     handleSubmit(e)
   }
+
+  const dogNames = data.map((dog) => dog.name)
 
   return state.succeeded && !activeForm ? (
     <>
@@ -71,21 +73,21 @@ const PaymentConfirmationForm = () => {
               name="Imię"
               required
             />
-            <Input
-              label="Wpisz Twój e-mail"
-              placeholder="Twój e-mail"
-              type="email"
-              name="Mail"
-              required
-            />
           </Styled.InputContainer>
-          {/* <Select
-        label="Imię pupila"
-        name={data.name}
-        options={data.name}
-        defaultValue="1"
-        required
-      /> */}
+          <Input
+            label="Wpisz Twój e-mail"
+            placeholder="Twój e-mail"
+            type="email"
+            name="Mail"
+            required
+          />
+          <Select
+            label="Imię pupila"
+            name="test"
+            options={dogNames}
+            defaultValue={dogNames[0]}
+            required
+          />
           <Styled.ButtonContainer>
             <Button
               text={state.submitting ? "Wysyłanie" : "Wyślij potwierdzenie"}
@@ -98,5 +100,12 @@ const PaymentConfirmationForm = () => {
   )
 }
 
-PaymentConfirmationForm.propTypes = {}
+PaymentConfirmationForm.propTypes = {
+  data: arrayOf(
+    shape({
+      name: string,
+    })
+  ).isRequired,
+}
+
 export default PaymentConfirmationForm
