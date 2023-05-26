@@ -41,6 +41,7 @@ export const Title = styled(Typography)`
   background: transparent;
   border: none;
   cursor: pointer;
+  text-align: left;
 `
 
 export const Content = styled.div`

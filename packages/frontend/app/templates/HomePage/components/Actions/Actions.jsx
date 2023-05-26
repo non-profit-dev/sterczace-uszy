@@ -1,5 +1,4 @@
 import { useTheme } from "@emotion/react"
-
 import Button from "design-system/components/button"
 import List from "design-system/components/list"
 import Title from "design-system/components/title"
@@ -8,10 +7,38 @@ import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
 import Card from "design-system/patterns/card/Card"
 import TextBanner from "design-system/patterns/textBanner"
-
 import globalData from "shared/data"
-
 import * as Styled from "./Actions.styled"
+
+const cardData = [
+  {
+    title: "Pomagamy",
+    illustrationName: "help",
+    array: [
+      "Umożliwiamy adopcję za granicę",
+      "Pomagamy w adopcji",
+      "Prowadzimy zbiórki wirtualne",
+    ],
+  },
+  {
+    title: "Chronimy",
+    illustrationName: "protect",
+    array: [
+      "Znajdujemy domy tymczasowe",
+      "Szczepimy i budujemy odporność",
+      "Szukamy różnych form pomocy",
+    ],
+  },
+  {
+    title: "Leczymy",
+    illustrationName: "treat",
+    array: [
+      "Leczymy pilne przypadki",
+      "Zapewniamy opiekę weterynaryjną",
+      "Stosujemy zabiegi profilaktyczne",
+    ],
+  },
+]
 
 const Actions = () => {
   const theme = useTheme()
@@ -36,63 +63,24 @@ const Actions = () => {
         </TextBanner>
         <Styled.BannerContent>
           <Styled.CardsContainer>
-            <Card
-              title={<Title text="Pomagamy" textSize="h3" />}
-              illustrationName="help"
-              layout="center"
-              tabletLayout="center"
-              mobileLayout="center"
-            >
-              <List gap={8}>
-                <ListItem variant="gray" iconName="check">
-                  Umożliwiamy adopcję za granicę
-                </ListItem>
-                <ListItem variant="gray" iconName="check">
-                  Pomagamy w adopcji
-                </ListItem>
-                <ListItem variant="gray" iconName="check">
-                  Prowadzimy zbiórki wirtualne
-                </ListItem>
-              </List>
-            </Card>
-            <Card
-              title={<Title text="Chronimy" textSize="h3" />}
-              illustrationName="protect"
-              layout="center"
-              tabletLayout="center"
-              mobileLayout="center"
-            >
-              <List gap={8}>
-                <ListItem variant="gray" iconName="check">
-                  Znajdujemy domy tymczasowe
-                </ListItem>
-                <ListItem variant="gray" iconName="check">
-                  Szczepimy i budujemy odporność
-                </ListItem>
-                <ListItem variant="gray" iconName="check">
-                  Szukamy różnych form pomocy
-                </ListItem>
-              </List>
-            </Card>
-            <Card
-              title={<Title text="Leczymy" textSize="h3" />}
-              illustrationName="treat"
-              layout="center"
-              tabletLayout="center"
-              mobileLayout="center"
-            >
-              <List gap={8}>
-                <ListItem variant="gray" iconName="check">
-                  Leczymy pilne przypadki
-                </ListItem>
-                <ListItem variant="gray" iconName="check">
-                  Zapewniamy opiekę weterynaryjną
-                </ListItem>
-                <ListItem variant="gray" iconName="check">
-                  Stosujemy zabiegi profilaktyczne
-                </ListItem>
-              </List>
-            </Card>
+            {cardData.map(({ illustrationName, title, array }) => (
+              <Card
+                key={title}
+                title={<Title text={title} variant="h3" />}
+                illustrationName={illustrationName}
+                layout="center"
+                tabletLayout="center"
+                mobileLayout="center"
+              >
+                <List gap={8}>
+                  {array.map((item) => (
+                    <ListItem variant="gray" iconName="check" key={item}>
+                      {item}
+                    </ListItem>
+                  ))}
+                </List>
+              </Card>
+            ))}
           </Styled.CardsContainer>
         </Styled.BannerContent>
         <Styled.ButtonWrapper>

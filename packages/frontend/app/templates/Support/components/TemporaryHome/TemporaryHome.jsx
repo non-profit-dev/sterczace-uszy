@@ -69,7 +69,7 @@ const TemporaryHome = () => {
             <Card
               tabletLayout="left"
               mobileLayout="left"
-              title={<Title text={title} variant="text" as="h3" />}
+              title={<Title text={title} line={false} as="h3" />}
             >
               <Typography variant="bodyTitle" color={theme.colors.gray[600]}>
                 {description}

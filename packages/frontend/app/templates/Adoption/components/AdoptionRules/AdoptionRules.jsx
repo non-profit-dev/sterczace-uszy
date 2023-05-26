@@ -66,7 +66,7 @@ const AdoptionRules = () => (
               key={title}
               tabletLayout="center"
               mobileLayout="center"
-              title={<Title text={title} variant="text" as="h3" />}
+              title={<Title text={title} line={false} as="h3" />}
             >
               <List>
                 {steps.map((step) => (
