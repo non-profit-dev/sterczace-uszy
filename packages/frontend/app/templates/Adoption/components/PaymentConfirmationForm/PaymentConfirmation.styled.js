@@ -1,25 +1,6 @@
 import styled from "@emotion/styled"
-
-export const TextWrapper = styled.div`
-  max-width: 820px;
-  margin-top: 100px;
-  margin-bottom: 120px;
-
-  ${({ theme }) => theme.breakpoints.tablet} {
-    margin-top: 60px;
-    margin-bottom: 80px;
-  }
-`
-
-export const Banner = styled.div`
-  background: ${({ theme }) => theme.colors.gray[600]};
-`
-
-export const Image = styled.img`
-  display: block;
-  margin: 0 auto;
-  height: 300px;
-`
+import TextBanner from "design-system/patterns/textBanner"
+import Container from "design-system/components/container"
 
 export const FormWrapper = styled.div`
   max-width: 719px;
@@ -65,4 +46,45 @@ export const ButtonContainer = styled.div`
   margin-top: 20px;
   margin-bottom: 48px;
   align-self: flex-start;
+`
+
+export const ConfirmationWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: ${({ theme }) => theme.colors.gray[100]};
+  padding: 48px;
+  width: 719px;
+  border-radius: 10px;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    width: 100%;
+  }
+
+  svg {
+    width: 100px;
+    height: 100px;
+  }
+`
+
+export const ConfirmationBanner = styled(TextBanner)`
+  max-width: 557px;
+`
+
+export const ConfirmationSendBanner = styled(TextBanner)`
+  max-width: 719px;
+  margin-bottom: 120px;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    margin-bottom: 108px;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    margin-bottom: 80ppx;
+  }
+`
+
+export const ConfirmationContainer = styled(Container)`
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    padding: 0;
+  }
 `

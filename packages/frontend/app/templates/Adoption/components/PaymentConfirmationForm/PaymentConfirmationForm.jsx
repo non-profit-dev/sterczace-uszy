@@ -6,11 +6,10 @@ import Typography from "design-system/components/typography"
 import Input from "design-system/components/input"
 import Select from "design-system/components/select"
 import Illustration from "design-system/components/illustration/Illustration"
-import TextBanner from "design-system/patterns/textBanner"
 import Container from "design-system/components/container"
-import * as Styled from "./PaymentConfirmationForm.styled"
+import * as Styled from "./PaymentConfirmation.styled"
 
-const PaymentConfirmationForm = ({ data }) => {
+const Form = ({ data }) => {
   const [activeForm, setActiveForm] = useState(true)
   const [state, handleSubmit] = useForm(
     process.env.NEXT_PUBLIC_CONFIRM_VIRTUAL_ADOPTION_FORM_ID,
@@ -27,30 +26,38 @@ const PaymentConfirmationForm = ({ data }) => {
     handleSubmit(e)
   }
 
-  const dogNames = data.map((dog) => dog.name)
+  const petNames = data.map((dog) => dog.name)
 
   return state.succeeded && !activeForm ? (
-    <>
-      <Illustration name="help" />
-      <TextBanner size="small" heading="Dziękujemy za Twoje dobre serce!">
-        <Typography variant="bodySmall">
-          Dostaliśmy Twoją prośbę o potwierdzenie adopcji wirtualnej, w ciągu
-          kilku dni otrzymasz od nas wiadomość o Twoim wirtualnym podopiecznym
-          na adres mailowy podany w formularzu.
-        </Typography>
-      </TextBanner>
-    </>
+    <Styled.ConfirmationContainer>
+      <Styled.ConfirmationWrapper>
+        <Illustration name="help" />
+        <Styled.ConfirmationBanner
+          size="small"
+          heading="Dziękujemy za Twoje dobre serce!"
+          mobileLayout="left"
+          tabletLayout="left"
+        >
+          <Typography variant="bodySmall">
+            Dostaliśmy Twoją prośbę o potwierdzenie adopcji wirtualnej, w ciągu
+            kilku dni otrzymasz od nas wiadomość o Twoim wirtualnym podopiecznym
+            na adres mailowy podany w formularzu.
+          </Typography>
+        </Styled.ConfirmationBanner>
+      </Styled.ConfirmationWrapper>
+    </Styled.ConfirmationContainer>
   ) : (
     <Container>
-      <TextBanner
-        size="small"
-        heading="Poinformuj nas o dobrym uczynku"
-        subtitle="Wyślij potwierdzenie"
+      <Styled.ConfirmationSendBanner
+        heading="Wyślij potwierdzenie"
+        subtitle="Poinformuj nas o swoim dobrym uczynku"
+        mobileLayout="left"
+        tabletLayout="left"
       >
         Mamy pełno pracy przy naszych podopiecznych, dlatego niezbędne jest
         potwierdzenie Twojej wirtualnej adopcji, abyśmy mogły niezwłocznie
         zacząć Cię informować o Twoim nowym pupilu.
-      </TextBanner>
+      </Styled.ConfirmationSendBanner>
       <Styled.FormWrapper>
         <Styled.Form onSubmit={(e) => handleForm(e)}>
           <Typography variant="h3">Potwierdzenie adopcji wirtualnej</Typography>
@@ -83,9 +90,9 @@ const PaymentConfirmationForm = ({ data }) => {
           />
           <Select
             label="Imię pupila"
-            name="test"
-            options={dogNames}
-            defaultValue={dogNames[0]}
+            name="imię pupila"
+            options={petNames}
+            defaultValue={petNames[0]}
             required
           />
           <Styled.ButtonContainer>
@@ -100,7 +107,7 @@ const PaymentConfirmationForm = ({ data }) => {
   )
 }
 
-PaymentConfirmationForm.propTypes = {
+Form.propTypes = {
   data: arrayOf(
     shape({
       name: string,
@@ -108,4 +115,4 @@ PaymentConfirmationForm.propTypes = {
   ).isRequired,
 }
 
-export default PaymentConfirmationForm
+export default Form
