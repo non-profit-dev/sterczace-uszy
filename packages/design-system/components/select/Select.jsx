@@ -12,33 +12,39 @@ const Select = ({
   id,
   required,
   defaultValue,
-}) => (
-  // const convertToValue = (option) => option.replaceAll(" ", "-").toLowerCase()
+}) => {
+  const convertToValue = (option) => option.replaceAll(" ", "-").toLowerCase()
 
-  <Styled.Label>
-    <Typography variant="bodySmall">{label}</Typography>
-    <Styled.Container>
-      <Styled.Select
-        disabled={disabled}
-        name={name}
-        id={id}
-        required={required}
-      >
-        <>
-          {defaultValue && <option value={defaultValue}>{defaultValue}</option>}
-          {options.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </>
-      </Styled.Select>
-      <Styled.Icon>
-        <Icon name="chevronDown" size="medium" />
-      </Styled.Icon>
-    </Styled.Container>
-  </Styled.Label>
-)
+  return (
+    <Styled.Label>
+      <Typography variant="bodySmall">{label}</Typography>
+      <Styled.Container>
+        <Styled.Select
+          disabled={disabled}
+          name={name}
+          id={id}
+          required={required}
+        >
+          <>
+            {defaultValue && (
+              <option value={convertToValue(defaultValue)}>
+                {defaultValue}
+              </option>
+            )}
+            {options.map((option) => (
+              <option key={option} value={convertToValue(option)}>
+                {option}
+              </option>
+            ))}
+          </>
+        </Styled.Select>
+        <Styled.Icon>
+          <Icon name="chevronDown" size="medium" />
+        </Styled.Icon>
+      </Styled.Container>
+    </Styled.Label>
+  )
+}
 
 Select.propTypes = {
   label: string.isRequired,
