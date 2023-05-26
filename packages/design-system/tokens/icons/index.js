@@ -29,6 +29,7 @@ import Trust from "./Trust.svg"
 import Copy from "./Copy.svg"
 import Donation from "./Donation.svg"
 import DoubleVector from "./DoubleVector.svg"
+import Money from "./Money.svg"
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -62,6 +63,7 @@ export const icons = {
   trust: Trust,
   copy: Copy,
   donation: Donation,
+  money: Money,
 }
 
 export {
@@ -95,4 +97,5 @@ export {
   Trust,
   Copy,
   Donation,
+  Money,
 }
