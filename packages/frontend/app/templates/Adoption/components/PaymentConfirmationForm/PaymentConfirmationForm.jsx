@@ -9,7 +9,7 @@ import Illustration from "design-system/components/illustration/Illustration"
 import Container from "design-system/components/container"
 import * as Styled from "./PaymentConfirmation.styled"
 
-const Form = ({ data }) => {
+const PaymentConfirmationForm = ({ data }) => {
   const [activeForm, setActiveForm] = useState(true)
   const [state, handleSubmit] = useForm(
     process.env.NEXT_PUBLIC_CONFIRM_VIRTUAL_ADOPTION_FORM_ID,
@@ -107,7 +107,7 @@ const Form = ({ data }) => {
   )
 }
 
-Form.propTypes = {
+PaymentConfirmationForm.propTypes = {
   data: arrayOf(
     shape({
       name: string,
@@ -115,4 +115,4 @@ Form.propTypes = {
   ).isRequired,
 }
 
-export default Form
+export default PaymentConfirmationForm
