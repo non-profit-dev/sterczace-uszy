@@ -72,7 +72,7 @@ export const ConfirmationSendBanner = styled(TextBanner)`
     margin-bottom: 108px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    margin-bottom: 80ppx;
+    margin-bottom: 80px;
   }
 `
 
