@@ -77,7 +77,7 @@ const PaymentConfirmationForm = ({ data }) => {
               label="Wpisz Twoje nazwisko"
               placeholder="Twoje nazwisko"
               type="text"
-              name="Imię"
+              name="Nazwisko"
               required
             />
           </Styled.InputContainer>
