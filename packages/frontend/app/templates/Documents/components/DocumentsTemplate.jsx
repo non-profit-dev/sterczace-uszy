@@ -47,6 +47,7 @@ const DocumentsTemplate = () => (
             iconEnd="download"
             size="medium"
             href={globalData.surveys.preAdoption}
+            target="_blank"
           />
         }
       >
@@ -70,6 +71,7 @@ const DocumentsTemplate = () => (
             iconEnd="download"
             size="medium"
             href={globalData.surveys.temporaryHome}
+            target="_blank"
           />
         }
       >
