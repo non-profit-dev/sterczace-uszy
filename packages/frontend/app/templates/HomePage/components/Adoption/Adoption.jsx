@@ -28,8 +28,8 @@ const Adoption = () => (
           <Title
             size="medium"
             text="Zastanów się"
-            variant="text"
-            textSize="h3"
+            line={false}
+            variant="h3"
             count={1}
           />
         }
@@ -50,8 +50,8 @@ const Adoption = () => (
           <Title
             size="medium"
             text="Przeanalizuj"
-            variant="text"
-            textSize="h3"
+            line={false}
+            variant="h3"
             count={2}
           />
         }
@@ -72,8 +72,8 @@ const Adoption = () => (
           <Title
             size="medium"
             text="Porozmawiaj"
-            variant="text"
-            textSize="h3"
+            line={false}
+            variant="h3"
             count={3}
           />
         }

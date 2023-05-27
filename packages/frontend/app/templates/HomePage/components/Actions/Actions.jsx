@@ -66,7 +66,7 @@ const Actions = () => {
             {cardData.map(({ illustrationName, title, array }) => (
               <Card
                 key={title}
-                title={<Title text={title} textSize="h3" />}
+                title={<Title text={title} variant="h3" />}
                 illustrationName={illustrationName}
                 layout="center"
               >

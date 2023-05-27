@@ -63,6 +63,10 @@ export const Container = styled.div`
 
 export const Title = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: ${({ layout }) =>
+    layout === `left` ? `space-between` : `center`};
+  align-items: center;
 `
 
 export const Content = styled.div`

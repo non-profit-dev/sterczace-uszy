@@ -1,5 +1,6 @@
 import React from "react"
 import { ThemeProvider } from "@emotion/react"
+import "swiper/swiper-bundle.css"
 
 import theme from "../packages/design-system/tokens/theme"
 

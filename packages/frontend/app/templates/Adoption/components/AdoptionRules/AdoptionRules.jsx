@@ -64,7 +64,8 @@ const AdoptionRules = () => (
             <Styled.Count size="small" count={index + 1} />
             <Card
               key={title}
-              title={<Title text={title} variant="text" as="h3" />}
+              layout="left"
+              title={<Title text={title} line={false} as="h3" />}
             >
               <List>
                 {steps.map((step) => (

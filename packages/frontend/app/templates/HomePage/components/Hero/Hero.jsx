@@ -59,14 +59,7 @@ const Hero = () => {
               href={buttonHref}
               layout="center"
               illustrationName={illustration}
-              title={
-                <Styled.Title
-                  text={title}
-                  variant="text"
-                  textSize="h4"
-                  as="h2"
-                />
-              }
+              title={<Styled.Title text={title} line={false} as="h2" />}
               button={
                 <Button
                   text={buttonText}

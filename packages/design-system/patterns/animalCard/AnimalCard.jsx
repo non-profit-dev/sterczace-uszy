@@ -37,7 +37,6 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => (
     imageSrc={image}
     title={
       <Title
-        badge={age ? getAnimalType(getAgeNumber(age), gender) : null}
         iconEnd={gender === "ona" ? "femaleAnimal" : "maleAnimal"}
         text={name}
         as="h3"
@@ -51,6 +50,7 @@ const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => (
         as="div"
       />
     }
+    badge={age ? getAnimalType(getAgeNumber(age), gender) : null}
   >
     <Styled.Description variant="bodyTitle">{excerpt}</Styled.Description>
   </Card>

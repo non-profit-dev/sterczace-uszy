@@ -1,10 +1,12 @@
 import { string, oneOf, node } from "prop-types"
 
 import Illustration from "design-system/components/illustration"
+import Badge from "design-system/components/badge"
 
 import * as Styled from "./Card.styled"
 
 const Card = ({
+  badge,
   button,
   children,
   href,
@@ -36,7 +38,10 @@ const Card = ({
         />
       )}
 
-      <Styled.Title>{title}</Styled.Title>
+      <Styled.Title layout={badge || layout === `left` ? `left` : `center`}>
+        {title}
+        {badge && <Badge size="small" text={badge} />}
+      </Styled.Title>
 
       {children && <Styled.Content>{children}</Styled.Content>}
 
@@ -46,6 +51,7 @@ const Card = ({
 )
 
 Card.propTypes = {
+  badge: string,
   /**
    * The Title component used as a heading of the card.
    */
@@ -80,6 +86,7 @@ Card.propTypes = {
 }
 
 Card.defaultProps = {
+  badge: null,
   button: null,
   children: null,
   href: null,
