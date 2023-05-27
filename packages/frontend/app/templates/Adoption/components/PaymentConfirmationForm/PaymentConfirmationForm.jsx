@@ -90,7 +90,7 @@ const PaymentConfirmationForm = ({ data }) => {
           />
           <Select
             label="Imię pupila"
-            name="imię pupila"
+            name="Imię pupila"
             options={petNames}
             defaultValue={petNames[0]}
             required
