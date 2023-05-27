@@ -17,8 +17,10 @@ import AdoptionDecision from "./components/AdoptionDecision"
 import PreAdoptionVisit from "./PreAdoptionVisit"
 import ActionDuringVisit from "./components/ActionDuringVisit"
 import SpecialSituations from "./components/SpecialSituations"
+import PaymentConfirmationForm from "./components/PaymentConfirmationForm"
+import { animalsType } from "../../lib/types"
 
-const Adoption = () => (
+const Adoption = ({ animals }) => (
   <Page title="Adopcja">
     <Styled.Banner>
       <Banner
@@ -44,6 +46,7 @@ const Adoption = () => (
       <ActionDuringVisit />
       <SpecialSituations />
       {/* virtual adoption */}
+      <PaymentConfirmationForm data={animals.items} />
       <CtaBanner
         heading="Masz pytania lub wątpliwości?"
         buttonText="Skontaktuj się z nami"
@@ -55,6 +58,8 @@ const Adoption = () => (
   </Page>
 )
 
-Adoption.propTypes = {}
+Adoption.propTypes = {
+  animals: animalsType.isRequired,
+}
 
 export default Adoption
