@@ -31,9 +31,11 @@ const paddings = {
 const colors = {
   primary: {
     main: theme.colors.primary[500],
+    hover: theme.colors.primary[600],
   },
   black: {
     main: theme.colors.gray[600],
+    hover: theme.colors.gray[500],
   },
 }
 export const Component = styled.a`
@@ -44,6 +46,7 @@ export const Component = styled.a`
   flex-direction: row;
   align-items: center;
   gap: 4px;
+  transition: 200ms ease;
 
   color: ${({ variant, color }) =>
     variant === "fill" ? theme.colors.neutrals[100] : colors[color].main};
@@ -65,6 +68,17 @@ export const Component = styled.a`
   ${theme.breakpoints.mobileLg} {
     padding: ${({ size, variant }) =>
       variant === "text" ? 0 : paddings[size].mobile};
+  }
+
+  &:hover {
+    color: ${({ variant, color }) =>
+      variant === "fill" ? theme.colors.neutrals[100] : colors[color].hover};
+    background-color: ${({ variant, color }) =>
+      variant === "fill" ? colors[color].hover : "transparent"};
+    border: ${({ variant, color }) =>
+      variant === "border"
+        ? `2px solid ${colors[color].hover}`
+        : "2px solid transparent"};
   }
 `
 
