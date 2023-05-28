@@ -39,7 +39,7 @@ const colors = {
   },
 }
 export const Component = styled.a`
-  border-radius: 30px;
+  border-radius: ${({ variant }) => (variant === "text" ? 0 : "30px")};
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
@@ -79,6 +79,11 @@ export const Component = styled.a`
       variant === "border"
         ? `2px solid ${colors[color].hover}`
         : "2px solid transparent"};
+  }
+
+  &:focus {
+    outline: 2px solid ${theme.colors.blue[100]};
+    outline-offset: 2px;
   }
 `
 
