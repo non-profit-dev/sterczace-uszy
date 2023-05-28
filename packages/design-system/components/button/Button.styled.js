@@ -2,18 +2,26 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 import theme from "../../tokens/theme"
 
-const sizes = {
+const paddings = {
   xsmall: {
-    padding: "8px 32px",
+    desktop: "8px 32px",
+    tablet: "8px 32px",
+    mobile: "6px 32px",
   },
   small: {
-    padding: "8px 32px",
+    desktop: "8px 32px",
+    tablet: "8px 32px",
+    mobile: "6px 32px",
   },
   medium: {
-    padding: "10px 40px",
+    desktop: "12px 40px",
+    tablet: "7px 40px",
+    mobile: "6px 40px",
   },
   large: {
-    padding: "12px 48px",
+    desktop: "12px 48px",
+    tablet: "9px 48px",
+    mobile: "6px 48px",
   },
 }
 
@@ -40,7 +48,7 @@ export const Component = styled.a`
   flex-direction: row;
   align-items: center;
   gap: 4px;
-  padding: ${({ size }) => sizes[size].padding};
+
   color: ${({ variant, color }) =>
     variant === "fill" ? colors[color].filledText : colors[color].mainColor};
   background-color: ${({ variant, color }) =>
@@ -48,17 +56,18 @@ export const Component = styled.a`
   border: ${({ variant, color }) =>
     variant === "border" ? `2px solid ${colors[color].mainColor}` : "none"};
 
-  ${({ size }) =>
-    size === "large" &&
-    css`
-      ${theme.breakpoints.tablet} {
-        padding: 8px 32px;
-      }
+  padding: ${({ size, variant }) =>
+    variant === "text" ? 0 : paddings[size].desktop};
 
-      ${theme.breakpoints.mobile} {
-        padding: 8px 32px;
-      }
-    `}
+  ${theme.breakpoints.tabletLg} {
+    padding: ${({ size, variant }) =>
+      variant === "text" ? 0 : paddings[size].tablet};
+  }
+
+  ${theme.breakpoints.mobileLg} {
+    padding: ${({ size, variant }) =>
+      variant === "text" ? 0 : paddings[size].mobile};
+  }
 `
 
 export const Text = styled.span`
