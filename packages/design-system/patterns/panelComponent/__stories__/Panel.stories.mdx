@@ -1,0 +1,45 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+import Panel from "design-system/patterns/panelComponent"
+import Title from "design-system/components/title"
+
+<Meta title="Patterns/Panel" component={Panel} />
+
+# Panel
+
+Displays important announcements or calls-to-action, usually used above the navigation bar on a website,
+
+`import Panel from "design-system/patterns/Panel"`
+
+<Canvas>
+  <Story
+    name="Simple Panel"
+    args={{
+      title: (
+        <Title
+          text="Przelew jednorazowy lub zlecenie stałe"
+          iconStart="money"
+          variant="h6"
+          line={false}
+        />
+      ),
+      children:
+        "Fundacja Sterczące Uszy ul. Gen. Władysława Sikorskiego 3, 62-030 Luboń NIP 7831855392 Tytuł przelewu: Wsparcie dla Fundacji",
+      content: "41 1870 1045 2078 1072 8639 0001",
+      icon: "copy",
+    }}
+  >
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) => (
+  <div
+    style={{
+      maxWidth: "400px",
+    }}
+  >
+    <Panel {...args} />
+  </div>
+)

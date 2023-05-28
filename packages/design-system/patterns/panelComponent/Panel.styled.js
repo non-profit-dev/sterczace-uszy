@@ -1,17 +1,19 @@
 import styled from "@emotion/styled"
 
-export const PanelComponent = styled.div`
+export const PanelContent = styled.div`
   border-radius: 10px;
-  display: grid;
-  grid-template-columns: repeat(1fr);
-  padding: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
   border: 1px dashed ${({ theme }) => theme.colors.primary[400]};
 `
 
-export const Title = styled.div`
-  grid-column: 1;
-`
 export const Heading = styled.div`
+  padding-top: 20px;
+  padding-bottom: 10px;
+  max-width: 90%;
+`
+export const Content = styled.div`
   padding-top: 10px;
   padding-bottom: 10px;
   max-width: 90%;
