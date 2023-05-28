@@ -38,7 +38,7 @@ const Supporters = ({ data }) => {
                 <Typography variant="bodySmall">{item.description}</Typography>
                 <Button
                   text={item.urlText}
-                  variant="textLine"
+                  variant="text"
                   size="small"
                   as="span"
                 />

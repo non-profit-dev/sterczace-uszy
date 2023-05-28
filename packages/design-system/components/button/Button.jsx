@@ -63,7 +63,7 @@ Button.propTypes = {
    * The name of the icon to be displayed at the end of the button.
    */
   iconEnd: oneOf(Object.keys(icons)),
-  variant: oneOf(["fill", "border", "text", "textLine"]),
+  variant: oneOf(["fill", "border", "text"]),
   color: oneOf(["primary", "black", "white"]),
   size: oneOf(["small", "medium", "large"]),
   /**

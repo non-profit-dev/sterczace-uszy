@@ -49,13 +49,6 @@ export const Component = styled.a`
   border: ${({ variant, color }) =>
     variant === "border" ? `2px solid ${colors[color].mainColor}` : "none"};
 
-  ${({ variant }) =>
-    (variant === "textLine" || variant === "text") &&
-    css`
-      border-radius: 0;
-      padding: 4px 0;
-    `}
-
   ${({ size }) =>
     size === "large" &&
     css`
@@ -72,19 +65,13 @@ export const Component = styled.a`
 `
 
 export const Text = styled.span`
-  ${({ variant }) =>
-    variant === "textLine" &&
-    css`
-      text-decoration: underline;
-    `}
-
   ${({ active, variant, color }) =>
     active &&
     variant === "text" &&
     css`
       border-bottom: 2px solid ${colors[color].mainColor};
     `}
-    :hover {
+  :hover {
     ${({ variant }) =>
       variant === "text" &&
       css`

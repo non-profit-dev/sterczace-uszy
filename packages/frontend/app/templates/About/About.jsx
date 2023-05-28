@@ -26,12 +26,7 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
       <Banner
         heading="Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj"
         button={
-          <Button
-            text="tutaj"
-            href="/wsparcie"
-            variant="textLine"
-            size="small"
-          />
+          <Button text="tutaj" href="/wsparcie" variant="text" size="small" />
         }
       />
     </Styled.Banner>
