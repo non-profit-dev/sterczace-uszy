@@ -69,8 +69,7 @@ export const Component = styled.a`
 `
 
 export const Text = styled.span`
-  ${({ active, variant, color }) =>
-    active &&
+  ${({ variant, color }) =>
     variant === "text" &&
     css`
       border-bottom: 2px solid ${colors[color].main};

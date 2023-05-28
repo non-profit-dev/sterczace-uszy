@@ -1,4 +1,4 @@
-import { string, oneOf, func, bool } from "prop-types"
+import { string, oneOf, func } from "prop-types"
 
 import Icon from "design-system/components/icon"
 import { icons } from "design-system/tokens/icons"
@@ -20,7 +20,6 @@ const Button = ({
   variant,
   color,
   size,
-  active,
   target,
   onClick,
   as,
@@ -41,7 +40,7 @@ const Button = ({
         <Icon name={iconStart} size={size} />
       </Styled.Icon>
     )}
-    <Styled.Text variant={variant} color={color} active={active}>
+    <Styled.Text variant={variant} color={color}>
       <Styled.Typography variant={sizes[size]} as="span">
         {text}
       </Styled.Typography>
@@ -76,10 +75,6 @@ Button.propTypes = {
   color: oneOf(["primary", "black"]),
   size: oneOf(["xsmall", "small", "medium", "large"]),
   /**
-   * A boolean value to determine if the button is active or not.
-   */
-  active: bool,
-  /**
    * It specifies where to display the linked URL. It only applies if the href property is provided.
    */
   target: string,
@@ -98,7 +93,6 @@ Button.defaultProps = {
   variant: "fill",
   color: "primary",
   size: "medium",
-  active: null,
   target: null,
   onClick: null,
   as: null,
