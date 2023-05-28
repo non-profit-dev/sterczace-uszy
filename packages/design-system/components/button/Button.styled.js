@@ -3,16 +3,16 @@ import { css } from "@emotion/react"
 import theme from "../../tokens/theme"
 
 const sizes = {
+  xsmall: {
+    padding: "8px 32px",
+  },
   small: {
-    typography: theme.typography.desktop.bodySmall,
     padding: "8px 32px",
   },
   medium: {
-    typography: theme.typography.desktop.h5,
     padding: "10px 40px",
   },
   large: {
-    typography: theme.typography.desktop.h4,
     padding: "12px 48px",
   },
 }
@@ -32,7 +32,6 @@ const colors = {
   },
 }
 export const Component = styled.a`
-  ${({ size }) => sizes[size].typography};
   letter-spacing: -0.02em;
   border-radius: 30px;
   cursor: pointer;
@@ -53,12 +52,10 @@ export const Component = styled.a`
     size === "large" &&
     css`
       ${theme.breakpoints.tablet} {
-        ${theme.typography.mobile.bodyLarge};
         padding: 8px 32px;
       }
 
       ${theme.breakpoints.mobile} {
-        ${theme.typography.mobile.bodyTitle};
         padding: 8px 32px;
       }
     `}
@@ -90,13 +87,11 @@ export const Icon = styled.span`
       size === "large" &&
       css`
         ${theme.breakpoints.tablet} {
-          ${theme.typography.mobile.bodyLarge};
           height: 18px;
           width: 18px;
         }
 
         ${theme.breakpoints.mobile} {
-          ${theme.typography.mobile.bodyTitle};
           height: 16px;
           width: 16px;
         }

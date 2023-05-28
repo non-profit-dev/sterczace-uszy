@@ -1,9 +1,17 @@
 import { string, oneOf, func, bool } from "prop-types"
 
 import Icon from "design-system/components/icon"
+import Typography from "design-system/components/typography"
 import { icons } from "design-system/tokens/icons"
 
 import * as Styled from "./Button.styled"
+
+const sizes = {
+  xsmall: "bodySmall",
+  small: "h6",
+  medium: "h5",
+  large: "h4",
+}
 
 const Button = ({
   href,
@@ -35,7 +43,9 @@ const Button = ({
       </Styled.Icon>
     )}
     <Styled.Text variant={variant} color={color} active={active}>
-      {text}
+      <Typography variant={sizes[size]} as="span">
+        {text}
+      </Typography>
     </Styled.Text>
 
     {iconEnd && (
@@ -65,7 +75,7 @@ Button.propTypes = {
   iconEnd: oneOf(Object.keys(icons)),
   variant: oneOf(["fill", "border", "text"]),
   color: oneOf(["primary", "black", "white"]),
-  size: oneOf(["small", "medium", "large"]),
+  size: oneOf(["xsmall", "small", "medium", "large"]),
   /**
    * A boolean value to determine if the button is active or not.
    */
