@@ -68,21 +68,6 @@ export const Component = styled.a`
   }
 `
 
-export const Text = styled.span`
-  ${({ variant, color }) =>
-    variant === "text" &&
-    css`
-      border-bottom: 2px solid ${colors[color].main};
-    `}
-  :hover {
-    ${({ variant }) =>
-      variant === "text" &&
-      css`
-        text-decoration: underline;
-      `}
-  }
-`
-
 export const Icon = styled.span`
   display: inline-flex;
   align-items: center;

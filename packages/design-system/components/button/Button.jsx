@@ -40,11 +40,9 @@ const Button = ({
         <Icon name={iconStart} size={size} />
       </Styled.Icon>
     )}
-    <Styled.Text variant={variant} color={color}>
-      <Styled.Typography variant={sizes[size]} as="span">
-        {text}
-      </Styled.Typography>
-    </Styled.Text>
+    <Styled.Typography variant={sizes[size]} as="span">
+      {text}
+    </Styled.Typography>
 
     {iconEnd && (
       <Styled.Icon size={size}>
