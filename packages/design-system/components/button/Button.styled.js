@@ -35,9 +35,6 @@ const colors = {
   black: {
     main: theme.colors.gray[600],
   },
-  white: {
-    main: theme.colors.neutrals[100],
-  },
 }
 export const Component = styled.a`
   border-radius: 30px;

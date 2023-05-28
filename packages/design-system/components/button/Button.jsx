@@ -73,7 +73,7 @@ Button.propTypes = {
    */
   iconEnd: oneOf(Object.keys(icons)),
   variant: oneOf(["fill", "border", "text"]),
-  color: oneOf(["primary", "black", "white"]),
+  color: oneOf(["primary", "black"]),
   size: oneOf(["xsmall", "small", "medium", "large"]),
   /**
    * A boolean value to determine if the button is active or not.
