@@ -1,5 +1,8 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
+
+import TypographyComponent from "design-system/components/typography"
+
 import theme from "../../tokens/theme"
 
 const paddings = {
@@ -27,20 +30,16 @@ const paddings = {
 
 const colors = {
   primary: {
-    mainColor: theme.colors.primary[500],
-    filledText: theme.colors.neutrals[100],
+    main: theme.colors.primary[500],
   },
   black: {
-    mainColor: theme.colors.gray[600],
-    filledText: theme.colors.neutrals[100],
+    main: theme.colors.gray[600],
   },
   white: {
-    mainColor: theme.colors.neutrals[100],
-    filledText: theme.colors.neutrals[100],
+    main: theme.colors.neutrals[100],
   },
 }
 export const Component = styled.a`
-  letter-spacing: -0.02em;
   border-radius: 30px;
   cursor: pointer;
   text-decoration: none;
@@ -50,11 +49,13 @@ export const Component = styled.a`
   gap: 4px;
 
   color: ${({ variant, color }) =>
-    variant === "fill" ? colors[color].filledText : colors[color].mainColor};
+    variant === "fill" ? theme.colors.neutrals[100] : colors[color].main};
   background-color: ${({ variant, color }) =>
-    variant === "fill" ? colors[color].mainColor : "transparent"};
+    variant === "fill" ? colors[color].main : "transparent"};
   border: ${({ variant, color }) =>
-    variant === "border" ? `2px solid ${colors[color].mainColor}` : "none"};
+    variant === "border"
+      ? `2px solid ${colors[color].main}`
+      : "2px solid transparent"};
 
   padding: ${({ size, variant }) =>
     variant === "text" ? 0 : paddings[size].desktop};
@@ -75,7 +76,7 @@ export const Text = styled.span`
     active &&
     variant === "text" &&
     css`
-      border-bottom: 2px solid ${colors[color].mainColor};
+      border-bottom: 2px solid ${colors[color].main};
     `}
   :hover {
     ${({ variant }) =>
@@ -106,4 +107,8 @@ export const Icon = styled.span`
         }
       `}
   }
+`
+
+export const Typography = styled(TypographyComponent)`
+  color: inherit;
 `

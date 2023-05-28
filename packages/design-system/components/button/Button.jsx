@@ -1,7 +1,6 @@
 import { string, oneOf, func, bool } from "prop-types"
 
 import Icon from "design-system/components/icon"
-import Typography from "design-system/components/typography"
 import { icons } from "design-system/tokens/icons"
 
 import * as Styled from "./Button.styled"
@@ -43,9 +42,9 @@ const Button = ({
       </Styled.Icon>
     )}
     <Styled.Text variant={variant} color={color} active={active}>
-      <Typography variant={sizes[size]} as="span">
+      <Styled.Typography variant={sizes[size]} as="span">
         {text}
-      </Typography>
+      </Styled.Typography>
     </Styled.Text>
 
     {iconEnd && (
