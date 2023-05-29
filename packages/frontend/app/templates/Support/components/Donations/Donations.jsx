@@ -40,8 +40,8 @@ const Donations = () => {
             <Title
               text="Przelew lub zlecenie stałe"
               iconStart="donation"
-              variant="text"
-              textSize="h5"
+              line={false}
+              variant="h5"
               as="p"
             />
             <div>

@@ -4,20 +4,43 @@ import { string, arrayOf, shape, oneOfType, node, bool } from "prop-types"
 import Typography from "design-system/components/typography"
 import Title from "design-system/components/title"
 
+import Navigation from "./Navigation"
+
 import * as Styled from "./Tabs.styled"
 
-function convertToSlug(Text) {
-  return Text.toLowerCase()
+const convertToSlug = (text) =>
+  text
+    .toLowerCase()
     .replace(/ /g, "-")
     .replace(/[^\w-]+/g, "")
-}
 
 const Tabs = ({ data, id, transparentContent, className }) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
+  const onChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex)
+  }
+
   return (
     <Styled.Wrapper className={className}>
-      <Styled.Tabs role="tablist" transparentContent={transparentContent}>
+      <Styled.Tabs
+        role="tablist"
+        gap={0}
+        breakpoints={{
+          390: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: data.length,
+          },
+        }}
+        slideToClickedSlide
+        onSlideChange={(swiper) => onChange(swiper)}
+        transparentContent={transparentContent}
+      >
         {data.map(({ tab }, index) => (
           <Styled.Tab
             key={tab}
@@ -31,12 +54,14 @@ const Tabs = ({ data, id, transparentContent, className }) => {
             transparentContent={transparentContent}
           >
             {activeIndex === index ? (
-              <Title text={tab} textSize="h6" variant="textLine" />
+              <Title text={tab} variant="h6" />
             ) : (
               <Typography variant="bodySmall">{tab}</Typography>
             )}
           </Styled.Tab>
         ))}
+
+        <Navigation transparentContent={transparentContent} />
       </Styled.Tabs>
 
       {data.map(({ tab, content }, index) => (
