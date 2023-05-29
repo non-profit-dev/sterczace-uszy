@@ -1,6 +1,7 @@
 import { string, oneOf, node, oneOfType, object } from "prop-types"
 
 import Illustration from "design-system/components/illustration"
+import Badge from "design-system/components/badge"
 
 import * as Styled from "./Card.styled"
 
@@ -15,6 +16,7 @@ const Card = ({
   tabletLayout,
   layout,
   title,
+  badge,
   bgColor,
   imageSrc,
   imageAlt,
@@ -53,7 +55,15 @@ const Card = ({
         tabletLayout={tabletLayout}
         mobileLayout={mobileLayout}
       >
-        <Styled.Title>{title}</Styled.Title>
+        {badge ? (
+          <Styled.Title>
+            {title}
+            <Badge size="small" text={badge} />
+          </Styled.Title>
+        ) : (
+          title
+        )}
+
         {children}
       </Styled.Wrapper>
 
@@ -67,6 +77,7 @@ Card.propTypes = {
    * The main heading of the card.
    */
   title: node.isRequired,
+  badge: string,
   bgColor: oneOfType([object, string]),
   button: node,
   children: node,
@@ -91,6 +102,7 @@ Card.defaultProps = {
   button: null,
   children: null,
   href: null,
+  badge: null,
   illustrationName: null,
   illustrationSrc: null,
   illustrationSize: "small",
