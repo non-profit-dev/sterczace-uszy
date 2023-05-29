@@ -25,7 +25,7 @@ const IconButton = ({
     className={className}
     target={target}
   >
-    <Icon name={name} size={size} color={color} />
+    <Icon name={name} size={size} color={color} title={name} />
   </Styled.IconButton>
 )
 
