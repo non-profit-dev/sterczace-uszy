@@ -63,18 +63,18 @@ const PaymentConfirmationForm = ({ data }) => {
           <Typography variant="h3">Potwierdzenie adopcji wirtualnej</Typography>
           <Typography variant="bodyTitle">
             Wyślij informację, żebyśmy mogły przesyłać Ci wiadomości o Twoim
-            wirtualnym przyjacielu i znalezć Twoją wpłatę.
+            wirtualnym przyjacielu i znaleźć Twoją wpłatę.
           </Typography>
           <Styled.InputContainer>
             <Input
-              label="Wpisz Twoje imię"
+              label="Twoje imię"
               placeholder="Twoje imię"
               type="text"
               name="Imię"
               required
             />
             <Input
-              label="Wpisz Twoje nazwisko"
+              label="Twoje nazwisko"
               placeholder="Twoje nazwisko"
               type="text"
               name="Nazwisko"
@@ -82,7 +82,7 @@ const PaymentConfirmationForm = ({ data }) => {
             />
           </Styled.InputContainer>
           <Input
-            label="Wpisz Twój e-mail"
+            label="Twój e-mail"
             placeholder="Twój e-mail"
             type="email"
             name="Mail"

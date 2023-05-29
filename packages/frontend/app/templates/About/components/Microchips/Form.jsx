@@ -46,14 +46,14 @@ const Form = () => {
       </Typography>
       <Styled.InputContainer>
         <Input
-          label="Wpisz Twoje imię"
+          label="Twoje imię"
           placeholder="Twoje imię"
           type="text"
           name="Imię"
           required
         />
         <Input
-          label="Wpisz Twój e-mail"
+          label="Twój e-mail"
           placeholder="Twój adres e-mail"
           type="email"
           name="Mail"
@@ -61,7 +61,7 @@ const Form = () => {
         />
       </Styled.InputContainer>
       <Select
-        label="Wpisz ilość potrzebnych kodów (jednorazowo nie więcej niż 10)"
+        label="Ilość potrzebnych kodów (jednorazowo nie więcej niż 10)"
         name="Ilość potrzebnych kodów"
         options={["2", "3", "4", "5", "6", "7", "8", "9", "10"]}
         defaultValue="1"
