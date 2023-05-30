@@ -1,29 +1,30 @@
-import { string } from "prop-types"
+import { string, node } from "prop-types"
 import IconButton from "design-system/components/iconButton"
 import Typography from "design-system/components/typography"
 import * as Styled from "./Panel.styled"
 
-const Panel = ({ content, className, title, children, icon }) => (
+const Panel = ({ className, title, accountNumber, children }) => (
   <Styled.PanelContent className={className}>
     {title}
-    <Styled.Heading>{children}</Styled.Heading>
+    <Styled.Content>{children}</Styled.Content>
     <Typography variant="h6">
-      {content}
-      <IconButton name={icon} />
+      {accountNumber}
+      {accountNumber && <IconButton name="copy" />}
     </Typography>
   </Styled.PanelContent>
 )
 
 Panel.propTypes = {
-  title: string.isRequired,
-  content: string.isRequired,
-  children: string.isRequired,
-  icon: string.isRequired,
+  title: node.isRequired,
+  accountNumber: node,
   className: string,
+  children: node,
 }
 
 Panel.defaultProps = {
   className: null,
+  accountNumber: null,
+  children: node,
 }
 
 export default Panel

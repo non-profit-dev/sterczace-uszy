@@ -8,13 +8,8 @@ export const PanelContent = styled.div`
   border: 1px dashed ${({ theme }) => theme.colors.primary[400]};
 `
 
-export const Heading = styled.div`
-  padding-top: 20px;
-  padding-bottom: 10px;
-  max-width: 90%;
-`
 export const Content = styled.div`
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 10px;
   max-width: 90%;
 `
