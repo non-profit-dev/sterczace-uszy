@@ -60,12 +60,13 @@ const AdoptionRules = () => (
 
       <Styled.Steps>
         {data.map(({ title, steps, button }, index) => (
-          <div key={title}>
+          <Styled.CardWrapper key={title}>
             <Styled.Count size="small" count={index + 1} />
             <Card
               key={title}
               layout="left"
               title={<Title text={title} line={false} as="h3" />}
+              button={button}
             >
               <List>
                 {steps.map((step) => (
@@ -74,9 +75,8 @@ const AdoptionRules = () => (
                   </ListItem>
                 ))}
               </List>
-              {button}
             </Card>
-          </div>
+          </Styled.CardWrapper>
         ))}
       </Styled.Steps>
 
