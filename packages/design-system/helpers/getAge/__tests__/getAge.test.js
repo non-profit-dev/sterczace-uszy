@@ -7,7 +7,7 @@ const testCases = [
   },
   {
     value: "2022-09-24T00:00:00.000Z",
-    expected: "poniżej roku",
+    expected: "~ 8 miesięcy",
   },
   {
     value: "2015-03-24T00:00:00.000Z",
