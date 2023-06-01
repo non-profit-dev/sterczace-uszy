@@ -48,7 +48,7 @@ const Footer = () => {
                   <Button
                     variant="text"
                     text={globalData.contact.mail.text}
-                    size="small"
+                    size="xsmall"
                     color="black"
                     href={globalData.contact.mail.link}
                   />
@@ -57,7 +57,7 @@ const Footer = () => {
                   <Button
                     variant="text"
                     text={`${globalData.contact.phoneFirst.text} - sms`}
-                    size="small"
+                    size="xsmall"
                     color="black"
                     href={globalData.contact.phoneFirst.link}
                   />
@@ -66,7 +66,7 @@ const Footer = () => {
                   <Button
                     variant="text"
                     text={`${globalData.contact.phoneSecond.text} - sms`}
-                    size="small"
+                    size="xsmall"
                     color="black"
                     href={globalData.contact.phoneSecond.link}
                   />
@@ -75,7 +75,7 @@ const Footer = () => {
                   <Button
                     variant="text"
                     text={globalData.contact.location.text}
-                    size="small"
+                    size="xsmall"
                     color="black"
                     href={globalData.contact.location.link}
                   />
@@ -152,7 +152,7 @@ const Footer = () => {
                     <Button
                       variant="text"
                       text={item.title}
-                      size="small"
+                      size="xsmall"
                       color="black"
                       href={item.link}
                       key={item.title}
@@ -172,7 +172,7 @@ const Footer = () => {
                     <Button
                       variant="text"
                       text={item.title}
-                      size="small"
+                      size="xsmall"
                       color="black"
                       href={item.link}
                     />
@@ -190,7 +190,7 @@ const Footer = () => {
                     <Button
                       variant="text"
                       text={item.title}
-                      size="small"
+                      size="xsmall"
                       color="black"
                       href={item.link}
                     />

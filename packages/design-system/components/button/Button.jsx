@@ -46,7 +46,7 @@ const Button = ({
 
     {iconEnd && (
       <Styled.Icon size={size}>
-        <Icon name={iconEnd} size={size} />
+        <Icon name={iconEnd} size={size === "xsmall" ? `small` : size} />
       </Styled.Icon>
     )}
   </Styled.Component>
