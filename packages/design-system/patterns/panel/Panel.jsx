@@ -24,7 +24,7 @@ Panel.propTypes = {
 Panel.defaultProps = {
   className: null,
   accountNumber: null,
-  children: node,
+  children: null,
 }
 
 export default Panel
