@@ -37,6 +37,11 @@ const GlobalReset = () => (
         color: ${theme.colors.primary[600]};
       }
 
+      a:focus {
+        outline: 2px solid ${theme.colors.blue[100]};
+        outline-offset: 2px;
+      }
+
       ::-moz-placeholder {
         opacity: 1;
       }
