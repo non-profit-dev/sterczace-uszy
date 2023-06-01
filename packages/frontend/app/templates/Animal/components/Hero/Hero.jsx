@@ -34,8 +34,8 @@ const Hero = ({ name }) => (
           dozgonną wdzięczność.
         </Typography>
         <Typography variant="bodyTitle">
-          Jak przebiega adopcja? Dowiedz się więcej
-          <Button variant="text" text="tutaj" href="/adopcja" />.
+          Jak przebiega adopcja? Dowiedz się więcej <a href="/adopcja">tutaj</a>
+          .
         </Typography>
       </TextBanner>
     </Styled.Content>

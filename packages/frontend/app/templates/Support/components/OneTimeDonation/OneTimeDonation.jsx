@@ -30,7 +30,14 @@ const OneTimeDonation = () => (
 
       <Typography variant="bodyTitle">
         Wybierz wygodną formę dokonania wpłaty za pośrednictwem strony
-        <strong> {globalData.fundraising.text}</strong>
+        <a
+          href="https://www.ratujemyzwierzaki.pl/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {" "}
+          {globalData.fundraising.text}
+        </a>
       </Typography>
 
       <Styled.Options>

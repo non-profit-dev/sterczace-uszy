@@ -13,11 +13,6 @@ export const Container = styled.h1`
     ${({ theme, variant }) => theme.typography.mobile[variant]}
   }
 
-  a {
-    color: ${({ theme }) => theme.colors.primary[500]};
-    padding-left: 3px;
-  }
-
   strong {
     font-weight: 600;
   }

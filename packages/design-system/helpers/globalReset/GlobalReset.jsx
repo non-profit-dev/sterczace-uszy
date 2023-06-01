@@ -28,6 +28,11 @@ const GlobalReset = () => (
         border: none;
       }
 
+      a {
+        color: ${theme.colors.primary[500]};
+        font-weight: 500;
+      }
+
       ::-moz-placeholder {
         opacity: 1;
       }
