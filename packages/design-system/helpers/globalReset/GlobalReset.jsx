@@ -33,6 +33,10 @@ const GlobalReset = () => (
         font-weight: 500;
       }
 
+      a:hover {
+        color: ${theme.colors.primary[600]};
+      }
+
       ::-moz-placeholder {
         opacity: 1;
       }
