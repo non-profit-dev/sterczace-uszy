@@ -6,7 +6,7 @@ const testCases = [
     expected: "~ 2 lata",
   },
   {
-    value: "2022-07-24T00:00:00.000Z",
+    value: "2022-09-24T00:00:00.000Z",
     expected: "poniżej roku",
   },
   {
