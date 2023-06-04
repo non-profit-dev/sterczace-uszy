@@ -11,16 +11,24 @@ import useMediaQuery from "design-system/helpers/useMediaQuery"
 import * as Styled from "./ChooseYourVirtualPet.styled"
 
 const ChooseYourVirtualPet = ({ data }) => {
+  const CARDS_FOR_DESKTOP = 6
+  const CARDS_FOR_TABLET_AND_MOBILE = 3
   const isDesktop = useMediaQuery(`(min-width: 992px)`)
-  const initialDisplayedAnimals = isDesktop ? 6 : 3
-  const loadMoreAnimalsCount = isDesktop ? 6 : 3
+  const initialDisplayedAnimals = isDesktop
+    ? CARDS_FOR_DESKTOP
+    : CARDS_FOR_TABLET_AND_MOBILE
+  const loadMoreAnimalsCount = isDesktop
+    ? CARDS_FOR_DESKTOP
+    : CARDS_FOR_TABLET_AND_MOBILE
 
   const [displayedAnimals, setDisplayedAnimals] = useState(
     initialDisplayedAnimals
   )
 
   useEffect(() => {
-    setDisplayedAnimals(isDesktop ? 6 : 3)
+    setDisplayedAnimals(
+      isDesktop ? CARDS_FOR_DESKTOP : CARDS_FOR_TABLET_AND_MOBILE
+    )
   }, [isDesktop])
 
   const loadMoreAnimals = () => {
