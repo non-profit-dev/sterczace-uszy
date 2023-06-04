@@ -6,7 +6,6 @@ import Footer from "design-system/blocks/footer"
 
 import CtaBanner from "design-system/patterns/ctaBanner"
 
-import Container from "design-system/components/container"
 import Hero from "./components/Hero"
 import TemporaryHome from "./components/AdoptionRules"
 
