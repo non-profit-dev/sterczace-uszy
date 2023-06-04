@@ -1,3 +1,3 @@
-import PanelComponent from "./Panel"
+import Panel from "./Panel"
 
-export default PanelComponent
+export default Panel
