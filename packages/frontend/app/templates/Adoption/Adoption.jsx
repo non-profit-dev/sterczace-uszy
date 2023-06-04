@@ -6,6 +6,7 @@ import Footer from "design-system/blocks/footer"
 
 import CtaBanner from "design-system/patterns/ctaBanner"
 
+import Container from "design-system/components/container"
 import Hero from "./components/Hero"
 import TemporaryHome from "./components/AdoptionRules"
 
@@ -18,9 +19,10 @@ import PreAdoptionVisit from "./PreAdoptionVisit"
 import ActionDuringVisit from "./components/ActionDuringVisit"
 import SpecialSituations from "./components/SpecialSituations"
 import PaymentConfirmationForm from "./components/PaymentConfirmationForm"
+import ChooseYourVirtualPet from "./components/ChooseYourVirtualPet"
 import { animalsType } from "../../lib/types"
 
-const Adoption = ({ animals }) => (
+const Adoption = ({ animals, animalsData }) => (
   <Page title="Adopcja">
     <Styled.Banner>
       <Banner
@@ -46,6 +48,9 @@ const Adoption = ({ animals }) => (
       <ActionDuringVisit />
       <SpecialSituations />
       {/* virtual adoption */}
+
+      <ChooseYourVirtualPet data={animalsData.items} />
+
       <PaymentConfirmationForm data={animals.items} />
       <CtaBanner
         heading="Masz pytania lub wątpliwości?"
@@ -60,6 +65,7 @@ const Adoption = ({ animals }) => (
 
 Adoption.propTypes = {
   animals: animalsType.isRequired,
+  animalsData: animalsType.isRequired,
 }
 
 export default Adoption
