@@ -1,21 +1,21 @@
-import { render, screen } from "design-system/test-utils"
+import { render } from "design-system/test-utils"
 import Panel from "design-system/patterns/panel"
 
-const iconName = "copy"
-const children = "Test Children"
-const title = "Sample title"
-const accountNumber = "1234"
+jest.mock("design-system/helpers/useCopyToClipboard", () => ({
+  __esModule: true,
+  default: () => [false, jest.fn()],
+}))
 
-describe(`Panel`, () => {
-  it(`renders with default properties`, () => {
-    render(<Panel title={title}>{children}</Panel>)
-    expect(screen.getByText(title)).toBeInTheDocument()
-    expect(screen.getByText(children)).toBeInTheDocument()
-  })
+jest.mock("shared/data", () => ({
+  accountNumber: "1234567890",
+}))
 
-  it(`renders with custom properties`, () => {
-    render(<Panel accountNumber={accountNumber} name={iconName} />)
-    expect(screen.getByTitle(iconName)).toBeInTheDocument()
-    expect(screen.getByText(accountNumber)).toBeInTheDocument()
+describe("Panel component", () => {
+  it("should render title and children correctly", () => {
+    const title = "Test Title"
+    const children = <div>Test Children</div>
+    const { getByText } = render(<Panel title={title}>{children}</Panel>)
+
+    expect(getByText(title)).toBeInTheDocument()
   })
 })

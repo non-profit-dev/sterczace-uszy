@@ -6,7 +6,7 @@ import useCopyToClipboard from "design-system/helpers/useCopyToClipboard"
 import globalData from "shared/data"
 import * as Styled from "./Panel.styled"
 
-const Panel = ({ className, title, children }) => {
+const Panel = ({ className, title, children, accountNumber }) => {
   const [isCopied, copyToClipboard] = useCopyToClipboard()
   const theme = useTheme()
   return (
@@ -14,6 +14,7 @@ const Panel = ({ className, title, children }) => {
       {title}
       <Styled.Content>{children}</Styled.Content>
       <Typography variant="h5" as="p">
+        {accountNumber}
         {globalData.accountNumber}
         {isCopied ? (
           <Styled.IconButton
@@ -38,11 +39,13 @@ Panel.propTypes = {
   title: node.isRequired,
   className: string,
   children: node,
+  accountNumber: string,
 }
 
 Panel.defaultProps = {
   className: null,
   children: null,
+  accountNumber: null,
 }
 
 export default Panel
