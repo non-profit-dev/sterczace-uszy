@@ -47,9 +47,7 @@ const Adoption = ({ animals, animalsData }) => (
       <ActionDuringVisit />
       <SpecialSituations />
       {/* virtual adoption */}
-
       <ChooseYourVirtualPet data={animalsData.items} />
-
       <PaymentConfirmationForm data={animals.items} />
       <CtaBanner
         heading="Masz pytania lub wątpliwości?"
