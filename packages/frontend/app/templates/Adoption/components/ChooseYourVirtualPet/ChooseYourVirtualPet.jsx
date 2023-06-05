@@ -5,14 +5,13 @@ import Button from "design-system/components/button"
 import TextBanner from "design-system/patterns/textBanner"
 import AnimalCard from "design-system/patterns/animalCard"
 import Container from "design-system/components/container"
-import {
-  CARDS_FOR_TABLET_AND_MOBILE,
-  CARDS_FOR_DESKTOP,
-} from "design-system/helpers/constans"
 
 import { useState, useEffect } from "react"
 import { useMediaQuery } from "usehooks-ts"
 import * as Styled from "./ChooseYourVirtualPet.styled"
+
+const CARDS_FOR_DESKTOP = 6
+const CARDS_FOR_TABLET_AND_MOBILE = 3
 
 const ChooseYourVirtualPet = ({ data }) => {
   const isDesktop = useMediaQuery(`(min-width: 992px)`)
