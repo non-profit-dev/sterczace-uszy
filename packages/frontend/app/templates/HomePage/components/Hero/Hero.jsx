@@ -3,6 +3,8 @@ import { useTheme } from "@emotion/react"
 import Button from "design-system/components/button"
 
 import TextBanner from "design-system/patterns/textBanner"
+import Card from "design-system/patterns/card"
+
 import globalData from "shared/data"
 
 import * as Styled from "./Hero.styled"
@@ -52,20 +54,12 @@ const Hero = () => {
         </Styled.Content>
         <Styled.Cards>
           {cards.map(({ title, buttonText, buttonHref, illustration }) => (
-            <Styled.Card
+            <Card
               key={title}
               href={buttonHref}
               layout="center"
               illustrationName={illustration}
-              title={
-                <Styled.Title
-                  text={title}
-                  variant="text"
-                  textSize="h4"
-                  as="h2"
-                />
-              }
-              mobileLayout="center"
+              title={<Styled.Title text={title} line={false} as="h2" />}
               button={
                 <Button
                   text={buttonText}
@@ -75,7 +69,6 @@ const Hero = () => {
                   as="div"
                 />
               }
-              bgColor={theme.colors.neutrals[100]}
             />
           ))}
         </Styled.Cards>

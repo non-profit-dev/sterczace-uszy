@@ -1,5 +1,4 @@
 import styled from "@emotion/styled"
-import Typography from "design-system/components/typography"
 
 export const Content = styled.div`
   padding: 120px 0;
@@ -30,12 +29,5 @@ export const CardsContainer = styled.div`
     grid-template-columns: 1fr;
     gap: 0;
     max-width: 326px;
-  }
-`
-export const Description = styled(Typography)`
-  text-align: left;
-
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    text-align: center;
   }
 `

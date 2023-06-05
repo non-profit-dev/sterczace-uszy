@@ -14,9 +14,10 @@ export const Steps = styled.div`
   margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  justify-content: space-between;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
+    justify-content: center;
     margin-top: 80px;
     grid-template-columns: auto;
     gap: 0;
@@ -25,6 +26,12 @@ export const Steps = styled.div`
   ${({ theme }) => theme.breakpoints.mobileLg} {
     margin-top: 60px;
   }
+`
+
+export const CardWrapper = styled.div`
+  display: grid;
+  grid-template-rows: max-content;
+  justify-content: start;
 `
 
 export const Count = styled(CountComponent)`

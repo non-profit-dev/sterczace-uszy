@@ -66,11 +66,9 @@ const Actions = () => {
             {cardData.map(({ illustrationName, title, array }) => (
               <Card
                 key={title}
-                title={<Title text={title} textSize="h3" />}
+                title={<Title text={title} variant="h3" />}
                 illustrationName={illustrationName}
                 layout="center"
-                tabletLayout="center"
-                mobileLayout="center"
               >
                 <List gap={8}>
                   {array.map((item) => (

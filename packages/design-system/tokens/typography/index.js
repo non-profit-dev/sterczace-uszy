@@ -89,7 +89,7 @@ const typography = {
     },
     h6: {
       fontWeight: 600,
-      fontSize: "18px",
+      fontSize: "16px",
       lineHeight: "150%",
     },
     bodyLarge: {
