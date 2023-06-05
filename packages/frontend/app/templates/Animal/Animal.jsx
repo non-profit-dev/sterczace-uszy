@@ -1,6 +1,5 @@
 import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
-import Button from "design-system/components/button"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 import ScrollButton from "design-system/components/scrollButton"
@@ -22,12 +21,10 @@ import OtherAnimals from "./components/OtherAnimals/OtherAnimals"
 const Animal = ({ data, otherAnimals }) => (
   <Page title={`${data.name} - Nasi podopieczni`}>
     <Styled.Banner>
-      <Banner
-        heading="Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj"
-        button={
-          <Button text="tutaj" href="/wsparcie" variant="text" size="xsmall" />
-        }
-      />
+      <Banner>
+        Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
+        <a href="/wsparcie">tutaj</a>
+      </Banner>
     </Styled.Banner>
 
     <Navigation />

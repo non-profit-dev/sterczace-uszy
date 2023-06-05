@@ -1,5 +1,4 @@
 import Banner from "design-system/components/banner"
-import Button from "design-system/components/button"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
@@ -21,12 +20,10 @@ import SpecialSituations from "./components/SpecialSituations"
 const Adoption = () => (
   <Page title="Adopcja">
     <Styled.Banner>
-      <Banner
-        heading="Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj"
-        button={
-          <Button text="tutaj" href="/wsparcie" variant="text" size="xsmall" />
-        }
-      />
+      <Banner>
+        Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
+        <a href="/wsparcie">tutaj</a>
+      </Banner>
     </Styled.Banner>
 
     <Navigation />
