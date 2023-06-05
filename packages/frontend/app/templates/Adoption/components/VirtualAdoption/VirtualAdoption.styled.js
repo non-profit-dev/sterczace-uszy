@@ -13,7 +13,11 @@ export const Content = styled.div`
   }
 `
 
-export const TextContainer = styled.div``
+export const PanelWrapper = styled.div`
+  margin-top: 40px;
+  padding-left: 110px;
+  max-width: 600px;
+`
 
 export const List = styled.div`
   margin-top: 100px;

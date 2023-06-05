@@ -1,8 +1,12 @@
 import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
+import Title from "design-system/components/title"
 import TextBanner from "design-system/patterns/textBanner"
-
+import Panel from "design-system/patterns/panel"
 import Feature from "design-system/patterns/feature"
+
+import globalData from "shared/data"
+
 import * as Styled from "./VirtualAdoption.styled"
 
 const data = [
@@ -42,26 +46,56 @@ const VirtualAdoption = () => (
           layout="left"
           size="medium"
         >
-          <Styled.TextContainer>
-            <Typography variant="bodyTitle">
-              Adopcja zwierzaka musi być przemyślaną decyzją. W końcu zyskujemy
-              nowego członka rodziny na całe życie. Wiemy, że niektórzy nie mogą
-              sobie na to pozwolić ze względu na uczulenie na sierść, posiadanie
-              czworonogów czy częste nieobecności w domu. Specjalnie dla takich
-              osób fundacja zorganizowała Wirtualną Adopcję!
-            </Typography>
-          </Styled.TextContainer>
+          <Typography variant="bodyTitle">
+            Adopcja zwierzaka musi być przemyślaną decyzją. W końcu zyskujemy
+            nowego członka rodziny na całe życie. Wiemy, że niektórzy nie mogą
+            sobie na to pozwolić ze względu na uczulenie na sierść, posiadanie
+            czworonogów czy częste nieobecności w domu. Specjalnie dla takich
+            osób fundacja zorganizowała Wirtualną Adopcję!
+          </Typography>
         </TextBanner>
 
         <Styled.List>
-          {data.map(({ description, heading, icon }) => (
-            <Feature
-              key={heading}
-              heading={heading}
-              description={description}
-              icon={icon}
-            />
-          ))}
+          {data.map(({ description, heading, icon }, index) =>
+            index !== 0 ? (
+              <Feature
+                key={heading}
+                heading={heading}
+                description={description}
+                icon={icon}
+              />
+            ) : (
+              <div key={heading}>
+                <Feature
+                  key={heading}
+                  heading={heading}
+                  description={description}
+                  icon={icon}
+                />
+                <Styled.PanelWrapper>
+                  <Panel
+                    title={
+                      <Title
+                        text="Przelew jednorazowy lub zlecenie stałe"
+                        iconStart="money"
+                        variant="h5"
+                        line={false}
+                      />
+                    }
+                    accountNumber={globalData.accountNumber}
+                  >
+                    <Typography variant="bodyTitle">
+                      Fundacja {globalData.organizationName} <br /> ul.{" "}
+                      {globalData.address.street}
+                      , <br /> {globalData.address.zipCode} <br /> NIP
+                      {globalData.nip} <br />
+                      Tytuł przelewu: Wsparcie dla Fundacji
+                    </Typography>
+                  </Panel>
+                </Styled.PanelWrapper>
+              </div>
+            )
+          )}
         </Styled.List>
       </Styled.Content>
     </Container>
