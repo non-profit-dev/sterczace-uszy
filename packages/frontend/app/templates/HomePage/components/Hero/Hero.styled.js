@@ -1,7 +1,6 @@
 import styled from "@emotion/styled"
 
 import ContainerComponent from "design-system/components/container"
-import CardComponent from "design-system/patterns/card"
 import TitleComponent from "design-system/components/title"
 
 export const Container = styled(ContainerComponent)`
@@ -51,23 +50,8 @@ export const Cards = styled.div`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     bottom: auto;
     margin-top: 0;
+    padding-bottom: 32px;
     grid-auto-flow: row;
-    gap: 0;
-    width: 100vw;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-`
-
-export const Card = styled(CardComponent)`
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    border-radius: 0;
-    box-shadow: none;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.gray[200]};
-
-    &:hover {
-      box-shadow: none;
-    }
   }
 `
 
