@@ -5,34 +5,33 @@ import Button from "design-system/components/button"
 import TextBanner from "design-system/patterns/textBanner"
 import AnimalCard from "design-system/patterns/animalCard"
 import Container from "design-system/components/container"
+import {
+  CARDS_FOR_TABLET_AND_MOBILE,
+  CARDS_FOR_DESKTOP,
+} from "design-system/helpers/constans"
 
 import { useState, useEffect } from "react"
-import useMediaQuery from "design-system/helpers/useMediaQuery"
+import { useMediaQuery } from "usehooks-ts"
 import * as Styled from "./ChooseYourVirtualPet.styled"
 
 const ChooseYourVirtualPet = ({ data }) => {
-  const CARDS_FOR_DESKTOP = 6
-  const CARDS_FOR_TABLET_AND_MOBILE = 3
   const isDesktop = useMediaQuery(`(min-width: 992px)`)
-  const initialDisplayedAnimals = isDesktop
-    ? CARDS_FOR_DESKTOP
-    : CARDS_FOR_TABLET_AND_MOBILE
+
+  const [initialDisplayedAnimals, setInitialDisplayedAnimals] =
+    useState(CARDS_FOR_DESKTOP)
+
   const loadMoreAnimalsCount = isDesktop
     ? CARDS_FOR_DESKTOP
     : CARDS_FOR_TABLET_AND_MOBILE
 
-  const [displayedAnimals, setDisplayedAnimals] = useState(
-    initialDisplayedAnimals
-  )
-
   useEffect(() => {
-    setDisplayedAnimals(
+    setInitialDisplayedAnimals(
       isDesktop ? CARDS_FOR_DESKTOP : CARDS_FOR_TABLET_AND_MOBILE
     )
   }, [isDesktop])
 
   const loadMoreAnimals = () => {
-    setDisplayedAnimals(
+    setInitialDisplayedAnimals(
       (prevDisplayedAnimals) => prevDisplayedAnimals + loadMoreAnimalsCount
     )
   }
@@ -56,7 +55,7 @@ const ChooseYourVirtualPet = ({ data }) => {
 
         <Styled.CardsWrapper>
           {data
-            .slice(0, displayedAnimals)
+            .slice(0, initialDisplayedAnimals)
             .map(({ name, age, gender, excerpt, thumbnail, slug }) => (
               <Styled.CardWrapper key={name}>
                 <AnimalCard
@@ -71,7 +70,7 @@ const ChooseYourVirtualPet = ({ data }) => {
               </Styled.CardWrapper>
             ))}
         </Styled.CardsWrapper>
-        {data.length > displayedAnimals && (
+        {data.length > initialDisplayedAnimals && (
           <Styled.ButtonWrapper>
             <Button
               text="Pokaż więcej"
