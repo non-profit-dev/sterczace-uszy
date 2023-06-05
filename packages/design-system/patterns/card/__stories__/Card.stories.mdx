@@ -17,9 +17,10 @@ It's a flexible component used to group and display content in a concise format.
 
 <Canvas>
   <Story
-    name="Overview - simple"
+    name="Overview"
     args={{
       title: <Title text="Porozmawiaj" />,
+      layout: "center",
     }}
   >
     {Template.bind()}
@@ -28,19 +29,7 @@ It's a flexible component used to group and display content in a concise format.
 
 <Canvas>
   <Story
-    name="Overview - illustration"
-    args={{
-      title: <Title text="Porozmawiaj" />,
-      illustrationName: "heartWithDogFace",
-    }}
-  >
-    {Template.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="Overview - illustration and button"
+    name="With illustration and button"
     args={{
       title: <Title text="Porozmawiaj" />,
       illustrationName: "heartWithDogFace",
@@ -53,6 +42,7 @@ It's a flexible component used to group and display content in a concise format.
         />
       ),
       href: "https://google.com",
+      layout: "center",
     }}
   >
     {Template.bind()}
@@ -61,31 +51,11 @@ It's a flexible component used to group and display content in a concise format.
 
 <Canvas>
   <Story
-    name="Overview - image"
+    name="With image and button"
     args={{
-      badge: "Szczeniak",
-      title: <Title text="Porozmawiaj" iconEnd="dog" />,
-      imageSrc:
-        "https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      imageAlt: "dog",
-      bgColor: "#FEF8EC",
-    }}
-  >
-    {Template.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="Overview - image and button"
-    args={{
-      badge: "Kot",
-      title: <Title text="Porozmawiaj" iconEnd="cat" />,
-      layout: "left",
+      title: <Title text="Porozmawiaj" iconEnd="cat" badge="Kot" />,
       imageSrc:
         "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg ",
-      imageHeight: "300px",
-      imageAlt: "cat",
       button: (
         <Button
           text="Wejdź"
@@ -95,6 +65,7 @@ It's a flexible component used to group and display content in a concise format.
         />
       ),
       href: "https://google.com",
+      layout: "left",
     }}
   >
     {TextTemplate.bind()}
@@ -105,17 +76,14 @@ It's a flexible component used to group and display content in a concise format.
   <Story
     name="Cards grid"
     args={{
-      badge: "Młodziak",
-      title: <Title text="Mini" iconEnd="dog" />,
+      title: <Title text="Mini" iconEnd="dog" badge="Młodziak" />,
       layout: "left",
       imageSrc:
         "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg ",
-      imageAlt: "cat",
-      imageHeight: "300px",
       button: (
         <Button
           text="Poznaj mnie lepiej"
-          variant="textLine"
+          variant="text"
           color="primary"
           size="medium"
           iconEnd="chevronRight"
@@ -152,16 +120,6 @@ export const Template = (args) => (
   </div>
 )
 
-export const SimpleTemplate = (args) => (
-  <div
-    style={{
-      maxWidth: "400px",
-    }}
-  >
-    <Card {...args} />
-  </div>
-)
-
 export const TextTemplate = (args) => (
   <div
     style={{
@@ -169,11 +127,11 @@ export const TextTemplate = (args) => (
     }}
   >
     <Card {...args}>
-      <p>
+      <Typography variant="bodySmall">
         Zwierzak to nie tylko ciepłe przutulasy, ale też wizyty u weterynarza i
         opieka. Sprawdz czy Twój budżet na to pozwala i czy masz czas, aby
         zadbać o komfort nowego domownika.
-      </p>
+      </Typography>
     </Card>
   </div>
 )

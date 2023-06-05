@@ -1,95 +1,89 @@
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
+
+import TypographyComponent from "design-system/components/typography"
+
 import theme from "../../tokens/theme"
 
-const sizes = {
+const paddings = {
+  xsmall: {
+    desktop: "8px 32px",
+    tablet: "8px 32px",
+    mobile: "6px 32px",
+  },
   small: {
-    typography: theme.typography.desktop.bodySmall,
-    padding: "8px 32px",
+    desktop: "8px 32px",
+    tablet: "8px 32px",
+    mobile: "6px 32px",
   },
   medium: {
-    typography: theme.typography.desktop.h5,
-    padding: "10px 40px",
+    desktop: "12px 40px",
+    tablet: "7px 40px",
+    mobile: "6px 40px",
   },
   large: {
-    typography: theme.typography.desktop.h4,
-    padding: "12px 48px",
+    desktop: "12px 48px",
+    tablet: "9px 48px",
+    mobile: "6px 48px",
   },
 }
 
 const colors = {
   primary: {
-    mainColor: theme.colors.primary[500],
-    filledText: theme.colors.neutrals[100],
+    main: theme.colors.primary[500],
+    hover: theme.colors.primary[600],
   },
   black: {
-    mainColor: theme.colors.gray[600],
-    filledText: theme.colors.neutrals[100],
-  },
-  white: {
-    mainColor: theme.colors.neutrals[100],
-    filledText: theme.colors.neutrals[100],
+    main: theme.colors.gray[600],
+    hover: theme.colors.gray[500],
   },
 }
 export const Component = styled.a`
-  ${({ size }) => sizes[size].typography};
-  letter-spacing: -0.02em;
-  border-radius: 30px;
+  border-radius: ${({ variant }) => (variant === "text" ? 0 : "30px")};
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   gap: 4px;
-  padding: ${({ size }) => sizes[size].padding};
+  transition: 200ms ease;
+
   color: ${({ variant, color }) =>
-    variant === "fill" ? colors[color].filledText : colors[color].mainColor};
+    variant === "fill" ? theme.colors.neutrals[100] : colors[color].main};
   background-color: ${({ variant, color }) =>
-    variant === "fill" ? colors[color].mainColor : "transparent"};
+    variant === "fill" ? colors[color].main : "transparent"};
   border: ${({ variant, color }) =>
-    variant === "border" ? `2px solid ${colors[color].mainColor}` : "none"};
+    variant === "border"
+      ? `2px solid ${colors[color].main}`
+      : "2px solid transparent"};
 
-  ${({ variant }) =>
-    (variant === "textLine" || variant === "text") &&
-    css`
-      border-radius: 0;
-      padding: 4px 0;
-    `}
+  padding: ${({ size, variant }) =>
+    variant === "text" ? 0 : paddings[size].desktop};
 
-  ${({ size }) =>
-    size === "large" &&
-    css`
-      ${theme.breakpoints.tablet} {
-        ${theme.typography.mobile.bodyLarge};
-        padding: 8px 32px;
-      }
+  ${theme.breakpoints.tabletLg} {
+    padding: ${({ size, variant }) =>
+      variant === "text" ? 0 : paddings[size].tablet};
+  }
 
-      ${theme.breakpoints.mobile} {
-        ${theme.typography.mobile.bodyTitle};
-        padding: 8px 32px;
-      }
-    `}
-`
+  ${theme.breakpoints.mobileLg} {
+    padding: ${({ size, variant }) =>
+      variant === "text" ? 0 : paddings[size].mobile};
+  }
 
-export const Text = styled.span`
-  ${({ variant }) =>
-    variant === "textLine" &&
-    css`
-      text-decoration: underline;
-    `}
+  &:hover {
+    color: ${({ variant, color }) =>
+      variant === "fill" ? theme.colors.neutrals[100] : colors[color].hover};
+    background-color: ${({ variant, color }) =>
+      variant === "fill" ? colors[color].hover : "transparent"};
+    border: ${({ variant, color }) =>
+      variant === "border"
+        ? `2px solid ${colors[color].hover}`
+        : "2px solid transparent"};
+  }
 
-  ${({ active, variant, color }) =>
-    active &&
-    variant === "text" &&
-    css`
-      border-bottom: 2px solid ${colors[color].mainColor};
-    `}
-    :hover {
-    ${({ variant }) =>
-      variant === "text" &&
-      css`
-        text-decoration: underline;
-      `}
+  &:focus {
+    outline: 2px solid ${theme.colors.blue[100]};
+    outline-offset: 2px;
   }
 `
 
@@ -103,16 +97,18 @@ export const Icon = styled.span`
       size === "large" &&
       css`
         ${theme.breakpoints.tablet} {
-          ${theme.typography.mobile.bodyLarge};
           height: 18px;
           width: 18px;
         }
 
         ${theme.breakpoints.mobile} {
-          ${theme.typography.mobile.bodyTitle};
           height: 16px;
           width: 16px;
         }
       `}
   }
+`
+
+export const Typography = styled(TypographyComponent)`
+  color: inherit;
 `

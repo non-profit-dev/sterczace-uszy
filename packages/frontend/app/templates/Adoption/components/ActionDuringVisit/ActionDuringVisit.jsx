@@ -50,9 +50,7 @@ const ActionDuringVisit = () => (
               illustrationName={illustrationName}
               layout="center"
             >
-              <Styled.Description variant="bodyTitle">
-                {description}
-              </Styled.Description>
+              <Typography variant="bodyTitle">{description}</Typography>
             </Card>
           ))}
         </Styled.CardsContainer>
