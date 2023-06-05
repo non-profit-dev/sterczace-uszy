@@ -1,5 +1,6 @@
 import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
+import Illustration from "design-system/components/illustration"
 import Title from "design-system/components/title"
 import TextBanner from "design-system/patterns/textBanner"
 import Panel from "design-system/patterns/panel"
@@ -54,24 +55,28 @@ const VirtualAdoption = () => (
             osób fundacja zorganizowała Wirtualną Adopcję!
           </Typography>
         </TextBanner>
+      </Styled.Content>
 
-        <Styled.List>
-          {data.map(({ description, heading, icon }, index) =>
-            index !== 0 ? (
+      <Styled.List>
+        {data.map(({ description, heading, icon }, index) =>
+          index !== 0 ? (
+            <Styled.FeatureItem key={heading}>
               <Feature
-                key={heading}
                 heading={heading}
                 description={description}
                 icon={icon}
               />
-            ) : (
-              <div key={heading}>
+            </Styled.FeatureItem>
+          ) : (
+            <div key={heading}>
+              <Styled.FeatureItem>
                 <Feature
-                  key={heading}
                   heading={heading}
                   description={description}
                   icon={icon}
                 />
+              </Styled.FeatureItem>
+              <Styled.Wrapper>
                 <Styled.PanelWrapper>
                   <Panel
                     title={
@@ -93,11 +98,12 @@ const VirtualAdoption = () => (
                     </Typography>
                   </Panel>
                 </Styled.PanelWrapper>
-              </div>
-            )
-          )}
-        </Styled.List>
-      </Styled.Content>
+                <Illustration name="pawHeart" />
+              </Styled.Wrapper>
+            </div>
+          )
+        )}
+      </Styled.List>
     </Container>
   </Styled.Section>
 )
