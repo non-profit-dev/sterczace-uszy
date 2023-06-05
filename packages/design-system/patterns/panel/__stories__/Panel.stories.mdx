@@ -1,6 +1,7 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
 import Panel from "design-system/patterns/panel"
 import Title from "design-system/components/title"
+import Typography from "design-system/components/typography"
 
 <Meta title="Patterns/Panel" component={Panel} />
 
@@ -18,12 +19,11 @@ Displays information about Bank transfer.
         <Title
           text="Przelew jednorazowy lub zlecenie stałe"
           iconStart="money"
-          variant="h6"
+          variant="h5"
           line={false}
         />
       ),
-      children:
-        "Fundacja Sterczące Uszy ul. Gen. Władysława Sikorskiego 3, 62-030 Luboń NIP 7831855392 Tytuł przelewu: Wsparcie dla Fundacji",
+      accountNumber: "41 1870 1045 2078 1072 8639 0001",
     }}
   >
     {Template.bind()}
@@ -35,9 +35,15 @@ Displays information about Bank transfer.
 export const Template = (args) => (
   <div
     style={{
-      maxWidth: "450px",
+      maxWidth: "500px",
     }}
   >
-    <Panel {...args} />
+    <Panel {...args}>
+      <Typography variant="bodyTitle">
+        Fundacja Sterczące Uszy <br /> ul. Gen. Władysława Sikorskiego 3,
+        <br /> 62-030 Luboń <br /> NIP 7831855392
+        <br /> Tytuł przelewu: Wsparcie dla Fundacji
+      </Typography>
+    </Panel>
   </div>
 )

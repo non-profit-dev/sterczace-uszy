@@ -2,8 +2,6 @@ import styled from "@emotion/styled"
 import Typography from "design-system/components/typography"
 
 export const PanelContent = styled.div`
-  position: relative;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -16,18 +14,12 @@ export const PanelContent = styled.div`
 export const Content = styled.div`
   margin-top: 20px;
   margin-bottom: 15px;
-  width: 80%;
 `
 
-export const IconButton = styled(Typography)`
-  display: inline;
-  cursor: pointer;
-  vertical-align: middle;
-  margin-left: 10px;
-`
-
-export const CopyButton = styled.button`
-  display: inline;
-  cursor: pointer;
-  vertical-align: middle;
+export const AccountNumber = styled(Typography)`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 32px;
+  padding-top: 10px;
 `
