@@ -29,14 +29,16 @@ const Supporters = ({ data }) => (
               illustrationSrc={item.logo ? item.logo.url : null}
               illustrationName={item.logo ? null : "support"}
               illustrationHeight={80}
+              button={
+                <Button
+                  text={item.urlText}
+                  variant="text"
+                  size="small"
+                  as="span"
+                />
+              }
             >
               <Typography variant="bodySmall">{item.description}</Typography>
-              <Button
-                text={item.urlText}
-                variant="textLine"
-                size="small"
-                as="span"
-              />
             </Card>
           ))}
         </Slider>

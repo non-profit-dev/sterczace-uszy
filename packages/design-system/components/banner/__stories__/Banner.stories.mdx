@@ -1,6 +1,5 @@
 import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
 
-import Button from "design-system/components/button"
 import Banner from "design-system/components/banner"
 
 <Meta title="Components/Banner" component={Banner} />
@@ -12,25 +11,16 @@ Displays important announcements or calls-to-action, usually used above the navi
 `import Banner from "design-system/components/banner"`
 
 <Canvas>
-  <Story
-    name="Overview"
-    args={{
-      heading:
-        "Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj",
-      button: (
-        <Button
-          text="tutaj"
-          variant="textLine"
-          size="small"
-          href="https://google.com"
-        />
-      ),
-    }}
-  >
+  <Story name="Overview" args={{}}>
     {Template.bind()}
   </Story>
 </Canvas>
 
 <ArgsTable />
 
-export const Template = (args) => <Banner {...args} />
+export const Template = (args) => (
+  <Banner {...args}>
+    Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
+    <a href="/">tutaj</a>
+  </Banner>
+)

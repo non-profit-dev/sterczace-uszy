@@ -31,7 +31,7 @@ export const Card = styled.a`
 export const Illustration = styled.img`
   width: auto;
   height: 100%;
-  max-height: ${({ size }) => (size === "small" ? "100px" : "217px")};
+  max-height: ${({ size }) => (size === "small" ? "80px" : "217px")};
 `
 
 export const Image = styled.img`
@@ -71,5 +71,4 @@ export const Title = styled.div`
 
 export const Content = styled.div`
   height: 100%;
-  justify-selft: stretch;
 `

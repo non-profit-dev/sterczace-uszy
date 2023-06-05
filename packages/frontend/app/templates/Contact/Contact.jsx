@@ -3,7 +3,6 @@ import { useForm } from "@formspree/react"
 import Container from "design-system/components/container/Container"
 
 import Banner from "design-system/components/banner"
-import Button from "design-system/components/button"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
@@ -25,17 +24,10 @@ const Contact = () => {
   return (
     <Page title="Kontakt">
       <Styled.Banner>
-        <Banner
-          heading="Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj"
-          button={
-            <Button
-              text="tutaj"
-              href="/wsparcie"
-              variant="textLine"
-              size="small"
-            />
-          }
-        />
+        <Banner>
+          Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
+          <a href="/wsparcie">tutaj</a>
+        </Banner>
       </Styled.Banner>
       <Navigation />
       <Container as="main" size="medium">
