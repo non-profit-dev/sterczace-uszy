@@ -19,7 +19,8 @@ export const Content = styled.div`
 export const AccountNumber = styled(Typography)`
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 6px;
-  min-height: 32px;
+  min-height: 36px;
   padding-top: 10px;
 `

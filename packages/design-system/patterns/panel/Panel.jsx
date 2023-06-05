@@ -17,7 +17,7 @@ const Panel = ({ className, title, children, accountNumber }) => {
       <Styled.Content>{children}</Styled.Content>
 
       {accountNumber && (
-        <Styled.AccountNumber variant="h5" as="p">
+        <Styled.AccountNumber variant="h6" as="p">
           {accountNumber}
 
           {isCopied ? (
