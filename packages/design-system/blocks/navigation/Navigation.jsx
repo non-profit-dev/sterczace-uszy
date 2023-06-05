@@ -32,7 +32,7 @@ const Navigation = () => {
                     href={item.href}
                     text={item.title}
                     variant="text"
-                    size="small"
+                    size="xsmall"
                     color={
                       item.href === "/pliki-do-pobrania" ? "primary" : "black"
                     }

@@ -66,11 +66,7 @@ const TemporaryHome = () => {
         {steps.map(({ title, description, button }, index) => (
           <div key={title}>
             <Styled.Count count={index + 1} size="small" />
-            <Card
-              tabletLayout="left"
-              mobileLayout="left"
-              title={<Title text={title} line={false} as="h3" />}
-            >
+            <Card title={<Title text={title} line={false} as="h3" />}>
               <Typography variant="bodyTitle" color={theme.colors.gray[600]}>
                 {description}
               </Typography>

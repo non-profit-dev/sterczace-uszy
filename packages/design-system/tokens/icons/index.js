@@ -29,6 +29,7 @@ import Trust from "./Trust.svg"
 import Copy from "./Copy.svg"
 import Donation from "./Donation.svg"
 import DoubleVector from "./DoubleVector.svg"
+import Money from "./Money.svg"
 import DecisionPeople from "./DecisionPeople.svg"
 import DecisionClock from "./DecisionClock.svg"
 import DecisionHome from "./DecisionHome.svg"
@@ -68,6 +69,7 @@ export const icons = {
   trust: Trust,
   copy: Copy,
   donation: Donation,
+  money: Money,
   decisionPeople: DecisionPeople,
   decisionClock: DecisionClock,
   decisionHome: DecisionHome,
@@ -107,6 +109,7 @@ export {
   Trust,
   Copy,
   Donation,
+  Money,
   DecisionPeople,
   DecisionClock,
   DecisionHome,
