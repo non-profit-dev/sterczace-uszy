@@ -139,7 +139,7 @@ const typography = {
     },
     h5: {
       fontWeight: 600,
-      fontSize: "20px",
+      fontSize: "18px",
       lineHeight: "150%",
     },
     h6: {
