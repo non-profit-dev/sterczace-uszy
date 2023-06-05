@@ -1,5 +1,4 @@
 import { string } from "prop-types"
-import { useTheme } from "@emotion/react"
 
 import Button from "design-system/components/button"
 import Title from "design-system/components/title"
@@ -31,38 +30,31 @@ function getAnimalType(age, gender) {
   }
 }
 
-const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => {
-  const theme = useTheme()
-
-  return (
-    <Card
-      bgColor={theme.colors.neutrals[100]}
-      href={`/do-adopcji/${slug}`}
-      className={className}
-      imageSrc={image}
-      imageAlt={name}
-      imageHeight="314px"
-      badge={age ? getAnimalType(getAgeNumber(age), gender) : null}
-      title={
-        <Title
-          iconEnd={gender === "ona" ? "femaleAnimal" : "maleAnimal"}
-          text={name}
-          as="h3"
-        />
-      }
-      button={
-        <Button
-          iconEnd="arrowRight"
-          text="Poznaj mnie lepiej"
-          variant="text"
-          as="div"
-        />
-      }
-    >
-      <Styled.Description variant="bodyTitle">{excerpt}</Styled.Description>
-    </Card>
-  )
-}
+const AnimalCard = ({ slug, name, age, gender, excerpt, image, className }) => (
+  <Card
+    href={`/do-adopcji/${slug}`}
+    className={className}
+    imageSrc={image}
+    title={
+      <Title
+        iconEnd={gender === "ona" ? "femaleAnimal" : "maleAnimal"}
+        text={name}
+        as="h3"
+      />
+    }
+    button={
+      <Button
+        iconEnd="arrowRight"
+        text="Poznaj mnie lepiej"
+        variant="text"
+        as="div"
+      />
+    }
+    badge={age ? getAnimalType(getAgeNumber(age), gender) : null}
+  >
+    <Styled.Description variant="bodyTitle">{excerpt}</Styled.Description>
+  </Card>
+)
 
 AnimalCard.propTypes = {
   slug: string.isRequired,

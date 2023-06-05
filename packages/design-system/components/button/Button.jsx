@@ -1,9 +1,16 @@
-import { string, oneOf, func, bool } from "prop-types"
+import { string, oneOf, func } from "prop-types"
 
 import Icon from "design-system/components/icon"
 import { icons } from "design-system/tokens/icons"
 
 import * as Styled from "./Button.styled"
+
+const sizes = {
+  xsmall: "bodySmall",
+  small: "h6",
+  medium: "h5",
+  large: "h4",
+}
 
 const Button = ({
   href,
@@ -13,7 +20,6 @@ const Button = ({
   variant,
   color,
   size,
-  active,
   target,
   onClick,
   as,
@@ -34,13 +40,13 @@ const Button = ({
         <Icon name={iconStart} size={size} />
       </Styled.Icon>
     )}
-    <Styled.Text variant={variant} color={color} active={active}>
+    <Styled.Typography variant={sizes[size]} as="span">
       {text}
-    </Styled.Text>
+    </Styled.Typography>
 
     {iconEnd && (
       <Styled.Icon size={size}>
-        <Icon name={iconEnd} size={size} />
+        <Icon name={iconEnd} size={size === "xsmall" ? `small` : size} />
       </Styled.Icon>
     )}
   </Styled.Component>
@@ -63,13 +69,9 @@ Button.propTypes = {
    * The name of the icon to be displayed at the end of the button.
    */
   iconEnd: oneOf(Object.keys(icons)),
-  variant: oneOf(["fill", "border", "text", "textLine"]),
-  color: oneOf(["primary", "black", "white"]),
-  size: oneOf(["small", "medium", "large"]),
-  /**
-   * A boolean value to determine if the button is active or not.
-   */
-  active: bool,
+  variant: oneOf(["fill", "border", "text"]),
+  color: oneOf(["primary", "black"]),
+  size: oneOf(["xsmall", "small", "medium", "large"]),
   /**
    * It specifies where to display the linked URL. It only applies if the href property is provided.
    */
@@ -89,7 +91,6 @@ Button.defaultProps = {
   variant: "fill",
   color: "primary",
   size: "medium",
-  active: null,
   target: null,
   onClick: null,
   as: null,
