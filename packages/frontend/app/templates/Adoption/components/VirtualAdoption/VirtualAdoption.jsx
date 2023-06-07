@@ -13,7 +13,7 @@ import * as Styled from "./VirtualAdoption.styled"
 const data = [
   {
     heading: "Jak adoptować wirtualnie?",
-    icon: "dog",
+    icon: "money",
     description:
       "Wystarczy, że ustawisz zlecenie stałe w swoim banku, aby wspierać utrzymanie konkretnego zwierzaka.  Koniecznie z dopiskiem: “darowizna i imię zwierzaka”.",
   },
@@ -45,6 +45,8 @@ const VirtualAdoption = () => (
           heading="Nie możesz adoptować? Zostań wirtualnym opiekunem!"
           subtitle="Adopcja wirtualna"
           layout="left"
+          tabletLayout="left"
+          mobileLayout="left"
           size="medium"
         >
           <Typography variant="bodyTitle">
@@ -76,6 +78,15 @@ const VirtualAdoption = () => (
                   icon={icon}
                 />
               </Styled.FeatureItem>
+              <Styled.AdditionalNote variant="bodyTitle">
+                Swoje zwierzę wybrać możesz również poprzez stronę{" "}
+                <a
+                  href="www.ratujemyzwierzaki.pl/sterczaceuszy"
+                  target="_blank"
+                >
+                  www.ratujemyzwierzaki.pl/sterczaceuszy
+                </a>
+              </Styled.AdditionalNote>
               <Styled.Wrapper>
                 <Styled.PanelWrapper>
                   <Panel
