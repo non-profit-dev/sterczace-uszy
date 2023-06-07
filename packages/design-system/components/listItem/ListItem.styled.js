@@ -4,11 +4,10 @@ import theme from "../../tokens/theme"
 export const ListItem = styled.li`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: flex-start;
   text-align: left;
   gap: 8px;
-  background-color: "transparent";
   color: ${({ variant }) =>
     variant === "primary" ? theme.colors.primary[500] : theme.colors.gray[600]};
   ${theme.typography.desktop.bodySmall};
@@ -24,8 +23,8 @@ export const ChildContainer = styled.div`
 
 export const ListItemIcon = styled.div`
   display: flex;
-  flex-grow: 0;
   align-items: center;
   justify-content: center;
   color: inherit;
+  margin-top: ${({ size }) => (size === `medium` ? 2 : 0)}px;
 `
