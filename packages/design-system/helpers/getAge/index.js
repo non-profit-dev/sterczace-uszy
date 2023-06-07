@@ -1,4 +1,5 @@
 import getAgeNumber from "../getAgeNumber"
+import getMonthsNumber from "../getMonthsNumber"
 
 export function getPlurals(
   singularNominativ,
@@ -21,9 +22,31 @@ export function getPlurals(
   return pluralGenitive
 }
 
+export function getMonthsPlurals(
+  singularNominativ,
+  pluralNominativ,
+  pluralGenitive,
+  value
+) {
+  const newVal = Math.abs(value)
+
+  if (newVal === 1) {
+    return singularNominativ
+  }
+  if (newVal >= 2 && newVal <= 4) {
+    return pluralNominativ
+  }
+  return pluralGenitive
+}
+
 const getAge = (age) => {
   if (getAgeNumber(age) < 1) {
-    return `poniżej roku`
+    return `~ ${getMonthsNumber(age)} ${getMonthsPlurals(
+      "miesiąc",
+      "miesiące",
+      "miesięcy",
+      getMonthsNumber(age)
+    )}`
   }
 
   return `~ ${getAgeNumber(age)} ${getPlurals(
