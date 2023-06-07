@@ -16,7 +16,9 @@ import AdoptionDecision from "./components/AdoptionDecision"
 import PreAdoptionVisit from "./PreAdoptionVisit"
 import ActionDuringVisit from "./components/ActionDuringVisit"
 import SpecialSituations from "./components/SpecialSituations"
+import RecurringPayment from "./components/RecurringPayment"
 import PaymentConfirmationForm from "./components/PaymentConfirmationForm"
+
 import { animalsType } from "../../lib/types"
 
 const Adoption = ({ animals }) => (
@@ -37,7 +39,7 @@ const Adoption = ({ animals }) => (
       <PreAdoptionVisit />
       <ActionDuringVisit />
       <SpecialSituations />
-      {/* virtual adoption */}
+      <RecurringPayment />
       <PaymentConfirmationForm data={animals.items} />
       <CtaBanner
         heading="Masz pytania lub wątpliwości?"
