@@ -1,0 +1,20 @@
+import { Meta, Canvas, Story, ArgsTable } from "@storybook/addon-docs"
+
+import {{pascalCase name}} from "design-system/blocks/{{camelCase name}}"
+
+<Meta title="Blocks/{{pascalCase name}}" component={{{pascalCase name}}} />
+
+# {{pascalCase name}}
+
+Allows users to...
+
+<Canvas>
+  <Story name="Overview" args={}>
+    {Template.bind()}
+  </Story>
+</Canvas>
+
+<ArgsTable />
+
+export const Template = (args) =>
+<{{pascalCase name}} {...args} />
