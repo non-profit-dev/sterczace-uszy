@@ -90,7 +90,7 @@ const VirtualAdoption = () => (
                   <Panel
                     title={
                       <Title
-                        text="Przelew jednorazowy lub zlecenie stałe"
+                        text="Zlecenie stałe"
                         iconStart="money"
                         variant="h5"
                         line={false}
