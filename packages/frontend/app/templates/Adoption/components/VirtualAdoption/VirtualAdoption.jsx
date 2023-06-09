@@ -33,7 +33,7 @@ const data = [
     heading: "Czy otrzymuje coś w zamian?",
     icon: "love",
     description:
-      "Oczywiście! Otrzymasz swój CERTYFIKAT Wirtualnego Opiekuna! Dodatkowo, otrzymujesz na bieżąco zdjęcia adoptowanego zwierzaka, informacje dotyczące jego stanu zdrowia, kosztów utrzymania oraz filmiki.",
+      "Oczywiście! Otrzymasz swój <strong>CERTYFIKAT Wirtualnego Opiekuna</strong>! Dodatkowo, otrzymujesz na bieżąco zdjęcia adoptowanego zwierzaka, informacje dotyczące jego stanu zdrowia, kosztów utrzymania oraz filmiki.",
   },
 ]
 
@@ -63,20 +63,16 @@ const VirtualAdoption = () => (
         {data.map(({ description, heading, icon }, index) =>
           index !== 0 ? (
             <Styled.FeatureItem key={heading}>
-              <Feature
-                heading={heading}
-                description={description}
-                icon={icon}
-              />
+              <Feature heading={heading} icon={icon}>
+                <span>{description}</span>
+              </Feature>
             </Styled.FeatureItem>
           ) : (
             <div key={heading}>
               <Styled.FeatureItem>
-                <Feature
-                  heading={heading}
-                  description={description}
-                  icon={icon}
-                />
+                <Feature heading={heading} icon={icon}>
+                  <span>{description}</span>
+                </Feature>
               </Styled.FeatureItem>
               <Styled.AdditionalNote variant="bodyTitle">
                 Swoje zwierzę wybrać możesz również poprzez stronę{" "}
