@@ -82,7 +82,7 @@ const VirtualAdoption = () => (
                   target="_blank"
                   rel="noreferrer"
                 >
-                  www.ratujemyzwierzaki.pl/sterczaceuszy
+                  {globalData.fundraising.text}
                 </a>
               </Styled.AdditionalNote>
               <Styled.Wrapper>
