@@ -18,10 +18,12 @@ import ActionDuringVisit from "./components/ActionDuringVisit"
 import SpecialSituations from "./components/SpecialSituations"
 import RecurringPayment from "./components/RecurringPayment"
 import PaymentConfirmationForm from "./components/PaymentConfirmationForm"
+import VirtualAdoption from "./components/VirtualAdoption"
+import ChooseYourVirtualPet from "./components/ChooseYourVirtualPet"
 
 import { animalsType } from "../../lib/types"
 
-const Adoption = ({ animals }) => (
+const Adoption = ({ animals, animalsData }) => (
   <Page title="Adopcja">
     <Styled.Banner>
       <Banner>
@@ -39,6 +41,8 @@ const Adoption = ({ animals }) => (
       <PreAdoptionVisit />
       <ActionDuringVisit />
       <SpecialSituations />
+      <VirtualAdoption />
+      <ChooseYourVirtualPet data={animalsData.items} />
       <RecurringPayment />
       <PaymentConfirmationForm data={animals.items} />
       <CtaBanner
@@ -54,6 +58,7 @@ const Adoption = ({ animals }) => (
 
 Adoption.propTypes = {
   animals: animalsType.isRequired,
+  animalsData: animalsType.isRequired,
 }
 
 export default Adoption

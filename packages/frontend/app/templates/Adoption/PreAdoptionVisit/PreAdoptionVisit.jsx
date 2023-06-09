@@ -53,12 +53,9 @@ const PreAdoptionVisit = () => (
       </Styled.Banner>
       <Styled.ListItems gap={40}>
         {values.map(({ heading, description, icon }) => (
-          <Feature
-            key={heading}
-            heading={heading}
-            description={description}
-            icon={icon}
-          />
+          <Feature key={heading} heading={heading} icon={icon}>
+            {description}
+          </Feature>
         ))}
       </Styled.ListItems>
     </Container>
