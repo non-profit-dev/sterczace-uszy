@@ -59,11 +59,11 @@ const RecurringPayment = () => (
           <Typography variant="bodyTitle">
             Swoje zwierzę wybrać możesz również poprzez stronę{" "}
             <a
-              href="https://www.ratujemyzwierzaki.pl/sterczaceuszy"
+              href={globalData.fundraising.link}
               target="_blank"
               rel="noreferrer"
             >
-              www.ratujemyzwierzaki.pl/sterczaceuszy
+              {globalData.fundraising.text}
             </a>
           </Typography>
 

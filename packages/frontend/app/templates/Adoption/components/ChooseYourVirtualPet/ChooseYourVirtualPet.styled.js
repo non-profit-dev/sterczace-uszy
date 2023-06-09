@@ -4,7 +4,7 @@ export const Wrapper = styled.section`
   padding-top: 120px;
   padding-bottom: 120px;
 
-  ${({ theme }) => theme.breakpoints.mobileLg} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     padding-top: 100px;
     padding-bottom: 100px;
   }
@@ -18,7 +18,7 @@ export const Wrapper = styled.section`
 export const ContentContainer = styled.div`
   max-width: 892px;
 
-  ${({ theme }) => theme.breakpoints.mobileLg} {
+  ${({ theme }) => theme.breakpoints.tabletLg} {
     padding: 100px 0;
   }
 
