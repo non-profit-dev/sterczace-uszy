@@ -23,6 +23,7 @@ import DogRescue from "design-system/tokens/illustrations/dogRescue.svg"
 import Percentage from "design-system/tokens/illustrations/percentage.svg"
 import Hugging from "design-system/tokens/illustrations/hugging.svg"
 import Information from "design-system/tokens/illustrations/information.svg"
+import PawHeart from "design-system/tokens/illustrations/pawHeart.svg"
 
 export const illustrations = {
   heartWithDogFace: HeartWithDogFace,
@@ -48,6 +49,7 @@ export const illustrations = {
   percentage: Percentage,
   hugging: Hugging,
   information: Information,
+  pawHeart: PawHeart,
 }
 
 const Illustration = ({ name, className }) => {

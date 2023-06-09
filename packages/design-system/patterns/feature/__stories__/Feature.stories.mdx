@@ -35,8 +35,6 @@ The `Feature` element can be used with the `List` component to simply display a 
     args={{
       icon: "heart",
       heading: "Miłość",
-      description:
-        "Kieruje naszą pasją i zaangażowaniem w ratowanie zwierząt, a każdego podopiecznego traktujemy z uczuciem i troską.",
     }}
   >
     {TemplateList.bind()}
@@ -45,12 +43,26 @@ The `Feature` element can be used with the `List` component to simply display a 
 
 <ArgsTable />
 
-export const Template = (args) => <Feature {...args} />
+export const Template = (args) => (
+  <Feature {...args}>
+    Kieruje naszą pasją i zaangażowaniem w ratowanie zwierząt, a każdego
+    podopiecznego traktujemy z uczuciem i troską.
+  </Feature>
+)
 
 export const TemplateList = (args) => (
   <List gap={16}>
-    <Feature {...args} />
-    <Feature {...args} />
-    <Feature {...args} />
+    <Feature {...args}>
+      Kieruje naszą pasją i zaangażowaniem w ratowanie zwierząt, a każdego
+      podopiecznego traktujemy z uczuciem i troską.
+    </Feature>
+    <Feature {...args}>
+      Kieruje naszą pasją i zaangażowaniem w ratowanie zwierząt, a każdego
+      podopiecznego traktujemy z uczuciem i troską.
+    </Feature>
+    <Feature {...args}>
+      Kieruje naszą pasją i zaangażowaniem w ratowanie zwierząt, a każdego
+      podopiecznego traktujemy z uczuciem i troską.
+    </Feature>
   </List>
 )
