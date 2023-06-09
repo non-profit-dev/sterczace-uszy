@@ -78,8 +78,9 @@ const VirtualAdoption = () => (
               <Styled.AdditionalNote variant="bodyTitle">
                 Swoje zwierzę wybrać możesz również poprzez stronę{" "}
                 <a
-                  href="www.ratujemyzwierzaki.pl/sterczaceuszy"
+                  href={globalData.fundraising.link}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   www.ratujemyzwierzaki.pl/sterczaceuszy
                 </a>
