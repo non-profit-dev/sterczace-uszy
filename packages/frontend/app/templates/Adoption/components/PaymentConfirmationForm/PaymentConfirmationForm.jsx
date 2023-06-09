@@ -6,7 +6,7 @@ import Typography from "design-system/components/typography"
 import Input from "design-system/components/input"
 import Select from "design-system/components/select"
 import Illustration from "design-system/components/illustration/Illustration"
-import Container from "design-system/components/container"
+
 import * as Styled from "./PaymentConfirmationForm.styled"
 
 const PaymentConfirmationForm = ({ data }) => {
@@ -47,7 +47,7 @@ const PaymentConfirmationForm = ({ data }) => {
       </Styled.ConfirmationWrapper>
     </Styled.ConfirmationContainer>
   ) : (
-    <Container>
+    <Styled.Container>
       <Styled.ConfirmationSendBanner
         heading="Wyślij potwierdzenie"
         subtitle="Poinformuj nas o swoim dobrym uczynku"
@@ -103,7 +103,7 @@ const PaymentConfirmationForm = ({ data }) => {
           </Styled.ButtonContainer>
         </Styled.Form>
       </Styled.FormWrapper>
-    </Container>
+    </Styled.Container>
   )
 }
 

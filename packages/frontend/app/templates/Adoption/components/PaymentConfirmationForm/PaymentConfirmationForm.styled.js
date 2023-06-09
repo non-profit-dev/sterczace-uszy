@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 import TextBanner from "design-system/patterns/textBanner"
-import Container from "design-system/components/container"
+import ContainerComponent from "design-system/components/container"
 
 export const FormWrapper = styled.div`
   max-width: 719px;
@@ -76,8 +76,31 @@ export const ConfirmationSendBanner = styled(TextBanner)`
   }
 `
 
-export const ConfirmationContainer = styled(Container)`
+export const ConfirmationContainer = styled(ContainerComponent)`
+  padding-top: 120px;
+  padding-bottom: 120px;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding: 0;
+    padding: 100px 0;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+`
+
+export const Container = styled(ContainerComponent)`
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 `
