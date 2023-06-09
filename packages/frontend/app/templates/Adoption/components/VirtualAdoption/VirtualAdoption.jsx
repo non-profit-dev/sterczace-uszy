@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
 import Illustration from "design-system/components/illustration"
@@ -64,14 +65,14 @@ const VirtualAdoption = () => (
           index !== 0 ? (
             <Styled.FeatureItem key={heading}>
               <Feature heading={heading} icon={icon}>
-                <span>{description}</span>
+                <span dangerouslySetInnerHTML={{ __html: description }} />
               </Feature>
             </Styled.FeatureItem>
           ) : (
             <div key={heading}>
               <Styled.FeatureItem>
                 <Feature heading={heading} icon={icon}>
-                  <span>{description}</span>
+                  <span dangerouslySetInnerHTML={{ __html: description }} />
                 </Feature>
               </Styled.FeatureItem>
               <Styled.AdditionalNote variant="bodyTitle">
