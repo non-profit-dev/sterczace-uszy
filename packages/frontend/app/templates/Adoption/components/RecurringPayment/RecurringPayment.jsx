@@ -35,7 +35,7 @@ const RecurringPayment = () => (
             <Panel
               title={
                 <Title
-                  text="Przelew jednorazowy lub zlecenie stałe"
+                  text="Zlecenie stałe"
                   iconStart="money"
                   variant="h5"
                   line={false}
@@ -44,9 +44,9 @@ const RecurringPayment = () => (
               accountNumber={globalData.accountNumber}
             >
               <Typography variant="bodyTitle">
-                Fundacja {globalData.organizationName} <br /> ul.{" "}
+                Fundacja {globalData.organizationName} <br />{" "}
                 {globalData.address.street}
-                , <br /> {globalData.address.zipCode} <br /> NIP
+                , <br /> {globalData.address.zipCode} <br /> NIP{" "}
                 {globalData.nip} <br />
                 Tytuł przelewu: Wsparcie dla Fundacji
               </Typography>
