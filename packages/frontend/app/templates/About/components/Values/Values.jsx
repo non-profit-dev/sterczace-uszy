@@ -60,12 +60,9 @@ const Values = () => {
         <Styled.FeatureWrapper>
           <List gap={40}>
             {values.map(({ heading, description, icon }) => (
-              <Feature
-                key={heading}
-                heading={heading}
-                description={description}
-                icon={icon}
-              />
+              <Feature key={heading} heading={heading} icon={icon}>
+                {description}
+              </Feature>
             ))}
           </List>
         </Styled.FeatureWrapper>
