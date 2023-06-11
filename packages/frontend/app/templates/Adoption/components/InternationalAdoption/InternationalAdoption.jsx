@@ -1,0 +1,97 @@
+import Container from "design-system/components/container"
+import Typography from "design-system/components/typography"
+import Image from "design-system/components/image"
+import TextBanner from "design-system/patterns/textBanner"
+
+import Feature from "design-system/patterns/feature"
+import Title from "design-system/components/title"
+import { useTheme } from "@emotion/react"
+import * as Styled from "./InternationalAdoption.styled"
+
+const features = [
+  {
+    title: "Wiek",
+    description: `Pies ma ukończone 3 miesiące.`,
+  },
+  {
+    title: "Opłata",
+    description: `Opłacisz szczepienie na wściekliznę, paszport i jeśli potrzeba chip.`,
+  },
+  {
+    title: "Kwarantanna",
+    description: `Ulokujesz psa w zaufanym miejscu na czas kwarantanny poszczepiennej (21 dni).`,
+  },
+  {
+    title: "Odbiór",
+    description: `Odbierzesz psa osobiście w Polsce.`,
+  },
+]
+
+const data = [
+  {
+    title: `Adopcja psa młodszego niż 3 miesiące`,
+    description: `Adopcja za granicę psa, który jeszcze nie ukończył 3 miesięcy jest możliwa, ale istnieje wtedy konieczność zapewnienia mu miejsca u zaufanej rodziny do osiągnięcia przez niego 3 miesięcy i wykonania formalności lub Umowa o dom tymczasowy z fundacją, wykluczając zwrot pieniędzy za opiekę weterynaryjną i karmę.`,
+  },
+  {
+    title: `Wyjątkowe sytuacje`,
+    description: `Istnieje możliwość zatrzymania psa w domu tymczasowym w wyjątkowych sytuacjach i za zgodą fundacji oraz do czasu szczepienia i kwarantanny poszczepiennej.. W takiej sytuacji adoptujący pokrywa koszty weterynaryjne, karmę i inne niezbędne rzeczy ustalone z Domem Tymczasowym.`,
+  },
+  {
+    title: `Ankieta i umowa do adopcji za granicę`,
+    description: `Adopcja za granicę nie wymaga wypełnienia innej ankiety niż standardowa. W umowie adopcyjnej istnieją dodatkowe punkty dotyczące ulokowania i utrzymania psa w Domu Tymczasowym.`,
+  },
+  {
+    title: `Warunki wyjazdu psa poza Polskę`,
+    description: `Warunkiem wyjazdu psa poza Polskę jest podpisanie oraz dotrzymanie wszystkich punktów umowy.
+    Jeśli jakiś paragraf umowy nie zostanie dotrzymany, Fundacja ma prawo nie wydać psa i adoptować go innej rodzinie bez obowiązku podpisania zrzeczenia się zwierzęcia oraz bez zwrotu kosztów, które dotychczas poniósł potencjalny Adoptujący.`,
+  },
+]
+
+const InternationalAdoption = () => {
+  const theme = useTheme()
+
+  return (
+    <Styled.SectionWrapper>
+      <Container as="section">
+        <TextBanner
+          heading="Adopcja za granicę"
+          tabletLayout="left"
+          mobileLayout="left"
+        >
+          <Typography variant="bodyTitle">
+            Adopcja za granicę przebiega podobnie do standardowej adopcji.
+            Jedynym dodatkowym elementem jest kwarantanna. Sprawdź jakie są 4
+            warunki, aby stała się możliwa.
+          </Typography>
+        </TextBanner>
+
+        <Styled.Content>
+          <Styled.ImageWrapper>
+            <Image src="/adoption/international-adoption.png" alt="" />
+          </Styled.ImageWrapper>
+
+          <Styled.Features>
+            {features.map(({ title, description }, i) => (
+              <Feature key="title" heading={title} count={i + 1} color="gray">
+                {description}
+              </Feature>
+            ))}
+          </Styled.Features>
+        </Styled.Content>
+
+        <Styled.MoreInfo>
+          {data.map(({ title, description }) => (
+            <Styled.TextBox key="title">
+              <Title text={title} />
+              <Typography variant="bodyTitle" color={theme.colors.gray[500]}>
+                {description}
+              </Typography>
+            </Styled.TextBox>
+          ))}
+        </Styled.MoreInfo>
+      </Container>
+    </Styled.SectionWrapper>
+  )
+}
+
+export default InternationalAdoption
