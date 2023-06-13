@@ -114,4 +114,4 @@ const plopGenerators = (plop) => {
   })
 }
 
-export default plopGenerators
+module.exports = plopGenerators
