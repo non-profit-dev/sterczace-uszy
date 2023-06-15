@@ -65,31 +65,33 @@ const InternationalAdoption = () => {
   return (
     <Styled.SectionWrapper>
       <Container as="section">
-        <TextBanner
-          heading="Adopcja za granicę"
-          tabletLayout="left"
-          mobileLayout="left"
-        >
-          <Typography variant="bodyTitle">
-            Adopcja za granicę przebiega podobnie do standardowej adopcji.
-            Jedynym dodatkowym elementem jest kwarantanna. Sprawdź jakie są 4
-            warunki, aby stała się możliwa.
-          </Typography>
-        </TextBanner>
-
-        <Styled.Content>
-          <Styled.ImageWrapper>
+        <Styled.Grid>
+          <Styled.Header>
+            <TextBanner
+              heading="Adopcja za granicę"
+              tabletLayout="left"
+              mobileLayout="left"
+            >
+              <Typography variant="bodyTitle">
+                Adopcja za granicę przebiega podobnie do standardowej adopcji.
+                Jedynym dodatkowym elementem jest kwarantanna. Sprawdź jakie są
+                4 warunki, aby stała się możliwa.
+              </Typography>
+            </TextBanner>
+          </Styled.Header>
+          <Styled.Image>
             <Image src="/adoption/international-adoption.png" alt="" />
-          </Styled.ImageWrapper>
-
+          </Styled.Image>
           <Styled.Features>
-            {features.map(({ title, description }, i) => (
-              <Feature key="title" heading={title} count={i + 1} color="gray">
-                {description}
-              </Feature>
-            ))}
+            <Styled.Content>
+              {features.map(({ title, description }, i) => (
+                <Feature key="title" heading={title} count={i + 1} color="gray">
+                  {description}
+                </Feature>
+              ))}
+            </Styled.Content>
           </Styled.Features>
-        </Styled.Content>
+        </Styled.Grid>
 
         <Styled.MoreInfo>
           {data.map(({ title, description, links }) => (
