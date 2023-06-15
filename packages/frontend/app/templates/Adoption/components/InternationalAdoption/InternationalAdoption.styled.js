@@ -50,3 +50,11 @@ export const MoreInfo = styled.div`
 export const ButtonWrapper = styled.div`
   margin-top: 30px;
 `
+
+export const Links = styled.div`
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 18px;
+`

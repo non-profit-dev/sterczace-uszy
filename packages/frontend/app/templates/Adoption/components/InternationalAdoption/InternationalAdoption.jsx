@@ -7,6 +7,7 @@ import TextBanner from "design-system/patterns/textBanner"
 import Feature from "design-system/patterns/feature"
 import Title from "design-system/components/title"
 import { useTheme } from "@emotion/react"
+import globalData from "shared/data"
 import * as Styled from "./InternationalAdoption.styled"
 
 const features = [
@@ -40,6 +41,16 @@ const data = [
   {
     title: `Ankieta i umowa do adopcji za granicę`,
     description: `Adopcja za granicę nie wymaga wypełnienia innej ankiety niż standardowa. W umowie adopcyjnej istnieją dodatkowe punkty dotyczące ulokowania i utrzymania psa w Domu Tymczasowym.`,
+    links: [
+      {
+        title: `Pobierz ankietę`,
+        href: globalData.surveys.preAdoption,
+      },
+      {
+        title: `Pobierz umowę adopcyjną za granicę`,
+        href: globalData.surveys.preAdoption,
+      },
+    ],
   },
   {
     title: `Warunki wyjazdu psa poza Polskę`,
@@ -81,12 +92,24 @@ const InternationalAdoption = () => {
         </Styled.Content>
 
         <Styled.MoreInfo>
-          {data.map(({ title, description }) => (
+          {data.map(({ title, description, links }) => (
             <Styled.TextBox key="title">
               <Title text={title} variant="h3" />
               <Typography variant="bodyTitle" color={theme.colors.gray[600]}>
                 {description}
               </Typography>
+
+              <Styled.Links>
+                {links?.map((link) => (
+                  <Button
+                    key={link.title}
+                    variant="text"
+                    iconStart="download"
+                    text={link.title}
+                    href={link.href}
+                  />
+                ))}
+              </Styled.Links>
             </Styled.TextBox>
           ))}
         </Styled.MoreInfo>
