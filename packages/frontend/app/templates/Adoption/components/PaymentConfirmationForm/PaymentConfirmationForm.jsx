@@ -5,6 +5,7 @@ import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
 import Input from "design-system/components/input"
 import Select from "design-system/components/select"
+import Checkbox from "design-system/components/checkbox"
 import Illustration from "design-system/components/illustration/Illustration"
 
 import * as Styled from "./PaymentConfirmationForm.styled"
@@ -101,6 +102,10 @@ const PaymentConfirmationForm = ({ data }) => {
               disabled={state.submitting}
             />
           </Styled.ButtonContainer>
+          <Checkbox
+            required
+            label="Lorem ipsua kfiosagmosaigsaio ,cpoasopvkfpaoskpokf ksckmcszjpo kcozpp ofkapwsodkpofkakv kposfksapo kfposakfpaok"
+          />
         </Styled.Form>
       </Styled.FormWrapper>
     </Styled.Container>
