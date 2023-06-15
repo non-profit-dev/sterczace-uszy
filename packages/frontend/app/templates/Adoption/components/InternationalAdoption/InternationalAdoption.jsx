@@ -1,6 +1,7 @@
 import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
 import Image from "design-system/components/image"
+import Button from "design-system/components/button"
 import TextBanner from "design-system/patterns/textBanner"
 
 import Feature from "design-system/patterns/feature"
@@ -82,13 +83,21 @@ const InternationalAdoption = () => {
         <Styled.MoreInfo>
           {data.map(({ title, description }) => (
             <Styled.TextBox key="title">
-              <Title text={title} />
-              <Typography variant="bodyTitle" color={theme.colors.gray[500]}>
+              <Title text={title} variant="h3" />
+              <Typography variant="bodyTitle" color={theme.colors.gray[600]}>
                 {description}
               </Typography>
             </Styled.TextBox>
           ))}
         </Styled.MoreInfo>
+
+        <Styled.ButtonWrapper>
+          <Button
+            variant="border"
+            text="Skontaktuj się z nami"
+            href="/kontakt"
+          />
+        </Styled.ButtonWrapper>
       </Container>
     </Styled.SectionWrapper>
   )

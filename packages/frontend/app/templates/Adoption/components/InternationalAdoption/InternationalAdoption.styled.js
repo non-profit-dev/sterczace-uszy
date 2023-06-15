@@ -28,7 +28,7 @@ export const Content = styled.div`
 `
 
 export const Features = styled.div`
-  max-width: 700px;
+  max-width: 640px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -44,5 +44,9 @@ export const MoreInfo = styled.div`
   max-width: 860px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 70px;
+`
+
+export const ButtonWrapper = styled.div`
+  margin-top: 30px;
 `
