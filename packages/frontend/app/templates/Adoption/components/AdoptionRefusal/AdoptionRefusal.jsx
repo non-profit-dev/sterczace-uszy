@@ -84,7 +84,7 @@ const AdoptionRefusal = () => (
           </Typography>
 
           <Typography variant="bodyTitle">
-            Bardzo często negatywna odpowiedz w sprawie konkretnego psa nie
+            Bardzo często negatywna odpowiedź w sprawie konkretnego psa nie
             znaczy, że nie możesz adoptować nowego przyjaciela w ogóle.
           </Typography>
 
