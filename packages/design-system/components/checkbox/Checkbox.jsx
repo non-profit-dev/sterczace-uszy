@@ -1,4 +1,4 @@
-import { bool, oneOf, string } from "prop-types"
+import { bool, string } from "prop-types"
 import Typography from "design-system/components/typography"
 import theme from "design-system/tokens/theme"
 import { useState } from "react"
@@ -6,9 +6,9 @@ import * as Styled from "./Checkbox.styled"
 
 const Checkbox = ({
   label,
-  state,
   required,
   disabled,
+  error,
   id,
   className,
   checked,
@@ -26,7 +26,7 @@ const Checkbox = ({
     <Styled.Container onClick={handleCheckboxChange}>
       <Styled.Checkbox
         checked={isChecked}
-        state={state}
+        error={error}
         required={required}
         disabled={disabled}
         type="checkbox"
@@ -48,8 +48,12 @@ const Checkbox = ({
         >
           {label}
         </Typography>
-        {required && !isChecked && state === "error" && (
-          <Typography variant="bodyTiny" color={theme.colors.error[100]}>
+        {error && (
+          <Typography
+            variant="bodyTiny"
+            color={theme.colors.error[100]}
+            error={error}
+          >
             Zaznacz zgodę.
           </Typography>
         )}
@@ -60,7 +64,7 @@ const Checkbox = ({
 
 Checkbox.propTypes = {
   label: string.isRequired,
-  state: oneOf(["error", "active"]),
+  error: bool,
   required: bool,
   disabled: bool,
   checked: bool,
@@ -69,8 +73,8 @@ Checkbox.propTypes = {
 }
 
 Checkbox.defaultProps = {
-  state: null,
   required: false,
+  error: false,
   disabled: false,
   checked: false,
   id: null,

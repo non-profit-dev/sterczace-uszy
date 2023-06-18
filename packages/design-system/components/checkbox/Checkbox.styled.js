@@ -11,20 +11,22 @@ export const Label = styled.label`
 export const Container = styled.div`
   position: relative;
   display: flex;
+  flex-shrink: 0;
   gap: 19px;
 `
 
 export const Checkbox = styled.input`
   appearance: none;
-  width: 22px;
+  min-width: 22px;
   height: 22px;
   border-radius: 2px;
   border: 1.5px solid;
-  border-color: ${({ state, theme }) =>
-    state === "error" ? theme.colors.error[100] : theme.colors.gray[500]};
+  border-color: ${({ theme, error }) => !error && theme.colors.gray[500]};
+  outline: ${({ error, theme }) =>
+    error && `2px solid ${theme.colors.error[100]}`};
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    width: 18px;
+    min-width: 18px;
     height: 18px;
   }
 
@@ -33,7 +35,7 @@ export const Checkbox = styled.input`
   }
 
   &:focus {
-    border: 1.5px solid ${({ theme }) => theme.colors.blue[100]};
+    outline: 1.5px solid ${({ theme }) => theme.colors.blue[100]};
   }
 
   &:active {

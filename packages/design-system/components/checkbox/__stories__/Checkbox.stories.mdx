@@ -14,7 +14,7 @@ Allows users to select single values for submission in a form.
   <Story
     name="Overview"
     args={{
-      label: "Text",
+      label: "Example label",
     }}
   >
     {Template.bind()}
@@ -25,7 +25,7 @@ Allows users to select single values for submission in a form.
   <Story
     name="Overview - disabled"
     args={{
-      label: "Text",
+      label: "Example label",
       disabled: true,
     }}
   >
@@ -37,20 +37,8 @@ Allows users to select single values for submission in a form.
   <Story
     name="Overview - error"
     args={{
-      label: "Text",
-      state: "error",
-    }}
-  >
-    {Template.bind()}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story
-    name="Overview - active"
-    args={{
-      label: "Text",
-      state: "acrive",
+      label: "Example label",
+      error: true,
     }}
   >
     {Template.bind()}
@@ -60,7 +48,7 @@ Allows users to select single values for submission in a form.
 <ArgsTable />
 
 export const Template = (args) => (
-  <div style={{ maxWidth: "270px" }}>
+  <div>
     <Checkbox {...args} />
   </div>
 )
