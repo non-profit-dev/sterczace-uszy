@@ -8,13 +8,11 @@ const Checkbox = ({ label, required, disabled, error, className, checked }) => {
   const [isChecked, setIsChecked] = useState(checked)
 
   const handleCheckboxChange = () => {
-    if (!disabled) {
-      setIsChecked((prev) => !prev)
-    }
+    setIsChecked((prev) => !prev)
   }
 
   return (
-    <Styled.Container onClick={handleCheckboxChange}>
+    <Styled.Container onClick={!disabled && handleCheckboxChange}>
       <Styled.Checkbox
         checked={isChecked}
         error={error}
