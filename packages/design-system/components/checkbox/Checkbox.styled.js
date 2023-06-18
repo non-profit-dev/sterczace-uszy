@@ -23,6 +23,7 @@ export const Checkbox = styled.input`
   border-color: ${({ theme, error }) => !error && theme.colors.gray[500]};
   outline: ${({ error, theme }) =>
     error && `2px solid ${theme.colors.error[100]}`};
+  margin-top: 2px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     min-width: 18px;
@@ -52,8 +53,8 @@ export const Checkbox = styled.input`
 
 export const CheckboxIcon = styled(Icon)`
   position: absolute;
-  top: 3px;
-  left: 3px;
+  top: 4px;
+  left: 4px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     top: 1px;

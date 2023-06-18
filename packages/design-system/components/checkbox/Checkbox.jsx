@@ -4,17 +4,8 @@ import theme from "design-system/tokens/theme"
 import { useState } from "react"
 import * as Styled from "./Checkbox.styled"
 
-const Checkbox = ({
-  label,
-  required,
-  disabled,
-  error,
-  id,
-  className,
-  checked,
-}) => {
-  const defaultChecked = checked || false
-  const [isChecked, setIsChecked] = useState(defaultChecked)
+const Checkbox = ({ label, required, disabled, error, className, checked }) => {
+  const [isChecked, setIsChecked] = useState(checked)
 
   const handleCheckboxChange = () => {
     if (!disabled) {
@@ -30,7 +21,7 @@ const Checkbox = ({
         required={required}
         disabled={disabled}
         type="checkbox"
-        id={id}
+        id="checkbox"
         className={className}
       />
       {isChecked && (
@@ -41,7 +32,7 @@ const Checkbox = ({
           data-testid="checkbox-icon"
         />
       )}
-      <Styled.Label>
+      <Styled.Label for="checkbox">
         <Typography
           variant="bodySmall"
           color={disabled ? theme.colors.gray[400] : theme.colors.gray[600]}
@@ -68,7 +59,6 @@ Checkbox.propTypes = {
   required: bool,
   disabled: bool,
   checked: bool,
-  id: string,
   className: string,
 }
 
@@ -77,7 +67,6 @@ Checkbox.defaultProps = {
   error: false,
   disabled: false,
   checked: false,
-  id: null,
   className: null,
 }
 

@@ -1,4 +1,4 @@
-import { render, screen } from "design-system/test-utils"
+import { render, screen, fireEvent } from "design-system/test-utils"
 
 import Checkbox from "design-system/components/checkbox"
 
@@ -21,5 +21,14 @@ describe(`Checkbox`, () => {
     render(<Checkbox label={label} error />)
     const errorMessage = screen.getByText("Zaznacz zgodę.")
     expect(errorMessage).toBeInTheDocument()
+  })
+
+  it("toggles the checked state when clicked", () => {
+    render(<Checkbox label={label} />)
+    const checkbox = screen.getByRole("checkbox")
+    fireEvent.click(checkbox)
+    expect(checkbox.checked).toBe(true)
+    fireEvent.click(checkbox)
+    expect(checkbox.checked).toBe(false)
   })
 })
