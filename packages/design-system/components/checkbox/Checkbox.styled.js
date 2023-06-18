@@ -57,7 +57,7 @@ export const CheckboxIcon = styled(Icon)`
   left: 4px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    top: 1px;
+    top: 3px;
     left: 1px;
   }
 `
