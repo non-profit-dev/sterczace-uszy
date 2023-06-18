@@ -36,7 +36,7 @@ const data = [
   },
   {
     title: `Wyjątkowe sytuacje`,
-    description: `Istnieje możliwość zatrzymania psa w domu tymczasowym w wyjątkowych sytuacjach i za zgodą fundacji oraz do czasu szczepienia i kwarantanny poszczepiennej.. W takiej sytuacji adoptujący pokrywa koszty weterynaryjne, karmę i inne niezbędne rzeczy ustalone z Domem Tymczasowym.`,
+    description: `Istnieje możliwość zatrzymania psa w domu tymczasowym w wyjątkowych sytuacjach i za zgodą fundacji oraz do czasu szczepienia i kwarantanny poszczepiennej. W takiej sytuacji adoptujący pokrywa koszty weterynaryjne, karmę i inne niezbędne rzeczy ustalone z Domem Tymczasowym.`,
   },
   {
     title: `Ankieta i umowa do adopcji za granicę`,
