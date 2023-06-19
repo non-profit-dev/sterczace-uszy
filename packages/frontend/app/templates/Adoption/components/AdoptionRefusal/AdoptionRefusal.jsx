@@ -80,7 +80,6 @@ const AdoptionRefusal = () => (
             psa przeczytać uważnie jego opis na naszej stronie, aby dowiedzieć
             się jakie ma potrzeby, temperament oraz jakie jest jego zachowanie.
             To sprawi, że łatwiej będzie Ci ocenić czy możesz mu to zapewnić.
-            się!
           </Typography>
 
           <Typography variant="bodyTitle">
@@ -95,8 +94,7 @@ const AdoptionRefusal = () => (
 
           <Typography variant="bodyTitle">
             Jeśli uważasz, że spełniasz warunki i jesteś super rodziną - spróbuj
-            jeszcze raz! <br />
-            <strong>Nie poddawaj się!</strong>
+            jeszcze raz! <strong>Nie poddawaj się!</strong>
           </Typography>
         </Styled.MoreInfo>
       </Styled.Content>

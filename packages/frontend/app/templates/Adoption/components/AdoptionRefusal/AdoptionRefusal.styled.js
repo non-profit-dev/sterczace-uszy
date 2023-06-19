@@ -24,10 +24,11 @@ export const Features = styled.div`
 `
 
 export const MoreInfo = styled.div`
+  max-width: 750px;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 `
 
 export const Header = styled.div`
