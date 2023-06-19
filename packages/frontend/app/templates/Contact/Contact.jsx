@@ -1,4 +1,5 @@
 import { useForm } from "@formspree/react"
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 
 import Container from "design-system/components/container/Container"
 
@@ -15,8 +16,10 @@ import Response from "./components/Response"
 import * as Styled from "./Contact.styled"
 
 const Contact = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha()
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM_ID, {
     data: {
+      "g-recaptcha-response": executeRecaptcha,
       subject: "Kontakt - nowa wiadomość",
     },
   })
