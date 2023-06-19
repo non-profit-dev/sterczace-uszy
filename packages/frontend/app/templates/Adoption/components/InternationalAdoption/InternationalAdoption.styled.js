@@ -5,11 +5,11 @@ export const SectionWrapper = styled.div`
   padding: 120px 0;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding: 100px 0;
+    padding: 0 0 100px 0;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding: 60px 0;
+    padding: 0 0 60px 0;
   }
 `
 
