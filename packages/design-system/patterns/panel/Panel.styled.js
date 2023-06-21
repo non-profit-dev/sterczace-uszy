@@ -9,6 +9,7 @@ export const PanelContent = styled.div`
   padding: 20px;
   border: 1px dashed ${({ theme }) => theme.colors.primary[400]};
   border-radius: 10px;
+  background: ${({ theme }) => theme.colors.neutrals[100]};
 `
 
 export const Content = styled.div`

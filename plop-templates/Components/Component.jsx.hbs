@@ -1,0 +1,14 @@
+import { node } from "prop-types"
+import * as Styled from "./{{pascalCase name}}.styled"
+
+const {{pascalCase name}} = ({ children }) => (
+  <Styled.Container>{children}</Styled.Container>
+)
+
+{{pascalCase name}}.propTypes = {
+  children: node.isRequired,
+}
+
+{{pascalCase name}}.defaultProps = {}
+
+export default {{pascalCase name}}

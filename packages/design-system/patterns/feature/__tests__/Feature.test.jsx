@@ -8,7 +8,11 @@ const icon = "check"
 
 describe(`Feature`, () => {
   it(`renders with default properties`, () => {
-    render(<Feature heading={heading} description={description} icon={icon} />)
+    render(
+      <Feature heading={heading} icon={icon}>
+        {description}
+      </Feature>
+    )
 
     expect(screen.getByText(heading)).toBeInTheDocument()
     expect(screen.getByTitle(icon)).toBeInTheDocument()
