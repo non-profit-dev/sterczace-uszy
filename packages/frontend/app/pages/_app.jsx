@@ -45,7 +45,9 @@ const MyApp = ({ Component, pageProps }) => (
       <meta name="theme-color" content="#ffffff" />
     </Head>
     <ApolloProvider client={client}>
-      <GoogleReCaptchaProvider reCaptchaKey={process.env.RECAPTCHA_KEY}>
+      <GoogleReCaptchaProvider
+        reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY}
+      >
         <ThemeProvider theme={theme}>
           <GlobalReset />
           <Component {...pageProps} />
