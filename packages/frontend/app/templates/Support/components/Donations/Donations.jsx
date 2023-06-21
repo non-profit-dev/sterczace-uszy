@@ -71,6 +71,7 @@ const Donations = () => {
               ) : (
                 <Styled.CopyButton
                   onClick={() => copyToClipboard(globalData.accountNumber)}
+                  title="Skopiuj numer konta"
                 >
                   <Icon name="copy" color={theme.colors.primary[500]} />
                 </Styled.CopyButton>

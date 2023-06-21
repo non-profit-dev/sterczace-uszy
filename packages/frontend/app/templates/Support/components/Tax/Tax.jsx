@@ -63,6 +63,7 @@ const Tax = () => {
                 ) : (
                   <Styled.CopyButton
                     onClick={() => copyToClipboardKrs("0000270261")}
+                    title="Skopiuj numer KRS"
                   >
                     <Icon name="copy" color={theme.colors.primary[500]} />
                   </Styled.CopyButton>
@@ -88,6 +89,7 @@ const Tax = () => {
                         `Fundacja ${globalData.organizationName} 13146`
                       )
                     }
+                    title="Skopiuj dopisek"
                   >
                     <Icon name="copy" color={theme.colors.primary[500]} />
                   </Styled.CopyButton>
