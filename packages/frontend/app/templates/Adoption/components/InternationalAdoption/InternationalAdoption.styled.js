@@ -1,5 +1,7 @@
 import styled from "@emotion/styled"
 
+import ImageComponent from "design-system/components/image"
+
 export const SectionWrapper = styled.div`
   background: ${({ theme }) => theme.colors.complementary[100]};
   padding: 120px 0;
@@ -72,18 +74,23 @@ export const Header = styled.div`
   grid-area: header;
 `
 
-export const Image = styled.div`
+export const ImageWrapper = styled.div`
   grid-area: image;
   max-height: 800px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 100vw;
-    margin-left: -70px;
-    grid-template-columns: 1fr;
+    margin-left: -56px;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    margin-left: -40px;
+    margin-left: -24px;
+  }
+`
+
+export const Image = styled(ImageComponent)`
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    border-radius: 0;
   }
 `
 

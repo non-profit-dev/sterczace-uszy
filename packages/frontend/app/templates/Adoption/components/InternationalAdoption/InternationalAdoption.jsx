@@ -1,6 +1,5 @@
 import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
-import Image from "design-system/components/image"
 import Button from "design-system/components/button"
 import TextBanner from "design-system/patterns/textBanner"
 
@@ -79,9 +78,9 @@ const InternationalAdoption = () => {
               </Typography>
             </TextBanner>
           </Styled.Header>
-          <Styled.Image>
-            <Image src="/adoption/international-adoption.png" alt="" />
-          </Styled.Image>
+          <Styled.ImageWrapper>
+            <Styled.Image src="/adoption/international-adoption.png" alt="" />
+          </Styled.ImageWrapper>
           <Styled.Features>
             <Styled.Content>
               {features.map(({ title, description }, i) => (
