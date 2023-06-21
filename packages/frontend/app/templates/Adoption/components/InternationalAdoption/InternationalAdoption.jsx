@@ -48,7 +48,7 @@ const data = [
       },
       {
         title: `Pobierz umowę adopcyjną za granicę`,
-        href: globalData.surveys.preAdoption,
+        href: globalData.agreements.preAdoption,
       },
     ],
   },
