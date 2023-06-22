@@ -61,5 +61,6 @@ export const InputContainer = styled.div`
 `
 export const ButtonContainer = styled.div`
   margin-top: 20px;
+  margin-bottom: 32px;
   align-self: flex-start;
 `

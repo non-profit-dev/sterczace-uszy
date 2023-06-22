@@ -4,6 +4,7 @@ import { shape, arrayOf, string } from "prop-types"
 import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
 import Input from "design-system/components/input"
+import Checkbox from "design-system/components/checkbox"
 import Select from "design-system/components/select"
 import Illustration from "design-system/components/illustration/Illustration"
 
@@ -101,6 +102,24 @@ const PaymentConfirmationForm = ({ data }) => {
               disabled={state.submitting}
             />
           </Styled.ButtonContainer>
+          <Checkbox
+            id="virtual-adoption"
+            label={
+              <>
+                Wysyłając formularz kontaktowy wyrażasz zgodę na przetwarzanie
+                Twoich danych osobowych w celu obsługi Twojego zapytania.
+                Przeczytaj{" "}
+                <a
+                  href="/polityka-prywatnosci"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Politykę Prywatności
+                </a>
+                , aby poznać szczegóły.
+              </>
+            }
+          />
         </Styled.Form>
       </Styled.FormWrapper>
     </Styled.Container>
