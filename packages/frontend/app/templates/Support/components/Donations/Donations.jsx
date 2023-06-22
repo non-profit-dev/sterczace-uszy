@@ -1,8 +1,8 @@
 import { useTheme } from "@emotion/react"
 
 import Container from "design-system/components/container"
+import IconButton from "design-system/components/iconButton"
 import Title from "design-system/components/title"
-import Icon from "design-system/components/icon"
 import Typography from "design-system/components/typography"
 
 import TextBanner from "design-system/patterns/textBanner"
@@ -69,12 +69,13 @@ const Donations = () => {
                   Skopiowano
                 </Styled.CopyInfo>
               ) : (
-                <Styled.CopyButton
+                <IconButton
+                  name="copy"
                   onClick={() => copyToClipboard(globalData.accountNumber)}
+                  size="medium"
+                  ariaLabel="Copy bank account number"
                   title="Skopiuj numer konta"
-                >
-                  <Icon name="copy" color={theme.colors.primary[500]} />
-                </Styled.CopyButton>
+                />
               )}
             </Typography>
           </Styled.Box>

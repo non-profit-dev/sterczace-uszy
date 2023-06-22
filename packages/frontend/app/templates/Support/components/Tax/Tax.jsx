@@ -1,8 +1,8 @@
 import { useTheme } from "@emotion/react"
 
 import Count from "design-system/components/count"
-import Icon from "design-system/components/icon"
 import Container from "design-system/components/container"
+import IconButton from "design-system/components/iconButton"
 import Typography from "design-system/components/typography"
 import Illustration from "design-system/components/illustration"
 
@@ -61,12 +61,13 @@ const Tax = () => {
                     Skopiowano
                   </Styled.CopyInfo>
                 ) : (
-                  <Styled.CopyButton
+                  <IconButton
+                    name="copy"
                     onClick={() => copyToClipboardKrs("0000270261")}
+                    size="medium"
+                    ariaLabel="Copy KRS number"
                     title="Skopiuj numer KRS"
-                  >
-                    <Icon name="copy" color={theme.colors.primary[500]} />
-                  </Styled.CopyButton>
+                  />
                 )}
               </Typography>
             </Styled.Info>
@@ -83,16 +84,17 @@ const Tax = () => {
                     Skopiowano
                   </Styled.CopyInfo>
                 ) : (
-                  <Styled.CopyButton
+                  <IconButton
+                    name="copy"
                     onClick={() =>
                       copyToClipboard(
                         `Fundacja ${globalData.organizationName} 13146`
                       )
                     }
+                    size="medium"
+                    ariaLabel="Copy tax note"
                     title="Skopiuj dopisek"
-                  >
-                    <Icon name="copy" color={theme.colors.primary[500]} />
-                  </Styled.CopyButton>
+                  />
                 )}
               </Typography>
             </Styled.Info>
