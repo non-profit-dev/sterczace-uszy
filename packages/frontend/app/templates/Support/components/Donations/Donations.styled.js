@@ -61,4 +61,5 @@ export const CopyInfo = styled(Typography)`
   padding-left: 4px;
   vertical-align: middle;
   align-items: center;
+  border: 1px solid green;
 `
