@@ -63,4 +63,8 @@ export const ButtonContainer = styled.div`
   margin-top: 20px;
   margin-bottom: 32px;
   align-self: flex-start;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    margin-bottom: 16px;
+  }
 `

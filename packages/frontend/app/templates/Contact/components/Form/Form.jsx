@@ -56,12 +56,6 @@ const Form = ({ handleSubmit, submitting }) => {
           name="Wiadomość"
           minLength={30}
         />
-        <Styled.ButtonContainer>
-          <Button
-            text={submitting ? "Wysyłanie" : "Wyślij"}
-            disabled={submitting}
-          />
-        </Styled.ButtonContainer>
         <Checkbox
           id="virtual-adoption"
           label={
@@ -75,7 +69,14 @@ const Form = ({ handleSubmit, submitting }) => {
               , aby poznać szczegóły.
             </>
           }
+          required
         />
+        <Styled.ButtonContainer>
+          <Button
+            text={submitting ? "Wysyłanie" : "Wyślij"}
+            disabled={submitting}
+          />
+        </Styled.ButtonContainer>
       </Styled.Form>
     </Styled.FormContainer>
   )

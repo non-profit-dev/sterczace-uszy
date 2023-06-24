@@ -96,30 +96,33 @@ const PaymentConfirmationForm = ({ data }) => {
             defaultValue={petNames[0]}
             required
           />
+          <Styled.CheckboxContainer>
+            <Checkbox
+              id="virtual-adoption"
+              label={
+                <>
+                  Wysyłając prośbę o potwierdzenie adopcji wirtualnej wyrażasz
+                  zgodę na przetwarzanie Twoich danych osobowych w celu kontaktu
+                  w sprawach związanych z pupilem. Przeczytaj{" "}
+                  <a
+                    href="/polityka-prywatnosci"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Politykę Prywatności
+                  </a>
+                  , aby poznać szczegóły.
+                </>
+              }
+              required
+            />
+          </Styled.CheckboxContainer>
           <Styled.ButtonContainer>
             <Button
               text={state.submitting ? "Wysyłanie" : "Wyślij potwierdzenie"}
               disabled={state.submitting}
             />
           </Styled.ButtonContainer>
-          <Checkbox
-            id="virtual-adoption"
-            label={
-              <>
-                Wysyłając formularz kontaktowy wyrażasz zgodę na przetwarzanie
-                Twoich danych osobowych w celu obsługi Twojego zapytania.
-                Przeczytaj{" "}
-                <a
-                  href="/polityka-prywatnosci"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Politykę Prywatności
-                </a>
-                , aby poznać szczegóły.
-              </>
-            }
-          />
         </Styled.Form>
       </Styled.FormWrapper>
     </Styled.Container>

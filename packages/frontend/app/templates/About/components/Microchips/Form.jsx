@@ -80,7 +80,7 @@ const Form = () => {
         id="virtual-adoption"
         label={
           <>
-            Wysyłając formularz kontaktowy wyrażasz zgodę na przetwarzanie
+            Wysyłając prośbę o kod promocyjny wyrażasz zgodę na przetwarzanie
             Twoich danych osobowych w celu obsługi Twojego zapytania. Przeczytaj{" "}
             <a href="/polityka-prywatnosci" target="_blank" rel="noreferrer">
               Politykę Prywatności
@@ -88,6 +88,7 @@ const Form = () => {
             , aby poznać szczegóły.
           </>
         }
+        required
       />
     </Styled.Form>
   )
