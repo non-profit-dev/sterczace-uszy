@@ -1,7 +1,6 @@
 import styled from "@emotion/styled"
 import TextBanner from "design-system/patterns/textBanner"
 import ContainerComponent from "design-system/components/container"
-import Checkbox from "design-system/components/checkbox"
 
 export const FormWrapper = styled.div`
   max-width: 719px;
