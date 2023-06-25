@@ -24,7 +24,8 @@ export const Icon = styled.div`
   height: 75px;
   padding: 15px;
   border-radius: 50%;
-  background: ${({ theme }) => theme.colors.primary[500]};
+  background: ${({ color, theme }) =>
+    color === `primary` ? theme.colors.primary[500] : theme.colors.gray[500]};
   display: flex;
   justify-content: center;
   align-items: center;

@@ -15,6 +15,7 @@ const GlobalReset = () => (
       body {
         margin: 0;
         font-family: ${theme.fontFamily};
+        overflow-x: hidden;
       }
 
       ul {

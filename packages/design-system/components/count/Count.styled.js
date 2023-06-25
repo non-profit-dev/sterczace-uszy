@@ -23,23 +23,25 @@ const sizes = {
   },
 }
 
-export const Count = styled.p(
-  ({ size, theme }) => `
- font-size : ${sizes[size].desktop};
-  ${theme.breakpoints.tabletLg} {
-    font-size: ${sizes[size].tablet};
+export const Count = styled.p`
+  font-size: ${({ size }) => sizes[size].desktop};
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    font-size: ${({ size }) => sizes[size].tablet};
   }
-  ${theme.breakpoints.mobileLg} {
-    font-size: ${sizes[size].mobile};
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    font-size: ${({ size }) => sizes[size].mobile};
   }
   text-align: center;
   align-items: flex-end;
   display: inline-flex;
   font-weight: 900;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   line-height: 74%;
-  color: ${theme.colors.primary[500]};
+  color: ${({ color, theme }) =>
+    color === `primary`
+      ? theme.colors.primary[500]
+      : theme.colors.neutrals[100]};
   margin: 0;
   padding: 0;
 `
-)

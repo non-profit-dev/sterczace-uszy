@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useForm } from "@formspree/react"
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 import { shape, arrayOf, string } from "prop-types"
 import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
@@ -12,10 +13,12 @@ import * as Styled from "./PaymentConfirmationForm.styled"
 
 const PaymentConfirmationForm = ({ data }) => {
   const [activeForm, setActiveForm] = useState(true)
+  const { executeRecaptcha } = useGoogleReCaptcha()
   const [state, handleSubmit] = useForm(
     process.env.NEXT_PUBLIC_CONFIRM_VIRTUAL_ADOPTION_FORM_ID,
     {
       data: {
+        "g-recaptcha-response": executeRecaptcha,
         subject: "Potwierdzenie adopcji wirtualnej",
       },
     }

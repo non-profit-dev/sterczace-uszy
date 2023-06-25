@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useForm } from "@formspree/react"
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 
 import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
@@ -12,8 +13,10 @@ import * as Styled from "./Microchips.styled"
 
 const Form = () => {
   const [activeForm, setActiveForm] = useState(true)
+  const { executeRecaptcha } = useGoogleReCaptcha()
   const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_PROMO_FORM_ID, {
     data: {
+      "g-recaptcha-response": executeRecaptcha,
       subject: "[SAFE ANIMAL] Prośba o kod promocyjny",
     },
   })
