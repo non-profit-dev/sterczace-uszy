@@ -27,3 +27,7 @@ export const InputContainer = styled.div`
 export const ButtonContainer = styled.div`
   align-self: flex-start;
 `
+export const CheckboxContainer = styled.div`
+  margin-top: 16px;
+  margin-bottom: 16px;
+`

@@ -70,26 +70,29 @@ const Form = () => {
         defaultValue="1"
         required
       />
+      <Styled.CheckboxContainer>
+        <Checkbox
+          id="promo-code"
+          label={
+            <>
+              Wysyłając prośbę o kod promocyjny wyrażasz zgodę na przetwarzanie
+              Twoich danych osobowych w celu obsługi Twojego zapytania.
+              Przeczytaj{" "}
+              <a href="/polityka-prywatnosci" target="_blank" rel="noreferrer">
+                Politykę Prywatności
+              </a>
+              , aby poznać szczegóły.
+            </>
+          }
+          required
+        />
+      </Styled.CheckboxContainer>
       <Styled.ButtonContainer>
         <Button
           text={state.submitting ? "Wysyłanie" : "Poproś o kod promocyjny"}
           disabled={state.submitting}
         />
       </Styled.ButtonContainer>
-      <Checkbox
-        id="virtual-adoption"
-        label={
-          <>
-            Wysyłając prośbę o kod promocyjny wyrażasz zgodę na przetwarzanie
-            Twoich danych osobowych w celu obsługi Twojego zapytania. Przeczytaj{" "}
-            <a href="/polityka-prywatnosci" target="_blank" rel="noreferrer">
-              Politykę Prywatności
-            </a>
-            , aby poznać szczegóły.
-          </>
-        }
-        required
-      />
     </Styled.Form>
   )
 }

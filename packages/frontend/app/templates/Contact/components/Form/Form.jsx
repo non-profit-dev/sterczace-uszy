@@ -57,7 +57,7 @@ const Form = ({ handleSubmit, submitting }) => {
           minLength={30}
         />
         <Checkbox
-          id="virtual-adoption"
+          id="contact"
           label={
             <>
               Wysyłając formularz kontaktowy wyrażasz zgodę na przetwarzanie
