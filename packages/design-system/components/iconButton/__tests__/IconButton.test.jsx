@@ -100,8 +100,8 @@ describe(`IconButton`, () => {
       />
     )
 
-    fireEvent.mouseOver(await screen.getByTitle(iconName))
+    fireEvent.mouseOver(screen.getByTitle(iconName))
 
-    expect(await screen.getByTitle(title)).toBeInTheDocument()
+    expect(screen.getByTitle(title)).toBeInTheDocument()
   })
 })
