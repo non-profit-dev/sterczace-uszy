@@ -36,6 +36,7 @@ import DecisionHome from "./DecisionHome.svg"
 import DecisionPaw from "./DecisionPaw.svg"
 import DecisionHeart from "./DecisionHeart.svg"
 import Dot from "./Dot.svg"
+import Alert from "./Alert.svg"
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -76,6 +77,7 @@ export const icons = {
   decisionPaw: DecisionPaw,
   decisionHeart: DecisionHeart,
   dot: Dot,
+  alert: Alert,
 }
 
 export {
@@ -116,4 +118,5 @@ export {
   DecisionPaw,
   DecisionHeart,
   Dot,
+  Alert,
 }
