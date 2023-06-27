@@ -1,5 +1,6 @@
 import Head from "next/head"
 import { ThemeProvider } from "@emotion/react"
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 import { func, shape } from "prop-types"
 import { ApolloProvider } from "@apollo/client"
 import "swiper/swiper-bundle.css"
@@ -44,11 +45,15 @@ const MyApp = ({ Component, pageProps }) => (
       <meta name="theme-color" content="#ffffff" />
     </Head>
     <ApolloProvider client={client}>
-      <ThemeProvider theme={theme}>
-        <GlobalReset />
-        <Component {...pageProps} />
-        <Analytics />
-      </ThemeProvider>
+      <GoogleReCaptchaProvider
+        reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY}
+      >
+        <ThemeProvider theme={theme}>
+          <GlobalReset />
+          <Component {...pageProps} />
+          <Analytics />
+        </ThemeProvider>
+      </GoogleReCaptchaProvider>
     </ApolloProvider>
   </>
 )
