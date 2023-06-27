@@ -40,9 +40,12 @@ export const InputContainer = styled.div`
   }
 `
 export const ButtonContainer = styled.div`
-  margin-top: 20px;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   align-self: flex-start;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    margin-bottom: 16px;
+  }
 `
 
 export const ConfirmationWrapper = styled.div`
@@ -103,4 +106,8 @@ export const Container = styled(ContainerComponent)`
     padding-top: 60px;
     padding-bottom: 60px;
   }
+`
+export const CheckboxContainer = styled.div`
+  margin-top: 16px;
+  margin-bottom: 16px;
 `

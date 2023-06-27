@@ -5,6 +5,7 @@ import { shape, arrayOf, string } from "prop-types"
 import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
 import Input from "design-system/components/input"
+import Checkbox from "design-system/components/checkbox"
 import Select from "design-system/components/select"
 import Illustration from "design-system/components/illustration/Illustration"
 
@@ -98,6 +99,27 @@ const PaymentConfirmationForm = ({ data }) => {
             defaultValue={petNames[0]}
             required
           />
+          <Styled.CheckboxContainer>
+            <Checkbox
+              id="virtual-adoption"
+              label={
+                <>
+                  Wysyłając prośbę o potwierdzenie adopcji wirtualnej wyrażasz
+                  zgodę na przetwarzanie Twoich danych osobowych w celu kontaktu
+                  w sprawach związanych z pupilem. Przeczytaj{" "}
+                  <a
+                    href="/polityka-prywatnosci"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Politykę Prywatności
+                  </a>
+                  , aby poznać szczegóły.
+                </>
+              }
+              required
+            />
+          </Styled.CheckboxContainer>
           <Styled.ButtonContainer>
             <Button
               text={state.submitting ? "Wysyłanie" : "Wyślij potwierdzenie"}
