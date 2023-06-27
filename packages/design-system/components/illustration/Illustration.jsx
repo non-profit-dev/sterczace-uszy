@@ -25,6 +25,8 @@ import Hugging from "design-system/tokens/illustrations/hugging.svg"
 import Information from "design-system/tokens/illustrations/information.svg"
 import HeartLine from "design-system/tokens/illustrations/heartLine.svg"
 import PawHeart from "design-system/tokens/illustrations/pawHeart.svg"
+import Smartphone from "design-system/tokens/illustrations/smartphone.svg"
+import Computer from "design-system/tokens/illustrations/computer.svg"
 
 export const illustrations = {
   heartWithDogFace: HeartWithDogFace,
@@ -52,6 +54,8 @@ export const illustrations = {
   information: Information,
   heartLine: HeartLine,
   pawHeart: PawHeart,
+  smartphone: Smartphone,
+  computer: Computer,
 }
 
 const Illustration = ({ name, className }) => {

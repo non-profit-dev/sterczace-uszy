@@ -33,6 +33,9 @@ const globalData = {
     text: "www.ratujemyzwierzaki.pl",
     link: "https://www.ratujemyzwierzaki.pl/sterczaceuszy",
   },
+  fanimani: {
+    link: "https://fanimani.pl/sterczaceuszy/",
+  },
   surveys: {
     preAdoption:
       "https://docs.google.com/document/d/1hKhjrIHAuosckCYc-DP4DIuMxG4GhsPI/edit?fbclid=IwAR3nJ1rn9BzM8NZg--T1SET96Xxg0WVZ40IC98ZHfRDWW9kSstgzWYlaDQg",
