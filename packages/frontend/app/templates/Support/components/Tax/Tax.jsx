@@ -65,7 +65,7 @@ const Tax = () => {
                     name="copy"
                     onClick={() => copyToClipboardKrs("0000270261")}
                     size="medium"
-                    ariaLabel="Copy KRS number"
+                    ariaLabel="Skopiuj numer KRS"
                     title="Skopiuj numer KRS"
                   />
                 )}
