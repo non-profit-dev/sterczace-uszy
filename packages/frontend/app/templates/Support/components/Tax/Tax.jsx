@@ -92,7 +92,7 @@ const Tax = () => {
                       )
                     }
                     size="medium"
-                    ariaLabel="Copy tax note"
+                    ariaLabel="Skopiuj dopisek"
                     title="Skopiuj dopisek"
                   />
                 )}
