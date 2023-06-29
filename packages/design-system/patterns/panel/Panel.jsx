@@ -33,6 +33,7 @@ const Panel = ({ className, title, children, accountNumber }) => {
               name="copy"
               onClick={() => copyToClipboard(accountNumber)}
               ariaLabel="Skopiuj numer konta"
+              title="Skopiuj numer konta"
             />
           )}
         </Styled.AccountNumber>

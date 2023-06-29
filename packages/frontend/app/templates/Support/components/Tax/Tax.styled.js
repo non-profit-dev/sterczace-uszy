@@ -65,12 +65,6 @@ export const Header = styled.div`
   gap: 30px;
 `
 
-export const CopyButton = styled.button`
-  display: inline;
-  cursor: pointer;
-  vertical-align: middle;
-`
-
 export const CopyInfo = styled(Typography)`
   display: inline-flex;
   min-height: 30.5px;
