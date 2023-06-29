@@ -73,7 +73,7 @@ const Donations = () => {
                   name="copy"
                   onClick={() => copyToClipboard(globalData.accountNumber)}
                   size="medium"
-                  ariaLabel="Copy bank account number"
+                  ariaLabel="Skopiuj numer konta"
                   title="Skopiuj numer konta"
                 />
               )}
