@@ -41,7 +41,10 @@ const Navigation = () => {
               ))}
             </Styled.Menu>
 
-            <Styled.MenuIcon onClick={() => setIsOpen(!isOpen)}>
+            <Styled.MenuIcon
+              onClick={() => setIsOpen(!isOpen)}
+              title={isOpen ? "Zwiń" : "Rozwiń"}
+            >
               <Icon name={isOpen ? "close" : "menu"} />
             </Styled.MenuIcon>
           </Styled.NavigationRow>

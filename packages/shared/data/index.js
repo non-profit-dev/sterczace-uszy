@@ -4,8 +4,14 @@ const globalData = {
   krs: "0000964494",
   accountNumber: "41 1870 1045 2078 1072 8639 0001",
   socialMedia: {
-    facebook: "https://www.facebook.com/sterczaceuszy",
-    instagram: "https://www.instagram.com/sterczaceuszy",
+    facebook: {
+      link: "https://www.facebook.com/sterczaceuszy",
+      title: "Przejdź na nasz profil na Facebooku",
+    },
+    instagram: {
+      link: "https://www.instagram.com/sterczaceuszy",
+      title: "Przejdź na nasz profil na Instagramie",
+    },
   },
   contact: {
     mail: {

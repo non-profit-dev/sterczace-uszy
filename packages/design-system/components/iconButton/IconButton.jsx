@@ -16,6 +16,7 @@ const IconButton = ({
   ariaLabel,
   className,
   target,
+  title,
 }) => (
   <Styled.IconButton
     as={href ? `a` : `button`}
@@ -24,6 +25,7 @@ const IconButton = ({
     aria-label={ariaLabel}
     className={className}
     target={target}
+    title={title}
   >
     <Icon name={name} size={size} color={color} />
   </Styled.IconButton>
@@ -38,6 +40,7 @@ IconButton.propTypes = {
   color: string,
   size: oneOf(["small", "medium", "large", "xlarge", "xxlarge"]),
   onClick: func,
+  title: string,
   /**
    * It's used to provide a text description for assistive technologies, like screen readers.
    */
@@ -53,6 +56,7 @@ IconButton.defaultProps = {
   onClick: null,
   className: null,
   target: null,
+  title: null,
 }
 
 export default IconButton

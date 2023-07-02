@@ -6,6 +6,7 @@ import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
 import Input from "design-system/components/input"
 import Select from "design-system/components/select"
+import Checkbox from "design-system/components/checkbox"
 
 import TextBanner from "design-system/patterns/textBanner"
 import * as Styled from "./Microchips.styled"
@@ -72,6 +73,23 @@ const Form = () => {
         defaultValue="1"
         required
       />
+      <Styled.CheckboxContainer>
+        <Checkbox
+          id="promo-code"
+          label={
+            <>
+              Wysyłając prośbę o kod promocyjny wyrażasz zgodę na przetwarzanie
+              Twoich danych osobowych w celu obsługi Twojego zapytania.
+              Przeczytaj{" "}
+              <a href="/polityka-prywatnosci" target="_blank" rel="noreferrer">
+                Politykę Prywatności
+              </a>
+              , aby poznać szczegóły.
+            </>
+          }
+          required
+        />
+      </Styled.CheckboxContainer>
       <Styled.ButtonContainer>
         <Button
           text={state.submitting ? "Wysyłanie" : "Poproś o kod promocyjny"}

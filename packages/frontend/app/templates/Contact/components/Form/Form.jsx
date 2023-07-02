@@ -6,6 +6,7 @@ import Input from "design-system/components/input"
 import Select from "design-system/components/select"
 import Textarea from "design-system/components/textarea"
 import Button from "design-system/components/button"
+import Checkbox from "design-system/components/checkbox"
 
 import * as Styled from "./Form.styled"
 
@@ -54,6 +55,21 @@ const Form = ({ handleSubmit, submitting }) => {
           required
           name="Wiadomość"
           minLength={30}
+        />
+        <Checkbox
+          id="contact"
+          label={
+            <>
+              Wysyłając formularz kontaktowy wyrażasz zgodę na przetwarzanie
+              Twoich danych osobowych w celu obsługi Twojego zapytania.
+              Przeczytaj{" "}
+              <a href="/polityka-prywatnosci" target="_blank" rel="noreferrer">
+                Politykę Prywatności
+              </a>
+              , aby poznać szczegóły.
+            </>
+          }
+          required
         />
         <Styled.ButtonContainer>
           <Button
