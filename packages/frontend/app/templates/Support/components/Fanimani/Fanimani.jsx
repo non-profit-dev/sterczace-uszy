@@ -18,20 +18,26 @@ const steps = [
     description: `Możesz też pobrać aplikację na swój telefon, aby być zawsze na bieżąco. `,
     illustration: `smartphone`,
     buttons: [
-      <Button
+      <a
         key="app-store-button"
-        variant="text"
-        text="AppStore"
+        title="Pobierz z AppStore"
+        aria-label="Pobierz z AppStore"
         target="_blank"
-        href={globalData.surveys.temporaryHome}
-      />,
-      <Button
+        href="https://apps.apple.com/us/app/przypominajka-fanimani-pl/id1600681632?ct=fanimani"
+        rel="noreferrer"
+      >
+        <img src="/support/app-store.png" alt="" width="145" />
+      </a>,
+      <a
         key="google-play-button"
-        variant="text"
-        text="Google Play"
+        aria-label="Pobierz z Google Play"
+        title="Pobierz z Google Play"
         target="_blank"
-        href={globalData.surveys.temporaryHome}
-      />,
+        href="https://play.google.com/store/apps/details?id=pl.fanimani.app"
+        rel="noreferrer"
+      >
+        <img src="/support/google-play.png" alt="" width="145" />
+      </a>,
     ],
   },
   {
