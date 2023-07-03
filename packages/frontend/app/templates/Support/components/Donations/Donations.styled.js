@@ -55,16 +55,11 @@ export const Image = styled(ImageComponent)`
   }
 `
 
-export const CopyButton = styled.button`
-  display: inline;
-  cursor: pointer;
-  vertical-align: middle;
-`
-
 export const CopyInfo = styled(Typography)`
   display: inline-flex;
   min-height: 30.5px;
   padding-left: 4px;
   vertical-align: middle;
   align-items: center;
+  border: 1px solid green;
 `
