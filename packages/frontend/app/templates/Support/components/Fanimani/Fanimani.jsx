@@ -43,7 +43,7 @@ const steps = [
   {
     title: "Zainstaluj przypominajkę na komputerze",
     description:
-      "Jeżeli cześciej robisz zakupy na komputerze niż telefonie możesz zainstalować sobie przypominajkę, aby nigdy nie zapomnieć o pomaganiu. Przejdź na stronę  Fanimani i pobierz rozszerzenie",
+      "Jeżeli cześciej robisz zakupy na komputerze niż telefonie możesz zainstalować sobie przypominajkę, aby nigdy nie zapomnieć o pomaganiu. Przejdź na stronę Fanimani i pobierz rozszerzenie",
     illustration: `computer`,
     button: (
       <Button
