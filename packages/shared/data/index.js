@@ -41,6 +41,9 @@ const globalData = {
   },
   fanimani: {
     link: "https://fanimani.pl/sterczaceuszy/",
+    appStore:
+      "https://apps.apple.com/us/app/przypominajka-fanimani-pl/id1600681632?ct=fanimani",
+    googlePlay: "https://play.google.com/store/apps/details?id=pl.fanimani.app",
   },
   surveys: {
     preAdoption:

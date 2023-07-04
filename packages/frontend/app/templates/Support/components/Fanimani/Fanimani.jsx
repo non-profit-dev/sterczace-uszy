@@ -23,7 +23,7 @@ const steps = [
         title="Pobierz z AppStore"
         aria-label="Pobierz z AppStore"
         target="_blank"
-        href="https://apps.apple.com/us/app/przypominajka-fanimani-pl/id1600681632?ct=fanimani"
+        href={globalData.fanimani.appStore}
         rel="noreferrer"
       >
         <img src="/support/app-store.png" alt="" width="145" />
@@ -33,7 +33,7 @@ const steps = [
         aria-label="Pobierz z Google Play"
         title="Pobierz z Google Play"
         target="_blank"
-        href="https://play.google.com/store/apps/details?id=pl.fanimani.app"
+        href={globalData.fanimani.googlePlay}
         rel="noreferrer"
       >
         <img src="/support/google-play.png" alt="" width="145" />
