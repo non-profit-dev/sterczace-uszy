@@ -1,5 +1,7 @@
 import styled from "@emotion/styled"
 
+import ImageComponent from "design-system/components/image"
+
 export const Content = styled.div`
   padding-top: 150px;
   display: grid;
@@ -56,4 +58,8 @@ export const DownloadButtons = styled.div`
 export const Illustration = styled.div`
   width: 100px;
   height: 100px;
+`
+
+export const Image = styled(ImageComponent)`
+  max-width: 360px;
 `

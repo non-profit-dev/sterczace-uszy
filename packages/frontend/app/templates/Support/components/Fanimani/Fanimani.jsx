@@ -9,7 +9,6 @@ import Ilustration from "design-system/components/illustration"
 import TextBanner from "design-system/patterns/textBanner"
 import globalData from "shared/data"
 
-import Image from "design-system/components/image"
 import * as Styled from "./Fanimani.styled"
 
 const steps = [
@@ -78,7 +77,7 @@ const Fanimani = () => {
           aplikację na telefon by wspierać nas przy okazji codziennych zakupów.
         </TextBanner>
 
-        <Image src="/support/fanimani.png" alt="" />
+        <Styled.Image src="/support/fanimani.png" alt="" />
       </Styled.Content>
 
       <Styled.Steps>
