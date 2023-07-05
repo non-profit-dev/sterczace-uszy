@@ -2,7 +2,7 @@ import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 
 import CtaBanner from "design-system/patterns/ctaBanner"
-
+import Volunteering from "./components/Volunteering"
 import Hero from "./components/Hero"
 import Subnav from "./components/Subnav"
 import Tax from "./components/Tax"
@@ -25,6 +25,7 @@ const Support = () => (
       <Donations />
       <OneTimeDonation />
       <TemporaryHome />
+      <Volunteering />
       <CtaBanner
         heading="Masz pytania lub wątpliwości?"
         buttonText="Skontaktuj się z nami"

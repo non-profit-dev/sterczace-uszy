@@ -1,5 +1,4 @@
 import { oneOf, string } from "prop-types"
-
 import HeartWithDogFace from "design-system/tokens/illustrations/heartWithDogFace.svg"
 import HeartIllustration from "design-system/tokens/illustrations/HeartIllustration.svg"
 import DogIllustration from "design-system/tokens/illustrations/DogIllustration.svg"
@@ -18,6 +17,8 @@ import DogCat from "design-system/tokens/illustrations/dog-cat.svg"
 import Support from "design-system/tokens/illustrations/support.svg"
 import WomanAndDog from "design-system/tokens/illustrations/womanAndDog.svg"
 import Bowl from "design-system/tokens/illustrations/bowl.svg"
+import Behaviorist from "design-system/tokens/illustrations/behaviorist.svg"
+import Groomer from "design-system/tokens/illustrations/groomer.svg"
 import TemporaryHome from "design-system/tokens/illustrations/temporaryHome.svg"
 import DogRescue from "design-system/tokens/illustrations/dogRescue.svg"
 import Percentage from "design-system/tokens/illustrations/percentage.svg"
@@ -25,6 +26,8 @@ import Hugging from "design-system/tokens/illustrations/hugging.svg"
 import Information from "design-system/tokens/illustrations/information.svg"
 import HeartLine from "design-system/tokens/illustrations/heartLine.svg"
 import PawHeart from "design-system/tokens/illustrations/pawHeart.svg"
+import Photograph from "design-system/tokens/illustrations/photograph.svg"
+import Driver from "design-system/tokens/illustrations/driver.svg"
 
 export const illustrations = {
   heartWithDogFace: HeartWithDogFace,
@@ -52,6 +55,10 @@ export const illustrations = {
   information: Information,
   heartLine: HeartLine,
   pawHeart: PawHeart,
+  behaviorist: Behaviorist,
+  groomer: Groomer,
+  photograph: Photograph,
+  driver: Driver,
 }
 
 const Illustration = ({ name, className }) => {
