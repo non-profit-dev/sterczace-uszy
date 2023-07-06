@@ -1,6 +1,5 @@
 import Typography from "design-system/components/typography"
 import Feature from "design-system/patterns/feature"
-import List from "design-system/components/list"
 import Illustration from "design-system/components/illustration"
 import Title from "design-system/components/title"
 import Button from "design-system/components/button"
@@ -67,17 +66,15 @@ const Volunteering = () => {
             <Title text="Kogo szukamy?" variant="h3" />
           </Styled.Title>
 
-          <List gap={40}>
-            {features.map(({ heading, description, illustration }) => (
-              <Feature
-                key={heading}
-                heading={heading}
-                illustration={illustration}
-              >
-                {description}
-              </Feature>
-            ))}
-          </List>
+          {features.map(({ heading, description, illustration }) => (
+            <Feature
+              key={heading}
+              heading={heading}
+              illustration={illustration}
+            >
+              {description}
+            </Feature>
+          ))}
         </Styled.FeatureWrapper>
         <Styled.ImageWrapper>
           <Illustration name="heartLine" />
