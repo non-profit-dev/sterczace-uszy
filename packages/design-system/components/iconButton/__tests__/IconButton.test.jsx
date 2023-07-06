@@ -1,5 +1,5 @@
 import userEvent from "@testing-library/user-event"
-import { render, screen } from "design-system/test-utils"
+import { fireEvent, render, screen } from "design-system/test-utils"
 
 import IconButton from "design-system/components/iconButton"
 
@@ -8,6 +8,7 @@ const iconSize = "large"
 const iconColor = "red"
 const href = "https://google.com"
 const ariaLabel = "Visit our facebook site"
+const title = "Example title"
 
 describe(`IconButton`, () => {
   it(`renders with default properties`, () => {
@@ -23,6 +24,7 @@ describe(`IconButton`, () => {
         size={iconSize}
         color={iconColor}
         ariaLabel={ariaLabel}
+        title={title}
       />
     )
 
@@ -30,13 +32,20 @@ describe(`IconButton`, () => {
   })
 
   it(`renders as link element if correct link href is provided`, () => {
-    render(<IconButton name={iconName} href={href} ariaLabel={ariaLabel} />)
+    render(
+      <IconButton
+        name={iconName}
+        href={href}
+        ariaLabel={ariaLabel}
+        title={title}
+      />
+    )
 
     expect(screen.getByRole(`link`)).toHaveAttribute(`href`, href)
   })
 
   it(`renders as button element if href is not provided`, () => {
-    render(<IconButton name={iconName} ariaLabel={ariaLabel} />)
+    render(<IconButton name={iconName} ariaLabel={ariaLabel} title={title} />)
 
     expect(screen.getByRole("button")).toBeInTheDocument()
   })
@@ -45,7 +54,12 @@ describe(`IconButton`, () => {
     const user = userEvent.setup()
     const onClickMock = jest.fn()
     render(
-      <IconButton name={iconName} onClick={onClickMock} ariaLabel={ariaLabel} />
+      <IconButton
+        name={iconName}
+        onClick={onClickMock}
+        ariaLabel={ariaLabel}
+        title={title}
+      />
     )
 
     const button = screen.getByRole("button")
@@ -64,6 +78,7 @@ describe(`IconButton`, () => {
         href={href}
         onClick={onClickMock}
         ariaLabel={ariaLabel}
+        title={title}
       />
     )
 
@@ -72,5 +87,21 @@ describe(`IconButton`, () => {
     await user.click(link)
 
     expect(onClickMock).toBeCalledTimes(1)
+  })
+
+  it(`show button title`, async () => {
+    render(
+      <IconButton
+        name={iconName}
+        size={iconSize}
+        color={iconColor}
+        ariaLabel={ariaLabel}
+        title={title}
+      />
+    )
+
+    fireEvent.mouseOver(screen.getByTitle(iconName))
+
+    expect(screen.getByTitle(title)).toBeInTheDocument()
   })
 })
