@@ -35,7 +35,7 @@ const Volunteering = () => {
 
   return (
     <Styled.Wrapper>
-      <Styled.ContainerSection as="section">
+      <Styled.ContainerSection as="section" role="main">
         <Styled.Banner
           heading="Zostań wolontariuszem"
           subtitle="WOLONTARIAT"
@@ -43,7 +43,6 @@ const Volunteering = () => {
           tabletLayout="right"
           mobileLayout="right"
         />
-
         <Styled.TextWrapper>
           <Typography variant="bodyTitle">
             Choć w prowadzenie Fundacji wkładamy całe serce, wciąż brakuje nam
@@ -61,11 +60,10 @@ const Volunteering = () => {
           alt="dog with heart"
           src="../support/volunteering-image.png"
         />
-        <Styled.FeatureWrapper>
+        <Styled.FeatureWrapper as="list">
           <Styled.Title>
             <Title text="Kogo szukamy?" variant="h3" />
           </Styled.Title>
-
           {features.map(({ heading, description, illustration }) => (
             <Feature
               key={heading}
