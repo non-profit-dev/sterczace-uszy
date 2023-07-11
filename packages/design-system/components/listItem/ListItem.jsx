@@ -16,7 +16,7 @@ const ListItem = ({
   return (
     <Styled.ListItem variant={variant} className={className}>
       {iconName && (
-        <Styled.ListItemIcon>
+        <Styled.ListItemIcon size={iconSize}>
           <Icon
             name={iconName}
             size={iconSize}

@@ -28,7 +28,9 @@ const data = {
       steps: [
         `pobierz plik`,
         `wypełnij na komputerze lub wydrukuj`,
-        `wypełnione dokumenty prześlij na adres ${globalData.contact.mail.text}`,
+        `wypełnione dokumenty prześlij na adres: <a href="mailto:${globalData.contact.mail.text}">
+        ${globalData.contact.mail.text}
+      </a>`,
         `poczekaj na odpowiedź od nas`,
       ],
       link: `${globalData.surveys.preAdoption}`,
@@ -39,7 +41,9 @@ const data = {
       steps: [
         `pobierz plik`,
         `wypełnij na komputerze lub wydrukuj`,
-        `wypełnione dokumenty prześlij na adres ${globalData.contact.mail.text}`,
+        `wypełnione dokumenty prześlij na adres: <a href="mailto:${globalData.contact.mail.text}">
+        ${globalData.contact.mail.text}
+      </a>`,
         `poczekaj na odpowiedź od nas`,
       ],
       link: `${globalData.surveys.temporaryHome}`,
