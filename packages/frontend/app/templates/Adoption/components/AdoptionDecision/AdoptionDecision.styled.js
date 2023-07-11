@@ -1,8 +1,6 @@
 import styled from "@emotion/styled"
 import Container from "design-system/components/container"
 import TextBanner from "design-system/patterns/textBanner"
-import List from "design-system/components/list"
-import ListItem from "design-system/components/listItem"
 
 export const SectionContainer = styled(Container)`
   margin: 120px auto;
@@ -42,19 +40,6 @@ export const AccordionContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-`
-
-export const TextList = styled(List)`
-  line-height: 24px;
-`
-export const AccordionListItem = styled(ListItem)`
-  align-items: flex-start;
-  gap: 0;
-
-  svg {
-    width: 28px;
-    height: 28px;
-  }
 `
 
 export const Icon = styled.div`
