@@ -6,6 +6,10 @@ const data = [
     href: "#podatek",
   },
   {
+    title: "Fanimani",
+    href: "#fanimani",
+  },
+  {
     title: "Wpłaty",
     href: "#wplaty",
   },
