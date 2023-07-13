@@ -17,7 +17,6 @@ import DogCat from "design-system/tokens/illustrations/dog-cat.svg"
 import Support from "design-system/tokens/illustrations/support.svg"
 import WomanAndDog from "design-system/tokens/illustrations/womanAndDog.svg"
 import Bowl from "design-system/tokens/illustrations/bowl.svg"
-import Behaviorist from "design-system/tokens/illustrations/behaviorist.svg"
 import Groomer from "design-system/tokens/illustrations/groomer.svg"
 import TemporaryHome from "design-system/tokens/illustrations/temporaryHome.svg"
 import DogRescue from "design-system/tokens/illustrations/dogRescue.svg"
@@ -26,13 +25,10 @@ import Hugging from "design-system/tokens/illustrations/hugging.svg"
 import Information from "design-system/tokens/illustrations/information.svg"
 import HeartLine from "design-system/tokens/illustrations/heartLine.svg"
 import PawHeart from "design-system/tokens/illustrations/pawHeart.svg"
-FSU-175-Support-Page-volunteering
 import Photograph from "design-system/tokens/illustrations/photograph.svg"
 import Driver from "design-system/tokens/illustrations/driver.svg"
-
 import Smartphone from "design-system/tokens/illustrations/smartphone.svg"
 import Computer from "design-system/tokens/illustrations/computer.svg"
-main
 
 export const illustrations = {
   heartWithDogFace: HeartWithDogFace,
@@ -60,14 +56,11 @@ export const illustrations = {
   information: Information,
   heartLine: HeartLine,
   pawHeart: PawHeart,
-FSU-175-Support-Page-volunteering
-  behaviorist: Behaviorist,
   groomer: Groomer,
   photograph: Photograph,
   driver: Driver,
   smartphone: Smartphone,
   computer: Computer,
-main
 }
 
 const Illustration = ({ name, className }) => {

@@ -3,9 +3,9 @@ import Feature from "design-system/patterns/feature"
 import Illustration from "design-system/components/illustration"
 import Title from "design-system/components/title"
 import Button from "design-system/components/button"
-import * as Styled from "./Volunteering.styled"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
+import * as Styled from "./Volunteering.styled"
 
 const Volunteering = () => {
   const features = [
@@ -57,10 +57,7 @@ const Volunteering = () => {
             nas! Każde wsparcie jest dla nas cenne.
           </Typography>
         </Styled.TextWrapper>
-        <Styled.Img
-          alt="heartLine"
-          src="../support/volunteering-image.png"
-        />
+        <Styled.Img alt="heartLine" src="../support/volunteering-image.png" />
         <Styled.FeatureWrapper>
           <Styled.Title>
             <Title text="Kogo szukamy?" variant="h3" />
@@ -68,7 +65,11 @@ const Volunteering = () => {
           <List gap={20}>
             {features.map(({ heading, description, illustration }) => (
               <ListItem key={heading}>
-                <Feature key={heading} heading={heading} illustration={illustration}>
+                <Feature
+                  key={heading}
+                  heading={heading}
+                  illustration={illustration}
+                >
                   {description}
                 </Feature>
               </ListItem>

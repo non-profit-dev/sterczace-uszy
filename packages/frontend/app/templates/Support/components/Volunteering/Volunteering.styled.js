@@ -2,7 +2,6 @@ import styled from "@emotion/styled"
 import Container from "design-system/components/container"
 import Image from "design-system/components/image"
 import TextBanner from "design-system/patterns/textBanner"
-import List from "design-system/components/list"
 
 export const ContainerSection = styled(Container)`
   display: grid;
