@@ -4,6 +4,10 @@ import TextBanner from "design-system/patterns/textBanner"
 export const Content = styled.div`
   padding: 120px 0;
 
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    padding: 100px 0;
+  }
+
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 60px 0;
   }
@@ -39,5 +43,18 @@ export const CardsContainer = styled.div`
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     max-width: 342px;
+  }
+`
+export const ScrollContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 60px;
+  margin-bottom: 0px;
+  text-align: center;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    margin-top: 80px;
   }
 `

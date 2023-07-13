@@ -36,7 +36,7 @@ const ChooseYourVirtualPet = ({ data }) => {
   }
 
   return (
-    <Container>
+    <Container id="virtual-animals">
       <Styled.Wrapper>
         <Styled.ContentContainer>
           <TextBanner

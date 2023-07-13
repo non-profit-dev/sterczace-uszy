@@ -2,6 +2,7 @@ import Title from "design-system/components/title"
 import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
 import Card from "design-system/patterns/card/Card"
+import ScrollButton from "design-system/components/scrollButton"
 import * as Styled from "./VirtualAdoptionSteps.styled"
 
 const cardsData = [
@@ -54,6 +55,10 @@ const VirtualAdoptionSteps = () => (
           ))}
         </Styled.CardsContainer>
       </Styled.BannerContent>
+      <Styled.ScrollContainer>
+        <Typography variant="h3">Sprawdź, kto czeka na opiekuna</Typography>
+        <ScrollButton sectionId="virtual-animals" />
+      </Styled.ScrollContainer>
     </Styled.Content>
   </Container>
 )
