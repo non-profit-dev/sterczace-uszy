@@ -50,7 +50,7 @@ const Values = () => {
           adopcyjnymi. Angażujemy się w nasze działania z wielką pasją, dbając o
           dobre warunki i opiekę dla każdego zwierzaka, którego ratujemy.
           <Styled.TextBottomWrapper>
-            <Typography variant="h5">
+            <Typography variant="h5" as="p">
               Wartości stanowią podstawę naszej fundacji i kierują naszymi
               działaniami.
             </Typography>
@@ -60,9 +60,11 @@ const Values = () => {
         <Styled.FeatureWrapper>
           <List gap={40}>
             {values.map(({ heading, description, icon }) => (
-              <Feature key={heading} heading={heading} icon={icon}>
-                {description}
-              </Feature>
+              <li key={heading}>
+                <Feature heading={heading} icon={icon}>
+                  {description}
+                </Feature>
+              </li>
             ))}
           </List>
         </Styled.FeatureWrapper>
