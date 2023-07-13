@@ -45,7 +45,7 @@ export const Img = styled(Image)`
     margin-left: -56px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    display: none;
+    margin-left: -25px;
   }
 `
 export const TextWrapper = styled.div`
@@ -60,7 +60,9 @@ export const TextWrapper = styled.div`
     width: 80%;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    width: 100%;
+    grid-column: 1;
+    grid-row: 4;
+    width: 90%;
     padding-top: 0px;
   }
 `
@@ -78,12 +80,19 @@ export const Banner = styled(TextBanner)`
   ${({ theme }) => theme.breakpoints.mobileLg} {
     padding-top: 130px;
     grid-column: 1;
+    grid-row: 3;
   }
 `
-export const FeatureWrapper = styled(List)`
+
+export const FeatureWrapper = styled.div`
   grid-row: 3;
   width: 160%;
-  gap: 30px;
+  gap: 230px;
+
+  svg {
+    width: 20%;
+    height: 80%;
+  }
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     grid-column: 1;
@@ -91,34 +100,29 @@ export const FeatureWrapper = styled(List)`
     width: 90%;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    width: 100%;
+    width: 90%;
   }
 `
 
 export const ImageWrapper = styled.div`
   position: absolute;
   transform: rotate(25deg);
-  margin-top: 730px;
-  right: 10px;
+  margin-top: 720px;
+  right: 0px;
   width: 45%;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
     transform: rotate(0deg);
     margin-left: 0px;
-    right: 180px;
-    margin-top: 630px;
+    right: 250px;
+    margin-top: 650px;
     width: 70%;
     grid-column: 1;
     grid-row: 1;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     transform: rotate(0deg);
-    margin-top: 0px;
-    padding-top: 30px;
-    margin-left: 0px;
     right: 100px;
-    width: 70%;
-    grid-column: 1;
-    grid-row: 1;
   }
 `
 
@@ -142,7 +146,5 @@ export const Button = styled.div`
     transform: rotate(0deg);
     margin-left: 70px;
     width: 80%;
-    grid-column: 1;
-    grid-row: 12;
   }
 `

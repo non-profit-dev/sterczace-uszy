@@ -4,6 +4,8 @@ import Illustration from "design-system/components/illustration"
 import Title from "design-system/components/title"
 import Button from "design-system/components/button"
 import * as Styled from "./Volunteering.styled"
+import List from "design-system/components/list"
+import ListItem from "design-system/components/listItem"
 
 const Volunteering = () => {
   const features = [
@@ -35,13 +37,12 @@ const Volunteering = () => {
 
   return (
     <Styled.Wrapper>
-      <Styled.ContainerSection as="section" role="main">
+      <Styled.ContainerSection as="section">
         <Styled.Banner
           heading="Zostań wolontariuszem"
-          subtitle="WOLONTARIAT"
-          size="medium"
-          tabletLayout="right"
-          mobileLayout="right"
+          subtitle="wolontariat"
+          tabletLayout="left"
+          mobileLayout="left"
         />
         <Styled.TextWrapper>
           <Typography variant="bodyTitle">
@@ -57,22 +58,22 @@ const Volunteering = () => {
           </Typography>
         </Styled.TextWrapper>
         <Styled.Img
-          alt="dog with heart"
+          alt="heartLine"
           src="../support/volunteering-image.png"
         />
-        <Styled.FeatureWrapper as="list">
+        <Styled.FeatureWrapper>
           <Styled.Title>
             <Title text="Kogo szukamy?" variant="h3" />
           </Styled.Title>
-          {features.map(({ heading, description, illustration }) => (
-            <Feature
-              key={heading}
-              heading={heading}
-              illustration={illustration}
-            >
-              {description}
-            </Feature>
-          ))}
+          <List gap={20}>
+            {features.map(({ heading, description, illustration }) => (
+              <ListItem key={heading}>
+                <Feature key={heading} heading={heading} illustration={illustration}>
+                  {description}
+                </Feature>
+              </ListItem>
+            ))}
+          </List>
         </Styled.FeatureWrapper>
         <Styled.ImageWrapper>
           <Illustration name="heartLine" />
