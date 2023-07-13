@@ -57,7 +57,10 @@ const VirtualAdoptionSteps = () => (
       </Styled.BannerContent>
       <Styled.ScrollContainer>
         <Typography variant="h3">Sprawdź, kto czeka na opiekuna</Typography>
-        <ScrollButton sectionId="wirtualy-przyjaciel" />
+        <ScrollButton
+          sectionId="wirtualy-przyjaciel"
+          ariaLabel="Przejdź do kolejnej sekcji"
+        />
       </Styled.ScrollContainer>
     </Styled.Content>
   </Container>
