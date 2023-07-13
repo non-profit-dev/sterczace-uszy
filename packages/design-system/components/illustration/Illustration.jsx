@@ -17,7 +17,6 @@ import DogCat from "design-system/tokens/illustrations/dog-cat.svg"
 import Support from "design-system/tokens/illustrations/support.svg"
 import WomanAndDog from "design-system/tokens/illustrations/womanAndDog.svg"
 import Bowl from "design-system/tokens/illustrations/bowl.svg"
-import Groomer from "design-system/tokens/illustrations/groomer.svg"
 import TemporaryHome from "design-system/tokens/illustrations/temporaryHome.svg"
 import DogRescue from "design-system/tokens/illustrations/dogRescue.svg"
 import Percentage from "design-system/tokens/illustrations/percentage.svg"
@@ -26,7 +25,6 @@ import Information from "design-system/tokens/illustrations/information.svg"
 import HeartLine from "design-system/tokens/illustrations/heartLine.svg"
 import PawHeart from "design-system/tokens/illustrations/pawHeart.svg"
 import Photograph from "design-system/tokens/illustrations/photograph.svg"
-import Driver from "design-system/tokens/illustrations/driver.svg"
 import Smartphone from "design-system/tokens/illustrations/smartphone.svg"
 import Computer from "design-system/tokens/illustrations/computer.svg"
 
@@ -56,9 +54,7 @@ export const illustrations = {
   information: Information,
   heartLine: HeartLine,
   pawHeart: PawHeart,
-  groomer: Groomer,
   photograph: Photograph,
-  driver: Driver,
   smartphone: Smartphone,
   computer: Computer,
 }

@@ -13,25 +13,25 @@ const Volunteering = () => {
       heading: "Behawiorysty/ki",
       description:
         "Osoby, która na stałe będzie wspierać nas swoją wiedzą i doświadczeniem. Pomoże w socjalizacji i ułatwi powrót naszych podopiecznych do życia społecznego",
-      illustration: "behaviorist",
+      illustration: "training",
     },
     {
       heading: "Groomera/ki",
       description:
         "Osoby o magicznych zdolnościach, która potrafi zmienić każdą żabę w księżniczkę i księcia ;-). Wymagana cierpliwość do zwierząt i chęć niesienia pomocy!",
-      illustration: "groomer",
+      illustration: "scissors",
     },
     {
       heading: "Fotografa/ki",
       description:
         "Osoby, która pasjonuje się fotografią, kocha zwierzęta i umie z nimi współpracować. Pragniemy, aby każdy nasz podopieczny mógł pokazać się z jak najlepszej strony.",
-      illustration: "photograph",
+      illustration: "camera",
     },
     {
       heading: "Kierowcy",
       description:
         "W związku z ciągłą potrzebą dojazdów do potrzebujących zwierząt, szukamy osoby, która dysponuje czasem i autem, abyśmy mogli działać jeszcze sprawniej i efektywniej.",
-      illustration: "driver",
+      illustration: "car",
     },
   ]
 
