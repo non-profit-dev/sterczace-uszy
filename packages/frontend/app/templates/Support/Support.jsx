@@ -9,6 +9,7 @@ import Tax from "./components/Tax"
 import Donations from "./components/Donations"
 import OneTimeDonation from "./components/OneTimeDonation"
 import TemporaryHome from "./components/TemporaryHome"
+import Fanimani from "./components/Fanimani"
 
 import Page from "../Page"
 
@@ -24,6 +25,7 @@ const Support = () => (
       <Tax />
       <Donations />
       <OneTimeDonation />
+      <Fanimani />
       <TemporaryHome />
       <Volunteering />
       <CtaBanner

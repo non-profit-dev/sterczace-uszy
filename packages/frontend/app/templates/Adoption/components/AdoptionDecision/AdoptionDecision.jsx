@@ -3,6 +3,8 @@ import Accordion from "design-system/components/accordion"
 import Icon from "design-system/components/icon"
 import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
+import List from "design-system/components/list"
+import ListItem from "design-system/components/listItem"
 import globalData from "shared/data"
 import * as Styled from "./AdoptionDecision.styled"
 
@@ -103,17 +105,13 @@ const AdoptionDecision = () => {
                   <Typography variant="bodySmall">{accordion.text}</Typography>
                 )}
                 {accordion.listItems && (
-                  <Styled.TextList gap={4}>
+                  <List gap={4}>
                     {accordion.listItems.map((listItem) => (
-                      <Styled.AccordionListItem
-                        variant="gray"
-                        iconName="dot"
-                        key={listItem}
-                      >
+                      <ListItem variant="gray" iconName="dot" key={listItem}>
                         {listItem}
-                      </Styled.AccordionListItem>
+                      </ListItem>
                     ))}
-                  </Styled.TextList>
+                  </List>
                 )}
                 {accordion.textBottom && (
                   <Typography variant="bodySmall">

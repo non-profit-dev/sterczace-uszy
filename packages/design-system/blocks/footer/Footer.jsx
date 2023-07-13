@@ -85,16 +85,18 @@ const Footer = () => {
                 <IconButton
                   name="facebook"
                   size="medium"
-                  href={globalData.socialMedia.facebook}
+                  href={globalData.socialMedia.facebook.link}
                   ariaLabel="Facebook"
                   target="_blank"
+                  title={globalData.socialMedia.facebook.title}
                 />
                 <IconButton
                   name="instagram"
                   size="medium"
-                  href={globalData.socialMedia.instagram}
+                  href={globalData.socialMedia.instagram.link}
                   ariaLabel="Instagram"
                   target="_blank"
+                  title={globalData.socialMedia.instagram.title}
                 />
               </Styled.Icons>
             </Styled.Section>
@@ -127,6 +129,7 @@ const Footer = () => {
                   ) : (
                     <Styled.CopyButton
                       onClick={() => copyToClipboard(globalData.accountNumber)}
+                      title="Skopiuj numer konta"
                     >
                       <Icon name="copy" color={theme.colors.primary[500]} />
                     </Styled.CopyButton>

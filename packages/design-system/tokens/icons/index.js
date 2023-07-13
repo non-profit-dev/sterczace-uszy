@@ -37,6 +37,7 @@ import DecisionPaw from "./DecisionPaw.svg"
 import DecisionHeart from "./DecisionHeart.svg"
 import Dot from "./Dot.svg"
 import Alert from "./Alert.svg"
+import ExternalLink from "./ExternalLink.svg"
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -78,6 +79,7 @@ export const icons = {
   decisionHeart: DecisionHeart,
   dot: Dot,
   alert: Alert,
+  externalLink: ExternalLink,
 }
 
 export {
@@ -119,4 +121,5 @@ export {
   DecisionHeart,
   Dot,
   Alert,
+  ExternalLink,
 }

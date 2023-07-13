@@ -4,8 +4,14 @@ const globalData = {
   krs: "0000964494",
   accountNumber: "41 1870 1045 2078 1072 8639 0001",
   socialMedia: {
-    facebook: "https://www.facebook.com/sterczaceuszy",
-    instagram: "https://www.instagram.com/sterczaceuszy",
+    facebook: {
+      link: "https://www.facebook.com/sterczaceuszy",
+      title: "Przejdź na nasz profil na Facebooku",
+    },
+    instagram: {
+      link: "https://www.instagram.com/sterczaceuszy",
+      title: "Przejdź na nasz profil na Instagramie",
+    },
   },
   contact: {
     mail: {
@@ -32,6 +38,12 @@ const globalData = {
   fundraising: {
     text: "www.ratujemyzwierzaki.pl",
     link: "https://www.ratujemyzwierzaki.pl/sterczaceuszy",
+  },
+  fanimani: {
+    link: "https://fanimani.pl/sterczaceuszy/",
+    appStore:
+      "https://apps.apple.com/us/app/przypominajka-fanimani-pl/id1600681632?ct=fanimani",
+    googlePlay: "https://play.google.com/store/apps/details?id=pl.fanimani.app",
   },
   surveys: {
     preAdoption:
