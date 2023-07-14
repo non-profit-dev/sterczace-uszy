@@ -49,15 +49,26 @@ const Volunteering = () => {
             Choć w prowadzenie Fundacji wkładamy całe serce, wciąż brakuje nam
             rąk do pracy. Poszukujemy ludzi o wielkim sercu, którzy chcą
             poświęcić swój czas i energię, aby poprawić życie bezdomnych
-            zwierząt. Potrzebujemy wolontariuszy, którzy pomogą odzyskać naszym
-            podopiecznym nadzieję na lepszy dom. Wolontariat w fundacji to nie
-            tylko okazja do pomocy, ale także do zdobycia nowych doświadczeń i
-            nawiązania pięknych relacji z bezdomnymi psami i kotami. Jeśli
-            chcesz pomóc zwierzętom, ale nie wiesz jak to zrobić - dołącz do
-            nas! Każde wsparcie jest dla nas cenne.
+            zwierząt.
+          </Typography>
+          <Typography variant="bodyTitle">
+            Potrzebujemy wolontariuszy, którzy pomogą odzyskać naszym
+            podopiecznym nadzieję na lepszy dom.
+          </Typography>
+          <Typography variant="bodyTitle">
+            Wolontariat w fundacji to nie tylko okazja do pomocy, ale także do
+            zdobycia nowych doświadczeń i nawiązania pięknych relacji z
+            bezdomnymi psami i kotami.
+          </Typography>
+          <Typography variant="bodyTitle">
+            Jeśli chcesz pomóc zwierzętom, ale nie wiesz jak to zrobić - dołącz
+            do nas! Każde wsparcie jest dla nas cenne.
           </Typography>
         </Styled.TextWrapper>
-        <Styled.Img alt="heartLine" src="../support/volunteering-image.png" />
+        <Styled.Img
+          alt="volunteering"
+          src="../support/volunteering-image.png"
+        />
         <Styled.FeatureWrapper>
           <Styled.Title>
             <Title text="Kogo szukamy?" variant="h3" />

@@ -5,7 +5,6 @@ import TextBanner from "design-system/patterns/textBanner"
 
 export const ContainerSection = styled(Container)`
   display: grid;
-  grid-template-columns: 1fr 2fr;
   margin: 50px auto;
   padding-bottom: 50px;
   position: relative;
@@ -25,17 +24,11 @@ export const Wrapper = styled.div`
   }
 `
 
-export const TextBottomWrapper = styled.div`
-  grid-column: 1 / 3;
-  grid-row: 1;
-  padding-bottom: 30px;
-  max-width: 90%;
-`
-
 export const Img = styled(Image)`
   grid-column: 1;
   grid-row: 1;
   width: 90%;
+  height: 90%;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 100vw;
     position: relative;
@@ -50,7 +43,7 @@ export const Img = styled(Image)`
 export const TextWrapper = styled.div`
   grid-column: 2;
   grid-row: 1;
-  padding-top: 140px;
+  padding-top: 160px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     grid-column: 1;
     grid-row: 3;
@@ -59,7 +52,6 @@ export const TextWrapper = styled.div`
     width: 80%;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    grid-column: 1;
     grid-row: 4;
     width: 90%;
     padding-top: 0px;
@@ -77,17 +69,15 @@ export const Banner = styled(TextBanner)`
     padding-top: 270px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding-top: 130px;
-    grid-column: 1;
+    padding-top: 140px;
     grid-row: 3;
   }
 `
 
 export const FeatureWrapper = styled.div`
   grid-row: 3;
-  width: 160%;
   gap: 230px;
-
+  width: 120%;
   svg {
     width: 20%;
     height: 80%;
@@ -106,7 +96,7 @@ export const FeatureWrapper = styled.div`
 export const ImageWrapper = styled.div`
   position: absolute;
   transform: rotate(25deg);
-  margin-top: 720px;
+  margin-top: 820px;
   right: 0px;
   width: 45%;
 
