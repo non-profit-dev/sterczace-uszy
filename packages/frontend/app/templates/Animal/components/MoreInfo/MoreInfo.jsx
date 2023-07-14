@@ -64,7 +64,11 @@ const MoreInfo = ({
 
       <Styled.Buttons>
         <Button text="Adoptuj" href="/adopcja" />
-        <Button text="Wspieraj" href="/wsparcie" variant="border" />
+        <Button
+          text="Adoptuj wirtualnie"
+          href="/adopcja#wirtualna-adopcja"
+          variant="border"
+        />
       </Styled.Buttons>
     </Styled.Section>
   )
