@@ -31,7 +31,7 @@ const VirtualAdoptionSteps = () => (
     <Styled.Content>
       <Styled.BannerContainer>
         <Styled.Banner
-          heading="Co zrobić, aby stać się  wirtualnym opiekunem?"
+          heading="Co zrobić, aby stać się wirtualnym opiekunem?"
           subtitle="Kroki adopcji wirtualnej"
           layout="center"
         >
