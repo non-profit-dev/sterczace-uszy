@@ -31,13 +31,13 @@ export const HeaderContainer = styled.div`
 `
 export const DocumentsInfo = styled.div`
   align-self: flex-start;
-  
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
     align-items: flex-start;
     padding-bottom: 65px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding-bottom 56px;
+    padding-bottom: 56px;
   }
 `
 
