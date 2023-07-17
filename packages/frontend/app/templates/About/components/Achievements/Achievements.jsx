@@ -50,7 +50,9 @@ const Achievements = ({
         {cardsData.map(({ illustrationName, count, description }) => (
           <Styled.CardContainer key={description}>
             <DecorativeCard illustrationName={illustrationName} count={count} />
-            <Typography variant="h4">{description}</Typography>
+            <Typography variant="h4" as="p">
+              {description}
+            </Typography>
           </Styled.CardContainer>
         ))}
       </Styled.Container>
