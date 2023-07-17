@@ -66,8 +66,7 @@ const Volunteering = () => {
           </Typography>
         </Styled.TextWrapper>
         <Styled.Img
-          alt="volunteering"
-          src="../support/volunteering-image.png"
+          src="../support/volunteering-image.png" alt=""
         />
         <Styled.FeatureWrapper>
           <Styled.Title>
