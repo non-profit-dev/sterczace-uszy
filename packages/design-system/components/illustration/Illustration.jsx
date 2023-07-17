@@ -27,6 +27,9 @@ import PawHeart from "design-system/tokens/illustrations/pawHeart.svg"
 import Photograph from "design-system/tokens/illustrations/photograph.svg"
 import Smartphone from "design-system/tokens/illustrations/smartphone.svg"
 import Computer from "design-system/tokens/illustrations/computer.svg"
+import Pet from "design-system/tokens/illustrations/pet.svg"
+import StandingOrder from "design-system/tokens/illustrations/standingOrder.svg"
+import Confirmation from "design-system/tokens/illustrations/confirmation.svg"
 
 export const illustrations = {
   heartWithDogFace: HeartWithDogFace,
@@ -57,6 +60,9 @@ export const illustrations = {
   photograph: Photograph,
   smartphone: Smartphone,
   computer: Computer,
+  pet: Pet,
+  standingOrder: StandingOrder,
+  confirmation: Confirmation,
 }
 
 const Illustration = ({ name, className }) => {

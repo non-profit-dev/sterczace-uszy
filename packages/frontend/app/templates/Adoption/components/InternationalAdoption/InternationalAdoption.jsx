@@ -84,7 +84,7 @@ const InternationalAdoption = () => {
           <Styled.Features>
             <Styled.Content>
               {features.map(({ title, description }, i) => (
-                <Feature key="title" heading={title} count={i + 1} color="gray">
+                <Feature key={title} heading={title} count={i + 1} color="gray">
                   {description}
                 </Feature>
               ))}
@@ -94,7 +94,7 @@ const InternationalAdoption = () => {
 
         <Styled.MoreInfo>
           {data.map(({ title, description, links }) => (
-            <Styled.TextBox key="title">
+            <Styled.TextBox key={title}>
               <Title text={title} variant="h3" />
               <Typography variant="bodyTitle" color={theme.colors.gray[600]}>
                 {description}
