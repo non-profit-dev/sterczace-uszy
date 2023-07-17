@@ -6,13 +6,13 @@ import TextBanner from "design-system/patterns/textBanner"
 export const ContainerSection = styled(Container)`
   display: grid;
   margin: 50px auto;
-  padding-bottom: 50px;
   position: relative;
 `
 
 export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.neutrals[200]};
-  padding: 10px 0px 0px;
+  padding-top: 10px;
+  padding-bottom: 50px;
   ${({ theme }) => theme.breakpoints.mobileLg} {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -20,7 +20,8 @@ export const Wrapper = styled.div`
   }
   ${({ theme }) => theme.breakpoints.tabletLg} {
     margin: 0px auto;
-    padding: 0px;
+    padding-top: 0px;
+    padding-bottom: 50px;
   }
 `
 
@@ -122,18 +123,10 @@ export const Title = styled.div`
 `
 
 export const Button = styled.div`
+  display: flex;
+  justify-content: center;
   margin-top: 50px;
-  grid-column: 2;
-  grid-row: 5;
-  margin-left: 120px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    margin-left: 240px;
-    grid-column: 1;
-    grid-row: 12;
-  }
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    transform: rotate(0deg);
-    margin-left: 70px;
-    width: 80%;
+    justify-content: center;
   }
 `

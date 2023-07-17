@@ -65,9 +65,7 @@ const Volunteering = () => {
             do nas! Każde wsparcie jest dla nas cenne.
           </Typography>
         </Styled.TextWrapper>
-        <Styled.Img
-          src="../support/volunteering-image.png" alt=""
-        />
+        <Styled.Img src="../support/volunteering-image.png" alt="Wolontariat" />
         <Styled.FeatureWrapper>
           <Styled.Title>
             <Title text="Kogo szukamy?" variant="h3" />
@@ -89,15 +87,10 @@ const Volunteering = () => {
         <Styled.ImageWrapper>
           <Illustration name="heartLine" />
         </Styled.ImageWrapper>
-        <Styled.Button>
-          <Button
-            text="Zgłoś się"
-            size="medium"
-            variant="fill"
-            href="/kontakt"
-          />
-        </Styled.Button>
       </Styled.ContainerSection>
+      <Styled.Button>
+        <Button text="Zgłoś się" size="medium" variant="fill" href="/kontakt" />
+      </Styled.Button>
     </Styled.Wrapper>
   )
 }
