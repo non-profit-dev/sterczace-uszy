@@ -40,3 +40,18 @@ export const Icon = styled.div`
     height: 100%;
   }
 `
+export const Illustration = styled.div`
+  width: 80px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${({ theme }) => theme.breakpoints.mobile} {
+    width: 56px;
+    height: 56px;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+`
