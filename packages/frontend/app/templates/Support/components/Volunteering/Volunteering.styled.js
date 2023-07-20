@@ -111,6 +111,7 @@ export const ImageWrapper = styled.div`
     grid-row: 1;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
+    margin-top: 630px;
     transform: rotate(0deg);
     right: 100px;
   }
@@ -119,14 +120,10 @@ export const ImageWrapper = styled.div`
 export const Title = styled.div`
   padding-top: 50px;
   padding-bottom: 30px;
-  margin-left: 0px;
 `
 
 export const Button = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    justify-content: center;
-  }
 `
