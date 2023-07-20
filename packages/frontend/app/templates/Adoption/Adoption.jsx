@@ -22,6 +22,7 @@ import VirtualAdoption from "./components/VirtualAdoption"
 import ChooseYourVirtualPet from "./components/ChooseYourVirtualPet"
 import AdoptionRefusal from "./components/AdoptionRefusal"
 import InternationalAdoption from "./components/InternationalAdoption"
+import VirtualAdoptionSteps from "./components/VirtualAdoptionSteps"
 
 import { animalsType } from "../../lib/types"
 
@@ -46,6 +47,7 @@ const Adoption = ({ animals, animalsData }) => (
       <InternationalAdoption />
       <AdoptionRefusal />
       <VirtualAdoption />
+      <VirtualAdoptionSteps />
       <ChooseYourVirtualPet data={animalsData.items} />
       <RecurringPayment />
       <PaymentConfirmationForm data={animals.items} />

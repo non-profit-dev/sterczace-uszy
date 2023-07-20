@@ -54,7 +54,7 @@ const AdoptionRefusal = () => (
 
         <Styled.Features>
           {features.map(({ title, description, icon }) => (
-            <Feature key="title" heading={title} icon={icon} color="gray">
+            <Feature key={title} heading={title} icon={icon} color="gray">
               {description}
             </Feature>
           ))}

@@ -8,6 +8,7 @@ const AboutUs = () => (
     <Styled.Wrapper>
       <Styled.Banner
         heading={`Fundacja ${globalData.organizationName}`}
+        headingTag="h1"
         subtitle="Więcej o nas"
         size="medium"
         tabletLayout="left"

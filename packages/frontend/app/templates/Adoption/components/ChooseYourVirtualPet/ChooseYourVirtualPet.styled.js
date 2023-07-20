@@ -17,14 +17,6 @@ export const Wrapper = styled.section`
 
 export const ContentContainer = styled.div`
   max-width: 892px;
-
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding: 100px 0;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding: 60px 0;
-  }
 `
 
 export const CardsWrapper = styled.div`

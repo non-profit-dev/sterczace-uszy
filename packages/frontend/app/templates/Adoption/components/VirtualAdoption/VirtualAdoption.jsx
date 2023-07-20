@@ -39,7 +39,7 @@ const data = [
 ]
 
 const VirtualAdoption = () => (
-  <Styled.Section>
+  <Styled.Section id="wirtualna-adopcja">
     <Container as="section">
       <Styled.Content>
         <TextBanner
