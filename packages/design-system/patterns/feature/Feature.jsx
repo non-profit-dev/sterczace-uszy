@@ -19,11 +19,19 @@ const Feature = ({
 
   return (
     <Styled.Feature className={className}>
-      {illustration && <Illustration name={illustration} />}
-      {icon && !illustration && (
+      {illustration && (
+        <Styled.Illustration>
+          <Illustration name={illustration} />
+        </Styled.Illustration>
+      )}
+      {icon && (
         <Styled.Icon color={color}>
-          <Icon name={icon} color={theme.colors.neutrals[100]} />
-          {count && <Count count={count} size="xsmall" color="white" />}
+          {icon && (
+            <>
+              <Icon name={icon} color={theme.colors.neutrals[100]} />
+              {count && <Count count={count} size="xsmall" color="white" />}
+            </>
+          )}
         </Styled.Icon>
       )}
       <Styled.Content>

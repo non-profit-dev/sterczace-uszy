@@ -77,12 +77,7 @@ export const Banner = styled(TextBanner)`
 
 export const FeatureWrapper = styled.div`
   grid-row: 3;
-  gap: 230px;
-  width: 120%;
-  svg {
-    width: 20%;
-    height: 80%;
-  }
+  width: 115%;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     grid-column: 1;
@@ -97,7 +92,7 @@ export const FeatureWrapper = styled.div`
 export const ImageWrapper = styled.div`
   position: absolute;
   transform: rotate(25deg);
-  margin-top: 820px;
+  margin-top: 840px;
   right: 0px;
   width: 45%;
 
