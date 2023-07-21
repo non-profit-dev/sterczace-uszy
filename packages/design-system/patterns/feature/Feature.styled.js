@@ -41,7 +41,7 @@ export const Icon = styled.div`
 `
 
 export const Illustration = styled.div`
-  width: 80px;
+  width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;

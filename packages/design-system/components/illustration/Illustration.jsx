@@ -71,6 +71,8 @@ const Illustration = ({ name, className }) => {
       title={name}
       aria-hidden="true"
       className={className}
+      width="100%"
+      height="100%"
     />
   )
 }

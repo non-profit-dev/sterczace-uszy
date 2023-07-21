@@ -92,9 +92,9 @@ export const FeatureWrapper = styled.div`
 export const ImageWrapper = styled.div`
   position: absolute;
   transform: rotate(25deg);
-  margin-top: 840px;
+  margin-top: 845px;
   right: 0px;
-  width: 45%;
+  width: 43%;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     transform: rotate(0deg);
