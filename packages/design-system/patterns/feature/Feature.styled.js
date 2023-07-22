@@ -40,8 +40,9 @@ export const Icon = styled.div`
     height: 100%;
   }
 `
+
 export const Illustration = styled.div`
-  width: 80px;
+  width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;

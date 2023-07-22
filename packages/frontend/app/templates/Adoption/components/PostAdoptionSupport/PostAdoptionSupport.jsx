@@ -1,8 +1,8 @@
 import TextBanner from "design-system/patterns/textBanner"
 import Typography from "design-system/components/typography"
-import Illustration from "design-system/components/illustration/Illustration"
 import Feature from "design-system/patterns/feature"
 import Container from "design-system/components/container"
+import Button from "design-system/components/button"
 import * as Styled from "./PostAdoptionSupport.styled"
 
 const features = [
@@ -13,14 +13,12 @@ const features = [
   },
   {
     title: "Pomoc behawioralna",
-    description: `Pomoc behawioralna
-    Jeżeli wasz pies ma problemy behawioralne, nie musicie się martwić. Oferujemy wsparcie w postaci konsultacji z doświadczonym behawiorystą oraz współpracujemy z Asią z "Co ten pies?", która świadczy usługi w Poznaniu i okolicach. Nasze adopcyjne zwierzaki otrzymują również zniżki na te usługi. W opisach zwierząt na naszej stronie informujemy, kiedy to my pokrywamy koszty wizyt u behawiorystów.`,
+    description: `Jeżeli wasz pies ma problemy behawioralne, nie musicie się martwić. Oferujemy wsparcie w postaci konsultacji z doświadczonym behawiorystą oraz współpracujemy z Asią z "Co ten pies?", która świadczy usługi w Poznaniu i okolicach. Nasze adopcyjne zwierzaki otrzymują również zniżki na te usługi. W opisach zwierząt na naszej stronie informujemy, kiedy to my pokrywamy koszty wizyt u behawiorystów.`,
     illustration: `behaviorist`,
   },
   {
-    title: "Pomoc behawioralna",
-    description: `Wigilia z rodzinami adopcyjnymi
-    Co roku tworzymy również okazję na świąteczne spotkanie wigilijne z rodzinami adopcyjnymi. Na tym niezapomnianym wydarzeniu wspólnie dzielimy się radością, historiami i niezwykłymi chwilami, które nasze czworonogi przyniosły do naszych domów.`,
+    title: "Wigilia z rodzinami adopcyjnymi",
+    description: `Co roku tworzymy również okazję na świąteczne spotkanie wigilijne z rodzinami adopcyjnymi. Na tym niezapomnianym wydarzeniu wspólnie dzielimy się radością, historiami i niezwykłymi chwilami, które nasze czworonogi przyniosły do naszych domów.`,
     illustration: "xmas",
   },
 ]
@@ -29,8 +27,13 @@ const PostAdoptionSupport = () => (
   <Styled.Content>
     <Container>
       <Styled.BannerContent>
-        <Illustration name="adoptionSupport" />
-        <TextBanner heading="Wsparcie po adopcji" subtitle="Co dalej?">
+        <Styled.SupportIllustration name="adoptionSupport" />
+        <TextBanner
+          heading="Wsparcie po adopcji"
+          subtitle="Co dalej?"
+          tabletLayout="left"
+          mobileLayout="left"
+        >
           <Styled.TextContainer>
             <Typography variant="bodyTitle">
               Kiedy dajecie dom zwierzakowi z naszej fundacji i otaczacie go
@@ -56,7 +59,7 @@ const PostAdoptionSupport = () => (
           </Feature>
         ))}
       </Styled.Features>
-      <Styled.ContactButton
+      <Button
         variant="border"
         text="Skontaktuj się z nami"
         size="large"
@@ -65,9 +68,5 @@ const PostAdoptionSupport = () => (
     </Container>
   </Styled.Content>
 )
-
-PostAdoptionSupport.propTypes = {}
-
-PostAdoptionSupport.defaultProps = {}
 
 export default PostAdoptionSupport

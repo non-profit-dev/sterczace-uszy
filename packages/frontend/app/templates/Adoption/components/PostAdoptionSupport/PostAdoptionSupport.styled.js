@@ -1,15 +1,15 @@
 import styled from "@emotion/styled"
-import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
+import Illustration from "design-system/components/illustration/Illustration"
 
 export const Content = styled.div`
   background-color: ${({ theme }) => theme.colors.complementary[100]};
+  padding-bottom: 120px;
   padding-top: 120px;
-  padding-bottom: 82px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding-top: 100px;
-    padding-bottom: 154px;
+    padding-bottom: 100px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     padding-top: 60px;
@@ -20,10 +20,15 @@ export const Content = styled.div`
 export const BannerContent = styled.div`
   display: flex;
   gap: 60px;
-  padding: 120px 0;
+  padding-bottom: 120px;
 
-  ${({ theme }) => theme.breakpoints.tablet} {
-    padding: 60px 0;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    flex-direction: column;
+    padding-bottom: 56px;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    padding-bottom: 60px;
   }
 
   svg {
@@ -39,11 +44,15 @@ export const Features = styled.div`
   display: flex;
   flex-direction: column;
   gap: 60px;
+  max-width: 800px;
+  margin-bottom: 60px;
 `
 
-export const ContactButton = styled(Button)`
-  margin-top: 60px;
-`
 export const TextBottomWrapper = styled(Typography)`
   margin-top: 20px;
+`
+export const SupportIllustration = styled(Illustration)`
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    margin: 0 auto;
+  }
 `
