@@ -14,7 +14,7 @@ const features = [
   {
     title: "Pomoc behawioralna",
     description: `Jeżeli wasz pies ma problemy behawioralne, nie musicie się martwić. Oferujemy wsparcie w postaci konsultacji z doświadczonym behawiorystą oraz współpracujemy z Asią z "Co ten pies?", która świadczy usługi w Poznaniu i okolicach. Nasze adopcyjne zwierzaki otrzymują również zniżki na te usługi. W opisach zwierząt na naszej stronie informujemy, kiedy to my pokrywamy koszty wizyt u behawiorystów.`,
-    illustration: `behaviorist`,
+    illustration: `training`,
   },
   {
     title: "Wigilia z rodzinami adopcyjnymi",
