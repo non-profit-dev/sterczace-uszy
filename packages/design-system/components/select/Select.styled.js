@@ -29,8 +29,8 @@ export const Select = styled.select`
   }
 
   &:focus {
-    border: 1px solid ${({ theme }) => theme.colors.gray[400]};
-    outline: 4px solid ${({ theme }) => theme.colors.gray[200]};
+    outline: 2px solid ${({ theme }) => theme.colors.blue[100]};
+    outline-offset: 1px;
   }
 
   &:active {
