@@ -1,22 +1,39 @@
 import { string, node, number, oneOf } from "prop-types"
 import { useTheme } from "@emotion/react"
-
+import Illustration from "design-system/components/illustration"
 import Icon from "design-system/components/icon"
 import Typography from "design-system/components/typography"
 import Count from "design-system/components/count"
-
 import * as Styled from "./Feature.styled"
 
-const Feature = ({ heading, children, icon, count, color, className }) => {
+const Feature = ({
+  heading,
+  children,
+  icon,
+  count,
+  illustration,
+  color,
+  className,
+}) => {
   const theme = useTheme()
 
   return (
     <Styled.Feature className={className}>
-      <Styled.Icon color={color}>
-        {icon && <Icon name={icon} color={theme.colors.neutrals[100]} />}
-        {count && <Count count={count} size="xsmall" color="white" />}
-      </Styled.Icon>
-
+      {illustration && (
+        <Styled.Illustration>
+          <Illustration name={illustration} />
+        </Styled.Illustration>
+      )}
+      {icon && (
+        <Styled.Icon color={color}>
+          {icon && (
+            <>
+              <Icon name={icon} color={theme.colors.neutrals[100]} />
+              {count && <Count count={count} size="xsmall" color="white" />}
+            </>
+          )}
+        </Styled.Icon>
+      )}
       <Styled.Content>
         <Typography variant="bodyLarge" color={theme.colors.primary[500]}>
           {heading}
@@ -30,6 +47,7 @@ const Feature = ({ heading, children, icon, count, color, className }) => {
 Feature.propTypes = {
   heading: string.isRequired,
   icon: string,
+  illustration: string,
   count: number,
   color: oneOf(["primary", "gray"]),
   children: node.isRequired,
@@ -40,6 +58,7 @@ Feature.defaultProps = {
   className: null,
   color: "primary",
   icon: null,
+  illustration: null,
   count: null,
 }
 

@@ -30,6 +30,9 @@ import Computer from "design-system/tokens/illustrations/computer.svg"
 import Pet from "design-system/tokens/illustrations/pet.svg"
 import StandingOrder from "design-system/tokens/illustrations/standingOrder.svg"
 import Confirmation from "design-system/tokens/illustrations/confirmation.svg"
+import AdoptionSupport from "design-system/tokens/illustrations/adoptionSupport.svg"
+import Xmas from "design-system/tokens/illustrations/xmas.svg"
+import Tips from "design-system/tokens/illustrations/tips.svg"
 
 export const illustrations = {
   heartWithDogFace: HeartWithDogFace,
@@ -62,6 +65,9 @@ export const illustrations = {
   pet: Pet,
   standingOrder: StandingOrder,
   confirmation: Confirmation,
+  adoptionSupport: AdoptionSupport,
+  tips: Tips,
+  xmas: Xmas,
 }
 
 const Illustration = ({ name, className }) => {
