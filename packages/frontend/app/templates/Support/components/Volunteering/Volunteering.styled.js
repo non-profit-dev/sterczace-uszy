@@ -35,7 +35,7 @@ export const Img = styled(Image)`
   }
 `
 export const TextWrapper = styled.div`
-padding-top: 10px;
+  padding-top: 10px;
   ${({ theme }) => theme.breakpoints.mobileLg} {
     width: 90%;
   }

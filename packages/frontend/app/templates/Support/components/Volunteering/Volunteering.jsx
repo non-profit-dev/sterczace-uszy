@@ -2,8 +2,8 @@ import Typography from "design-system/components/typography"
 import Feature from "design-system/patterns/feature"
 import Illustration from "design-system/components/illustration"
 import TextBanner from "design-system/patterns/textBanner"
-import * as Styled from "./Volunteering.styled"
 import Button from "design-system/components/button"
+import * as Styled from "./Volunteering.styled"
 
 const features = [
   {
@@ -59,20 +59,19 @@ const Volunteering = () => (
         <Styled.ImageWrapper>
           <Illustration name="heartLine" />
         </Styled.ImageWrapper>
-          <Styled.TextWrapper>
-            <TextBanner
+        <Styled.TextWrapper>
+          <TextBanner
             heading="Zostań wolontariuszem"
             subtitle="Wolontariat"
             tabletLayout="left"
             mobileLayout="left"
           />
-            {descriptions.map(({ description }) => (
-              <Typography variant="bodyTitle" key={description}>
-                {description}
-              </Typography>
-            ))}
-          </Styled.TextWrapper>
-        
+          {descriptions.map(({ description }) => (
+            <Typography variant="bodyTitle" key={description}>
+              {description}
+            </Typography>
+          ))}
+        </Styled.TextWrapper>
       </Styled.MainBanner>
       <Styled.TitleText text="Kogo szukamy?" variant="h3" />
       <Styled.Features>
