@@ -9,7 +9,6 @@ import { ApolloProvider } from "@apollo/client"
 import { CookiesProvider } from "react-cookie"
 import "swiper/swiper-bundle.css"
 // eslint-disable-next-line import/no-unresolved
-import { Analytics } from "@vercel/analytics/react"
 import theme from "design-system/tokens/theme"
 import CookiesBanner from "design-system/blocks/cookiesBanner"
 import GlobalReset from "design-system/helpers/globalReset/GlobalReset"
@@ -96,8 +95,6 @@ const MyApp = ({ Component, pageProps }) => {
               <Component {...pageProps} />
               <CookiesBanner>adadasdad</CookiesBanner>
             </CookiesProvider>
-
-            <Analytics />
           </ThemeProvider>
         </GoogleReCaptchaProvider>
       </ApolloProvider>
