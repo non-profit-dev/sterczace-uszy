@@ -25,7 +25,7 @@ const FinancialStatements = ({ data }) => (
           </Typography>
         </Styled.Description>
       </TextBanner>
-      <Typography variant="h5">
+      <Typography variant="h5" as="p">
         Tutaj znajdziesz wszystkie sprawozdania z działalności fundacji:
         <Styled.ButtonsContainer>
           {data.map(({ name, url }) => (
@@ -41,12 +41,12 @@ const FinancialStatements = ({ data }) => (
       </Typography>
     </Styled.FinancialDataWrapper>
     <Styled.TextWrapper>
-      <Typography variant="h4">
+      <Typography variant="h4" as="p">
         Dziękujemy za Wasze wsparcie <Icon name="heartFilled" size="large" />
       </Typography>
     </Styled.TextWrapper>
     <Styled.ImageWrapper>
-      <Styled.ImageHeading variant="h6">
+      <Styled.ImageHeading variant="h6" as="p">
         Nasze najważniejsze koszty:
       </Styled.ImageHeading>
       <Image src="/about/financial-chart.png" alt="" />
