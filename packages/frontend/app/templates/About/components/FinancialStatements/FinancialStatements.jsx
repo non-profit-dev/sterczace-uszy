@@ -26,19 +26,19 @@ const FinancialStatements = ({ data }) => (
         </Styled.Description>
       </TextBanner>
       <Typography variant="h5" as="p">
-        Tutaj znajdziesz wszystkie sprawozdania z działalności fundacji:
-        <Styled.ButtonsContainer>
-          {data.map(({ name, url }) => (
-            <Button
-              variant="text"
-              text={name}
-              href={url}
-              key={name}
-              iconStart="download"
-            />
-          ))}
-        </Styled.ButtonsContainer>
+        Tutaj znajdziesz wszystkie sprawozdania z działalności fundacji:{" "}
       </Typography>
+      <Styled.ButtonsContainer>
+        {data.map(({ name, url }) => (
+          <Button
+            variant="text"
+            text={name}
+            href={url}
+            key={name}
+            iconStart="download"
+          />
+        ))}
+      </Styled.ButtonsContainer>
     </Styled.FinancialDataWrapper>
     <Styled.TextWrapper>
       <Typography variant="h4" as="p">
