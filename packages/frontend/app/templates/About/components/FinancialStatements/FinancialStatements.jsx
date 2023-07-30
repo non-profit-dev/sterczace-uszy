@@ -25,7 +25,7 @@ const FinancialStatements = ({ data }) => (
           </Typography>
         </Styled.Description>
       </TextBanner>
-      <Typography variant="h5" as="p">
+      <Typography variant="h5">
         Tutaj znajdziesz wszystkie sprawozdania z działalności fundacji:{" "}
       </Typography>
       <Styled.ButtonsContainer>
