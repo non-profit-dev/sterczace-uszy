@@ -4,7 +4,6 @@ import TextBanner from "design-system/patterns/textBanner"
 import Typography from "design-system/components/typography"
 import Button from "design-system/components/button"
 import Icon from "design-system/components/icon"
-import Image from "design-system/components/image"
 
 import * as Styled from "./FinancialStatements.styled"
 
@@ -36,6 +35,7 @@ const FinancialStatements = ({ data }) => (
             href={url}
             key={name}
             iconStart="download"
+            target="_blank"
           />
         ))}
       </Styled.ButtonsContainer>
@@ -49,7 +49,8 @@ const FinancialStatements = ({ data }) => (
       <Styled.ImageHeading variant="h6" as="p">
         Nasze najważniejsze koszty:
       </Styled.ImageHeading>
-      <Image src="/about/financial-chart.png" alt="" />
+      <Styled.DesktopImage src="/about/financial-chart-desktop.png" alt="" />
+      <Styled.MobileImage src="/about/financial-chart-mobile.png" alt="" />
     </Styled.ImageWrapper>
   </Styled.Container>
 )

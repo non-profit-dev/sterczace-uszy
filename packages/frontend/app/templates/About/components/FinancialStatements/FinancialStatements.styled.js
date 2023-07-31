@@ -1,5 +1,6 @@
 import styled from "@emotion/styled"
 import Typography from "design-system/components/typography"
+import Image from "design-system/components/image"
 
 export const Container = styled.div`
   display: grid;
@@ -43,17 +44,6 @@ export const Description = styled.div`
 export const ImageWrapper = styled.div`
   grid-area: image;
   align-self: flex-end;
-
-  img {
-    width: 539px;
-    height: 388px;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    img {
-      width: auto;
-      height: 292px;
-    }
   }
 `
 
@@ -83,4 +73,19 @@ export const TextWrapper = styled.div`
 
 export const ImageHeading = styled(Typography)`
   margin-bottom: 10px;
+`
+
+export const MobileImage = styled(Image)`
+  display: none;
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    display: block;
+  }
+`
+
+export const DesktopImage = styled(Image)`
+  width: 539px;
+  height: 388px;
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    display: none;
+  }
 `
