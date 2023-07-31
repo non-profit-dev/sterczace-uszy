@@ -47,7 +47,7 @@ const FinancialStatements = ({ data }) => (
     </Styled.TextWrapper>
     <Styled.ImageWrapper>
       <Styled.ImageHeading variant="h6" as="p">
-        Nasze najważniejsze koszty:
+        Nasze najważniejsze koszty:{" "}
       </Styled.ImageHeading>
       <Styled.DesktopImage src="/about/financial-chart-desktop.png" alt="" />
       <Styled.MobileImage src="/about/financial-chart-mobile.png" alt="" />
