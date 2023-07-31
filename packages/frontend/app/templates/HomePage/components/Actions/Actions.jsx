@@ -84,7 +84,7 @@ const Actions = () => {
         <Styled.ButtonWrapper>
           <Button
             text="Sprawdź aktualności"
-            href={globalData.socialMedia.facebook}
+            href={globalData.socialMedia.facebook.link}
             target="_blank"
             size="large"
           />
