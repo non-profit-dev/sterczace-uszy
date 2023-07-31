@@ -10,7 +10,7 @@ export const ContainerSection = styled(Container)`
 
 export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.neutrals[200]};
-  padding-top: 10px;
+  padding-top: 120px;
   padding-bottom: 50px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
@@ -20,18 +20,19 @@ export const Wrapper = styled.div`
 `
 
 export const Img = styled(Image)`
-  width: 90%;
-  height: 90%;
+  max-width: 385px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
+    max-width: unset;
     width: 100vw;
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     height: 600px;
     border-radius: 0;
-    margin-left: -56px;
   }
+
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    margin-left: -25px;
-    height: 300px;
+    height: 320px;
   }
 `
 export const TextWrapper = styled.div`
@@ -52,7 +53,7 @@ export const MainBanner = styled.div`
 export const ImageWrapper = styled.div`
   position: absolute;
   transform: rotate(25deg);
-  margin-top: 730px;
+  margin-top: 700px;
   right: 0px;
   width: 43%;
 
