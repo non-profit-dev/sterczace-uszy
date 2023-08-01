@@ -25,6 +25,7 @@ import InternationalAdoption from "./components/InternationalAdoption"
 import VirtualAdoptionSteps from "./components/VirtualAdoptionSteps"
 
 import { animalsType } from "../../lib/types"
+import PostAdoptionSupport from "./components/PostAdoptionSupport/PostAdoptionSupport"
 
 const Adoption = ({ animals, animalsData }) => (
   <Page title="Adopcja">
@@ -45,6 +46,7 @@ const Adoption = ({ animals, animalsData }) => (
       <ActionDuringVisit />
       <SpecialSituations />
       <InternationalAdoption />
+      <PostAdoptionSupport />
       <AdoptionRefusal />
       <VirtualAdoption />
       <VirtualAdoptionSteps />
