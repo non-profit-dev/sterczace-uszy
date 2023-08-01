@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import Cookies from "js-cookie"
 
-import Container from "design-system/components/container"
 import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
+import Icon from "design-system/components/icon"
 
 import * as Styled from "./CookiesBanner.styled"
 
@@ -40,10 +40,13 @@ const CookiesBanner = () => {
 
   return isVisible ? (
     <Styled.Wrapper>
-      <Container>
+      <Styled.Container>
+        <Styled.Icon onClick={rejectCookies}>
+          <Icon name="close" />
+        </Styled.Icon>
         <Styled.Content>
           <Styled.Text>
-            <Typography variant="bodyTitle">
+            <Typography variant="bodySmall">
               Ta strona korzysta z plików cookie, aby poprawić Twoje wrażenia
               podczas korzystania z niej. Szczegółowe informacje znajdziesz w{" "}
               <a href="/polityka-prywatnosci">Polityce prywatności</a>. Będziemy
@@ -66,7 +69,7 @@ const CookiesBanner = () => {
             />
           </Styled.Buttons>
         </Styled.Content>
-      </Container>
+      </Styled.Container>
     </Styled.Wrapper>
   ) : null
 }
