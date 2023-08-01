@@ -39,14 +39,14 @@ const CookiesBanner = () => {
   }, [])
 
   return isVisible ? (
-    <Styled.Wrapper>
+    <Styled.Wrapper role="dialog" aria-labelledby="cookie-heading">
       <Styled.Container>
         <Styled.Icon onClick={rejectCookies}>
           <Icon name="close" />
         </Styled.Icon>
         <Styled.Content>
           <Styled.Text>
-            <Typography variant="bodySmall">
+            <Typography variant="bodySmall" id="cookie-heading">
               Ta strona korzysta z plików cookie, aby poprawić Twoje wrażenia
               podczas korzystania z niej. Szczegółowe informacje znajdziesz w{" "}
               <a href="/polityka-prywatnosci">Polityce prywatności</a>. Będziemy
