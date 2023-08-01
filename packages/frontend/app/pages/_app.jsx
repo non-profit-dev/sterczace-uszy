@@ -6,7 +6,6 @@ import { ThemeProvider } from "@emotion/react"
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 import { func, shape } from "prop-types"
 import { ApolloProvider } from "@apollo/client"
-import { CookiesProvider } from "react-cookie"
 import "swiper/swiper-bundle.css"
 // eslint-disable-next-line import/no-unresolved
 import theme from "design-system/tokens/theme"
@@ -91,10 +90,8 @@ const MyApp = ({ Component, pageProps }) => {
           <ThemeProvider theme={theme}>
             <GlobalReset />
 
-            <CookiesProvider>
-              <Component {...pageProps} />
-              <CookiesBanner>adadasdad</CookiesBanner>
-            </CookiesProvider>
+            <Component {...pageProps} />
+            <CookiesBanner />
           </ThemeProvider>
         </GoogleReCaptchaProvider>
       </ApolloProvider>

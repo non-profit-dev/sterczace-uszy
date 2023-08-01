@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useCookies } from "react-cookie"
+import Cookies from "js-cookie"
 
 import Container from "design-system/components/container"
 import Button from "design-system/components/button"
@@ -8,20 +8,32 @@ import Typography from "design-system/components/typography"
 import * as Styled from "./CookiesBanner.styled"
 
 const CookiesBanner = () => {
-  const [cookies] = useCookies()
   const [isVisible, setIsVisible] = useState(false)
 
-  const handleCookies = () => {
+  const rejectCookies = () => {
+    Cookies.set("exp", "", { expires: 14 })
+
     window.gtag("consent", "update", {
-      ad_storage: "granted",
-      analytics_storage: "granted",
+      ad_storage: "denied",
+      analytics_storage: "denied",
     })
 
     setIsVisible(false)
   }
 
+  const acceptCookies = () => {
+    window.gtag("consent", "update", {
+      ad_storage: "granted",
+      analytics_storage: "granted",
+    })
+
+    Cookies.remove("exp")
+
+    setIsVisible(false)
+  }
+
   useEffect(() => {
-    if (!Object.keys(cookies).length) {
+    if (!Object.keys(Cookies.get()).length) {
       setIsVisible(true)
     }
   }, [])
@@ -39,16 +51,15 @@ const CookiesBanner = () => {
               klikając &quot;Zaakceptuj wszystkie&quot;.
             </Typography>
           </Styled.Text>
-
           <Styled.Buttons>
             <Button
-              onClick={() => setIsVisible(false)}
+              onClick={rejectCookies}
               text="Odrzuć wszystkie"
               variant="border"
               color="black"
             />
             <Button
-              onClick={handleCookies}
+              onClick={acceptCookies}
               text="Zaakceptuj wszystkie"
               variant="fill"
               color="primary"
