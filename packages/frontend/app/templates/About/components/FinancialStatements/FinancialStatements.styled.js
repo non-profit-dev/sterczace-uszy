@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-areas:
     "financial image"
-    "text text";
+    "text image";
   grid-column-gap: 120px;
   margin: 120px 0;
 
@@ -17,10 +17,11 @@ export const Container = styled.div`
       "image"
       "text";
     grid-gap: 0;
+    margin: 0px 0 100px;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    max-width: 340px;
+    margin: 0px 0 60px;
   }
 `
 
@@ -43,8 +44,7 @@ export const Description = styled.div`
 
 export const ImageWrapper = styled.div`
   grid-area: image;
-  align-self: flex-end;
-  }
+  align-self: end;
 `
 
 export const ButtonsContainer = styled.div`
@@ -52,7 +52,7 @@ export const ButtonsContainer = styled.div`
   flex-direction: column;
   gap: 10px;
   margin-top: 20px;
-  margin-bottom: 111px;
+  margin-bottom: 112px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     margin-bottom: 60px;
@@ -64,10 +64,6 @@ export const TextWrapper = styled.div`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     margin-top: 60px;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    max-width: 211px;
   }
 `
 
