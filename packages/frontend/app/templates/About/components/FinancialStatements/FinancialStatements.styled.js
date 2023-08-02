@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 import Typography from "design-system/components/typography"
 import Image from "design-system/components/image"
+import Icon from "design-system/components/icon"
 
 export const Container = styled.div`
   display: grid;
@@ -21,17 +22,13 @@ export const Container = styled.div`
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    margin: 0px 0 60px;
+    margin: 0 0 60px;
   }
 `
 
 export const FinancialDataWrapper = styled.div`
   max-width: 584px;
   grid-area: financial;
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    max-width: 342px;
-  }
 `
 
 export const Description = styled.div`
@@ -84,4 +81,7 @@ export const DesktopImage = styled(Image)`
   ${({ theme }) => theme.breakpoints.mobileLg} {
     display: none;
   }
+`
+export const HeartIcon = styled(Icon)`
+  vertical-align: middle;
 `

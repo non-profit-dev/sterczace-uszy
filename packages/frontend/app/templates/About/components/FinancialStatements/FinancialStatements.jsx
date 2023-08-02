@@ -3,7 +3,6 @@ import React from "react"
 import TextBanner from "design-system/patterns/textBanner"
 import Typography from "design-system/components/typography"
 import Button from "design-system/components/button"
-import Icon from "design-system/components/icon"
 
 import * as Styled from "./FinancialStatements.styled"
 
@@ -42,7 +41,8 @@ const FinancialStatements = ({ data }) => (
     </Styled.FinancialDataWrapper>
     <Styled.TextWrapper>
       <Typography variant="h4" as="p">
-        Dziękujemy za Wasze wsparcie <Icon name="heartFilled" size="large" />
+        Dziękujemy za Wasze wsparcie{" "}
+        <Styled.HeartIcon name="heartFilled" size="large" />
       </Typography>
     </Styled.TextWrapper>
     <Styled.ImageWrapper>
