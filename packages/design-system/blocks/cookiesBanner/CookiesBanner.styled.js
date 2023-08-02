@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
   background: ${({ theme }) => theme.colors.neutrals[100]};
   z-index: 999;
   box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.1);
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    padding: 20px 0;
+  }
 `
 
 export const Text = styled.div`
@@ -20,13 +24,26 @@ export const Text = styled.div`
 export const Content = styled.div`
   padding-top: 40px;
   display: flex;
+  gap: 40px;
   align-items: center;
   justify-content: space-between;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    flex-direction: column;
+    align-items: start;
+  }
 `
 
 export const Buttons = styled.div`
+  flex: 1 0 auto;
   display: flex;
+  justify-content: end;
   gap: 20px;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    flex-direction: column;
+    align-items: start;
+  }
 `
 
 export const Container = styled(ContainerComponent)`
