@@ -3,17 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "develop": "yarn --cwd packages/frontend/app develop",
-    "start": "yarn --cwd packages/frontend/app start",
-    "build": "yarn --cwd packages/frontend/app build",
-    "deploy:frontend": "yarn --cwd packages/frontend/app deploy",
+    "develop": "yarn workspace frontend run develop",
+    "start": "yarn workspace frontend run start",
+    "build": "yarn workspace frontend run build",
+    "deploy:frontend": "yarn workspace frontend run deploy",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint . --ext js,jsx,mdx",
     "lint:fix": "yarn lint --fix",
-    "cypress:open": "yarn --cwd packages/frontend/e2e cypress:open",
-    "cypress:run": "yarn --cwd packages/frontend/e2e cypress:run",
-    "test": "yarn --cwd packages/design-system test",
+    "cypress:open": "yarn workspace e2e run cypress:open",
+    "cypress:run": "yarn workspace e2e run cypress:run",
+    "test": "yarn workspace design-system run test",
     "postinstall": "husky install",
     "plop": "plop"
   },
@@ -63,5 +63,6 @@
     "react-dom": "^18.2.0",
     "swiper": "^9.1.0",
     "usehooks-ts": "^2.9.1"
-  }
+  },
+  "packageManager": "yarn@3.6.1"
 }
