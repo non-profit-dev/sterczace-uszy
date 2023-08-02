@@ -46,7 +46,7 @@ const CookiesBanner = () => {
         </Styled.Icon>
         <Styled.Content>
           <Styled.Text>
-            <Typography variant="bodySmall" id="cookie-heading">
+            <Typography variant="bodyTitle" id="cookie-heading">
               Ta strona korzysta z plików cookie, aby poprawić Twoje wrażenia
               podczas korzystania z niej. Szczegółowe informacje znajdziesz w{" "}
               <a href="/polityka-prywatnosci">Polityce prywatności</a>. Będziemy
