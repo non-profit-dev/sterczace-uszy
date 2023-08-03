@@ -1,5 +1,4 @@
 import { oneOf, string } from "prop-types"
-
 import HeartWithDogFace from "design-system/tokens/illustrations/heartWithDogFace.svg"
 import HeartIllustration from "design-system/tokens/illustrations/HeartIllustration.svg"
 import DogIllustration from "design-system/tokens/illustrations/DogIllustration.svg"

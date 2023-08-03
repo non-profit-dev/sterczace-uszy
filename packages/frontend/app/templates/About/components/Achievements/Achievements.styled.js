@@ -36,9 +36,11 @@ export const Achievements = styled.div`
   padding: 120px 0px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     gap: 80px;
+    padding: 100px 0px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     gap: 60px;
+    padding: 60px 0px 60px;
   }
 `
 export const CardContainer = styled.div`
