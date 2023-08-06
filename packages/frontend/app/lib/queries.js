@@ -123,3 +123,13 @@ export const GET_ANIMALS_NAME = gql`
     }
   }
 `
+export const GET_FINANCIAL_STATEMENTS = gql`
+  query GetFinancialStatements {
+    financialStatementCollection {
+      items {
+        name
+        url
+      }
+    }
+  }
+`

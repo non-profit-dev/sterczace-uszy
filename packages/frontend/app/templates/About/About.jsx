@@ -2,7 +2,6 @@ import Container from "design-system/components/container"
 import Banner from "design-system/components/banner"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
-
 import Achievements from "./components/Achievements"
 import AboutUs from "./components/AboutUs"
 import Values from "./components/Values"
@@ -13,13 +12,20 @@ import {
   supportingType,
   animalsType,
   adoptedAnimalsType,
+  financialStatementsType,
 } from "../../lib/types"
 
 import Microchips from "./components/Microchips"
 
 import * as Styled from "./About.styled"
+import FinancialStatements from "./components/FinancialStatements"
 
-const About = ({ animals, supporting, adoptedAnimals }) => (
+const About = ({
+  animals,
+  supporting,
+  adoptedAnimals,
+  financialStatements,
+}) => (
   <Page title="O nas">
     <Styled.Banner>
       <Banner>
@@ -39,6 +45,7 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
           animalsNumber={animals.total}
           adoptedAnimalsNumber={adoptedAnimals.total}
         />
+        <FinancialStatements data={financialStatements.items} />
       </Container>
 
       <Microchips />
@@ -53,6 +60,7 @@ About.propTypes = {
   animals: animalsType.isRequired,
   supporting: supportingType.isRequired,
   adoptedAnimals: adoptedAnimalsType.isRequired,
+  financialStatements: financialStatementsType.isRequired,
 }
 
 export default About

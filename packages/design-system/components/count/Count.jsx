@@ -1,4 +1,4 @@
-import { oneOf, number, string } from "prop-types"
+import { oneOf, oneOfType, number, string } from "prop-types"
 
 import * as Styled from "./Count.styled"
 
@@ -11,7 +11,7 @@ Count.propTypes = {
   /**
    * The number value that's displayed as a component.
    */
-  count: number.isRequired,
+  count: oneOfType([number, string]).isRequired,
   className: string,
   as: string,
   size: oneOf(["xsmall", "small", "medium", "large"]),
