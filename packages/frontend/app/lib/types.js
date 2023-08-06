@@ -42,3 +42,12 @@ export const supportingType = shape({
 export const adoptedAnimalsType = shape({
   number,
 })
+
+export const financialStatementsType = shape({
+  items: arrayOf(
+    shape({
+      name: string,
+      url: string,
+    })
+  ),
+})

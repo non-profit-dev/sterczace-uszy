@@ -1,4 +1,4 @@
-import { bool, string, node, oneOf } from "prop-types"
+import { bool, string, node, oneOfType } from "prop-types"
 import Typography from "design-system/components/typography"
 import theme from "design-system/tokens/theme"
 import { useState } from "react"
@@ -65,7 +65,7 @@ const Checkbox = ({
 }
 
 Checkbox.propTypes = {
-  label: oneOf([string, node].isRequired),
+  label: oneOfType([string, node]).isRequired,
   error: bool,
   required: bool,
   disabled: bool,
@@ -76,7 +76,6 @@ Checkbox.propTypes = {
 
 Checkbox.defaultProps = {
   required: false,
-  label: "",
   error: false,
   disabled: false,
   checked: false,
