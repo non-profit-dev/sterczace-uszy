@@ -113,3 +113,15 @@ out/
 # Storybook
 ############################
 storybook-static
+
+
+############################
+# Yarn
+############################
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
