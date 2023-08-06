@@ -32,6 +32,7 @@ export const Content = styled.div`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     flex-direction: column;
     align-items: start;
+    gap: 20px;
   }
 `
 
