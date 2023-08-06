@@ -1,20 +1,23 @@
-## Name PR according scheme: type of changes (feat/fix/refactor etc.) + description
+## Description 📝
 
-## Jira issue
+<!-- Please include a brief description of the changes introduced in this pull request. -->
 
-JIRA issue: [FSU-XX](https://klau.atlassian.net/browse/FSU-XX)
+## Related Issues 🔗
 
-## Describe your changes
+<!-- List any related issues or pull requests -->
+
+JIRA issue: [FSU-XXX](https://klau.atlassian.net/browse/FSU-XXX)
+
+## Resources 📚
+<!-- Link to relevant documentation or tutorials. -->
+
+## Preview Links 🔍
+
+<!-- Below are the links to see how the changes look:
+- [Storybook](link_to_storybook_preview_if_needed)
+- [Home](link_to_webpage_preview_if_needed)
+-->
 
 
-## Checklist before requesting a review
-
-- [ ] Checked which branch you would merge.
-- [ ] Checked if the code follows the style guidelines of this project (use eslint and prettier).
-- [ ] Performed a self-review of code (bugs, clean code rules, etc).
-- [ ] Checked if added variables have unique names.
-- [ ] Checked if added code/function is not a duplicate. 
-- [ ] Tests have been added if possible.
-- [ ] New and existing unit tests pass locally with my changes.
-
-
+## Ask for Help 🙋‍♀️🙋‍♂️
+<!-- If you encounter any difficulties or have questions, feel free to ask for help. -->
