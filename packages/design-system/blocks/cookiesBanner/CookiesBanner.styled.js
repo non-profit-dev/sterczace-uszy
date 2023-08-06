@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 
 import ContainerComponent from "design-system/components/container"
+import IconButton from "design-system/components/iconButton"
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -50,7 +51,7 @@ export const Container = styled(ContainerComponent)`
   position: relative;
 `
 
-export const Icon = styled.button`
+export const Icon = styled(IconButton)`
   position: absolute;
   top: 0;
   right: 0;

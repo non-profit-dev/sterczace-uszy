@@ -3,7 +3,6 @@ import Cookies from "js-cookie"
 
 import Button from "design-system/components/button"
 import Typography from "design-system/components/typography"
-import Icon from "design-system/components/icon"
 
 import * as Styled from "./CookiesBanner.styled"
 
@@ -41,9 +40,12 @@ const CookiesBanner = () => {
   return isVisible ? (
     <Styled.Wrapper role="dialog" aria-labelledby="cookie-heading">
       <Styled.Container>
-        <Styled.Icon onClick={rejectCookies}>
-          <Icon name="close" />
-        </Styled.Icon>
+        <Styled.Icon
+          onClick={rejectCookies}
+          name="close"
+          color="black"
+          title="Zamknij banner"
+        />
         <Styled.Content>
           <Styled.Text>
             <Typography variant="bodyTitle" id="cookie-heading">
