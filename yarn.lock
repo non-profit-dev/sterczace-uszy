@@ -1794,7 +1794,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:^17.1.2":
+"@commitlint/cli@npm:^17.6.7":
   version: 17.6.7
   resolution: "@commitlint/cli@npm:17.6.7"
   dependencies:
@@ -1814,7 +1814,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^17.1.0":
+"@commitlint/config-conventional@npm:^17.6.7":
   version: 17.6.7
   resolution: "@commitlint/config-conventional@npm:17.6.7"
   dependencies:
@@ -22276,8 +22276,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "website@workspace:."
   dependencies:
-    "@commitlint/cli": ^17.1.2
-    "@commitlint/config-conventional": ^17.1.0
+    "@commitlint/cli": ^17.6.7
+    "@commitlint/config-conventional": ^17.6.7
     "@emotion/react": ^11.10.4
     "@emotion/styled": ^11.10.4
     "@storybook/addon-controls": ^6.5.12
