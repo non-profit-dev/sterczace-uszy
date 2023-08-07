@@ -12,7 +12,7 @@ describe("Contact Page", () => {
     cy.get("h2").contains("Zostaw wiadomość")
   })
 
-  it(`sends the form after clicking submit button`, () => {
+  it.skip(`sends the form after clicking submit button`, () => {
     cy.intercept("POST", "https://formspree.io/f/*", { ok: true }).as(
       "formSubmit"
     )

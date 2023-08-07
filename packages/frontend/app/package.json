@@ -15,7 +15,6 @@
     "@contentful/rich-text-react-renderer": "^15.16.3",
     "@formspree/react": "^2.4.1",
     "@next/env": "^12.3.0",
-    "@vercel/analytics": "^0.1.8",
     "eslint-config-next": "^13.1.6",
     "graphql": "^16.6.0",
     "imagemin-mozjpeg": "^10.0.0",
