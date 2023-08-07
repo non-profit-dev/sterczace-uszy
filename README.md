@@ -6,7 +6,7 @@
 
 <p>This repo contains the design system and the entire website for the organization.</p>
 
-<a href="https://www.sterczaceuszy.pl/">Live page</a> × <a href="https://www.sterczaceuszy.pl/](https://sterczace-uszy-ds.vercel.app/">Storybook</a>
+<a href="https://www.sterczaceuszy.pl/">Live page</a> × <a href="https://sterczace-uszy-ds.vercel.app/">Storybook</a>
 
 <br />
 
