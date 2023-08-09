@@ -5,7 +5,7 @@ export default {
   component: Tabs,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     id: "example-tabs",
     transparentContent: false,

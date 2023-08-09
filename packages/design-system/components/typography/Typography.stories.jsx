@@ -5,7 +5,7 @@ export default {
   component: Typography,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     variant: "bodyLarge",
   },

@@ -7,7 +7,7 @@ export default {
   component: TextBanner,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     layout: "left",
     heading: "Pomóż nam pomagać",

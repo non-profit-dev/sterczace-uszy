@@ -5,7 +5,7 @@ export default {
   component: Count,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     size: "medium",
     count: 3,

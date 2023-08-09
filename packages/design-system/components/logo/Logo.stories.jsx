@@ -5,6 +5,6 @@ export default {
   component: Logo,
 }
 
-export const Overview = {
+export const Controls = {
   args: {},
 }

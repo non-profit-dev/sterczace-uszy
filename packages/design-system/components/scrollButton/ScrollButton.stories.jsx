@@ -5,6 +5,6 @@ export default {
   component: ScrollButton,
 }
 
-export const Overview = {
+export const Controls = {
   args: { sectionId: "contact-section", ariaLabel: "Scroll to example" },
 }

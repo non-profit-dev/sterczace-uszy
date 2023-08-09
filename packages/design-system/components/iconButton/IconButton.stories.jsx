@@ -5,7 +5,7 @@ export default {
   component: IconButton,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     name: "mail",
     size: "large",

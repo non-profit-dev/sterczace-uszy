@@ -5,7 +5,7 @@ export default {
   component: Select,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     label: "Temat",
     options: ["Adopcja", "Wolontariat", "Dom tymczasowy"],

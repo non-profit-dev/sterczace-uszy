@@ -5,6 +5,6 @@ export default {
   component: CookiesBanner,
 }
 
-export const Overview = {
+export const Controls = {
   args: {},
 }

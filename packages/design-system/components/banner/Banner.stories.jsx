@@ -5,7 +5,7 @@ export default {
   component: Banner,
 }
 
-export const Overview = {
+export const Controls = {
   args: {},
   render: (args) => (
     <Banner {...args}>

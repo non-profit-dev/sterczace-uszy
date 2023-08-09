@@ -15,7 +15,7 @@ export default {
   },
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     name: "chevronDown",
     size: "medium",

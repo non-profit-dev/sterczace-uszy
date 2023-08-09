@@ -43,7 +43,7 @@ const data = [
   },
 ]
 
-export const Overview = {
+export const Controls = {
   args: {
     pagination: true,
     navigation: true,

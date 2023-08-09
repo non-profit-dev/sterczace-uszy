@@ -5,7 +5,7 @@ export default {
   component: Button,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     text: "Button",
     href: "https://google.com",

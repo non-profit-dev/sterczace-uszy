@@ -5,7 +5,7 @@ export default {
   component: CtaBanner,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     heading: "Masz pytania lub wątpliwości? ",
     buttonText: "Skontaktuj się z nami",

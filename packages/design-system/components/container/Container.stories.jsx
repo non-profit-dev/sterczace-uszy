@@ -7,7 +7,7 @@ export default {
   component: Container,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     size: "medium",
     as: "section",

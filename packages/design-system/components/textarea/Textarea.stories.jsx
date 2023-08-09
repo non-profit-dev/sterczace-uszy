@@ -5,7 +5,7 @@ export default {
   component: Textarea,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     label: "Example label",
     placeholder: "Text placeholder",

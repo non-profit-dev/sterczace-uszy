@@ -8,7 +8,7 @@ export default {
   component: Card,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     title: <Title text="Porozmawiaj" />,
     illustrationName: "heartWithDogFace",

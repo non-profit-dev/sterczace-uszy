@@ -5,6 +5,6 @@ export default {
   component: Footer,
 }
 
-export const Overview = {
+export const Controls = {
   args: {},
 }

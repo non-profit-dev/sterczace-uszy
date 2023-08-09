@@ -5,7 +5,7 @@ export default {
   component: Checkbox,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     label: "Example label",
   },

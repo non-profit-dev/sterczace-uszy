@@ -5,7 +5,7 @@ export default {
   component: AnimalCard,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     name: "Karmel",
     slug: "karmel",

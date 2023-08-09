@@ -7,7 +7,7 @@ export default {
   component: Accordion,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     color: "black",
     activeColor: "black",

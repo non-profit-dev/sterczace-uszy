@@ -13,7 +13,7 @@ export default {
   },
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     name: "heartWithDogFace",
   },

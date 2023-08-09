@@ -5,7 +5,7 @@ export default {
   component: Feature,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     icon: "heart",
     heading: "Miłość",

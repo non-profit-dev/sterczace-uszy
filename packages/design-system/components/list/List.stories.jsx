@@ -7,7 +7,7 @@ export default {
   component: List,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     gap: 8,
   },

@@ -8,7 +8,7 @@ export default {
   component: Panel,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     title: (
       <Title

@@ -5,7 +5,7 @@ export default {
   component: Badge,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     text: "Szczeniak ",
     size: "small",

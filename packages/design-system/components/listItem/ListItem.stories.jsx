@@ -5,7 +5,7 @@ export default {
   component: ListItem,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     children: "umożliwiamy adopcję za granicę",
     variant: "primary",

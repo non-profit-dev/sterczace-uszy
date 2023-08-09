@@ -5,6 +5,6 @@ export default {
   component: Navigation,
 }
 
-export const Overview = {
+export const Controls = {
   args: {},
 }

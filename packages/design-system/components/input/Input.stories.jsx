@@ -5,7 +5,7 @@ export default {
   component: Input,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     label: "Example label",
     type: "text",

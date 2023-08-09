@@ -5,7 +5,7 @@ export default {
   component: DecorativeCard,
 }
 
-export const Overview = {
+export const Controls = {
   args: {
     title: "Uratowanych zwierząt",
     illustrationName: "dog",
