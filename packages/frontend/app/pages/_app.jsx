@@ -8,8 +8,8 @@ import { func, shape } from "prop-types"
 import { ApolloProvider } from "@apollo/client"
 import "swiper/swiper-bundle.css"
 // eslint-disable-next-line import/no-unresolved
-import { Analytics } from "@vercel/analytics/react"
 import theme from "design-system/tokens/theme"
+import CookiesBanner from "design-system/blocks/cookiesBanner"
 import GlobalReset from "design-system/helpers/globalReset/GlobalReset"
 import * as gtag from "../lib/gtag"
 import client from "../lib/api"
@@ -31,22 +31,30 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-      <Script
         id="gtag-init"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'analytics_storage': 'denied'
+            });
+
             gtag('js', new Date());
+            
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
               page_path: window.location.pathname,
             });
+                       
           `,
         }}
+      />
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
       <Head>
         <link
@@ -81,8 +89,9 @@ const MyApp = ({ Component, pageProps }) => {
         >
           <ThemeProvider theme={theme}>
             <GlobalReset />
+
             <Component {...pageProps} />
-            <Analytics />
+            <CookiesBanner />
           </ThemeProvider>
         </GoogleReCaptchaProvider>
       </ApolloProvider>

@@ -431,6 +431,44 @@ const Content = () => (
           prawnie uzasadniony interes na podstawie art. 6 ust. 1 lit. f RODO.{" "}
         </Typography>
       </Styled.ContentSection>
+
+      <Styled.ContentSection>
+        <Typography variant="h5">Pliki cookies</Typography>
+        <Typography variant="bodyTitle">
+          Cookies to niewielkie pliki tekstowe, wysyłane przez serwer fundacji
+          Sterczące Uszy i zapisywane po stronie użytkownika, które mogą być
+          odczytane wyłącznie przez system, który je zapisał. Cookies służą
+          jedynie do ułatwienia identyfikacji. Przechowuje się w nich
+          informacje, które są niezbędne dla prawidłowego wyświetlenia strony
+          Fundacji Sterczące Uszy. Jeśli nie chcesz, aby pliki cookies były
+          zapisywane na Twoim komputerze, dostosuj odpowiednio ustawienia swojej
+          przeglądarki. Aby dowiedzieć się, jak zarządzać plikami cookies, w tym
+          jak wyłączyć ich obsługę w przeglądarce, możesz skorzystać z pliku
+          pomocy swojej przeglądarki. Z informacjami na ten temat możesz
+          zapoznać się wciskając klawisz F1 w przeglądarce. Pliki cookies nie są
+          szkodliwe ani dla komputera, ani dla danych jego użytkownika, dlatego
+          zaleca się niewyłączanie ich obsługi w przeglądarce. W przypadku
+          wyłączenia obsługi tych plików niektóre funkcje strony internetowej:
+          www.sterczaceuszy.pl mogą przestać być dostępne.
+        </Typography>
+
+        <Typography variant="bodyTitle">
+          Pliki cookies wykorzystywane są w celu:
+        </Typography>
+
+        <Typography variant="bodyTitle">
+          - dostosowania zawartości strony do Twoich preferencji oraz
+          optymalizacji z jej korzystania; w szczególności pliki te pozwalają
+          rozpoznać Twoje urządzenie i odpowiednio wyświetlić stronę
+          internetową, dostosowaną do Twoich indywidualnych potrzeb;
+        </Typography>
+        <Typography variant="bodyTitle">
+          - tworzenia statystyk (poprzez wykorzystanie Google Analytics 4),
+          które pomagają zrozumieć, w jaki sposób użytkownicy korzystają z
+          naszej strony internetowej, co umożliwia ulepszanie jej struktury i
+          zawartości.
+        </Typography>
+      </Styled.ContentSection>
     </Styled.Content>
   </Container>
 )
