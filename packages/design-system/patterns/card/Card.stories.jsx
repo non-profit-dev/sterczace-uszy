@@ -12,6 +12,7 @@ export const Overview = {
   args: {
     title: <Title text="Porozmawiaj" />,
     illustrationName: "heartWithDogFace",
+    children: `Lorem ipsum dolor sit amet, consectetur adip incididunt ut labore et dolore magna aliqu.`,
     button: (
       <Button
         text="Wejdź"
