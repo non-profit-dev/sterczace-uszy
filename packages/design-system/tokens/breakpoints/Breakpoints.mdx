@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { Meta, Canvas } from "@storybook/blocks"
+import { Meta } from "@storybook/blocks"
 
 import breakpoints from "design-system/tokens/breakpoints"
 
@@ -9,14 +9,14 @@ import breakpoints from "design-system/tokens/breakpoints"
 
 A helper to handle media queries. It gives you different max-width sizes to use within a mediaquery.
 
-<Canvas>
+<div>
   {Object.entries(breakpoints).map((breakpoint) => (
     <Title key={breakpoint}>
       <b>{breakpoint[0]} - </b>
       <Code style={{}}>{breakpoint[1]}</Code>
     </Title>
   ))}
-</Canvas>
+</div>
 
 ## Usage
 
