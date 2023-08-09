@@ -3,7 +3,7 @@
 
 The "design-system" package is designed to bring consistency to our pages and speed up the development process.
 
-[👀 Storybook Preview](https://sterczace-uszy-ds.vercel.app/)
+[👀 Storybook Preview](https://sterczaceuszy-ds.vercel.app/)
 
 ## Table of Contents 📃
 
