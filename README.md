@@ -31,7 +31,7 @@
 Clone the repo:
 
 ```bash
-git clone git@github.com:Fundacja-Sterczace-Uszy/website.git
+git clone https://github.com/non-profit-dev/sterczace-uszy.git
 ```
 
 and then:
