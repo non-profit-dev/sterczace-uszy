@@ -1,0 +1,32 @@
+import { Meta, Canvas, ArgTypes } from "@storybook/blocks"
+
+import * as Stories from "./Tabs.stories"
+
+<Meta of={Stories} />
+
+# Tabs
+
+Allow navigation between groups of content that are related.
+
+`import Tabs from "design-system/patterns/tabs"`
+
+Data should be provided in the following format:
+
+```js
+const data = [
+  {
+    tab: `Tab 1`,
+    content: `Content 1`,
+  },
+  {
+    tab: `Tab 2`,
+    content: `Content 2`,
+  },
+]
+```
+
+Each data item should contain the `tab` and `content` properties in order to render Tabs.
+
+<Canvas of={Stories.Controls} />
+
+<ArgTypes />

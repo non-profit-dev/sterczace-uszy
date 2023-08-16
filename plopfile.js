@@ -31,8 +31,13 @@ const plopGenerators = (plop) => {
       },
       {
         type: "add",
-        path: "packages/design-system/components/{{camelCase name}}/__stories__/{{pascalCase name}}.stories.mdx",
-        templateFile: "plop-templates/Components/Component.stories.mdx.hbs",
+        path: "packages/design-system/components/{{camelCase name}}/{{pascalCase name}}.mdx",
+        templateFile: "plop-templates/Components/Component.mdx.hbs",
+      },
+      {
+        type: "add",
+        path: "packages/design-system/components/{{camelCase name}}/{{pascalCase name}}.stories.jsx",
+        templateFile: "plop-templates/Components/Component.stories.jsx.hbs",
       },
     ],
   })
@@ -69,8 +74,13 @@ const plopGenerators = (plop) => {
       },
       {
         type: "add",
-        path: "packages/design-system/patterns/{{camelCase name}}/__stories__/{{pascalCase name}}.stories.mdx",
-        templateFile: "plop-templates/Patterns/Pattern.stories.mdx.hbs",
+        path: "packages/design-system/patterns/{{camelCase name}}/{{pascalCase name}}.mdx",
+        templateFile: "plop-templates/Patterns/Pattern.mdx.hbs",
+      },
+      {
+        type: "add",
+        path: "packages/design-system/patterns/{{camelCase name}}/{{pascalCase name}}.stories.jsx",
+        templateFile: "plop-templates/Patterns/Pattern.stories.jsx.hbs",
       },
     ],
   })
@@ -107,8 +117,13 @@ const plopGenerators = (plop) => {
       },
       {
         type: "add",
-        path: "packages/design-system/blocks/{{camelCase name}}/__stories__/{{pascalCase name}}.stories.mdx",
-        templateFile: "plop-templates/Blocks/Block.stories.mdx.hbs",
+        path: "packages/design-system/blocks/{{camelCase name}}/{{pascalCase name}}.mdx",
+        templateFile: "plop-templates/Blocks/Block.mdx.hbs",
+      },
+      {
+        type: "add",
+        path: "packages/design-system/blocks/{{camelCase name}}/{{pascalCase name}}.stories.jsx",
+        templateFile: "plop-templates/Blocks/Block.stories.jsx.hbs",
       },
     ],
   })
