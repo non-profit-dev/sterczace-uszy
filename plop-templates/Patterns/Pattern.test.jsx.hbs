@@ -1,13 +1,10 @@
-import userEvent from "@testing-library/user-event"
-
 import { render, screen } from "design-system/test-utils"
 
 import {{pascalCase name}} from "design-system/patterns/{{camelCase name}}"
 
-describe(`{{pascalCase name}} `, () => {
-it(`renders with default properties`, () => {
-render(<{{pascalCase name}}>test</{{pascalCase name}}>)
-expect(screen.getByText(test)).toBeInTheDocument()
-})
-
+describe(`{{pascalCase name}}`, () => {
+  it(`renders with default properties`, () => {
+    render(<{{pascalCase name}}>test</{{pascalCase name}}>)
+    expect(screen.getByText(test)).toBeInTheDocument()
+  })
 })

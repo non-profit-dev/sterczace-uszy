@@ -1,0 +1,18 @@
+import { Meta } from "@storybook/blocks"
+
+import { illustrations } from "design-system/components/illustration"
+
+<Meta title="Tokens/Illustrations" />
+
+# Illustrations gallery
+
+A list of all available illustrations in the project.
+
+<div className="illustrations-gallery">
+  {Object.entries(illustrations).map((illustration) => (
+    <div key={illustration[0]}>
+      <div>{illustration[1]()}</div>
+      <p>{illustration[0]}</p>
+    </div>
+  ))}
+</div>

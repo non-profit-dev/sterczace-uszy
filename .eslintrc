@@ -57,8 +57,7 @@
     "check-file/folder-match-with-fex": [
       "error",
       {
-        "*.test.{js,jsx}": "**/__tests__/",
-        "*.stories.mdx": "**/__stories__/"
+        "*.test.{js,jsx}": "**/__tests__/"
       }
     ],
     "check-file/filename-naming-convention": [
