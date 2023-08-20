@@ -7,19 +7,19 @@ import * as Styled from "./ActionDuringVisit.styled"
 
 const cardsData = [
   {
-    title: <Title text="Doradzamy" textSize="h3" />,
+    title: <Title text="Doradzamy" as="h3" />,
     illustrationName: "bowl",
     description:
       "Udzielamy porad odnośnie żywienia pupila, a także doradzamy w kwestii weterynarza czy behawiorysty.",
   },
   {
-    title: <Title text="Sprawdzamy" textSize="h3" />,
+    title: <Title text="Sprawdzamy" as="h3" />,
     illustrationName: "protect",
     description:
       "Zwracamy uwagę na elementy typu ogrodzenie czy schody, aby zwierzę było bezpieczne.",
   },
   {
-    title: <Title text="Rozmawiamy" textSize="h3" />,
+    title: <Title text="Rozmawiamy" as="h3" />,
     illustrationName: "womanAndDog",
     description:
       "Upewniamy się czy wiesz jak zaopiekować się nowym członkiem Waszej rodziny.",
