@@ -35,7 +35,11 @@ const Feature = ({
         </Styled.Icon>
       )}
       <Styled.Content>
-        <Typography variant="bodyLarge" color={theme.colors.primary[500]}>
+        <Typography
+          variant="bodyLarge"
+          as="h3"
+          color={theme.colors.primary[500]}
+        >
           {heading}
         </Typography>
         <Typography variant="bodyTitle">{children}</Typography>

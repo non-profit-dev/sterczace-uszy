@@ -38,6 +38,7 @@ const RecurringPayment = () => (
                   text="Zlecenie stałe"
                   iconStart="money"
                   variant="h5"
+                  as="h4"
                   line={false}
                 />
               }

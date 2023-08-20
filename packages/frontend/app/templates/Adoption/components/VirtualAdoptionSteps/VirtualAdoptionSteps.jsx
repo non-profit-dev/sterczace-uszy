@@ -7,19 +7,19 @@ import * as Styled from "./VirtualAdoptionSteps.styled"
 
 const cardsData = [
   {
-    title: <Title text="Wybierz pupila" textSize="h3" />,
+    title: <Title text="Wybierz pupila" as="h3" />,
     illustrationName: "pet",
     description:
       "Zadecyduj, kto ma zostać Twoim wirtualnym przyjacielem i zapamiętaj jego imię. Możesz adoptować dowolną liczbę pupili.",
   },
   {
-    title: <Title text="Ustaw zlecenie stałe" textSize="h3" />,
+    title: <Title text="Ustaw zlecenie stałe" as="h3" />,
     illustrationName: "standingOrder",
     description:
       "Na swoim koncie bankowym ustaw polecenie przelewu. Koniecznie z dopiskiem: “darowizna i imię podopiecznego”.",
   },
   {
-    title: <Title text="Wyślij potwierdzenie" textSize="h3" />,
+    title: <Title text="Wyślij potwierdzenie" as="h3" />,
     illustrationName: "confirmation",
     description:
       "Wyślij informację za pomocą krótkiego formularza na stronie, żebyśmy mogli znalezć Twoją wpłatę i informować o stanie pupila.",
