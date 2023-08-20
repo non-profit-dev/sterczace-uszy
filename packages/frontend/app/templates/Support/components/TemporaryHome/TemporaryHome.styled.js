@@ -23,6 +23,7 @@ export const Steps = styled.div`
   margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: start;
   gap: 32px;
 
   ${({ theme }) => theme.breakpoints.desktopSm} {
@@ -51,10 +52,6 @@ export const Count = styled(CountComponent)`
     width: 120px;
     height: 120px;
     margin: 40px 0 20px 24px;
-  }
-
-  ${({ theme }) => theme.breakpoints.tablet} {
-    margin-left: 0;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
