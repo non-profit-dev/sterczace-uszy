@@ -31,7 +31,7 @@ export const GET_ANIMALS = gql`
         excerpt
         slug
         thumbnail {
-          url
+          url(transform: { quality: 50, format: JPG, width: 600 })
         }
       }
     }
@@ -63,7 +63,7 @@ export const GET_ANIMAL = gql`
         behavior
         health
         thumbnail {
-          url
+          url(transform: { quality: 50, format: JPG, width: 600 })
         }
         story {
           json
@@ -88,7 +88,7 @@ export const GET_ANIMAL = gql`
         }
         imagesCollection {
           items {
-            url
+            url(transform: { quality: 50, format: JPG, width: 600 })
           }
         }
       }
@@ -107,7 +107,7 @@ export const GET_OTHER_ANIMALS = gql`
         excerpt
         slug
         thumbnail {
-          url
+          url(transform: { quality: 50, format: JPG, width: 600 })
         }
       }
     }
