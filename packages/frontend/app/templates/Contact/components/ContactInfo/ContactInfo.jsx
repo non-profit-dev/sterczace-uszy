@@ -39,7 +39,7 @@ const ContactInfo = () => {
             key={text}
             iconName={iconName}
             variant="gray"
-            iconSize="small"
+            iconSize="medium"
           >
             <Button
               variant="text"
