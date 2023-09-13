@@ -40,10 +40,10 @@ export const ImageWrapper = styled.div`
   max-height: 190px;
   height: 100%;
   aspect-ratio: 1;
-  border-radius: 14px;
+  border-radius: 10px;
   border: 2px solid
     ${({ active, theme }) =>
-      active ? theme.colors.primary[500] : "transparent"};
+    active ? theme.colors.primary[500] : "transparent"};
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     max-height: 260px;
