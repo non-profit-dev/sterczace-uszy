@@ -43,7 +43,7 @@ export const ImageWrapper = styled.div`
   border-radius: 10px;
   border: 2px solid
     ${({ active, theme }) =>
-    active ? theme.colors.primary[500] : "transparent"};
+      active ? theme.colors.primary[500] : "transparent"};
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     max-height: 260px;
