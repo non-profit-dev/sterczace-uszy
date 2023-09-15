@@ -42,17 +42,15 @@ const Input = ({
         </Styled.Icon>
       )}
     </Styled.Container>
-    {message &&
-      state !==
-        "error"(
-          <Typography
-            variant="bodyTiny"
-            color={state ? colors[state] : theme.colors.gray[500]}
-            data-testid="message"
-          >
-            {message}
-          </Typography>
-        )}
+    {message && state !== "error" && (
+      <Typography
+        variant="bodyTiny"
+        color={state ? colors[state] : theme.colors.gray[500]}
+        data-testid="message"
+      >
+        {message}
+      </Typography>
+    )}
     {message && state === "error" && <ErrorMessage errorMessage={message} />}
   </Styled.Label>
 )
