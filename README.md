@@ -1,6 +1,6 @@
 <div style="text-align: center" align="center">
 <img src="https://i.ibb.co/r4PFcLn/Logo-ro-z-900x900.png" alt="" width="70" />
-<h1>Sterczące Uszy</h1>
+<h1>Sterczące Uszy Test</h1>
   
 <p>"Sterczące Uszy" is a non-profit organization that helps animals in difficult situations.</p>
 
@@ -18,7 +18,6 @@
 
 <br />
 </div>
-
 
 ## Table of Contents 📃
 
