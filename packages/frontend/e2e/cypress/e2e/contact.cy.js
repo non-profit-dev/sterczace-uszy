@@ -13,9 +13,10 @@ describe("Contact Page", () => {
   })
 
   it(`sends the form after clicking submit button`, () => {
-    cy.intercept("POST", "https://formspree.io/f/*", { ok: true }).as(
-      "formSubmit"
-    )
+    cy.intercept("POST", "https://formspree.io/f/*", {
+      next: "/thanks?language=pl",
+      ok: true,
+    }).as("formSubmit")
 
     cy.get('input[name="Imię"]').type("test")
     cy.get('input[name="Mail"]').type("test@test")
