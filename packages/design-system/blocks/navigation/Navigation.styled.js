@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import Icon from "../../components/icon"
 
 export const Navigation = styled.nav`
   position: relative;
@@ -13,6 +14,21 @@ export const Navigation = styled.nav`
 
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 14px 0;
+  }
+`
+
+export const Dropdown = styled.div`
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: ${({ theme }) => theme.colors.neutrals[100]};
+  z-index: 1;
+  min-width: 205px;
+  padding: 16px;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: block;
   }
 `
 
@@ -77,5 +93,18 @@ export const Overlay = styled.div`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
+  }
+`
+export const ChevronIcon = styled(Icon)`
+  transform: ${(props) => (props.isActive ? "rotate(180deg)" : "")};
+  transition: 400ms ease;
+`
+
+export const DropdownButton = styled.div`
+  display: block;
+  align-items: center;
+  gap: 4px;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: none;
   }
 `
