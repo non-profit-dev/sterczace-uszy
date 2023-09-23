@@ -1,5 +1,6 @@
 import { string } from "prop-types"
 import Typography from "design-system/components/typography"
+
 import theme from "design-system/tokens/theme"
 
 const ErrorMessage = ({ errorMessage }) => (
