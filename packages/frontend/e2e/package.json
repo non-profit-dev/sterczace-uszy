@@ -10,8 +10,8 @@
     "cypress:run": "cypress run --browser chrome"
   },
   "devDependencies": {
-    "axe-core": "^4.6.0",
-    "cypress": "^10.8.0",
-    "cypress-axe": "^1.2.0"
+    "axe-core": "^4.8.2",
+    "cypress": "^13.2.0",
+    "cypress-axe": "^1.5.0"
   }
 }
