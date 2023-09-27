@@ -1,6 +1,7 @@
 import Script from "next/script"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
+import { hotjar } from "react-hotjar"
 import { ThemeProvider } from "@emotion/react"
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 import { func, shape } from "prop-types"
@@ -16,6 +17,10 @@ import "normalize.css/normalize.css"
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter()
+
+  useEffect(() => {
+    hotjar.initialize(3621586, 6)
+  }, [])
 
   useEffect(() => {
     const handleRouteChange = (url) => {
