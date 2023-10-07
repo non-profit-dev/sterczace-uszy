@@ -49,7 +49,6 @@ const Textarea = ({
     {message && error && <ErrorMessage errorMessage={message} />}
   </Styled.Label>
 )
-// TODO should be error and message or message and errorMessage?
 
 Textarea.propTypes = {
   label: string.isRequired,
