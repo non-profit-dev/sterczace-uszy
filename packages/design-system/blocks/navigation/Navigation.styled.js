@@ -1,7 +1,8 @@
 import styled from "@emotion/styled"
 
 export const Navigation = styled.nav`
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 2;
   width: 100%;
   background: ${({ theme }) => theme.colors.neutrals[100]};
