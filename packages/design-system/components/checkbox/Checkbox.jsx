@@ -21,31 +21,27 @@ const Checkbox = ({
     setIsChecked((prev) => !prev)
   }
 
-  const checkHandler = () => {
-    setIsChecked(!isChecked)
-  }
-
   return (
-    <Styled.Container onClick={!disabled && handleCheckboxChange}>
-      <Styled.Checkbox
-        checked={isChecked}
-        onChange={checkHandler}
-        error={error}
-        required={required}
-        disabled={disabled}
-        type="checkbox"
-        id={id}
-        className={className}
-      />
-      {isChecked && (
-        <Styled.CheckboxIcon
-          name="check"
-          size="small"
-          color={theme.colors.neutrals[100]}
-          data-testid="checkbox-icon"
-        />
-      )}
+    <Styled.Container>
       <Styled.Label htmlFor={id}>
+        <Styled.Checkbox
+          checked={isChecked}
+          onChange={!disabled && handleCheckboxChange}
+          error={error}
+          required={required}
+          disabled={disabled}
+          type="checkbox"
+          id={id}
+          className={className}
+        />
+        {isChecked && (
+          <Styled.CheckboxIcon
+            name="check"
+            size="small"
+            color={theme.colors.neutrals[100]}
+            data-testid="checkbox-icon"
+          />
+        )}
         <Typography
           variant="bodySmall"
           color={disabled ? theme.colors.gray[400] : theme.colors.gray[600]}
@@ -65,7 +61,7 @@ Checkbox.propTypes = {
   required: bool,
   disabled: bool,
   checked: bool,
-  id: string,
+  id: string.isRequired,
   className: string,
 }
 
@@ -74,7 +70,6 @@ Checkbox.defaultProps = {
   error: false,
   disabled: false,
   checked: false,
-  id: "checkbox",
   className: null,
   errorMessage: "Zaznacz zgodę.",
 }
