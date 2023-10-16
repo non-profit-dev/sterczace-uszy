@@ -4,6 +4,7 @@ import Typography from "design-system/components/typography"
 import theme from "design-system/tokens/theme"
 
 import * as Styled from "./Input.styled"
+import ErrorMessage from "../errorMessage"
 
 const colors = {
   valid: theme.colors.success[100],
@@ -41,7 +42,7 @@ const Input = ({
         </Styled.Icon>
       )}
     </Styled.Container>
-    {message && (
+    {message && state !== "error" && (
       <Typography
         variant="bodyTiny"
         color={state ? colors[state] : theme.colors.gray[500]}
@@ -50,6 +51,7 @@ const Input = ({
         {message}
       </Typography>
     )}
+    {message && state === "error" && <ErrorMessage errorMessage={message} />}
   </Styled.Label>
 )
 

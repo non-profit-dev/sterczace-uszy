@@ -4,6 +4,7 @@ import Typography from "design-system/components/typography"
 import theme from "design-system/tokens/theme"
 
 import * as Styled from "./Textarea.styled"
+import ErrorMessage from "../errorMessage"
 
 const Textarea = ({
   label,
@@ -36,15 +37,16 @@ const Textarea = ({
         </Styled.Icon>
       )}
     </Styled.Container>
-    {message && (
+    {message && !error && (
       <Typography
         variant="bodyTiny"
-        color={error ? theme.colors.error[100] : theme.colors.gray[500]}
+        color={theme.colors.gray[500]}
         data-testid="message"
       >
         {message}
       </Typography>
     )}
+    {message && error && <ErrorMessage errorMessage={message} />}
   </Styled.Label>
 )
 

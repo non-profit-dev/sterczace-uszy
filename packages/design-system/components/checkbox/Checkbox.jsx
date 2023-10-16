@@ -2,6 +2,7 @@ import { bool, string, node, oneOfType } from "prop-types"
 import Typography from "design-system/components/typography"
 import theme from "design-system/tokens/theme"
 import { useState } from "react"
+import ErrorMessage from "design-system/components/errorMessage"
 import * as Styled from "./Checkbox.styled"
 
 const Checkbox = ({
@@ -9,6 +10,7 @@ const Checkbox = ({
   required,
   disabled,
   error,
+  errorMessage,
   className,
   checked,
   id,
@@ -50,15 +52,7 @@ const Checkbox = ({
         >
           {label}
         </Typography>
-        {error && (
-          <Typography
-            variant="bodyTiny"
-            color={theme.colors.error[100]}
-            error={error}
-          >
-            Zaznacz zgodę.
-          </Typography>
-        )}
+        {error && <ErrorMessage errorMessage={errorMessage} />}
       </Styled.Label>
     </Styled.Container>
   )
@@ -67,6 +61,7 @@ const Checkbox = ({
 Checkbox.propTypes = {
   label: oneOfType([string, node]).isRequired,
   error: bool,
+  errorMessage: string,
   required: bool,
   disabled: bool,
   checked: bool,
@@ -81,6 +76,7 @@ Checkbox.defaultProps = {
   checked: false,
   id: "checkbox",
   className: null,
+  errorMessage: "Zaznacz zgodę.",
 }
 
 export default Checkbox
