@@ -66,7 +66,7 @@ Checkbox.propTypes = {
   required: bool,
   disabled: bool,
   checked: bool,
-  id: string,
+  id: string.isRequired,
   className: string,
 }
 
@@ -75,7 +75,6 @@ Checkbox.defaultProps = {
   error: false,
   disabled: false,
   checked: false,
-  id: "checkbox",
   className: null,
 }
 

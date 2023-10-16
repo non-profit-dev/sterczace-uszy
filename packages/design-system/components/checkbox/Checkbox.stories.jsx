@@ -8,5 +8,6 @@ export default {
 export const Controls = {
   args: {
     label: "Example label",
+    id: "example",
   },
 }
