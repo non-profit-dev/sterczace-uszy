@@ -57,7 +57,7 @@ export const Count = styled(CountComponent)`
 `
 
 export const TextBanner = styled.div`
-  max-width: 476px;
+  max-width: 632px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     max-width: 100%;
@@ -74,7 +74,6 @@ export const FinalStep = styled.div`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     grid-template-columns: auto;
-    /* justify-items: center; */
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {

@@ -9,7 +9,7 @@ import TextBanner from "design-system/patterns/textBanner"
 import Card from "design-system/patterns/card"
 import globalData from "shared/data"
 
-import * as Styled from "./AdoptionRules.styled"
+import * as Styled from "./AdoptionSteps.styled"
 
 const data = [
   {
