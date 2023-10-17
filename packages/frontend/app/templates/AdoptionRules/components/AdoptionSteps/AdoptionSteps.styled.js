@@ -47,7 +47,7 @@ export const Count = styled(CountComponent)`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 120px;
     height: 120px;
-    margin: 40px auto 20px auto;
+    margin: 40px 24px 20px 24px;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
