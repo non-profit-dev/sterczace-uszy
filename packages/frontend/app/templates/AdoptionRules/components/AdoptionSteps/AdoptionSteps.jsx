@@ -64,7 +64,6 @@ const AdoptionSteps = () => (
             <Styled.Count size="small" count={index + 1} />
             <Card
               key={title}
-              layout="left"
               title={<Title text={title} line={false} as="h3" />}
               button={button}
             >
