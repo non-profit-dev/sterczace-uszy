@@ -1,8 +1,11 @@
+import Icon from "design-system/components/icon"
+import Accordion from "design-system/components/accordion"
+import Button from "design-system/components/button"
 import styled from "@emotion/styled"
-import Icon from "../../components/icon"
 
 export const Navigation = styled.nav`
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 2;
   width: 100%;
   background: ${({ theme }) => theme.colors.neutrals[100]};
@@ -18,7 +21,6 @@ export const Navigation = styled.nav`
 `
 
 export const Dropdown = styled.div`
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -26,9 +28,25 @@ export const Dropdown = styled.div`
   z-index: 1;
   min-width: 205px;
   padding: 16px;
+  display: block;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: block;
+    display: none;
+  }
+`
+
+export const ChevronIcon = styled(Icon)`
+  transform: ${(props) => (props.isActive ? "rotate(180deg)" : "")};
+  transition: 400ms ease;
+`
+
+export const DropdownButton = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: none;
   }
 `
 
@@ -41,13 +59,14 @@ export const NavigationRow = styled.div`
 export const Menu = styled.ul`
   display: flex;
   gap: 48px;
+  position: relative;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: none;
   }
 `
 
-export const MenuButton = styled.li`
+export const MenuButton = styled.div`
   position: relative;
 `
 
@@ -59,7 +78,6 @@ export const MenuIcon = styled.button`
     display: inline-flex;
   }
 `
-
 export const MobileNavigation = styled.div`
   display: none;
   position: absolute;
@@ -67,12 +85,13 @@ export const MobileNavigation = styled.div`
   right: 0;
   width: 100%;
   max-width: 480px;
-  padding: 40px 60px;
+  padding: 20px;
   background: ${({ theme }) => theme.colors.neutrals[200]};
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
     max-width: unset;
+    padding: 24px 60px;
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
@@ -95,16 +114,12 @@ export const Overlay = styled.div`
     display: block;
   }
 `
-export const ChevronIcon = styled(Icon)`
-  transform: ${(props) => (props.isActive ? "rotate(180deg)" : "")};
-  transition: 400ms ease;
+export const NavigationAccordion = styled(Accordion)`
+  background: ${({ theme }) => theme.colors.neutrals[200]};
 `
-
-export const DropdownButton = styled.div`
-  display: block;
-  align-items: center;
-  gap: 4px;
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: none;
-  }
+export const AccordionLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-weight: 300;
 `

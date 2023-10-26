@@ -1,13 +1,15 @@
-import { useState } from "react"
+import { arrayOf, shape, string } from "prop-types"
 import Link from "next/link"
 import Button from "design-system/components/button"
 import Container from "design-system/components/container"
 import Icon from "design-system/components/icon"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
+import Accordion from "design-system/components/accordion"
 import Logo from "design-system/components/logo"
+import { useState } from "react"
 import * as Styled from "./Navigation.styled"
-import { string } from "prop-types"
+
 import data from "./data"
 
 const Navigation = ({ navigationData }) => {
@@ -20,6 +22,10 @@ const Navigation = ({ navigationData }) => {
 
   const handleHoverToggle = (index) => {
     setActiveDropdown(index)
+  }
+  const handleMouseLeave = () => {
+    setIsOpen(false)
+    setActiveDropdown(null)
   }
 
   return (
@@ -36,7 +42,7 @@ const Navigation = ({ navigationData }) => {
                 <Styled.MenuButton
                   key={item.title}
                   onMouseEnter={() => handleHoverToggle(index)}
-                  onMouseLeave={() => handleHoverToggle(null)}
+                  onMouseLeave={() => handleMouseLeave()}
                 >
                   {item.links ? (
                     <div>
@@ -54,7 +60,7 @@ const Navigation = ({ navigationData }) => {
                           }
                         />
                         <Styled.ChevronIcon
-                          name="chevronUp"
+                          name="chevronDown"
                           size="small"
                           isActive={activeDropdown === index}
                         />
@@ -64,14 +70,13 @@ const Navigation = ({ navigationData }) => {
                           <List gap={16}>
                             {item.links.map((link) => (
                               <ListItem key={link.title}>
-                                <Link href={link.href} passHref>
-                                  <Button
-                                    text={link.title}
-                                    variant="text"
-                                    size="small"
-                                    color="black"
-                                  />
-                                </Link>
+                                <Button
+                                  href={link.href}
+                                  text={link.title}
+                                  variant="text"
+                                  size="xsmall"
+                                  color="black"
+                                />
                               </ListItem>
                             ))}
                           </List>
@@ -79,18 +84,15 @@ const Navigation = ({ navigationData }) => {
                       )}
                     </div>
                   ) : (
-                    <Link href={item.href} passHref>
-                      <Button
-                        text={item.title}
-                        variant="text"
-                        size="xsmall"
-                        color={
-                          item.href === "/pliki-do-pobrania"
-                            ? "primary"
-                            : "black"
-                        }
-                      />
-                    </Link>
+                    <Button
+                      text={item.title}
+                      variant="text"
+                      href={item.href}
+                      size="xsmall"
+                      color={
+                        item.href === "/pliki-do-pobrania" ? "primary" : "black"
+                      }
+                    />
                   )}
                 </Styled.MenuButton>
               ))}
@@ -104,32 +106,70 @@ const Navigation = ({ navigationData }) => {
             </Styled.MenuIcon>
           </Styled.NavigationRow>
         </Container>
+
+        {isOpen ? (
+          <Styled.MobileNavigation>
+            {navigationData.map((item) => (
+              <div key={item.title}>
+                {item.links ? (
+                  <Styled.NavigationAccordion
+                    heading={item.title}
+                    activeColor="primary"
+                    isNavigationAccordion
+                  >
+                    <Styled.AccordionLinks>
+                      {item.links.map((link) => (
+                        <Button
+                          key={link.title}
+                          as="a"
+                          text={link.title}
+                          href={link.href}
+                          variant="text"
+                          size="medium"
+                          color={
+                            link.href === "/pliki-do-pobrania"
+                              ? "primary"
+                              : "black"
+                          }
+                        />
+                      ))}
+                    </Styled.AccordionLinks>
+                  </Styled.NavigationAccordion>
+                ) : (
+                  <Button
+                    as="a"
+                    text={item.title}
+                    href={item.href}
+                    variant="text"
+                    size="medium"
+                    color={
+                      item.href === "/pliki-do-pobrania" ? "primary" : "black"
+                    }
+                  />
+                )}
+              </div>
+            ))}
+          </Styled.MobileNavigation>
+        ) : null}
       </Styled.Navigation>
-
-      <Styled.MobileNavigation>
-        <List gap={24}>
-          {navigationData.map((item) => (
-            <ListItem key={item.title}>
-              <Button
-                as="a"
-                href={item.href}
-                text={item.title}
-                variant="text"
-                size="medium"
-                color={item.href === "/pliki-do-pobrania" ? "primary" : "black"}
-              />
-            </ListItem>
-          ))}
-        </List>
-      </Styled.MobileNavigation>
-
       {isOpen ? <Styled.Overlay onClick={() => setIsOpen(!isOpen)} /> : null}
     </>
   )
 }
 
 Navigation.propTypes = {
-  navigationData: string,
+  navigationData: arrayOf(
+    shape({
+      title: string.isRequired,
+      href: string.isRequired,
+      links: arrayOf(
+        shape({
+          title: string.isRequired,
+          href: string.isRequired,
+        })
+      ),
+    })
+  ),
 }
 
 Navigation.defaultProps = {
