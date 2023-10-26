@@ -30,6 +30,7 @@ const BeforeAdoption = () => (
         heading="Masz pytania lub wątpliwości?"
         buttonText="Skontaktuj się z nami"
         buttonHref="/kontakt"
+        mobileLayout="left"
       />
     </main>
 
