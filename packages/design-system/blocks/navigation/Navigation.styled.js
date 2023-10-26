@@ -1,6 +1,5 @@
 import Icon from "design-system/components/icon"
 import Accordion from "design-system/components/accordion"
-import Button from "design-system/components/button"
 import styled from "@emotion/styled"
 
 export const Navigation = styled.nav`
