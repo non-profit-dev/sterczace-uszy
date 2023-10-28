@@ -1,23 +1,27 @@
 const data = [
   {
-    title: "Strona główna",
-    href: "/",
+    title: "Fundacja",
+    href: "/fundacja",
   },
   {
-    title: "O nas",
-    links: [
-      { title: "Historia", href: "/o-nas/historia" },
-      { title: "Zespół", href: "/o-nas/zespol" },
-      { title: "Misja", href: "/o-nas/misja" },
-    ],
+    title: "Nasi podopieczni",
+    href: "/do-adopcji",
   },
   {
-    title: "Usługi",
-    links: [
-      { title: "Usługa 1", href: "/uslugi/usluga-1" },
-      { title: "Usługa 2", href: "/uslugi/usluga-2" },
-      { title: "Usługa 3", href: "/uslugi/usluga-3" },
-    ],
+    title: "Adopcja",
+    href: "/adopcja",
+  },
+  {
+    title: "Jak pomóc",
+    href: "/wsparcie",
+  },
+  {
+    title: "Kontakt",
+    href: "/kontakt",
+  },
+  {
+    title: "Pliki do pobrania",
+    href: "/pliki-do-pobrania",
   },
 ]
 

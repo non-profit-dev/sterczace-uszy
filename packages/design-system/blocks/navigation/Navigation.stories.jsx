@@ -25,7 +25,7 @@ export const Controls = {
         links: [
           { title: "Usługa 1", href: "/uslugi/usluga-1" },
           { title: "Usługa 2", href: "/uslugi/usluga-2" },
-          { title: "Usługa 3", href: "/uslugi/usluga-3" },
+          { title: "Pliki do pobrania", href: "/pliki-do-pobrania" },
         ],
       },
     ],

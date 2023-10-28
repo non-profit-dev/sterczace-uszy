@@ -1,4 +1,4 @@
-import { arrayOf, shape, string } from "prop-types"
+import { string } from "prop-types"
 import Link from "next/link"
 import Button from "design-system/components/button"
 import Container from "design-system/components/container"
@@ -44,12 +44,12 @@ const Navigation = ({ navigationData }) => {
                   onMouseLeave={() => handleMouseLeave()}
                 >
                   {item.links ? (
-                    <div>
+                    <>
                       <Styled.DropdownButton>
                         <Button
                           onClick={() => handleDropdownToggle(index)}
                           text={item.title}
-                          href={item.href}
+                          href={item.links.href}
                           variant="text"
                           size="xsmall"
                           color={
@@ -64,7 +64,7 @@ const Navigation = ({ navigationData }) => {
                           isActive={activeDropdown === index}
                         />
                       </Styled.DropdownButton>
-                      {activeDropdown === index && item.links && (
+                      {activeDropdown === index && (
                         <Styled.Dropdown>
                           <List gap={16}>
                             {item.links.map((link) => (
@@ -74,14 +74,18 @@ const Navigation = ({ navigationData }) => {
                                   text={link.title}
                                   variant="text"
                                   size="xsmall"
-                                  color="black"
+                                  color={
+                                    link.href === "/pliki-do-pobrania"
+                                      ? "primary"
+                                      : "black"
+                                  }
                                 />
                               </ListItem>
                             ))}
                           </List>
                         </Styled.Dropdown>
                       )}
-                    </div>
+                    </>
                   ) : (
                     <Button
                       text={item.title}
@@ -157,18 +161,7 @@ const Navigation = ({ navigationData }) => {
 }
 
 Navigation.propTypes = {
-  navigationData: arrayOf(
-    shape({
-      title: string.isRequired,
-      href: string.isRequired,
-      links: arrayOf(
-        shape({
-          title: string.isRequired,
-          href: string.isRequired,
-        })
-      ),
-    })
-  ),
+  navigationData: string,
 }
 
 Navigation.defaultProps = {
