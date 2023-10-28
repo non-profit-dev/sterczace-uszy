@@ -1,5 +1,6 @@
 import Icon from "design-system/components/icon"
 import Accordion from "design-system/components/accordion"
+import Button from "design-system/components/button"
 import styled from "@emotion/styled"
 
 export const Navigation = styled.nav`
@@ -116,9 +117,19 @@ export const Overlay = styled.div`
 export const NavigationAccordion = styled(Accordion)`
   background: ${({ theme }) => theme.colors.neutrals[200]};
 `
+
+export const AccordionButton = styled(Button)`
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    padding: 20px 0;
+  }
+`
+
 export const AccordionLinks = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  font-weight: 300;
+
+  a span {
+    font-weight: 400;
+  }
 `

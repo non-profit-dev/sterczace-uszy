@@ -135,7 +135,7 @@ const Navigation = ({ navigationData }) => {
                     </Styled.AccordionLinks>
                   </Styled.NavigationAccordion>
                 ) : (
-                  <Button
+                  <Styled.AccordionButton
                     as="a"
                     text={item.title}
                     href={item.href}

@@ -3,15 +3,12 @@ import Icon from "design-system/components/icon"
 
 export const Label = styled.label`
   display: flex;
-  flex-direction: column;
-  gap: 7px;
+  gap: 19px;
   color: ${({ theme }) => theme.colors.gray[600]};
 `
 
 export const Container = styled.div`
   position: relative;
-  display: flex;
-  gap: 19px;
 `
 
 export const Checkbox = styled.input`
