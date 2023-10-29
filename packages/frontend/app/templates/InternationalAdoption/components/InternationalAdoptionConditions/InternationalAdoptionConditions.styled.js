@@ -60,18 +60,25 @@ export const Grid = styled.div`
   column-gap: 60px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    grid-template-areas: "image" "header" "features";
+    grid-template-areas: "header" "image" "features";
     grid-template-columns: 1fr;
+    row-gap: 60px;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     margin-bottom: 60px;
-    row-gap: 60px;
   }
 `
 
 export const Header = styled.div`
   grid-area: header;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    padding: 100px 56px 0 0;
+  }
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding: 60px 24px 0 0;
+  }
 `
 
 export const ImageWrapper = styled.div`

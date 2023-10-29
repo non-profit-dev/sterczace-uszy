@@ -67,7 +67,7 @@ const InternationalAdoptionConditions = () => {
         <Styled.Grid>
           <Styled.Header>
             <TextBanner
-              heading="Adopcja za granicę"
+              heading="Warunki adopcji za granicę"
               tabletLayout="left"
               mobileLayout="left"
             >
