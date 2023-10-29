@@ -7,32 +7,64 @@ import Select from "design-system/components/select"
 import Textarea from "design-system/components/textarea"
 import Button from "design-system/components/button"
 import Checkbox from "design-system/components/checkbox"
+import { useForm } from "react-hook-form"
 
 import * as Styled from "./Form.styled"
 
 const Form = ({ handleSubmit, submitting }) => {
   const theme = useTheme()
+  const {
+    register,
+    handleSubmit: onSubmit,
+    formState: { errors },
+  } = useForm()
+
+  const handleForm = (data) => {
+    data.preventDefault()
+    handleSubmit(data)
+  }
 
   return (
     <Styled.FormContainer>
       <Typography variant="h3" as="h2" color={theme.colors.gray[600]}>
         Zostaw wiadomość
       </Typography>
-      <Styled.Form onSubmit={handleSubmit}>
+      <Styled.Form onSubmit={onSubmit(handleForm)}>
         <Styled.InputContainer>
           <Input
             label="Wpisz Twoje imię"
             placeholder="Twoje imię"
             type="text"
-            name="Imię"
+            name="firstName"
             required
+            {...register("firstName", {
+              // state="error"
+              required: "To pole jest wymagane",
+              maxLength: {
+                value: 20,
+                message: "Maksymalna ilość znaków to 20",
+              },
+              pattern: {
+                value: /^[A-Za-z]+$/i,
+                message: "Wpisz poprawne imię",
+              },
+            })}
           />
+          {errors.firstName && <p>{errors.firstName.message}</p>}
           <Input
             label="Wpisz Twój e-mail"
             placeholder="Twój adres e-mail"
             type="email"
             name="Mail"
             required
+            {...register("Mail", {
+              required: "To pole jest wymagane",
+              // state="error"
+              pattern: {
+                value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i,
+                message: "Wpisz poprawny adres e-mail",
+              },
+            })}
           />
         </Styled.InputContainer>
         <Select
