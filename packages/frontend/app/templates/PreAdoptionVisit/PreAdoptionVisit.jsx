@@ -14,7 +14,7 @@ import ActionDuringVisit from "./components/ActionDuringVisit"
 import SpecialSituations from "./components/SpecialSituations"
 
 const PreAdoptionVisit = () => (
-  <Page title="Adopcja">
+  <Page title="Wizyta przedadopcyjna">
     <Styled.Banner>
       <Banner>
         Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}

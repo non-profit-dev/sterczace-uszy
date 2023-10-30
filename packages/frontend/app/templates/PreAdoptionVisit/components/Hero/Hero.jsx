@@ -11,7 +11,7 @@ const Hero = () => (
       <Styled.Columns>
         <Styled.HeaderWrapper>
           <TextBanner
-            heading="Wizyta przedaadopcyjna"
+            heading="Wizyta przedadopcyjna"
             subtitle="rozmowa w twoim domu"
             size="large"
             tabletLayout="left"
