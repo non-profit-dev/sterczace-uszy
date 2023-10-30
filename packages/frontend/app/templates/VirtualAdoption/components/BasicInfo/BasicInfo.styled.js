@@ -44,7 +44,7 @@ export const List = styled.div`
 `
 
 export const FeatureItem = styled.div`
-  max-width: 760px;
+  max-width: 696px;
 `
 
 export const AdditionalNote = styled(Typography)`
