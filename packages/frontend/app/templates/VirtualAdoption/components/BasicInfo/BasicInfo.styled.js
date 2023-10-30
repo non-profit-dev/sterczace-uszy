@@ -48,7 +48,7 @@ export const FeatureItem = styled.div`
 `
 
 export const AdditionalNote = styled(Typography)`
-  max-width: 760px;
+  max-width: 506px;
   margin-top: 30px;
   margin-left: 110px;
 
