@@ -14,11 +14,14 @@ const Feature = ({
   illustration,
   color,
   className,
+  variant,
 }) => {
   const theme = useTheme()
 
+  const StyledComponent = variant === "row" ? Styled.RowFeature : Styled.Feature
+
   return (
-    <Styled.Feature className={className}>
+    <StyledComponent className={className}>
       {illustration && (
         <Styled.Illustration>
           <Illustration name={illustration} />
@@ -44,7 +47,7 @@ const Feature = ({
         </Typography>
         <Typography variant="bodyTitle">{children}</Typography>
       </Styled.Content>
-    </Styled.Feature>
+    </StyledComponent>
   )
 }
 
@@ -56,6 +59,7 @@ Feature.propTypes = {
   color: oneOf(["primary", "gray"]),
   children: node.isRequired,
   className: string,
+  variant: oneOf(["column", "row"]),
 }
 
 Feature.defaultProps = {
@@ -64,6 +68,7 @@ Feature.defaultProps = {
   icon: null,
   illustration: null,
   count: null,
+  variant: "column",
 }
 
 export default Feature

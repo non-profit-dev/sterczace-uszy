@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 import TextBanner from "design-system/patterns/textBanner"
 import List from "design-system/components/list"
+import Feature from "design-system/patterns/feature"
 
 export const Section = styled.div`
   background-color: ${({ theme }) => theme.colors.complementary[100]};
@@ -31,4 +32,13 @@ export const Banner = styled(TextBanner)`
 
 export const ListItems = styled(List)`
   max-width: 696px;
+`
+
+export const FeatureAb = styled(Feature)`
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    display: flex;
+    flex-direction: row !important;
+    border: 1px solid red;
+    gap: 10px;
+  }
 `
