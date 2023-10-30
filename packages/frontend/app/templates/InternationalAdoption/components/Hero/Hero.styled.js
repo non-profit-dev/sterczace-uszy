@@ -4,10 +4,10 @@ export const Header = styled.header`
   margin: 0 auto;
   padding-top: 140px;
   padding-bottom: 280px;
-  background: url("/adoption/international-adoption/hero-background-tablet.png");
+  background: url("/adoption/international-adoption/hero-background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 0;
     background: none;

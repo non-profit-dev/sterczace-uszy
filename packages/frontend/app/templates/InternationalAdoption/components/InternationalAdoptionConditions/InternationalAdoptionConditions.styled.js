@@ -96,7 +96,7 @@ export const ImageWrapper = styled.div`
 `
 
 export const Image = styled(ImageComponent)`
-  ${({ theme }) => theme.breakpoints.tabletLg} {
+  paad ${({ theme }) => theme.breakpoints.tabletLg} {
     border-radius: 0;
   }
 `
