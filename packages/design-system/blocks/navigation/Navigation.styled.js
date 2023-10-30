@@ -66,7 +66,7 @@ export const Menu = styled.ul`
   }
 `
 
-export const MenuButton = styled.div`
+export const MenuButton = styled.li`
   position: relative;
 `
 
