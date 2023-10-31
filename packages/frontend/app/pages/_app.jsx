@@ -3,6 +3,7 @@ import { useRouter } from "next/router"
 import { useEffect } from "react"
 import { hotjar } from "react-hotjar"
 import { ThemeProvider } from "@emotion/react"
+import { ErrorBoundary } from "@rollbar/react"
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 import { func, shape } from "prop-types"
 import { ApolloProvider } from "@apollo/client"
@@ -60,18 +61,19 @@ const MyApp = ({ Component, pageProps }) => {
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
-      <ApolloProvider client={client}>
-        <GoogleReCaptchaProvider
-          reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY}
-        >
-          <ThemeProvider theme={theme}>
-            <GlobalReset />
-
-            <Component {...pageProps} />
-            <CookiesBanner />
-          </ThemeProvider>
-        </GoogleReCaptchaProvider>
-      </ApolloProvider>
+      <ErrorBoundary>
+        <ApolloProvider client={client}>
+          <GoogleReCaptchaProvider
+            reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY}
+          >
+            <ThemeProvider theme={theme}>
+              <GlobalReset />
+              <Component {...pageProps} />
+              <CookiesBanner />
+            </ThemeProvider>
+          </GoogleReCaptchaProvider>
+        </ApolloProvider>
+      </ErrorBoundary>
     </>
   )
 }

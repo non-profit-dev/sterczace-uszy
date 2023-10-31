@@ -2,12 +2,18 @@ import styled from "@emotion/styled"
 
 export const Header = styled.header`
   margin: 0 auto;
-  padding-top: 140px;
-  padding-bottom: 280px;
-  background: url("/adoption/international-adoption/hero-background.png");
+  padding-top: 380px;
+  padding-bottom: 200px;
+  background: linear-gradient(
+      52deg,
+      rgba(0, 0, 0, 0.51) 34.13%,
+      rgba(0, 0, 0, 0) 50.9%
+    ),
+    url("/adoption/international-adoption/hero-background.png");
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: top;
+  background-size: cover;
+
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 0;
     background: none;
@@ -16,6 +22,7 @@ export const Header = styled.header`
 
 export const HeaderWrapper = styled.div`
   max-width: 548px;
+
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 100px 0;
   }
