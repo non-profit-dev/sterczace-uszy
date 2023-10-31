@@ -22,13 +22,14 @@ export const Navigation = styled.nav`
 
 export const Dropdown = styled.div`
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 120%;
+  right: 0;
   background: ${({ theme }) => theme.colors.neutrals[100]};
   z-index: 1;
   min-width: 205px;
   padding: 16px;
   display: block;
+  box-shadow: -8px 3px 14px 0px rgba(91, 91, 91, 0.2);
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: none;
