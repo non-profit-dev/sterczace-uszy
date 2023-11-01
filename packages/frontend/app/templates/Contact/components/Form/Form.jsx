@@ -20,7 +20,6 @@ const Form = ({ handleSubmit, submitting }) => {
   } = useForm()
 
   const handleForm = (data) => {
-    data.preventDefault()
     handleSubmit(data)
   }
 
