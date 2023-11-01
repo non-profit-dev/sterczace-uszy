@@ -30,4 +30,9 @@ export const Controls = {
       },
     ],
   },
+  render: (args) => (
+    <div style={{ height: "260px" }}>
+      <Navigation {...args} />
+    </div>
+  ),
 }
