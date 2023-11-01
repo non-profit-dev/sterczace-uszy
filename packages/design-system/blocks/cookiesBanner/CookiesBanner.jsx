@@ -10,12 +10,11 @@ const CookiesBanner = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   const rejectCookies = () => {
-    Cookies.set("exp", "", { expires: 14 })
-
     window.gtag("consent", "update", {
       ad_storage: "denied",
       analytics_storage: "denied",
     })
+    Cookies.set("user-consent", "rejected", { expires: 14 })
 
     setIsVisible(false)
   }
@@ -26,13 +25,14 @@ const CookiesBanner = () => {
       analytics_storage: "granted",
     })
 
-    Cookies.remove("exp")
+    Cookies.set("user-consent", "accepted", { expires: 14 })
 
     setIsVisible(false)
   }
 
   useEffect(() => {
-    if (!Object.keys(Cookies.get()).length) {
+    const userConsent = Cookies.get("user-consent")
+    if (!userConsent) {
       setIsVisible(true)
     }
   }, [])
