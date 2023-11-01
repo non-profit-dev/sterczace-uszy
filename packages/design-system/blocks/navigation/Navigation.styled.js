@@ -9,7 +9,7 @@ export const Navigation = styled.nav`
   z-index: 2;
   width: 100%;
   background: ${({ theme }) => theme.colors.neutrals[100]};
-  padding: 28px 0;
+  padding: 22px 0;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     background: ${({ theme }) => theme.colors.neutrals[200]};
@@ -21,11 +21,7 @@ export const Navigation = styled.nav`
 `
 
 export const Dropdown = styled.div`
-  position: absolute;
-  top: 120%;
-  right: 0;
   background: ${({ theme }) => theme.colors.neutrals[100]};
-  z-index: 1;
   min-width: 205px;
   padding: 16px;
   display: block;
@@ -34,6 +30,14 @@ export const Dropdown = styled.div`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: none;
   }
+`
+
+export const DropdownWrapper = styled.div`
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  padding-top: 14px;
 `
 
 export const ChevronIcon = styled(Icon)`

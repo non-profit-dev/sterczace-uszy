@@ -65,25 +65,27 @@ const Navigation = ({ navigationData }) => {
                         />
                       </Styled.DropdownButton>
                       {activeDropdown === index && (
-                        <Styled.Dropdown>
-                          <List gap={16}>
-                            {item.links.map((link) => (
-                              <ListItem key={link.title}>
-                                <Button
-                                  href={link.href}
-                                  text={link.title}
-                                  variant="text"
-                                  size="xsmall"
-                                  color={
-                                    link.href === "/pliki-do-pobrania"
-                                      ? "primary"
-                                      : "black"
-                                  }
-                                />
-                              </ListItem>
-                            ))}
-                          </List>
-                        </Styled.Dropdown>
+                        <Styled.DropdownWrapper>
+                          <Styled.Dropdown>
+                            <List gap={16}>
+                              {item.links.map((link) => (
+                                <ListItem key={link.title}>
+                                  <Button
+                                    href={link.href}
+                                    text={link.title}
+                                    variant="text"
+                                    size="xsmall"
+                                    color={
+                                      link.href === "/pliki-do-pobrania"
+                                        ? "primary"
+                                        : "black"
+                                    }
+                                  />
+                                </ListItem>
+                              ))}
+                            </List>
+                          </Styled.Dropdown>
+                        </Styled.DropdownWrapper>
                       )}
                     </>
                   ) : (
