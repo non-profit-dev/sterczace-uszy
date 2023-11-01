@@ -1,0 +1,3 @@
+import InternationalAdoptionConditions from "./InternationalAdoptionConditions"
+
+export default InternationalAdoptionConditions
