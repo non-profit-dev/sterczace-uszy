@@ -27,14 +27,10 @@ const Feature = ({
           <Illustration name={illustration} />
         </Styled.Illustration>
       )}
-      {icon && (
+      {(icon || count) && (
         <Styled.Icon color={color}>
-          {icon && (
-            <>
-              <Icon name={icon} color={theme.colors.neutrals[100]} />
-              {count && <Count count={count} size="xsmall" color="white" />}
-            </>
-          )}
+          {icon && <Icon name={icon} color={theme.colors.neutrals[100]} />}
+          {count && <Count count={count} size="xsmall" color="white" />}
         </Styled.Icon>
       )}
       <Styled.Content>
