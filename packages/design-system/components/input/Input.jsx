@@ -26,6 +26,7 @@ const Input = forwardRef(
       name,
       id,
       className,
+      ...rest
     },
     ref
   ) => (
@@ -42,6 +43,7 @@ const Input = forwardRef(
           id={id}
           className={className}
           ref={ref}
+          {...rest}
         />
         {state && (
           <Styled.Icon state={state}>
