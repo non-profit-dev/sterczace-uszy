@@ -1,4 +1,4 @@
-import { string } from "prop-types"
+import { string, arrayOf, shape } from "prop-types"
 import Link from "next/link"
 import Button from "design-system/components/button"
 import Container from "design-system/components/container"
@@ -163,7 +163,18 @@ const Navigation = ({ navigationData }) => {
 }
 
 Navigation.propTypes = {
-  navigationData: string,
+  navigationData: arrayOf(
+    shape({
+      title: string,
+      href: string,
+      links: arrayOf(
+        shape({
+          title: string,
+          href: string,
+        })
+      ),
+    })
+  ),
 }
 
 Navigation.defaultProps = {
