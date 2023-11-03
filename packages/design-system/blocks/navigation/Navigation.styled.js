@@ -1,3 +1,6 @@
+import Icon from "design-system/components/icon"
+import Accordion from "design-system/components/accordion"
+import Button from "design-system/components/button"
 import styled from "@emotion/styled"
 
 export const Navigation = styled.nav`
@@ -6,7 +9,7 @@ export const Navigation = styled.nav`
   z-index: 2;
   width: 100%;
   background: ${({ theme }) => theme.colors.neutrals[100]};
-  padding: 28px 0;
+  padding: 22px 0;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     background: ${({ theme }) => theme.colors.neutrals[200]};
@@ -14,6 +17,41 @@ export const Navigation = styled.nav`
 
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 14px 0;
+  }
+`
+
+export const Dropdown = styled.div`
+  background: ${({ theme }) => theme.colors.neutrals[100]};
+  min-width: 205px;
+  padding: 16px;
+  display: block;
+  box-shadow: -8px 3px 14px 0px rgba(91, 91, 91, 0.2);
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: none;
+  }
+`
+
+export const DropdownWrapper = styled.div`
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  padding-top: 14px;
+`
+
+export const ChevronIcon = styled(Icon)`
+  transform: ${(props) => (props.isActive ? "rotate(180deg)" : "")};
+  transition: 400ms ease;
+`
+
+export const DropdownButton = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    display: none;
   }
 `
 
@@ -26,6 +64,7 @@ export const NavigationRow = styled.div`
 export const Menu = styled.ul`
   display: flex;
   gap: 48px;
+  position: relative;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: none;
@@ -44,7 +83,6 @@ export const MenuIcon = styled.button`
     display: inline-flex;
   }
 `
-
 export const MobileNavigation = styled.div`
   display: none;
   position: absolute;
@@ -52,12 +90,13 @@ export const MobileNavigation = styled.div`
   right: 0;
   width: 100%;
   max-width: 480px;
-  padding: 40px 60px;
+  padding: 20px;
   background: ${({ theme }) => theme.colors.neutrals[200]};
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
     max-width: unset;
+    padding: 24px 60px;
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
@@ -78,5 +117,24 @@ export const Overlay = styled.div`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     display: block;
+  }
+`
+export const NavigationAccordion = styled(Accordion)`
+  background: ${({ theme }) => theme.colors.neutrals[200]};
+`
+
+export const AccordionButton = styled(Button)`
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    padding: 20px 0;
+  }
+`
+
+export const AccordionLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  a span {
+    font-weight: 400;
   }
 `
