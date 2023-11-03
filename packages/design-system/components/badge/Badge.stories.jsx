@@ -7,7 +7,7 @@ export default {
 
 export const Controls = {
   args: {
-    text: "Szczeniak ",
+    text: "Szczeniak",
     size: "small",
   },
 }

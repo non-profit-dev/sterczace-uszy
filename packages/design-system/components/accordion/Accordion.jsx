@@ -5,24 +5,40 @@ import Icon from "design-system/components/icon"
 
 import * as Styled from "./Accordion.styled"
 
-const Accordion = ({ children, heading, color, activeColor, shadow }) => {
+const Accordion = ({
+  children,
+  heading,
+  color,
+  activeColor,
+  shadow,
+  isNavigationAccordion,
+  className,
+}) => {
   const [isActive, setIsActive] = useState(false)
 
   return (
-    <Styled.Accordion color={color} shadow={shadow}>
+    <Styled.Accordion color={color} shadow={shadow} className={className}>
       <Styled.Title
         variant="h5"
         as="button"
         aria-expanded={isActive}
         onClick={() => setIsActive(!isActive)}
         color={isActive ? activeColor : color}
+        isNavigationAccordion={isNavigationAccordion}
       >
         {heading}
         <Styled.Icon isActive={isActive}>
           <Icon name="chevronUp" />
         </Styled.Icon>
       </Styled.Title>
-      {isActive && <Styled.Content role="region">{children}</Styled.Content>}
+      {isActive && (
+        <Styled.Content
+          isNavigationAccordion={isNavigationAccordion}
+          role="region"
+        >
+          {children}
+        </Styled.Content>
+      )}
     </Styled.Accordion>
   )
 }
@@ -32,13 +48,17 @@ Accordion.propTypes = {
   children: node.isRequired,
   color: oneOf(["black", "white", "primary"]),
   activeColor: oneOf(["black", "primary"]),
+  isNavigationAccordion: bool,
   shadow: bool,
+  className: string,
 }
 
 Accordion.defaultProps = {
   color: "black",
   activeColor: "black",
   shadow: false,
+  isNavigationAccordion: false,
+  className: null,
 }
 
 export default Accordion

@@ -36,7 +36,8 @@ export const Title = styled(Typography)`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: ${({ isNavigationAccordion }) =>
+    isNavigationAccordion ? "20px 0" : "20px"};
   color: ${({ color }) => colors[color].color};
   background: transparent;
   border: none;
@@ -45,7 +46,8 @@ export const Title = styled(Typography)`
 `
 
 export const Content = styled.div`
-  padding: 0 20px 20px;
+  padding: ${({ isNavigationAccordion }) =>
+    isNavigationAccordion ? "0" : " 0 20px 20px"};
 `
 
 export const Icon = styled.div`
