@@ -13,10 +13,8 @@ import Hero from "./components/Hero"
 const InternationalAdoption = () => (
   <Page title="Adopcja za granicę">
     <Banner>
-      <Banner>
-        Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
-        <a href="/wsparcie">tutaj</a>
-      </Banner>
+      Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
+      <a href="/wsparcie">tutaj</a>
     </Banner>
 
     <Navigation />
