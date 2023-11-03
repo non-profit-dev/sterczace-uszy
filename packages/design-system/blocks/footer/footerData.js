@@ -47,8 +47,28 @@ const footerData = {
       link: "/do-adopcji",
     },
     {
+      title: "Zanim adoptujesz",
+      link: "/zanim-adoptujesz",
+    },
+    {
       title: "Zasady adopcji",
-      link: "/adopcja",
+      link: "/zasady-adopcji",
+    },
+    {
+      title: "Wizyta przedadopcyjna",
+      link: "/wizyta-przedadopcyjna",
+    },
+    {
+      title: "Adopcja za granicę",
+      link: "/adopcja-za-granice",
+    },
+    {
+      title: "Wsparcie po adopcji",
+      link: "/wsparcie-po-adopcji",
+    },
+    {
+      title: "Adopcja wirtualna",
+      link: "/adopcja-wirtualna",
     },
     {
       title: "Dokumenty do pobrania",
