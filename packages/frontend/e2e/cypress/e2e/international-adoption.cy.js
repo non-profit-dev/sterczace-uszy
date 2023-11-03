@@ -1,6 +1,6 @@
 describe("International Adoption Page", () => {
   it("should successfully load", () => {
-    cy.visit("/international-adoption")
+    cy.visit("/adopcja-za-granice")
   })
 
   it(`should be accessible`, () => {

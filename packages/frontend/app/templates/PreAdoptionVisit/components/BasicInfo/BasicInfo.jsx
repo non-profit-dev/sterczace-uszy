@@ -53,9 +53,11 @@ const BasicInfo = () => (
       </Styled.Banner>
       <Styled.ListItems gap={40}>
         {values.map(({ heading, description, icon }) => (
-          <Feature key={heading} heading={heading} icon={icon} variant="row">
-            {description}
-          </Feature>
+          <li key={heading}>
+            <Feature heading={heading} icon={icon} variant="row">
+              {description}
+            </Feature>
+          </li>
         ))}
       </Styled.ListItems>
     </Container>
