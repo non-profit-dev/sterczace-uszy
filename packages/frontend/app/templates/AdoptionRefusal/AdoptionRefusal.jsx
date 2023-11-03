@@ -9,7 +9,7 @@ import Hero from "./components/Hero"
 import AdoptionRefusal from "./components/AdoptionRefusal"
 
 const AdoptionRefusalPage = () => (
-  <Page title="Adopcja">
+  <Page title="Odmowa adopcji">
     <Banner>
       Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
       <a href="/wsparcie">tutaj</a>

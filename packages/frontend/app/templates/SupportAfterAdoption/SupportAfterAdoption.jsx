@@ -12,7 +12,7 @@ import Hero from "./components/Hero"
 import PostAdoptionSupport from "./components/PostAdoptionSupport"
 
 const SupportAfterAdoption = () => (
-  <Page title="Adopcja">
+  <Page title="Wsparcie po adopcji">
     <Styled.Banner>
       <Banner>
         Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}

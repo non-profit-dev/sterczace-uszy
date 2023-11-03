@@ -12,7 +12,7 @@ import Hero from "./components/Hero"
 import AdoptionSteps from "./components/AdoptionSteps"
 
 const AdoptionRules = () => (
-  <Page title="Adopcja">
+  <Page title="Zasady adopcji">
     <Styled.Banner>
       <Banner>
         Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}

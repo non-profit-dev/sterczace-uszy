@@ -20,7 +20,7 @@ import Steps from "./components/Steps"
 import { animalsType } from "../../lib/types"
 
 const VirtualAdoption = ({ animals, animalsData }) => (
-  <Page title="Adopcja Wirtualna">
+  <Page title="Adopcja wirtualna">
     <Styled.Banner>
       <Banner>
         Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
