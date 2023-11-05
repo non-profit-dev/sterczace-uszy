@@ -64,7 +64,7 @@ const Fanimani = () => {
       <Styled.Content>
         <TextBanner
           heading="Rób zakupy i wspieraj fundację"
-          subtitle="Pomagaj za darmo"
+          subtitle="Fanimani"
           tabletLayout="left"
           mobileLayout="left"
         >
