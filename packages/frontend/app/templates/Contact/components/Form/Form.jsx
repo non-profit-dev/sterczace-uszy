@@ -1,5 +1,6 @@
 import { func, bool } from "prop-types"
 import { useTheme } from "@emotion/react"
+import React, { createRef } from "react"
 
 import Typography from "design-system/components/typography"
 import Input from "design-system/components/input"
@@ -16,11 +17,24 @@ const Form = ({ handleSubmit, submitting }) => {
   const {
     register,
     handleSubmit: onSubmit,
-    formState: { errors },
+    formState: { errors, isDirty, isValid },
   } = useForm()
 
   const handleForm = (data) => {
-    handleSubmit(data)
+    // handleSubmit(data)
+    console.log(data)
+  }
+
+  const myInputRef = createRef()
+
+  const getFieldState = (fieldName) => {
+    if (isDirty && errors[fieldName]) {
+      return "error"
+    }
+    if (isValid) {
+      return "valid"
+    }
+    return null
   }
 
   return (
@@ -36,8 +50,9 @@ const Form = ({ handleSubmit, submitting }) => {
             type="text"
             name="firstName"
             required
+            state={getFieldState("firstName")}
+            ref={myInputRef}
             {...register("firstName", {
-              // state="error"
               required: "To pole jest wymagane",
               maxLength: {
                 value: 20,
@@ -45,25 +60,27 @@ const Form = ({ handleSubmit, submitting }) => {
               },
               pattern: {
                 value: /^[A-Za-z]+$/i,
-                message: "Wpisz poprawne imię",
+                message: "Wpisz poprawne imię (tylko litery)",
               },
             })}
+            message={errors.firstName ? errors.firstName.message : ""}
           />
-          {errors.firstName && <p>{errors.firstName.message}</p>}
           <Input
             label="Wpisz Twój e-mail"
             placeholder="Twój adres e-mail"
             type="email"
             name="Mail"
             required
+            state={getFieldState("Mail")}
+            ref={myInputRef}
             {...register("Mail", {
               required: "To pole jest wymagane",
-              // state="error"
               pattern: {
                 value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i,
                 message: "Wpisz poprawny adres e-mail",
               },
             })}
+            message={errors.Mail ? errors.Mail.message : ""}
           />
         </Styled.InputContainer>
         <Select
@@ -85,7 +102,20 @@ const Form = ({ handleSubmit, submitting }) => {
           placeholder="Napisz dla nas wiadomość"
           required
           name="Wiadomość"
-          minLength={30}
+          {...register("Wiadomość", {
+            required: "To pole jest wymagane",
+            minLength: {
+              value: 30,
+              message: "Wiadomość musi zawierać co najmniej 30 znaków",
+            },
+            validate: (value) => {
+              if (value.trim() === "") {
+                return "Wiadomość nie może zawierać samych spacji"
+              }
+              return true
+            },
+          })}
+          message={errors.Wiadomość ? errors.Wiadomość.message : ""}
         />
         <Checkbox
           id="contact"
