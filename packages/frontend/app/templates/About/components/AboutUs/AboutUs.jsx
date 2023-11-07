@@ -32,20 +32,20 @@ const AboutUs = () => (
           oficjalnej fundacji.
         </Typography>
         <Typography variant="bodyTitle">
-          Obecnie, nie posiadając schroniska ani przytuliska zapewniamy
-          bezpośrednią opiekę lub miejsce zwierząt w domach tymczasowych, a
-          następnie aktywnie poszukujemy dla nich rodzin adopcyjnych.
+          Obecnie Fundacja nie posiadając schroniska ani przytuliska zapewnia
+          miejsce zwierząt w domach tymczasowych, a następnie aktywnie poszukuje
+          dla nich rodzin.
         </Typography>
         <Typography variant="bodyTitle">
-          Działamy dzięki wpłatom i pomocy ludzi, dla których dobro zwierząt ma
-          znaczenie. Mamy ambitne plany na przyszłość, chcemy poszerzyć zakres
-          naszych działań i{" "}
+          Fundacja działa dzięki wpłatom i pomocy ludzi, dla których dobro
+          zwierząt ma znaczenie. Zarząd Fundacji ma ambitne plany na przyszłość,
+          chcemy poszerzyć zakres naszych działań i{" "}
           <strong>
             pomóc jeszcze większej ilości potrzebujących zwierząt.
           </strong>
         </Typography>
         <Typography variant="bodyTitle">
-          Fundacja {globalData.organizationName} to historia o kobietach, które
+          Fundacja {globalData.organizationName} to historia o osobach, które
           nie poddają się i podejmują działania dla dobra zwierząt, niezależnie
           od przeciwności losu.
         </Typography>
