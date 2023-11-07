@@ -27,9 +27,8 @@ const AboutUs = () => (
           przyjmując ich pod naszym dachem.
         </Typography>
         <Typography variant="bodyTitle">
-          Wspólna chęć działania i <strong>wspólne wartości</strong>, jakimi się
-          kierujemy na rzecz zwierząt, zmotywowała nas do założenia naszej
-          oficjalnej fundacji.
+          Wspólna chęć działania zmotywowała nas do założenia naszej oficjalnej
+          fundacji.
         </Typography>
         <Typography variant="bodyTitle">
           Obecnie Fundacja nie posiadając schroniska ani przytuliska zapewnia
