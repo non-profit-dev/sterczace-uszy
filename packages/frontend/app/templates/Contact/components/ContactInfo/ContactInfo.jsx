@@ -14,11 +14,6 @@ const listData = [
     link: globalData.contact.phoneFirst.link,
   },
   {
-    iconName: "phone",
-    text: `${globalData.contact.phoneSecond.text} - sms`,
-    link: globalData.contact.phoneSecond.link,
-  },
-  {
     iconName: "mail",
     text: globalData.contact.mail.text,
     link: globalData.contact.mail.link,
