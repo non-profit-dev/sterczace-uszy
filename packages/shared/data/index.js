@@ -22,10 +22,6 @@ const globalData = {
       text: "500-433-539",
       link: "tel:+48500433539",
     },
-    phoneSecond: {
-      text: "661-753-896",
-      link: "tel:+48661753896",
-    },
     location: {
       text: "Luboń",
       link: "https://www.google.pl/maps/place/Lubo%C5%84/",
