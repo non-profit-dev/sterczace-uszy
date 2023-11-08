@@ -62,15 +62,6 @@ const Footer = () => {
                     href={globalData.contact.phoneFirst.link}
                   />
                 </ListItem>
-                <ListItem iconName="phone" size="medium" variant="gray">
-                  <Button
-                    variant="text"
-                    text={`${globalData.contact.phoneSecond.text} - sms`}
-                    size="xsmall"
-                    color="black"
-                    href={globalData.contact.phoneSecond.link}
-                  />
-                </ListItem>
                 <ListItem iconName="location" size="medium" variant="gray">
                   <Button
                     variant="text"
