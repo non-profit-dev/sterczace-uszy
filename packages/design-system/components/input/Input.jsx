@@ -12,7 +12,6 @@ const colors = {
   error: theme.colors.error[100],
 }
 
-// eslint-disable-next-line react/display-name
 const Input = forwardRef(
   (
     {
@@ -94,5 +93,7 @@ Input.defaultProps = {
   id: null,
   className: null,
 }
+
+Input.displayName = "Input"
 
 export default Input

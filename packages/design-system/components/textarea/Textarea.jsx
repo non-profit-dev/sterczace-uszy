@@ -7,7 +7,6 @@ import { forwardRef } from "react"
 import * as Styled from "./Textarea.styled"
 import ErrorMessage from "../errorMessage"
 
-// eslint-disable-next-line react/display-name
 const Textarea = forwardRef(
   (
     {
@@ -87,5 +86,7 @@ Textarea.defaultProps = {
   className: null,
   minLength: null,
 }
+
+Textarea.displayName = "Textarea"
 
 export default Textarea
