@@ -79,7 +79,10 @@ const InternationalAdoptionConditions = () => {
             </TextBanner>
           </Styled.Header>
           <Styled.ImageWrapper>
-            <Styled.Image src="/adoption/international-adoption.png" alt="" />
+            <Styled.Image
+              src="/international-adoption/international-adoption.png"
+              alt=""
+            />
           </Styled.ImageWrapper>
           <Styled.Features>
             <Styled.Content>

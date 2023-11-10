@@ -24,7 +24,7 @@ const Hero = () => (
         </Styled.HeaderWrapper>
 
         <Styled.ImageWrapper>
-          <Image src="/adoption/hero.png" />
+          <Image src="/adoption-refusal/hero.png" />
         </Styled.ImageWrapper>
       </Styled.Columns>
     </Container>
