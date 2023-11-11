@@ -19,13 +19,13 @@ const cards = [
   {
     title: "Zostań domem tymczasowym",
     buttonText: "Poznaj zasady",
-    buttonHref: "/wsparcie#dom-tymczasowy",
+    buttonHref: "/dom-tymczasowy",
     illustration: "temporaryHome",
   },
   {
     title: "Przekaż 1.5% podatku",
     buttonText: "Dowiedz się więcej",
-    buttonHref: "/wsparcie#podatek",
+    buttonHref: "/wplaty#podatek",
     illustration: "percentage",
   },
 ]

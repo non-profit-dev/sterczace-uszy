@@ -42,7 +42,24 @@ const data = [
   },
   {
     title: "Jak pomóc",
-    href: "/wsparcie",
+    links: [
+      {
+        title: "Wpłaty",
+        href: "/wplaty",
+      },
+      {
+        title: "Dom tymczasowy",
+        href: "/dom-tymczasowy",
+      },
+      {
+        title: "Wolontariat",
+        href: "/wolontariat",
+      },
+      {
+        title: "Pomagaj za darmo",
+        href: "/pomagaj-za-darmo",
+      },
+    ],
   },
   {
     title: "Kontakt",
