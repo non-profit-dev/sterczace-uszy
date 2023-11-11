@@ -7,7 +7,7 @@ import Page from "../Page"
 import * as Styled from "./FreeSupport.styled"
 
 const FreeSupport = () => (
-  <Page title="Wsparcie">
+  <Page title="Pomagaj za darmo">
     <Navigation />
     <Styled.Main>
       <Hero />
