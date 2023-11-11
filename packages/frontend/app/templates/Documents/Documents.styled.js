@@ -5,16 +5,12 @@ export const DocumentContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 120px 0;
-  gap: 80px;
+  padding: 120px 80px;
+  gap: 60px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     align-items: flex-start;
     padding: 0;
-    gap: 43px;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
     gap: 40px;
   }
 `

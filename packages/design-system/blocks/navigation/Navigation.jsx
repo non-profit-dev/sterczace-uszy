@@ -53,9 +53,7 @@ const Navigation = ({ navigationData }) => {
                           variant="text"
                           size="xsmall"
                           color={
-                            item.href === "/pliki-do-pobrania"
-                              ? "primary"
-                              : "black"
+                            item.title === "Dokumenty" ? "primary" : "black"
                           }
                         />
                         <Styled.ChevronIcon
@@ -76,7 +74,7 @@ const Navigation = ({ navigationData }) => {
                                     variant="text"
                                     size="xsmall"
                                     color={
-                                      link.href === "/pliki-do-pobrania"
+                                      link.title === "Dokumenty"
                                         ? "primary"
                                         : "black"
                                     }
@@ -94,9 +92,7 @@ const Navigation = ({ navigationData }) => {
                       variant="text"
                       href={item.href}
                       size="xsmall"
-                      color={
-                        item.href === "/pliki-do-pobrania" ? "primary" : "black"
-                      }
+                      color={item.title === "Dokumenty" ? "primary" : "black"}
                     />
                   )}
                 </Styled.MenuButton>
@@ -132,9 +128,7 @@ const Navigation = ({ navigationData }) => {
                           variant="text"
                           size="medium"
                           color={
-                            link.href === "/pliki-do-pobrania"
-                              ? "primary"
-                              : "black"
+                            link.title === "Dokumenty" ? "primary" : "black"
                           }
                         />
                       ))}
@@ -147,9 +141,7 @@ const Navigation = ({ navigationData }) => {
                     href={item.href}
                     variant="text"
                     size="medium"
-                    color={
-                      item.href === "/pliki-do-pobrania" ? "primary" : "black"
-                    }
+                    color={item.title === "Dokumenty" ? "primary" : "black"}
                   />
                 )}
               </div>

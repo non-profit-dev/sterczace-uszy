@@ -1,22 +1,58 @@
 import { useTheme } from "@emotion/react"
 
-import Container from "design-system/components/container"
+import Container from "design-system/components/container/Container"
 import Typography from "design-system/components/typography"
+
 import Banner from "design-system/components/banner"
+
+import CtaBanner from "design-system/patterns/ctaBanner"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
-import globalData from "shared/data"
 
-import * as Styled from "./Document.styled"
+import AdoptionSurvey from "frontend/public/documents/AdoptionSurvey.svg"
+import TempHomeSurvey from "frontend/public/documents/TempHomeSurvey.svg"
+
+import globalData from "shared/data"
 import DocumentsTemplate from "./components/DocumentsTemplate"
 
+import * as Styled from "./Documents.styled"
+
 import Page from "../Page"
+
+const data = [
+  {
+    heading: `Ankieta przedadopcyjna`,
+    steps: [
+      `pobierz plik`,
+      `wypełnij na komputerze lub wydrukuj`,
+      `wypełnione dokumenty prześlij na adres: <a href="mailto:${globalData.contact.mail.text}">
+        ${globalData.contact.mail.text}
+      </a>`,
+      `poczekaj na odpowiedź od nas`,
+    ],
+    link: `${globalData.surveys.preAdoption}`,
+    asset: <AdoptionSurvey />,
+  },
+  {
+    heading: `Ankieta dla domu tymczasowego`,
+    steps: [
+      `pobierz plik`,
+      `wypełnij na komputerze lub wydrukuj`,
+      `wypełnione dokumenty prześlij na adres: <a href="mailto:${globalData.contact.mail.text}">
+        ${globalData.contact.mail.text}
+      </a>`,
+      `poczekaj na odpowiedź od nas`,
+    ],
+    link: `${globalData.surveys.temporaryHome}`,
+    asset: <TempHomeSurvey />,
+  },
+]
 
 const Documents = () => {
   const theme = useTheme()
   return (
-    <Page title="Dokumenty do pobrania">
+    <Page title="Ankiety">
       <Styled.Banner>
         <Banner>
           Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
@@ -29,13 +65,17 @@ const Documents = () => {
       <Container size="medium">
         <Styled.DocumentContainer>
           <Styled.HeaderContainer>
-            <Typography variant="h2">Dokumenty do pobrania</Typography>
+            <Typography variant="h3" as="h2">
+              Niezbędne dokumenty
+            </Typography>
             <Typography color={theme.colors.gray[500]} variant="bodyTitle">
               Chcesz zaopiekować się naszym zwierzakiem? Tutaj znajdziesz
               niezbędne dokumenty, abyśmy mogły powierzyć go w Twoje ręce.
             </Typography>
           </Styled.HeaderContainer>
-          <DocumentsTemplate />
+
+          <DocumentsTemplate data={data} />
+
           <Styled.DocumentsInfo>
             <Typography variant="bodyTitle">
               Ankietę wyślij na adres{" "}
@@ -48,6 +88,12 @@ const Documents = () => {
           </Styled.DocumentsInfo>
         </Styled.DocumentContainer>
       </Container>
+
+      <CtaBanner
+        buttonHref="/kontakt"
+        buttonText="Skontaktuj się z nami"
+        heading="Masz pytania lub wątpliwości?"
+      />
 
       <Footer />
     </Page>
