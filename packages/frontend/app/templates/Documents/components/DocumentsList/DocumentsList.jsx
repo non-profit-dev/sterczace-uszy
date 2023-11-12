@@ -5,9 +5,43 @@ import Typography from "design-system/components/typography"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 
-import * as Styled from "./DocumentsTemplate.styled"
+import AdoptionSurvey from "frontend/public/documents/AdoptionSurvey.svg"
+import TempHomeSurvey from "frontend/public/documents/TempHomeSurvey.svg"
 
-const DocumentsTemplate = ({ data }) =>
+import globalData from "shared/data"
+
+import * as Styled from "./DocumentsList.styled"
+
+const data = [
+  {
+    heading: `Ankieta przedadopcyjna`,
+    steps: [
+      `pobierz plik`,
+      `wypełnij na komputerze lub wydrukuj`,
+      `wypełnione dokumenty prześlij na adres: <a href="mailto:${globalData.contact.mail.text}">
+        ${globalData.contact.mail.text}
+      </a>`,
+      `poczekaj na odpowiedź od nas`,
+    ],
+    link: `${globalData.surveys.preAdoption}`,
+    asset: <AdoptionSurvey />,
+  },
+  {
+    heading: `Ankieta dla domu tymczasowego`,
+    steps: [
+      `pobierz plik`,
+      `wypełnij na komputerze lub wydrukuj`,
+      `wypełnione dokumenty prześlij na adres: <a href="mailto:${globalData.contact.mail.text}">
+        ${globalData.contact.mail.text}
+      </a>`,
+      `poczekaj na odpowiedź od nas`,
+    ],
+    link: `${globalData.surveys.temporaryHome}`,
+    asset: <TempHomeSurvey />,
+  },
+]
+
+const DocumentsTemplate = () =>
   data.map((document) => (
     <Styled.SurveyContainer key={document.heading}>
       <Styled.Image>{document.asset}</Styled.Image>
