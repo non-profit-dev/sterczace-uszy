@@ -4,12 +4,6 @@ export const Main = styled.main`
   overflow: hidden;
 `
 
-export const Banner = styled.div`
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: none;
-  }
-`
-
 export const Section = styled.section`
   display: flex;
   gap: 96px;

@@ -3,10 +3,9 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 
 import Container from "design-system/components/container/Container"
 
-import Banner from "design-system/components/banner"
-
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+import SupportBanner from "design-system/blocks/supportBanner"
 
 import Page from "../Page"
 import Form from "./components/Form"
@@ -26,12 +25,7 @@ const Contact = () => {
 
   return (
     <Page title="Kontakt">
-      <Styled.Banner>
-        <Banner>
-          Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
-          <a href="/wplaty">tutaj</a>
-        </Banner>
-      </Styled.Banner>
+      <SupportBanner />
       <Navigation />
       <Container as="main" size="medium">
         <Styled.ContactContainer>
