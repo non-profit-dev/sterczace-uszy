@@ -27,7 +27,7 @@ const HomePage = ({ animals, supporting, adoptedAnimals }) => (
     <Styled.Banner>
       <Banner>
         Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
-        <a href="/wsparcie">tutaj</a>
+        <a href="/wplaty">tutaj</a>
       </Banner>
     </Styled.Banner>
 

@@ -43,9 +43,7 @@ const Hero = () => {
             subtitle={`Fundacja ${globalData.organizationName}`}
             descriptionColor={theme.colors.neutrals[100]}
             size="large"
-            button={
-              <Button text="Wesprzyj nas" size="large" href="/wsparcie" />
-            }
+            button={<Button text="Wesprzyj nas" size="large" href="/wplaty" />}
           >
             Nasi podopieczni czekają na Twoją pomoc. Pełna miska, miejsce do
             spania, opieka lekarza to tylko niektóre z naszych potrzeb. Chcesz
