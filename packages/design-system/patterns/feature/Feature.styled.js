@@ -8,6 +8,11 @@ export const Feature = styled.div`
   }
 `
 
+export const RowFeature = styled.div`
+  display: flex;
+  gap: 32px;
+`
+
 export const Content = styled.div`
   flex: 1;
   display: flex;
