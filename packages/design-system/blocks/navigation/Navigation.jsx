@@ -1,12 +1,15 @@
+import { useState } from "react"
 import { string, arrayOf, shape } from "prop-types"
+import { useTheme } from "@emotion/react"
 import Link from "next/link"
+
 import Button from "design-system/components/button"
 import Container from "design-system/components/container"
 import Icon from "design-system/components/icon"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 import Logo from "design-system/components/logo"
-import { useState } from "react"
+
 import * as Styled from "./Navigation.styled"
 
 import data from "./data"
@@ -14,6 +17,7 @@ import data from "./data"
 const Navigation = ({ navigationData }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
+  const theme = useTheme()
 
   const handleDropdownToggle = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index)
@@ -60,6 +64,11 @@ const Navigation = ({ navigationData }) => {
                           name="chevronDown"
                           size="small"
                           isActive={activeDropdown === index}
+                          color={
+                            item.title === "Dokumenty"
+                              ? theme.colors.primary[500]
+                              : theme.colors.gray[600]
+                          }
                         />
                       </Styled.DropdownButton>
                       {activeDropdown === index && (
