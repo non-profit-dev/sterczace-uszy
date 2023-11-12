@@ -89,7 +89,7 @@ const Adoption = () => (
     <Styled.ButtonContainer>
       <Button
         text="Sprawdź warunki adopcji"
-        href="/adopcja"
+        href="/zanim-adoptujesz"
         variant="text"
         iconEnd="arrowRight"
       />

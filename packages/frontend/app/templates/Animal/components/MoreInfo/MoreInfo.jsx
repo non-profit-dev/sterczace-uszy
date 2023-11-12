@@ -63,10 +63,10 @@ const MoreInfo = ({
       ) : null}
 
       <Styled.Buttons>
-        <Button text="Adoptuj" href="/adopcja" />
+        <Button text="Adoptuj" href="/zasady-adopcji" />
         <Button
           text="Adoptuj wirtualnie"
-          href="/adopcja#wirtualna-adopcja"
+          href="/adopcja-wirtualna"
           variant="border"
         />
       </Styled.Buttons>
