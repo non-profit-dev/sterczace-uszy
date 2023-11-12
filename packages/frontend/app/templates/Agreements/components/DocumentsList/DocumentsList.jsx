@@ -5,9 +5,36 @@ import Typography from "design-system/components/typography"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 
-import * as Styled from "./DocumentsTemplate.styled"
+import Agreement from "frontend/public/documents/Agreement.svg"
 
-const DocumentsTemplate = ({ data }) =>
+import globalData from "shared/data"
+
+import * as Styled from "./DocumentsList.styled"
+
+const data = [
+  {
+    heading: `Umowa adopcyjna`,
+    steps: [
+      `przeczytaj umowę`,
+      `upewnij się, że wszystko jest dla Ciebie jasne i rozumiesz warunki`,
+      `podpisz i przekaż umowę osobiście lub według indywidualnych ustaleń`,
+    ],
+    link: `${globalData.agreements.adoption}`,
+    asset: <Agreement />,
+  },
+  {
+    heading: `Umowa zostania domem tymczasowym`,
+    steps: [
+      `przeczytaj umowę`,
+      `upewnij się, że wszystko jest dla Ciebie jasne i rozumiesz warunki`,
+      `podpisz i przekaż umowę osobiście lub według indywidualnych ustaleń`,
+    ],
+    link: `${globalData.agreements.temporaryHome}`,
+    asset: <Agreement />,
+  },
+]
+
+const DocumentsList = () =>
   data.map((document) => (
     <Styled.SurveyContainer key={document.heading}>
       <Styled.Image>{document.asset}</Styled.Image>
@@ -42,4 +69,4 @@ const DocumentsTemplate = ({ data }) =>
     </Styled.SurveyContainer>
   ))
 
-export default DocumentsTemplate
+export default DocumentsList
