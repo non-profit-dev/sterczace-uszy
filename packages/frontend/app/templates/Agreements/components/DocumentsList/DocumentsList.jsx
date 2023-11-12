@@ -5,7 +5,7 @@ import Typography from "design-system/components/typography"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 
-import Agreement from "frontend/public/documents/Agreement.svg"
+import Agreement from "frontend/public/agreements/Agreement.svg"
 
 import globalData from "shared/data"
 
