@@ -13,7 +13,7 @@ const cards = [
   {
     title: "Sprawdź warunki adopcji",
     buttonText: "Dowiedz się więcej",
-    buttonHref: "/adopcja",
+    buttonHref: "/zasady-adopcji",
     illustration: "womanAndDog",
   },
   {
