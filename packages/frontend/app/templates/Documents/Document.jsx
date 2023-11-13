@@ -2,10 +2,11 @@ import { useTheme } from "@emotion/react"
 
 import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
-import Banner from "design-system/components/banner"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+import SupportBanner from "design-system/blocks/supportBanner"
+
 import globalData from "shared/data"
 
 import * as Styled from "./Document.styled"
@@ -17,12 +18,7 @@ const Documents = () => {
   const theme = useTheme()
   return (
     <Page title="Dokumenty do pobrania">
-      <Styled.Banner>
-        <Banner>
-          Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
-          <a href="/wsparcie">tutaj</a>
-        </Banner>
-      </Styled.Banner>
+      <SupportBanner />
 
       <Navigation />
 

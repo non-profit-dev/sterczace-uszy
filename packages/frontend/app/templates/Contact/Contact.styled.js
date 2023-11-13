@@ -15,9 +15,3 @@ export const ContactContainer = styled.div`
     padding: 56px 0;
   }
 `
-
-export const Banner = styled.div`
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: none;
-  }
-`

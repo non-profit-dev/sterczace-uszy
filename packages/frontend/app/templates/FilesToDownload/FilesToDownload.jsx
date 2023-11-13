@@ -3,12 +3,11 @@ import { useTheme } from "@emotion/react"
 import Container from "design-system/components/container/Container"
 import Typography from "design-system/components/typography"
 
-import Banner from "design-system/components/banner"
-
 import CtaBanner from "design-system/patterns/ctaBanner"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+import SupportBanner from "design-system/blocks/supportBanner"
 
 import AdoptionSurvey from "frontend/public/documents/AdoptionSurvey.svg"
 import TempHomeSurvey from "frontend/public/documents/TempHomeSurvey.svg"
@@ -78,12 +77,7 @@ const FilesToDownload = () => {
   const theme = useTheme()
   return (
     <Page title="Pliki do pobrania">
-      <Styled.Banner>
-        <Banner>
-          Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
-          <a href="/wsparcie">tutaj</a>
-        </Banner>
-      </Styled.Banner>
+      <SupportBanner />
 
       <Navigation />
 

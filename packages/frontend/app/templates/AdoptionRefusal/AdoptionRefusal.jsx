@@ -1,6 +1,6 @@
-import Banner from "design-system/components/banner"
 import CtaBanner from "design-system/patterns/ctaBanner"
 import Navigation from "design-system/blocks/navigation"
+import SupportBanner from "design-system/blocks/supportBanner"
 import Footer from "design-system/blocks/footer"
 
 import Page from "../Page"
@@ -10,10 +10,7 @@ import AdoptionRefusal from "./components/AdoptionRefusal"
 
 const AdoptionRefusalPage = () => (
   <Page title="Odmowa adopcji">
-    <Banner>
-      Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
-      <a href="/wsparcie">tutaj</a>
-    </Banner>
+    <SupportBanner />
 
     <Navigation />
 
