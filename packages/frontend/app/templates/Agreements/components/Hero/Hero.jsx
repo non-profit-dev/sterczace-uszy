@@ -16,8 +16,8 @@ const Hero = () => (
             tabletLayout="left"
             mobileLayout="left"
           >
-            Tutaj znajdziesz umowy adopcyjne i niezbędne informacje, aby je
-            wysłać do fundacji.
+            Tutaj znajdziesz umowy adopcyjne i niezbędne informacje, żeby
+            dokończyć adopcje wybranego czworonoga.
           </TextBanner>
         </Styled.TextWrapper>
 
