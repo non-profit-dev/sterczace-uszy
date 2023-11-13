@@ -3,7 +3,6 @@ import Banner from "design-system/components/banner"
 import CtaBanner from "design-system/patterns/ctaBanner"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
-import HomeFound from "./components/HomeFound/HomeFound"
 import Animals from "./components/Animals"
 
 import Page from "../Page"
@@ -27,7 +26,6 @@ const AnimalsPage = ({ animals }) => (
       <Container>
         <Animals data={animals.items} />
       </Container>
-      <HomeFound />
       <CtaBanner
         buttonHref="/kontakt"
         buttonText="Skontaktuj się z nami"

@@ -3,10 +3,6 @@ import { Image } from "design-system/components/image/Image.styled"
 
 export const Wrapper = styled.section`
   padding-bottom: 120px;
-  background-image: url("/adoption/home-found-background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     background-size: 100% 60%;
@@ -15,7 +11,6 @@ export const Wrapper = styled.section`
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    background-image: url("/adoption/mobile-home-found-background.png");
     padding-bottom: 60px;
   }
 `
@@ -26,7 +21,6 @@ export const TopContainer = styled.div`
 
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 100px 0 60px;
-    max-width: 516px;
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
@@ -52,13 +46,13 @@ export const Content = styled.div`
 
 export const Img = styled(Image)`
   max-width: 425px;
-  min-height: 570px;
+  min-height: 406px;
   object-position: 80% 50%;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     border-radius: unset;
     min-height: unset;
-    height: 685px;
+    height: 600px;
     width: 100vw;
     position: relative;
     left: 50%;
@@ -69,7 +63,7 @@ export const Img = styled(Image)`
   }
 
   ${({ theme }) => theme.breakpoints.tablet} {
-    height: 600px;
+    height: 480px;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
@@ -77,7 +71,7 @@ export const Img = styled(Image)`
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    height: 359px;
+    height: 336px;
   }
 `
 

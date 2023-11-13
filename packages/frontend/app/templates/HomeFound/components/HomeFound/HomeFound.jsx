@@ -12,21 +12,20 @@ const HomeFound = () => {
       <Container>
         <Styled.TopContainer>
           <TextBanner
-            heading="Znalazły dom"
+            heading="Adoptowani podopieczni"
             headingColor={theme.colors.gray[600]}
-            subtitle="Zaopiekowani wybrańcy"
+            subtitle="Szczęśliwi w nowych domach"
             tabletLayout="left"
             mobileLayout="left"
           >
             <Typography variant="bodyTitle" color={theme.colors.gray[500]}>
-              Pozostajemy w stałym kontakcie z rodzinami, które zdecydowały się
-              na adopcję. Pomagamy, doradzamy i z radością słuchamy szczęśliwych
-              opowieści.
+              Poznaj historie naszych pupili, którzy znaleźli szczęśliwe
+              rodziny.
             </Typography>
           </TextBanner>
         </Styled.TopContainer>
         <Styled.Content>
-          <Styled.Img src="../adoption/home-found.png" alt="" />
+          <Styled.Img src="../home-found/home-found.png" alt="" />
           <TextBanner
             heading="Do trzech razy sztuka"
             headingColor={theme.colors.gray[600]}
