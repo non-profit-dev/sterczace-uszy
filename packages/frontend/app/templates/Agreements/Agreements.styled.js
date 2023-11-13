@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 export const DocumentContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   padding: 120px 80px;
   gap: 60px;
@@ -16,6 +16,7 @@ export const DocumentContainer = styled.div`
 `
 
 export const HeaderContainer = styled.div`
+  max-width: 650px;
   display: flex;
   flex-direction: column;
   gap: 32px;
