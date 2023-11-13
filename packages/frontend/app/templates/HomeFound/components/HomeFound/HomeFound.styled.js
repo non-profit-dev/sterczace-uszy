@@ -52,7 +52,7 @@ export const Img = styled(Image)`
   ${({ theme }) => theme.breakpoints.tabletLg} {
     border-radius: unset;
     min-height: unset;
-    height: 685px;
+    height: 600px;
     width: 100vw;
     position: relative;
     left: 50%;
@@ -63,7 +63,7 @@ export const Img = styled(Image)`
   }
 
   ${({ theme }) => theme.breakpoints.tablet} {
-    height: 600px;
+    height: 480px;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
@@ -71,7 +71,7 @@ export const Img = styled(Image)`
   }
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    height: 359px;
+    height: 336px;
   }
 `
 
