@@ -3,7 +3,6 @@ import Banner from "design-system/components/banner"
 import CtaBanner from "design-system/patterns/ctaBanner"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
-import HomeFound from "../HomeFound/components/HomeFound/HomeFound"
 import Animals from "./components/Animals"
 
 import Page from "../Page"

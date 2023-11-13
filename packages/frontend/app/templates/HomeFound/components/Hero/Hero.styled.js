@@ -27,7 +27,6 @@ export const Header = styled.header`
     padding: 0;
   }
   ${({ theme }) => theme.breakpoints.mobile} {
-    padding: 0;
     background:
       linear-gradient(
         272deg,
@@ -53,10 +52,6 @@ export const HeaderWrapper = styled.div`
   max-width: 848px;
 
   ${({ theme }) => theme.breakpoints.tablet} {
-    padding: 60px 0;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
     padding: 60px 0;
   }
 `

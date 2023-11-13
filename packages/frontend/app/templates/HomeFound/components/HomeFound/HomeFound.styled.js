@@ -46,7 +46,7 @@ export const Content = styled.div`
 
 export const Img = styled(Image)`
   max-width: 425px;
-  min-height: 570px;
+  min-height: 406px;
   object-position: 80% 50%;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
