@@ -1,4 +1,4 @@
-describe("Free Support Page", () => {
+describe("Temporary Home", () => {
   it("should successfully load", () => {
     cy.visit("/dom-tymczasowy")
   })
