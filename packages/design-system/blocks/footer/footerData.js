@@ -71,8 +71,12 @@ const footerData = {
       link: "/adopcja-wirtualna",
     },
     {
-      title: "Dokumenty do pobrania",
-      link: "/pliki-do-pobrania",
+      title: "Ankiety",
+      link: "/ankiety",
+    },
+    {
+      title: "Umowy",
+      link: "/umowy",
     },
   ],
 }

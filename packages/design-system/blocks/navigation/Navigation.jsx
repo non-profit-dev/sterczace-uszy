@@ -1,12 +1,15 @@
+import { useState } from "react"
 import { string, arrayOf, shape } from "prop-types"
+import { useTheme } from "@emotion/react"
 import Link from "next/link"
+
 import Button from "design-system/components/button"
 import Container from "design-system/components/container"
 import Icon from "design-system/components/icon"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 import Logo from "design-system/components/logo"
-import { useState } from "react"
+
 import * as Styled from "./Navigation.styled"
 
 import data from "./data"
@@ -14,6 +17,7 @@ import data from "./data"
 const Navigation = ({ navigationData }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
+  const theme = useTheme()
 
   const handleDropdownToggle = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index)
@@ -53,15 +57,18 @@ const Navigation = ({ navigationData }) => {
                           variant="text"
                           size="xsmall"
                           color={
-                            item.href === "/pliki-do-pobrania"
-                              ? "primary"
-                              : "black"
+                            item.title === "Dokumenty" ? "primary" : "black"
                           }
                         />
                         <Styled.ChevronIcon
                           name="chevronDown"
                           size="small"
                           isActive={activeDropdown === index}
+                          color={
+                            item.title === "Dokumenty"
+                              ? theme.colors.primary[500]
+                              : theme.colors.gray[600]
+                          }
                         />
                       </Styled.DropdownButton>
                       {activeDropdown === index && (
@@ -76,7 +83,7 @@ const Navigation = ({ navigationData }) => {
                                     variant="text"
                                     size="xsmall"
                                     color={
-                                      link.href === "/pliki-do-pobrania"
+                                      link.title === "Dokumenty"
                                         ? "primary"
                                         : "black"
                                     }
@@ -94,9 +101,7 @@ const Navigation = ({ navigationData }) => {
                       variant="text"
                       href={item.href}
                       size="xsmall"
-                      color={
-                        item.href === "/pliki-do-pobrania" ? "primary" : "black"
-                      }
+                      color={item.title === "Dokumenty" ? "primary" : "black"}
                     />
                   )}
                 </Styled.MenuButton>
@@ -132,9 +137,7 @@ const Navigation = ({ navigationData }) => {
                           variant="text"
                           size="medium"
                           color={
-                            link.href === "/pliki-do-pobrania"
-                              ? "primary"
-                              : "black"
+                            link.title === "Dokumenty" ? "primary" : "black"
                           }
                         />
                       ))}
@@ -147,9 +150,7 @@ const Navigation = ({ navigationData }) => {
                     href={item.href}
                     variant="text"
                     size="medium"
-                    color={
-                      item.href === "/pliki-do-pobrania" ? "primary" : "black"
-                    }
+                    color={item.title === "Dokumenty" ? "primary" : "black"}
                   />
                 )}
               </div>

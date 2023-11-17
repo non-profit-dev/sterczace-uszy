@@ -3,23 +3,20 @@ import styled from "@emotion/styled"
 export const DocumentContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  padding: 120px 0;
-  gap: 80px;
+  padding: 120px 80px;
+  gap: 60px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     align-items: flex-start;
     padding: 0;
-    gap: 43px;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
     gap: 40px;
   }
 `
 
 export const HeaderContainer = styled.div`
+  max-width: 650px;
   display: flex;
   flex-direction: column;
   gap: 32px;

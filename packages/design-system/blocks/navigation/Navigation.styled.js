@@ -42,6 +42,7 @@ export const DropdownWrapper = styled.div`
 `
 
 export const ChevronIcon = styled(Icon)`
+  color: ${({ color }) => color};
   transform: ${(props) => (props.isActive ? "rotate(180deg)" : "")};
   transition: 400ms ease;
 `
