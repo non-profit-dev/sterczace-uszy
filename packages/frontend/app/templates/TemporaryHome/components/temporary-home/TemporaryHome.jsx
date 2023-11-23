@@ -51,11 +51,10 @@ const TemporaryHome = () => {
         >
           By skutecznie ratować psy i koty nie wystarczy je zabrać z koszmarnych
           warunków. Potrzeba też miejsca, by je ulokować do czasu adopcji, umyć,
-          uspokoić i nakarmić. Domy tymczasowe to najczęściej pierwszy kontakt
-          ze zwierzakami. To odpowiedzialna rola, bo to właśnie Dom Tymczasowy
-          dba o zwierzę, pokazuje mu, że ludzie są fajni... Opisuje zachowania
-          zwierzęcia, chodzi do weterynarza, daje szansę zwierzakowi na lepsze
-          życie!
+          uspokoić i nakarmić. Domy tymczasowe to pierwsze miejsce, w którym
+          zwierzęta otrzymują pomoc. To odpowiedzialna rola, bo to właśnie Dom
+          Tymczasowy dba o zwierzę, pokazuje mu, że ludzie są fajni...daje
+          szansę zwierzakowi na lepsze życie!
         </TextBanner>
 
         <Illustration name="dogRescue" />
