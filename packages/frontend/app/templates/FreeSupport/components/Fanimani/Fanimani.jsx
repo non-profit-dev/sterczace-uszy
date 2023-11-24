@@ -25,7 +25,7 @@ const steps = [
         href={globalData.fanimani.appStore}
         rel="noreferrer"
       >
-        <img src="/support/app-store.png" alt="" width="145" />
+        <img src="/free-support/app-store.png" alt="" width="145" />
       </a>,
       <a
         key="google-play-button"
@@ -35,7 +35,7 @@ const steps = [
         href={globalData.fanimani.googlePlay}
         rel="noreferrer"
       >
-        <img src="/support/google-play.png" alt="" width="145" />
+        <img src="/free-support/google-play.png" alt="" width="145" />
       </a>,
     ],
   },
@@ -77,7 +77,7 @@ const Fanimani = () => {
           aplikację na telefon by wspierać nas przy okazji codziennych zakupów.
         </TextBanner>
 
-        <Styled.Image src="/support/fanimani.png" alt="" />
+        <Styled.Image src="/free-support/fanimani.png" alt="" />
       </Styled.Content>
 
       <Styled.Steps>
