@@ -66,8 +66,17 @@ const data = [
     href: "/kontakt",
   },
   {
-    title: "Pliki do pobrania",
-    href: "/pliki-do-pobrania",
+    title: "Dokumenty",
+    links: [
+      {
+        title: "Umowy",
+        href: "/umowy",
+      },
+      {
+        title: "Ankiety",
+        href: "/ankiety",
+      },
+    ],
   },
 ]
 

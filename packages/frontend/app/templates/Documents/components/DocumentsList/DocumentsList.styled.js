@@ -5,6 +5,7 @@ export const SurveyContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 100px;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     flex-direction: column;
