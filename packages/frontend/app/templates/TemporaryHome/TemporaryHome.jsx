@@ -6,7 +6,7 @@ import Page from "../Page"
 import Hero from "./components/hero/Hero"
 
 const TemporaryHome = () => (
-  <Page title="Pomagaj za darmo">
+  <Page title="Dom tymczasowy">
     <Navigation />
     <main>
       <Hero />
