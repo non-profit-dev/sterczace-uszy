@@ -5,7 +5,16 @@ const data = [
   },
   {
     title: "Nasi podopieczni",
-    href: "/do-adopcji",
+    links: [
+      {
+        title: "Zwierzęta do adopcji",
+        href: "/do-adopcji",
+      },
+      {
+        title: "Znalazły dom",
+        href: "/znalazly-dom",
+      },
+    ],
   },
   {
     title: "Adopcja",
