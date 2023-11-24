@@ -1,3 +1,3 @@
-import Document from "./Document"
+import Documents from "./Documents"
 
-export default Document
+export default Documents
