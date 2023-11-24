@@ -1,17 +1,12 @@
 import styled from "@emotion/styled"
 
 export const Wrapper = styled.div`
-  padding-top: 140px;
-  padding-bottom: 280px;
-  background: linear-gradient(
-      52deg,
-      rgb(97 97 97 / 51%) 34.13%,
-      rgba(0, 0, 0, 0) 50.9%
-    ),
-    url(/free-support/hero.png);
+  padding-top: 200px;
+  padding-bottom: 240px;
+  background: url(/free-support/hero.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
 
   ${({ theme }) => theme.breakpoints.tablet} {
     padding: 0;
