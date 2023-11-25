@@ -4,7 +4,7 @@ export const Header = styled.header`
   margin: 0 auto;
   padding-top: 140px;
   padding-bottom: 280px;
-  background: url("/adoption/adoption-background.png");
+  background: url("/adoption-rules/adoption-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -30,7 +30,7 @@ export const HeaderWrapper = styled.div`
 export const HeroMobileBackground = styled.div`
   display: none;
   height: 560px;
-  background: url("/adoption/adoption-background-mobile.png");
+  background: url("/adoption-rules/adoption-background-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

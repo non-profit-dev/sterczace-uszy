@@ -38,7 +38,11 @@ const Animals = ({ data }) => (
       ))}
     </Styled.CardsWrapper>
     <Styled.ButtonWrapper>
-      <Button text="Sprawdź zasady adopcji" href="/adopcja" size="large" />
+      <Button
+        text="Sprawdź zasady adopcji"
+        href="/zasady-adopcji"
+        size="large"
+      />
     </Styled.ButtonWrapper>
   </Styled.Wrapper>
 )
