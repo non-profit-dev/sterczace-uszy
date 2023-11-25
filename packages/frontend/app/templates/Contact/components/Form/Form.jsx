@@ -18,14 +18,11 @@ const Form = ({ handleSubmit, submitting }) => {
     register,
     handleSubmit: onSubmit,
     formState: { errors, isDirty, isValid },
-  } = useForm()
+  } = useForm({ mode: "onBlur" })
 
   const handleForm = (data) => {
-    // handleSubmit(data)
-    console.log(data)
+    handleSubmit(data)
   }
-
-  const myInputRef = createRef()
 
   const getFieldState = (fieldName) => {
     if (isDirty && errors[fieldName]) {
@@ -33,6 +30,13 @@ const Form = ({ handleSubmit, submitting }) => {
     }
     if (isValid) {
       return "valid"
+    }
+    return null
+  }
+
+  const getTextareaError = (fieldName) => {
+    if (isDirty && errors[fieldName]) {
+      return "error"
     }
     return null
   }
@@ -51,7 +55,7 @@ const Form = ({ handleSubmit, submitting }) => {
             name="firstName"
             required
             state={getFieldState("firstName")}
-            ref={myInputRef}
+            ref={createRef()}
             {...register("firstName", {
               required: "To pole jest wymagane",
               maxLength: {
@@ -69,18 +73,18 @@ const Form = ({ handleSubmit, submitting }) => {
             label="Wpisz Twój e-mail"
             placeholder="Twój adres e-mail"
             type="email"
-            name="Mail"
+            name="email"
             required
-            state={getFieldState("Mail")}
-            ref={myInputRef}
-            {...register("Mail", {
+            state={getFieldState("email")}
+            ref={createRef()}
+            {...register("email", {
               required: "To pole jest wymagane",
               pattern: {
                 value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i,
                 message: "Wpisz poprawny adres e-mail",
               },
             })}
-            message={errors.Mail ? errors.Mail.message : ""}
+            message={errors.email ? errors.email.message : ""}
           />
         </Styled.InputContainer>
         <Select
@@ -101,8 +105,9 @@ const Form = ({ handleSubmit, submitting }) => {
           label="Twoja wiadomość"
           placeholder="Napisz dla nas wiadomość"
           required
-          name="Wiadomość"
-          {...register("Wiadomość", {
+          name="message"
+          error={getTextareaError("message")}
+          {...register("message", {
             required: "To pole jest wymagane",
             minLength: {
               value: 30,
@@ -115,7 +120,7 @@ const Form = ({ handleSubmit, submitting }) => {
               return true
             },
           })}
-          message={errors.Wiadomość ? errors.Wiadomość.message : ""}
+          message={errors.message ? errors.message.message : ""}
         />
         <Checkbox
           id="contact"

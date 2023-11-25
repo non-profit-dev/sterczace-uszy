@@ -7,6 +7,8 @@ import { forwardRef } from "react"
 import * as Styled from "./Textarea.styled"
 import ErrorMessage from "../errorMessage"
 
+const errorColor = theme.colors.error[100]
+
 const Textarea = forwardRef(
   (
     {
@@ -48,7 +50,7 @@ const Textarea = forwardRef(
       {message && !error && (
         <Typography
           variant="bodyTiny"
-          color={theme.colors.gray[500]}
+          color={error ? errorColor : theme.colors.gray[500]}
           data-testid="message"
         >
           {message}
