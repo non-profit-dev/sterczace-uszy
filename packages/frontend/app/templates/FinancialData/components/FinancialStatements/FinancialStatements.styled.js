@@ -8,8 +8,9 @@ export const Container = styled.div`
   grid-template-areas:
     "financial image"
     "text image";
-  grid-column-gap: 120px;
-  margin: 120px 0;
+  grid-column-gap: 82px;
+  padding-block: 30px;
+  margin: 92px 0;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     grid-template-columns: 1fr;
@@ -19,6 +20,8 @@ export const Container = styled.div`
       "text";
     grid-gap: 0;
     margin: 0px 0 100px;
+    padding-top: 96px;
+    padding-bottom: 12px;
   }
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
@@ -27,7 +30,7 @@ export const Container = styled.div`
 `
 
 export const FinancialDataWrapper = styled.div`
-  max-width: 584px;
+  max-width: 610px;
   grid-area: financial;
 `
 
@@ -61,6 +64,9 @@ export const TextWrapper = styled.div`
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     margin-top: 60px;
+  }
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    max-width: 210px;
   }
 `
 
