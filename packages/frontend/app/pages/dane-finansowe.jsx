@@ -1,12 +1,12 @@
-import FinancialData from "../templates/FinancialData"
+import FinancialDataPage from "../templates/FinancialData"
 
 import { financialStatementsType } from "../lib/types"
 
 import client from "../lib/api"
 import { GET_FINANCIAL_STATEMENTS } from "../lib/queries"
 
-const About = ({ financialStatements }) => (
-  <FinancialData financialStatements={financialStatements} />
+const FinancialData = ({ financialStatements }) => (
+  <FinancialDataPage financialStatements={financialStatements} />
 )
 export async function getStaticProps() {
   const { data: financialStatements } = await client.query({
@@ -21,8 +21,8 @@ export async function getStaticProps() {
   }
 }
 
-About.propTypes = {
+FinancialData.propTypes = {
   financialStatements: financialStatementsType.isRequired,
 }
 
-export default About
+export default FinancialData

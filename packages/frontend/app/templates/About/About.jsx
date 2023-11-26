@@ -5,7 +5,6 @@ import SupportBanner from "design-system/blocks/supportBanner"
 import Achievements from "./components/Achievements"
 import AboutUs from "./components/AboutUs"
 import Values from "./components/Values"
-import Supporters from "./components/Supporters"
 import Hero from "./components/Hero"
 import Page from "../Page"
 
@@ -15,16 +14,12 @@ import {
   adoptedAnimalsType,
 } from "../../lib/types"
 
-import Microchips from "./components/Microchips"
-
 import * as Styled from "./About.styled"
 
 const About = ({ animals, supporting, adoptedAnimals }) => (
   <Page title="O nas">
     <SupportBanner />
-
     <Navigation />
-
     <Styled.Main>
       <Hero />
       <AboutUs />
@@ -36,8 +31,6 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
           adoptedAnimalsNumber={adoptedAnimals.total}
         />
       </Container>
-      {/* <Microchips />
-      <Supporters data={supporting.items} /> */}
     </Styled.Main>
     <Footer />
   </Page>

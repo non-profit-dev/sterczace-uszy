@@ -10,7 +10,7 @@ import * as Styled from "./FinancialData.styled"
 import FinancialStatements from "./components/FinancialStatements"
 
 const FinancialData = ({ financialStatements }) => (
-  <Page title="O nas">
+  <Page title="Dane finansowe">
     <Navigation />
     <Styled.Main>
       <Hero />

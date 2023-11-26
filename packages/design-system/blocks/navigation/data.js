@@ -3,7 +3,7 @@ const data = [
     title: "Fundacja",
     links: [
       {
-        title: "Fundacja",
+        title: "O nas",
         href: "/fundacja",
       },
       {
