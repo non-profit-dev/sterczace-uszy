@@ -3,12 +3,11 @@ import { useTheme } from "@emotion/react"
 import Container from "design-system/components/container/Container"
 import Typography from "design-system/components/typography"
 
-import Banner from "design-system/components/banner"
-
 import CtaBanner from "design-system/patterns/ctaBanner"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+import SupportBanner from "design-system/blocks/supportBanner"
 
 import Hero from "./components/Hero"
 import DocumentsList from "./components/DocumentsList"
@@ -21,12 +20,7 @@ const Agreements = () => {
   const theme = useTheme()
   return (
     <Page title="Umowy">
-      <Styled.Banner>
-        <Banner>
-          Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
-          <a href="/wsparcie">tutaj</a>
-        </Banner>
-      </Styled.Banner>
+      <SupportBanner />
 
       <Navigation />
 

@@ -28,16 +28,20 @@ const footerData = {
 
   support: [
     {
-      title: "Dom tymczasowy",
-      link: "/wsparcie#dom-tymczasowy",
-    },
-    {
-      title: "1.5% Podatku",
-      link: "/wsparcie/#podatek",
-    },
-    {
       title: "Wpłaty",
-      link: "/wsparcie#wplaty",
+      link: "/wplaty",
+    },
+    {
+      title: "Dom tymczasowy",
+      link: "/dom-tymczasowy",
+    },
+    {
+      title: "Wolontariat",
+      link: "/wolontariat",
+    },
+    {
+      title: "Pomagaj za darmo",
+      link: "/pomagaj-za-darmo",
     },
   ],
 
