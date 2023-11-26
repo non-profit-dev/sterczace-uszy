@@ -19,13 +19,13 @@ const cards = [
   {
     title: "Zostań domem tymczasowym",
     buttonText: "Poznaj zasady",
-    buttonHref: "/wsparcie#dom-tymczasowy",
+    buttonHref: "/dom-tymczasowy",
     illustration: "temporaryHome",
   },
   {
     title: "Przekaż 1.5% podatku",
     buttonText: "Dowiedz się więcej",
-    buttonHref: "/wsparcie#podatek",
+    buttonHref: "/wplaty#podatek",
     illustration: "percentage",
   },
 ]
@@ -43,9 +43,7 @@ const Hero = () => {
             subtitle={`Fundacja ${globalData.organizationName}`}
             descriptionColor={theme.colors.neutrals[100]}
             size="large"
-            button={
-              <Button text="Wesprzyj nas" size="large" href="/wsparcie" />
-            }
+            button={<Button text="Wesprzyj nas" size="large" href="/wplaty" />}
           >
             Nasi podopieczni czekają na Twoją pomoc. Pełna miska, miejsce do
             spania, opieka lekarza to tylko niektóre z naszych potrzeb. Chcesz

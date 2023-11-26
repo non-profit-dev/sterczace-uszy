@@ -1,6 +1,6 @@
 import Container from "design-system/components/container"
-import Banner from "design-system/components/banner"
 import CtaBanner from "design-system/patterns/ctaBanner"
+import SupportBanner from "design-system/blocks/supportBanner"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 import HomeFound from "./components/HomeFound/HomeFound"
@@ -14,12 +14,7 @@ import * as Styled from "./Animals.styled"
 
 const AnimalsPage = ({ animals }) => (
   <Page title="Nasi podopieczni">
-    <Styled.Banner>
-      <Banner>
-        Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
-        <a href="/wsparcie">tutaj</a>
-      </Banner>
-    </Styled.Banner>
+    <SupportBanner />
 
     <Navigation />
 

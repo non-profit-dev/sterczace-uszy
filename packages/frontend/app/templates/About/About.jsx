@@ -1,7 +1,7 @@
 import Container from "design-system/components/container"
-import Banner from "design-system/components/banner"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+import SupportBanner from "design-system/blocks/supportBanner"
 import Achievements from "./components/Achievements"
 import AboutUs from "./components/AboutUs"
 import Values from "./components/Values"
@@ -27,12 +27,7 @@ const About = ({
   financialStatements,
 }) => (
   <Page title="O nas">
-    <Styled.Banner>
-      <Banner>
-        Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
-        <a href="/wsparcie">tutaj</a>
-      </Banner>
-    </Styled.Banner>
+    <SupportBanner />
 
     <Navigation />
 
