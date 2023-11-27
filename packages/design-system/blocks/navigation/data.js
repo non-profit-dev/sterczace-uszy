@@ -1,7 +1,16 @@
 const data = [
   {
     title: "Fundacja",
-    href: "/fundacja",
+    links: [
+      {
+        title: "O nas",
+        href: "/fundacja",
+      },
+      {
+        title: "Dane finansowe",
+        href: "/dane-finansowe",
+      },
+    ],
   },
   {
     title: "Nasi podopieczni",

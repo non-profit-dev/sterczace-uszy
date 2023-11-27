@@ -4,8 +4,8 @@ import globalData from "shared/data"
 import * as Styled from "./AboutUs.styled"
 
 const AboutUs = () => (
-  <Styled.ContainerSection as="section" size="medium">
-    <Styled.Wrapper>
+  <Styled.Wrapper>
+    <Styled.ContainerSection as="section" size="medium">
       <Styled.Banner
         heading={`Fundacja ${globalData.organizationName}`}
         headingTag="h1"
@@ -53,8 +53,8 @@ const AboutUs = () => (
         alt="dog with heart"
         src="../about/aboutus-section-image.png"
       />
-    </Styled.Wrapper>
-  </Styled.ContainerSection>
+    </Styled.ContainerSection>
+  </Styled.Wrapper>
 )
 
 export default AboutUs

@@ -10,8 +10,8 @@ const FinancialStatements = ({ data }) => (
   <Styled.Container>
     <Styled.FinancialDataWrapper>
       <TextBanner
-        heading="Dane finansowe fundacji"
-        subtitle="Sprawdź"
+        heading="Sprawozdania finansowe"
+        subtitle="Dbamy o transparentność"
         mobileLayout="left"
         tabletLayout="left"
       >
@@ -49,8 +49,14 @@ const FinancialStatements = ({ data }) => (
       <Styled.ImageHeading variant="h6" as="p">
         Nasze najważniejsze koszty:
       </Styled.ImageHeading>
-      <Styled.DesktopImage src="/about/financial-chart-desktop.png" alt="" />
-      <Styled.MobileImage src="/about/financial-chart-mobile.png" alt="" />
+      <Styled.DesktopImage
+        src="/financial-data/financial-chart-desktop.png"
+        alt=""
+      />
+      <Styled.MobileImage
+        src="/financial-data/financial-chart-mobile.png"
+        alt=""
+      />
     </Styled.ImageWrapper>
   </Styled.Container>
 )

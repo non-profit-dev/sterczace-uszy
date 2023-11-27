@@ -22,6 +22,7 @@ export const Description = styled.div`
   width: 600px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     width: 630px;
+    text-align: left;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     width: 100%;
@@ -33,14 +34,15 @@ export const Achievements = styled.div`
   align-items: center;
   justify-content: center;
   gap: 60px;
-  padding: 120px 0px;
+  padding-top: 120px;
+  padding-bottom: 110px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     gap: 80px;
     padding: 100px 0px;
   }
   ${({ theme }) => theme.breakpoints.mobileLg} {
     gap: 60px;
-    padding: 60px 0px 60px;
+    padding: 10px 0px 60px;
   }
 `
 export const CardContainer = styled.div`
@@ -48,6 +50,6 @@ export const CardContainer = styled.div`
   flex-direction: column;
   align-items: cetner;
   justify-content: center;
-  gap: 24px;
+  gap: 12px;
   max-width: 385px;
 `
