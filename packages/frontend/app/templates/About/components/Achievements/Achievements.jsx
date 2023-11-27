@@ -15,18 +15,21 @@ const Achievements = ({
     {
       illustrationName: "heart",
       count: supportingNumber,
+      title: "Pomocnych serc",
       description:
         "To liczba dobrych serc ludzi, dzięki którym możemy pomagać zwierzakom",
     },
     {
       illustrationName: "home",
       count: adoptedAnimalsNumber,
+      title: "Znalezionych domów",
       description:
         "To liczba nowych domów, gdzie nasi podopieczni zostali otoczeni opieką",
     },
     {
       illustrationName: "dog",
       count: adoptedAnimalsNumber + animalsNumber,
+      title: "Uratowanych zwierząt",
       description:
         "To liczba pupili, którzy są pod naszą opieką i którym już udzieliłyśmy pomocy",
     },
@@ -47,9 +50,12 @@ const Achievements = ({
         </Styled.Description>
       </TextBanner>
       <Styled.Container>
-        {cardsData.map(({ illustrationName, count, description }) => (
+        {cardsData.map(({ illustrationName, title, count, description }) => (
           <Styled.CardContainer key={description}>
             <DecorativeCard illustrationName={illustrationName} count={count} />
+            <Typography variant="h3" as="h3">
+              {title}
+            </Typography>
             <Typography variant="h4" as="p">
               {description}
             </Typography>

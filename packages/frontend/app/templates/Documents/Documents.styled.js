@@ -40,9 +40,3 @@ export const DocumentsInfo = styled.div`
     padding-bottom: 56px;
   }
 `
-
-export const Banner = styled.div`
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: none;
-  }
-`

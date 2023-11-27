@@ -1,11 +1,29 @@
 const data = [
   {
     title: "Fundacja",
-    href: "/fundacja",
+    links: [
+      {
+        title: "O nas",
+        href: "/fundacja",
+      },
+      {
+        title: "Dane finansowe",
+        href: "/dane-finansowe",
+      },
+    ],
   },
   {
     title: "Nasi podopieczni",
-    href: "/do-adopcji",
+    links: [
+      {
+        title: "Zwierzęta do adopcji",
+        href: "/do-adopcji",
+      },
+      {
+        title: "Znalazły dom",
+        href: "/znalazly-dom",
+      },
+    ],
   },
   {
     title: "Adopcja",
@@ -42,7 +60,24 @@ const data = [
   },
   {
     title: "Jak pomóc",
-    href: "/wsparcie",
+    links: [
+      {
+        title: "Wpłaty",
+        href: "/wplaty",
+      },
+      {
+        title: "Dom tymczasowy",
+        href: "/dom-tymczasowy",
+      },
+      {
+        title: "Wolontariat",
+        href: "/wolontariat",
+      },
+      {
+        title: "Pomagaj za darmo",
+        href: "/pomagaj-za-darmo",
+      },
+    ],
   },
   {
     title: "Kontakt",

@@ -1,42 +1,27 @@
 import Container from "design-system/components/container"
-import Banner from "design-system/components/banner"
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
+import SupportBanner from "design-system/blocks/supportBanner"
 import Achievements from "./components/Achievements"
 import AboutUs from "./components/AboutUs"
 import Values from "./components/Values"
-import Supporters from "./components/Supporters"
+import Hero from "./components/Hero"
 import Page from "../Page"
 
 import {
   supportingType,
   animalsType,
   adoptedAnimalsType,
-  financialStatementsType,
 } from "../../lib/types"
 
-import Microchips from "./components/Microchips"
-
 import * as Styled from "./About.styled"
-import FinancialStatements from "./components/FinancialStatements"
 
-const About = ({
-  animals,
-  supporting,
-  adoptedAnimals,
-  financialStatements,
-}) => (
+const About = ({ animals, supporting, adoptedAnimals }) => (
   <Page title="O nas">
-    <Styled.Banner>
-      <Banner>
-        Nasi podopieczni czekają na Twoje wsparcie! Chcesz nam pomóc? Zajrzyj{" "}
-        <a href="/wsparcie">tutaj</a>
-      </Banner>
-    </Styled.Banner>
-
+    <SupportBanner />
     <Navigation />
-
     <Styled.Main>
+      <Hero />
       <AboutUs />
       <Values />
       <Container>
@@ -45,12 +30,7 @@ const About = ({
           animalsNumber={animals.total}
           adoptedAnimalsNumber={adoptedAnimals.total}
         />
-        <FinancialStatements data={financialStatements.items} />
       </Container>
-
-      <Microchips />
-
-      <Supporters data={supporting.items} />
     </Styled.Main>
     <Footer />
   </Page>
@@ -60,7 +40,6 @@ About.propTypes = {
   animals: animalsType.isRequired,
   supporting: supportingType.isRequired,
   adoptedAnimals: adoptedAnimalsType.isRequired,
-  financialStatements: financialStatementsType.isRequired,
 }
 
 export default About
