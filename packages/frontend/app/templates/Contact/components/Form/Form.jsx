@@ -17,29 +17,33 @@ const Form = ({ handleSubmit, submitting }) => {
   const {
     register,
     handleSubmit: onSubmit,
-    formState: { errors, isDirty, isValid },
+    formState: { errors, dirtyFields },
   } = useForm({ mode: "onBlur" })
 
   const handleForm = (data) => {
     handleSubmit(data)
   }
 
-  const getFieldState = (fieldName) => {
-    if (isDirty && errors[fieldName]) {
-      return "error"
+  const determineInputState = (fieldName) => {
+    if (dirtyFields[fieldName] && !errors[fieldName]) {
+      return "valid";
     }
-    if (isValid) {
-      return "valid"
+    if (errors[fieldName]) {
+      return "error"
     }
     return null
   }
+  const inputStateFirstName = determineInputState("firstName");
+  const inputStateEmail = determineInputState("email");
 
-  const getTextareaError = (fieldName) => {
-    if (isDirty && errors[fieldName]) {
+
+  const determineTextareaState = (fieldName) => {
+    if (dirtyFields[fieldName] && errors[fieldName]) {
       return "error"
     }
     return null
   }
+  const textareaStateMessage = determineTextareaState("message");
 
   return (
     <Styled.FormContainer>
@@ -54,7 +58,7 @@ const Form = ({ handleSubmit, submitting }) => {
             type="text"
             name="firstName"
             required
-            state={getFieldState("firstName")}
+            state={inputStateFirstName}
             ref={createRef()}
             {...register("firstName", {
               required: "To pole jest wymagane",
@@ -75,7 +79,7 @@ const Form = ({ handleSubmit, submitting }) => {
             type="email"
             name="email"
             required
-            state={getFieldState("email")}
+            state={inputStateEmail}
             ref={createRef()}
             {...register("email", {
               required: "To pole jest wymagane",
@@ -106,7 +110,7 @@ const Form = ({ handleSubmit, submitting }) => {
           placeholder="Napisz dla nas wiadomość"
           required
           name="message"
-          error={getTextareaError("message")}
+          error={textareaStateMessage}
           {...register("message", {
             required: "To pole jest wymagane",
             minLength: {
