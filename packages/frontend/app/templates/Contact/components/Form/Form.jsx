@@ -33,8 +33,6 @@ const Form = ({ handleSubmit, submitting }) => {
     }
     return null
   }
-  const inputStateFirstName = determineInputState("firstName")
-  const inputStateEmail = determineInputState("email")
 
   const determineTextareaState = (fieldName) => {
     if (dirtyFields[fieldName] && errors[fieldName]) {
@@ -42,7 +40,6 @@ const Form = ({ handleSubmit, submitting }) => {
     }
     return null
   }
-  const textareaStateMessage = determineTextareaState("message")
 
   return (
     <Styled.FormContainer>
@@ -57,7 +54,7 @@ const Form = ({ handleSubmit, submitting }) => {
             type="text"
             name="firstName"
             required
-            state={inputStateFirstName}
+            state={determineInputState("firstName")}
             ref={createRef()}
             {...register("firstName", {
               required: "To pole jest wymagane",
@@ -78,7 +75,7 @@ const Form = ({ handleSubmit, submitting }) => {
             type="email"
             name="email"
             required
-            state={inputStateEmail}
+            state={determineInputState("email")}
             ref={createRef()}
             {...register("email", {
               required: "To pole jest wymagane",
@@ -109,7 +106,7 @@ const Form = ({ handleSubmit, submitting }) => {
           placeholder="Napisz dla nas wiadomość"
           required
           name="message"
-          error={textareaStateMessage}
+          error={determineTextareaState("message")}
           {...register("message", {
             required: "To pole jest wymagane",
             minLength: {
