@@ -18,7 +18,7 @@ const Form = ({ handleSubmit, submitting }) => {
     register,
     handleSubmit: onSubmit,
     formState: { errors, dirtyFields },
-  } = useForm({ mode: "onBlur" })
+  } = useForm({ mode: "onChange" })
 
   const handleForm = (data) => {
     handleSubmit(data)
