@@ -18,10 +18,17 @@ const Form = ({ handleSubmit, submitting }) => {
     register,
     handleSubmit: onSubmit,
     formState: { errors, dirtyFields },
-  } = useForm({ mode: "onChange" })
+  } = useForm({
+    mode: "onChange",
+  })
 
   const handleForm = (data) => {
-    handleSubmit(data)
+    handleSubmit({
+      Imię: data.firstName,
+      Mail: data.email,
+      Temat: data.subject === "Wybierz temat wiadomości" ? "-" : data.subject,
+      Wiadomość: data.message,
+    })
   }
 
   const determineInputState = (fieldName) => {
@@ -45,7 +52,6 @@ const Form = ({ handleSubmit, submitting }) => {
             label="Wpisz Twoje imię"
             placeholder="Twoje imię"
             type="text"
-            name="firstName"
             state={determineInputState("firstName")}
             ref={createRef()}
             {...register("firstName", {
@@ -65,7 +71,6 @@ const Form = ({ handleSubmit, submitting }) => {
             label="Wpisz Twój e-mail"
             placeholder="Twój adres e-mail"
             type="email"
-            name="email"
             state={determineInputState("email")}
             ref={createRef()}
             {...register("email", {
@@ -80,8 +85,8 @@ const Form = ({ handleSubmit, submitting }) => {
         </Styled.InputContainer>
         <Select
           label="Temat"
-          name="Temat"
           options={[
+            "Wybierz temat wiadomości",
             "Adopcja",
             "Dom tymczasowy",
             "Współpraca",
@@ -90,12 +95,11 @@ const Form = ({ handleSubmit, submitting }) => {
             "Inne",
           ]}
           defaultValue="Wybierz temat wiadomości"
-          required
+          {...register("subject")}
         />
         <Textarea
           label="Twoja wiadomość"
           placeholder="Napisz dla nas wiadomość"
-          name="message"
           error={!!errors.message}
           {...register("message", {
             required: "To pole jest wymagane",
