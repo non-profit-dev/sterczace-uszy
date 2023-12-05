@@ -34,13 +34,6 @@ const Form = ({ handleSubmit, submitting }) => {
     return null
   }
 
-  const determineTextareaState = (fieldName) => {
-    if (dirtyFields[fieldName] && errors[fieldName]) {
-      return "error"
-    }
-    return null
-  }
-
   return (
     <Styled.FormContainer>
       <Typography variant="h3" as="h2" color={theme.colors.gray[600]}>
@@ -53,7 +46,6 @@ const Form = ({ handleSubmit, submitting }) => {
             placeholder="Twoje imię"
             type="text"
             name="firstName"
-            required
             state={determineInputState("firstName")}
             ref={createRef()}
             {...register("firstName", {
@@ -74,7 +66,6 @@ const Form = ({ handleSubmit, submitting }) => {
             placeholder="Twój adres e-mail"
             type="email"
             name="email"
-            required
             state={determineInputState("email")}
             ref={createRef()}
             {...register("email", {
@@ -104,9 +95,8 @@ const Form = ({ handleSubmit, submitting }) => {
         <Textarea
           label="Twoja wiadomość"
           placeholder="Napisz dla nas wiadomość"
-          required
           name="message"
-          error={determineTextareaState("message")}
+          error={!!errors.message}
           {...register("message", {
             required: "To pole jest wymagane",
             minLength: {
