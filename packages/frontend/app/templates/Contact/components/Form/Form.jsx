@@ -26,16 +26,15 @@ const Form = ({ handleSubmit, submitting }) => {
 
   const determineInputState = (fieldName) => {
     if (dirtyFields[fieldName] && !errors[fieldName]) {
-      return "valid";
+      return "valid"
     }
     if (errors[fieldName]) {
       return "error"
     }
     return null
   }
-  const inputStateFirstName = determineInputState("firstName");
-  const inputStateEmail = determineInputState("email");
-
+  const inputStateFirstName = determineInputState("firstName")
+  const inputStateEmail = determineInputState("email")
 
   const determineTextareaState = (fieldName) => {
     if (dirtyFields[fieldName] && errors[fieldName]) {
@@ -43,7 +42,7 @@ const Form = ({ handleSubmit, submitting }) => {
     }
     return null
   }
-  const textareaStateMessage = determineTextareaState("message");
+  const textareaStateMessage = determineTextareaState("message")
 
   return (
     <Styled.FormContainer>
