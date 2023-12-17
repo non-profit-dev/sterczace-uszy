@@ -53,7 +53,6 @@ const Form = ({ handleSubmit, submitting }) => {
             placeholder="Twoje imię"
             type="text"
             state={determineInputState("firstName")}
-            ref={createRef()}
             {...register("firstName", {
               required: "To pole jest wymagane",
               maxLength: {
@@ -72,7 +71,6 @@ const Form = ({ handleSubmit, submitting }) => {
             placeholder="Twój adres e-mail"
             type="email"
             state={determineInputState("email")}
-            ref={createRef()}
             {...register("email", {
               required: "To pole jest wymagane",
               pattern: {
