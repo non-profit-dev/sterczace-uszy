@@ -16,7 +16,7 @@
     "@formspree/react": "^2.4.1",
     "@next/env": "^13.4.13",
     "eslint-config-next": "^13.1.6",
-    "graphql": "^16.6.0",
+    "graphql": "^16.8.1",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
