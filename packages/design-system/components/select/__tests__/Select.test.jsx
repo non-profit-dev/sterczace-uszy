@@ -18,7 +18,7 @@ describe(`Select`, () => {
     render(
       <Select
         label={label}
-        options={["test1", "test2", "test3"]}
+        options={[defaultOption, "test1", "test2", "test3"]}
         defaultValue={defaultOption}
       />
     )
