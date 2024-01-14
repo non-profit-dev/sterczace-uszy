@@ -1,6 +1,6 @@
 import { func, bool } from "prop-types"
 import { useTheme } from "@emotion/react"
-import React, { createRef } from "react"
+import React from "react"
 
 import Typography from "design-system/components/typography"
 import Input from "design-system/components/input"
