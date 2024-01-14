@@ -18,10 +18,10 @@ describe("Contact Page", () => {
       ok: true,
     }).as("formSubmit")
 
-    cy.get('input[name="Imię"]').type("test")
-    cy.get('input[name="Mail"]').type("test@test")
-    cy.get('select[name="Temat"]').select("dom-tymczasowy")
-    cy.get('textarea[name="Wiadomość"]').type(
+    cy.get('input[name="firstName"]').type("test")
+    cy.get('input[name="email"]').type("test@gmail.com")
+    cy.get('select[name="subject"]').select("Dom tymczasowy")
+    cy.get('textarea[name="message"]').type(
       "Hi, I'm sending test message, it has to be 30 characters long."
     )
     cy.get('input[type="checkbox"]').check()

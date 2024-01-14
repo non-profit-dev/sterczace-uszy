@@ -16,12 +16,15 @@ import * as Styled from "./Contact.styled"
 
 const Contact = () => {
   const { executeRecaptcha } = useGoogleReCaptcha()
-  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM_ID, {
-    data: {
-      "g-recaptcha-response": executeRecaptcha,
-      subject: "Kontakt - nowa wiadomość",
-    },
-  })
+  const [state, handleSubmit] = useForm(
+    process.env.NEXT_PUBLIC_CONTACT_FORM_ID,
+    {
+      data: {
+        "g-recaptcha-response": executeRecaptcha,
+        subject: "Kontakt - nowa wiadomość",
+      },
+    }
+  )
 
   return (
     <Page title="Kontakt">
