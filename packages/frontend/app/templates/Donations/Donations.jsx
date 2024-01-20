@@ -2,7 +2,8 @@ import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 
 import CtaBanner from "design-system/patterns/ctaBanner"
-import Hero from "./components/Hero"
+import Hero from "design-system/patterns/hero"
+
 import Tax from "./components/Tax"
 import Info from "./components/Info"
 import OneTimeDonation from "./components/OneTimeDonation"
@@ -16,7 +17,14 @@ const Donations = () => (
     <Navigation />
 
     <Styled.Main>
-      <Hero />
+      <Hero
+        heading="Twoja pomoc ma moc!"
+        subtitle="Wsparcie finansowe"
+        description="Już teraz możesz zostać naszym superbohaterem! Wybierz dostępną
+          dla Ciebie formę wsparcia finansowego i zmieniaj z nami życie
+          potrzebujących zwierząt."
+        asset="/donations/hero.svg"
+      />
       <Tax />
       <Info />
       <OneTimeDonation />

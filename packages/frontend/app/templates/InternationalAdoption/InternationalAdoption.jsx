@@ -3,11 +3,11 @@ import Footer from "design-system/blocks/footer"
 import SupportBanner from "design-system/blocks/supportBanner"
 
 import CtaBanner from "design-system/patterns/ctaBanner"
+import Hero from "design-system/patterns/hero"
+
 import InternationalAdoptionConditions from "./components/InternationalAdoptionConditions"
 
 import Page from "../Page"
-
-import Hero from "./components/Hero"
 
 const InternationalAdoption = () => (
   <Page title="Adopcja za granicę">
@@ -16,7 +16,15 @@ const InternationalAdoption = () => (
     <Navigation />
 
     <main>
-      <Hero />
+      <Hero
+        heading="Adopcja za granicę"
+        subtitle="Wyjazd poza Polskę"
+        description="Nowy dom to ciepło i miłość właściciela, nie ma znaczenia, czy będzie
+        blisko, czy daleko. Możesz zapewnić swojemu pupilowi wymarzony dom,
+        gdzie tylko zapragniesz."
+        backgroundImage="/international-adoption/hero-background.png"
+        backgroundMobile="/international-adoption/hero-background-mobile.png"
+      />
       <InternationalAdoptionConditions />
       <CtaBanner
         heading="Masz pytania lub wątpliwości?"
