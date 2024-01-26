@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useForm } from "@formspree/react"
+import { useForm as useFormReactHook } from "react-hook-form"
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 import { shape, arrayOf, string } from "prop-types"
 import Button from "design-system/components/button"
@@ -24,10 +25,31 @@ const PaymentConfirmationForm = ({ data }) => {
     }
   )
 
-  const handleForm = (e) => {
-    e.preventDefault()
+  const {
+    register,
+    handleSubmit: onSubmit,
+    formState: { errors, dirtyFields },
+  } = useFormReactHook({
+    mode: "onChange",
+  })
+
+  const handleForm = (formData) => {
+    handleSubmit({
+      Imię: formData.firstName,
+      Nazwisko: formData.lastName,
+      Mail: formData.email,
+    })
     setActiveForm(false)
-    handleSubmit(e)
+  }
+
+  const determineInputState = (fieldName) => {
+    if (dirtyFields[fieldName] && !errors[fieldName]) {
+      return "valid"
+    }
+    if (errors[fieldName]) {
+      return "error"
+    }
+    return null
   }
 
   const petNames = data.map((dog) => dog.name)
@@ -63,7 +85,7 @@ const PaymentConfirmationForm = ({ data }) => {
         zacząć Cię informować o Twoim nowym pupilu.
       </Styled.ConfirmationSendBanner>
       <Styled.FormWrapper>
-        <Styled.Form onSubmit={(e) => handleForm(e)}>
+        <Styled.Form onSubmit={onSubmit(handleForm)}>
           <Typography variant="h3">Potwierdzenie adopcji wirtualnej</Typography>
           <Typography variant="bodyTitle">
             Wyślij informację, żebyśmy mogły przesyłać Ci wiadomości o Twoim
@@ -74,23 +96,52 @@ const PaymentConfirmationForm = ({ data }) => {
               label="Twoje imię"
               placeholder="Twoje imię"
               type="text"
-              name="Imię"
-              required
+              state={determineInputState("firstName")}
+              {...register("firstName", {
+                required: "To pole jest wymagane",
+                maxLength: {
+                  value: 20,
+                  message: "Maksymalna ilość znaków to 20",
+                },
+                pattern: {
+                  value: /^[A-Za-z]+$/i,
+                  message: "Wpisz poprawne imię (tylko litery)",
+                },
+              })}
+              message={errors.firstName ? errors.firstName.message : ""}
             />
             <Input
               label="Twoje nazwisko"
               placeholder="Twoje nazwisko"
               type="text"
-              name="Nazwisko"
-              required
+              state={determineInputState("lastName")}
+              {...register("lastName", {
+                required: "To pole jest wymagane",
+                maxLength: {
+                  value: 50,
+                  message: "Maksymalna ilość znaków to 50",
+                },
+                pattern: {
+                  value: /^[A-Za-z]+$/i,
+                  message: "Wpisz poprawne imię (tylko litery)",
+                },
+              })}
+              message={errors.lastName ? errors.lastName.message : ""}
             />
           </Styled.InputContainer>
           <Input
             label="Twój e-mail"
             placeholder="Twój e-mail"
             type="email"
-            name="Mail"
-            required
+            state={determineInputState("email")}
+            {...register("email", {
+              required: "To pole jest wymagane",
+              pattern: {
+                value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i,
+                message: "Wpisz poprawny adres e-mail",
+              },
+            })}
+            message={errors.email ? errors.email.message : ""}
           />
           <Select
             label="Imię pupila"
