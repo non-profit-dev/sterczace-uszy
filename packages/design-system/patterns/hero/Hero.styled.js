@@ -28,8 +28,8 @@ export const Header = styled.header`
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: 600px auto;
-  gap: 40px;
+  grid-template-columns: 550px auto;
+  gap: 60px;
   align-items: ${({ alignement }) => alignement};
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
