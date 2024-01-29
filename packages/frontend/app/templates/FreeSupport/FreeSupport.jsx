@@ -22,6 +22,7 @@ const FreeSupport = () => (
         podopiecznych w każdej sytuacji."
         backgroundImage="/free-support/hero.png"
         backgroundMobile="/free-support/hero-tablet.png"
+        backgroundPosition="bottom"
       />
       <Fanimani />
       <CtaBanner

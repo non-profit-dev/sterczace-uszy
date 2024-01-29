@@ -24,6 +24,7 @@ const InternationalAdoption = () => (
         gdzie tylko zapragniesz."
         backgroundImage="/international-adoption/hero-background.png"
         backgroundMobile="/international-adoption/hero-background-mobile.png"
+        backgroundPosition="top"
       />
       <InternationalAdoptionConditions />
       <CtaBanner

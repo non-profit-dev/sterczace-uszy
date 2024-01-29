@@ -6,10 +6,10 @@ export const Header = styled.header`
     backgroundImage ? "140px" : "120px"};
   padding-bottom: ${({ backgroundImage }) =>
     backgroundImage ? "300px" : "140px"};
-  background: url("${({ backgroundImage }) => backgroundImage}") no-repeat
-    center;
+  background: url("${({ backgroundImage }) => backgroundImage}") no-repeat;
   background-size: cover;
   background-color: ${({ backgroundColor }) => backgroundColor};
+  background-position: ${({ backgroundPosition }) => backgroundPosition};
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding-top: 100px;

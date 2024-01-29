@@ -1,4 +1,4 @@
-import { string } from "prop-types"
+import { oneOf, string } from "prop-types"
 
 import Container from "design-system/components/container"
 import Image from "design-system/components/image"
@@ -14,11 +14,13 @@ const Hero = ({
   backgroundImage,
   backgroundColor,
   backgroundMobile,
+  backgroundPosition,
   asset,
 }) => (
   <Styled.Header
     backgroundImage={backgroundImage}
     backgroundColor={backgroundColor}
+    backgroundPosition={backgroundPosition}
   >
     <Container>
       <Styled.Grid alignement={asset ? "center" : "start"}>
@@ -67,6 +69,7 @@ Hero.propTypes = {
   /**
    * The source path for the asset that should be placed in the right column of the Hero.
    */
+  backgroundPosition: oneOf(["top", "center", "bottom"]),
   asset: string,
 }
 
@@ -76,6 +79,7 @@ Hero.defaultProps = {
   backgroundImage: null,
   backgroundColor: null,
   backgroundMobile: null,
+  backgroundPosition: "center",
   asset: null,
 }
 
