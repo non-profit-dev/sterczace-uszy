@@ -99,9 +99,13 @@ const PaymentConfirmationForm = ({ data }) => {
               state={determineInputState("firstName")}
               {...register("firstName", {
                 required: "To pole jest wymagane",
+                minLength: {
+                  value: 2,
+                  message: "Minimalna ilość znaków to 2",
+                },
                 maxLength: {
-                  value: 20,
-                  message: "Maksymalna ilość znaków to 20",
+                  value: 30,
+                  message: "Maksymalna ilość znaków to 30",
                 },
                 pattern: {
                   value: /^[A-Za-z]+$/i,
@@ -117,13 +121,17 @@ const PaymentConfirmationForm = ({ data }) => {
               state={determineInputState("lastName")}
               {...register("lastName", {
                 required: "To pole jest wymagane",
+                minLength: {
+                  value: 2,
+                  message: "Minimalna ilość znaków to 2",
+                },
                 maxLength: {
-                  value: 50,
-                  message: "Maksymalna ilość znaków to 50",
+                  value: 70,
+                  message: "Maksymalna ilość znaków to 70",
                 },
                 pattern: {
                   value: /^[A-Za-z]+$/i,
-                  message: "Wpisz poprawne imię (tylko litery)",
+                  message: "Wpisz poprawne nazwisko (tylko litery)",
                 },
               })}
               message={errors.lastName ? errors.lastName.message : ""}
