@@ -1,11 +1,12 @@
 import styled from "@emotion/styled"
 
-export const BackgroundWrapper = styled.div`
+export const Wrapper = styled.div`
   background: url("/page-not-found/page-not-found-background.png");
   background-size: cover;
   background-position: center;
-  padding: 120px 189px;
+  padding: 120px 0px;
   height: 100vh;
+  width: 100%;
 
   ${({ theme }) => theme.breakpoints.desktopSm} {
     padding: 120px 50px;
