@@ -15,5 +15,5 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn add @commitlint/config-conventional
+        run: yarn add @commitlint/config-conventional@v18.0
       - uses: JulienKode/pull-request-name-linter-action@v0.5.0
