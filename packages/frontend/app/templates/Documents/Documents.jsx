@@ -45,7 +45,7 @@ const Documents = () => {
 
             <Styled.DocumentsInfo>
               <Typography variant="bodyTitle">
-                Ankietę wyślij na adres{" "}
+                Odpowiedź otrzymasz telefonicznie lub z{" "}
                 <a href={globalData.contact.mail.link}>
                   {globalData.contact.mail.text}
                 </a>
