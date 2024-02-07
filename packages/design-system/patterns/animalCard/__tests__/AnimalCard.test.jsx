@@ -1,3 +1,4 @@
+import { advanceTo, clear } from "jest-date-mock"
 import { render, screen } from "design-system/test-utils"
 
 import AnimalCard from "design-system/patterns/animalCard"
@@ -25,6 +26,13 @@ const femaleAnimal = {
 const femaleAnimalBadge = "Młoda suczka"
 
 describe(`AnimalCard`, () => {
+  beforeAll(() => {
+    advanceTo(new Date(2023, 1, 7))
+  })
+
+  afterAll(() => {
+    clear()
+  })
   it(`renders animal's information`, () => {
     render(<AnimalCard {...animal} />)
 
