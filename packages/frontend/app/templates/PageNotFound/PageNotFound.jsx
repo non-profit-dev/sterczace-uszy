@@ -8,7 +8,7 @@ const PageNotFound = () => (
     <Container>
       <TextBanner
         heading="404"
-        subtitle="Ups..coś poszło nie tak"
+        subtitle="Ups...coś poszło nie tak"
         button={
           <Button
             text="Strona główna"
