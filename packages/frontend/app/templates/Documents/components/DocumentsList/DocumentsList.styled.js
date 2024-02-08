@@ -28,3 +28,7 @@ export const Image = styled.div`
     height: 135px;
   }
 `
+
+export const Container = styled.div`
+  max-width: 396px;
+`
