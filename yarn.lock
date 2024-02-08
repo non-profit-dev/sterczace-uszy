@@ -9082,6 +9082,7 @@ __metadata:
     babel-jest: ^29.0.3
     babel-loader: ^8.2.5
     jest: ^29.0.3
+    jest-date-mock: ^1.0.8
     jest-environment-jsdom: ^29.0.3
     prop-types: ^15.8.1
   languageName: unknown
@@ -13668,6 +13669,13 @@ __metadata:
     ts-node:
       optional: true
   checksum: 3bd104a3ac2dd9d34986238142437606354169766dcf88359a7a12ac106d0dc17dcc6b627e4f20db97a58bac5b0502b5436c9cc4722b3629b2a114bba6da9128
+  languageName: node
+  linkType: hard
+
+"jest-date-mock@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "jest-date-mock@npm:1.0.8"
+  checksum: 7b012870440b0df742d0b651435b91625dbbf02d916633a0c70c7deb5d5087f9aadc59847602312368826325909e70e95cd412896a0c9ee1d5ac382000bf5ef9
   languageName: node
   linkType: hard
 
