@@ -16,12 +16,9 @@ const data = [
   {
     heading: `Ankieta przedadopcyjna`,
     steps: [
-      `pobierz plik`,
-      `wypełnij na komputerze lub wydrukuj`,
-      `wypełnione dokumenty prześlij na adres: <a href="mailto:${globalData.contact.mail.text}">
-        ${globalData.contact.mail.text}
-      </a>`,
-      `poczekaj na odpowiedź od nas`,
+      `wypełnij ankietę online`,
+      `zweryfikuj wysyłkę ankiety`,
+      "poczekaj na odpowiedź od nas",
     ],
     link: `${globalData.surveys.preAdoption}`,
     asset: <AdoptionSurvey />,
@@ -29,12 +26,9 @@ const data = [
   {
     heading: `Ankieta dla domu tymczasowego`,
     steps: [
-      `pobierz plik`,
-      `wypełnij na komputerze lub wydrukuj`,
-      `wypełnione dokumenty prześlij na adres: <a href="mailto:${globalData.contact.mail.text}">
-        ${globalData.contact.mail.text}
-      </a>`,
-      `poczekaj na odpowiedź od nas`,
+      `wypełnij ankietę online`,
+      `zweryfikuj wysyłkę ankiety`,
+      "poczekaj na odpowiedź od nas",
     ],
     link: `${globalData.surveys.temporaryHome}`,
     asset: <TempHomeSurvey />,
@@ -45,34 +39,37 @@ const DocumentsTemplate = () =>
   data.map((document) => (
     <Styled.SurveyContainer key={document.heading}>
       <Styled.Image>{document.asset}</Styled.Image>
-
-      <TextBanner
-        heading={document.heading}
-        tabletLayout="left"
-        mobileLayout="left"
-        size="small"
-        button={
-          <Button
-            text="Pobierz"
-            variant="fill"
-            color="primary"
-            iconEnd="download"
-            size="medium"
-            href={document.link}
-            target="_blank"
-          />
-        }
-      >
-        <Typography variant="bodyTitle">Co musisz zrobić?</Typography>
-
-        <List gap={0}>
-          {document.steps.map((item) => (
-            <ListItem key={item} iconName="dot" variant="gray">
-              <div dangerouslySetInnerHTML={{ __html: item }} />
-            </ListItem>
-          ))}
-        </List>
-      </TextBanner>
+      <Styled.Container>
+        <TextBanner
+          heading={document.heading}
+          tabletLayout="left"
+          mobileLayout="left"
+          size="small"
+          button={
+            <Button
+              variant="text"
+              text={document.heading}
+              iconEnd="externalLink"
+              target="_blank"
+              href={document.link}
+            />
+          }
+        >
+          <Typography variant="bodySmall">Co musisz zrobić?</Typography>
+          <List gap={0}>
+            {document.steps.map((item, index) => (
+              <ListItem
+                key={item}
+                iconName="dot"
+                variant="gray"
+                style={index === 0 ? { paddingTop: "0px" } : {}}
+              >
+                <div dangerouslySetInnerHTML={{ __html: item }} />
+              </ListItem>
+            ))}
+          </List>
+        </TextBanner>
+      </Styled.Container>
     </Styled.SurveyContainer>
   ))
 
