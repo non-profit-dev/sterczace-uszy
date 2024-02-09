@@ -48,7 +48,7 @@ const steps = [
       <Button
         variant="text"
         text="Przejdź na stronę"
-        iconStart="externalLink"
+        iconEnd="externalLink"
         target="_blank"
         href={globalData.fanimani.link}
       />

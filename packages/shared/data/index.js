@@ -42,10 +42,8 @@ const globalData = {
     googlePlay: "https://play.google.com/store/apps/details?id=pl.fanimani.app",
   },
   surveys: {
-    preAdoption:
-      "https://docs.google.com/document/d/1hKhjrIHAuosckCYc-DP4DIuMxG4GhsPI/edit?fbclid=IwAR3nJ1rn9BzM8NZg--T1SET96Xxg0WVZ40IC98ZHfRDWW9kSstgzWYlaDQg",
-    temporaryHome:
-      "https://docs.google.com/document/d/1u_tnZ--5rNME2s9Vn9YZstm7dRAcLQyH/edit?fbclid=IwAR01QrME3E_U1_knHoPeYkgWhJiB7AL4Q-dWylvjkXbnTJDdW0_PrTw7guw",
+    preAdoption: "https://forms.gle/LAeMuvaxkh1w8sLj8",
+    temporaryHome: "https://forms.gle/w5qcHekkppSAXKpC6",
   },
   agreements: {
     adoption:
