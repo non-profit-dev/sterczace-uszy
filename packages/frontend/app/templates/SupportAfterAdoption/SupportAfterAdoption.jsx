@@ -3,10 +3,10 @@ import Footer from "design-system/blocks/footer"
 import SupportBanner from "design-system/blocks/supportBanner"
 
 import CtaBanner from "design-system/patterns/ctaBanner"
+import Hero from "design-system/patterns/hero"
 
 import Page from "../Page"
 
-import Hero from "./components/Hero"
 import PostAdoptionSupport from "./components/PostAdoptionSupport"
 
 const SupportAfterAdoption = () => (
@@ -16,7 +16,15 @@ const SupportAfterAdoption = () => (
     <Navigation />
 
     <main>
-      <Hero />
+      <Hero
+        heading="Wsparcie rodzin adopcyjnych"
+        subtitle="Po adopcji"
+        description="Kiedy dajecie dom zwierzakowi z naszej fundacji i otaczacie go
+        miłością, nie zostajecie sami. Oferujemy wsparcie po adopcji w różnych
+        formach, abyście czuli się pewnie i komfortowo w nowej roli opiekunów."
+        backgroundImage="/support-after-adoption/hero-background.png"
+        backgroundMobile="/support-after-adoption/hero-background-mobile.png"
+      />
       <PostAdoptionSupport />
       <CtaBanner
         heading="Masz pytania lub wątpliwości?"

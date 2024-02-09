@@ -1,10 +1,11 @@
+import { useTheme } from "@emotion/react"
+
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 import SupportBanner from "design-system/blocks/supportBanner"
 
 import CtaBanner from "design-system/patterns/ctaBanner"
-
-import Hero from "./components/Hero"
+import Hero from "design-system/patterns/hero"
 
 import Page from "../Page"
 
@@ -16,30 +17,42 @@ import Steps from "./components/Steps"
 
 import { animalsType } from "../../lib/types"
 
-const VirtualAdoption = ({ animals, animalsData }) => (
-  <Page title="Adopcja wirtualna">
-    <SupportBanner />
+const VirtualAdoption = ({ animals, animalsData }) => {
+  const theme = useTheme()
 
-    <Navigation />
+  return (
+    <Page title="Adopcja wirtualna">
+      <SupportBanner />
 
-    <main>
-      <Hero />
-      <BasicInfo />
-      <Steps />
-      <ChooseYourVirtualPet data={animalsData.items} />
-      <RecurringPayment />
-      <PaymentConfirmationForm data={animals.items} />
-      <CtaBanner
-        heading="Masz pytania lub wątpliwości?"
-        buttonText="Skontaktuj się z nami"
-        buttonHref="/kontakt"
-        mobileLayout="left"
-      />
-    </main>
+      <Navigation />
 
-    <Footer />
-  </Page>
-)
+      <main>
+        <Hero
+          heading="Adoptuj wirtualnie!"
+          subtitle="Adopcja wirtualna"
+          description="Nie możesz adoptować? I tak możesz pomóc! Sprawdź, co możesz zrobić,
+  aby pomagać naszym podopiecznym. Wybierz swojego pupila i adoptuj go
+  wirtualnie."
+          asset="/virtual-adoption/hero.png"
+          backgroundColor={theme.colors.complementary[100]}
+        />
+        <BasicInfo />
+        <Steps />
+        <ChooseYourVirtualPet data={animalsData.items} />
+        <RecurringPayment />
+        <PaymentConfirmationForm data={animals.items} />
+        <CtaBanner
+          heading="Masz pytania lub wątpliwości?"
+          buttonText="Skontaktuj się z nami"
+          buttonHref="/kontakt"
+          mobileLayout="left"
+        />
+      </main>
+
+      <Footer />
+    </Page>
+  )
+}
 
 VirtualAdoption.propTypes = {
   animals: animalsType.isRequired,
