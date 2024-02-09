@@ -4,6 +4,7 @@ import Container from "design-system/components/container/Container"
 import Typography from "design-system/components/typography"
 
 import CtaBanner from "design-system/patterns/ctaBanner"
+import Hero from "design-system/patterns/hero"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
@@ -11,7 +12,6 @@ import SupportBanner from "design-system/blocks/supportBanner"
 
 import globalData from "shared/data"
 
-import Hero from "./components/Hero"
 import DocumentsList from "./components/DocumentsList"
 
 import * as Styled from "./Documents.styled"
@@ -27,7 +27,13 @@ const Documents = () => {
       <Navigation />
 
       <main>
-        <Hero />
+        <Hero
+          heading="Ankiety adopcyjne"
+          description="Tutaj znajdziesz ankiety adopcyjne i niezbędne informacje, aby je
+          wysłać do fundacji."
+          asset="/documents/Hero.png"
+          backgroundColor={theme.colors.complementary[100]}
+        />
 
         <Container size="medium">
           <Styled.DocumentContainer>
