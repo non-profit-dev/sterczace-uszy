@@ -1,11 +1,14 @@
 import Container from "design-system/components/container"
+
+import Hero from "design-system/patterns/hero"
+
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 import SupportBanner from "design-system/blocks/supportBanner"
+
 import Achievements from "./components/Achievements"
 import AboutUs from "./components/AboutUs"
 import Values from "./components/Values"
-import Hero from "./components/Hero"
 import Page from "../Page"
 
 import {
@@ -21,7 +24,14 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
     <SupportBanner />
     <Navigation />
     <Styled.Main>
-      <Hero />
+      <Hero
+        heading="Poznaj nas lepiej"
+        subtitle="Nasza Fundacja"
+        description="Nasza fundacja ma pewną historię, która ukształtowała nasze wartości.
+  Mamy na koncie wiele sukcesów, którymi się chętnie dzielimy."
+        backgroundImage="/about/about-background.png"
+        backgroundMobile="/about/about-background-mobile.png"
+      />
       <AboutUs />
       <Values />
       <Container>

@@ -1,0 +1,15 @@
+import { Meta, Canvas, ArgTypes } from "@storybook/blocks"
+
+import * as Stories from "./Hero.stories"
+
+<Meta of={Stories} />
+
+# Hero
+
+`import Hero from "design-system/components/hero"`
+
+<Canvas of={Stories.WithBackground} />
+
+<Canvas of={Stories.WithAsset} />
+
+<ArgTypes />

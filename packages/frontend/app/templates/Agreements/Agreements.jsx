@@ -4,12 +4,12 @@ import Container from "design-system/components/container/Container"
 import Typography from "design-system/components/typography"
 
 import CtaBanner from "design-system/patterns/ctaBanner"
+import Hero from "design-system/patterns/hero"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
 import SupportBanner from "design-system/blocks/supportBanner"
 
-import Hero from "./components/Hero"
 import DocumentsList from "./components/DocumentsList"
 
 import * as Styled from "./Agreements.styled"
@@ -18,6 +18,7 @@ import Page from "../Page"
 
 const Agreements = () => {
   const theme = useTheme()
+
   return (
     <Page title="Umowy">
       <SupportBanner />
@@ -25,7 +26,13 @@ const Agreements = () => {
       <Navigation />
 
       <main>
-        <Hero />
+        <Hero
+          heading="Umowy adopcyjne"
+          description="Tutaj znajdziesz umowy adopcyjne i niezbędne informacje, żeby
+          dokończyć adopcje wybranego czworonoga."
+          asset="/agreements/Hero.png"
+          backgroundColor={theme.colors.complementary[100]}
+        />
 
         <Container size="medium">
           <Styled.DocumentContainer>
