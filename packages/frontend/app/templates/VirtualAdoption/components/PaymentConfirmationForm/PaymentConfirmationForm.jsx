@@ -38,6 +38,7 @@ const PaymentConfirmationForm = ({ data }) => {
       Imię: formData.firstName,
       Nazwisko: formData.lastName,
       Mail: formData.email,
+      "Imię pupila": formData.petName,
     })
     setActiveForm(false)
   }
@@ -121,17 +122,23 @@ const PaymentConfirmationForm = ({ data }) => {
               state={determineInputState("lastName")}
               {...register("lastName", {
                 required: "To pole jest wymagane",
-                minLength: {
-                  value: 2,
-                  message: "Minimalna ilość znaków to 2",
-                },
-                maxLength: {
-                  value: 70,
-                  message: "Maksymalna ilość znaków to 70",
-                },
-                pattern: {
-                  value: /^[A-Za-z]+$/i,
-                  message: "Wpisz poprawne nazwisko (tylko litery)",
+                validate: {
+                  customLength: (value) => {
+                    const includesDash = value.includes("-")
+                    if (includesDash && value.length < 5) {
+                      return "Każda część nazwiska musi mieć min. 2 znaki"
+                    }
+                    if (!includesDash && value.length < 2) {
+                      return "Minimalna ilość znaków to 2"
+                    }
+                    if (value.length > 70) {
+                      return "Maksymalna ilość znaków to 70"
+                    }
+                    if (!/^[A-Za-z]{2,}(-[A-Za-z]{2,})?$/i.test(value)) {
+                      return "Wpisz poprawne nazwisko"
+                    }
+                    return true
+                  },
                 },
               })}
               message={errors.lastName ? errors.lastName.message : ""}
@@ -157,6 +164,7 @@ const PaymentConfirmationForm = ({ data }) => {
             options={petNames}
             defaultValue={petNames[0]}
             required
+            {...register("petName")}
           />
           <Styled.CheckboxContainer>
             <Checkbox
