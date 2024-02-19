@@ -26,6 +26,8 @@ export const Dropdown = styled.div`
   padding: 16px;
   display: block;
   box-shadow: -8px 3px 14px 0px rgba(91, 91, 91, 0.2);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   white-space: nowrap;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
