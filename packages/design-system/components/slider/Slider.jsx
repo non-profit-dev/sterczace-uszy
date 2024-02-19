@@ -15,6 +15,7 @@ const Slider = ({
   slidesPerViewTabletLg,
   slidesPerViewMobile,
   gap,
+  mobileGap,
   onSlideChange,
   pagination,
   navigation,
@@ -25,21 +26,24 @@ const Slider = ({
   const [paginationLength, setPaginationLength] = useState(0)
 
   const swiperSettings = {
-    spaceBetween: gap,
+    spaceBetween: mobileGap,
     slidesPerView,
     breakpoints: {
       390: {
         slidesPerView: slidesPerViewMobile,
+        spaceBetween: mobileGap,
       },
       587: {
         slidesPerView: slidesPerViewTablet,
+        spaceBetween: mobileGap,
       },
       744: {
         slidesPerView: slidesPerViewTabletLg,
-        spaceBetween: gap,
+        spaceBetween: mobileGap,
       },
       992: {
-        spaceBetween: 20,
+        slidesPerView: slidesPerViewDesktop,
+        spaceBetween: mobileGap,
       },
       1200: {
         slidesPerView: slidesPerViewDesktop,
@@ -85,6 +89,7 @@ Slider.propTypes = {
   slidesPerViewTabletLg: number,
   slidesPerViewMobile: number,
   gap: number,
+  mobileGap: number,
   className: string,
   onSlideChange: func,
   pagination: bool,
@@ -96,9 +101,10 @@ Slider.defaultProps = {
   slidesPerView: 1,
   slidesPerViewDesktop: 3,
   slidesPerViewTablet: 1.5,
-  slidesPerViewTabletLg: 2,
-  slidesPerViewMobile: 1,
+  slidesPerViewTabletLg: 2.2,
+  slidesPerViewMobile: 1.2,
   gap: 48,
+  mobileGap: 32,
   className: null,
   onSlideChange: null,
   pagination: false,
