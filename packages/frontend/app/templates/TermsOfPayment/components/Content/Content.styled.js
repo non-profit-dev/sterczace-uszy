@@ -21,16 +21,4 @@ export const Image = styled.img`
   box-shadow: 2px 3px 9px 0px rgba(0, 0, 0, 0.1);
   margin-top: 36px;
   margin-bottom: 28px;
-
-  ${({ theme }) => theme.breakpoints.tablet} {
-    height: 90px;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    height: 42px;
-  }
-
-  ${({ theme }) => theme.breakpoints.mobile} {
-    height: 42px;
-  }
 `

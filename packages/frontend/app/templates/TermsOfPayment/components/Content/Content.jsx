@@ -32,7 +32,7 @@ const Content = () => (
           </ListItem>
         ))}
       </List>
-      <Styled.Image src="/terms-of-payment/tpay-logos.png" alt="" />
+      <Styled.Image src="/terms-of-payment/tpay-logos.svg" alt="Tpay logo" />
 
       <Typography variant="bodyTitle">
         Podmiotem świadczącym obsługę płatności online drogą elektroniczną jest
