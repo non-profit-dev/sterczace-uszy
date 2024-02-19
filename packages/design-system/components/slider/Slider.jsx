@@ -14,6 +14,7 @@ const Slider = ({
   slidesPerViewTablet,
   slidesPerViewTabletLg,
   slidesPerViewMobile,
+  slidesPerGroupDesktop,
   gap,
   mobileGap,
   onSlideChange,
@@ -23,6 +24,7 @@ const Slider = ({
   className,
 }) => {
   const [index, setIndex] = useState(activeIndex)
+  const [snapIndex, setSnapIndex] = useState(activeIndex)
   const [paginationLength, setPaginationLength] = useState(0)
 
   const swiperSettings = {
@@ -43,10 +45,12 @@ const Slider = ({
       },
       992: {
         slidesPerView: slidesPerViewDesktop,
+        slidesPerGroup: slidesPerGroupDesktop,
         spaceBetween: mobileGap,
       },
       1200: {
         slidesPerView: slidesPerViewDesktop,
+        slidesPerGroup: slidesPerGroupDesktop,
         spaceBetween: gap,
       },
     },
@@ -54,6 +58,7 @@ const Slider = ({
 
   const onChange = (swiper) => {
     setIndex(swiper.activeIndex)
+    setSnapIndex(swiper.snapIndex)
     onSlideChange?.(swiper.activeIndex)
   }
 
@@ -75,7 +80,11 @@ const Slider = ({
       ) : null}
 
       {pagination ? (
-        <Pagination activeIndex={index} length={paginationLength} />
+        <Pagination
+          activeIndex={snapIndex}
+          length={paginationLength}
+          slidesPerGroup={slidesPerGroupDesktop}
+        />
       ) : null}
     </Styled.Slider>
   )
@@ -85,6 +94,7 @@ Slider.propTypes = {
   children: PropTypes.node.isRequired,
   slidesPerView: number,
   slidesPerViewDesktop: number,
+  slidesPerGroupDesktop: number,
   slidesPerViewTablet: number,
   slidesPerViewTabletLg: number,
   slidesPerViewMobile: number,
@@ -95,6 +105,7 @@ Slider.propTypes = {
   pagination: bool,
   navigation: bool,
   activeIndex: number,
+  activeSnapIndex: number,
 }
 
 Slider.defaultProps = {
@@ -103,6 +114,7 @@ Slider.defaultProps = {
   slidesPerViewTablet: 1.5,
   slidesPerViewTabletLg: 2.2,
   slidesPerViewMobile: 1.2,
+  slidesPerGroupDesktop: 3,
   gap: 48,
   mobileGap: 32,
   className: null,
@@ -110,6 +122,7 @@ Slider.defaultProps = {
   pagination: false,
   navigation: false,
   activeIndex: 0,
+  activeSnapIndex: 0,
 }
 
 export default Slider
