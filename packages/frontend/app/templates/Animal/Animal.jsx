@@ -19,7 +19,12 @@ import * as Styled from "./Animal.styled"
 import OtherAnimals from "./components/OtherAnimals/OtherAnimals"
 
 const Animal = ({ data, otherAnimals }) => (
-  <Page title={`${data.name} - Nasi podopieczni`}>
+  <Page
+    title={`${data.name} - Nasi podopieczni`}
+    image={`${
+      process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : ""
+    }/api/vercel`}
+  >
     <SupportBanner />
 
     <Navigation />
