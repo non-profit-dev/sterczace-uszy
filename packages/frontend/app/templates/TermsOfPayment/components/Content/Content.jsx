@@ -20,7 +20,7 @@ const paymentList = [
 const Content = () => (
   <Container as="section">
     <Styled.Content>
-      <Typography variant="h3">
+      <Typography variant="h3" as="h2">
         Strona internetowa może udostępniać płatności elektroniczne.
       </Typography>
 
