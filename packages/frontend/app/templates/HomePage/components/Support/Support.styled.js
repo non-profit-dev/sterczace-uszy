@@ -78,7 +78,7 @@ export const Content = styled.div`
 `
 
 export const Item = styled.li`
-  flex: 1;
+  flex: 1 0 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,6 +86,7 @@ export const Item = styled.li`
   text-align: center;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
+    flex: 1;
     flex-direction: row;
     text-align: left;
     gap: 24px;
