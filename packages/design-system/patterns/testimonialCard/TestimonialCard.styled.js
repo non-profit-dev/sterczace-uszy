@@ -12,13 +12,11 @@ export const Card = styled.div`
   justify-content: start;
   border-radius: 30px;
   color: ${({ theme }) => theme.colors.gray[600]};
-  background: ${({ theme }) => theme.colors.complementary[100]};
-  /* background: linear-gradient(
+  background: linear-gradient(
     184.04deg,
     #faf4f4 -100.48%,
     rgba(250, 244, 244, 0) 96.7%
-  ); */
-
+  );
   ${({ theme }) => theme.breakpoints.mobile} {
     padding: 24px 24px 40px;
   }
