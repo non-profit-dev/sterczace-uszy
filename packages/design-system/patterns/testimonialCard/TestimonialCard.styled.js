@@ -2,14 +2,12 @@ import styled from "@emotion/styled"
 import Typography from "design-system/components/typography"
 
 export const Card = styled.div`
-  padding: 48px 48px 28px 48px;
+  padding: 48px;
   display: flex;
   gap: 24px;
   width: 100%;
   height: 100%;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: start;
   border-radius: 30px;
   color: ${({ theme }) => theme.colors.gray[600]};
   background: linear-gradient(
@@ -26,12 +24,11 @@ export const Icon = styled.div`
   width: 60px;
   height: 60px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
 
   ${({ theme }) => theme.breakpoints.mobile} {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 
   svg {
@@ -44,7 +41,6 @@ export const Title = styled.div`
 `
 
 export const Description = styled(Typography)`
-  text-align: left;
   position: relative;
   margin: 0;
 
