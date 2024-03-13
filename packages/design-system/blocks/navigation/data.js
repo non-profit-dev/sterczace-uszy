@@ -10,6 +10,10 @@ const data = [
         title: "Dane finansowe",
         href: "/dane-finansowe",
       },
+      {
+        title: "Fundacja za kulisami",
+        href: "/fundacja-za-kulisami",
+      },
     ],
   },
   {
