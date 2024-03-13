@@ -61,7 +61,6 @@
     "@storybook/react": "^7.2.1",
     "@storybook/react-webpack5": "^7.2.1",
     "@storybook/theming": "^7.2.1",
-    "eslint-plugin-jest-dom": "^5.1.0",
     "js-cookie": "^3.0.5",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",

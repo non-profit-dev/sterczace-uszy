@@ -1682,15 +1682,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.16.3":
-  version: 7.23.9
-  resolution: "@babel/runtime@npm:7.23.9"
-  dependencies:
-    regenerator-runtime: ^0.14.0
-  checksum: 6bbebe8d27c0c2dd275d1ac197fc1a6c00e18dab68cc7aaff0adc3195b45862bae9c4cc58975629004b0213955b2ed91e99eccb3d9b39cabea246c657323d667
-  languageName: node
-  linkType: hard
-
 "@babel/template@npm:^7.22.15":
   version: 7.22.15
   resolution: "@babel/template@npm:7.22.15"
@@ -10070,22 +10061,6 @@ __metadata:
   peerDependencies:
     eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
   checksum: f9eba311b93ca1bb89311856b1f7285bd79e0181d7eb70fe115053ff77e2235fea749b30f538b78927dc65769340b5be61f4c9581d1c82bcdcccb2061f440ad1
-  languageName: node
-  linkType: hard
-
-"eslint-plugin-jest-dom@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "eslint-plugin-jest-dom@npm:5.1.0"
-  dependencies:
-    "@babel/runtime": ^7.16.3
-    requireindex: ^1.2.0
-  peerDependencies:
-    "@testing-library/dom": ^8.0.0 || ^9.0.0
-    eslint: ^6.8.0 || ^7.0.0 || ^8.0.0
-  peerDependenciesMeta:
-    "@testing-library/dom":
-      optional: true
-  checksum: bd190a5501b9f5bb6ac9057fbee124d54d3854f992e13a7415aba5d34ecedd0c7362263d6b8e956549d76c40008b70232da84476200b5762c4162021e3af052c
   languageName: node
   linkType: hard
 
@@ -18678,13 +18653,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"requireindex@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "requireindex@npm:1.2.0"
-  checksum: 50d8b10a1ff1fdf6aea7a1870bc7bd238b0fb1917d8d7ca17fd03afc38a65dcd7a8a4eddd031f89128b5f0065833d5c92c4fef67f2c04e8624057fe626c9cf94
-  languageName: node
-  linkType: hard
-
 "requires-port@npm:^1.0.0":
   version: 1.0.0
   resolution: "requires-port@npm:1.0.0"
@@ -21834,7 +21802,6 @@ __metadata:
     eslint-plugin-check-file: ^2.6.1
     eslint-plugin-cypress: ^2.13.3
     eslint-plugin-import: ^2.28.0
-    eslint-plugin-jest-dom: ^5.1.0
     eslint-plugin-jsx-a11y: ^6.7.1
     eslint-plugin-mdx: ^2.1.0
     eslint-plugin-node: ^11.1.0
