@@ -21,6 +21,10 @@ const footerData = {
       link: "/polityka-prywatnosci",
     },
     {
+      title: "Regulamin płatności",
+      link: "/regulamin-platnosci",
+    },
+    {
       title: "Kontakt",
       link: "/kontakt",
     },
