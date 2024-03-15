@@ -1,4 +1,4 @@
-import { string, shape, arrayOf } from "prop-types"
+import { string, shape } from "prop-types"
 
 import Typography from "design-system/components/typography"
 
