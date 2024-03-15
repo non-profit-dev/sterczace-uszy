@@ -23,14 +23,12 @@ const TeamCard = ({ member }) => (
 )
 
 TeamCard.propTypes = {
-  member: arrayOf(
-    shape({
-      name: string.isRequired,
-      role: string.isRequired,
-      imgSrc: string.isRequired,
-      linkedinHref: string.isRequired,
-    })
-  ).isRequired,
+  member: shape({
+    name: string.isRequired,
+    role: string.isRequired,
+    imgSrc: string.isRequired,
+    linkedinHref: string.isRequired,
+  }).isRequired,
 }
 
 export default TeamCard

@@ -1,31 +1,45 @@
 import { render, screen } from "design-system/test-utils"
 
-import TeamCard from "design-system/patterns/panel"
+import TeamCard from "design-system/patterns/teamCard/TeamCard"
 
-const mockMember = {
-  name: "John Doe",
-  role: "Software Engineer",
-  imgSrc: "john-doe.jpg",
-  linkedinHref: "https://linkedin.com/in/johndoe",
-}
+describe("TeamCard component", () => {
+  const member = {
+    name: "John Doe",
+    role: "Software Engineer",
+    imgSrc: "john-doe.jpg",
+    linkedinHref: "https://www.linkedin.com/in/johndoe",
+  }
 
-describe("TeamCard", () => {
-  it("renders with member's information", () => {
-    render(<TeamCard member={mockMember} />)
-
-    expect(screen.getByText(mockMember.name)).toBeInTheDocument()
-    expect(screen.getByText(mockMember.role)).toBeInTheDocument()
-    expect(
-      screen.getByRole("img", { name: mockMember.name })
-    ).toBeInTheDocument()
-    expect(screen.getByRole("link", { name: /linkedin/i })).toBeInTheDocument()
+  it("renders correctly", () => {
+    render(<TeamCard member={member} />)
+    expect(screen.getByText(member.name)).toBeInTheDocument()
+    expect(screen.getByText(member.role)).toBeInTheDocument()
+    expect(screen.getByAltText(member.name)).toBeInTheDocument()
+    expect(screen.getByRole("link")).toHaveAttribute(
+      "href",
+      member.linkedinHref
+    )
   })
 
-  it("renders member's image with correct alt text", () => {
-    render(<TeamCard member={mockMember} />)
+  it("displays correct member information", () => {
+    render(<TeamCard member={member} />)
+    expect(screen.getByText(member.name)).toBeInTheDocument()
+    expect(screen.getByText(member.role)).toBeInTheDocument()
+  })
 
-    const image = screen.getByRole("img", { name: mockMember.name })
-    expect(image).toHaveAttribute("src", mockMember.imgSrc)
-    expect(image).toHaveAttribute("alt", mockMember.name)
+  it("renders the correct image", () => {
+    render(<TeamCard member={member} />)
+    expect(screen.getByAltText(member.name)).toHaveAttribute(
+      "src",
+      member.imgSrc
+    )
+  })
+
+  it("renders a link with correct href", () => {
+    render(<TeamCard member={member} />)
+    expect(screen.getByRole("link")).toHaveAttribute(
+      "href",
+      member.linkedinHref
+    )
   })
 })
