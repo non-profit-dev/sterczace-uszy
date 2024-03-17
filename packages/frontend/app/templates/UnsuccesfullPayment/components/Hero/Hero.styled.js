@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 export const Header = styled.header`
   padding: 120px 0;
   background: linear-gradient(180deg, #faf4f4 0%, #faf4f4 86.11%, #fefcfc 100%);
+  text-align: center;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding: 100px 0;
@@ -18,7 +19,6 @@ export const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  text-align: center;
   margin-inline: auto;
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
@@ -41,10 +41,6 @@ export const ParagraphWrapper = styled.div`
   }
 `
 export const ImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-inline: auto;
-  width: 100%;
   margin-top: 80px;
   ${({ theme }) => theme.breakpoints.tabletLg} {
     margin-top: 40px;
