@@ -8,10 +8,9 @@ export const Slide = styled(SwiperSlide)`
 
 export const Arrow = styled.div`
   position: absolute;
-  top: 50%;
-  left: ${({ direction }) => (direction === "prev" ? "0" : "auto")};
-  right: ${({ direction }) => (direction === "next" ? "0" : "auto")};
-  transform: translateY(-50%);
+  top: 42%;
+  left: ${({ direction }) => (direction === "prev" ? "-10px" : "auto")};
+  right: ${({ direction }) => (direction === "next" ? "-10px" : "auto")};
   z-index: 100;
   cursor: pointer;
 
@@ -33,6 +32,7 @@ export const BulletContainer = styled.div`
 
 export const Slider = styled(Swiper)`
   position: relative;
+  margin: 0 10px;
   padding: 30px 40px;
 `
 
