@@ -13,5 +13,8 @@ describe(`TestimonialCard`, () => {
       />
     )
     expect(screen.getByText("Example title")).toBeInTheDocument()
+    expect(screen.getByText("Description")).toBeInTheDocument()
+    expect(screen.getByText("Example author")).toBeInTheDocument()
+    expect(screen.getByText("Author details")).toBeInTheDocument()
   })
 })
