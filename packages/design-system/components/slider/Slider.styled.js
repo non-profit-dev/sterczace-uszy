@@ -34,6 +34,10 @@ export const Slider = styled(Swiper)`
   position: relative;
   margin: 0 10px;
   padding: 30px 40px;
+
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    margin: 0;
+  }
 `
 
 export const Bullet = styled.div`

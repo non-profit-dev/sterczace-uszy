@@ -109,7 +109,7 @@ Slider.propTypes = {
 }
 
 Slider.defaultProps = {
-  slidesPerView: 1,
+  slidesPerView: 1.2,
   slidesPerViewDesktop: 3,
   slidesPerViewTablet: 1.5,
   slidesPerViewTabletLg: 2.2,
