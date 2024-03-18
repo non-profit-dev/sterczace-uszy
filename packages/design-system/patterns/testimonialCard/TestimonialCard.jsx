@@ -1,4 +1,3 @@
-// import { node } from "prop-types"
 import { useTheme } from "@emotion/react"
 
 import Icon from "design-system/components/icon"
