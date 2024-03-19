@@ -1,6 +1,5 @@
 # Design System
 
-
 The "design-system" package is designed to bring consistency to our pages and speed up the development process.
 
 [👀 Storybook Preview](https://sterczaceuszy-ds.vercel.app/)
@@ -67,7 +66,6 @@ yarn plop block BlockName
 
 For example, running `yarn plop component NewComponent` will generate the following files for you:
 
-
 ```bash
 ✔  ++ /packages/design-system/components/newComponent/index.js
 ✔  ++ /packages/design-system/components/newComponent/NewComponent.jsx
@@ -84,12 +82,12 @@ To add a new SVG icon to our repository, follow these simple steps:
 
 1. **Export SVG code:** Get the SVG code for the icon from the design file.
 2. **Optimize the SVG code:** Use the [SVGO tool](https://jakearchibald.github.io/svgomg/) to optimize the SVG code for better performance.
-3. **Create SVG file:** In the `design-system/icon`s directory, create a new `.svg` file and give it a suitable name.
-4. **Import the icon**: Open the `design-system/components/icon/Icon.jsx` file and import the new icon like this:
+3. **Create SVG file:** In the `design-system/tokens/icons` directory, create a new `.svg` file and give it a suitable name.
+4. **Import the icon**: Open the `design-system/tokens/icon/index.js` file and import the new icon like this:
 
 ```js
-import Heart from "design-system/icons/Heart.svg"
-import NewIcon from "design-system/icons/NewIcon.svg"
+import Heart from "./Heart.svg"
+import NewIcon from "./NewIcon.svg"
 
 const icons = {
   heart: Heart,
@@ -102,4 +100,3 @@ const icons = {
 The icon gallery and stories will automatically update when you update the icons object. So, your new icon will be part of the gallery, and everyone can easily use it.
 
 That's it! Now our repository has a fresh, new SVG icon ready to be used in all the awesome places! 🎉
-
