@@ -39,6 +39,7 @@ import Dot from "./Dot.svg"
 import Alert from "./Alert.svg"
 import ExternalLink from "./ExternalLink.svg"
 import Quote from "./Quote.svg"
+import Linkedin from "./Linkedin.svg"
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -82,6 +83,7 @@ export const icons = {
   alert: Alert,
   externalLink: ExternalLink,
   quote: Quote,
+  linkedin: Linkedin,
 }
 
 export {
@@ -125,4 +127,5 @@ export {
   Alert,
   ExternalLink,
   Quote,
+  Linkedin,
 }
