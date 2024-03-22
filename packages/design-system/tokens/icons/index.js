@@ -38,6 +38,8 @@ import DecisionHeart from "./DecisionHeart.svg"
 import Dot from "./Dot.svg"
 import Alert from "./Alert.svg"
 import ExternalLink from "./ExternalLink.svg"
+import Quote from "./Quote.svg"
+import Linkedin from "./Linkedin.svg"
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -80,6 +82,8 @@ export const icons = {
   dot: Dot,
   alert: Alert,
   externalLink: ExternalLink,
+  quote: Quote,
+  linkedin: Linkedin,
 }
 
 export {
@@ -122,4 +126,6 @@ export {
   Dot,
   Alert,
   ExternalLink,
+  Quote,
+  Linkedin,
 }
