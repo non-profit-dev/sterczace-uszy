@@ -35,7 +35,7 @@ const colors = {
   },
   black: {
     main: theme.colors.gray[600],
-    hover: theme.colors.gray[500],
+    hover: theme.colors.primary[500],
   },
 }
 export const Component = styled.a`
