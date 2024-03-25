@@ -3,7 +3,6 @@ import Typography from "design-system/components/typography"
 import List from "design-system/components/list"
 import ListItem from "design-system/components/listItem"
 import Button from "design-system/components/button"
-import Contact from "frontend/public/contact/Contact.svg"
 import globalData from "shared/data"
 import * as Styled from "./ContactInfo.styled"
 
@@ -25,10 +24,17 @@ const ContactInfo = () => {
   return (
     <Styled.ContactInfoContainer>
       <Typography variant="h3" as="h1" color={theme.colors.gray[600]}>
-        Bądźmy w kontakcie!
+        Napisz do nas!
       </Typography>
-      <Contact />
-      <List gap={8}>
+
+      <Styled.FounderInfo>
+        <Styled.FounderImage src="/contact/VanessaSzmatuła.png" alt="" />
+        <Typography variant="h5" as="p">
+          Vanessa Szmatuła
+        </Typography>
+      </Styled.FounderInfo>
+
+      <List gap={14}>
         {listData.map(({ text, iconName, link }) => (
           <ListItem
             key={text}
@@ -39,7 +45,7 @@ const ContactInfo = () => {
             <Button
               variant="text"
               text={text}
-              size="small"
+              size="xsmall"
               color="black"
               href={link}
             />
