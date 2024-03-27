@@ -14,7 +14,9 @@ const Slider = ({
   slidesPerViewTablet,
   slidesPerViewTabletLg,
   slidesPerViewMobile,
-  gap,
+  slidesPerGroupDesktop,
+  desktopGap,
+  mobileGap,
   onSlideChange,
   pagination,
   navigation,
@@ -22,34 +24,41 @@ const Slider = ({
   className,
 }) => {
   const [index, setIndex] = useState(activeIndex)
+  const [snapIndex, setSnapIndex] = useState(activeIndex)
   const [paginationLength, setPaginationLength] = useState(0)
 
   const swiperSettings = {
-    spaceBetween: gap,
+    spaceBetween: mobileGap,
     slidesPerView,
     breakpoints: {
       390: {
         slidesPerView: slidesPerViewMobile,
+        spaceBetween: mobileGap,
       },
       587: {
         slidesPerView: slidesPerViewTablet,
+        spaceBetween: mobileGap,
       },
       744: {
         slidesPerView: slidesPerViewTabletLg,
-        spaceBetween: gap,
+        spaceBetween: mobileGap,
       },
       992: {
-        spaceBetween: 20,
+        slidesPerView: slidesPerViewDesktop,
+        slidesPerGroup: slidesPerGroupDesktop,
+        spaceBetween: mobileGap,
       },
       1200: {
         slidesPerView: slidesPerViewDesktop,
-        spaceBetween: gap,
+        slidesPerGroup: slidesPerGroupDesktop,
+        spaceBetween: desktopGap,
       },
     },
   }
 
   const onChange = (swiper) => {
     setIndex(swiper.activeIndex)
+    setSnapIndex(swiper.snapIndex)
     onSlideChange?.(swiper.activeIndex)
   }
 
@@ -71,7 +80,11 @@ const Slider = ({
       ) : null}
 
       {pagination ? (
-        <Pagination activeIndex={index} length={paginationLength} />
+        <Pagination
+          activeIndex={snapIndex}
+          length={paginationLength}
+          slidesPerGroup={slidesPerGroupDesktop}
+        />
       ) : null}
     </Styled.Slider>
   )
@@ -81,29 +94,35 @@ Slider.propTypes = {
   children: PropTypes.node.isRequired,
   slidesPerView: number,
   slidesPerViewDesktop: number,
+  slidesPerGroupDesktop: number,
   slidesPerViewTablet: number,
   slidesPerViewTabletLg: number,
   slidesPerViewMobile: number,
-  gap: number,
+  desktopGap: number,
+  mobileGap: number,
   className: string,
   onSlideChange: func,
   pagination: bool,
   navigation: bool,
   activeIndex: number,
+  activeSnapIndex: number,
 }
 
 Slider.defaultProps = {
-  slidesPerView: 1,
+  slidesPerView: 1.2,
   slidesPerViewDesktop: 3,
   slidesPerViewTablet: 1.5,
-  slidesPerViewTabletLg: 2,
-  slidesPerViewMobile: 1,
-  gap: 48,
+  slidesPerViewTabletLg: 2.2,
+  slidesPerViewMobile: 1.2,
+  slidesPerGroupDesktop: 3,
+  desktopGap: 48,
+  mobileGap: 32,
   className: null,
   onSlideChange: null,
   pagination: false,
   navigation: false,
   activeIndex: 0,
+  activeSnapIndex: 0,
 }
 
 export default Slider
