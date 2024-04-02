@@ -99,7 +99,7 @@ const InternationalAdoptionConditions = () => {
           {data.map(({ title, description, links }) => (
             <Styled.TextBox key={title}>
               <Title text={title} variant="h3" />
-              <Typography variant="bodyTitle" color={theme.colors.gray[600]}>
+              <Typography variant="bodyTitle" color={theme.colors.gray[500]}>
                 {description}
               </Typography>
 

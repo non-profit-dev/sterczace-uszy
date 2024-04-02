@@ -13,7 +13,7 @@ const HomeFound = () => {
         <Styled.TopContainer>
           <TextBanner
             heading="Adoptowani podopieczni"
-            headingColor={theme.colors.gray[600]}
+            headingColor={theme.colors.gray[500]}
             subtitle="Szczęśliwi w nowych domach"
             tabletLayout="left"
             mobileLayout="left"
@@ -28,7 +28,7 @@ const HomeFound = () => {
           <Styled.Img src="../home-found/home-found.png" alt="" />
           <TextBanner
             heading="Do trzech razy sztuka"
-            headingColor={theme.colors.gray[600]}
+            headingColor={theme.colors.gray[500]}
             tabletLayout="left"
             mobileLayout="left"
             size="small"

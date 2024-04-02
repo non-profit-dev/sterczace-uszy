@@ -68,7 +68,7 @@ const TemporaryHome = () => {
               title={<Title text={title} line={false} as="h3" />}
               button={button}
             >
-              <Typography variant="bodyTitle" color={theme.colors.gray[600]}>
+              <Typography variant="bodyTitle" color={theme.colors.gray[500]}>
                 {description}
               </Typography>
             </Card>

@@ -43,7 +43,7 @@ const Form = ({ handleSubmit, submitting }) => {
 
   return (
     <Styled.FormContainer>
-      <Typography variant="h3" as="h2" color={theme.colors.gray[600]}>
+      <Typography variant="h3" as="h2" color={theme.colors.gray[500]}>
         Zostaw wiadomość
       </Typography>
       <Styled.Form onSubmit={onSubmit(handleForm)}>
