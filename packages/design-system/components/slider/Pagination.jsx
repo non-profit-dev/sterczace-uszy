@@ -4,7 +4,7 @@ import { number } from "prop-types"
 
 import * as Styled from "./Slider.styled"
 
-const Pagination = ({ activeIndex, length }) => {
+const Pagination = ({ activeIndex, length, slidesPerGroup }) => {
   const slider = useSwiper()
   const theme = useTheme()
 
@@ -13,7 +13,7 @@ const Pagination = ({ activeIndex, length }) => {
       {Array.from({ length }, (_, index) => (
         <Styled.Bullet
           onClick={() => {
-            slider.slideTo(index)
+            slider.slideTo(index * slidesPerGroup)
           }}
           color={
             activeIndex === index
@@ -30,6 +30,7 @@ const Pagination = ({ activeIndex, length }) => {
 Pagination.propTypes = {
   activeIndex: number.isRequired,
   length: number.isRequired,
+  slidesPerGroup: number.isRequired,
 }
 
 export default Pagination

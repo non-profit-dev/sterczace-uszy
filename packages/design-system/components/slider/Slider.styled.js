@@ -4,62 +4,47 @@ import { Swiper, SwiperSlide } from "swiper/react"
 export const Slide = styled(SwiperSlide)`
   align-self: stretch;
   height: auto;
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    margin-bottom: 40px;
-  }
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    margin-bottom: 0;
-  }
 `
 
 export const Arrow = styled.div`
   position: absolute;
-  top: 50%;
-  left: ${({ direction }) => (direction === "prev" ? "0" : "auto")};
-  right: ${({ direction }) => (direction === "next" ? "0" : "auto")};
-  transform: translateY(-50%);
+  top: 42%;
+  left: ${({ direction }) => (direction === "prev" ? "-10px" : "auto")};
+  right: ${({ direction }) => (direction === "next" ? "-10px" : "auto")};
   z-index: 100;
   cursor: pointer;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    top: auto;
-    left: ${({ direction }) => (direction === "prev" ? "30px" : "auto")};
-    right: ${({ direction }) => (direction === "next" ? "30px" : "auto")};
-    transform: translateY(0);
-    bottom: 0;
-    margin-bottom: -10px;
+    display: none;
   }
 `
 
 export const BulletContainer = styled.div`
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    gap: 22px;
+    display: none;
   }
 `
 
 export const Slider = styled(Swiper)`
   position: relative;
+  margin: 0 10px;
   padding: 30px 40px;
+
   ${({ theme }) => theme.breakpoints.tabletLg} {
-    padding: 30px 56px 60px;
-  }
-  ${({ theme }) => theme.breakpoints.mobileLg} {
-    padding: 30px 24px 60px;
+    margin: 0;
   }
 `
 
 export const Bullet = styled.div`
-  ${({ theme }) => theme.breakpoints.tabletLg} {
-    display: block;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: ${({ color }) => color};
-    cursor: pointer;
-  }
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: ${({ color }) => color};
+  cursor: pointer;
 `
