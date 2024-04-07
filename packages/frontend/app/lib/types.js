@@ -51,3 +51,14 @@ export const financialStatementsType = shape({
     })
   ),
 })
+
+export const testimonialType = shape({
+  items: arrayOf(
+    shape({
+      author: string,
+      authorDescription: string,
+      description: string,
+      title: string,
+    })
+  ),
+})
