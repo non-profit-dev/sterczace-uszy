@@ -16,9 +16,15 @@ const Card = ({
   layout,
   title,
   imageSrc,
+  target,
   className,
 }) => (
-  <Styled.Card as={href ? `a` : `div`} href={href} className={className}>
+  <Styled.Card
+    as={href ? `a` : `div`}
+    href={href}
+    target={href ? target : null}
+    className={className}
+  >
     {imageSrc && <Styled.Image src={imageSrc} alt="" />}
 
     <Styled.Container layout={layout}>
@@ -82,6 +88,7 @@ Card.propTypes = {
    * The alignment of the card, used for all breakpoints.
    */
   layout: oneOf(["left", "center"]),
+  target: oneOf(["_blank", "_self"]),
   className: string,
 }
 
@@ -95,6 +102,7 @@ Card.defaultProps = {
   illustrationSize: "small",
   imageSrc: null,
   layout: "left",
+  target: "_self",
   className: null,
 }
 
