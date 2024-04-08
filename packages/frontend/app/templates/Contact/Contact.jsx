@@ -40,7 +40,7 @@ const Contact = () => {
           subtitle="Masz pytania? Pisz śmiało!"
           description="Jeśli masz jakiekolwiek pytania nie wahaj się pisać lub wysłać smsa. Odpowiadamy tak szybko jak to możliwe."
           backgroundColor={theme.colors.complementary[100]}
-          asset="/contact/Hero.png"
+          asset="/contact/hero.png"
         />
         <Container size="medium">
           <Styled.ContactContainer>
