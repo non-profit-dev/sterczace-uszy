@@ -1,7 +1,10 @@
 import { useForm } from "@formspree/react"
+import { useTheme } from "@emotion/react"
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 
 import Container from "design-system/components/container/Container"
+
+import Hero from "design-system/patterns/hero"
 
 import Navigation from "design-system/blocks/navigation"
 import Footer from "design-system/blocks/footer"
@@ -15,6 +18,7 @@ import Response from "./components/Response"
 import * as Styled from "./Contact.styled"
 
 const Contact = () => {
+  const theme = useTheme()
   const { executeRecaptcha } = useGoogleReCaptcha()
   const [state, handleSubmit] = useForm(
     process.env.NEXT_PUBLIC_CONTACT_FORM_ID,
@@ -30,16 +34,26 @@ const Contact = () => {
     <Page title="Kontakt">
       <SupportBanner />
       <Navigation />
-      <Container as="main" size="medium">
-        <Styled.ContactContainer>
-          <ContactInfo />
-          {state.succeeded ? (
-            <Response />
-          ) : (
-            <Form handleSubmit={handleSubmit} submitting={state.submitting} />
-          )}
-        </Styled.ContactContainer>
-      </Container>
+      <main>
+        <Hero
+          heading="Bądźmy w kontakcie!"
+          subtitle="Masz pytania? Pisz śmiało!"
+          description="Jeśli masz jakiekolwiek pytania nie wahaj się pisać lub wysłać smsa. Odpowiadamy tak szybko jak to możliwe."
+          backgroundColor={theme.colors.complementary[100]}
+          asset="/contact/hero.png"
+        />
+        <Container size="medium">
+          <Styled.ContactContainer>
+            <ContactInfo />
+            {state.succeeded ? (
+              <Response />
+            ) : (
+              <Form handleSubmit={handleSubmit} submitting={state.submitting} />
+            )}
+          </Styled.ContactContainer>
+        </Container>
+      </main>
+
       <Footer />
     </Page>
   )

@@ -18,6 +18,8 @@ describe("Contact Page", () => {
       ok: true,
     }).as("formSubmit")
 
+    cy.get("form").scrollIntoView()
+
     cy.get('input[name="firstName"]').type("test")
     cy.get('input[name="email"]').type("test@gmail.com")
     cy.get('select[name="subject"]').select("Dom tymczasowy")
