@@ -24,7 +24,7 @@ const ContactInfo = () => {
   const theme = useTheme()
   return (
     <Styled.ContactInfoContainer>
-      <Typography variant="h3" as="h1" color={theme.colors.gray[500]}>
+      <Typography variant="h3" as="h1" color={theme.colors.gray[600]}>
         Bądźmy w kontakcie!
       </Typography>
       <Contact />
