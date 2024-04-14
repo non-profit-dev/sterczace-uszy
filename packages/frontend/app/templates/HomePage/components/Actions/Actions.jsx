@@ -48,7 +48,7 @@ const Actions = () => {
       <Styled.Content>
         <TextBanner
           heading="Nasze działania"
-          headingColor={theme.colors.gray[500]}
+          headingColor={theme.colors.gray[600]}
           subtitle="Co robimy?"
           layout="center"
           tabletLayout="center"
