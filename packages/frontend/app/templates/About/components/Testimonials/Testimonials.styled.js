@@ -31,3 +31,15 @@ export const Slider = styled.div`
     transform: translateX(-50%);
   }
 `
+
+export const Description = styled.div`
+  margin: 0 auto;
+  width: 606px;
+  ${({ theme }) => theme.breakpoints.tabletLg} {
+    width: 566px;
+    text-align: left;
+  }
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    width: 100%;
+  }
+`

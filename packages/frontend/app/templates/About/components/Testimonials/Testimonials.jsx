@@ -1,19 +1,30 @@
 import Typography from "design-system/components/typography"
 import Slider from "design-system/components/slider"
 import Container from "design-system/components/container"
-import Icon from "design-system/components/icon"
+import TextBanner from "design-system/patterns/textBanner"
 
 import TestimonialCard from "design-system/patterns/testimonialCard"
 
 import * as Styled from "./Testimonials.styled"
-import { testimonialType } from "../../../../lib/types"
+import { testimonialItemsType } from "../../../../lib/types"
 
 const Testimonials = ({ data }) => (
   <Styled.Wrapper>
     <Container>
-      <Typography variant="h2">
-        Dziękujemy za wsparcie <Icon name="heartFilled" size="large" />
-      </Typography>
+      <TextBanner
+        heading="Co o nas mówią?"
+        subtitle="Fundacja w opinii rodzin adopcyjnych"
+        tabletLayout="left"
+        mobileLayout="left"
+      >
+        <Styled.Description>
+          <Typography variant="bodyTitle">
+            Poniżej przeczytasz wybrane opinie napisane przez rodziny adopcyjne,
+            które szcześliwie odnalazły swoich przyjaciół w Fundacji Sterczące
+            Uszy. Zadowolonych rodzin jest znacznie więcej i stale ich przybywa.
+          </Typography>
+        </Styled.Description>
+      </TextBanner>
       <Styled.Slider>
         <Slider pagination navigation slidesPerViewDesktop={3}>
           {data.map((item) => (
@@ -32,7 +43,7 @@ const Testimonials = ({ data }) => (
 )
 
 Testimonials.propTypes = {
-  data: testimonialType.isRequired,
+  data: testimonialItemsType.isRequired,
 }
 
 export default Testimonials
