@@ -34,6 +34,7 @@ const Testimonials = ({ data }) => (
               excerpt={item.description}
               author={item.author}
               authorDetails={item.authorDescription}
+              as="h3"
             />
           ))}
         </Slider>
