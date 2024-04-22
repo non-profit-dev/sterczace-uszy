@@ -65,6 +65,12 @@ var _rollbarConfig = {
         <body>
           <Main />
           <NextScript />
+          <script
+            async
+            id="fanimani-widget-script"
+            type="text/javascript"
+            src="https://widget2.fanimani.pl/mxV6FBamaR8jDDDcAUfMBu.js"
+          />
         </body>
       </Html>
     )
