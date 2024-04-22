@@ -59,7 +59,7 @@ const Animal = ({ data, otherAnimals }) => (
           <Typography variant="h3">
             Sprawdź, kto jeszcze czeka na miłość
           </Typography>
-          <ScrollButton sectionId="other-animals" />
+          <ScrollButton sectionId="inne-do-adopcji" />
         </Styled.ScrollContainer>
       </Container>
 
