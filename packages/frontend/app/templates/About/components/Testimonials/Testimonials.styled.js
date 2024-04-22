@@ -2,13 +2,13 @@ import styled from "@emotion/styled"
 
 export const Wrapper = styled.div`
   padding: 120px 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) -64.46%,
       #faf4f4 109.44%,
       rgba(255, 255, 255, 0) 283.33%
     ),
-    #ffffff;
+    #ffffff; */
 
   ${({ theme }) => theme.breakpoints.tabletLg} {
     padding: 100px 0;

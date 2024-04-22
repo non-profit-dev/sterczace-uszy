@@ -26,7 +26,7 @@ const Testimonials = ({ data }) => (
         </Styled.Description>
       </TextBanner>
       <Styled.Slider>
-        <Slider pagination navigation slidesPerViewDesktop={3}>
+        <Slider pagination navigation slidesPerViewDesktop={2}>
           {data.map((item) => (
             <TestimonialCard
               key={item.description}
