@@ -36,7 +36,7 @@ const Microchips = () => {
           <TextBanner
             heading="Zniżka na rejestrację mikroczipa"
             headingColor={theme.colors.gray[600]}
-            descriptionColor={theme.colors.gray[600]}
+            descriptionColor={theme.colors.gray[500]}
             tabletLayout="left"
             mobileLayout="left"
             button={

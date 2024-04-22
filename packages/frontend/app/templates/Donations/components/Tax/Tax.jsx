@@ -39,7 +39,7 @@ const Tax = () => {
             <TextBanner
               subtitle="1.5% podatku"
               heading="Twoja pomoc ma moc"
-              descriptionColor={theme.colors.gray[600]}
+              descriptionColor={theme.colors.gray[500]}
               tabletLayout="left"
               mobileLayout="left"
             >
