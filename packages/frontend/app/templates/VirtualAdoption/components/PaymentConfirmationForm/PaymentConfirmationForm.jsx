@@ -10,6 +10,8 @@ import Checkbox from "design-system/components/checkbox"
 import Select from "design-system/components/select"
 import Illustration from "design-system/components/illustration/Illustration"
 
+import { firstNameRegex, lastNameRegex, emailRegex } from "shared/regex"
+
 import * as Styled from "./PaymentConfirmationForm.styled"
 
 const PaymentConfirmationForm = ({ data }) => {
@@ -109,7 +111,7 @@ const PaymentConfirmationForm = ({ data }) => {
                   message: "Maksymalna ilość znaków to 30",
                 },
                 pattern: {
-                  value: /^[A-Za-z]+$/i,
+                  value: firstNameRegex,
                   message: "Wpisz poprawne imię (tylko litery)",
                 },
               })}
@@ -134,7 +136,7 @@ const PaymentConfirmationForm = ({ data }) => {
                     if (value.length > 70) {
                       return "Maksymalna ilość znaków to 70"
                     }
-                    if (!/^[A-Za-z]{2,}(-[A-Za-z]{2,})?$/i.test(value)) {
+                    if (lastNameRegex.test(value)) {
                       return "Wpisz poprawne nazwisko"
                     }
                     return true
@@ -152,7 +154,7 @@ const PaymentConfirmationForm = ({ data }) => {
             {...register("email", {
               required: "To pole jest wymagane",
               pattern: {
-                value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i,
+                value: emailRegex,
                 message: "Wpisz poprawny adres e-mail",
               },
             })}

@@ -1,6 +1,7 @@
 import { func, bool } from "prop-types"
 import { useTheme } from "@emotion/react"
 import React from "react"
+import { useForm } from "react-hook-form"
 
 import Typography from "design-system/components/typography"
 import Input from "design-system/components/input"
@@ -8,7 +9,8 @@ import Select from "design-system/components/select"
 import Textarea from "design-system/components/textarea"
 import Button from "design-system/components/button"
 import Checkbox from "design-system/components/checkbox"
-import { useForm } from "react-hook-form"
+
+import { firstNameRegex, emailRegex } from "shared/regex"
 
 import * as Styled from "./Form.styled"
 
@@ -60,7 +62,7 @@ const Form = ({ handleSubmit, submitting }) => {
                 message: "Maksymalna ilość znaków to 20",
               },
               pattern: {
-                value: /^[A-Za-z]+$/i,
+                value: firstNameRegex,
                 message: "Wpisz poprawne imię (tylko litery)",
               },
             })}
@@ -74,7 +76,7 @@ const Form = ({ handleSubmit, submitting }) => {
             {...register("email", {
               required: "To pole jest wymagane",
               pattern: {
-                value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i,
+                value: emailRegex,
                 message: "Wpisz poprawny adres e-mail",
               },
             })}
