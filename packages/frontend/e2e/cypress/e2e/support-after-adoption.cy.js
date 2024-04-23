@@ -4,7 +4,6 @@ describe("Support After Adoption Page", () => {
   })
 
   it(`should be accessible`, () => {
-    cy.injectAxe()
-    cy.checkA11y()
+    cy.checkAccessibility()
   })
 })
