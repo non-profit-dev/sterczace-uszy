@@ -40,7 +40,7 @@ const Values = () => {
         <Styled.Banner
           heading="Pomagamy kierując się wartościami"
           subtitle="Nasze wartości"
-          descriptionColor={theme.colors.gray[600]}
+          descriptionColor={theme.colors.gray[500]}
           size="medium"
           layout="left"
           mobileLayout="left"

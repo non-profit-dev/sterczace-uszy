@@ -77,7 +77,7 @@ const AdoptionDecision = () => {
     <Styled.SectionContainer as="section">
       <Styled.Banner
         heading="Decyzja o adopcji psa"
-        descriptionColor={theme.colors.gray[600]}
+        descriptionColor={theme.colors.gray[500]}
         size="medium"
         layout="left"
         mobileLayout="left"
