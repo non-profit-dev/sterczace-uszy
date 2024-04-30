@@ -40,14 +40,12 @@ const PartnerCard = ({
               onClick={() => copyToClipboard(promoCode)}
             />
           )}
-          {link && (
-            <Button
-              variant="text"
-              text="Idź do oferty"
-              iconEnd="arrowRight"
-              href={link}
-            />
-          )}
+          <Button
+            variant="text"
+            text="Idź do oferty"
+            iconEnd="arrowRight"
+            href={link}
+          />
         </Styled.ButtonsWrapper>
       </Styled.Content>
     </Styled.Container>
@@ -67,7 +65,7 @@ PartnerCard.propTypes = {
   /**
    * The URL that the card should redirect to when clicked.
    */
-  link: string,
+  link: string.isRequired,
   /**
    * The code that users can copy if they want a discount.
    */
@@ -85,7 +83,6 @@ PartnerCard.propTypes = {
 PartnerCard.defaultProps = {
   children: null,
   discount: null,
-  link: null,
   promoCode: null,
   imageSrc: null,
   className: null,
