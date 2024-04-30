@@ -4,6 +4,8 @@ import Typography from "design-system/components/typography"
 import Button from "design-system/components/button"
 import Count from "design-system/components/count"
 
+import useCopyToClipboard from "design-system/helpers/useCopyToClipboard"
+
 import * as Styled from "./PartnerCard.styled"
 
 const PartnerCard = ({
@@ -11,32 +13,46 @@ const PartnerCard = ({
   discount,
   children,
   link,
+  promoCode,
   imageSrc,
   className,
-}) => (
-  <Styled.Container className={className}>
-    <Styled.Header>
-      <Styled.Image src={imageSrc} alt="" />
-      <Count count={discount} size="xsmall" />
-    </Styled.Header>
+}) => {
+  const [isCopied, copyToClipboard] = useCopyToClipboard()
 
-    <Styled.Line />
+  return (
+    <Styled.Container className={className}>
+      <Styled.Header>
+        <Styled.Image src={imageSrc} alt="" />
+        <Count count={discount} size="xsmall" />
+      </Styled.Header>
 
-    <Styled.Content>
-      <Typography variant="h3">{title}</Typography>
-      <Typography variant="bodyTitle">{children}</Typography>
+      <Styled.Line />
 
-      {link && (
-        <Button
-          variant="text"
-          text="Idź do oferty"
-          iconEnd="arrowRight"
-          href={link}
-        />
-      )}
-    </Styled.Content>
-  </Styled.Container>
-)
+      <Styled.Content>
+        <Typography variant="h3">{title}</Typography>
+        <Typography variant="bodyTitle">{children}</Typography>
+        <Styled.ButtonsWrapper>
+          {promoCode && (
+            <Button
+              variant="border"
+              color="black"
+              text={`${isCopied ? `Skopiowano` : `Kopiuj kod ${discount}`}`}
+              onClick={() => copyToClipboard(promoCode)}
+            />
+          )}
+          {link && (
+            <Button
+              variant="text"
+              text="Idź do oferty"
+              iconEnd="arrowRight"
+              href={link}
+            />
+          )}
+        </Styled.ButtonsWrapper>
+      </Styled.Content>
+    </Styled.Container>
+  )
+}
 
 PartnerCard.propTypes = {
   /**
@@ -53,6 +69,10 @@ PartnerCard.propTypes = {
    */
   link: string,
   /**
+   * The code that users can copy if they want a discount.
+   */
+  promoCode: string,
+  /**
    * The path to an image from outside of our repository.
    */
   imageSrc: string,
@@ -66,6 +86,7 @@ PartnerCard.defaultProps = {
   children: null,
   discount: null,
   link: null,
+  promoCode: null,
   imageSrc: null,
   className: null,
 }

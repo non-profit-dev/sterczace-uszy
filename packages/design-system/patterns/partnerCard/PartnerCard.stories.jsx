@@ -14,5 +14,6 @@ export const Controls = {
     children:
       "Adoptując zwierzę z naszej fundacji masz szansę otrzymać książkę “Dekoder Psów” oraz zniżkę w wysokości -40% na bogatą ofertę szkoleń. Jeśli jeszcze szukasz zwierzaka do adopcji możesz skorzystać ze stałej zniżki -10% z kodem WOLO90",
     link: "https://google.com/",
+    promoCode: "123abc",
   },
 }

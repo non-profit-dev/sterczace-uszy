@@ -35,3 +35,10 @@ export const Line = styled.div`
   background: ${({ theme }) => theme.colors.primary[500]};
   transform: matrix(-1, 0, 0, 1, 0, 0);
 `
+
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+`
