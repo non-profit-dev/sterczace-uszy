@@ -51,3 +51,15 @@ export const financialStatementsType = shape({
     })
   ),
 })
+
+export const partnershipsType = shape({
+  items: arrayOf(
+    shape({
+      title: string,
+      discount: string,
+      discountCode: string,
+      description: string,
+      url: string,
+    })
+  ),
+})

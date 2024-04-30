@@ -133,3 +133,21 @@ export const GET_FINANCIAL_STATEMENTS = gql`
     }
   }
 `
+
+export const GET_PARTNERSHIPS = gql`
+  query GetPartnerships {
+    partnershipCollection {
+      items {
+        adoptionFamilyOnly
+        discount
+        discountCode
+        title
+        description
+        url
+        image {
+          url
+        }
+      }
+    }
+  }
+`
