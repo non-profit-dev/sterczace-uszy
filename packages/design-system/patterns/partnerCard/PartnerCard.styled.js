@@ -22,7 +22,11 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 32px;
+  padding: 48px;
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding: 24px;
+  }
 `
 
 export const Image = styled(ImageComponent)`
@@ -30,10 +34,22 @@ export const Image = styled(ImageComponent)`
 `
 
 export const Line = styled.div`
-  width: 100%;
-  height: 5px;
-  background: ${({ theme }) => theme.colors.primary[500]};
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    clip-path: ellipse(50% 2px);
+    background: ${({ theme }) => theme.colors.primary[500]};
+
+    ${({ theme }) => theme.breakpoints.tablet} {
+      content: ${({ hideLineOnMobile }) => (hideLineOnMobile ? `none` : "")};
+    }
+  }
 `
 
 export const ButtonsWrapper = styled.div`
@@ -41,4 +57,8 @@ export const ButtonsWrapper = styled.div`
   gap: 24px;
   align-items: center;
   justify-content: space-between;
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    flex-direction: column;
+  }
 `

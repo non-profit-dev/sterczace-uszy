@@ -1,3 +1,4 @@
+import { useTheme } from "@emotion/react"
 import { string, node } from "prop-types"
 
 import Typography from "design-system/components/typography"
@@ -18,6 +19,7 @@ const PartnerCard = ({
   className,
 }) => {
   const [isCopied, copyToClipboard] = useCopyToClipboard()
+  const theme = useTheme()
 
   return (
     <Styled.Container className={className}>
@@ -30,7 +32,9 @@ const PartnerCard = ({
 
       <Styled.Content>
         <Typography variant="h3">{title}</Typography>
-        <Typography variant="bodyTitle">{children}</Typography>
+        <Typography variant="bodyTitle" color={theme.colors.gray[500]}>
+          {children}
+        </Typography>
         <Styled.ButtonsWrapper>
           {promoCode && (
             <Button
