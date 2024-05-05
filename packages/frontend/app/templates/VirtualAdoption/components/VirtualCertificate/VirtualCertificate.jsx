@@ -1,7 +1,6 @@
 /* eslint-disable react/no-danger */
 import Container from "design-system/components/container"
 import Typography from "design-system/components/typography"
-import Illustration from "design-system/components/illustration"
 import TextBanner from "design-system/patterns/textBanner"
 
 import * as Styled from "./VirtualCertificate.styled"
@@ -26,7 +25,7 @@ const VirtualCertificate = () => (
             </Typography>
           </TextBanner>
         </Styled.Content>
-        <img
+        <Styled.Image
           alt="wirtualny certyfikat"
           src="../virtual-adoption/virtual-certificate.png"
         />

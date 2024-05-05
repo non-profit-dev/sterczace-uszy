@@ -30,3 +30,7 @@ export const Content = styled.div`
 export const AdditionalNote = styled(Typography)`
   max-width: 667px;
 `
+
+export const Image = styled.img`
+  max-width: 1062px;
+`
