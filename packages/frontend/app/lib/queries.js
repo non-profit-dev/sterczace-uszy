@@ -135,7 +135,7 @@ export const GET_FINANCIAL_STATEMENTS = gql`
 `
 export const GET_TESTIMONIALS = gql`
   query GetTestimonials {
-    testimonialCollection {
+    testimonialCollection(limit: 8) {
       items {
         author
         authorDescription
