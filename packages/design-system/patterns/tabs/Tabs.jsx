@@ -48,7 +48,7 @@ const Tabs = ({ data, id, transparentContent, className }) => {
             active={index === activeIndex}
             aria-selected={index === activeIndex}
             aria-controls={`${convertToSlug(id)}-${convertToSlug(tab)}`}
-            id={convertToSlug(tab)}
+            id={`${convertToSlug(id)}-${convertToSlug(tab)}`}
             onClick={() => setActiveIndex(index)}
             borderBottom={transparentContent || activeIndex !== index}
             transparentContent={transparentContent}
