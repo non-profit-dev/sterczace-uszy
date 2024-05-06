@@ -13,6 +13,7 @@ import BasicInfo from "./components/BasicInfo"
 import RecurringPayment from "./components/RecurringPayment"
 import PaymentConfirmationForm from "./components/PaymentConfirmationForm"
 import ChooseYourVirtualPet from "./components/ChooseYourVirtualPet"
+import VirtualCertificate from "./components/VirtualCertificate"
 import Steps from "./components/Steps"
 
 import { animalsType } from "../../lib/types"
@@ -41,6 +42,7 @@ const VirtualAdoption = ({ animals, animalsData }) => {
         <ChooseYourVirtualPet data={animalsData.items} />
         <RecurringPayment />
         <PaymentConfirmationForm data={animals.items} />
+        <VirtualCertificate />
         <CtaBanner
           heading="Masz pytania lub wątpliwości?"
           buttonText="Skontaktuj się z nami"
