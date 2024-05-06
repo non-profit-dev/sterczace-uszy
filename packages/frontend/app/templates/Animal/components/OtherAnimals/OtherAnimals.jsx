@@ -11,7 +11,7 @@ import * as Styled from "./OtherAnimals.styled"
 
 const OtherAnimals = ({ data }) => (
   <Styled.Wrapper>
-    <Container id="other-animals">
+    <Container id="inne-do-adopcji">
       <Styled.ContentContainer>
         <TextBanner
           heading="Czekają na nowy dom"

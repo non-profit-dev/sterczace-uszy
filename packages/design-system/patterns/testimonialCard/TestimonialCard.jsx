@@ -7,7 +7,7 @@ import Typography from "design-system/components/typography"
 import { string } from "prop-types"
 import * as Styled from "./TestimonialCard.styled"
 
-const TestimonialCard = ({ title, excerpt, author, authorDetails }) => {
+const TestimonialCard = ({ title, excerpt, author, authorDetails, as }) => {
   const theme = useTheme()
 
   return (
@@ -17,7 +17,7 @@ const TestimonialCard = ({ title, excerpt, author, authorDetails }) => {
           <Icon name="quote" />
         </Styled.Icon>
         <Styled.Title>
-          <Title variant="h6" text={title} line={false}>
+          <Title variant="h6" text={title} line={false} as={as}>
             {title}
           </Title>
         </Styled.Title>
@@ -26,7 +26,9 @@ const TestimonialCard = ({ title, excerpt, author, authorDetails }) => {
         {excerpt}
       </Styled.Description>
       <div>
-        <Typography variant="h6">{author}</Typography>
+        <Typography variant="h6" as={as}>
+          {author}
+        </Typography>
         <Typography variant="bodyTiny" color={theme.colors.gray[500]}>
           {authorDetails}
         </Typography>
@@ -40,8 +42,9 @@ TestimonialCard.propTypes = {
   excerpt: string.isRequired,
   author: string.isRequired,
   authorDetails: string.isRequired,
+  as: string,
 }
 
-TestimonialCard.defaultProps = {}
+TestimonialCard.defaultProps = { as: "h6" }
 
 export default TestimonialCard
