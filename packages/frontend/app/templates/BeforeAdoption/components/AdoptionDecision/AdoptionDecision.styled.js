@@ -62,3 +62,11 @@ export const Icon = styled.div`
     height: 100%;
   }
 `
+
+export const ButtonWrapper = styled.div`
+  margin-top: 80px;
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    margin-top: 40px;
+  }
+`
