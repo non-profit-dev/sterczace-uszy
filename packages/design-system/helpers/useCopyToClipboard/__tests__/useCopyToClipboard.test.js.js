@@ -49,7 +49,7 @@ describe(`useCopyToClipboard`, () => {
     })
 
     expect(setTimeout).toBeCalledTimes(1)
-    expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 5000)
+    expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 2000)
 
     await waitForValueToChange
     rerender()
