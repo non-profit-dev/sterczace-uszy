@@ -10,6 +10,7 @@ const FaniPayStyles = () => {
         /* Custom CSS for FaniPay widget */
 
         html body #fanipay-root #fanipay {
+          z-index: 99 !important;
           width: 100% !important;
           margin: 0 !important;
           left: 0 !important;
@@ -54,6 +55,10 @@ const FaniPayStyles = () => {
               width: unset !important;
               padding: 5px 30px;
               top: 0 !important;
+
+              ${theme.breakpoints.tabletLg} {
+                display: none !important;
+              }
             }
 
             #fanipay-amounts {
