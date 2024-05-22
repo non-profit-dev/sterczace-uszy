@@ -63,3 +63,16 @@ export const partnershipsType = shape({
     })
   ),
 })
+
+export const testimonialItemsType = arrayOf(
+  shape({
+    author: string,
+    authorDescription: string,
+    description: string,
+    title: string,
+  })
+)
+
+export const testimonialType = shape({
+  items: testimonialItemsType,
+})

@@ -151,3 +151,16 @@ export const GET_PARTNERSHIPS = gql`
     }
   }
 `
+
+export const GET_TESTIMONIALS = gql`
+  query GetTestimonials {
+    testimonialCollection(limit: 10) {
+      items {
+        author
+        authorDescription
+        description
+        title
+      }
+    }
+  }
+`

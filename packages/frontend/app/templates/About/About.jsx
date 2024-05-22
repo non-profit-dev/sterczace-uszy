@@ -15,11 +15,13 @@ import {
   supportingType,
   animalsType,
   adoptedAnimalsType,
+  testimonialType,
 } from "../../lib/types"
 
 import * as Styled from "./About.styled"
+import Testimonials from "./components/Testimonials"
 
-const About = ({ animals, supporting, adoptedAnimals }) => (
+const About = ({ animals, supporting, adoptedAnimals, testimonials }) => (
   <Page title="O nas">
     <SupportBanner />
     <Navigation />
@@ -41,6 +43,7 @@ const About = ({ animals, supporting, adoptedAnimals }) => (
           adoptedAnimalsNumber={adoptedAnimals.total}
         />
       </Container>
+      <Testimonials data={testimonials.items} />
     </Styled.Main>
     <Footer />
   </Page>
@@ -50,6 +53,7 @@ About.propTypes = {
   animals: animalsType.isRequired,
   supporting: supportingType.isRequired,
   adoptedAnimals: adoptedAnimalsType.isRequired,
+  testimonials: testimonialType.isRequired,
 }
 
 export default About
