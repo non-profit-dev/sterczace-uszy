@@ -29,12 +29,13 @@ ScrollButton.propTypes = {
   /**
    * It's used to provide a text description for assistive technologies, like screen readers.
    */
-  ariaLabel: string.isRequired,
+  ariaLabel: string,
   className: string,
 }
 
 ScrollButton.defaultProps = {
   className: null,
+  ariaLabel: "Przejdź do kolejnej sekcji",
 }
 
 export default ScrollButton
