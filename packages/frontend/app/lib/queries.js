@@ -147,6 +147,7 @@ export const GET_PARTNERSHIPS = gql`
         image {
           url
         }
+        microchipPromoForm
       }
     }
   }

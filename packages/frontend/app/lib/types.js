@@ -1,4 +1,4 @@
-import { shape, arrayOf, string, number } from "prop-types"
+import { shape, arrayOf, string, number, bool } from "prop-types"
 
 export const animalType = shape({
   slug: string,
@@ -60,6 +60,7 @@ export const partnershipsType = shape({
       discountCode: string,
       description: string,
       url: string,
+      microchipPromoForm: bool,
     })
   ),
 })

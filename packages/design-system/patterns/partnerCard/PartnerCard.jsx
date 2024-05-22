@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react"
-import { string, node } from "prop-types"
+import { string, node, bool } from "prop-types"
 
 import Typography from "design-system/components/typography"
 import Button from "design-system/components/button"
@@ -16,6 +16,7 @@ const PartnerCard = ({
   link,
   promoCode,
   imageSrc,
+  microchipPromoForm,
   className,
 }) => {
   const [isCopied, copyToClipboard] = useCopyToClipboard()
@@ -25,23 +26,36 @@ const PartnerCard = ({
     <Styled.Container className={className}>
       <Styled.Header>
         <Styled.Image src={imageSrc} alt="" />
-        <Count count={discount} size="xsmall" />
+        {discount ? <Count count={discount} size="xsmall" /> : null}
       </Styled.Header>
 
       <Styled.Line />
 
       <Styled.Content>
-        <Typography variant="h3">{title}</Typography>
-        <Typography variant="bodyTitle" color={theme.colors.gray[500]}>
-          {children}
-        </Typography>
+        <Typography variant="h4">{title}</Typography>
+
+        <Styled.Body>
+          <Typography variant="bodySmall" color={theme.colors.gray[500]}>
+            {children}
+          </Typography>
+        </Styled.Body>
+
         <Styled.ButtonsWrapper>
           {promoCode && (
             <Button
               variant="border"
               color="black"
-              text={`${isCopied ? `Skopiowano` : `Kopiuj kod ${discount}`}`}
+              text={`${isCopied ? `Skopiowano` : `Kopiuj kod`}`}
+              size="small"
               onClick={() => copyToClipboard(promoCode)}
+            />
+          )}
+          {microchipPromoForm && (
+            <Button
+              variant="border"
+              color="black"
+              text="Poproś o kod"
+              size="small"
             />
           )}
           <Button
@@ -49,6 +63,7 @@ const PartnerCard = ({
             text="Idź do oferty"
             iconEnd="arrowRight"
             href={link}
+            size="small"
           />
         </Styled.ButtonsWrapper>
       </Styled.Content>
@@ -81,6 +96,7 @@ PartnerCard.propTypes = {
   /**
    * The alignment of the card, used for all breakpoints.
    */
+  microchipPromoForm: bool,
   className: string,
 }
 
@@ -90,6 +106,7 @@ PartnerCard.defaultProps = {
   promoCode: null,
   imageSrc: null,
   className: null,
+  microchipPromoForm: null,
 }
 
 export default PartnerCard
