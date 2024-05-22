@@ -8,6 +8,7 @@ import Page from "../Page"
 
 import GeneralPartnerships from "./components/GeneralPartnerships"
 import AdoptionFamilyPartnerships from "./components/AdoptionFamilyPartnerships"
+import MicrochipsBanner from "./components/MicrochipsBanner"
 
 import * as Styled from "./PartnersAndDiscounts.styled"
 
@@ -29,8 +30,8 @@ const PartnersAndDiscounts = ({ partnerships }) => (
       />
 
       <GeneralPartnerships partnerships={partnerships} />
-
       <AdoptionFamilyPartnerships partnerships={partnerships} />
+      <MicrochipsBanner />
 
       <CtaBanner
         buttonHref="/kontakt"
