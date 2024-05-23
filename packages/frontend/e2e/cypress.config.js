@@ -6,6 +6,5 @@ module.exports = defineConfig({
     testIsolation: false,
     viewportWidth: 1600,
     viewportHeight: 1200,
-    scrollBehavior: false,
   },
 })
