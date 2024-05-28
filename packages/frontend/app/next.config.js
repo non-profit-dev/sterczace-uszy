@@ -6,6 +6,7 @@ const withPlugins = require("next-compose-plugins")
 const optimizedImages = require("next-optimized-images")
 
 const nextConfig = {
+  output: "export",
   transpilePackages: ["react-hotjar"],
   images: {
     loader: "default",
@@ -14,15 +15,6 @@ const nextConfig = {
   trailingSlash: true,
   experimental: {
     externalDir: true,
-  },
-  async redirects() {
-    return [
-      {
-        source: "/pliki-do-pobrania/",
-        destination: "/ankiety",
-        permanent: true,
-      },
-    ]
   },
   webpack(config) {
     config.module.rules.push({
