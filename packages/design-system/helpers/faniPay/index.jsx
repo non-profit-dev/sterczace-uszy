@@ -133,12 +133,18 @@ const FaniPayStyles = () => {
               }
 
               label {
+                max-width: 400px !important;
+                width: 100% !important;
                 display: flex !important;
                 flex-direction: column;
-                width: unset !important;
 
                 span {
                   text-align: left !important;
+                }
+
+                ${theme.breakpoints.tablet} {
+                  max-width: unset !important;
+                  padding: 0 !important;
                 }
               }
 
@@ -156,6 +162,10 @@ const FaniPayStyles = () => {
               height: unset !important;
               width: 160px !important;
               padding: 5px 30px;
+
+              ${theme.breakpoints.tablet} {
+                margin: 0 auto !important;
+              }
             }
           }
 
@@ -165,6 +175,47 @@ const FaniPayStyles = () => {
 
           #fanipay-hide {
             background: transparent !important;
+            display: block !important;
+
+            ${theme.breakpoints.tabletLg} {
+              position: absolute !important;
+              top: 0 !important;
+              right: 0 !important;
+              display: flex !important;
+              align-items: center;
+              gap: 6px;
+              font-size: 14px !important;
+              line-height: 14px !important;
+              text-transform: uppercase;
+              color: ${theme.colors.gray[500]};
+            }
+          }
+
+          .fanipay-logo-beneficiary {
+            ${theme.breakpoints.tablet} {
+              position: static !important;
+            }
+          }
+
+          .fanipay-summary-info {
+            ${theme.breakpoints.tablet} {
+              position: static !important;
+              margin: 10px 0;
+            }
+          }
+
+          &.fanipay-active {
+            #fanipay-title {
+              display: none !important;
+            }
+
+            #fanipay-wrapper {
+              padding-top: 32px;
+            }
+
+            #fanipay-hide svg {
+              transform: rotateX(-180deg);
+            }
           }
         }
       `}
