@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 
 import Typography from "design-system/components/typography"
+import List from "../../components/list"
 
 export const Footer = styled.footer`
   display: flex;
@@ -138,8 +139,9 @@ export const SubFooterSectionRight = styled(SubFooterSection)`
   }
 `
 
-export const SubFooterLinks = styled.div`
+export const SubFooterLinks = styled(List)`
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 24px;
 
