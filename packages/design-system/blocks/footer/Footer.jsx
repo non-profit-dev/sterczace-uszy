@@ -18,6 +18,7 @@ const Footer = () => {
     adoption,
     foundation,
     support,
+    additional,
     sectionsTitles: {
       contactTitle,
       foundationDataTitle,
@@ -72,24 +73,6 @@ const Footer = () => {
                   />
                 </ListItem>
               </List>
-              <Styled.Icons>
-                <IconButton
-                  name="facebook"
-                  size="medium"
-                  href={globalData.socialMedia.facebook.link}
-                  ariaLabel="Facebook"
-                  target="_blank"
-                  title={globalData.socialMedia.facebook.title}
-                />
-                <IconButton
-                  name="instagram"
-                  size="medium"
-                  href={globalData.socialMedia.instagram.link}
-                  ariaLabel="Instagram"
-                  target="_blank"
-                  title={globalData.socialMedia.instagram.title}
-                />
-              </Styled.Icons>
             </Styled.Section>
             <Styled.Section>
               <Typography variant="h6" as="p">
@@ -194,12 +177,50 @@ const Footer = () => {
             </Styled.Section>
           </Styled.Sections>
         </Styled.Content>
-
-        <Styled.Copyright>
-          <Typography variant="bodySmall">
-            Copyright © {currentYear} {globalData.organizationName}
-          </Typography>
-        </Styled.Copyright>
+        <Styled.Icons>
+          <IconButton
+            name="facebook"
+            size="medium"
+            href={globalData.socialMedia.facebook.link}
+            ariaLabel="Facebook"
+            target="_blank"
+            title={globalData.socialMedia.facebook.title}
+          />
+          <IconButton
+            name="instagram"
+            size="medium"
+            href={globalData.socialMedia.instagram.link}
+            ariaLabel="Instagram"
+            target="_blank"
+            title={globalData.socialMedia.instagram.title}
+          />
+        </Styled.Icons>
+        <Styled.SubFooter>
+          <Styled.SubFooterSection>
+            <Typography variant="bodySmall">
+              Copyright © {currentYear} {globalData.organizationName}
+            </Typography>
+            <Styled.SubFooterLinks>
+              {additional.map((item) => (
+                <ListItem variant="gray" key={item.title}>
+                  <Button
+                    variant="text"
+                    text={item.title}
+                    size="xsmall"
+                    color="black"
+                    href={item.link}
+                  />
+                </ListItem>
+              ))}
+            </Styled.SubFooterLinks>
+          </Styled.SubFooterSection>
+          <Styled.SubFooterSectionRight>
+            <Typography variant="bodySmall">Stworzone od ❤️ przez</Typography>
+            <Typography variant="bodySmall">
+              <b>Pupilary</b>
+            </Typography>
+          </Styled.SubFooterSectionRight>
+        </Styled.SubFooter>
       </Container>
     </Styled.Footer>
   )
