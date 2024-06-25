@@ -6,6 +6,7 @@
     "develop": "yarn workspace frontend run develop",
     "start": "yarn workspace frontend run start",
     "build": "yarn workspace frontend run build",
+    "postbuild": "yarn workspace frontend run postbuild",
     "deploy:frontend": "yarn workspace frontend run deploy",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
