@@ -4,6 +4,8 @@ import Typography from "design-system/components/typography"
 import TextBanner from "design-system/patterns/textBanner"
 import PartnerCard from "design-system/patterns/partnerCard"
 
+import MicrochipsForm from "../MicrochipsForm/MicrochipsForm"
+
 import { partnershipsType } from "../../../../lib/types"
 
 import * as Styled from "./GeneralPartnerships.styled"
@@ -33,6 +35,7 @@ const GeneralPartnerships = ({ partnerships }) => (
               promoCode={partner.discountCode}
               imageSrc={partner.image.url}
               microchipPromoForm={partner.microchipPromoForm}
+              microchipModal={<MicrochipsForm />}
             >
               {partner.description}
             </PartnerCard>

@@ -1,8 +1,11 @@
 import { useTheme } from "@emotion/react"
+import { useState } from "react"
 import { string, node, bool } from "prop-types"
 
 import Typography from "design-system/components/typography"
 import Button from "design-system/components/button"
+
+import Modal from "design-system/patterns/modal"
 
 import useCopyToClipboard from "design-system/helpers/useCopyToClipboard"
 
@@ -16,9 +19,11 @@ const PartnerCard = ({
   promoCode,
   imageSrc,
   microchipPromoForm,
+  microchipModal,
   className,
 }) => {
   const [isCopied, copyToClipboard] = useCopyToClipboard()
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const theme = useTheme()
 
   return (
@@ -57,6 +62,7 @@ const PartnerCard = ({
               color="black"
               text="Poproś o kod"
               size="small"
+              onClick={() => setIsModalOpen(true)}
             />
           )}
           <Button
@@ -68,6 +74,14 @@ const PartnerCard = ({
           />
         </Styled.ButtonsWrapper>
       </Styled.Content>
+
+      <Modal
+        title="Prośba o kod promocyjny"
+        open={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      >
+        {microchipModal}
+      </Modal>
     </Styled.Container>
   )
 }
@@ -98,6 +112,7 @@ PartnerCard.propTypes = {
    * The alignment of the card, used for all breakpoints.
    */
   microchipPromoForm: bool,
+  microchipModal: node,
   className: string,
 }
 
@@ -108,6 +123,7 @@ PartnerCard.defaultProps = {
   imageSrc: null,
   className: null,
   microchipPromoForm: null,
+  microchipModal: null,
 }
 
 export default PartnerCard
