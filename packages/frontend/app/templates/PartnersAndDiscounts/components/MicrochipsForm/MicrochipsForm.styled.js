@@ -49,3 +49,7 @@ export const CheckboxContainer = styled.div`
   margin-top: 16px;
   margin-bottom: 16px;
 `
+
+export const IllustrationWrapper = styled.div`
+  max-width: 80px;
+`

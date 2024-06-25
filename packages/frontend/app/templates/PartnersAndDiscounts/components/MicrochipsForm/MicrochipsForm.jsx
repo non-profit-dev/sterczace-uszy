@@ -9,6 +9,7 @@ import Select from "design-system/components/select"
 import Checkbox from "design-system/components/checkbox"
 
 import TextBanner from "design-system/patterns/textBanner"
+import Illustration from "design-system/components/illustration/Illustration"
 import * as Styled from "./MicrochipsForm.styled"
 
 const MicrochipsForm = () => {
@@ -30,22 +31,28 @@ const MicrochipsForm = () => {
   return (
     <Styled.FormWrapper>
       {state.succeeded && !activeForm ? (
-        <TextBanner
-          size="small"
-          heading="Generujemy kod promocyjny"
-          button={
-            <Button
-              text="Poproś o więcej"
-              onClick={() => setActiveForm(true)}
-            />
-          }
-        >
-          <Typography variant="bodySmall">
-            Dostaliśmy Twoją prośbę o kod promocyjny, w ciągu kilku dni
-            otrzymasz od nas wiadomość z kodem na adres mailowy podany w
-            formularzu.
-          </Typography>
-        </TextBanner>
+        <>
+          <Styled.IllustrationWrapper>
+            <Illustration name="confirmation" />
+          </Styled.IllustrationWrapper>
+
+          <TextBanner
+            size="small"
+            heading="Generujemy kod promocyjny"
+            button={
+              <Button
+                text="Poproś o więcej"
+                onClick={() => setActiveForm(true)}
+              />
+            }
+          >
+            <Typography variant="bodySmall">
+              Dostaliśmy Twoją prośbę o kod promocyjny, w ciągu kilku dni
+              otrzymasz od nas wiadomość z kodem na adres mailowy podany w
+              formularzu.
+            </Typography>
+          </TextBanner>
+        </>
       ) : (
         <Styled.Form onSubmit={(e) => handleForm(e)}>
           <Typography variant="bodySmall">
