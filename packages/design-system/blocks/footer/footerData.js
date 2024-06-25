@@ -17,6 +17,10 @@ const footerData = {
       link: "/fundacja",
     },
     {
+      title: "Partnerzy i zniżki",
+      href: "/partnerzy-i-znizki",
+    },
+    {
       title: "Polityka prywatności",
       link: "/polityka-prywatnosci",
     },

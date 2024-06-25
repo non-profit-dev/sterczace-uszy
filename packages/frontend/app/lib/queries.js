@@ -133,6 +133,26 @@ export const GET_FINANCIAL_STATEMENTS = gql`
     }
   }
 `
+
+export const GET_PARTNERSHIPS = gql`
+  query GetPartnerships {
+    partnershipCollection {
+      items {
+        adoptionFamilyOnly
+        discount
+        discountCode
+        title
+        description
+        url
+        image {
+          url
+        }
+        microchipPromoForm
+      }
+    }
+  }
+`
+
 export const GET_TESTIMONIALS = gql`
   query GetTestimonials {
     testimonialCollection(limit: 10) {
