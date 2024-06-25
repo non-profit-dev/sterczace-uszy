@@ -3,7 +3,6 @@ import { string, node, bool } from "prop-types"
 
 import Typography from "design-system/components/typography"
 import Button from "design-system/components/button"
-import Count from "design-system/components/count"
 
 import useCopyToClipboard from "design-system/helpers/useCopyToClipboard"
 
@@ -26,13 +25,15 @@ const PartnerCard = ({
     <Styled.Container className={className}>
       <Styled.Header>
         <Styled.Image src={imageSrc} alt="" />
-        {discount ? <Count count={discount} size="xsmall" /> : null}
+        <Styled.Count count={discount} size="xsmall" />
       </Styled.Header>
 
       <Styled.Line />
 
       <Styled.Content>
-        <Typography variant="h4">{title}</Typography>
+        <Typography variant="h4" as="h3">
+          {title}
+        </Typography>
 
         <Styled.Body>
           <Typography variant="bodySmall" color={theme.colors.gray[500]}>

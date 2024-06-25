@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 
 import ImageComponent from "design-system/components/image"
+import CountComponent from "design-system/components/count"
 
 export const Container = styled.div`
   display: flex;
@@ -66,5 +67,10 @@ export const ButtonsWrapper = styled.div`
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
     flex-direction: column;
+    align-items: center;
   }
+`
+
+export const Count = styled(CountComponent)`
+  min-height: 37px;
 `
