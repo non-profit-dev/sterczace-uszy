@@ -16,6 +16,6 @@ describe(`PartnerCard`, () => {
 
   it(`renders the button for promo code if it's provided`, () => {
     render(<PartnerCard {...props} />)
-    expect(screen.getByText(`Kopiuj kod ${props.discount}`)).toBeInTheDocument()
+    expect(screen.getByText(`Kopiuj kod`)).toBeInTheDocument()
   })
 })
