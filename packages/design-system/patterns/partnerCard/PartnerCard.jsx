@@ -70,6 +70,7 @@ const PartnerCard = ({
             text="Idź do oferty"
             iconEnd="arrowRight"
             href={link}
+            target="_blank"
             size="small"
           />
         </Styled.ButtonsWrapper>
