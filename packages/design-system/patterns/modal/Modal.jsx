@@ -10,6 +10,7 @@ import * as Styled from "./Modal.styled"
 const customStyles = {
   overlay: {
     zIndex: "99",
+    background: "rgba(0, 0, 0, 0.2)",
   },
   content: {
     top: "50%",
