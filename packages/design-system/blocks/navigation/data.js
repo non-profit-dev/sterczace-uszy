@@ -11,6 +11,10 @@ const data = [
         href: "/dane-finansowe",
       },
       {
+        title: "Partnerzy i zniżki",
+        href: "/partnerzy-i-znizki",
+      },
+      {
         title: "Fundacja za kulisami",
         href: "/fundacja-za-kulisami",
       },
