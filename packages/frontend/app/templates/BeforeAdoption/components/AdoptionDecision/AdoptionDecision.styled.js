@@ -62,3 +62,7 @@ export const Icon = styled.div`
     height: 100%;
   }
 `
+
+export const ButtonWrapper = styled.div`
+  margin-top: 60px;
+`

@@ -13,30 +13,49 @@ import * as Styled from "./AdoptionSteps.styled"
 
 const data = [
   {
-    title: "Przesłanie ankiety",
-    steps: ["pobierz plik", "wypełnij i wydrukuj", "odeślij na maila fundacji"],
+    illustration: "online",
+    title: "Ankieta online",
+    steps: [
+      "wybrałeś pupila",
+      "wypełniasz i przesyłasz ankietę",
+      "czekasz na maila z akceptacją",
+    ],
     button: (
       <Button
         variant="text"
-        text="Pobierz ankietę"
-        iconStart="download"
+        text="Wypełnij ankietę online"
+        iconEnd="externalLink"
         target="_blank"
         href={globalData.surveys.preAdoption}
       />
     ),
   },
   {
-    title: "Wizyta przedadopcyjna",
+    illustration: "newHome",
+    title: "Wizyta przed adopcją",
     steps: ["ustalamy termin", "sprawdzamy warunki", "poznajemy się lepiej"],
+    button: (
+      <Button
+        variant="fill"
+        size="small"
+        text="Dowiedz się więcej"
+        href="/wizyta-przedadopcyjna"
+      />
+    ),
   },
   {
-    title: "Umowa adopcyjna",
-    steps: ["omawiamy zasady", "podpisujemy dokumenty", "odbieramy pupila"],
+    illustration: "petInfo",
+    title: "Umowa online",
+    steps: [
+      "wysyłamy umowę na maila",
+      "podpisujesz umowę online",
+      "odbierasz pupila",
+    ],
     button: (
       <Button
         variant="text"
-        text="Pobierz wzór umowy"
-        iconStart="download"
+        text="Zapoznaj się z umową"
+        iconEnd="externalLink"
         target="_blank"
         href={globalData.agreements.adoption}
       />
@@ -49,19 +68,22 @@ const AdoptionSteps = () => (
     <Container>
       <Styled.TextBanner>
         <TextBanner
-          heading="Kroki adopcji"
+          heading="Już wybrałeś? Teraz czas na kolejne kroki..."
           tabletLayout="left"
           mobileLayout="left"
         >
-          Tylko 3 proste kroki dzielą Cię, aby zostać szczęśliwym właścicielem
-          czworonoga. Postępuj zgodnie z tymi wskazówkami.
+          Wypełnienie ankiety online, wizyta przedadopcyjna i podpisanie umowy
+          przesłanej na Twojego maila to najważniejsze kroki adopcji, które
+          pozwolą Ci adoptować wybrane zwierzę.
         </TextBanner>
       </Styled.TextBanner>
 
       <Styled.Steps>
-        {data.map(({ title, steps, button }, index) => (
+        {data.map(({ illustration, title, steps, button }) => (
           <Styled.CardWrapper key={title}>
-            <Styled.Count size="small" count={index + 1} />
+            <Styled.Illustration>
+              <Illustration name={illustration} />
+            </Styled.Illustration>
             <Card
               key={title}
               title={<Title text={title} line={false} as="h3" />}
