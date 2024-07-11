@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 
 import Typography from "design-system/components/typography"
+import List from "../../components/list"
 
 export const Footer = styled.footer`
   display: flex;
@@ -103,17 +104,50 @@ export const Section = styled.div`
 `
 
 export const Icons = styled.div`
-  display: inline-flex;
+  display: flex;
+  justify-content: flex-end;
   gap: 6px;
+  margin-bottom: 24px;
+`
+
+export const SubFooter = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
 
   ${({ theme }) => theme.breakpoints.mobileLg} {
-    display: inline-flex;
+    gap: 16px;
   }
 `
 
-export const Copyright = styled.div`
+export const SubFooterSection = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    gap: 16px;
+  }
+`
+
+export const SubFooterSectionRight = styled(SubFooterSection)`
+  gap: 16px 8px;
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    gap: 16px 8px;
+  }
+`
+
+export const SubFooterLinks = styled(List)`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  ${({ theme }) => theme.breakpoints.mobileLg} {
+    gap: 16px;
+  }
 `
 
 export const CopyButton = styled.button`
