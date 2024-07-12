@@ -7,6 +7,7 @@ import Hero from "design-system/patterns/hero"
 
 import Page from "../Page"
 
+import AdoptionProcess from "./components/AdoptionProcess"
 import AdoptionSteps from "./components/AdoptionSteps"
 
 const AdoptionRules = () => (
@@ -24,6 +25,7 @@ const AdoptionRules = () => (
         backgroundImage="/adoption-rules/adoption-background.png"
         backgroundMobile="/adoption-rules/adoption-background-mobile.png"
       />
+      <AdoptionProcess />
       <AdoptionSteps />
       <CtaBanner
         heading="Masz pytania lub wątpliwości?"

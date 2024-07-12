@@ -12,7 +12,7 @@ const Adoption = () => (
       <TextBanner
         layout="center"
         heading="Zanim adoptujesz"
-        subtitle="Zasady adopcji"
+        subtitle="Świadoma decyzja"
       >
         Zostanie domem adopcyjnym to wielkie wyzwanie. To może być początek
         pięknej przygody, ale musisz wiedzieć jak się do niej przygotować.
@@ -88,7 +88,7 @@ const Adoption = () => (
 
     <Styled.ButtonContainer>
       <Button
-        text="Sprawdź warunki adopcji"
+        text="Dowiedz się więcej"
         href="/zanim-adoptujesz"
         variant="text"
         iconEnd="arrowRight"

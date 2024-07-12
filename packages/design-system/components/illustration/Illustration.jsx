@@ -32,6 +32,9 @@ import Confirmation from "design-system/tokens/illustrations/confirmation.svg"
 import AdoptionSupport from "design-system/tokens/illustrations/adoptionSupport.svg"
 import Xmas from "design-system/tokens/illustrations/xmas.svg"
 import Tips from "design-system/tokens/illustrations/tips.svg"
+import Online from "design-system/tokens/illustrations/online.svg"
+import PetInfo from "design-system/tokens/illustrations/petInfo.svg"
+import NewHome from "design-system/tokens/illustrations/newHome.svg"
 
 export const illustrations = {
   heartWithDogFace: HeartWithDogFace,
@@ -67,6 +70,9 @@ export const illustrations = {
   adoptionSupport: AdoptionSupport,
   tips: Tips,
   xmas: Xmas,
+  online: Online,
+  petInfo: PetInfo,
+  newHome: NewHome,
 }
 
 const Illustration = ({ name, className }) => {

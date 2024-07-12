@@ -97,3 +97,8 @@ export const IllustrationWrapper = styled.div`
     height: 100%;
   }
 `
+
+export const Illustration = styled.div`
+  max-width: 240px;
+  padding: 0 24px;
+`

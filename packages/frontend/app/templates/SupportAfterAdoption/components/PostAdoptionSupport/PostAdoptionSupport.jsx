@@ -2,7 +2,7 @@ import TextBanner from "design-system/patterns/textBanner"
 import Typography from "design-system/components/typography"
 import Feature from "design-system/patterns/feature"
 import Container from "design-system/components/container"
-import Button from "design-system/components/button"
+
 import * as Styled from "./PostAdoptionSupport.styled"
 
 const features = [
@@ -53,12 +53,6 @@ const PostAdoptionSupport = () => (
           </Feature>
         ))}
       </Styled.Features>
-      <Button
-        variant="border"
-        text="Skontaktuj się z nami"
-        size="large"
-        href="/kontakt"
-      />
     </Container>
   </Styled.Content>
 )

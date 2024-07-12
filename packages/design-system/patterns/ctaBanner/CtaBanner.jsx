@@ -10,6 +10,7 @@ const CtaBanner = ({
   buttonText,
   buttonHref,
   buttonVariant,
+  target,
   mobileLayout,
   className,
 }) => (
@@ -21,6 +22,7 @@ const CtaBanner = ({
         href={buttonHref}
         text={buttonText}
         variant={buttonVariant}
+        target={target}
         as="a"
       />
     </Styled.Content>
@@ -31,12 +33,14 @@ CtaBanner.propTypes = {
   heading: string.isRequired,
   buttonText: string.isRequired,
   buttonHref: string.isRequired,
+  target: string,
   buttonVariant: oneOf(["border", "text"]),
   mobileLayout: oneOf(["center", "left"]),
   className: string,
 }
 
 CtaBanner.defaultProps = {
+  target: "_self",
   mobileLayout: "center",
   buttonVariant: "border",
   className: null,

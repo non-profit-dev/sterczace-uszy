@@ -134,6 +134,14 @@ const AdoptionDecision = () => {
           </Styled.AccordionContainer>
         ))}
       </Styled.AccordionsContainer>
+      <Styled.ButtonWrapper>
+        <Button
+          text="Sprawdź zasady adopcji"
+          href="/zasady-adopcji"
+          variant="text"
+          iconEnd="arrowRight"
+        />
+      </Styled.ButtonWrapper>
     </Styled.SectionContainer>
   )
 }
