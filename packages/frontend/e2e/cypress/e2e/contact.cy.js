@@ -4,8 +4,7 @@ describe("Contact Page", () => {
   })
 
   it(`should be accessible`, () => {
-    cy.injectAxe()
-    cy.checkA11y()
+    cy.checkAccessibility()
   })
 
   it(`renders the form heading`, () => {
