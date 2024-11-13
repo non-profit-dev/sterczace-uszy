@@ -10,7 +10,7 @@ import Textarea from "design-system/components/textarea"
 import Button from "design-system/components/button"
 import Checkbox from "design-system/components/checkbox"
 
-import { firstNameRegex, emailRegex } from "shared/regex"
+import { emailRegex } from "shared/regex"
 
 import * as Styled from "./Form.styled"
 
@@ -60,10 +60,6 @@ const Form = ({ handleSubmit, submitting }) => {
               maxLength: {
                 value: 20,
                 message: "Maksymalna ilość znaków to 20",
-              },
-              pattern: {
-                value: firstNameRegex,
-                message: "Wpisz poprawne imię (tylko litery)",
               },
             })}
             message={errors.firstName ? errors.firstName.message : ""}

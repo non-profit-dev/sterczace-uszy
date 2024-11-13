@@ -10,7 +10,7 @@ import Checkbox from "design-system/components/checkbox"
 import Select from "design-system/components/select"
 import Illustration from "design-system/components/illustration/Illustration"
 
-import { firstNameRegex, lastNameRegex, emailRegex } from "shared/regex"
+import { emailRegex } from "shared/regex"
 
 import * as Styled from "./PaymentConfirmationForm.styled"
 
@@ -110,10 +110,6 @@ const PaymentConfirmationForm = ({ data }) => {
                   value: 30,
                   message: "Maksymalna ilość znaków to 30",
                 },
-                pattern: {
-                  value: firstNameRegex,
-                  message: "Wpisz poprawne imię (tylko litery)",
-                },
               })}
               message={errors.firstName ? errors.firstName.message : ""}
             />
@@ -124,23 +120,13 @@ const PaymentConfirmationForm = ({ data }) => {
               state={determineInputState("lastName")}
               {...register("lastName", {
                 required: "To pole jest wymagane",
-                validate: {
-                  customLength: (value) => {
-                    const includesDash = value.includes("-")
-                    if (includesDash && value.length < 5) {
-                      return "Każda część nazwiska musi mieć min. 2 znaki"
-                    }
-                    if (!includesDash && value.length < 2) {
-                      return "Minimalna ilość znaków to 2"
-                    }
-                    if (value.length > 70) {
-                      return "Maksymalna ilość znaków to 70"
-                    }
-                    if (lastNameRegex.test(value)) {
-                      return "Wpisz poprawne nazwisko"
-                    }
-                    return true
-                  },
+                minLength: {
+                  value: 2,
+                  message: "Minimalna ilość znaków to 2",
+                },
+                maxLength: {
+                  value: 30,
+                  message: "Maksymalna ilość znaków to 30",
                 },
               })}
               message={errors.lastName ? errors.lastName.message : ""}
