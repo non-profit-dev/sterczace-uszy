@@ -42,7 +42,7 @@ const globalData = {
     googlePlay: "https://play.google.com/store/apps/details?id=pl.fanimani.app",
   },
   surveys: {
-    preAdoption: "https://forms.gle/LAeMuvaxkh1w8sLj8",
+    preAdoption: "https://forms.gle/wSfqUUTQx7Xvwupp9",
     temporaryHome: "https://forms.gle/w5qcHekkppSAXKpC6",
   },
   agreements: {
