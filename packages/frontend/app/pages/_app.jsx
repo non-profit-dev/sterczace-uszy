@@ -7,14 +7,18 @@ import { ErrorBoundary } from "@rollbar/react"
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 import { func, shape } from "prop-types"
 import { ApolloProvider } from "@apollo/client"
+
+import "normalize.css/normalize.css"
 import "swiper/swiper-bundle.css"
+
 // eslint-disable-next-line import/no-unresolved
 import theme from "design-system/tokens/theme"
 import CookiesBanner from "design-system/blocks/cookiesBanner"
 import GlobalReset from "design-system/helpers/globalReset/GlobalReset"
+import FaniPayStyles from "design-system/helpers/faniPay"
+
 import * as gtag from "../lib/gtag"
 import client from "../lib/api"
-import "normalize.css/normalize.css"
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter()
@@ -68,6 +72,7 @@ const MyApp = ({ Component, pageProps }) => {
           >
             <ThemeProvider theme={theme}>
               <GlobalReset />
+              <FaniPayStyles />
               <Component {...pageProps} />
               <CookiesBanner />
             </ThemeProvider>
