@@ -1,10 +1,9 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import Link from "next/link"
 
 import { ExternalLink } from "lucide-react"
 
-import { Footer, Navigation } from "@/app/sections"
+import { Cta, Footer, Navigation } from "@/app/sections"
 import { Hero } from "@/components/hero"
 import { Button } from "@/components/ui"
 import { getGlobalData } from "@/lib/contentful"
@@ -122,7 +121,15 @@ export default async function InternationalAdoption() {
             </div>
           </div>
 
-          <div className="mt-20 flex max-w-4xl flex-col gap-12">
+          <div className="bg-primary-50 border-primary-500 mt-10 max-w-3xl rounded-lg border-l-4 p-5 lg:mt-20">
+            <p className="text-lg">
+              <span className="font-semibold">Ważne:</span> W przypadku psów właścicielskich adopcja
+              za granicę często niestety nie wchodzi w grę - decyzja w tej sprawie należy do
+              obecnego właściciela zwierzaka.
+            </p>
+          </div>
+
+          <div className="mt-10 flex max-w-4xl flex-col gap-12 lg:mt-20">
             <div>
               <h2 className="mb-6 text-3xl lg:text-4xl">
                 Adopcja zwierzaka młodszego niż 3 miesiące
@@ -227,6 +234,8 @@ export default async function InternationalAdoption() {
           </div>
         </section>
       </main>
+
+      <Cta variant="contact" />
 
       <Footer />
     </div>
