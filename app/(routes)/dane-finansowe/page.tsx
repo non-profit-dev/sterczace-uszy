@@ -7,10 +7,14 @@ import { Cta, Footer, Navigation } from "@/app/sections"
 import { Hero } from "@/components/hero"
 import { Button } from "@/components/ui"
 import { getFinancialStatements, type FinancialStatementFields } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Dane finansowe",
-}
+  description:
+    "Zobacz sprawozdania finansowe Fundacji Sterczące Uszy i sprawdź, jak przeznaczamy środki na pomoc zwierzętom.",
+  path: "/dane-finansowe",
+})
 
 export default async function FinancialData() {
   let financialStatements: FinancialStatementFields[] = []

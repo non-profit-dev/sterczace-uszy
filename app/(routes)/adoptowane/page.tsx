@@ -3,10 +3,13 @@ import Image from "next/image"
 
 import { Footer, Navigation } from "@/app/sections"
 import { getAdoptedAnimals } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Adoptowane",
-}
+export const metadata: Metadata = createPageMetadata({
+  title: "Adoptowane zwierzęta",
+  description: "Poznaj psy i koty, które dzięki Fundacji Sterczące Uszy znalazły swoje nowe domy.",
+  path: "/adoptowane",
+})
 
 export default async function AdoptedPage() {
   let animals: { name: string; thumbnail: { url: string } }[] = []

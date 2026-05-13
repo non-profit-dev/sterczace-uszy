@@ -7,10 +7,14 @@ import { Cta, Footer, Navigation } from "@/app/sections"
 import { Hero } from "@/components/hero"
 import { Button } from "@/components/ui"
 import { getGlobalData } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Umowy",
-}
+export const metadata: Metadata = createPageMetadata({
+  title: "Umowy adopcyjne",
+  description:
+    "Pobierz i przeczytaj umowy adopcyjne oraz dokumenty potrzebne do zakończenia procesu adopcji lub domu tymczasowego.",
+  path: "/umowy",
+})
 
 const agreementSteps = [
   "Przeczytaj umowę uważnie",

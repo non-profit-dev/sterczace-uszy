@@ -7,10 +7,14 @@ import { Cta, Footer, Navigation } from "@/app/sections"
 import { Hero } from "@/components/hero"
 import { Button } from "@/components/ui"
 import { getGlobalData } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Ankiety",
-}
+export const metadata: Metadata = createPageMetadata({
+  title: "Ankiety adopcyjne",
+  description:
+    "Wypełnij ankietę adopcyjną lub ankietę domu tymczasowego i rozpocznij proces pomocy zwierzętom pod opieką fundacji.",
+  path: "/ankiety",
+})
 
 const surveySteps = [
   "Wypełnij ankietę online",

@@ -5,10 +5,14 @@ import { Check, CreditCard } from "lucide-react"
 
 import { Cta, Footer, Navigation } from "@/app/sections"
 import { Hero } from "@/components/hero"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Regulamin płatności",
-}
+  description:
+    "Zapoznaj się z zasadami płatności i bezpiecznymi formami przekazywania wsparcia na rzecz Fundacji Sterczące Uszy.",
+  path: "/regulamin-platnosci",
+})
 
 const paymentMethods = [
   {

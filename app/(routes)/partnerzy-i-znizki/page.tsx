@@ -8,13 +8,17 @@ import { Hero } from "@/components/hero"
 import { Section } from "@/components/section"
 import { Button } from "@/components/ui"
 import { getPartnerships, type PartnershipFields } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
 import { DiscountCodeModal } from "./discount-code-modal"
 import { PartnerCardWithCopy } from "./partner-card-with-copy"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Partnerzy i zniżki",
-}
+  description:
+    "Sprawdź partnerów Fundacji Sterczące Uszy oraz dostępne zniżki i oferty wspierające opiekunów zwierząt.",
+  path: "/partnerzy-i-znizki",
+})
 
 export default async function PartnersAndDiscounts() {
   const safeAnimalFormId = process.env.NEXT_PUBLIC_SAFE_ANIMAL_FORM_ID

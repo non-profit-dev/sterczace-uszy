@@ -9,10 +9,14 @@ import { Hero } from "@/components/hero"
 import { Section } from "@/components/section"
 import { Button } from "@/components/ui"
 import { getGlobalData } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Adopcja wirtualna",
-}
+  description:
+    "Adoptuj wirtualnie podopiecznego Fundacji Sterczące Uszy i regularnie wspieraj jego leczenie, opiekę oraz codzienne potrzeby.",
+  path: "/adopcja-wirtualna",
+})
 
 export default async function VirtualAdoption() {
   const globalData = await getGlobalData()

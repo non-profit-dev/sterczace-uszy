@@ -8,6 +8,7 @@ import { Cta, Footer, Navigation } from "@/app/sections"
 import { parseRichText } from "@/app/utils"
 import { Button } from "@/components/ui"
 import { formatAnimalAge, getAnimal, getAnimals, getGlobalData } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
 import {
   AdoptionButtons,
@@ -28,7 +29,25 @@ interface PetDetailsPageProps {
 export async function generateMetadata({ params }: PetDetailsPageProps): Promise<Metadata> {
   const { slug } = await params
   const animal = await getAnimal(slug)
-  return { title: animal?.name ?? "Zwierzę" }
+
+  if (!animal) {
+    return createPageMetadata({
+      title: "Zwierzę do adopcji",
+      description: "Poznaj psy i koty czekające na dom pod opieką Fundacji Sterczące Uszy.",
+      path: `/do-adopcji/${slug}`,
+    })
+  }
+
+  const title = `${animal.name} do adopcji`
+  const description =
+    animal.excerpt || `Poznaj ${animal.name} i sprawdź szczegóły adopcji w Fundacji Sterczące Uszy.`
+
+  return createPageMetadata({
+    title,
+    description,
+    path: `/do-adopcji/${animal.slug}`,
+    image: animal.thumbnail?.url,
+  })
 }
 
 export async function generateStaticParams() {

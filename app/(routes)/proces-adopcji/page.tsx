@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Cta, Footer, Navigation } from "@/app/sections"
 import { Hero } from "@/components/hero"
 import { Section } from "@/components/section"
+import { createPageMetadata } from "@/lib/seo"
 
 import {
   AdoptionSteps,
@@ -11,9 +12,12 @@ import {
   RejectionReasons,
 } from "./components"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Proces adopcji",
-}
+  description:
+    "Dowiedz się, jak wygląda proces adopcji psa lub kota w Fundacji Sterczące Uszy, od ankiety po wizytę przedadopcyjną.",
+  path: "/proces-adopcji",
+})
 
 export default function AdoptionProcess() {
   return (

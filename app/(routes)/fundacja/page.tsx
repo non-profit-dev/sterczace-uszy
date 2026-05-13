@@ -6,10 +6,14 @@ import { Check, Heart, ScrollText, Users } from "lucide-react"
 import { Achievements, Cta, Footer, Navigation, Team, Testimonials } from "@/app/sections"
 import { Hero } from "@/components/hero"
 import { getManagementPeople, getTestimonials } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "O nas",
-}
+export const metadata: Metadata = createPageMetadata({
+  title: "O fundacji",
+  description:
+    "Poznaj misję, zespół i działania Fundacji Sterczące Uszy, która pomaga bezdomnym psom i kotom znaleźć bezpieczny dom.",
+  path: "/fundacja",
+})
 
 export default async function About() {
   let testimonials

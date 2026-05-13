@@ -6,12 +6,16 @@ import { Mail, MapPin, Phone, User } from "lucide-react"
 import { Footer, Navigation } from "@/app/sections"
 import { Hero } from "@/components/hero"
 import { getContactPeople, getGlobalData } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
 import { ContactForm } from "./contact-form"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Kontakt",
-}
+  description:
+    "Skontaktuj się z Fundacją Sterczące Uszy w sprawie adopcji, domu tymczasowego, wolontariatu, wsparcia lub współpracy.",
+  path: "/kontakt",
+})
 
 function formatPhoneForLink(phone: string): string {
   return `tel:+48${phone.replace(/[\s-]/g, "")}`

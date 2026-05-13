@@ -7,10 +7,14 @@ import { Cta, Footer, Navigation } from "@/app/sections"
 import { Hero } from "@/components/hero"
 import { Button } from "@/components/ui"
 import { getGlobalData } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Adopcja za granicę",
-}
+  description:
+    "Sprawdź zasady adopcji psa lub kota za granicę, wymagane dokumenty i proces przygotowania zwierzęcia do podróży.",
+  path: "/adopcja-za-granice",
+})
 
 export default async function InternationalAdoption() {
   const globalData = await getGlobalData()

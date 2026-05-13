@@ -5,10 +5,14 @@ import { ShieldCheck } from "lucide-react"
 import { Cta, Footer, Navigation } from "@/app/sections"
 import { Hero } from "@/components/hero"
 import { getGlobalData } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Polityka prywatności",
-}
+  description:
+    "Przeczytaj, jak Fundacja Sterczące Uszy przetwarza i chroni dane osobowe osób kontaktujących się z fundacją.",
+  path: "/polityka-prywatnosci",
+})
 
 export default async function PrivacyPolicy() {
   const globalData = await getGlobalData()

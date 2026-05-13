@@ -24,11 +24,17 @@ import {
   getPartnerships,
   type AnimalFields,
 } from "@/lib/contentful"
+import { createPageMetadata, siteConfig } from "@/lib/seo"
 
 export const metadata: Metadata = {
-  title: {
-    absolute: "Fundacja Sterczące Uszy",
-  },
+  ...createPageMetadata({
+    title: {
+      absolute: siteConfig.name,
+    },
+    description: siteConfig.description,
+    path: "/",
+    image: "/hero-background.png",
+  }),
 }
 
 export default async function Home() {

@@ -14,10 +14,14 @@ import {
   TabsTrigger,
 } from "@/components/ui"
 import { getFaqs } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "FAQ",
-}
+  description:
+    "Znajdź odpowiedzi na najczęstsze pytania dotyczące adopcji, domu tymczasowego i pomocy zwierzętom w Fundacji Sterczące Uszy.",
+  path: "/faq",
+})
 
 export default async function Faq() {
   const faqs = await getFaqs()

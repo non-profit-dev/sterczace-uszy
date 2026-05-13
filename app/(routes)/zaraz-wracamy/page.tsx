@@ -4,10 +4,15 @@ import Image from "next/image"
 import { PawPrint } from "lucide-react"
 
 import { getGlobalData } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Zaraz wracamy",
-}
+  description:
+    "Strona Fundacji Sterczące Uszy jest chwilowo niedostępna z powodu prac technicznych.",
+  path: "/zaraz-wracamy",
+  noIndex: true,
+})
 
 export default async function Maintenance() {
   const globalData = await getGlobalData()

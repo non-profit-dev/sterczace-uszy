@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Cta, Footer, Navigation } from "@/app/sections"
 import { Hero } from "@/components/hero"
 import { getVolunteerNeeds } from "@/lib/contentful"
+import { createPageMetadata } from "@/lib/seo"
 
 import {
   FinancialSupport,
@@ -12,9 +13,12 @@ import {
   VolunteerSection,
 } from "./components"
 
-export const metadata: Metadata = {
-  title: "Wsparcie",
-}
+export const metadata: Metadata = createPageMetadata({
+  title: "Jak pomóc fundacji",
+  description:
+    "Wesprzyj Fundację Sterczące Uszy darowizną, domem tymczasowym, wolontariatem, podatkiem 1,5% lub bezpłatnymi zakupami online.",
+  path: "/wsparcie",
+})
 
 export default async function Support() {
   const volunteerNeeds = await getVolunteerNeeds()

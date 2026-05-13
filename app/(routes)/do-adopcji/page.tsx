@@ -4,10 +4,14 @@ import { Cta, Footer, Navigation } from "@/app/sections"
 import { PetCard } from "@/components/pet-card"
 import { getAnimals, type AnimalFields } from "@/lib/contentful"
 import { formatAnimalAge } from "@/lib/contentful/utils"
+import { createPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Do adopcji",
-}
+export const metadata: Metadata = createPageMetadata({
+  title: "Psy i koty do adopcji",
+  description:
+    "Poznaj psy i koty czekające na dom pod opieką Fundacji Sterczące Uszy i sprawdź, komu możesz odmienić życie.",
+  path: "/do-adopcji",
+})
 
 export default async function AdoptionPage() {
   let animals: AnimalFields[] = []

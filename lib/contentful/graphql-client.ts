@@ -4,6 +4,7 @@ import { print } from "graphql"
 import { contentfulConfig } from "./config"
 
 const CONTENTFUL_GRAPHQL_ENDPOINT = `https://graphql.contentful.com/content/v1/spaces/${contentfulConfig.spaceId}/environments/${contentfulConfig.environment}`
+const CONTENTFUL_REVALIDATE_SECONDS = 10 * 60
 
 interface GraphQLResponse<T> {
   data: T
@@ -41,7 +42,7 @@ export async function fetchGraphQL<T = any>(
         variables,
       }),
       next: {
-        revalidate: preview ? 0 : 60,
+        revalidate: preview ? 0 : CONTENTFUL_REVALIDATE_SECONDS,
       },
     })
 
