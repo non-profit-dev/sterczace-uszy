@@ -13,7 +13,7 @@ import {
   Users,
 } from "lucide-react"
 
-import { Achievements, Announcement, Collabo, Cta, Footer, Navigation } from "@/app/sections"
+import { Achievements, Collabo, Cta, Footer, Navigation } from "@/app/sections"
 import { PetCard } from "@/components/pet-card"
 import { Section } from "@/components/section"
 import { Button } from "@/components/ui"
@@ -54,8 +54,6 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <Announcement />
-
       <Navigation />
 
       <header className="w-full bg-gray-700 pt-10 md:pb-12 lg:pt-10 lg:pb-24">
