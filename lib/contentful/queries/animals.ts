@@ -34,6 +34,20 @@ export const GET_ADOPTED_ANIMALS = gql`
   }
 `
 
+export const GET_ADOPTED_ANIMALS_GALLERY = gql`
+  query GetAdoptedAnimalsGallery {
+    animalCollection(where: { adopted: true }, order: sys_publishedAt_DESC) {
+      total
+      items {
+        name
+        thumbnail {
+          url(transform: { quality: 60, format: JPG, width: 300 })
+        }
+      }
+    }
+  }
+`
+
 export const GET_ALL_ANIMALS_COUNT = gql`
   query GetAllAnimalsCount {
     animalCollection {
@@ -120,6 +134,14 @@ export async function getAnimals(preview = false) {
   const response = await fetchGraphQL<{
     animalCollection: GraphQLCollection<AnimalFields>
   }>(GET_ANIMALS, {}, preview)
+
+  return response.animalCollection.items
+}
+
+export async function getAdoptedAnimals(preview = false) {
+  const response = await fetchGraphQL<{
+    animalCollection: GraphQLCollection<Pick<AnimalFields, "name" | "thumbnail">>
+  }>(GET_ADOPTED_ANIMALS_GALLERY, {}, preview)
 
   return response.animalCollection.items
 }

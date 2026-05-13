@@ -65,6 +65,11 @@ const data: NavItem[] = [
         description: "Wspieraj zwierzęta na odległość.",
       },
       {
+        title: "Adoptowane",
+        href: "/adoptowane",
+        description: "Zwierzęta, które znalazły swój dom.",
+      },
+      {
         title: "Najczęstsze pytania",
         href: "/faq",
         description: "Odpowiedzi na często zadawane pytania.",
