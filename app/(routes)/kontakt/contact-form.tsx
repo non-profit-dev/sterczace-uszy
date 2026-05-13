@@ -1,6 +1,6 @@
 "use client"
 
-import { useForm as useFormSpree } from "@formspree/react"
+import { useForm as useFormSpree, ValidationError } from "@formspree/react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Controller, useForm } from "react-hook-form"
 import * as z from "zod"
@@ -50,7 +50,7 @@ export function ContactForm({ formId }: ContactFormProps) {
     register,
     handleSubmit,
     control,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
+    formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({
     mode: "onSubmit",
     resolver: zodResolver(ContactFormSchema),
@@ -63,7 +63,8 @@ export function ContactForm({ formId }: ContactFormProps) {
     },
   })
 
-  const [, handleFormSubmit] = useFormSpree(formId)
+  const [formspreeState, handleFormSubmit] = useFormSpree<ContactFormData>(formId)
+  const submitting = isSubmitting || formspreeState.submitting
 
   const onSubmit = async (data: ContactFormData) => {
     await handleFormSubmit({
@@ -71,12 +72,13 @@ export function ContactForm({ formId }: ContactFormProps) {
       email: data.email,
       topic: data.topic,
       message: data.message,
+      consent: data.consent,
     })
   }
 
   return (
     <div className="rounded-2xl border bg-white p-8">
-      {isSubmitSuccessful ? (
+      {formspreeState.succeeded ? (
         <div className="bg-success-100/10 border-success-100 text-success-100 mb-6 rounded-lg border p-4">
           Dziękujemy za wiadomość! Skontaktujemy się z Tobą wkrótce.
         </div>
@@ -168,8 +170,13 @@ export function ContactForm({ formId }: ContactFormProps) {
                 </div>
               </Field>
 
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
-                {isSubmitting ? "Wysyłanie..." : "Wyślij wiadomość"}
+              <ValidationError
+                errors={formspreeState.errors}
+                className="text-destructive text-sm"
+              />
+
+              <Button type="submit" className="w-full" disabled={submitting}>
+                {submitting ? "Wysyłanie..." : "Wyślij wiadomość"}
               </Button>
             </FieldGroup>
           </form>

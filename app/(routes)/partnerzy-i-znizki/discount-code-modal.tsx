@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-import { useForm as useFormSpree } from "@formspree/react"
+import { useForm as useFormSpree, ValidationError } from "@formspree/react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Controller, useForm } from "react-hook-form"
 import * as z from "zod"
@@ -31,6 +31,9 @@ const DiscountCodeFormSchema = z.object({
 })
 
 type DiscountCodeFormData = z.infer<typeof DiscountCodeFormSchema>
+type DiscountCodeSubmissionData = DiscountCodeFormData & {
+  message: string
+}
 
 interface DiscountCodeModalProps {
   formId: string
@@ -43,7 +46,7 @@ export function DiscountCodeModal({ formId }: DiscountCodeModalProps) {
     register,
     handleSubmit,
     control,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<DiscountCodeFormData>({
     mode: "onSubmit",
@@ -55,20 +58,24 @@ export function DiscountCodeModal({ formId }: DiscountCodeModalProps) {
     },
   })
 
-  const [, handleFormSubmit] = useFormSpree(formId)
+  const [formspreeState, handleFormSubmit, resetFormSpree] =
+    useFormSpree<DiscountCodeSubmissionData>(formId)
+  const submitting = isSubmitting || formspreeState.submitting
 
   const onSubmit = async (data: DiscountCodeFormData) => {
     await handleFormSubmit({
       name: data.name,
       email: data.email,
+      consent: data.consent,
       message: "Prośba o kod zniżkowy do Safe Animal",
     })
   }
 
   const handleOpenChange = (newOpen: boolean) => {
     setOpen(newOpen)
-    if (!newOpen && isSubmitSuccessful) {
+    if (!newOpen && formspreeState.succeeded) {
       reset()
+      resetFormSpree()
     }
   }
 
@@ -78,7 +85,7 @@ export function DiscountCodeModal({ formId }: DiscountCodeModalProps) {
         <Button>Poproś o kod zniżkowy</Button>
       </DialogTrigger>
       <DialogContent className="max-w-md">
-        {isSubmitSuccessful ? (
+        {formspreeState.succeeded ? (
           <div className="justify-center py-6 text-center">
             <DialogHeader className="mb-4">
               <DialogTitle>Dziękujemy!</DialogTitle>
@@ -145,8 +152,13 @@ export function DiscountCodeModal({ formId }: DiscountCodeModalProps) {
                   </div>
                 </Field>
 
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? "Wysyłanie..." : "Wyślij prośbę"}
+                <ValidationError
+                  errors={formspreeState.errors}
+                  className="text-destructive text-sm"
+                />
+
+                <Button type="submit" className="w-full" disabled={submitting}>
+                  {submitting ? "Wysyłanie..." : "Wyślij prośbę"}
                 </Button>
               </FieldGroup>
             </form>

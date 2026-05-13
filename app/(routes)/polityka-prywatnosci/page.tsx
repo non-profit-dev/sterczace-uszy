@@ -46,7 +46,7 @@ export default async function PrivacyPolicy() {
 
             <p className="mb-4 text-lg">
               W razie pytań lub wątpliwości możesz się z nami skontaktować pod adresem e-mail:{" "}
-              <a href={globalData.email} className="text-primary-500 hover:underline">
+              <a href={`mailto:${globalData.email}`} className="text-primary-500 hover:underline">
                 {globalData.email}
               </a>
               .
@@ -418,7 +418,7 @@ export default async function PrivacyPolicy() {
             </p>
             <p className="mb-4 text-lg">
               Usunięcie danych nastąpi automatycznie po wysłaniu na maila{" "}
-              <a href={globalData.email} className="text-primary-500 hover:underline">
+              <a href={`mailto:${globalData.email}`} className="text-primary-500 hover:underline">
                 {globalData.email}
               </a>{" "}
               prośby o wycofanie zgody.
@@ -435,7 +435,7 @@ export default async function PrivacyPolicy() {
             <p className="mt-4 text-lg">
               W celu realizacji powyższych uprawnień lub uzyskania dodatkowych informacji na temat
               przetwarzania Twoich danych, skontaktuj się z nami na maila{" "}
-              <a href={globalData.email} className="text-primary-500 hover:underline">
+              <a href={`mailto:${globalData.email}`} className="text-primary-500 hover:underline">
                 {globalData.email}
               </a>
               .
@@ -449,7 +449,7 @@ export default async function PrivacyPolicy() {
             <p className="mb-4 text-lg">
               W przypadku gdy masz zastrzeżenia co do sposobu, w jaki przetwarzamy Twoje dane,
               prosimy w pierwszej kolejności o kontakt z nami za pomocą adresu e-mail:{" "}
-              <a href={globalData.email} className="text-primary-500 hover:underline">
+              <a href={`mailto:${globalData.email}`} className="text-primary-500 hover:underline">
                 {globalData.email}
               </a>
               .

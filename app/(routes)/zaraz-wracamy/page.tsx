@@ -40,7 +40,7 @@ export default async function Maintenance() {
           <div className="pt-8">
             <p className="text-base text-gray-500">W pilnych sprawach napisz do nas:</p>
             <a
-              href={globalData.email}
+              href={`mailto:${globalData.email}`}
               className="text-primary-500 hover:text-primary-600 font-semibold transition-colors"
             >
               {globalData.email}
