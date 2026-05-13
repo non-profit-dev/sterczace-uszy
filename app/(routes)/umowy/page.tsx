@@ -63,7 +63,7 @@ export default async function Agreements() {
 
               {globalData.adoptionAgreement ? (
                 <Button variant="outline" asChild className="w-full">
-                  <a href={globalData.adoptionAgreement} target="_blank">
+                  <a href={globalData.adoptionAgreement} target="_blank" rel="noopener noreferrer">
                     <Download className="mr-2 h-5 w-5" />
                     Umowa adopcyjna
                   </a>
@@ -86,7 +86,11 @@ export default async function Agreements() {
 
               {globalData.temporaryHomeAgreement ? (
                 <Button variant="outline" asChild className="w-full">
-                  <a href={globalData.temporaryHomeAgreement} target="_blank">
+                  <a
+                    href={globalData.temporaryHomeAgreement}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Download className="mr-2 h-5 w-5" />
                     Umowa domu tymczasowego
                   </a>

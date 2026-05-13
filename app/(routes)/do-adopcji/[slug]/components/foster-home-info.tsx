@@ -68,7 +68,7 @@ export function FosterHomeInfo({ name, surveyLink }: FosterHomeInfoProps) {
 
       {surveyLink && (
         <Button asChild className="md:mt-4 md:self-center">
-          <a target="_blank" href={surveyLink}>
+          <a target="_blank" rel="noopener noreferrer" href={surveyLink}>
             <Heart className="mr-2 h-4 w-4" />
             Zostań domem tymczasowym
           </a>

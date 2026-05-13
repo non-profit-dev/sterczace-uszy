@@ -7,45 +7,6 @@ export function extractCollection<T>(collectionData: {
   return collectionData?.items || []
 }
 
-export function buildGraphQLQuery(
-  contentType: string,
-  fields: string,
-  options?: {
-    limit?: number
-    skip?: number
-    where?: Record<string, any>
-    order?: string
-  }
-): string {
-  const { limit = 10, skip = 0, where, order } = options || {}
-
-  const whereClause = where ? `, where: ${JSON.stringify(where)}` : ""
-  const orderClause = order ? `, order: "${order}"` : ""
-
-  return `
-    query {
-      ${contentType}Collection(limit: ${limit}, skip: ${skip}${whereClause}${orderClause}) {
-        total
-        skip
-        limit
-        items {
-          ${fields}
-        }
-      }
-    }
-  `
-}
-
-export function buildSingleItemQuery(contentType: string, id: string, fields: string): string {
-  return `
-    query {
-      ${contentType}(id: "${id}") {
-        ${fields}
-      }
-    }
-  `
-}
-
 export function getYearsSinceFoundation(): number {
   const foundationDate = new Date("2022-04-14")
   const today = new Date()

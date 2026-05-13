@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -23,6 +24,12 @@ import {
   getPartnerships,
   type AnimalFields,
 } from "@/lib/contentful"
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Fundacja Sterczące Uszy",
+  },
+}
 
 export default async function Home() {
   let globalData

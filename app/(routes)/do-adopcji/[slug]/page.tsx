@@ -1,20 +1,34 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 
-import { ArrowLeft, Heart } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 
 import { Cta, Footer, Navigation } from "@/app/sections"
 import { parseRichText } from "@/app/utils"
 import { Button } from "@/components/ui"
 import { formatAnimalAge, getAnimal, getAnimals, getGlobalData } from "@/lib/contentful"
 
-import { AdoptionInfo, FosterHomeInfo, ImageGallery, PetAttributes, PetInfo } from "./components"
+import {
+  AdoptionButtons,
+  AdoptionInfo,
+  FosterHomeInfo,
+  ImageGallery,
+  PetAttributes,
+  PetInfo,
+} from "./components"
 import { getAdoptionStatusDisplay, getGenderDisplay } from "./utils"
 
 interface PetDetailsPageProps {
   params: Promise<{
     slug: string
   }>
+}
+
+export async function generateMetadata({ params }: PetDetailsPageProps): Promise<Metadata> {
+  const { slug } = await params
+  const animal = await getAnimal(slug)
+  return { title: animal?.name ?? "Zwierzę" }
 }
 
 export async function generateStaticParams() {
@@ -63,25 +77,12 @@ export default async function PetDetailsPage({ params }: PetDetailsPageProps) {
           <div className="lg:w-1/3">
             <ImageGallery images={images} />
 
-            <div className="mt-6 hidden border-t lg:block">
-              <div className="space-y-2 pt-6">
-                <Button asChild className="w-full">
-                  <a target="_blank" href={globalData.preAdoptionSurveyLink}>
-                    <Heart className="mr-2 h-5 w-5" />
-                    Adoptuj mnie
-                  </a>
-                </Button>
-
-                {!animal.temporaryHome && globalData?.temporaryHomeSurveyLink && (
-                  <div className="text-center">
-                    <Button asChild variant="link">
-                      <a target="_blank" href={globalData.temporaryHomeSurveyLink}>
-                        Zostań domem tymczasowym
-                      </a>
-                    </Button>
-                  </div>
-                )}
-              </div>
+            <div className="mt-6 hidden border-t pt-6 lg:block">
+              <AdoptionButtons
+                preAdoptionSurveyLink={globalData.preAdoptionSurveyLink}
+                temporaryHomeSurveyLink={globalData.temporaryHomeSurveyLink}
+                temporaryHome={animal.temporaryHome || false}
+              />
             </div>
           </div>
 
@@ -131,24 +132,12 @@ export default async function PetDetailsPage({ params }: PetDetailsPageProps) {
             </div>
           </div>
 
-          <div className="mt-6 border-t lg:hidden">
-            <div className="space-y-2 pt-6">
-              <Button asChild className="w-full">
-                <a target="_blank" href={globalData.preAdoptionSurveyLink}>
-                  <Heart className="h-5 w-5" />
-                  Adoptuj mnie
-                </a>
-              </Button>
-              {!animal.temporaryHome && globalData?.temporaryHomeSurveyLink && (
-                <div className="text-center">
-                  <Button asChild variant="link">
-                    <a target="_blank" href={globalData.temporaryHomeSurveyLink}>
-                      Zostań domem tymczasowym
-                    </a>
-                  </Button>
-                </div>
-              )}
-            </div>
+          <div className="mt-6 border-t pt-6 lg:hidden">
+            <AdoptionButtons
+              preAdoptionSurveyLink={globalData.preAdoptionSurveyLink}
+              temporaryHomeSurveyLink={globalData.temporaryHomeSurveyLink}
+              temporaryHome={animal.temporaryHome || false}
+            />
           </div>
         </section>
 

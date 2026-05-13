@@ -1,8 +1,13 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 
 import { PawPrint } from "lucide-react"
 
 import { getGlobalData } from "@/lib/contentful"
+
+export const metadata: Metadata = {
+  title: "Zaraz wracamy",
+}
 
 export default async function Maintenance() {
   const globalData = await getGlobalData()

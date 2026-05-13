@@ -47,7 +47,11 @@ export async function TemporaryHome() {
 
               {globalData?.temporaryHomeSurveyLink && (
                 <Button asChild variant="link" size="sm" className="mt-3">
-                  <a target="_blank" href={globalData?.temporaryHomeSurveyLink}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={globalData?.temporaryHomeSurveyLink}
+                  >
                     <Download className="h-4 w-4" />
                     Pobierz ankietę
                   </a>

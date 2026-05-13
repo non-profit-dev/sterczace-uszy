@@ -24,7 +24,7 @@ import {
 
 const ContactFormSchema = z.object({
   name: z.string().min(1, "Imię jest wymagane"),
-  email: z.string().min(1, "Email jest wymagany"),
+  email: z.string().min(1, "Email jest wymagany").email("Podaj poprawny adres email"),
   topic: z.string().min(1, "Wybierz temat wiadomości"),
   message: z.string().min(1, "Wiadomość jest wymagana"),
   consent: z.boolean().refine((value) => value === true, "Zgoda jest wymagana"),
@@ -63,7 +63,7 @@ export function ContactForm({ formId }: ContactFormProps) {
     },
   })
 
-  const [_, handleFormSubmit] = useFormSpree(formId)
+  const [, handleFormSubmit] = useFormSpree(formId)
 
   const onSubmit = async (data: ContactFormData) => {
     await handleFormSubmit({

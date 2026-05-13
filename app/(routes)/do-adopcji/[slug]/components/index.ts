@@ -1,3 +1,4 @@
+export { AdoptionButtons } from "./adoption-buttons"
 export { AdoptionInfo } from "./adoption-info"
 export { FosterHomeInfo } from "./foster-home-info"
 export { ImageGallery } from "./image-gallery"

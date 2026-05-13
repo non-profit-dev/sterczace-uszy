@@ -55,7 +55,7 @@ export function DiscountCodeModal({ formId }: DiscountCodeModalProps) {
     },
   })
 
-  const [_, handleFormSubmit] = useFormSpree(formId)
+  const [, handleFormSubmit] = useFormSpree(formId)
 
   const onSubmit = async (data: DiscountCodeFormData) => {
     await handleFormSubmit({

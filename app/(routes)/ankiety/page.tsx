@@ -63,7 +63,11 @@ export default async function Surveys() {
 
               {globalData.preAdoptionSurveyLink ? (
                 <Button variant="outline" asChild className="w-full">
-                  <a href={globalData.preAdoptionSurveyLink} target="_blank">
+                  <a
+                    href={globalData.preAdoptionSurveyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <ExternalLink className="mr-2 h-5 w-5" />
                     Ankieta przedadopcyjna
                   </a>
@@ -87,7 +91,11 @@ export default async function Surveys() {
 
               {globalData.temporaryHomeSurveyLink ? (
                 <Button variant="outline" asChild className="w-full">
-                  <a href={globalData.temporaryHomeSurveyLink} target="_blank">
+                  <a
+                    href={globalData.temporaryHomeSurveyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <ExternalLink className="mr-2 h-5 w-5" />
                     Ankieta dla domu tymczasowego
                   </a>

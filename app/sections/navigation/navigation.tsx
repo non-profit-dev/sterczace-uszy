@@ -38,8 +38,8 @@ export function Navigation() {
 
           <NavigationMenu viewport={false} className="hidden lg:flex">
             <NavigationMenuList>
-              {data.map((item, index) => (
-                <NavigationMenuItem key={index}>
+              {data.map((item) => (
+                <NavigationMenuItem key={item.title}>
                   {hasLinks(item) ? (
                     <>
                       <NavigationMenuTrigger className="hover:text-primary-500 data-[state=open]:text-primary-500 text-gray-600">
@@ -47,8 +47,8 @@ export function Navigation() {
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul className="grid w-60 gap-1 p-1">
-                          {item.links.map((link, linkIndex) => (
-                            <ListItem key={linkIndex} title={link.title} href={link.href}>
+                          {item.links.map((link) => (
+                            <ListItem key={link.title} title={link.title} href={link.href}>
                               {link.description}
                             </ListItem>
                           ))}
@@ -105,8 +105,8 @@ export function Navigation() {
         {isMobileMenuOpen && (
           <div className="mt-4 border-t border-gray-200 pt-4 lg:hidden">
             <ul className="flex flex-col gap-2">
-              {data.map((item, index) => (
-                <li key={index}>
+              {data.map((item) => (
+                <li key={item.title}>
                   {hasLinks(item) ? (
                     <details className="group">
                       <summary className="hover:text-primary-500 flex cursor-pointer list-none items-center justify-between py-2 font-semibold text-gray-600 transition-colors">
@@ -126,8 +126,8 @@ export function Navigation() {
                         </svg>
                       </summary>
                       <ul className="mt-2 ml-4 flex flex-col gap-2">
-                        {item.links.map((link, linkIndex) => (
-                          <li key={linkIndex}>
+                        {item.links.map((link) => (
+                          <li key={link.title}>
                             <Link
                               href={link.href}
                               className="hover:text-primary-500 block py-2 text-gray-600 transition-colors"
