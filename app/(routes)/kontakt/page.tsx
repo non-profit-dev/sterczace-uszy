@@ -34,11 +34,11 @@ export default async function Contact() {
       <main className="flex w-full max-w-6xl flex-col items-center gap-y-16 px-4 py-16 lg:gap-y-24 lg:py-24">
         <div className="grid w-full grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="flex flex-col gap-8">
-            <h2 className="mb-4 text-3xl lg:text-4xl">Dane kontaktowe</h2>
+            <h2 className="text-2xl lg:mb-4 lg:text-4xl">Dane kontaktowe</h2>
 
             <div className="flex flex-col gap-6">
               <div className="flex items-start gap-4">
-                <div className="bg-primary-50 flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
+                <div className="bg-primary-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-full lg:h-12 lg:w-12">
                   <Mail className="text-primary-500 h-5 w-5" />
                 </div>
                 <div>
@@ -54,7 +54,7 @@ export default async function Contact() {
 
               {contactPeople.length > 0 && (
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary-50 flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
+                  <div className="bg-primary-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-full lg:h-12 lg:w-12">
                     <Phone className="text-primary-500 h-5 w-5" />
                   </div>
                   <div>
@@ -73,7 +73,7 @@ export default async function Contact() {
               )}
 
               <div className="flex items-start gap-4">
-                <div className="bg-primary-50 flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
+                <div className="bg-primary-50 flex h-10 w-10 shrink-0 items-center justify-center rounded-full lg:h-12 lg:w-12">
                   <MapPin className="text-primary-500 h-5 w-5" />
                 </div>
                 <div>

@@ -35,12 +35,12 @@ export default async function InternationalAdoption() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 flex max-w-3xl flex-col gap-4">
               <h2 className="text-3xl lg:text-5xl">Warunki adopcji za granicę</h2>
-              <p className="text-xl">
+              <p className="text-lg lg:text-xl">
                 Adopcja za granicę przebiega podobnie do standardowej adopcji. Jedynym dodatkowym
                 elementem jest kwarantanna.
               </p>
 
-              <p className="text-xl font-semibold">
+              <p className="text-lg font-semibold lg:text-xl">
                 Sprawdź jakie są 4 warunki, aby stała się możliwa.
               </p>
             </div>
@@ -59,8 +59,8 @@ export default async function InternationalAdoption() {
             <div className="flex flex-col gap-10 pt-6 lg:w-2/3">
               <div className="flex gap-6">
                 <div className="shrink-0">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-500 lg:h-18 lg:w-18">
-                    <p className="font-mogra text-3xl text-white lg:text-4xl">1</p>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-500 lg:h-18 lg:w-18">
+                    <p className="font-mogra text-2xl text-white lg:text-4xl">1</p>
                   </div>
                 </div>
                 <div>
@@ -73,8 +73,8 @@ export default async function InternationalAdoption() {
 
               <div className="flex gap-6">
                 <div className="shrink-0">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-500 lg:h-18 lg:w-18">
-                    <p className="font-mogra text-3xl text-white lg:text-4xl">2</p>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-500 lg:h-18 lg:w-18">
+                    <p className="font-mogra text-2xl text-white lg:text-4xl">2</p>
                   </div>
                 </div>
                 <div>
@@ -87,8 +87,8 @@ export default async function InternationalAdoption() {
 
               <div className="flex gap-6">
                 <div className="shrink-0">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-500 lg:h-18 lg:w-18">
-                    <p className="font-mogra text-3xl text-white lg:text-4xl">3</p>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-500 lg:h-18 lg:w-18">
+                    <p className="font-mogra text-2xl text-white lg:text-4xl">3</p>
                   </div>
                 </div>
                 <div>
@@ -101,8 +101,8 @@ export default async function InternationalAdoption() {
 
               <div className="flex gap-6">
                 <div className="shrink-0">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-500 lg:h-18 lg:w-18">
-                    <p className="font-mogra text-3xl text-white lg:text-4xl">4</p>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-500 lg:h-18 lg:w-18">
+                    <p className="font-mogra text-2xl text-white lg:text-4xl">4</p>
                   </div>
                 </div>
                 <div>
@@ -140,14 +140,14 @@ export default async function InternationalAdoption() {
               </h2>
 
               <div className="flex flex-col gap-4">
-                <p className="text-xl">
+                <p className="text-lg lg:text-xl">
                   Adopcja zwierzęcia (psa lub kota) za granicę, które nie ukończyło jeszcze 3.
                   miesiąca życia, jest możliwa. W takiej sytuacji konieczne jest jednak zapewnienie
                   mu bezpiecznego miejsca pobytu do momentu ukończenia 3 miesięcy oraz dopełnienia
                   wszystkich wymaganych formalności.
                 </p>
 
-                <p className="text-xl">
+                <p className="text-lg lg:text-xl">
                   Może to być pobyt u zaufanej rodziny lub w domu tymczasowym we współpracy z
                   Fundacją. W przypadku podpisania umowy o dom tymczasowy koszty opieki
                   weterynaryjnej oraz karmy pokrywa osoba adoptująca.
@@ -159,13 +159,13 @@ export default async function InternationalAdoption() {
               <h2 className="mb-6 text-3xl lg:text-4xl">Wyjątkowe sytuacje</h2>
 
               <div className="flex flex-col gap-4">
-                <p className="text-xl">
+                <p className="text-lg lg:text-xl">
                   W szczególnych przypadkach, po wcześniejszym ustaleniu i za zgodą Fundacji,
                   istnieje możliwość pozostawienia zwierzęcia w domu tymczasowym do czasu wykonania
                   wymaganych szczepień oraz odbycia obowiązkowej kwarantanny poszczepiennej.
                 </p>
 
-                <p className="text-xl">
+                <p className="text-lg lg:text-xl">
                   W takiej sytuacji osoba adoptująca pokrywa koszty opieki weterynaryjnej, karmy
                   oraz innych niezbędnych wydatków, które są wcześniej ustalane z Domem Tymczasowym.
                 </p>
@@ -174,16 +174,16 @@ export default async function InternationalAdoption() {
 
             <div>
               <h2 className="mb-6 text-3xl lg:text-4xl">
-                Ankieta i umowa adopcyjna – adopcja za granicę
+                Ankieta i umowa adopcyjna - adopcja za granicę
               </h2>
 
               <div className="flex flex-col gap-4">
-                <p className="text-xl">
+                <p className="text-lg lg:text-xl">
                   W przypadku adopcji za granicę obowiązuje ta sama ankieta adopcyjna, co przy
                   adopcjach krajowych.
                 </p>
 
-                <p className="text-xl">
+                <p className="text-lg lg:text-xl">
                   Umowa adopcyjna zawiera natomiast dodatkowe zapisy dotyczące pobytu zwierzęcia w
                   Domu Tymczasowym oraz zasad jego utrzymania do momentu wyjazdu.
                 </p>
@@ -222,13 +222,13 @@ export default async function InternationalAdoption() {
               <h2 className="mb-6 text-3xl lg:text-4xl">Warunki wyjazdu zwierzęcia poza Polskę</h2>
 
               <div className="flex flex-col gap-4">
-                <p className="text-xl">
+                <p className="text-lg lg:text-xl">
                   Wyjazd zwierzęcia za granicę jest możliwy po podpisaniu umowy adopcyjnej oraz
                   spełnieniu wszystkich jej warunków. Ma to na celu zapewnienie bezpieczeństwa i
                   dobra zwierzęcia na każdym etapie procesu adopcyjnego.
                 </p>
 
-                <p className="text-xl">
+                <p className="text-lg lg:text-xl">
                   W przypadku braku możliwości spełnienia ustaleń zawartych w umowie Fundacja
                   zastrzega sobie prawo do wstrzymania adopcji i poszukania innego, odpowiedniego
                   domu dla zwierzęcia.

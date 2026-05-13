@@ -32,27 +32,27 @@ export function PetCard({ id, name, image, age, location, gender, excerpt }: Pet
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
         <div
-          className={`absolute right-4 bottom-4 h-10 w-10 rounded-lg ${genderColor} flex items-center justify-center text-lg font-bold`}
+          className={`absolute right-4 bottom-4 h-8 w-8 rounded-lg lg:h-10 lg:w-10 ${genderColor} flex items-center justify-center text-lg font-bold`}
         >
           {genderIcon}
         </div>
       </div>
 
-      <div className="p-4">
+      <div className="p-3 lg:p-4">
         <div className="mb-3 flex items-baseline justify-between">
-          <h3 className="text-xl lg:text-2xl">{name}</h3>
-          {age && <span className="text-sm text-gray-500">~ {age}</span>}
+          <h3 className="text-lg lg:text-2xl">{name}</h3>
+          {age && <span className="text-xs text-gray-500 lg:text-sm">~ {age}</span>}
         </div>
 
         {location && (
           <Badge variant="secondary" className="mt-1 mb-3">
             <MapPin className="h-5 w-5" />
-            <p className="text-sm font-medium">{location}</p>
+            <p className="text-xs font-medium lg:text-sm">{location}</p>
           </Badge>
         )}
 
         <div className="flex flex-wrap gap-2">
-          <p className="text-sm">{excerpt}</p>
+          <p className="text-xs lg:text-sm">{excerpt}</p>
         </div>
       </div>
     </Link>

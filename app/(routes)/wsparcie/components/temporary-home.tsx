@@ -14,7 +14,7 @@ export async function TemporaryHome() {
       <Section.Header align="center">
         <p className="text-primary-500 font-bold uppercase">Pomagaj</p>
         <h2 className="text-3xl lg:text-5xl">Zostań domem tymczasowym</h2>
-        <p className="text-muted-foreground text-xl">
+        <p className="text-muted-foreground text-lg lg:text-xl">
           Dom tymczasowy to pierwsze bezpieczne miejsce, jakie poznaje uratowane zwierzę. <br />
           To tutaj uczy się, że człowiek może być dobry, że miska zawsze będzie pełna, a dotyk nie
           boli.
@@ -34,11 +34,11 @@ export async function TemporaryHome() {
 
             <div>
               <h3 className="mb-4 text-xl lg:text-2xl">Wypełnij ankietę</h3>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground text-md lg:text-lg">
                 Cieszymy się, że chcesz pomóc. Dla dobra naszych podopiecznych musimy upewnić się,
                 że trafiają w odpowiednie ręce - dlatego prosimy Cię o wypełnienie krótkiej ankiety.
               </p>
-              <p className="text-muted-foreground mt-2 text-lg">
+              <p className="text-muted-foreground text-md mt-2 lg:text-lg">
                 Uzupełnioną ankietę prześlij na adres:{" "}
                 <Button asChild variant="link" size="sm">
                   <a href={`mailto:${globalData?.email}`}>{globalData?.email}</a>
@@ -67,16 +67,16 @@ export async function TemporaryHome() {
 
             <div>
               <h3 className="mb-4 text-xl lg:text-2xl">Zdecyduj na jak długo</h3>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground text-md lg:text-lg">
                 Zostając domem tymczasowym deklarujesz, jak długo jesteś w stanie zapewnić opiekę.
                 Minimalny okres to 6 miesięcy, ale pamiętaj:
               </p>
 
-              <p className="text-muted-foreground mt-2 text-lg font-semibold">
+              <p className="text-muted-foreground text-md mt-2 font-semibold lg:text-lg">
                 Dom stały ma zawsze pierwszeństwo w adopcji
               </p>
 
-              <p className="text-muted-foreground mt-2 text-lg">
+              <p className="text-muted-foreground text-md mt-2 lg:text-lg">
                 Jeśli się zakochasz i zechcesz zostać domem na zawsze — daj nam znać To zdarza się
                 częściej, niż myślisz.
               </p>
@@ -90,12 +90,12 @@ export async function TemporaryHome() {
 
             <div>
               <h3 className="mb-4 text-xl lg:text-2xl">Daj dom i miłość</h3>
-              <p className="text-muted-foreground text-lg">Fundacja zapewnia:</p>
-              <ul className="text-muted-foreground mt-2 mb-4 list-inside list-disc space-y-2 text-lg">
+              <p className="text-muted-foreground text-md lg:text-lg">Fundacja zapewnia:</p>
+              <ul className="text-muted-foreground text-md mt-2 mb-4 list-inside list-disc space-y-2 lg:text-lg">
                 <li>karmę, miski, zabawki i legowisko</li>
                 <li>pełne wsparcie weterynaryjne (opłacamy wizyty — wystarczy zbierać faktury)</li>
               </ul>
-              <p className="text-muted-foreground mt-2 text-lg">
+              <p className="text-muted-foreground text-md mt-2 lg:text-lg">
                 Ty dajesz to, co najważniejsze: cierpliwość, spokój i poczucie bezpieczeństwa. Nawet
                 jeśli tylko na chwilę - ta chwila zmienia całe życie.
               </p>

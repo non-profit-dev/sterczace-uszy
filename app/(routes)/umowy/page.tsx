@@ -45,11 +45,11 @@ export default async function Agreements() {
               {agreementSteps.map((step, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="mt-1 shrink-0">
-                    <div className="bg-primary-500 flex h-6 w-6 items-center justify-center rounded-full">
-                      <Check className="h-4 w-4 text-white" strokeWidth={3} />
+                    <div className="bg-primary-500 flex h-5 w-5 items-center justify-center rounded-full lg:h-6 lg:w-6">
+                      <Check className="h-3 w-3 text-white lg:h-4 lg:w-4" strokeWidth={3} />
                     </div>
                   </div>
-                  <p className="text-lg">{step}</p>
+                  <p className="text-md lg:text-lg">{step}</p>
                 </li>
               ))}
             </ul>
@@ -57,10 +57,10 @@ export default async function Agreements() {
 
           <div className="mb-12 grid gap-8 md:grid-cols-2">
             <div className="flex flex-col rounded-lg border-2 border-gray-200 bg-white p-5 lg:p-8">
-              <h3 className="mb-6 text-xl lg:text-2xl">Umowa adopcyjna</h3>
+              <h3 className="mb-4 text-xl lg:mb-6 lg:text-2xl">Umowa adopcyjna</h3>
 
               <div className="mb-6 flex-1">
-                <p className="text-lg">
+                <p className="text-md lg:text-lg">
                   Dokument prawny regulujący warunki adopcji zwierzęcia z fundacji.
                 </p>
               </div>
@@ -80,10 +80,10 @@ export default async function Agreements() {
             </div>
 
             <div className="flex flex-col rounded-lg border-2 border-gray-200 bg-white p-5 lg:p-8">
-              <h3 className="mb-6 text-xl lg:text-2xl">Umowa zostania domem tymczasowym</h3>
+              <h3 className="mb-4 text-xl lg:mb-6 lg:text-2xl">Umowa zostania domem tymczasowym</h3>
 
               <div className="mb-6 flex-1">
-                <p className="text-lg">
+                <p className="text-md lg:text-lg">
                   Dokument prawny regulujący warunki tymczasowej opieki nad zwierzęciem z fundacji.
                 </p>
               </div>
@@ -111,8 +111,10 @@ export default async function Agreements() {
             <p className="mb-2 text-lg">
               <span className="font-semibold">Jak przekazać podpisaną umowę?</span>
             </p>
-            <p className="mb-2 text-lg">Umowę możesz dostarczyć osobiście odbierając zwierzę.</p>
-            <p className="text-lg">Jeśli jest to niemożliwe, ustalimy indywidualnie.</p>
+            <p className="text-md mb-2 lg:text-lg">
+              Umowę możesz dostarczyć osobiście odbierając zwierzę.
+            </p>
+            <p className="text-md lg:text-lg">Jeśli jest to niemożliwe, ustalimy indywidualnie.</p>
           </div>
         </section>
       </main>

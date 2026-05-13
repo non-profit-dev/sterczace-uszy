@@ -8,8 +8,8 @@ export function PreAdoptionVisit() {
       <Section.Header>
         <p className="text-primary-500 font-bold uppercase">Wizyta przedadopcyjna</p>
         <h2 className="text-3xl lg:text-5xl">Jak wygląda wizyta przedadopcyjna?</h2>
-        <p className="text-xl">
-          To nie kontrola – to spotkanie, które pomaga nam poznać się lepiej i rozwiać wszystkie
+        <p className="text-lg lg:text-xl">
+          To nie kontrola - to spotkanie, które pomaga nam poznać się lepiej i rozwiać wszystkie
           Twoje wątpliwości zanim zwierzę trafi do nowego domu.
         </p>
       </Section.Header>

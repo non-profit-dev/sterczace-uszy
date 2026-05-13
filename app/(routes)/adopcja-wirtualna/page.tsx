@@ -42,8 +42,8 @@ export default async function VirtualAdoption() {
 
           <Section.Content className="grid gap-8 md:grid-cols-3">
             <div className="lg:text-center">
-              <div className="bg-primary-50 mb-4 inline-flex items-center justify-center rounded-full p-4 lg:p-6">
-                <Search className="text-primary-500 h-6 w-6 lg:h-8 lg:w-8" />
+              <div className="bg-primary-50 mb-4 inline-flex items-center justify-center rounded-full p-3 lg:p-6">
+                <Search className="text-primary-500 h-5 w-5 lg:h-8 lg:w-8" />
               </div>
               <h3 className="mb-3 text-xl lg:text-2xl">1. Wybierz pupila</h3>
               <p>
@@ -53,8 +53,8 @@ export default async function VirtualAdoption() {
             </div>
 
             <div className="lg:text-center">
-              <div className="bg-primary-50 mb-4 inline-flex items-center justify-center rounded-full p-4 lg:p-6">
-                <CreditCard className="text-primary-500 h-6 w-6 lg:h-8 lg:w-8" />
+              <div className="bg-primary-50 mb-4 inline-flex items-center justify-center rounded-full p-3 lg:p-6">
+                <CreditCard className="text-primary-500 h-5 w-5 lg:h-8 lg:w-8" />
               </div>
               <h3 className="mb-3 text-xl lg:text-2xl">2. Ustaw zlecenie stałe</h3>
               <p>
@@ -64,8 +64,8 @@ export default async function VirtualAdoption() {
             </div>
 
             <div className="lg:text-center">
-              <div className="bg-primary-50 mb-4 inline-flex items-center justify-center rounded-full p-4 lg:p-6">
-                <Mail className="text-primary-500 h-6 w-6 lg:h-8 lg:w-8" />
+              <div className="bg-primary-50 mb-4 inline-flex items-center justify-center rounded-full p-3 lg:p-6">
+                <Mail className="text-primary-500 h-5 w-5 lg:h-8 lg:w-8" />
               </div>
               <h3 className="mb-3 text-xl lg:text-2xl">3. Wyślij potwierdzenie</h3>
               <p>
@@ -75,7 +75,7 @@ export default async function VirtualAdoption() {
             </div>
           </Section.Content>
 
-          <Button asChild className="mt-14 md:mx-auto">
+          <Button asChild className="md:mx-auto lg:mt-14">
             <Link href="/do-adopcji">
               <Search className="h-6 w-6" />
               Zobacz kto czeka na adopcję
@@ -90,9 +90,9 @@ export default async function VirtualAdoption() {
 
           <Section.Content className="mx-auto max-w-4xl">
             <div className="space-y-6">
-              <div className="rounded-lg border bg-white p-6">
-                <h3 className="mb-2 flex items-start gap-2 text-xl font-bold">
-                  <Heart className="text-primary-500 mt-1 h-6 w-6 shrink-0" />
+              <div className="rounded-lg border bg-white p-4 lg:p-6">
+                <h3 className="mb-2 flex items-start gap-3 text-lg font-bold lg:gap-2 lg:text-xl">
+                  <Heart className="text-primary-500 mt-1 h-5 w-5 shrink-0 lg:h-6 lg:w-6" />
                   <span>Realną pomoc dla zwierzaka</span>
                 </h3>
                 <p className="ml-8">
@@ -102,9 +102,9 @@ export default async function VirtualAdoption() {
                 </p>
               </div>
 
-              <div className="rounded-lg border bg-white p-6">
-                <h3 className="mb-2 flex items-start gap-2 text-xl font-bold">
-                  <Award className="text-primary-500 mt-1 h-6 w-6 shrink-0" />
+              <div className="rounded-lg border bg-white p-4 lg:p-6">
+                <h3 className="mb-2 flex items-start gap-3 text-lg font-bold lg:gap-2 lg:text-xl">
+                  <Award className="text-primary-500 mt-1 h-5 w-5 shrink-0 lg:h-6 lg:w-6" />
                   <span>Certyfikat Wirtualnego Opiekuna</span>
                 </h3>
                 <p className="ml-8">
@@ -113,9 +113,9 @@ export default async function VirtualAdoption() {
                 </p>
               </div>
 
-              <div className="rounded-lg border bg-white p-6">
-                <h3 className="mb-2 flex items-start gap-2 text-xl font-bold">
-                  <Mail className="text-primary-500 mt-1 h-6 w-6 shrink-0" />
+              <div className="rounded-lg border bg-white p-4 lg:p-6">
+                <h3 className="mb-2 flex items-start gap-3 text-lg font-bold lg:gap-2 lg:text-xl">
+                  <Mail className="text-primary-500 mt-1 h-5 w-5 shrink-0 lg:h-6 lg:w-6" />
                   <span>Aktualności o pupilu</span>
                 </h3>
                 <p className="ml-8">
@@ -131,7 +131,7 @@ export default async function VirtualAdoption() {
           <Section.Header align="center">
             <p className="text-primary-500 font-bold uppercase">Pomagaj wirtualnie</p>
             <h2 className="text-3xl lg:text-5xl">Ustaw zlecenie stałe</h2>
-            <p className="text-xl">
+            <p className="text-lg lg:text-xl">
               Tu znajdziesz wszystkie niezbędne dane, aby szybko i sprawnie ustawić stały przelew w
               swoim banku. To trwa dosłownie parę minut.
             </p>
@@ -218,7 +218,7 @@ export default async function VirtualAdoption() {
           <Section.Header align="center">
             <p className="text-primary-500 font-bold uppercase">Zastanawiasz się czy warto?</p>
             <h2 className="text-3xl font-bold lg:text-5xl">Certyfikat Wirtualnego Opiekuna</h2>
-            <p className="text-xl">
+            <p className="text-lg lg:text-xl">
               Każdy, kto zdecyduje się na comiesięczne wpłaty w podziękowaniu od wybranego
               podopiecznego i Fundacji, otrzyma swój indywidualny CERTYFIKAT Wirtualnego Opiekuna!
             </p>

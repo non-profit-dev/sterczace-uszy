@@ -15,31 +15,31 @@ export function AdoptionSteps() {
 
         <div className="space-y-14">
           <div className="relative flex flex-col items-start gap-6 lg:flex-row lg:gap-10">
-            <div className="bg-primary-500 font-mogra z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-4xl font-bold text-white lg:h-24 lg:w-24 lg:text-6xl">
+            <div className="bg-primary-500 font-mogra z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-3xl font-bold text-white lg:h-24 lg:w-24 lg:text-6xl">
               1
             </div>
             <div className="flex-1">
               <h3 className="mb-3 text-2xl font-bold lg:text-3xl">Wypełniasz ankietę</h3>
-              <p className="mb-4 text-xl">
+              <p className="mb-4 text-lg lg:text-xl">
                 Wybrałeś swojego pupila? Czas nam o tym powiedzieć! Wypełnij ankietę przedadopcyjną
-                – to sposób żebyśmy poznali Ciebie, Twoje warunki i oczekiwania.
+                - to sposób żebyśmy poznali Ciebie, Twoje warunki i oczekiwania.
               </p>
 
               <p className="rounded-lg bg-gray-100 p-3">
                 My analizujemy Twoją ankietę (zwykle 2-5 dni roboczych) i sprawdzamy, czy warunki
-                pasują do potrzeb wybranego zwierzaka. Jeśli wszystko gra – dostaniesz od nas maila
+                pasują do potrzeb wybranego zwierzaka. Jeśli wszystko gra - dostaniesz od nas maila
                 z akceptacją i propozycją terminu wizyty.
               </p>
             </div>
           </div>
 
           <div className="relative flex flex-col items-start gap-6 lg:flex-row lg:gap-10">
-            <div className="bg-primary-500 font-mogra z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-4xl font-bold text-white lg:h-24 lg:w-24 lg:text-6xl">
+            <div className="bg-primary-500 font-mogra z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-3xl font-bold text-white lg:h-24 lg:w-24 lg:text-6xl">
               2
             </div>
             <div className="flex-1">
               <h3 className="mb-3 text-2xl font-bold lg:text-3xl">Poznajemy się</h3>
-              <p className="text-xl">
+              <p className="text-lg lg:text-xl">
                 Przyjeżdżamy do Ciebie na wizytę przedadopcyjną podczas której:
               </p>
 
@@ -48,37 +48,37 @@ export function AdoptionSteps() {
                   <span className="shrink-0 font-bold">
                     <Check className="h-6 w-6" />
                   </span>
-                  <p>Sprawdzamy warunki – ogrodzenie, schody, bezpieczne miejsca dla psa</p>
+                  <p>Sprawdzamy warunki - ogrodzenie, schody, bezpieczne miejsca dla psa</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="shrink-0 font-bold">
                     <Check className="h-6 w-6" />
                   </span>
-                  <p>Rozmawiamy o pupilu – jego potrzebach, charakterze, wyzwaniach</p>
+                  <p>Rozmawiamy o pupilu - jego potrzebach, charakterze, wyzwaniach</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="shrink-0 font-bold">
                     <Check className="h-6 w-6" />
                   </span>
-                  <p>Doradzamy – żywienie, wychowanie, wybór weterynarza</p>
+                  <p>Doradzamy - żywienie, wychowanie, wybór weterynarza</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="shrink-0 font-bold">
                     <Check className="h-6 w-6" />
                   </span>
-                  <p>Odpowiadamy na pytania – teraz lub nigdy, pytaj o wszystko!</p>
+                  <p>Odpowiadamy na pytania - teraz lub nigdy, pytaj o wszystko!</p>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="relative flex flex-col items-start gap-6 lg:flex-row lg:gap-10">
-            <div className="bg-primary-500 font-mogra z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full text-4xl font-bold text-white lg:h-24 lg:w-24 lg:text-6xl">
+            <div className="bg-primary-500 font-mogra z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-3xl font-bold text-white lg:h-24 lg:w-24 lg:text-6xl">
               3
             </div>
             <div className="flex-1">
               <h3 className="mb-3 text-2xl font-bold lg:text-3xl">Podpisujemy umowę</h3>
-              <p className="mb-4 text-xl">
+              <p className="mb-4 text-lg lg:text-xl">
                 Czas na formalności! Wysyłamy Ci umowę adopcyjną na maila. Możesz ją podpisać:
               </p>
 
@@ -104,14 +104,14 @@ export function AdoptionSteps() {
             <h3 className="mb-5 flex items-center gap-2 text-xl lg:text-2xl">
               <PartyPopper className="h-7 w-7" />I to wszystko!
             </h3>
-            <p className="mb-4 text-xl">
+            <p className="mb-4 text-lg lg:text-xl">
               Teraz możesz odebrać swojego pupila i rozpocząć wspólną przygodę!
             </p>
-            <p className="mb-3 text-xl">
-              Pamiętaj – nie jesteś sam! Jesteśmy z Tobą w kontakcie i służymy pomocą przez cały
+            <p className="mb-3 text-lg lg:text-xl">
+              Pamiętaj - nie jesteś sam! Jesteśmy z Tobą w kontakcie i służymy pomocą przez cały
               czas.
             </p>
-            <p className="mt-8 flex items-center gap-2 text-xl font-bold">
+            <p className="mt-8 flex items-center gap-2 text-lg font-bold lg:text-xl">
               Witaj w rodzinie Sterczących Uszu! <PawPrint className="text-primary-500 h-6 w-6" />
               <Heart className="text-primary-500 h-6 w-6" />
             </p>

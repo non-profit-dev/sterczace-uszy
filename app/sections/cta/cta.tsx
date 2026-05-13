@@ -51,7 +51,7 @@ async function getCtaContent(): Promise<Record<CtaVariant, CtaContent>> {
       title: "Masz pytania?",
       description: [
         "Chcesz dowiedzieć się więcej o naszej działalności?",
-        "Skontaktuj się z nami – chętnie odpowiemy na wszystkie pytania.",
+        "Skontaktuj się z nami - chętnie odpowiemy na wszystkie pytania.",
       ],
       button: {
         text: "Skontaktuj się",
@@ -125,7 +125,7 @@ export async function Cta({ variant }: CtaProps) {
         <div className="flex flex-col gap-6 text-white md:max-w-xl">
           <h2 className="text-3xl lg:text-5xl">{content.title}</h2>
 
-          <div className="flex flex-col gap-4 text-xl lg:text-2xl">
+          <div className="flex flex-col gap-4 text-lg lg:text-2xl">
             {content.description.map((text, index) => (
               <p key={index}>{text}</p>
             ))}

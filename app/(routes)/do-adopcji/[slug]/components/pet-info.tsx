@@ -24,7 +24,7 @@ export function PetInfo({
   location,
 }: PetInfoCardProps) {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-3 lg:gap-5">
       {ownerPet && (
         <Badge variant="outline" className="font-medium">
           <CircleAlert className="h-4 w-4" /> Ma właściciela - pomagamy w adopcji
@@ -44,7 +44,7 @@ export function PetInfo({
         {ageDisplay && (
           <div className="bg-primary-50 flex items-center gap-3 rounded-xl p-3 lg:p-4">
             <Calendar className="text-primary-500 h-5 w-5" />
-            <span className="text-lg">
+            <span className="lg:text-lg">
               <strong>Wiek:</strong> ~ {ageDisplay}
             </span>
           </div>
@@ -52,7 +52,7 @@ export function PetInfo({
 
         <div className="bg-primary-50 flex items-center gap-3 rounded-xl p-3 lg:p-4">
           <Dog className="text-primary-500 h-5 w-5" />
-          <span className="text-lg">
+          <span className="lg:text-lg">
             <strong>Płeć:</strong> {genderDisplay}
           </span>
         </div>
@@ -60,7 +60,7 @@ export function PetInfo({
         {weight && (
           <div className="bg-primary-50 flex items-center gap-3 rounded-xl p-3 lg:p-4">
             <Weight className="text-primary-500 h-5 w-5" />
-            <span className="text-lg">
+            <span className="lg:text-lg">
               <strong>Waga:</strong> {weight} kg
             </span>
           </div>
@@ -69,7 +69,7 @@ export function PetInfo({
       {location && (
         <div className="mt-1 flex items-center gap-3">
           <MapPin className="h-5 w-5" />
-          <span className="text-lg">
+          <span className="lg:text-lg">
             <strong>Lokalizacja:</strong> {location}
           </span>
         </div>

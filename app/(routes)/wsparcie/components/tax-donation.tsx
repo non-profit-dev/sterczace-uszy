@@ -24,16 +24,16 @@ export async function TaxDonation() {
           <p className="text-primary-500 mb-2 font-bold uppercase">Twoja pomoc ma moc</p>
           <h2 className="mb-6 text-3xl lg:text-5xl">1.5% podatku</h2>
 
-          <p className="text-muted-foreground mb-6 text-xl">
+          <p className="text-muted-foreground mb-6 text-lg lg:text-xl">
             Możesz wesprzeć działania naszej Fundacji przekazując 1,5% swojego podatku na konto
             Fundacji.
           </p>
 
-          <p className="text-muted-foreground mb-6 text-xl">
+          <p className="text-muted-foreground mb-6 text-lg lg:text-xl">
             Aby to zrobić w trakcie wypełniania swojego zeznania podatkowego wybierz:
           </p>
 
-          <div className="space-y-4 text-xl">
+          <div className="space-y-4 text-lg lg:text-xl">
             <div className="flex flex-col gap-2 lg:flex-row">
               <span className="text-muted-foreground">Numer KRS:</span>
               <p className="flex items-center gap-2">

@@ -132,7 +132,7 @@ export default async function PetDetailsPage({ params }: PetDetailsPageProps) {
               {animal.description && (
                 <div>
                   <h3 className="text-3xl">Opis</h3>
-                  <div className="mt-3 text-lg leading-relaxed">
+                  <div className="mt-3 leading-relaxed lg:text-lg">
                     {parseRichText(animal.description)}
                   </div>
                 </div>
@@ -141,7 +141,7 @@ export default async function PetDetailsPage({ params }: PetDetailsPageProps) {
               {animal.idealFamily && (
                 <div>
                   <h3 className="text-3xl">Kogo szuka?</h3>
-                  <div className="mt-3 text-lg leading-relaxed">
+                  <div className="mt-3 leading-relaxed lg:text-lg">
                     {parseRichText(animal.idealFamily)}
                   </div>
                 </div>

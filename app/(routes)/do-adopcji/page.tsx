@@ -31,13 +31,13 @@ export default async function AdoptionPage() {
             <div className="flex max-w-2xl flex-col items-start gap-2">
               <p className="text-primary-500 font-bold uppercase">Nasi podopieczni</p>
               <h2 className="text-3xl lg:text-5xl">Czekają na nowy dom</h2>
-              <p className="mt-2 text-xl">
+              <p className="mt-2 text-lg lg:text-xl">
                 Każdy z nich jest wyjątkowy. Starszaki i szczeniaki, duże i małe, lubiące kanapę lub
                 długie spacery. Potrzebują jedynie miłości. Sprawdź, któremu odmienisz życie?
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-2 md:grid-cols-2 md:gap-4 lg:grid-cols-4">
               {animals.map((animal) => (
                 <PetCard
                   key={animal.slug}

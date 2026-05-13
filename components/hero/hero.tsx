@@ -18,13 +18,17 @@ export function Hero({
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex max-w-2xl flex-col gap-4">
           <div>
-            {subtitle && <p className="text-primary-500 mb-2 font-bold uppercase">{subtitle}</p>}
+            {subtitle && (
+              <p className="text-primary-500 mb-2 text-sm font-bold uppercase lg:text-base">
+                {subtitle}
+              </p>
+            )}
             <h1 className="text-4xl lg:text-6xl">{title}</h1>
           </div>
 
           {descriptions &&
             descriptions.map((description, index) => (
-              <p key={index} className="text-xl">
+              <p key={index} className="text-lg lg:text-xl">
                 {description}
               </p>
             ))}

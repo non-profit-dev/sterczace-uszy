@@ -39,7 +39,7 @@ export default async function Maintenance() {
           <p className="text-xl lg:text-2xl">Właśnie robimy małe porządki na stronie.</p>
 
           <p className="text-lg leading-relaxed text-gray-600">
-            Wróć do nas za chwilę – obiecujemy, że będzie jeszcze lepiej!
+            Wróć do nas za chwilę - obiecujemy, że będzie jeszcze lepiej!
           </p>
 
           <div className="pt-8">

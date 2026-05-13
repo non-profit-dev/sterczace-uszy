@@ -49,7 +49,7 @@ export default async function About() {
             <p className="text-primary-500 font-bold uppercase">Nasza historia</p>
             <h2 className="text-3xl lg:text-5xl">Z pasji do misji</h2>
 
-            <div className="mt-6 flex flex-col items-start gap-y-4 text-xl">
+            <div className="mt-6 flex flex-col items-start gap-y-4 text-lg lg:text-xl">
               <p>
                 14 kwietnia 2022 – to data, kiedy przyjaźń dwóch miłośniczek zwierząt przerodziła
                 się w Fundację Sterczące Uszy.
@@ -98,7 +98,7 @@ export default async function About() {
             <h2 className="mt-2 text-3xl lg:text-5xl">Pomagamy kierując się wartościami</h2>
           </div>
 
-          <p className="text-lg">
+          <p className="text-lg lg:text-xl">
             Stawiamy na dobre relacje i prowadzimy otwarty dialog z rodzinami adopcyjnymi.
             Angażujemy się w nasze działania z wielką pasją, dbając o dobre warunki i opiekę dla
             każdego zwierzaka, którego ratujemy.
@@ -121,13 +121,13 @@ export default async function About() {
             <div className="flex flex-col gap-8 lg:w-3/5">
               <div className="flex gap-6">
                 <div className="shrink-0">
-                  <div className="bg-primary-500 flex h-14 w-14 items-center justify-center rounded-full lg:h-16 lg:w-16">
-                    <Heart className="h-5 w-5 text-white lg:h-7 lg:w-7" fill="currentColor" />
+                  <div className="bg-primary-500 flex h-12 w-12 items-center justify-center rounded-full lg:h-16 lg:w-16">
+                    <Heart className="h-4 w-4 text-white lg:h-7 lg:w-7" fill="currentColor" />
                   </div>
                 </div>
                 <div>
                   <p className="text-primary-500 mb-2 text-xl font-bold lg:text-2xl">Miłość</p>
-                  <p className="text-lg">
+                  <p className="text-md lg:text-lg">
                     Kieruje naszą pasją i zaangażowaniem w ratowanie zwierząt, a każdego
                     podopiecznego traktujemy z uczuciem i troską.
                   </p>
@@ -136,15 +136,15 @@ export default async function About() {
 
               <div className="flex gap-6">
                 <div className="shrink-0">
-                  <div className="bg-primary-500 flex h-14 w-14 items-center justify-center rounded-full lg:h-16 lg:w-16">
-                    <Check className="h-5 w-5 text-white lg:h-7 lg:w-7" strokeWidth={3} />
+                  <div className="bg-primary-500 flex h-12 w-12 items-center justify-center rounded-full lg:h-16 lg:w-16">
+                    <Check className="h-4 w-4 text-white lg:h-7 lg:w-7" strokeWidth={3} />
                   </div>
                 </div>
                 <div>
                   <p className="text-primary-500 mb-2 text-xl font-bold lg:text-2xl">
                     Odpowiedzialność
                   </p>
-                  <p className="text-lg">
+                  <p className="text-md lg:text-lg">
                     Bierzemy opowiedzialność za każdą adopcję, za każdą decyzję weterynaryjną, za
                     wybór rodziny.
                   </p>
@@ -153,13 +153,13 @@ export default async function About() {
 
               <div className="flex gap-6">
                 <div className="shrink-0">
-                  <div className="bg-primary-500 flex h-14 w-14 items-center justify-center rounded-full lg:h-16 lg:w-16">
-                    <Users className="h-5 w-5 text-white lg:h-7 lg:w-7" strokeWidth={2.5} />
+                  <div className="bg-primary-500 flex h-12 w-12 items-center justify-center rounded-full lg:h-16 lg:w-16">
+                    <Users className="h-4 w-4 text-white lg:h-7 lg:w-7" strokeWidth={2.5} />
                   </div>
                 </div>
                 <div>
                   <p className="text-primary-500 mb-2 text-xl font-bold lg:text-2xl">Zaufanie</p>
-                  <p className="text-lg">
+                  <p className="text-md lg:text-lg">
                     Każdą rodzinę adopcyjną poznajemy osobiście, odpowiadamy na wszystkie pytania i
                     jesteśmy w kontakcie długo po adopcji. Bo adopcja to początek, nie koniec naszej
                     relacji.
@@ -169,15 +169,15 @@ export default async function About() {
 
               <div className="flex gap-6">
                 <div className="shrink-0">
-                  <div className="bg-primary-500 flex h-14 w-14 items-center justify-center rounded-full lg:h-16 lg:w-16">
-                    <ScrollText className="h-5 w-5 text-white lg:h-7 lg:w-7" strokeWidth={2.5} />
+                  <div className="bg-primary-500 flex h-12 w-12 items-center justify-center rounded-full lg:h-16 lg:w-16">
+                    <ScrollText className="h-4 w-4 text-white lg:h-7 lg:w-7" strokeWidth={2.5} />
                   </div>
                 </div>
                 <div>
                   <p className="text-primary-500 mb-2 text-xl font-bold lg:text-2xl">
                     Transparentność
                   </p>
-                  <p className="text-lg">
+                  <p className="text-md lg:text-lg">
                     Każda złotówka policzona, każda decyzja wytłumaczona. Działamy jawnie, bo wiemy,
                     że Wasze wsparcie to wyraz zaufania.
                   </p>

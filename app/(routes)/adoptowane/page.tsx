@@ -28,7 +28,7 @@ export default async function AdoptedPage() {
           <div className="flex max-w-2xl flex-col items-start gap-2">
             <p className="text-primary-500 font-bold uppercase">Szczęśliwe zakończenia</p>
             <h2 className="text-3xl lg:text-5xl">Znalazły dom</h2>
-            <p className="mt-2 text-xl">
+            <p className="mt-2 text-lg lg:text-xl">
               Te zwierzaki mają już swoich ludzi. Dziękujemy każdej osobie, która zdecydowała się
               otworzyć swoje serce i dom.
             </p>
@@ -41,15 +41,13 @@ export default async function AdoptedPage() {
                   key={`${animal.name}-${index}`}
                   className="group relative overflow-hidden rounded-2xl"
                 >
-                  <div className="relative aspect-square overflow-hidden">
+                  <div className="relative aspect-square overflow-hidden bg-gray-100">
                     <Image
                       src={animal.thumbnail.url}
                       alt={animal.name}
                       fill
                       sizes="(min-width: 1024px) 240px, (min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw"
                       priority={index < 10}
-                      placeholder="blur"
-                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
@@ -61,7 +59,7 @@ export default async function AdoptedPage() {
               ))}
             </div>
           ) : (
-            <p className="text-xl text-gray-500">Brak adoptowanych zwierząt.</p>
+            <p className="text-lg text-gray-500 lg:text-xl">Brak adoptowanych zwierząt.</p>
           )}
         </section>
       </main>

@@ -29,7 +29,7 @@ export async function FinancialSupport() {
       <Section.Header align="center">
         <p className="text-primary-500 font-bold uppercase">Wsparcie finansowe</p>
         <h2 className="text-3xl lg:text-5xl">Pomóż nam pomagać</h2>
-        <p className="text-xl">
+        <p className="text-lg lg:text-xl">
           Każdego dnia mierzymy się z ogromnymi wydatkami, aby zapewnić naszym podopiecznym
           najlepsze warunki. Możesz nam pomóc przekazując wsparcie finansowe.
         </p>
@@ -38,15 +38,15 @@ export async function FinancialSupport() {
       <Section.Content className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
         <div className="rounded-2xl border bg-white p-4 lg:p-10">
           <div className="mb-6 flex items-center gap-4">
-            <div className="bg-primary-50 flex h-14 w-14 shrink-0 items-center justify-center rounded-full">
-              <Banknote className="text-primary-500 h-6 w-6" />
+            <div className="bg-primary-50 flex h-12 w-12 shrink-0 items-center justify-center rounded-full lg:h-14 lg:w-14">
+              <Banknote className="text-primary-500 h-5 w-5 lg:h-6 lg:w-6" />
             </div>
-            <h3 className="text-xl lg:text-2xl">Przelew lub zlecenie stałe</h3>
+            <h3 className="text-lg lg:text-2xl">Przelew lub zlecenie stałe</h3>
           </div>
 
           <div className="space-y-4 md:text-lg">
             <div>
-              <p className="mb-2 text-xl font-bold">Fundacja Sterczące Uszy</p>
+              <p className="mb-2 text-lg font-bold lg:text-xl">Fundacja Sterczące Uszy</p>
               <p className="text-muted-foreground">
                 {globalData.address},
                 <br />
@@ -85,10 +85,10 @@ export async function FinancialSupport() {
 
         <div className="rounded-2xl border bg-white p-4 lg:p-10">
           <div className="mb-6 flex items-center gap-4">
-            <div className="bg-primary-50 flex h-14 w-14 shrink-0 items-center justify-center rounded-full">
-              <CreditCard className="text-primary-500 h-6 w-6" />
+            <div className="bg-primary-50 flex h-12 w-12 shrink-0 items-center justify-center rounded-full lg:h-14 lg:w-14">
+              <CreditCard className="text-primary-500 h-5 w-5 lg:h-6 lg:w-6" />
             </div>
-            <h3 className="text-xl lg:text-2xl">Jednorazowa wpłata</h3>
+            <h3 className="text-lg lg:text-2xl">Jednorazowa wpłata</h3>
           </div>
 
           <p className="text-muted-foreground mb-6 text-lg">
@@ -100,10 +100,10 @@ export async function FinancialSupport() {
               <div key={index} className="border-primary-200 rounded-lg border p-5">
                 <div className="flex items-start gap-4">
                   <div className="shrink-0">
-                    <HandCoins className="text-primary-500 h-6 w-6" />
+                    <HandCoins className="text-primary-500 h-5 w-5 lg:h-6 lg:w-6" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-primary-500 mb-1 text-xl font-bold lg:text-2xl">
+                    <p className="text-primary-500 mb-1 text-lg font-bold lg:text-xl">
                       {option.amount}
                     </p>
                     <p className="text-muted-foreground">{option.description}</p>

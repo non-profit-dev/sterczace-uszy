@@ -8,10 +8,10 @@ export function ReadinessCheckAccordion() {
       <AccordionItem value="family">
         <AccordionTrigger className="hover:no-underline">
           <div className="flex items-center gap-3">
-            <div className="bg-primary-50 flex h-14 w-14 shrink-0 items-center justify-center rounded-full">
-              <CheckCircle className="text-primary-500 h-5 w-5 lg:h-7 lg:w-7" />
+            <div className="bg-primary-50 flex h-12 w-12 shrink-0 items-center justify-center rounded-full lg:h-14 lg:w-14">
+              <CheckCircle className="text-primary-500 h-4 w-4 lg:h-7 lg:w-7" />
             </div>
-            <h3 className="text-xl">Czy cała rodzina jest na "tak"?</h3>
+            <h3 className="text-lg lg:text-xl">Czy cała rodzina jest na "tak"?</h3>
           </div>
         </AccordionTrigger>
         <AccordionContent>
@@ -32,11 +32,11 @@ export function ReadinessCheckAccordion() {
       <AccordionItem value="budget">
         <AccordionTrigger className="hover:no-underline">
           <div className="flex items-center gap-3">
-            <div className="bg-primary-50 flex h-14 w-14 shrink-0 items-center justify-center rounded-full">
-              <Wallet className="text-primary-500 h-5 w-5 lg:h-7 lg:w-7" />
+            <div className="bg-primary-50 flex h-12 w-12 shrink-0 items-center justify-center rounded-full lg:h-14 lg:w-14">
+              <Wallet className="text-primary-500 h-4 w-4 lg:h-7 lg:w-7" />
             </div>
 
-            <h3 className="text-xl">Czy stać Cię na psa?</h3>
+            <h3 className="text-lg lg:text-xl">Czy stać Cię na psa?</h3>
           </div>
         </AccordionTrigger>
         <AccordionContent>
@@ -53,10 +53,10 @@ export function ReadinessCheckAccordion() {
       <AccordionItem value="time">
         <AccordionTrigger className="hover:no-underline">
           <div className="flex items-center gap-3">
-            <div className="bg-primary-50 flex h-14 w-14 shrink-0 items-center justify-center rounded-full">
-              <Clock className="text-primary-500 h-5 w-5 lg:h-7 lg:w-7" />
+            <div className="bg-primary-50 flex h-12 w-12 shrink-0 items-center justify-center rounded-full lg:h-14 lg:w-14">
+              <Clock className="text-primary-500 h-4 w-4 lg:h-7 lg:w-7" />
             </div>
-            <h3 className="text-xl">Czy masz czas?</h3>
+            <h3 className="text-lg lg:text-xl">Czy masz czas?</h3>
           </div>
         </AccordionTrigger>
         <AccordionContent>
@@ -76,10 +76,10 @@ export function ReadinessCheckAccordion() {
       <AccordionItem value="conditions">
         <AccordionTrigger className="hover:no-underline">
           <div className="flex items-center gap-3">
-            <div className="bg-primary-50 flex h-14 w-14 shrink-0 items-center justify-center rounded-full">
-              <Home className="text-primary-500 h-5 w-5 lg:h-7 lg:w-7" />
+            <div className="bg-primary-50 flex h-12 w-12 shrink-0 items-center justify-center rounded-full lg:h-14 lg:w-14">
+              <Home className="text-primary-500 h-4 w-4 lg:h-7 lg:w-7" />
             </div>
-            <h3 className="text-xl">Czy Twoje warunki są OK?</h3>
+            <h3 className="text-lg lg:text-xl">Czy Twoje warunki są OK?</h3>
           </div>
         </AccordionTrigger>
         <AccordionContent>

@@ -64,5 +64,5 @@ Section.Title = function SectionTitle({ children, className }: SectionProps) {
 }
 
 Section.Description = function SectionDescription({ children, className }: SectionProps) {
-  return <p className={cn("mt-3 text-xl", className)}>{children}</p>
+  return <p className={cn("mt-3 text-lg lg:text-xl", className)}>{children}</p>
 }

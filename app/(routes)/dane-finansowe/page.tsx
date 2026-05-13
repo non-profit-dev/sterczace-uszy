@@ -43,14 +43,14 @@ export default async function FinancialData() {
             <p className="text-primary-500 font-bold uppercase">Dbamy o transparentność</p>
             <h2 className="text-3xl lg:text-5xl">Sprawozdania finansowe</h2>
 
-            <p className="mt-2 text-xl">
+            <p className="mt-2 text-lg lg:text-xl">
               Wierzymy, że zaufanie do fundacji jest podstawowym warunkiem skutecznego pomagania.
               Przejrzystość naszej pracy i transparentność wobec darczyńców cenimy sobie ponad
               wszystko.
             </p>
 
             <div className="mt-4">
-              <h3 className="mb-4 text-xl font-semibold">
+              <h3 className="mb-4 text-lg font-semibold lg:text-xl">
                 Tutaj znajdziesz wszystkie sprawozdania z działalności fundacji:
               </h3>
 
@@ -77,7 +77,7 @@ export default async function FinancialData() {
                 )}
               </div>
 
-              <p className="mt-8 flex items-center gap-2 text-xl font-semibold lg:text-2xl">
+              <p className="mt-8 flex items-center gap-2 text-lg font-semibold lg:text-xl">
                 Dziękujemy za Wasze wsparcie{" "}
                 <Heart className="text-primary h-6 w-6" fill="currentColor" />
               </p>

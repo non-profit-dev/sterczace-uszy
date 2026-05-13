@@ -89,17 +89,17 @@ export default async function Faq() {
               <div className="flex-1">
                 {Object.entries(faqsByCategory).map(([category, categoryFaqs]) => (
                   <TabsContent key={category} value={category} className="mt-0">
-                    <Accordion type="single" collapsible className="w-full space-y-4">
+                    <Accordion type="single" collapsible className="w-full space-y-3 lg:space-y-4">
                       {categoryFaqs.map((faq, index) => (
                         <AccordionItem
                           key={`${category}-${index}`}
                           value={`${category}-${index}`}
                           className="rounded-lg border border-gray-200 bg-white px-6 shadow-sm data-[state=open]:shadow-md"
                         >
-                          <AccordionTrigger className="py-4 text-left text-lg font-semibold text-gray-900 hover:no-underline md:text-xl">
+                          <AccordionTrigger className="py-4 text-left font-semibold text-gray-900 hover:no-underline md:text-xl lg:text-lg">
                             {faq.question}
                           </AccordionTrigger>
-                          <AccordionContent className="pb-4 text-base leading-relaxed">
+                          <AccordionContent className="pb-4 leading-relaxed lg:text-base">
                             {parseRichText(faq.answer)}
                           </AccordionContent>
                         </AccordionItem>

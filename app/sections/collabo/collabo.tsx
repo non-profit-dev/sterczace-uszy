@@ -25,7 +25,7 @@ export function Collabo({ partnerships }: CollaboProps) {
   return (
     <Section>
       <Section.Header align="center">
-        <p className="text-primary-500 mb-2 font-bold uppercase">Współpraca</p>
+        <p className="text-primary-500 font-bold uppercase">Współpraca</p>
         <h2 className="text-3xl lg:text-5xl">Nasi partnerzy</h2>
       </Section.Header>
 
@@ -42,10 +42,7 @@ export function Collabo({ partnerships }: CollaboProps) {
         >
           <CarouselContent className="-ml-4">
             {visiblePartnerships.map((partnership) => (
-              <CarouselItem
-                key={partnership.title}
-                className="basis-1/2 pl-4 md:basis-1/3 lg:basis-1/4"
-              >
+              <CarouselItem key={partnership.title} className="basis-1/3 pl-4 lg:basis-1/4">
                 <div className="flex h-32 items-center justify-center">
                   {partnership.image?.url && (
                     <Image

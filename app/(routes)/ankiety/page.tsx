@@ -45,11 +45,11 @@ export default async function Surveys() {
               {surveySteps.map((step, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="mt-1 shrink-0">
-                    <div className="bg-primary-500 flex h-6 w-6 items-center justify-center rounded-full">
-                      <Check className="h-4 w-4 text-white" strokeWidth={3} />
+                    <div className="bg-primary-500 flex h-5 w-5 items-center justify-center rounded-full lg:h-6 lg:w-6">
+                      <Check className="h-3 w-3 text-white lg:h-4 lg:w-4" strokeWidth={3} />
                     </div>
                   </div>
-                  <p className="text-lg">{step}</p>
+                  <p className="text-md lg:text-lg">{step}</p>
                 </li>
               ))}
             </ul>
@@ -57,10 +57,10 @@ export default async function Surveys() {
 
           <div className="mb-12 grid gap-8 md:grid-cols-2">
             <div className="flex flex-col rounded-lg border-2 border-gray-200 bg-white p-5 lg:p-8">
-              <h3 className="mb-6 text-xl lg:text-2xl">Ankieta przedadopcyjna</h3>
+              <h3 className="mb-3 text-xl lg:mb-6 lg:text-2xl">Ankieta przedadopcyjna</h3>
 
               <div className="mb-6 flex-1">
-                <p className="text-lg">
+                <p className="text-md lg:text-lg">
                   Formularz dla osób zainteresowanych adopcją zwierzęcia z fundacji.
                 </p>
               </div>
@@ -84,10 +84,10 @@ export default async function Surveys() {
             </div>
 
             <div className="flex flex-col rounded-lg border-2 border-gray-200 bg-white p-5 lg:p-8">
-              <h3 className="mb-6 text-xl lg:text-2xl">Ankieta dla domu tymczasowego</h3>
+              <h3 className="mb-3 text-xl lg:mb-6 lg:text-2xl">Ankieta dla domu tymczasowego</h3>
 
               <div className="mb-6 flex-1">
-                <p className="text-lg">
+                <p className="text-md lg:text-lg">
                   Formularz dla osób zainteresowanych zostaniem domem tymczasowym dla zwierzęcia z
                   fundacji.
                 </p>
@@ -117,13 +117,15 @@ export default async function Surveys() {
               <Mail className="text-secondary-600 h-5 w-5" />
               <span className="font-semibold">Jak otrzymam odpowiedź?</span>
             </p>
-            <p className="mb-2 text-lg">
+            <p className="text-md mb-2 lg:text-lg">
               Odpowiedź otrzymasz telefonicznie lub z{" "}
               <a href={`mailto:${globalData?.email}`} className="text-primary-500 hover:underline">
                 {globalData?.email}
               </a>
             </p>
-            <p className="text-lg">Jak tylko ją przeanalizujemy, skontaktujemy się z Tobą.</p>
+            <p className="text-md lg:text-lg">
+              Jak tylko ją przeanalizujemy, skontaktujemy się z Tobą.
+            </p>
           </div>
         </section>
       </main>

@@ -53,21 +53,21 @@ export function FosterHomeInfo({ name, surveyLink }: FosterHomeInfoProps) {
             <div key={index} className="flex items-start gap-4 rounded-xl bg-white p-3 lg:p-6">
               <benefit.icon className="text-primary mt-2 h-6 w-6 shrink-0" />
               <div>
-                <p className="text-xl font-medium lg:text-2xl">{benefit.title}</p>
-                <p className="mt-3 text-gray-600 lg:text-xl">{benefit.description}</p>
+                <p className="text-lg font-semibold lg:text-xl">{benefit.title}</p>
+                <p className="text-md mt-3 text-gray-600 lg:text-lg">{benefit.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <p className="mt-4 py-4 text-center text-xl text-gray-600 lg:py-8">
+        <p className="mt-4 py-4 text-center text-lg text-gray-600 lg:py-8 lg:text-xl">
           Dom tymczasowy to nie adopcja na zawsze - jesteśmy z Tobą od pierwszego dnia aż do momentu
           znalezienia stałego domu.
         </p>
       </Section.Content>
 
       {surveyLink && (
-        <Button asChild className="md:mt-4 md:self-center">
+        <Button asChild className="md:self-center">
           <a target="_blank" rel="noopener noreferrer" href={surveyLink}>
             <Heart className="mr-2 h-4 w-4" />
             Zostań domem tymczasowym

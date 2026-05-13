@@ -19,7 +19,7 @@ export function PetAttributes({
         <div>
           <div className="flex items-center gap-2">
             <Check className="text-secondary-600 h-5 w-5 shrink-0" />
-            <p className="text font-medium">{activityLevel}</p>
+            <p className="text-sm font-medium lg:text-base">{activityLevel}</p>
           </div>
         </div>
       )}
@@ -27,21 +27,21 @@ export function PetAttributes({
         behavior.map((option) => (
           <div key={option} className="flex items-center gap-2">
             <Check className="text-secondary-600 h-5 w-5 shrink-0" />
-            <span className="text font-medium">{option}</span>
+            <span className="text-sm font-medium lg:text-base">{option}</span>
           </div>
         ))}
       {health?.length > 0 &&
         health.map((option) => (
           <div key={option} className="flex items-center gap-2">
             <Check className="text-secondary-600 h-5 w-5 shrink-0" />
-            <span className="text font-medium">{option}</span>
+            <span className="text-sm font-medium lg:text-base">{option}</span>
           </div>
         ))}
       {additionalInfo?.length > 0 &&
         additionalInfo.map((info) => (
           <div key={info} className="flex items-center gap-2">
             <Check className="text-secondary-600 h-5 w-5 shrink-0" />
-            <span className="text font-medium">{info}</span>
+            <span className="text-sm font-medium lg:text-base">{info}</span>
           </div>
         ))}
     </div>

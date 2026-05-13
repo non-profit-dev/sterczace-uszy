@@ -40,16 +40,16 @@ export default function PaymentTerms() {
       <main className="my-10 flex w-full max-w-6xl flex-col items-center gap-y-12 px-4 lg:my-20 lg:gap-y-16">
         <section className="w-full max-w-4xl">
           <div className="mb-12 rounded-lg bg-gray-100 p-8">
-            <h2 className="mb-6 flex items-center gap-3 text-2xl font-bold lg:text-3xl">
+            <h2 className="mb-6 flex items-center gap-3 text-xl font-bold md:text-2xl lg:text-3xl">
               <CreditCard className="text-secondary-600 h-8 w-8" />
               Płatności elektroniczne
             </h2>
 
-            <p className="mb-6 text-lg">
+            <p className="mb-6 text-base md:text-lg">
               Strona internetowa może udostępniać płatności elektroniczne.
             </p>
 
-            <h3 className="mb-4 font-semibold lg:text-xl">Dostępne formy płatności:</h3>
+            <h3 className="mb-4 text-base font-semibold lg:text-xl">Dostępne formy płatności:</h3>
 
             <ul className="mb-8 space-y-4">
               {paymentMethods.map(({ text }) => (
@@ -59,7 +59,7 @@ export default function PaymentTerms() {
                       <Check className="h-4 w-4 text-white" strokeWidth={3} />
                     </div>
                   </div>
-                  <p className="text-lg">{text}</p>
+                  <p className="text-base md:text-lg">{text}</p>
                 </li>
               ))}
             </ul>
@@ -77,16 +77,16 @@ export default function PaymentTerms() {
 
           <div className="space-y-6">
             <section className="rounded-lg border border-gray-200 bg-white p-8">
-              <h2 className="mb-4 text-xl font-bold lg:text-2xl">Operator płatności</h2>
-              <p className="text-lg">
+              <h2 className="mb-4 text-lg font-bold md:text-xl lg:text-2xl">Operator płatności</h2>
+              <p className="text-base md:text-lg">
                 Podmiotem świadczącym obsługę płatności online drogą elektroniczną jest Krajowy
                 Integrator Płatności S.A.
               </p>
             </section>
 
             <section className="rounded-lg border border-gray-200 bg-white p-8">
-              <h2 className="mb-4 text-xl font-bold lg:text-2xl">Zwrot środków</h2>
-              <p className="text-lg">
+              <h2 className="mb-4 text-lg font-bold md:text-xl lg:text-2xl">Zwrot środków</h2>
+              <p className="text-base md:text-lg">
                 W przypadku wystąpienia konieczności zwrotu środków za transakcję dokonaną przez
                 wpłacającego kartą płatniczą, przyjmujący wpłatę dokona zwrotu na rachunek bankowy
                 przypisany do karty płatniczej wpłacającego.

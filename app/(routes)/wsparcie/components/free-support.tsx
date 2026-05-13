@@ -12,7 +12,7 @@ export function FreeSupport() {
       <Section.Header align="center">
         <p className="text-primary-500 mb-2 font-bold uppercase">Pomagaj za darmo</p>
         <h2 className="mb-4 text-3xl lg:text-5xl">Nie potrzeba wiele by pomóc</h2>
-        <p className="text-muted-foreground text-xl">
+        <p className="text-muted-foreground text-lg lg:text-xl">
           Wpłaty finansowe to nie jedyny sposób by nam pomóc. I choć wiemy, że w życiu bywa różnie,
           jedno zawsze pozostaje niezmienne - miłość do zwierząt.
         </p>

@@ -27,7 +27,7 @@ export async function Achievements() {
       <Section.Header align="center">
         <p className="text-primary-500 font-bold uppercase">Fundacja w liczbach</p>
         <h2 className="text-3xl lg:text-5xl">Nasze osiągnięcia</h2>
-        <p className="text-xl">
+        <p className="text-lg lg:text-xl">
           Te statystyki to nasz wspólny sukces. Pokazują, że konsekwentna pomoc zmienia świat na
           lepsze.
         </p>
@@ -36,18 +36,18 @@ export async function Achievements() {
       <Section.Content align="center" className="text-center">
         <div className="mx-auto flex max-w-4xl flex-col justify-center gap-10 md:flex-row lg:px-6">
           <div className="flex-1">
-            <p className="text-primary-500 font-mogra text-6xl lg:text-8xl">{yearsActive}</p>
-            <p className="text-xl font-semibold lg:text-2xl">{getYearsLabel(yearsActive)}</p>
+            <p className="text-primary-500 font-mogra text-5xl lg:text-8xl">{yearsActive}</p>
+            <p className="text-lg font-semibold lg:text-2xl">{getYearsLabel(yearsActive)}</p>
           </div>
 
           <div className="flex-1">
-            <p className="text-primary-500 font-mogra text-6xl lg:text-8xl">{adoptedCount}</p>
-            <p className="text-xl font-semibold lg:text-2xl">Szczęśliwych adopcji</p>
+            <p className="text-primary-500 font-mogra text-5xl lg:text-8xl">{adoptedCount}</p>
+            <p className="text-lg font-semibold lg:text-2xl">Szczęśliwych adopcji</p>
           </div>
 
           <div className="flex-1">
-            <p className="text-primary-500 font-mogra text-6xl lg:text-8xl">{totalAnimals}</p>
-            <p className="text-xl font-semibold lg:text-2xl">Uratowanych zwierząt</p>
+            <p className="text-primary-500 font-mogra text-5xl lg:text-8xl">{totalAnimals}</p>
+            <p className="text-lg font-semibold lg:text-2xl">Uratowanych zwierząt</p>
           </div>
         </div>
       </Section.Content>

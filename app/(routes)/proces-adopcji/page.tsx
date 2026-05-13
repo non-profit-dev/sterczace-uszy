@@ -38,10 +38,10 @@ export default function AdoptionProcess() {
           <Section.Header>
             <p className="text-primary-500 font-bold uppercase">Zanim zdecydujesz</p>
             <h2 className="text-3xl lg:text-5xl">Sprawdź, czy jesteś gotowy</h2>
-            <p className="mt-3 text-xl">
+            <p className="mt-3 text-lg lg:text-xl">
               Adopcja to nie spontaniczny pomysł na weekend. To decyzja na 10-15 lat.
             </p>
-            <p className="mt-3 text-xl font-semibold">
+            <p className="mt-3 text-lg font-semibold lg:text-xl">
               Zanim wypełnisz ankietę, odpowiedz sobie szczerze na kilka pytań:
             </p>
           </Section.Header>

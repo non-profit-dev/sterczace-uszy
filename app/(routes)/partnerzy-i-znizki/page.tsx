@@ -52,7 +52,7 @@ export default async function PartnersAndDiscounts() {
             <Section.Header align="center">
               <p className="text-primary-500 font-bold uppercase">Partnerskie Korzyści</p>
               <h2 className="text-3xl lg:text-5xl">Dla wszystkich</h2>
-              <p className="text-xl">
+              <p className="text-lg lg:text-xl">
                 Zapraszamy do skorzystania z kodów zniżkowych i korzystnych ofert.
               </p>
             </Section.Header>
@@ -78,7 +78,7 @@ export default async function PartnersAndDiscounts() {
             <Section.Header align="center">
               <p className="text-primary-500 font-bold uppercase">Partnerskie Korzyści</p>
               <h2 className="text-3xl lg:text-5xl">Dla Rodzin Adopcyjnych</h2>
-              <p className="text-xl">
+              <p className="text-lg lg:text-xl">
                 Szczególne oferty kierujemy do osób, które tworzą nowy dom dla naszych
                 podopiecznych. Kody zniżkowe otrzymasz po dokonaniu adopcji.
               </p>
@@ -102,7 +102,7 @@ export default async function PartnersAndDiscounts() {
 
         {partnerships.length === 0 && (
           <section className="w-full py-16 text-center">
-            <p className="text-muted-foreground text-xl">
+            <p className="text-muted-foreground text-lg lg:text-xl">
               Wkrótce pojawią się tutaj oferty naszych partnerów.
             </p>
           </section>
